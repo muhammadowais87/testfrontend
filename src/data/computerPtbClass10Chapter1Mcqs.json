@@ -1,0 +1,2585 @@
+{
+  "subject": "Computer",
+  "board": "PTB",
+  "class": "10",
+  "chapter": 1,
+  "chapterTitle": "Introduction to Programming",
+  "mcqs": [
+    {
+      "id": 1,
+      "category": "exercise",
+      "question_en": "A software that facilitates programmers in writing computer programs is known as",
+      "options": {
+        "A": "A compiler",
+        "B": "An editor",
+        "C": "An IDE",
+        "D": "A debugger"
+      },
+      "question_ur": "۱۔ ایک سافٹ ویئر جو کمپیوٹر پروگرام لکھنے میں مدد دیتا ہے،..............................کہلاتا ہے۔",
+      "options_ur": {
+        "A": "کمپائلر",
+        "B": "ایڈیٹر",
+        "C": "آئی ڈی ای",
+        "D": "ڈیبگر"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-001"
+    },
+    {
+      "id": 2,
+      "category": "exercise",
+      "question_en": "__________ is a software that is responsible for the conversion of program files to machine understandable and executable code.",
+      "options": {
+        "A": "Compiler",
+        "B": "Editor",
+        "C": "IDE",
+        "D": "Debugger"
+      },
+      "question_ur": "۲۔ ..............................ایک ایسا سافٹ ویئر ہوتا ہے جو پروگرام کی فائلوں کو کوڈ میں تبدیل کر دیتا ہے جسے مشین سمجھ سکے اور چلا سکے۔",
+      "options_ur": {
+        "A": "کمپائلر",
+        "B": "ایڈیٹر",
+        "C": "آئی ڈی ای",
+        "D": "ڈیبگر"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-002"
+    },
+    {
+      "id": 3,
+      "category": "exercise",
+      "question_en": "Every programming language has some primitive building blocks and follows some grammar rules known as its __________.",
+      "options": {
+        "A": "Programming rules",
+        "B": "Syntax",
+        "C": "Building blocks",
+        "D": "Semantic rules"
+      },
+      "question_ur": "۳۔ ہر پروگرامنگ لینگوئج میں چند ابتدائی عناصر ہوتے ہیں اور یہ گرامر کے چند اصولوں کے پابند ہوتے ہیں جنہیں..............................کہا جاتا ہے۔",
+      "options_ur": {
+        "A": "پروگرامنگ رولز",
+        "B": "سنٹیکس",
+        "C": "بنیاری عناصر",
+        "D": "سیمانٹک رولز"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-003"
+    },
+    {
+      "id": 4,
+      "category": "exercise",
+      "question_en": "A list of words that are predefined and must not be used by the programmer to name his own variables are known as __________.",
+      "options": {
+        "A": "Auto words",
+        "B": "Reserved words",
+        "C": "Restricted words",
+        "D": "Predefined words"
+      },
+      "question_ur": "۴۔ ایسے الفاظ کی فہرست جو پہلے سے ڈیفائنڈ ہیں اور جنہیں پروگرامر اپنے متغیرات کے ناموں کے طور پر استعمال نہیں کر سکتا..............................کہلاتے ہیں۔",
+      "options_ur": {
+        "A": "آٹو ورڈز",
+        "B": "ریزروڈ ورڈز",
+        "C": "محدود الفاظ",
+        "D": "پہلے سے ڈیفائنڈ کیے ہوئے الفاظ"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-004"
+    },
+    {
+      "id": 5,
+      "category": "exercise",
+      "question_en": "include statements are written in __________ section.",
+      "options": {
+        "A": "header",
+        "B": "main",
+        "C": "Comments",
+        "D": "print"
+      },
+      "question_ur": "۵۔ include اسٹیٹمنٹس..............................سیکشن میں لکھی جاتی ہیں۔",
+      "options_ur": {
+        "A": "ہیڈر",
+        "B": "مین",
+        "C": "کمنٹس",
+        "D": "پرنٹ"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-005"
+    },
+    {
+      "id": 6,
+      "category": "exercise",
+      "question_en": "__________ are added in the source code to further explain the techniques and algorithms used by the programmer.",
+      "options": {
+        "A": "Messages",
+        "B": "Hints",
+        "C": "Comments",
+        "D": "Explanations"
+      },
+      "question_ur": "۶۔ ..............................کو سورس کوڈ میں پروگرام کے استعمال کیے ہوئے الگورتھم اور طریقہ کار کی مزید وضاحت کرنے کے لیے استعمال کیا جاتا ہے۔",
+      "options_ur": {
+        "A": "پیغامات",
+        "B": "اشارات",
+        "C": "کمنٹس",
+        "D": "وضاحتیں"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-006"
+    },
+    {
+      "id": 7,
+      "category": "exercise",
+      "question_en": "__________ are the values that do not change during the whole execution of program.",
+      "options": {
+        "A": "Variables",
+        "B": "Constants",
+        "C": "Strings",
+        "D": "Comments"
+      },
+      "question_ur": "۷۔ ..............................وہ قیمتیں ہیں جو پروگرام کے چلتے ہوئے تبدیل نہیں ہوتیں۔",
+      "options_ur": {
+        "A": "متغیرات",
+        "B": "کانسٹنٹس",
+        "C": "سٹرنگز",
+        "D": "کمنٹس"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-007"
+    },
+    {
+      "id": 8,
+      "category": "exercise",
+      "question_en": "A float uses __________ bytes of memory.",
+      "options": {
+        "A": "3",
+        "B": "4",
+        "C": "5",
+        "D": "6"
+      },
+      "question_ur": "۸۔ ایک فلوٹ میموری کی..............................بائٹس استعمال کرتا ہے۔",
+      "options_ur": {
+        "A": "3",
+        "B": "4",
+        "C": "5",
+        "D": "6"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-008"
+    },
+    {
+      "id": 9,
+      "category": "exercise",
+      "question_en": "For initializing a variable, we use __________ operator.",
+      "options": {
+        "A": "->",
+        "B": "=",
+        "C": "@",
+        "D": "?"
+      },
+      "question_ur": "۹۔ ایک متغیر کو انیشیلائز کرنے کے لیے ہم..............................آپریٹر استعمال کرتے ہیں۔",
+      "options_ur": {
+        "A": "->",
+        "B": "=",
+        "C": "@",
+        "D": "?"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-009"
+    },
+    {
+      "id": 10,
+      "category": "exercise",
+      "question_en": "__________ can be thought of as a container store constants.",
+      "options": {
+        "A": "Box",
+        "B": "Jar",
+        "C": "Variable",
+        "D": "Collection"
+      },
+      "question_ur": "۱۰۔ ..............................کو کانسٹنٹ محفوظ کرنے کے لیے ایک مرتبان سمجھا جاسکتا ہے۔",
+      "options_ur": {
+        "A": "باکس",
+        "B": "جار",
+        "C": "متغیر",
+        "D": "مجموعہ"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-010"
+    },
+    {
+      "id": 11,
+      "category": "additional",
+      "question_en": "Computers can help us to solve __________ problems.",
+      "options": {
+        "A": "Easy",
+        "B": "Tough",
+        "C": "Several",
+        "D": "Minimum"
+      },
+      "question_ur": "۱۱۔ کمپیوٹرز ہمارے..............................مسائل حل کرنے میں مدد کرتے ہیں۔",
+      "options_ur": {
+        "A": "آسان",
+        "B": "مشکل",
+        "C": "کئی",
+        "D": "کم سے کم"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-011"
+    },
+    {
+      "id": 12,
+      "category": "additional",
+      "question_en": "Series of __________ are known as a computer program.",
+      "options": {
+        "A": "Instructions",
+        "B": "Numbers",
+        "C": "Digits",
+        "D": "Commands"
+      },
+      "question_ur": "۱۲۔ ..............................کی ترتیب کمپیوٹر پروگرام کہلاتی ہے۔",
+      "options_ur": {
+        "A": "ہدایات",
+        "B": "نمبرز",
+        "C": "ڈیجٹ",
+        "D": "کمانڈز"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-012"
+    },
+    {
+      "id": 13,
+      "category": "additional",
+      "question_en": "The process of __________ or storing these instruction in the computer is known as computer programming.",
+      "options": {
+        "A": "Creating",
+        "B": "Modifying",
+        "C": "Updating",
+        "D": "Feeding"
+      },
+      "question_ur": "۱۳۔ ..............................یا کمپیوٹر میں ان ہدایات کو اسٹور کرنے کا عمل کمپیوٹر پروگرامنگ کہلاتا ہے۔",
+      "options_ur": {
+        "A": "بنانا",
+        "B": "تبدیل کرنا",
+        "C": "اپ ڈیٹ کرنا",
+        "D": "محفوظ کرنا"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-013"
+    },
+    {
+      "id": 14,
+      "category": "additional",
+      "question_en": "The person who knows how to write a computer __________ correctly is known as a programmer.",
+      "options": {
+        "A": "Summery",
+        "B": "Program",
+        "C": "Story",
+        "D": "Article"
+      },
+      "question_ur": "۱۴۔ وہ شخص جو درست سے کمپیوٹر..............................لکھنا جانتا ہو ایک پروگرامر کہلاتا ہے۔",
+      "options_ur": {
+        "A": "سمری",
+        "B": "پروگرام",
+        "C": "کہانی",
+        "D": "آرٹیکل"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-014"
+    },
+    {
+      "id": 15,
+      "category": "additional",
+      "question_en": "Computers cannot understand __________.",
+      "options": {
+        "A": "Urdu",
+        "B": "English",
+        "C": "Both A & B",
+        "D": "1,0,0,1"
+      },
+      "question_ur": "۱۵۔ کمپیوٹر..............................کو نہیں سمجھ سکتا۔",
+      "options_ur": {
+        "A": "اردو",
+        "B": "انگلش",
+        "C": "دونوں A اور B",
+        "D": "1,0,0,1"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-015"
+    },
+    {
+      "id": 16,
+      "category": "additional",
+      "question_en": "Example(s) of computer programming language is/are __________.",
+      "options": {
+        "A": "Java",
+        "B": "C++",
+        "C": "C#",
+        "D": "All of these"
+      },
+      "question_ur": "۱۶۔ کمپیوٹر لینگوئج کی مثال..............................ہے۔",
+      "options_ur": {
+        "A": "جاوا",
+        "B": "سی ++",
+        "C": "null C#",
+        "D": "یہ تمام"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-016"
+    },
+    {
+      "id": 17,
+      "category": "additional",
+      "question_en": "Python is a/an __________.",
+      "options": {
+        "A": "Programming language",
+        "B": "Common language",
+        "C": "English word",
+        "D": "All of these"
+      },
+      "question_ur": "۱۷۔ پائتھن ایک..............................ہے۔",
+      "options_ur": {
+        "A": "پروگرامنگ لینگوئج",
+        "B": "عام لینگوئج",
+        "C": "انگلش کا لفظ",
+        "D": "یہ تمام"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-017"
+    },
+    {
+      "id": 18,
+      "category": "additional",
+      "question_en": "C language was developed by __________.",
+      "options": {
+        "A": "Dennis Ritchie",
+        "B": "Charles Babbage",
+        "C": "Both A & B",
+        "D": "None of these"
+      },
+      "question_ur": "۱۸۔ C لینگوئج..............................نے بنائی۔",
+      "options_ur": {
+        "A": "ڈینس رچی",
+        "B": "چارلس بیبج",
+        "C": "دونوں A اور B",
+        "D": "ان میں سے کوئی نہیں"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-018"
+    },
+    {
+      "id": 19,
+      "category": "additional",
+      "question_en": "An IDE has a/an __________.",
+      "options": {
+        "A": "OS",
+        "B": "GUI",
+        "C": "Mac",
+        "D": "Window"
+      },
+      "question_ur": "۱۹۔ ایک IDE..............................رکھتا ہے۔",
+      "options_ur": {
+        "A": "آپریٹنگ سسٹم",
+        "B": "گرافیکل یوزر انٹرفیس",
+        "C": "میک",
+        "D": "ونڈو"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-019"
+    },
+    {
+      "id": 20,
+      "category": "additional",
+      "question_en": "A software that provides a programming environment to facilitate programmers is known as a/an __________.",
+      "options": {
+        "A": "GUI",
+        "B": "OS",
+        "C": "IDE",
+        "D": "Mac"
+      },
+      "question_ur": "۲۰۔ ایک سافٹ ویئر جو پروگرامرز کو پروگرامنگ ماحول کی سہولت مہیا کرتا ہے،..............................کہلاتا ہے۔",
+      "options_ur": {
+        "A": "گرافیکل یوزر انٹرفیس",
+        "B": "آپریٹنگ سسٹم",
+        "C": "انٹیگریٹڈ ڈیولپمنٹ انوائرونمنٹ",
+        "D": "میک"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-020"
+    },
+    {
+      "id": 21,
+      "category": "additional",
+      "question_en": "An IDE consists of __________ that help a programmer.",
+      "options": {
+        "A": "Commands",
+        "B": "Statements",
+        "C": "Environment",
+        "D": "Tools"
+      },
+      "question_ur": "۲۱۔ ایک IDE..............................پر مشتمل ہوتی ہے جو کہ پروگرامر کی مدد کرتی ہے۔",
+      "options_ur": {
+        "A": "کمانڈز",
+        "B": "اسٹیٹمنٹس",
+        "C": "ماحول",
+        "D": "ٹولز"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-021"
+    },
+    {
+      "id": 22,
+      "category": "additional",
+      "question_en": "Name(s) of IDE is/are __________.",
+      "options": {
+        "A": "Visual Studio",
+        "B": "Xcode",
+        "C": "Code::Blocks",
+        "D": "All of these"
+      },
+      "question_ur": "۲۲۔ IDE کا نام..............................ہے۔",
+      "options_ur": {
+        "A": "ویژول اسٹوڈیو",
+        "B": "Xcode",
+        "C": "Code::Blocks",
+        "D": "یہ تمام"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-022"
+    },
+    {
+      "id": 23,
+      "category": "additional",
+      "question_en": "A text editor is a __________ that allows programmers to write and edit computer programs.",
+      "options": {
+        "A": "Software",
+        "B": "Statement",
+        "C": "Command",
+        "D": "Screen"
+      },
+      "question_ur": "۲۳۔ ٹیکسٹ ایڈیٹر ایک..............................ہے جو کہ پروگرامرز کو کمپیوٹر پروگرام لکھنے اور تبدیل کرنے کی اجازت دیتا ہے۔",
+      "options_ur": {
+        "A": "سافٹ ویئر",
+        "B": "اسٹیٹمنٹ",
+        "C": "کمانڈ",
+        "D": "اسکرین"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-023"
+    },
+    {
+      "id": 24,
+      "category": "additional",
+      "question_en": "All IDEs have their own specific __________.",
+      "options": {
+        "A": "Statements",
+        "B": "Commands",
+        "C": "Text editors",
+        "D": "All of these"
+      },
+      "question_ur": "۲۴۔ تمام IDEs کا ایک اپنا مخصوص..............................ہوتا ہے۔",
+      "options_ur": {
+        "A": "اسٹیٹمنٹس",
+        "B": "کمانڈز",
+        "C": "ٹیکسٹ ایڈیٹرز",
+        "D": "یہ تمام"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-024"
+    },
+    {
+      "id": 25,
+      "category": "additional",
+      "question_en": "Computers only understand and work in __________ language.",
+      "options": {
+        "A": "Assembly",
+        "B": "Machine",
+        "C": "High level",
+        "D": "None of these"
+      },
+      "question_ur": "۲۵۔ کمپیوٹر صرف..............................لینگوئج میں سمجھتا اور کام کرتا ہے۔",
+      "options_ur": {
+        "A": "اسمبلی",
+        "B": "مشین",
+        "C": "ہائی لیول",
+        "D": "ان میں سے کوئی نہیں"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-025"
+    },
+    {
+      "id": 26,
+      "category": "additional",
+      "question_en": "A __________ is a software that is responsible for conversion of a computer program language to machine language code.",
+      "options": {
+        "A": "Compiler",
+        "B": "Syntax",
+        "C": "Program",
+        "D": "IDE"
+      },
+      "question_ur": "۲۶۔ ..............................ایک سافٹ ویئر ہے جو مشین لینگوئج کوڈ کو کمپیوٹر پروگرامنگ لینگوئج میں تبدیل کرنے کا ذمہ دار ہے۔",
+      "options_ur": {
+        "A": "کمپائلر",
+        "B": "سنٹیکس",
+        "C": "پروگرام",
+        "D": "انٹیگریٹڈ ڈیولپمنٹ ماحول"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-026"
+    },
+    {
+      "id": 27,
+      "category": "additional",
+      "question_en": "The set of rules in programming language is known as __________ of the language.",
+      "options": {
+        "A": "Codes",
+        "B": "Program",
+        "C": "Syntax",
+        "D": "Compiler"
+      },
+      "question_ur": "۲۷۔ پروگرامنگ لینگوئج کے اصولوں کے سیٹ کو لینگوئج کا..............................کہتے ہیں۔",
+      "options_ur": {
+        "A": "کوڈز",
+        "B": "پروگرام",
+        "C": "سنٹیکس",
+        "D": "کمپائلر"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-027"
+    },
+    {
+      "id": 28,
+      "category": "additional",
+      "question_en": "Predefined words are known as __________.",
+      "options": {
+        "A": "Reserved words",
+        "B": "Keywords",
+        "C": "Both A & B",
+        "D": "None of these"
+      },
+      "question_ur": "۲۸۔ پری ڈیفائنڈ ورڈز..............................کہلاتے ہیں۔",
+      "options_ur": {
+        "A": "ذخیرہ الفاظ",
+        "B": "کی ورڈز",
+        "C": "A اور B دونوں",
+        "D": "ان میں سے کوئی نہیں"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-028"
+    },
+    {
+      "id": 29,
+      "category": "additional",
+      "question_en": "Reserved word(s) is/are __________.",
+      "options": {
+        "A": "Auto",
+        "B": "Double",
+        "C": "Int",
+        "D": "All of these"
+      },
+      "question_ur": "۲۹۔ ذخیرہ الفاظ..............................ہیں۔",
+      "options_ur": {
+        "A": "Auto",
+        "B": "Double",
+        "C": "Int",
+        "D": "یہ تمام"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-029"
+    },
+    {
+      "id": 30,
+      "category": "additional",
+      "question_en": "Every programming language has a list of words that are __________.",
+      "options": {
+        "A": "Other words",
+        "B": "Hidden words",
+        "C": "Predefined words",
+        "D": "Defined"
+      },
+      "question_ur": "۳۰۔ ہر پروگرامنگ لینگوئج کی الفاظ کی ایک فہرست ہوتی ہے جو کہ..............................ہوتے ہیں۔",
+      "options_ur": {
+        "A": "دوسرے الفاظ",
+        "B": "چھپے ہوئے الفاظ",
+        "C": "پری ڈیفائنڈ الفاظ",
+        "D": "ڈیفائنڈ"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-030"
+    },
+    {
+      "id": 31,
+      "category": "additional",
+      "question_en": "Reserved word(s) is/are __________.",
+      "options": {
+        "A": "case",
+        "B": "do",
+        "C": "Both A & B",
+        "D": "do-it"
+      },
+      "question_ur": "۳۱۔ ذخیرہ الفاظ..............................ہے/ہیں۔",
+      "options_ur": {
+        "A": "case",
+        "B": "do",
+        "C": "Both A & B",
+        "D": "do-it"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-031"
+    },
+    {
+      "id": 32,
+      "category": "additional",
+      "question_en": "Reserved word(s) is/are __________.",
+      "options": {
+        "A": "volatile",
+        "B": "union",
+        "C": "return",
+        "D": "all"
+      },
+      "question_ur": "۳۲۔ ذخیرہ الفاظ..............................ہے/ہیں۔",
+      "options_ur": {
+        "A": "volatile",
+        "B": "union",
+        "C": "return",
+        "D": "all"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-032"
+    },
+    {
+      "id": 33,
+      "category": "additional",
+      "question_en": "We include header files in our program by writing __________ statement at the top of program.",
+      "options": {
+        "A": "include",
+        "B": "break",
+        "C": "void",
+        "D": "main"
+      },
+      "question_ur": "۳۳۔ ہم اپنے پروگرام میں..............................اسٹیٹمنٹ لکھتے ہوئے ہیڈر فائل شامل کرتے ہیں۔",
+      "options_ur": {
+        "A": "include",
+        "B": "break",
+        "C": "void",
+        "D": "main"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-033"
+    },
+    {
+      "id": 34,
+      "category": "additional",
+      "question_en": "We include file __________ that contains information related to input and output functions.",
+      "options": {
+        "A": "main()",
+        "B": "math.h",
+        "C": "stdio.h",
+        "D": "conio.h"
+      },
+      "question_ur": "۳۴۔ ہم فائل..............................شامل کرتے ہیں جس میں ان پٹ اور آؤٹ پٹ فنکشنز کے متعلق معلومات ہوتی ہیں۔",
+      "options_ur": {
+        "A": "main()",
+        "B": "math.h",
+        "C": "stdio.h",
+        "D": "conio.h"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-034"
+    },
+    {
+      "id": 35,
+      "category": "additional",
+      "question_en": "Every C program must contain a __________ function.",
+      "options": {
+        "A": "stdio.h",
+        "B": "main()",
+        "C": "conio.h",
+        "D": "math.h"
+      },
+      "question_ur": "۳۵۔ ہر C پروگرام میں..............................فنکشن لازمی ہوتا ہے۔",
+      "options_ur": {
+        "A": "stdio.h",
+        "B": "main()",
+        "C": "conio.h",
+        "D": "math.h"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-035"
+    },
+    {
+      "id": 36,
+      "category": "additional",
+      "question_en": "The body of main() is enclosed in the __________ braces.",
+      "options": {
+        "A": "[ ]",
+        "B": "( )",
+        "C": "{ }",
+        "D": "All of these"
+      },
+      "question_ur": "۳۶۔ main() کی باڈی..............................بریکٹس میں بند ہے۔",
+      "options_ur": {
+        "A": "[ ]",
+        "B": "( )",
+        "C": "{ }",
+        "D": "یہ تمام"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-036"
+    },
+    {
+      "id": 37,
+      "category": "additional",
+      "question_en": "Each statement ends with a __________ symbol.",
+      "options": {
+        "A": "Colon",
+        "B": "Semi colon",
+        "C": "Comma",
+        "D": "Full stop"
+      },
+      "question_ur": "۳۷۔ ہر اسٹیٹمنٹ..............................علامت کے ساتھ ختم ہوتی ہے۔",
+      "options_ur": {
+        "A": "کولن",
+        "B": "سیمی کالن",
+        "C": "کوما",
+        "D": "فُل اسٹاپ"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-037"
+    },
+    {
+      "id": 38,
+      "category": "additional",
+      "question_en": "C language is __________ sensitive.",
+      "options": {
+        "A": "very",
+        "B": "no",
+        "C": "not case",
+        "D": "case"
+      },
+      "question_ur": "۳۸۔ C لینگوئج..............................سینسٹو ہے۔",
+      "options_ur": {
+        "A": "very",
+        "B": "no",
+        "C": "کیس نہیں",
+        "D": "کیس"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-038"
+    },
+    {
+      "id": 39,
+      "category": "additional",
+      "question_en": "In C programming, there are __________ types of comments.",
+      "options": {
+        "A": "1",
+        "B": "2",
+        "C": "3",
+        "D": "4"
+      },
+      "question_ur": "۳۹۔ C پروگرامنگ میں، کمانڈز کی..............................اقسام ہیں۔",
+      "options_ur": {
+        "A": "1",
+        "B": "2",
+        "C": "3",
+        "D": "4"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-039"
+    },
+    {
+      "id": 40,
+      "category": "additional",
+      "question_en": "Single-line comment start with __________.",
+      "options": {
+        "A": "",
+        "B": "*",
+        "C": "/*",
+        "D": "//"
+      },
+      "question_ur": "۴۰۔ سنگل لائن کمنٹ..............................کے ساتھ شروع ہوتا ہے۔",
+      "options_ur": {
+        "A": ".",
+        "B": "*",
+        "C": "/*",
+        "D": "//"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-040"
+    },
+    {
+      "id": 41,
+      "category": "additional",
+      "question_en": "__________ are the statements in a program that are ignored by the compiler and do not get executed.",
+      "options": {
+        "A": "Comments",
+        "B": "Function",
+        "C": "Braces",
+        "D": "Integers"
+      },
+      "question_ur": "۴۱۔ ..............................پروگرام میں وہ اسٹیٹمنٹس ہیں جنہیں کمپائلر نظر انداز کرتا ہے اور ایگزیکیوٹ نہیں کرتا۔",
+      "options_ur": {
+        "A": "کمنٹس",
+        "B": "فنکشن",
+        "C": "بریکٹس",
+        "D": "انٹیجرز"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-041"
+    },
+    {
+      "id": 42,
+      "category": "additional",
+      "question_en": "Multi-line comment start with __________.",
+      "options": {
+        "A": "/*",
+        "B": "//",
+        "C": "\\\\",
+        "D": "*"
+      },
+      "question_ur": "۴۲۔ ملٹی لائن کمنٹ..............................کے ساتھ شروع ہوتا ہے۔",
+      "options_ur": {
+        "A": "/*",
+        "B": "//",
+        "C": "\\",
+        "D": "*"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-042"
+    },
+    {
+      "id": 43,
+      "category": "additional",
+      "question_en": "Multi-line comment end at __________.",
+      "options": {
+        "A": "/*",
+        "B": "/*",
+        "C": "*/",
+        "D": "*//"
+      },
+      "question_ur": "۴۳۔ ملٹی لائن کمنٹ..............................کے ساتھ ختم ہوتا ہے۔",
+      "options_ur": {
+        "A": "/*",
+        "B": "/*",
+        "C": "*/",
+        "D": "*//"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-043"
+    },
+    {
+      "id": 44,
+      "category": "additional",
+      "question_en": "C programming language has a character set that includes __________.",
+      "options": {
+        "A": "Alphabets",
+        "B": "Digits",
+        "C": "Special symbols",
+        "D": "All of these"
+      },
+      "question_ur": "۴۴۔ C پروگرامنگ لینگوئج کا ایک کریکٹر سیٹ ہے، جس میں..............................شامل ہیں۔",
+      "options_ur": {
+        "A": "الفاباں",
+        "B": "ڈیجٹس",
+        "C": "مخصوص علاماتیں",
+        "D": "یہ تمام"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-044"
+    },
+    {
+      "id": 45,
+      "category": "additional",
+      "question_en": "__________ are the values that cannot be changed by a program.",
+      "options": {
+        "A": "Functions",
+        "B": "Variables",
+        "C": "Constants",
+        "D": "None of these"
+      },
+      "question_ur": "۴۵۔ ..............................وہ ویلوز ہیں جو کہ پروگرام کی مدد سے تبدیل نہیں ہو سکتیں۔",
+      "options_ur": {
+        "A": "فنکشنز",
+        "B": "متغیرات",
+        "C": "کانسٹینٹس",
+        "D": "ان میں سے کوئی نہیں"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-045"
+    },
+    {
+      "id": 46,
+      "category": "additional",
+      "question_en": "Example(s) of constant is/are __________.",
+      "options": {
+        "A": "11",
+        "B": "13.9",
+        "C": "-5",
+        "D": "All of these"
+      },
+      "question_ur": "۴۶۔ کانسٹنٹ کی مثال/مثالیں..............................ہے/ہیں۔",
+      "options_ur": {
+        "A": "11",
+        "B": "13.9",
+        "C": "-5",
+        "D": "یہ تمام"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-046"
+    },
+    {
+      "id": 47,
+      "category": "additional",
+      "question_en": "Type(s) of constant is/are __________.",
+      "options": {
+        "A": "Integer constant",
+        "B": "Real constant",
+        "C": "Character constant",
+        "D": "All of these"
+      },
+      "question_ur": "۴۷۔ کانسٹنٹ کی اقسام..............................ہے/ہیں۔",
+      "options_ur": {
+        "A": "انٹیجر کانسٹنٹ",
+        "B": "حقیقی کانسٹنٹ",
+        "C": "کریکٹر کانسٹنٹ",
+        "D": "یہ تمام"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-047"
+    },
+    {
+      "id": 48,
+      "category": "additional",
+      "question_en": "Example(s) of integer constant is/are __________.",
+      "options": {
+        "A": "13",
+        "B": "-9",
+        "C": "-355",
+        "D": "All of these"
+      },
+      "question_ur": "۴۸۔ انٹیجر کانسٹنٹ کی مثال/مثالیں..............................ہے/ہیں۔",
+      "options_ur": {
+        "A": "13",
+        "B": "-9",
+        "C": "-355",
+        "D": "یہ تمام"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-048"
+    },
+    {
+      "id": 49,
+      "category": "additional",
+      "question_en": "Example(s) of real constant is/are __________.",
+      "options": {
+        "A": "4.5",
+        "B": "666",
+        "C": "-87",
+        "D": "0"
+      },
+      "question_ur": "۴۹۔ حقیقی کانسٹنٹ کی مثال/مثالیں..............................ہے/ہیں۔",
+      "options_ur": {
+        "A": "4.5",
+        "B": "666",
+        "C": "-87",
+        "D": "0"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-049"
+    },
+    {
+      "id": 50,
+      "category": "additional",
+      "question_en": "Example(s) of character constant is/are __________.",
+      "options": {
+        "A": "'100'",
+        "B": "'Z'",
+        "C": "Both A & B",
+        "D": "-60"
+      },
+      "question_ur": "۵۰۔ کریکٹر کانسٹنٹ کی مثال/مثالیں..............................ہے/ہیں۔",
+      "options_ur": {
+        "A": "'100'",
+        "B": "'Z'",
+        "C": "Both A & B",
+        "D": "-60"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-050"
+    },
+    {
+      "id": 51,
+      "category": "additional",
+      "question_en": "The value of a __________ can be changed in a program.",
+      "options": {
+        "A": "Constant",
+        "B": "Function",
+        "C": "Variable",
+        "D": "All of these"
+      },
+      "question_ur": "۵۱۔ پروگرام میں..............................کی ویلیو تبدیل کی جاسکتی ہے۔",
+      "options_ur": {
+        "A": "کانسٹنٹ",
+        "B": "فنکشن",
+        "C": "متغیر",
+        "D": "یہ تمام"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-051"
+    },
+    {
+      "id": 52,
+      "category": "additional",
+      "question_en": "A __________ is actually a name given to a memory location, as the data is physically stored in the computer's memory.",
+      "options": {
+        "A": "Constant",
+        "B": "Variable",
+        "C": "Function",
+        "D": "None of these"
+      },
+      "question_ur": "۵۲۔ ایک..............................دراصل میموری لوکیشن کو دیا جانے والا نام ہوتا ہے، جیسے کمپیوٹر کی میموری میں فزیکلی ڈیٹا اسٹور کیا جاتا ہے۔",
+      "options_ur": {
+        "A": "کانسٹنٹ",
+        "B": "متغیر",
+        "C": "فنکشن",
+        "D": "ان میں سے کوئی نہیں"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-052"
+    },
+    {
+      "id": 53,
+      "category": "additional",
+      "question_en": "Each variable has a unique name called __________.",
+      "options": {
+        "A": "Identifier",
+        "B": "Data type",
+        "C": "Both A & B",
+        "D": "None of these"
+      },
+      "question_ur": "۵۳۔ ہر متغیر کا ایک مخصوص نام..............................کہلاتا ہے۔",
+      "options_ur": {
+        "A": "آئیڈنٹی فائر",
+        "B": "ڈیٹا ٹائپ",
+        "C": "A اور B دونوں",
+        "D": "ان میں سے کوئی نہیں"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-053"
+    },
+    {
+      "id": 54,
+      "category": "additional",
+      "question_en": "Each variable has a __________.",
+      "options": {
+        "A": "Unique name",
+        "B": "Data type",
+        "C": "Both A & B",
+        "D": "Constant"
+      },
+      "question_ur": "۵۴۔ ہر متغیر کا ایک..............................ہوتا ہے۔",
+      "options_ur": {
+        "A": "مخصوص نام",
+        "B": "ڈیٹا ٹائپ",
+        "C": "A اور B دونوں",
+        "D": "کانسٹنٹ"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-054"
+    },
+    {
+      "id": 55,
+      "category": "additional",
+      "question_en": "Data type(s) is/are __________.",
+      "options": {
+        "A": "int",
+        "B": "float",
+        "C": "char",
+        "D": "All of these"
+      },
+      "question_ur": "۵۵۔ ڈیٹا ٹائپ..............................ہے/ہیں۔",
+      "options_ur": {
+        "A": "int",
+        "B": "float",
+        "C": "char",
+        "D": "یہ تمام"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-055"
+    },
+    {
+      "id": 56,
+      "category": "additional",
+      "question_en": "The type int is used to store __________.",
+      "options": {
+        "A": "Integer",
+        "B": "Real",
+        "C": "Character",
+        "D": "All of these"
+      },
+      "question_ur": "۵۶۔ int ٹائپ..............................اسٹور کرنے کے لیے استعمال ہوتی ہے۔",
+      "options_ur": {
+        "A": "انٹیجر",
+        "B": "حقیقی",
+        "C": "کریکٹر",
+        "D": "یہ تمام"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-056"
+    },
+    {
+      "id": 57,
+      "category": "additional",
+      "question_en": "The type float is used to store __________.",
+      "options": {
+        "A": "Integer",
+        "B": "Character",
+        "C": "Real",
+        "D": "None of these"
+      },
+      "question_ur": "۵۷۔ float ٹائپ..............................اسٹور کرنے کی جاتی ہے۔",
+      "options_ur": {
+        "A": "انٹیجر",
+        "B": "کریکٹر",
+        "C": "حقیقی",
+        "D": "ان میں سے کوئی نہیں"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-057"
+    },
+    {
+      "id": 58,
+      "category": "additional",
+      "question_en": "The type char is used to store __________.",
+      "options": {
+        "A": "Integer",
+        "B": "Real",
+        "C": "Character",
+        "D": "All of these"
+      },
+      "question_ur": "۵۸۔ char ٹائپ..............................اسٹور کرنے کے لیے استعمال ہوتی ہے۔",
+      "options_ur": {
+        "A": "انٹیجر",
+        "B": "حقیقی",
+        "C": "کریکٹر",
+        "D": "یہ تمام"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-058"
+    },
+    {
+      "id": 59,
+      "category": "additional",
+      "question_en": "Integer takes up __________ bytes of memory.",
+      "options": {
+        "A": "2",
+        "B": "4",
+        "C": "6",
+        "D": "8"
+      },
+      "question_ur": "۵۹۔ انٹیجر..............................بائٹس کی میموری لیتا ہے۔",
+      "options_ur": {
+        "A": "2",
+        "B": "4",
+        "C": "6",
+        "D": "8"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-059"
+    },
+    {
+      "id": 60,
+      "category": "additional",
+      "question_en": "A signed int can store __________ values.",
+      "options": {
+        "A": "Positive",
+        "B": "Negative",
+        "C": "Both A & B",
+        "D": "None of these"
+      },
+      "question_ur": "۶۰۔ ایک signed int..............................ویلیوز اسٹور کر سکتا ہے۔",
+      "options_ur": {
+        "A": "ثبت",
+        "B": "منفی",
+        "C": "A اور B دونوں",
+        "D": "ان میں سے کوئی نہیں"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-060"
+    },
+    {
+      "id": 61,
+      "category": "additional",
+      "question_en": "An unsigned int can store __________ values.",
+      "options": {
+        "A": "Positive",
+        "B": "Negative",
+        "C": "Both A & B",
+        "D": "None of these"
+      },
+      "question_ur": "۶۱۔ ایک unsigned int..............................ویلیوز اسٹور کر سکتا ہے۔",
+      "options_ur": {
+        "A": "ثبت",
+        "B": "منفی",
+        "C": "A اور B دونوں",
+        "D": "ان میں سے کوئی نہیں"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-061"
+    },
+    {
+      "id": 62,
+      "category": "additional",
+      "question_en": "char data type takes up just __________ byte of memory for storage.",
+      "options": {
+        "A": "1",
+        "B": "2",
+        "C": "3",
+        "D": "4"
+      },
+      "question_ur": "۶۲۔ char ڈیٹا ٹائپ اسٹوریج کے لیے صرف..............................بائٹس لیتا ہے۔",
+      "options_ur": {
+        "A": "1",
+        "B": "2",
+        "C": "3",
+        "D": "4"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-062"
+    },
+    {
+      "id": 63,
+      "category": "additional",
+      "question_en": "A variable name can only contain __________.",
+      "options": {
+        "A": "Alphabets",
+        "B": "Digits",
+        "C": "Underscore _",
+        "D": "All of these"
+      },
+      "question_ur": "۶۳۔ ایک متغیر کا نام صرف..............................پر مشتمل ہو سکتا ہے۔",
+      "options_ur": {
+        "A": "الفاباں",
+        "B": "ڈیجٹس",
+        "C": "انڈر اسکور _",
+        "D": "یہ تمام"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-063"
+    },
+    {
+      "id": 64,
+      "category": "additional",
+      "question_en": "Variable name must begin with a __________.",
+      "options": {
+        "A": "Letter",
+        "B": "An underscore",
+        "C": "Either A or B",
+        "D": "Digit"
+      },
+      "question_ur": "۶۴۔ متغیر کا نام لازماً..............................سے شروع ہونا چاہیے۔",
+      "options_ur": {
+        "A": "لیٹرز",
+        "B": "انڈر اسکور",
+        "C": "Either A or B",
+        "D": "ڈیجٹ"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-064"
+    },
+    {
+      "id": 65,
+      "category": "additional",
+      "question_en": "A __________ cannot be used as a variable name.",
+      "options": {
+        "A": "Alphabet",
+        "B": "Reserved word",
+        "C": "Function",
+        "D": "Constant"
+      },
+      "question_ur": "۶۵۔ ..............................کو متغیر کے نام کے طور پر استعمال نہیں کر سکتے۔",
+      "options_ur": {
+        "A": "الفاباں",
+        "B": "ریزروڈ ورڈز",
+        "C": "فنکشن",
+        "D": "کانسٹنٹ"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-065"
+    },
+    {
+      "id": 66,
+      "category": "additional",
+      "question_en": "We need to __________ a variable before we can use it in the program.",
+      "options": {
+        "A": "Create",
+        "B": "Modify",
+        "C": "Change",
+        "D": "Declare"
+      },
+      "question_ur": "۶۶۔ پروگرام میں اسے استعمال کرنے سے پہلے ہمیں ایک متغیر کو..............................کی ضرورت ہوتی ہے۔",
+      "options_ur": {
+        "A": "بنانا",
+        "B": "ترمیم کرنا",
+        "C": "تبدیل کرنا",
+        "D": "اعلان کرنا"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-066"
+    },
+    {
+      "id": 67,
+      "category": "additional",
+      "question_en": "A variable cannot be declared unless we mention its __________.",
+      "options": {
+        "A": "Name",
+        "B": "Data type",
+        "C": "Length",
+        "D": "All of these"
+      },
+      "question_ur": "۶۷۔ ایک متغیر کو ڈکلیئر نہیں کیا جاسکتا جب تک ہم اس کی..............................کا ذکر نہیں کرتے۔",
+      "options_ur": {
+        "A": "نام",
+        "B": "ڈیٹا ٹائپ",
+        "C": "لمبائی",
+        "D": "یہ تمام"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-067"
+    },
+    {
+      "id": 68,
+      "category": "additional",
+      "question_en": "After declaring a variable, its data type __________ be changed.",
+      "options": {
+        "A": "Can",
+        "B": "Cannot",
+        "C": "Either can or cannot",
+        "D": "None of these"
+      },
+      "question_ur": "۶۸۔ ایک متغیر کو ڈکلیئر کرنے کے بعد، اسکی ڈیٹا ٹائپ تبدیل..............................ہو سکتی ہے۔",
+      "options_ur": {
+        "A": "ہو سکتی ہے",
+        "B": "نہیں ہو سکتی",
+        "C": "یا تو ہو سکتی ہے یا نہیں",
+        "D": "ان میں سے کوئی نہیں"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-068"
+    },
+    {
+      "id": 69,
+      "category": "additional",
+      "question_en": "Assigning value to a __________ for the first time is called variable initialization.",
+      "options": {
+        "A": "Variable",
+        "B": "Constant",
+        "C": "Both A & B",
+        "D": "Function"
+      },
+      "question_ur": "۶۹۔ پہلی بار ایک..............................کو ویلیو اساین کرنا ویریایل انیشیلائزیشن کہلاتا ہے۔",
+      "options_ur": {
+        "A": "متغیر",
+        "B": "کانسٹنٹ",
+        "C": "A اور B دونوں",
+        "D": "فنکشن"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-069"
+    },
+    {
+      "id": 70,
+      "category": "pastpapers",
+      "question_en": "Single line comments start with ______.",
+      "options": {
+        "A": "\\\\",
+        "B": "//",
+        "C": "||",
+        "D": "*/"
+      },
+      "question_ur": "۷۰۔ سنگل لائن کمنٹس......کے ساتھ شروع ہوتا ہے:",
+      "options_ur": {
+        "A": "\\\\",
+        "B": "//",
+        "C": "||",
+        "D": "*//"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-070"
+    },
+    {
+      "id": 71,
+      "category": "pastpapers",
+      "question_en": "The body of main is enclosed ______:",
+      "options": {
+        "A": "( )",
+        "B": "[ ]",
+        "C": "{ }",
+        "D": "< >"
+      },
+      "question_ur": "۷۱۔ main کی باڈی......بریکٹس میں بند ہے:",
+      "options_ur": {
+        "A": "()",
+        "B": "[]",
+        "C": "{}",
+        "D": "<>"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-071"
+    },
+    {
+      "id": 72,
+      "category": "pastpapers",
+      "question_en": "In C programming, there are ____ types of comments:",
+      "options": {
+        "A": "1",
+        "B": "2",
+        "C": "3",
+        "D": "4"
+      },
+      "question_ur": "۷۲۔ C پروگرامنگ میں، کمانڈز کی......اقسام ہیں:",
+      "options_ur": {
+        "A": "1",
+        "B": "2",
+        "C": "3",
+        "D": "4"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-072"
+    },
+    {
+      "id": 73,
+      "category": "pastpapers",
+      "question_en": "A software that provides a programming environment to facilitate programmers in writing and executing computer programs is known as ______.",
+      "options": {
+        "A": "Work place",
+        "B": "Work space",
+        "C": "IDE",
+        "D": "All"
+      },
+      "question_ur": "۷۳۔ ایک ایسا سافٹ ویئر جو پروگرامرز کو پروگرام لکھنے اور اس پر عمل کرنے کے لیے سہولت ماحول فراہم کرتا ہے، کہلاتا ہے:",
+      "options_ur": {
+        "A": "ورک پلیس",
+        "B": "ورک اسپیس",
+        "C": "انٹیگریٹڈ ڈیولپمنٹ انوائرونمنٹ IDE",
+        "D": "تمام"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-073"
+    }
+  ],
+  "shortQuestions": [
+    {
+      "id": 1,
+      "category": "Exercise",
+      "question_en": "Define IDE.",
+      "question_ur": "IDE کی تعریف کریں۔",
+      "contentType": "short",
+      "itemCode": "SHORT-001"
+    },
+    {
+      "id": 2,
+      "category": "Exercise",
+      "question_en": "Define compiler.",
+      "question_ur": "کمپائلر کی تعریف کریں۔",
+      "contentType": "short",
+      "itemCode": "SHORT-002"
+    },
+    {
+      "id": 3,
+      "category": "Exercise",
+      "question_en": "Define reserved words.",
+      "question_ur": "ذخیرہ الفاظ کی تعریف کریں۔",
+      "contentType": "short",
+      "itemCode": "SHORT-003"
+    },
+    {
+      "id": 4,
+      "category": "Exercise",
+      "question_en": "Define main section of a program.",
+      "question_ur": "باڈی کے مین سیکشن کی تعریف کریں۔",
+      "contentType": "short",
+      "itemCode": "SHORT-004"
+    },
+    {
+      "id": 5,
+      "category": "Exercise",
+      "question_en": "Define char data type.",
+      "question_ur": "char ڈیٹا ٹائپ کی تعریف کریں۔",
+      "contentType": "short",
+      "itemCode": "SHORT-005"
+    },
+    {
+      "id": 6,
+      "category": "Additional",
+      "question_en": "Define computer program.",
+      "question_ur": "کمپیوٹر پروگرام کی تعریف کریں۔",
+      "contentType": "short",
+      "itemCode": "SHORT-006"
+    },
+    {
+      "id": 7,
+      "category": "Additional",
+      "question_en": "Define software.",
+      "question_ur": "سافٹ ویئر کی تعریف کریں۔",
+      "contentType": "short",
+      "itemCode": "SHORT-007"
+    },
+    {
+      "id": 8,
+      "category": "Additional",
+      "question_en": "Define computer programming.",
+      "question_ur": "کمپیوٹر پروگرامنگ کی تعریف کریں۔",
+      "contentType": "short",
+      "itemCode": "SHORT-008"
+    },
+    {
+      "id": 9,
+      "category": "Additional",
+      "question_en": "Define programmer.",
+      "question_ur": "پروگرامر کی تعریف کریں۔",
+      "contentType": "short",
+      "itemCode": "SHORT-009"
+    },
+    {
+      "id": 10,
+      "category": "Additional",
+      "question_en": "Define programming languages.",
+      "question_ur": "پروگرامنگ لینگوئجز کی تعریف کریں۔",
+      "contentType": "short",
+      "itemCode": "SHORT-010"
+    },
+    {
+      "id": 11,
+      "category": "Additional",
+      "question_en": "Who developed C language and when?",
+      "question_ur": "C لینگوئج کس نے اور کب ایجاد کی؟",
+      "contentType": "short",
+      "itemCode": "SHORT-011"
+    },
+    {
+      "id": 12,
+      "category": "Additional",
+      "question_en": "IDE stands for what?",
+      "question_ur": "IDE کس کا مخفف ہے؟",
+      "contentType": "short",
+      "itemCode": "SHORT-012"
+    },
+    {
+      "id": 13,
+      "category": "Additional",
+      "question_en": "Write the characteristics of an IDE. Also write some available IDEs for C programming.",
+      "question_ur": "ایک IDE کی خصوصیات تحریر کریں۔ نیز C پروگرامنگ کے لیے کچھ دستیاب IDEs لکھیں۔",
+      "contentType": "short",
+      "itemCode": "SHORT-013"
+    },
+    {
+      "id": 14,
+      "category": "Additional",
+      "question_en": "What is text editor?",
+      "question_ur": "ٹیکسٹ ایڈیٹر کیا ہے؟",
+      "contentType": "short",
+      "itemCode": "SHORT-014"
+    },
+    {
+      "id": 15,
+      "category": "Additional",
+      "question_en": "What does a compiler do?",
+      "question_ur": "کمپائلر کیا کرتا ہے؟",
+      "contentType": "short",
+      "itemCode": "SHORT-015"
+    },
+    {
+      "id": 16,
+      "category": "Additional",
+      "question_en": "Define syntax.",
+      "question_ur": "سنٹیکس کی تعریف کریں۔",
+      "contentType": "short",
+      "itemCode": "SHORT-016"
+    },
+    {
+      "id": 17,
+      "category": "Additional",
+      "question_en": "Define syntax error.",
+      "question_ur": "سنٹیکس ایرر کی تعریف کریں۔",
+      "contentType": "short",
+      "itemCode": "SHORT-017"
+    },
+    {
+      "id": 18,
+      "category": "Additional",
+      "question_en": "What are keywords? Write some examples.",
+      "question_ur": "ذخیرہ الفاظ کیا ہیں؟ کچھ مثالیں تحریر کریں۔",
+      "contentType": "short",
+      "itemCode": "SHORT-018"
+    },
+    {
+      "id": 19,
+      "category": "Additional",
+      "question_en": "What do you know about link section of a C program?",
+      "question_ur": "آپ C پروگرام کے لِنک سیکشن کے بارے میں کیا جانتے ہیں؟",
+      "contentType": "short",
+      "itemCode": "SHORT-019"
+    },
+    {
+      "id": 20,
+      "category": "Additional",
+      "question_en": "What are header files?",
+      "question_ur": "ہیڈر فائلز کیا ہیں؟",
+      "contentType": "short",
+      "itemCode": "SHORT-020"
+    },
+    {
+      "id": 21,
+      "category": "Additional",
+      "question_en": "What does the include statement do?",
+      "question_ur": "include سٹیٹمنٹ کیا کرتی ہے؟",
+      "contentType": "short",
+      "itemCode": "SHORT-021"
+    },
+    {
+      "id": 22,
+      "category": "Additional",
+      "question_en": "Write the general syntax of include statement.",
+      "question_ur": "include سٹیٹمنٹ کا جنرل سنٹیکس تحریر کریں۔",
+      "contentType": "short",
+      "itemCode": "SHORT-022"
+    },
+    {
+      "id": 23,
+      "category": "Additional",
+      "question_en": "What do you know about body of main() function of a C program?",
+      "question_ur": "C پروگرام کے main() فنکشن کی باڈی کے بارے میں آپ کیا جانتے ہیں؟",
+      "contentType": "short",
+      "itemCode": "SHORT-023"
+    },
+    {
+      "id": 24,
+      "category": "Additional",
+      "question_en": "Write any one point to write syntactically correct C language program.",
+      "question_ur": "C لینگوئج پروگرام کو درست سنٹیکس کے ساتھ لکھنے کے لیے کوئی ایک پوائنٹ تحریر کریں۔",
+      "contentType": "short",
+      "itemCode": "SHORT-024"
+    },
+    {
+      "id": 25,
+      "category": "Additional",
+      "question_en": "What are comments?",
+      "question_ur": "کمنٹس کیا ہیں؟",
+      "contentType": "short",
+      "itemCode": "SHORT-025"
+    },
+    {
+      "id": 26,
+      "category": "Additional",
+      "question_en": "Write purpose of using comments in C program.",
+      "question_ur": "C پروگرام میں کمنٹس استعمال کرنے کا مقصد تحریر کریں۔",
+      "contentType": "short",
+      "itemCode": "SHORT-026"
+    },
+    {
+      "id": 27,
+      "category": "Additional",
+      "question_en": "How many types of comments are there in C language?",
+      "question_ur": "C لینگوئج میں کمنٹس کیا کتنی اقسام ہیں؟",
+      "contentType": "short",
+      "itemCode": "SHORT-027"
+    },
+    {
+      "id": 28,
+      "category": "Additional",
+      "question_en": "Define single-line comments.",
+      "question_ur": "سنگل لائن کمنٹ کی تعریف کریں۔",
+      "contentType": "short",
+      "itemCode": "SHORT-028"
+    },
+    {
+      "id": 29,
+      "category": "Additional",
+      "question_en": "Define multi-line comments.",
+      "question_ur": "ملٹی لائن کمنٹ کی تعریف کریں۔",
+      "contentType": "short",
+      "itemCode": "SHORT-029"
+    },
+    {
+      "id": 30,
+      "category": "Additional",
+      "question_en": "Differentiate between single-line and multi-line comments.",
+      "question_ur": "سنگل لائن اور ملٹی لائن کمنٹس میں فرق بیان کریں۔",
+      "contentType": "short",
+      "itemCode": "SHORT-030"
+    },
+    {
+      "id": 31,
+      "category": "Additional",
+      "question_en": "Write a program to define the purpose of comments in C.",
+      "question_ur": "C میں کمنٹس کا مقصد بیان کرنے کے لیے ایک پروگرام تحریر کریں۔",
+      "contentType": "short",
+      "itemCode": "SHORT-031"
+    },
+    {
+      "id": 32,
+      "category": "Additional",
+      "question_en": "Define character set.",
+      "question_ur": "کریکٹر سیٹ کی تعریف کریں۔",
+      "contentType": "short",
+      "itemCode": "SHORT-032"
+    },
+    {
+      "id": 33,
+      "category": "Additional",
+      "question_en": "Define constant.",
+      "question_ur": "کانسٹینٹ کی تعریف کریں۔",
+      "contentType": "short",
+      "itemCode": "SHORT-033"
+    },
+    {
+      "id": 34,
+      "category": "Additional",
+      "question_en": "How many types of constants are there in C?",
+      "question_ur": "C میں کانسٹینٹس کی کتنی اقسام ہیں؟",
+      "contentType": "short",
+      "itemCode": "SHORT-034"
+    },
+    {
+      "id": 35,
+      "category": "Additional",
+      "question_en": "What is meant by integer constants?",
+      "question_ur": "انٹیجر کانسٹینٹ کا کیا مطلب ہے؟",
+      "contentType": "short",
+      "itemCode": "SHORT-035"
+    },
+    {
+      "id": 36,
+      "category": "Additional",
+      "question_en": "What is meant by real constants?",
+      "question_ur": "حقیقی کانسٹینٹ کا کیا مطلب ہے؟",
+      "contentType": "short",
+      "itemCode": "SHORT-036"
+    },
+    {
+      "id": 37,
+      "category": "Additional",
+      "question_en": "What is meant by character constants?",
+      "question_ur": "کریکٹر کانسٹینٹ کا کیا مطلب ہے؟",
+      "contentType": "short",
+      "itemCode": "SHORT-037"
+    },
+    {
+      "id": 38,
+      "category": "Additional",
+      "question_en": "Differentiate between integer and real constants.",
+      "question_ur": "انٹیجر اور حقیقی کانسٹینٹ میں فرق بیان کریں۔",
+      "contentType": "short",
+      "itemCode": "SHORT-038"
+    },
+    {
+      "id": 39,
+      "category": "Additional",
+      "question_en": "Differentiate between real and character constants.",
+      "question_ur": "حقیقی اور کریکٹر کانسٹینٹ میں فرق بیان کریں۔",
+      "contentType": "short",
+      "itemCode": "SHORT-039"
+    },
+    {
+      "id": 40,
+      "category": "Additional",
+      "question_en": "Differentiate between integer and character constants.",
+      "question_ur": "انٹیجر اور کریکٹر کانسٹینٹ میں فرق بیان کریں۔",
+      "contentType": "short",
+      "itemCode": "SHORT-040"
+    },
+    {
+      "id": 41,
+      "category": "Additional",
+      "question_en": "Define variables.",
+      "question_ur": "متغیرات کی تعریف کریں۔",
+      "contentType": "short",
+      "itemCode": "SHORT-041"
+    },
+    {
+      "id": 42,
+      "category": "Additional",
+      "question_en": "What is identifier?",
+      "question_ur": "آئیڈنٹیفائر کیا ہے؟",
+      "contentType": "short",
+      "itemCode": "SHORT-042"
+    },
+    {
+      "id": 43,
+      "category": "Additional",
+      "question_en": "What do you know about data type?",
+      "question_ur": "ڈیٹا ٹائپ کے بارے میں آپ کیا جانتے ہیں؟",
+      "contentType": "short",
+      "itemCode": "SHORT-043"
+    },
+    {
+      "id": 44,
+      "category": "Additional",
+      "question_en": "How many data types are there in C?",
+      "question_ur": "C میں کتنی ڈیٹا ٹائپس ہیں؟",
+      "contentType": "short",
+      "itemCode": "SHORT-044"
+    },
+    {
+      "id": 45,
+      "category": "Additional",
+      "question_en": "Make a table for data types with sample values.",
+      "question_ur": "سیمپل مقداروں کے ساتھ ڈیٹا ٹائپس کا ٹیبل بنائیں۔",
+      "contentType": "short",
+      "itemCode": "SHORT-045"
+    },
+    {
+      "id": 46,
+      "category": "Additional",
+      "question_en": "Define integer-int data type.",
+      "question_ur": "ایٹیجر ڈیٹا ٹائپ کی تعریف کریں۔",
+      "contentType": "short",
+      "itemCode": "SHORT-046"
+    },
+    {
+      "id": 47,
+      "category": "Additional",
+      "question_en": "Define integer-int (signed int) data type.",
+      "question_ur": "انٹیجر (signed int) ڈیٹا ٹائپ کی تعریف کریں۔",
+      "contentType": "short",
+      "itemCode": "SHORT-047"
+    },
+    {
+      "id": 48,
+      "category": "Additional",
+      "question_en": "Define integer-int (unsigned int) data type.",
+      "question_ur": "انٹیجر (unsigned int) ڈیٹا ٹائپ کی تعریف کریں۔",
+      "contentType": "short",
+      "itemCode": "SHORT-048"
+    },
+    {
+      "id": 49,
+      "category": "Additional",
+      "question_en": "Differentiate between signed int and unsigned int.",
+      "question_ur": "signed int اور unsigned int میں فرق بیان کریں۔",
+      "contentType": "short",
+      "itemCode": "SHORT-049"
+    },
+    {
+      "id": 50,
+      "category": "Additional",
+      "question_en": "Define floating point-float data type.",
+      "question_ur": "فلوٹنگ پوائنٹ ڈیٹا ٹائپ کی تعریف کریں۔",
+      "contentType": "short",
+      "itemCode": "SHORT-050"
+    },
+    {
+      "id": 51,
+      "category": "Additional",
+      "question_en": "Define character-char data type.",
+      "question_ur": "کریکٹر ڈیٹا ٹائپ کی تعریف کریں۔",
+      "contentType": "short",
+      "itemCode": "SHORT-051"
+    },
+    {
+      "id": 52,
+      "category": "Additional",
+      "question_en": "Write any two rules of naming a variable.",
+      "question_ur": "متغیر کے نام کے کوئی سے دو قوانین تحریر کریں۔",
+      "contentType": "short",
+      "itemCode": "SHORT-052"
+    },
+    {
+      "id": 53,
+      "category": "Additional",
+      "question_en": "Define variable declaration.",
+      "question_ur": "متغیر ڈِکلریشن کی تعریف کریں۔",
+      "contentType": "short",
+      "itemCode": "SHORT-053"
+    },
+    {
+      "id": 54,
+      "category": "Additional",
+      "question_en": "Write general syntax of variable declaration.",
+      "question_ur": "متغیر ڈِکلریشن کا جنرل سنٹیکس تحریر کریں۔",
+      "contentType": "short",
+      "itemCode": "SHORT-054"
+    },
+    {
+      "id": 55,
+      "category": "Additional",
+      "question_en": "Write any four examples of variable declarations.",
+      "question_ur": "متغیر ڈکلریشن کی کوئی سی چار مثالیں تحریر کریں۔",
+      "contentType": "short",
+      "itemCode": "SHORT-055"
+    },
+    {
+      "id": 56,
+      "category": "Additional",
+      "question_en": "Define variable initialization.",
+      "question_ur": "ویری ایبل اِنیشلائزیشن کی تعریف کریں۔",
+      "contentType": "short",
+      "itemCode": "SHORT-056"
+    },
+    {
+      "id": 57,
+      "category": "Additional",
+      "question_en": "Write general syntax of initializing a variable.",
+      "question_ur": "ویری ایبل اِنیشلائزیشن کا جنرل سنٹیکس تحریر کریں۔",
+      "contentType": "short",
+      "itemCode": "SHORT-057"
+    },
+    {
+      "id": 58,
+      "category": "Additional",
+      "question_en": "Write any program to show initialization of two variables.",
+      "question_ur": "دو متغیرات کی اِنیشلائزیشن دکھانے کے لیے کوئی پروگرام تحریر کریں۔",
+      "contentType": "short",
+      "itemCode": "SHORT-058"
+    },
+    {
+      "id": 59,
+      "category": "Past Papers",
+      "question_en": "Define computer program.",
+      "question_ur": "کمپیوٹر پروگرام کی تعریف کریں۔",
+      "contentType": "short",
+      "itemCode": "SHORT-059"
+    },
+    {
+      "id": 60,
+      "category": "Past Papers",
+      "question_en": "Define computer programming.",
+      "question_ur": "کمپیوٹر پروگرامنگ کی تعریف کریں۔",
+      "contentType": "short",
+      "itemCode": "SHORT-060"
+    },
+    {
+      "id": 61,
+      "category": "Past Papers",
+      "question_en": "What is text editor?",
+      "question_ur": "ٹیکسٹ ایڈیٹر کیا ہے؟",
+      "contentType": "short",
+      "itemCode": "SHORT-061"
+    },
+    {
+      "id": 62,
+      "category": "Past Papers",
+      "question_en": "What is the importance of computers in our daily life?",
+      "question_ur": "ہماری روزمرہ کی زندگی میں کمپیوٹر کی کیا اہمیت ہے؟",
+      "contentType": "short",
+      "itemCode": "SHORT-062"
+    },
+    {
+      "id": 63,
+      "category": "Past Papers",
+      "question_en": "Who is programmer?",
+      "question_ur": " پروگرامر کون ہوتا ہے؟",
+      "contentType": "short",
+      "itemCode": "SHORT-063"
+    },
+    {
+      "id": 64,
+      "category": "Past Papers",
+      "question_en": "What is an Integrated Development Environment (IDE)?",
+      "question_ur": "انٹیگریٹڈ ڈیویلپمنٹ انوائرنمنٹ (IDE) کیا ہے؟",
+      "contentType": "short",
+      "itemCode": "SHORT-064"
+    },
+    {
+      "id": 65,
+      "category": "Past Papers",
+      "question_en": "What is syntax?",
+      "question_ur": "سنٹیکس کیا ہے؟",
+      "contentType": "short",
+      "itemCode": "SHORT-065"
+    },
+    {
+      "id": 66,
+      "category": "Past Papers",
+      "question_en": "What is syntax error?",
+      "question_ur": "سنٹیکس ایرر کسے کہتے ہیں؟",
+      "contentType": "short",
+      "itemCode": "SHORT-066"
+    },
+    {
+      "id": 67,
+      "category": "Past Papers",
+      "question_en": "What are header files?",
+      "question_ur": "ہیڈر فائلز کیا ہیں؟",
+      "contentType": "short",
+      "itemCode": "SHORT-067"
+    },
+    {
+      "id": 68,
+      "category": "Past Papers",
+      "question_en": "What is the purpose of comments in a C program?",
+      "question_ur": "C پروگرام میں کمنٹس کا کیا مقصد ہے؟",
+      "contentType": "short",
+      "itemCode": "SHORT-068"
+    },
+    {
+      "id": 69,
+      "category": "Past Papers",
+      "question_en": "Write down any four reserved words of C language.",
+      "question_ur": "C زبان کے کوئی بھی چار محفوظ کیے گئے الفاظ لکھیں۔",
+      "contentType": "short",
+      "itemCode": "SHORT-069"
+    },
+    {
+      "id": 70,
+      "category": "Past Papers",
+      "question_en": "How a header file is included in a C program?",
+      "question_ur": "C پروگرام میں ہیڈر فائل کیسے شامل کی جاتی ہے؟",
+      "contentType": "short",
+      "itemCode": "SHORT-070"
+    },
+    {
+      "id": 71,
+      "category": "Past Papers",
+      "question_en": "What is \"Body of main() function\"?",
+      "question_ur": "main() فنکشن کی باڈی کسے کہتے ہیں؟",
+      "contentType": "short",
+      "itemCode": "SHORT-071"
+    },
+    {
+      "id": 72,
+      "category": "Past Papers",
+      "question_en": "What do you know about \"C language is case sensitive\"?",
+      "question_ur": "C لینگوئج کے کیس سینسٹِو ہونے کے بارے میں آپ کیا جانتے ہیں؟",
+      "contentType": "short",
+      "itemCode": "SHORT-072"
+    },
+    {
+      "id": 73,
+      "category": "Past Papers",
+      "question_en": "What is the syntax of writing comments in a C program?",
+      "question_ur": "C پروگرام میں کمنٹس لکھنے کا سینٹیکس کیا ہے؟",
+      "contentType": "short",
+      "itemCode": "SHORT-073"
+    },
+    {
+      "id": 74,
+      "category": "Past Papers",
+      "question_en": "What do you know about variables?",
+      "question_ur": "آپ متغیرات کے بارے میں کیا جانتے ہیں؟",
+      "contentType": "short",
+      "itemCode": "SHORT-074"
+    },
+    {
+      "id": 75,
+      "category": "Past Papers",
+      "question_en": "Define variable initialization.",
+      "question_ur": "ویری ایبل اِنیشلائزیشن کی تعریف کریں۔",
+      "contentType": "short",
+      "itemCode": "SHORT-075"
+    },
+    {
+      "id": 76,
+      "category": "Past Papers",
+      "question_en": "What is character set in C programming language?",
+      "question_ur": "C پروگرامنگ لینگوئج میں کریکٹر سیٹ کیا ہے؟",
+      "contentType": "short",
+      "itemCode": "SHORT-076"
+    },
+    {
+      "id": 77,
+      "category": "Past Papers",
+      "question_en": "Define constant and give example.",
+      "question_ur": "کانسٹینٹ کی تعریف کریں اور مثال دیں۔",
+      "contentType": "short",
+      "itemCode": "SHORT-077"
+    },
+    {
+      "id": 78,
+      "category": "Past Papers",
+      "question_en": "Define character constant and give example.",
+      "question_ur": "کریکٹر کانسٹینٹ کی تعریف کریں اور مثال دیں۔",
+      "contentType": "short",
+      "itemCode": "SHORT-078"
+    },
+    {
+      "id": 79,
+      "category": "Past Papers",
+      "question_en": "Define data types and give some examples.",
+      "question_ur": "ڈیٹا ٹائپ کی تعریف کریں اور چند مثالیں دیں۔",
+      "contentType": "short",
+      "itemCode": "SHORT-079"
+    },
+    {
+      "id": 80,
+      "category": "Past Papers",
+      "question_en": "Write down any three rules for naming variables.",
+      "question_ur": "متغیرات کے ناموں کے کوئی سے تین اصول تحریر کریں۔",
+      "contentType": "short",
+      "itemCode": "SHORT-080"
+    },
+    {
+      "id": 81,
+      "category": "Past Papers",
+      "question_en": "How can we declare a variable?",
+      "question_ur": "ہم ایک متغیر کو کیسے ڈکلیئر کر سکتے ہیں؟",
+      "contentType": "short",
+      "itemCode": "SHORT-081"
+    },
+    {
+      "id": 82,
+      "category": "Past Papers",
+      "question_en": "What is syntax to declare a variable?",
+      "question_ur": "ایک متغیر کو ڈکلیئر کرنے کا سینٹیکس کیا ہے؟",
+      "contentType": "short",
+      "itemCode": "SHORT-082"
+    },
+    {
+      "id": 83,
+      "category": "Conceptuals",
+      "question_en": "What is a variable in programming and how is it used to store data??",
+      "question_ur": "پروگرامنگ میں ویری ایبل کیا ہے اور ڈیٹا کو سٹورکرنے کے لیے اسے کیسے استعمال کیا جاتا ہے؟©",
+      "contentType": "short",
+      "itemCode": "SHORT-083"
+    },
+    {
+      "id": 84,
+      "category": "Conceptuals",
+      "question_en": "What is the difference between a constant and a variable in programming??",
+      "question_ur": "پروگرامنگ میں کانسٹنٹ اور ویری ایبل کے درمیان کیا فرق ہے؟©",
+      "contentType": "short",
+      "itemCode": "SHORT-084"
+    },
+    {
+      "id": 85,
+      "category": "Conceptuals",
+      "question_en": "What is the purpose of declaring a variable with a data type in programming??",
+      "question_ur": "پروگرامنگ میں ڈیٹا ٹائپ کے ساتھ ویری ایبل کو ڈکلیئر کرنے کا مقصد کیا ہے؟©",
+      "contentType": "short",
+      "itemCode": "SHORT-085"
+    },
+    {
+      "id": 86,
+      "category": "Conceptuals",
+      "question_en": "What is the purpose of initializing a variable in programming??",
+      "question_ur": "پروگرامنگ میں ویری ایبل کوانیشلائز کرنے کا مقصد کیا ہے؟©",
+      "contentType": "short",
+      "itemCode": "SHORT-086"
+    },
+    {
+      "id": 87,
+      "category": "Conceptuals",
+      "question_en": "What is a global variable in programming and how is it different from a local variable??",
+      "question_ur": "پروگرامنگ میں گلوبل ویری ایبل کیا ہے اور یہ لوکل ویری ایبل سے کیسے مختلف ہے؟©",
+      "contentType": "short",
+      "itemCode": "SHORT-087"
+    },
+    {
+      "id": 88,
+      "category": "Conceptuals",
+      "question_en": "What is a constant in programming and how is it used to store data??",
+      "question_ur": "پروگرامنگ میں کانسٹنٹ کیا ہے اور ڈیٹا کو سٹور کرنے کے لیے اسے کیسے استعمال کیا جاتا ہے؟©",
+      "contentType": "short",
+      "itemCode": "SHORT-088"
+    },
+    {
+      "id": 89,
+      "category": "Conceptuals",
+      "question_en": "What is the naming convention for variables in programming??",
+      "question_ur": "پروگرامنگ میں ویری ایبلز کےنام کاکنونشن کیا ہے؟©",
+      "contentType": "short",
+      "itemCode": "SHORT-089"
+    },
+    {
+      "id": 90,
+      "category": "Conceptuals",
+      "question_en": "What is the difference between a string and an integer data type in programming??",
+      "question_ur": "پروگرامنگ میں سٹرنگ اور انٹیجر ڈیٹا ٹائپ میں کیا فرق ہے؟©",
+      "contentType": "short",
+      "itemCode": "SHORT-090"
+    },
+    {
+      "id": 91,
+      "category": "Conceptuals",
+      "question_en": "What is the difference between declaring and initializing a variable in programming??",
+      "question_ur": "پروگرامنگ میں ویری ایبل ڈکلیئرکرنےاورانیشلائز کرنے میں کیا فرق ہے؟©",
+      "contentType": "short",
+      "itemCode": "SHORT-091"
+    },
+    {
+      "id": 92,
+      "category": "Conceptuals",
+      "question_en": "How can variables be used to make a program more flexible and dynamic??",
+      "question_ur": "کسی پروگرام کو مزید فلیکسیبل اور ڈائنامک بنانے کے لیے ویری ایبلز کا استعمال کیسے کیا جا سکتا ہے؟©",
+      "contentType": "short",
+      "itemCode": "SHORT-092"
+    },
+    {
+      "id": 93,
+      "category": "Conceptuals",
+      "question_en": "What is an integrated development environment (IDE) and why is it useful for programming??",
+      "question_ur": "ایک مربوط ترقیاتی ماحول (IDE) کیا ہے اور یہ پروگرامنگ کے لیے کیوں مفید ہے؟©",
+      "contentType": "short",
+      "itemCode": "SHORT-093"
+    },
+    {
+      "id": 94,
+      "category": "Conceptuals",
+      "question_en": "What is a version control system and why is it important for software development??",
+      "question_ur": "ورژن کنٹرول سسٹم کیا ہے اور سافٹ ویئر ڈویلپمنٹ کے لیے یہ کیوں ضروری ہے؟©",
+      "contentType": "short",
+      "itemCode": "SHORT-094"
+    },
+    {
+      "id": 95,
+      "category": "Conceptuals",
+      "question_en": "What is a database management system (DBMS) and what are some common uses for it??",
+      "question_ur": "ڈیٹا بیس مینجمنٹ سسٹم (DBMS) کیا ہے اور اس کے کچھ عام استعمال کیا ہیں؟©",
+      "contentType": "short",
+      "itemCode": "SHORT-095"
+    },
+    {
+      "id": 96,
+      "category": "Conceptuals",
+      "question_en": "What is a web framework and how does it simplify web development??",
+      "question_ur": "ویب فریم ورک کیا ہے اور یہ ویب ڈویلپمنٹ کو کیسے آسان بناتا ہے؟©",
+      "contentType": "short",
+      "itemCode": "SHORT-096"
+    },
+    {
+      "id": 97,
+      "category": "Conceptuals",
+      "question_en": "What is a markup language and how is it used in web development??",
+      "question_ur": "مارک اپ لینگویج کیا ہے اور اسے ویب ڈویلپمنٹ میں کیسے استعمال کیا جاتا ہے؟©",
+      "contentType": "short",
+      "itemCode": "SHORT-097"
+    },
+    {
+      "id": 98,
+      "category": "Conceptuals",
+      "question_en": "What is a software development methodology and why is it important for managing software projects??",
+      "question_ur": "سافٹ ویئر ڈویلپمنٹ کا طریقہ کار کیا ہے اور سافٹ ویئر پروجیکٹس کے انتظام کے لیے یہ کیوں ضروری ہے؟©",
+      "contentType": "short",
+      "itemCode": "SHORT-098"
+    },
+    {
+      "id": 99,
+      "category": "Conceptuals",
+      "question_en": "What is an application programming interface (API) and how is it used in software development??",
+      "question_ur": "ایپلی کیشن پروگرامنگ انٹرفیس (API) کیا ہے اور اسے سافٹ ویئر ڈویلپمنٹ میں کیسے استعمال کیا جاتا ہے؟©",
+      "contentType": "short",
+      "itemCode": "SHORT-099"
+    },
+    {
+      "id": 100,
+      "category": "Conceptuals",
+      "question_en": "What is a cloud computing platform and how is it used in modern software development??",
+      "question_ur": "کلاؤڈ کمپیوٹنگ پلیٹ فارم کیا ہے اور اسے جدید سافٹ ویئر ڈویلپمنٹ میں کیسے استعمال کیا جاتا ہے؟©",
+      "contentType": "short",
+      "itemCode": "SHORT-100"
+    },
+    {
+      "id": 101,
+      "category": "Conceptuals",
+      "question_en": "What is a programming paradigm and how does it influence the way we approach programming problems??",
+      "question_ur": "پروگرامنگ پیراڈائم کیا ہے اور یہ پروگرامنگ کے مسائل تک پہنچنے کے طریقے کو کیسے متاثر کرتا ہے؟©",
+      "contentType": "short",
+      "itemCode": "SHORT-101"
+    },
+    {
+      "id": 102,
+      "category": "Conceptuals",
+      "question_en": "What is a scripting language and how is it different from a programming language??",
+      "question_ur": "اسکرپٹنگ زبان کیا ہے اور یہ پروگرامنگ زبان سے کیسے مختلف ہے؟©",
+      "contentType": "short",
+      "itemCode": "SHORT-102"
+    }
+  ],
+  "longQuestions": [
+    {
+      "id": 1,
+      "category": "Exercise",
+      "question_en": "Why do we need a programming environment?",
+      "question_ur": "ہمیں پروگرامنگ انوائرنمنٹ کی ضرورت کیوں ہوتی ہے؟",
+      "contentType": "long",
+      "itemCode": "LONG-001"
+    },
+    {
+      "id": 2,
+      "category": "Exercise",
+      "question_en": "Write the steps to create a C program file in the IDE of your lab computer.",
+      "question_ur": "اپنے لیب کمپیوٹر کے IDE میں C پروگرام فائل کو بنانے کے لیے مراحل تحریر کریں۔",
+      "contentType": "long",
+      "itemCode": "LONG-002"
+    },
+    {
+      "id": 3,
+      "category": "Exercise",
+      "question_en": "Describe the purpose of a compiler.",
+      "question_ur": "کمپائلر کا مقصد بیان کریں۔",
+      "contentType": "long",
+      "itemCode": "LONG-003"
+    },
+    {
+      "id": 4,
+      "category": "Exercise",
+      "question_en": "Define reserved words. Also list down any twenty reserved words in C programming language.",
+      "question_ur": "ذخیرہ الفاظ کی تعریف کریں۔ اور C پروگرامنگ لینگوئج میں کوئی سے بیس ذخیرہ الفاظ تحریر کریں۔",
+      "contentType": "long",
+      "itemCode": "LONG-004"
+    },
+    {
+      "id": 5,
+      "category": "Exercise",
+      "question_en": "Discuss the main parts of the structure of a C program.",
+      "question_ur": "C پروگرام کے سٹرکچر کے مین پارٹس کو بیان کریں۔",
+      "contentType": "long",
+      "itemCode": "LONG-005"
+    },
+    {
+      "id": 6,
+      "category": "Exercise",
+      "question_en": "Why do we use comments in programming?",
+      "question_ur": "ہم پروگرامنگ میں کمنٹس کیوں استعمال کرتے ہیں؟",
+      "contentType": "long",
+      "itemCode": "LONG-006"
+    },
+    {
+      "id": 7,
+      "category": "Exercise",
+      "question_en": "Write detailed note on constants and variables.",
+      "question_ur": "کانسٹینٹس اور متغیرات پر تفصیلی نوٹ تحریر کریں۔",
+      "contentType": "long",
+      "itemCode": "LONG-007"
+    },
+    {
+      "id": 8,
+      "category": "Exercise",
+      "question_en": "Write down the rules for naming variables.",
+      "question_ur": "متغیرات کے ناموں کے قوانین تحریر کریں۔",
+      "contentType": "long",
+      "itemCode": "LONG-008"
+    },
+    {
+      "id": 9,
+      "category": "Exercise",
+      "question_en": "Write a note on char and int data type.",
+      "question_ur": "chat اور int ڈیٹا ٹائپ پر نوٹ تحریر کریں۔",
+      "contentType": "long",
+      "itemCode": "LONG-009"
+    },
+    {
+      "id": 10,
+      "category": "Exercise",
+      "question_en": "How can we declare and initialize a variable?",
+      "question_ur": "ہم کیسے ایک متغیر کو ڈیکلیئر اور اِنیشلائز کر سکتے ہیں؟",
+      "contentType": "long",
+      "itemCode": "LONG-010"
+    },
+    {
+      "id": 11,
+      "category": "Additional",
+      "question_en": "Write a detailed note on constants.",
+      "question_ur": "کانسٹینٹ پر تفصیلی نوٹ تحریر کریں۔",
+      "contentType": "long",
+      "itemCode": "LONG-011"
+    },
+    {
+      "id": 12,
+      "category": "Additional",
+      "question_en": "Briefly describe data types of a variable.",
+      "question_ur": "متغیر کی ڈیٹا ٹائپس کو تفصیل سے بیان کریں۔",
+      "contentType": "long",
+      "itemCode": "LONG-012"
+    },
+    {
+      "id": 13,
+      "category": "Past Papers",
+      "question_en": "Define computer program. Describe structure of C program in detail.",
+      "question_ur": "کمپیوٹر پروگرام کی تعریف کریں۔ C پروگرام کی ساخت کو تفصیل سے بیان کریں۔",
+      "contentType": "long",
+      "itemCode": "LONG-013"
+    },
+    {
+      "id": 14,
+      "category": "Past Papers",
+      "question_en": "What is Integrated Development Environment (IDE)? Write the IDEs for C-language.",
+      "question_ur": "انٹیگریٹڈ ڈیویلپمنٹ انوائرنمنٹ کیا ہے؟ C لینگوئج کے لیے IDEs تحریر کریں۔",
+      "contentType": "long",
+      "itemCode": "LONG-014"
+    },
+    {
+      "id": 15,
+      "category": "Past Papers",
+      "question_en": "Enlist eight keywords in C programme language.",
+      "question_ur": "C پروگرام لینگوئج میں آٹھ کی ورڈز کی لسٹ بنائیں۔",
+      "contentType": "long",
+      "itemCode": "LONG-015"
+    },
+    {
+      "id": 16,
+      "category": "Past Papers",
+      "question_en": "What are comments in C programme? Describe their purpose and types.",
+      "question_ur": "C پروگرام میں کمنٹس کیا ہیں؟ انکے مقاصد اور اقسام بیان کریں۔",
+      "contentType": "long",
+      "itemCode": "LONG-016"
+    },
+    {
+      "id": 17,
+      "category": "Past Papers",
+      "question_en": "Explain the structure of \"C\" language program in detail.",
+      "question_ur": "سی لینگوئج کے پروگرام کی ساخت،وضاحت سے بیان کریں۔",
+      "contentType": "long",
+      "itemCode": "LONG-017"
+    },
+    {
+      "id": 18,
+      "category": "Past Papers",
+      "question_en": "What is meant by comments in C program? Describe purposes and types of comments.",
+      "question_ur": "سی پروگرام میں کمنٹس سے کیامراد ہے؟کمینٹس کے مقاصد اور اقسام بیان کریں؟",
+      "contentType": "long",
+      "itemCode": "LONG-018"
+    },
+    {
+      "id": 19,
+      "category": "Past Papers",
+      "question_en": "What is meant by comments in C language? Explain the purpose and syntax of comments.",
+      "question_ur": "سی پروگرام میں کمینٹس سے کیا مراد ہے ؟کمینٹس کا مقصد اور سینٹکس واضح کریں۔",
+      "contentType": "long",
+      "itemCode": "LONG-019"
+    },
+    {
+      "id": 20,
+      "category": "Past Papers",
+      "question_en": "What is meant by variables? Explain different \"data types\" in C language.",
+      "question_ur": "متغیرات سے کیا مراد ہے؟ سی لینگوئج میں مختلف ڈیٹاٹاپئس کی وضاحت کریں۔",
+      "contentType": "long",
+      "itemCode": "LONG-020"
+    },
+    {
+      "id": 21,
+      "category": "Past Papers",
+      "question_en": "define constants and write down note on its three types.",
+      "question_ur": "مستقلات کی تعریف کریں اور اس کی تین اقسام پر نوٹ لکھیے۔",
+      "contentType": "long",
+      "itemCode": "LONG-021"
+    },
+    {
+      "id": 22,
+      "category": "Past Papers",
+      "question_en": "Define variable. Write six rules for naming a variable in C language.",
+      "question_ur": "متغیر کی تعریف کریں۔متغیر کونام دینے کے چھ قوانین لکھیے۔",
+      "contentType": "long",
+      "itemCode": "LONG-022"
+    },
+    {
+      "id": 23,
+      "category": "Past Papers",
+      "question_en": "Define variables. How we can declare and initialize a variable explain with examples.",
+      "question_ur": "متغیرات کی تعریف کریں۔ ہم ایک متغیر کو کس طرح ڈکلئر اور انیشلائز کرسکتے ہیں؟مثال کی مدد سے وضاحت کریں۔",
+      "contentType": "long",
+      "itemCode": "LONG-023"
+    },
+    {
+      "id": 24,
+      "category": "Past Papers",
+      "question_en": "What is meant by data type of a variable? Explain different data types with the help of example.",
+      "question_ur": "متغیر کی ڈیٹا ٹائپ سے کیا مراد ہے؟مختلف ڈیٹا ٹاپئس کی مثال کی مدد سے وضاحت کریں۔",
+      "contentType": "long",
+      "itemCode": "LONG-024"
+    },
+    {
+      "id": 25,
+      "category": "Past Papers",
+      "question_en": "Describe the naming Rules of variable. Also explain the Declaration and initialization of variable with example.",
+      "question_ur": "متغیر کے نام رکھنے کے اصول بیان کریں۔نیز متغیر کے ڈکلریشن اور انیشلائزیشن کی مثالوں سے وضاحت کریں۔",
+      "contentType": "long",
+      "itemCode": "LONG-025"
+    },
+    {
+      "id": 26,
+      "category": "Past Papers",
+      "question_en": "What you know about variable initialization? Also explain the comments.",
+      "question_ur": "آپ ویری ایبل انیشلائزیشن کے متعلق کیا جانتے ہیں؟ کمنٹس کی وضاحت کریں۔",
+      "contentType": "long",
+      "itemCode": "LONG-026"
+    },
+    {
+      "id": 27,
+      "category": "Past Papers",
+      "question_en": "Define variable declaration and variable initialization write down general syntax, Also give four examples of valid variable declaration.",
+      "question_ur": "متغیر کی ڈیکلریشن اور انیشلائزیشن کی تعریف کریں اور عام سینٹکس لکھیے۔نیز متغیرات کو ڈیکلئیر کرنے کی چار مثالیں دیں۔",
+      "contentType": "long",
+      "itemCode": "LONG-027"
+    },
+    {
+      "id": 28,
+      "category": "Conceptuals",
+      "question_en": "What is a variable in programming and how is it used to store data? Describe the process of declaring and initializing a variable.?",
+      "question_ur": "پروگرامنگ میں ویری ایبل کیا ہے اور ڈیٹا کو سٹور کرنے کے لیے اسے کیسے استعمال کیا جاتا ہے؟ ویری ایبل کوڈکلیئراورانیشلائزکرنےکے عمل کی وضاحت کریں۔©",
+      "contentType": "long",
+      "itemCode": "LONG-028"
+    },
+    {
+      "id": 29,
+      "category": "Conceptuals",
+      "question_en": "What is the difference between a constant and a variable in programming? Describe some common uses of constants in programming.?",
+      "question_ur": "پروگرامنگ میں کانسٹنٹ اورویری ایبل کے درمیان کیا فرق ہے؟ پروگرامنگ میں کانسٹنٹ کے کچھ عام استعمال کی وضاحت کریں۔©",
+      "contentType": "long",
+      "itemCode": "LONG-029"
+    },
+    {
+      "id": 30,
+      "category": "Conceptuals",
+      "question_en": "What is the purpose of declaring a variable with a data type in programming? Describe some common data types used for variables in programming and their uses.?",
+      "question_ur": "پروگرامنگ میں ڈیٹا ٹائپ کے ساتھ ویری ایبل کو ڈکلیئر کرنے کا مقصد کیا ہے؟ پروگرامنگ میں ویری ایبلز اور ان کے استعمال کے لیے استعمال ہونے والے ڈیٹا کی کچھ عام اقسام بیان کریں۔©",
+      "contentType": "long",
+      "itemCode": "LONG-030"
+    },
+    {
+      "id": 31,
+      "category": "Conceptuals",
+      "question_en": "What is the scope of a variable in programming and how does it affect the accessibility of the variable in different parts of a program??",
+      "question_ur": "پروگرامنگ میںویری ایبل کا دائرہ کار کیا ہے اور یہ پروگرام کے مختلف حصوں میں ویری ایبل کی رسائی کو کیسے متاثر کرتا ہے؟©",
+      "contentType": "long",
+      "itemCode": "LONG-031"
+    },
+    {
+      "id": 32,
+      "category": "Conceptuals",
+      "question_en": "What is the naming convention for variables in programming and why is it important to follow this convention??",
+      "question_ur": "پروگرامنگ میں ویری ایبلز کا نام دینے کا کنونشن کیا ہے اور اس کنونشن پر عمل کرنا کیوں ضروری ہے؟©",
+      "contentType": "long",
+      "itemCode": "LONG-032"
+    },
+    {
+      "id": 33,
+      "category": "Conceptuals",
+      "question_en": "What is an integrated development environment (IDE) and how does it help programmers in their work? Give an example of a commonly used IDE and describe some of its features.?",
+      "question_ur": "ایک مربوط ترقیاتی ماحول (IDE) کیا ہے اور یہ پروگرامرز کو ان کے کام میں کس طرح مدد کرتا ہے؟ عام طور پر استعمال ہونے والے IDE کی مثال دیں اور اس کی کچھ خصوصیات بیان کریں۔©",
+      "contentType": "long",
+      "itemCode": "LONG-033"
+    },
+    {
+      "id": 34,
+      "category": "Conceptuals",
+      "question_en": "What is a markup language and how is it used in web development? Describe some common markup languages and their features.?",
+      "question_ur": "مارک اپ لینگویج کیا ہے اور اسے ویب ڈویلپمنٹ میں کیسے استعمال کیا جاتا ہے؟ کچھ عام مارک اپ لینگویجز اور ان کی خصوصیات بیان کریں۔©",
+      "contentType": "long",
+      "itemCode": "LONG-034"
+    },
+    {
+      "id": 35,
+      "category": "Conceptuals",
+      "question_en": "Explain what a version control system is and why it is an important tool for software development. Describe some common version control systems and their features.?",
+      "question_ur": "وضاحت کریں کہ ورژن کنٹرول سسٹم کیا ہے اور یہ سافٹ ویئر ڈویلپمنٹ کے لیے ایک اہم ٹول کیوں ہے۔ کچھ عام ورژن کنٹرول سسٹم اور ان کی خصوصیات بیان کریں۔©",
+      "contentType": "long",
+      "itemCode": "LONG-035"
+    },
+    {
+      "id": 36,
+      "category": "Conceptuals",
+      "question_en": "What is a database management system (DBMS) and how is it used in software development? Describe some common types of DBMS and their features.?",
+      "question_ur": "ڈیٹا بیس مینجمنٹ سسٹم (DBMS) کیا ہے اور اسے سافٹ ویئر ڈویلپمنٹ میں کیسے استعمال کیا جاتا ہے؟ DBMS کی کچھ عام اقسام اور ان کی خصوصیات بیان کریں۔©",
+      "contentType": "long",
+      "itemCode": "LONG-036"
+    },
+    {
+      "id": 37,
+      "category": "Conceptuals",
+      "question_en": "Describe what a web framework is and how it simplifies web development. Give an example of a commonly used web framework and describe some of its features.?",
+      "question_ur": "بیان کریں کہ ویب فریم ورک کیا ہے اور یہ ویب ڈویلپمنٹ کو کیسے آسان بناتا ہے۔ عام طور پر استعمال ہونے والے ویب فریم ورک کی مثال دیں اور اس کی کچھ خصوصیات بیان کریں۔©",
+      "contentType": "long",
+      "itemCode": "LONG-037"
+    }
+  ]
+}

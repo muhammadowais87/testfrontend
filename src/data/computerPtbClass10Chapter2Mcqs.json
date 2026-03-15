@@ -1,0 +1,2549 @@
+{
+  "subject": "Computer",
+  "board": "PTB",
+  "class": "10",
+  "chapter": 2,
+  "chapterTitle": "Input, Output and Operators",
+  "mcqs": [
+    {
+      "id": 1,
+      "category": "exercise",
+      "question_en": "printf is used to print .................................. type of data.",
+      "question_ur": "printf .................................. قسم کا ڈیٹا پرنٹ کرنے کے لیے استعمال ہوتا ہے۔",
+      "options": {
+        "A": "int",
+        "B": "float",
+        "C": "char",
+        "D": "All of them"
+      },
+      "options_ur": {
+        "A": "int",
+        "B": "float",
+        "C": "char",
+        "D": "تمام"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-001"
+    },
+    {
+      "id": 2,
+      "category": "exercise",
+      "question_en": "scanf is a .................................. in C programming language.",
+      "question_ur": "C scanf- پروگرامنگ لینگوئج میں .................................. ہے۔",
+      "options": {
+        "A": "Keyword",
+        "B": "Library",
+        "C": "Function",
+        "D": "None of them"
+      },
+      "options_ur": {
+        "A": "مطلوبہ لفظ",
+        "B": "لائبریری",
+        "C": "فنکشن",
+        "D": "کوئی بھی نہیں"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-002"
+    },
+    {
+      "id": 3,
+      "category": "exercise",
+      "question_en": "getch() is used to take .................................. as input from user.",
+      "question_ur": "()getch صارف سے .................................. اِن پُٹ لینے کے لیے استعمال ہوتا ہے۔",
+      "options": {
+        "A": "int",
+        "B": "float",
+        "C": "char",
+        "D": "all"
+      },
+      "options_ur": {
+        "A": "int",
+        "B": "float",
+        "C": "char",
+        "D": "تمام"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-003"
+    },
+    {
+      "id": 4,
+      "category": "exercise",
+      "question_en": "Let the following part of code, what will be the value of variable a after execution. int a=4; float b=2.2; a=a*b;",
+      "question_ur": "کوڈ کا یہ حصہ ایگزیکیوٹ ہونے کے بعد متغیر a کی قیمت کیا ہو گی؟ ; int a=4 ;float b=2.2 ;a=a*b",
+      "options": {
+        "A": "8.8",
+        "B": "8",
+        "C": "8.0",
+        "D": "8.2"
+      },
+      "options_ur": {
+        "A": "8.8",
+        "B": "8",
+        "C": "8.0",
+        "D": "8.2"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-004"
+    },
+    {
+      "id": 5,
+      "category": "exercise",
+      "question_en": "Which of the following is a valid line of code?",
+      "question_ur": "ان میں سے کوڈ کی کونسی لائن صحیح ہے؟",
+      "options": {
+        "A": "int=20;",
+        "B": "grade='A';",
+        "C": "line=this is a line;",
+        "D": "None of them"
+      },
+      "options_ur": {
+        "A": "int=20;",
+        "B": "grade='A';",
+        "C": "line=this is a line;",
+        "D": "کوئی بھی نہیں"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-005"
+    },
+    {
+      "id": 6,
+      "category": "exercise",
+      "question_en": "Which operator has the highest precedence among the following?",
+      "question_ur": "ان میں سے کس آپریٹر کی ترجیح سب سے زیادہ ہے؟",
+      "options": {
+        "A": "/",
+        "B": "=",
+        "C": ">",
+        "D": "!"
+      },
+      "options_ur": {
+        "A": "/",
+        "B": "=",
+        "C": ">",
+        "D": "!"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-006"
+    },
+    {
+      "id": 7,
+      "category": "exercise",
+      "question_en": "Which of the following is not a type of operator?",
+      "question_ur": "ان میں سے کون سی آپشن آپریٹر کی قسم نہیں ہے؟",
+      "options": {
+        "A": "Arithmetic operator",
+        "B": "Relational operator",
+        "C": "Check operator",
+        "D": "Logical operator"
+      },
+      "options_ur": {
+        "A": "ارتھمیٹک آپریٹر",
+        "B": "ریلیشنل آپریٹر",
+        "C": "چیک آپریٹر",
+        "D": "لاجیکل آپریٹر"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-007"
+    },
+    {
+      "id": 8,
+      "category": "exercise",
+      "question_en": "The operator % is used to calculate ..................................",
+      "question_ur": "آپریٹر % .................................. کیلکولیٹ کرنے کے لیے استعمال ہوتا ہے۔",
+      "options": {
+        "A": "Percentage",
+        "B": "Remainder",
+        "C": "Factorial",
+        "D": "Square"
+      },
+      "options_ur": {
+        "A": "پرسنٹیج",
+        "B": "رمینڈر (بقیہ رقم)",
+        "C": "فیکٹوریل",
+        "D": "مربع"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-008"
+    },
+    {
+      "id": 9,
+      "category": "exercise",
+      "question_en": "Which of the following is a valid character?",
+      "question_ur": "ان میں سے کون سا کریکٹر C- لینگوئج میں درست ہے۔",
+      "options": {
+        "A": "'here'",
+        "B": "\"a\"",
+        "C": "'9\"",
+        "D": "None of them"
+      },
+      "options_ur": {
+        "A": "'here'",
+        "B": "\"a\"",
+        "C": "'9\"",
+        "D": "کوئی بھی نہیں"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-009"
+    },
+    {
+      "id": 10,
+      "category": "exercise",
+      "question_en": "What is true about C language?",
+      "question_ur": "C لینگوئج کے بارے میں کونسی آپشن درست ہے؟",
+      "options": {
+        "A": "C is not a case sensitive language",
+        "B": "Keywords can be used as a variable names",
+        "C": "All logical operators are binary operators",
+        "D": "None of them"
+      },
+      "options_ur": {
+        "A": "C ایک کیس سنسیٹِو لینگوئج نہیں ہے۔",
+        "B": "کی۔ورڈز کو ویری ایبلز کے طور پر استعمال کیا جا سکتا ہے۔",
+        "C": "تمام لاجیکل آپریٹرز بائنری آپریٹرز ہوتے ہیں۔",
+        "D": "کوئی بھی نہیں۔"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-010"
+    },
+    {
+      "id": 11,
+      "category": "additional",
+      "question_en": "A computer is a device that takes .................................. as input.",
+      "question_ur": "ایک کمپیوٹر ایک ڈیوائس ہے جو اِن پُٹ کے طور پر .................................. لیتی ہے۔",
+      "options": {
+        "A": "Data",
+        "B": "Process",
+        "C": "Information",
+        "D": "None of these"
+      },
+      "options_ur": {
+        "A": "ڈیٹا",
+        "B": "پروسیس",
+        "C": "انفارمیشن",
+        "D": "ان میں سے کوئی نہیں"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-011"
+    },
+    {
+      "id": 12,
+      "category": "additional",
+      "question_en": "C language offers .................................. function to display the output.",
+      "question_ur": "آؤٹ پُٹ دکھانے کے لیے C لینگوئج .................................. فنکشن آفر کرتا ہے۔",
+      "options": {
+        "A": "printf",
+        "B": "printf",
+        "C": "getch",
+        "D": "getche"
+      },
+      "options_ur": {
+        "A": "printf",
+        "B": "printf",
+        "C": "getch",
+        "D": "getche"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-012"
+    },
+    {
+      "id": 13,
+      "category": "additional",
+      "question_en": "All the programming languages must provide .................................. to handle input.",
+      "question_ur": "تمام پروگرامنگ لینگوئجز کو اِن پُٹ کے لیے لازمی طور پر .................................. مہیا کرنا پڑتے ہیں۔",
+      "options": {
+        "A": "Functions",
+        "B": "Instructions",
+        "C": "Guidelines",
+        "D": "All of these"
+      },
+      "options_ur": {
+        "A": "فنکشنز",
+        "B": "ہدایات",
+        "C": "گائیڈ لائنز",
+        "D": "یہ تمام"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-013"
+    },
+    {
+      "id": 14,
+      "category": "additional",
+      "question_en": "Each programming language has its keywords or .................................. for I/O operations.",
+      "question_ur": "ہر پروگرامنگ لینگوئج کے اِن پُٹ/آؤٹ پُٹ آپریشنز کے لیے اپنے کی ورڈز یا .................................. ہوتے ہیں۔",
+      "options": {
+        "A": "Variables",
+        "B": "Constants",
+        "C": "Functions",
+        "D": "Standard library functions"
+      },
+      "options_ur": {
+        "A": "متغیرات",
+        "B": "کانسٹنٹ",
+        "C": "فنکشنز",
+        "D": "سٹینڈرڈ لائبریری فنکشنز"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-014"
+    },
+    {
+      "id": 15,
+      "category": "additional",
+      "question_en": "C language offers .................................. function to get input from user.",
+      "question_ur": "یوزر سے اِن پُٹ لینے کے لیے C لینگوئج .................................. فنکشن آفر کرتا ہے۔",
+      "options": {
+        "A": "printf",
+        "B": "scanf",
+        "C": "User defined",
+        "D": "None of these"
+      },
+      "options_ur": {
+        "A": "printf",
+        "B": "scanf",
+        "C": "یوزر ڈیفائنڈ",
+        "D": "ان میں سے کوئی نہیں"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-015"
+    },
+    {
+      "id": 16,
+      "category": "additional",
+      "question_en": "printf is a .................................. function in C programming language.",
+      "question_ur": "C پروگرامنگ لینگوئج میں printf ایک .................................. فنکشن ہے۔",
+      "options": {
+        "A": "Built-in",
+        "B": "User defined",
+        "C": "Both A & B",
+        "D": "Variable"
+      },
+      "options_ur": {
+        "A": "بِلٹ۔اِن",
+        "B": "یوزر ڈیفائنڈ",
+        "C": "A اور B دونوں",
+        "D": "متغیر"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-016"
+    },
+    {
+      "id": 17,
+      "category": "additional",
+      "question_en": "printf name comes from ..................................",
+      "question_ur": "printf کا نام .................................. سے نکلا ہے۔",
+      "options": {
+        "A": "Print function",
+        "B": "Print format",
+        "C": "Print formatted",
+        "D": "Printed function"
+      },
+      "options_ur": {
+        "A": "Print function",
+        "B": "Print format",
+        "C": "Print formatted",
+        "D": "Printed function"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-017"
+    },
+    {
+      "id": 18,
+      "category": "additional",
+      "question_en": ".................................. format specifier is used against int data type.",
+      "question_ur": "int ڈیٹا ٹائپ کے لیے .................................. فارمیٹ سپیسی فائر استعمال کیا جاتا ہے۔",
+      "options": {
+        "A": "%a",
+        "B": "%b",
+        "C": "%c",
+        "D": "%d"
+      },
+      "options_ur": {
+        "A": "%a",
+        "B": "%b",
+        "C": "%c",
+        "D": "%d"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-018"
+    },
+    {
+      "id": 19,
+      "category": "additional",
+      "question_en": ".................................. format specifier is used against int data type.",
+      "question_ur": "int ڈیٹا ٹائپ کے لیے .................................. فارمیٹ سپیسی فائر استعمال کیا جاتا ہے۔",
+      "options": {
+        "A": "%d",
+        "B": "%i",
+        "C": "%f",
+        "D": "%c"
+      },
+      "options_ur": {
+        "A": "%d",
+        "B": "%i",
+        "C": "%f",
+        "D": "%c"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-019"
+    },
+    {
+      "id": 20,
+      "category": "additional",
+      "question_en": ".................................. format specifier is used against float data type.",
+      "question_ur": "float ڈیٹا ٹائپ کے لیے .................................. فارمیٹ سپیسی فائر استعمال کیا جاتا ہے۔",
+      "options": {
+        "A": "%f",
+        "B": "%d",
+        "C": "%i",
+        "D": "%c"
+      },
+      "options_ur": {
+        "A": "%f",
+        "B": "%d",
+        "C": "%i",
+        "D": "%c"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-020"
+    },
+    {
+      "id": 21,
+      "category": "additional",
+      "question_en": ".................................. format specifier is used against char data type.",
+      "question_ur": "char ڈیٹا ٹائپ کے لیے .................................. فارمیٹ سپیسی فائر استعمال کیا جاتا ہے۔",
+      "options": {
+        "A": "%d",
+        "B": "%i",
+        "C": "%f",
+        "D": "%c"
+      },
+      "options_ur": {
+        "A": "%d",
+        "B": "%i",
+        "C": "%f",
+        "D": "%c"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-021"
+    },
+    {
+      "id": 22,
+      "category": "additional",
+      "question_en": "scanf is a .................................. function in C language.",
+      "question_ur": "C لینگوئج میں scanf ایک .................................. فنکشن ہے۔",
+      "options": {
+        "A": "Built-in",
+        "B": "User defined",
+        "C": "Variable",
+        "D": "Constant"
+      },
+      "options_ur": {
+        "A": "بِلٹ۔اِن",
+        "B": "یوزر ڈیفائنڈ",
+        "C": "متغیر",
+        "D": "کانسٹنٹ"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-022"
+    },
+    {
+      "id": 23,
+      "category": "additional",
+      "question_en": "There are .................................. main parts of scanf function.",
+      "question_ur": "scanf فنکشن کے .................................. مین حصے ہیں۔",
+      "options": {
+        "A": "1",
+        "B": "2",
+        "C": "3",
+        "D": "4"
+      },
+      "options_ur": {
+        "A": "1",
+        "B": "2",
+        "C": "3",
+        "D": "4"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-023"
+    },
+    {
+      "id": 24,
+      "category": "additional",
+      "question_en": "We can take .................................. input(s) using a single scanf function.",
+      "question_ur": "ایک scanf فنکشن کو استعمال کرتے ہوئے ہم .................................. اِن پُٹ/اَن پُٹس لے سکتے ہیں۔",
+      "options": {
+        "A": "1",
+        "B": "2",
+        "C": "3",
+        "D": "Multiple"
+      },
+      "options_ur": {
+        "A": "1",
+        "B": "2",
+        "C": "3",
+        "D": "Multiple"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-024"
+    },
+    {
+      "id": 25,
+      "category": "additional",
+      "question_en": "It is a very common mistake to forget .................................. sign in the scanf function.",
+      "question_ur": "scanf فنکشن میں .................................. علامت کو بھول جانا ایک بہت عام غلطی ہے۔",
+      "options": {
+        "A": "%",
+        "B": "!",
+        "C": "&",
+        "D": "@"
+      },
+      "options_ur": {
+        "A": "%",
+        "B": "!",
+        "C": "&",
+        "D": "@"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-025"
+    },
+    {
+      "id": 26,
+      "category": "additional",
+      "question_en": "Without .................................. sign, the program gets executed but does not behave as expected.",
+      "question_ur": ".................................. علامت کے بغیر پروگرام ایگزیکیوٹ ہو جاتا ہے مگر امید کے مطابق نہیں چلتا۔",
+      "options": {
+        "A": "%",
+        "B": "&",
+        "C": "@",
+        "D": "$"
+      },
+      "options_ur": {
+        "A": "%",
+        "B": "&",
+        "C": "@",
+        "D": "$"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-026"
+    },
+    {
+      "id": 27,
+      "category": "additional",
+      "question_en": ".................................. function is used to read a character from user.",
+      "question_ur": ".................................. فنکشن یوزر سے کریکٹر پڑھنے کے لیے استعمال کیا جاتا ہے۔",
+      "options": {
+        "A": "printf",
+        "B": "scanf",
+        "C": "getch()",
+        "D": "None of these"
+      },
+      "options_ur": {
+        "A": "printf",
+        "B": "scanf",
+        "C": "getch()",
+        "D": "ان میں سے کوئی نہیں"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-027"
+    },
+    {
+      "id": 28,
+      "category": "additional",
+      "question_en": "To use getch() function, we need to include the library .................................. in the header section of program.",
+      "question_ur": "()getch فنکشن استعمال کرنے کے لیے، ہمیں پروگرام کے ہیڈر سیکشن میں لائبریری .................................. شامل کرنا پڑتی ہے۔",
+      "options": {
+        "A": "math.h",
+        "B": "conio.h",
+        "C": "stdio.h",
+        "D": "All of these"
+      },
+      "options_ur": {
+        "A": "math.h",
+        "B": "conio.h",
+        "C": "stdio.h",
+        "D": "یہ تمام"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-028"
+    },
+    {
+      "id": 29,
+      "category": "additional",
+      "question_en": "In C language .................................. is used as statement terminator.",
+      "question_ur": "C لینگوئج میں .................................. ایک سٹیٹمنٹ ٹرمینیٹر کے طور پر استعمال کیا جاتا ہے۔",
+      "options": {
+        "A": ".",
+        "B": ",",
+        "C": ";",
+        "D": ":"
+      },
+      "options_ur": {
+        "A": "پوائنٹ .",
+        "B": "کوما ،",
+        "C": "سیمی کالن ؛",
+        "D": "کالن :"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-029"
+    },
+    {
+      "id": 30,
+      "category": "additional",
+      "question_en": "If we do not end each statement with a .................................. it results into error.",
+      "question_ur": "اگر ہم ہر سٹیٹمنٹ کو .................................. کے ساتھ ختم نہیں کرتے تو یہ ایرر دے گا۔",
+      "options": {
+        "A": ".",
+        "B": "%",
+        "C": "#",
+        "D": ";"
+      },
+      "options_ur": {
+        "A": ".",
+        "B": "%",
+        "C": "#",
+        "D": ";"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-030"
+    },
+    {
+      "id": 31,
+      "category": "additional",
+      "question_en": "Escape sequences are used in .................................. function inside the \" and \".",
+      "question_ur": "\"and\" کے اندر .................................. فنکشن میں ایسکیپ سیکوئنسز استعمال کیے جاتے ہیں۔",
+      "options": {
+        "A": "scanf",
+        "B": "printf",
+        "C": "getch",
+        "D": "getche"
+      },
+      "options_ur": {
+        "A": "scanf",
+        "B": "printf",
+        "C": "getch",
+        "D": "getche"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-031"
+    },
+    {
+      "id": 32,
+      "category": "additional",
+      "question_en": "Escape sequences consist of .................................. character(s).",
+      "question_ur": "ایسکیپ سیکوئنسز .................................. کریکٹرز پر مشتمل ہوتے ہیں۔",
+      "options": {
+        "A": "1",
+        "B": "2",
+        "C": "3",
+        "D": "4"
+      },
+      "options_ur": {
+        "A": "1",
+        "B": "2",
+        "C": "3",
+        "D": "4"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-032"
+    },
+    {
+      "id": 33,
+      "category": "additional",
+      "question_en": "A statement terminator is identifier for compiler which identifies .................................. of a line.",
+      "question_ur": "ایک سٹیٹمنٹ ٹرمینیٹر کمپائلر کے لیے آئیڈنٹی فائر ہے جو کہ ایک لائن کے .................................. کو پہچانتی ہے۔",
+      "options": {
+        "A": "Start",
+        "B": "End",
+        "C": "Both A & B",
+        "D": "None of these"
+      },
+      "options_ur": {
+        "A": "Start",
+        "B": "End",
+        "C": "Both A & B",
+        "D": "None of these"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-033"
+    },
+    {
+      "id": 34,
+      "category": "additional",
+      "question_en": "The first character of escape sequence is always ..................................",
+      "question_ur": "ایسکیپ سیکوئنس کا پہلا کریکٹر ہمیشہ .................................. ہوتا ہے۔",
+      "options": {
+        "A": "/",
+        "B": "\\",
+        "C": "!",
+        "D": "%"
+      },
+      "options_ur": {
+        "A": "/",
+        "B": "\\",
+        "C": "!",
+        "D": "%"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-034"
+    },
+    {
+      "id": 35,
+      "category": "additional",
+      "question_en": "Sequence .................................. is used to display single quote ( ' )",
+      "question_ur": "سنگل کوٹ ( ' ) دکھانے کے لیے سیکوئنس .................................. استعمال کیا جاتا ہے۔",
+      "options": {
+        "A": "\\",
+        "B": "\\\\",
+        "C": "\\a",
+        "D": "\\b"
+      },
+      "options_ur": {
+        "A": "\\",
+        "B": "\\\\",
+        "C": "\\a",
+        "D": "\\b"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-035"
+    },
+    {
+      "id": 36,
+      "category": "additional",
+      "question_en": "Sequence .................................. is used to generate an alert sound.",
+      "question_ur": "سیکوئنس .................................. ایک الارم ساؤنڈ جنریٹ کرنے کے لیے استعمال ہوتا ہے۔",
+      "options": {
+        "A": "\\",
+        "B": "\\\\",
+        "C": "\\a",
+        "D": "\\b"
+      },
+      "options_ur": {
+        "A": "\\",
+        "B": "\\\\",
+        "C": "\\a",
+        "D": "\\b"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-036"
+    },
+    {
+      "id": 37,
+      "category": "additional",
+      "question_en": "Sequence .................................. is used to removes previous char.",
+      "question_ur": "سیکوئنس .................................. پچھلے کریکٹر کو مٹانے کے لیے استعمال کیا جاتا ہے۔",
+      "options": {
+        "A": "\\",
+        "B": "\\\\",
+        "C": "\\a",
+        "D": "\\b"
+      },
+      "options_ur": {
+        "A": "\\",
+        "B": "\\\\",
+        "C": "\\a",
+        "D": "\\b"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-037"
+    },
+    {
+      "id": 38,
+      "category": "additional",
+      "question_en": "Sequence .................................. is used to display back slash ( \\ )",
+      "question_ur": "بیک سلیش ( \\ ) دکھانے کے لیے سیکوئنس .................................. استعمال کیا جاتا ہے۔",
+      "options": {
+        "A": "\\",
+        "B": "\\a",
+        "C": "\\b",
+        "D": "\\\\"
+      },
+      "options_ur": {
+        "A": "\\",
+        "B": "\\a",
+        "C": "\\b",
+        "D": "\\\\"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-038"
+    },
+    {
+      "id": 39,
+      "category": "additional",
+      "question_en": "Sequence .................................. is used to generate an alert sound.",
+      "question_ur": "سیکوئنس .................................. ایک الارم ساؤنڈ جنریٹ کرنے کے لیے استعمال ہوتا ہے۔",
+      "options": {
+        "A": "\\",
+        "B": "\\\\",
+        "C": "\\a",
+        "D": "\\b"
+      },
+      "options_ur": {
+        "A": "\\",
+        "B": "\\\\",
+        "C": "\\a",
+        "D": "\\b"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-039"
+    },
+    {
+      "id": 40,
+      "category": "additional",
+      "question_en": "After escape character, .................................. specifies movement of the cursor to start of the next line.",
+      "question_ur": "ایسکیپ کریکٹر کے بعد، اگلی لائن کو شروع کرنے کے لیے .................................. کرسر کی حرکت کو مخصوص کرتا ہے۔",
+      "options": {
+        "A": "n",
+        "B": "A",
+        "C": "b",
+        "D": "H"
+      },
+      "options_ur": {
+        "A": "n",
+        "B": "A",
+        "C": "b",
+        "D": "H"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-040"
+    },
+    {
+      "id": 41,
+      "category": "additional",
+      "question_en": "Escape sequence .................................. specifies the I/O function of moving to the next tab stop horizontally.",
+      "question_ur": "ایسکیپ سیکوئنس ..................................، اگلی افقی ٹیب سٹاپ کی طرف اِن پُٹ/آؤٹ پُٹ فنکشن کی حرکت کو مخصوص کرتا ہے۔",
+      "options": {
+        "A": "\\a",
+        "B": "\\b",
+        "C": "\\t",
+        "D": "\\h"
+      },
+      "options_ur": {
+        "A": "\\a",
+        "B": "\\b",
+        "C": "\\t",
+        "D": "\\h"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-041"
+    },
+    {
+      "id": 42,
+      "category": "additional",
+      "question_en": "A tab stop is collection of .................................. spaces.",
+      "question_ur": "null",
+      "options": {
+        "A": "2",
+        "B": "4",
+        "C": "6",
+        "D": "8"
+      },
+      "options_ur": {
+        "A": "2",
+        "B": "4",
+        "C": "6",
+        "D": "8"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-042"
+    },
+    {
+      "id": 43,
+      "category": "additional",
+      "question_en": "Some basic operator types are ..................................",
+      "question_ur": "کچھ بنیادی آپریٹر کی اقسام .................................. ہیں۔",
+      "options": {
+        "A": "Assignment operator",
+        "B": "Arithmetic operator",
+        "C": "Logical operator",
+        "D": "All of these"
+      },
+      "options_ur": {
+        "A": "اسائنمنٹ آپریٹر",
+        "B": "ارتھ میٹک آپریٹر",
+        "C": "منطقی آپریٹر",
+        "D": "یہ تمام"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-043"
+    },
+    {
+      "id": 44,
+      "category": "additional",
+      "question_en": ".................................. operator is used to assign a value to a variable.",
+      "question_ur": "ایک متغیر کو ایک ویلیو اسائن کرنے کے لیے .................................. آپریٹر استعمال کیا جاتا ہے۔",
+      "options": {
+        "A": "Assignment",
+        "B": "Arithmetic",
+        "C": "Logical",
+        "D": "Relational"
+      },
+      "options_ur": {
+        "A": "اسائنمنٹ",
+        "B": "ارتھ میٹک",
+        "C": "منطقی",
+        "D": "ریلیشنل"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-044"
+    },
+    {
+      "id": 45,
+      "category": "additional",
+      "question_en": ".................................. is used as assignment operator in C.",
+      "question_ur": "C میں اسائنمنٹ آپریٹر کے طور پر .................................. استعمال کیا جاتا ہے۔",
+      "options": {
+        "A": "%",
+        "B": "<",
+        "C": ">",
+        "D": "="
+      },
+      "options_ur": {
+        "A": "%",
+        "B": "<",
+        "C": ">",
+        "D": "="
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-045"
+    },
+    {
+      "id": 46,
+      "category": "additional",
+      "question_en": ".................................. is used as arithmetic operator in C.",
+      "question_ur": "C میں ارتھ میٹک آپریٹر کے طور پر .................................. استعمال کیا جاتا ہے۔",
+      "options": {
+        "A": "/",
+        "B": ">",
+        "C": "<",
+        "D": "="
+      },
+      "options_ur": {
+        "A": "/",
+        "B": ">",
+        "C": "<",
+        "D": "="
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-046"
+    },
+    {
+      "id": 47,
+      "category": "additional",
+      "question_en": ".................................. is used as arithmetic operator in C.",
+      "question_ur": "C میں ارتھ میٹک آپریٹر کے طور پر .................................. استعمال کیا جاتا ہے۔",
+      "options": {
+        "A": "/",
+        "B": "+",
+        "C": "*",
+        "D": "=="
+      },
+      "options_ur": {
+        "A": "/",
+        "B": "+",
+        "C": "*",
+        "D": "=="
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-047"
+    },
+    {
+      "id": 48,
+      "category": "additional",
+      "question_en": ".................................. operator divides the value of left operand by the value of right operand.",
+      "question_ur": ".................................. آپریٹر دائیں اوپرینڈ کی ویلیو کو بائیں اوپرینڈ کی ویلیو سے تقسیم کرتا ہے۔",
+      "options": {
+        "A": "Multiplication",
+        "B": "Division",
+        "C": "Subtraction",
+        "D": "Modulus"
+      },
+      "options_ur": {
+        "A": "ضربی",
+        "B": "تقسیمی",
+        "C": "منفی",
+        "D": "ماڈولس"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-048"
+    },
+    {
+      "id": 49,
+      "category": "additional",
+      "question_en": ".................................. operator is a binary operator.",
+      "question_ur": ".................................. آپریٹر ایک بائنری آپریٹر ہے۔",
+      "options": {
+        "A": "Division",
+        "B": "Addition",
+        "C": "Subtraction",
+        "D": "Multiplication"
+      },
+      "options_ur": {
+        "A": "تقسیمی",
+        "B": "جمع",
+        "C": "منفی",
+        "D": "ضربی"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-049"
+    },
+    {
+      "id": 50,
+      "category": "additional",
+      "question_en": ".................................. operator calculates the sum of two operands.",
+      "question_ur": ".................................. آپریٹر دو اوپرینڈز کو جمع کرتا ہے۔",
+      "options": {
+        "A": "Addition",
+        "B": "Subtraction",
+        "C": "Multiplication",
+        "D": "Division"
+      },
+      "options_ur": {
+        "A": "جمع",
+        "B": "منفی",
+        "C": "ضربی",
+        "D": "تقسیمی"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-050"
+    },
+    {
+      "id": 51,
+      "category": "additional",
+      "question_en": "The statement a=a+1; is used to increase the value of a variable by ..................................",
+      "question_ur": "سٹیٹمنٹ ;a=a+1، ایک متغیر کی ویلیو .................................. کے ساتھ بڑھانے کے لیے استعمال کی جاتی ہے۔",
+      "options": {
+        "A": "0",
+        "B": "-1",
+        "C": "+1",
+        "D": "2"
+      },
+      "options_ur": {
+        "A": "0",
+        "B": "-1",
+        "C": "+1",
+        "D": "2"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-051"
+    },
+    {
+      "id": 52,
+      "category": "additional",
+      "question_en": ".................................. operator will subtract right operand from the left operand.",
+      "question_ur": ".................................. آپریٹر دائیں اوپرینڈ کو بائیں اوپرینڈ میں سے تفریق کرے گا۔",
+      "options": {
+        "A": "-",
+        "B": "+",
+        "C": "*",
+        "D": "\\"
+      },
+      "options_ur": {
+        "A": "-",
+        "B": "+",
+        "C": "*",
+        "D": "\\"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-052"
+    },
+    {
+      "id": 53,
+      "category": "additional",
+      "question_en": "Modulus operator is ..................................",
+      "question_ur": "ماڈولس آپریٹر .................................. ہے۔",
+      "options": {
+        "A": "/",
+        "B": "\\",
+        "C": "%",
+        "D": "&"
+      },
+      "options_ur": {
+        "A": "/",
+        "B": "\\",
+        "C": "%",
+        "D": "&"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-053"
+    },
+    {
+      "id": 54,
+      "category": "additional",
+      "question_en": "Modulus operator works on .................................. data type.",
+      "question_ur": "ماڈولس آپریٹر .................................. ڈیٹا ٹائپ پر کام کرتا ہے۔",
+      "options": {
+        "A": "char",
+        "B": "float",
+        "C": "int",
+        "D": "none of these"
+      },
+      "options_ur": {
+        "A": "char",
+        "B": "float",
+        "C": "int",
+        "D": "none of these"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-054"
+    },
+    {
+      "id": 55,
+      "category": "additional",
+      "question_en": ".................................. operators compare two values to determine the relationship between values.",
+      "question_ur": ".................................. آپریٹر ویلیوز کے درمیان تعلق کو چیک کرنے کے لیے دو ویلیوز کا موازنہ کرتا ہے۔",
+      "options": {
+        "A": "Arithmetic",
+        "B": "Relational",
+        "C": "Logical",
+        "D": "Assignment"
+      },
+      "options_ur": {
+        "A": "ارتھ میٹک",
+        "B": "ریلیشنل",
+        "C": "منطقی",
+        "D": "اسائنمنٹ"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-055"
+    },
+    {
+      "id": 56,
+      "category": "additional",
+      "question_en": "C language allows us to perform relational operators on .................................. data type.",
+      "question_ur": "C لینگوئج ہمیں .................................. ڈیٹا ٹائپ پر ریلیشنل آپریٹرز کو پرفارم کرنے کی اجازت دیتی ہے۔",
+      "options": {
+        "A": "Numeric",
+        "B": "char",
+        "C": "Both A & B",
+        "D": "float"
+      },
+      "options_ur": {
+        "A": "نومیرک",
+        "B": "char",
+        "C": "A اور B دونوں",
+        "D": "float"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-056"
+    },
+    {
+      "id": 57,
+      "category": "additional",
+      "question_en": ".................................. operator is used as equal to.",
+      "question_ur": "Equal to کے لیے .................................. آپریٹر استعمال کیا جاتا ہے۔",
+      "options": {
+        "A": "=",
+        "B": "==",
+        "C": ">",
+        "D": "!="
+      },
+      "options_ur": {
+        "A": "=",
+        "B": "==",
+        "C": ">",
+        "D": "!="
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-057"
+    },
+    {
+      "id": 58,
+      "category": "additional",
+      "question_en": ".................................. operator is used as Not equal.",
+      "question_ur": "Not equal کے لیے .................................. آپریٹر استعمال کیا جاتا ہے۔",
+      "options": {
+        "A": "!=",
+        "B": "==",
+        "C": "<",
+        "D": "="
+      },
+      "options_ur": {
+        "A": "!=",
+        "B": "==",
+        "C": "<",
+        "D": "="
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-058"
+    },
+    {
+      "id": 59,
+      "category": "additional",
+      "question_en": ".................................. operator is used as greater than equal to.",
+      "question_ur": "Greater than equal to کے لیے .................................. آپریٹر استعمال کیا جاتا ہے۔",
+      "options": {
+        "A": "<=",
+        "B": ">=",
+        "C": "==",
+        "D": ">"
+      },
+      "options_ur": {
+        "A": "<=",
+        "B": ">=",
+        "C": "==",
+        "D": ">"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-059"
+    },
+    {
+      "id": 60,
+      "category": "additional",
+      "question_en": "Relational operators perform operations on two operands and return the result in ..................................",
+      "question_ur": "ریلیشنل آپریٹرز دو اوپرینڈز پر عمل سر انجام دیتے ہیں اور رزلٹ .................................. میں ریٹرن کرتے ہیں۔",
+      "options": {
+        "A": "true",
+        "B": "false",
+        "C": "Both A & B",
+        "D": "None of these"
+      },
+      "options_ur": {
+        "A": "درست",
+        "B": "غلط",
+        "C": "A اور B دونوں",
+        "D": "ان میں سے کوئی نہیں"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-060"
+    },
+    {
+      "id": 61,
+      "category": "additional",
+      "question_en": "A true value is represented by ..................................",
+      "question_ur": "True ویلیو کو .................................. سے ظاہر کیا جاتا ہے۔",
+      "options": {
+        "A": "0",
+        "B": "1",
+        "C": "-0",
+        "D": "-1"
+      },
+      "options_ur": {
+        "A": "0",
+        "B": "1",
+        "C": "-0",
+        "D": "-1"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-061"
+    },
+    {
+      "id": 62,
+      "category": "additional",
+      "question_en": "In C language, .................................. operator is used to check for equality of two expressions.",
+      "question_ur": "C لینگوئج میں، دو مساوات کی برابری کو چیک کرنے کے لیے .................................. آپریٹر استعمال کیا جاتا ہے۔",
+      "options": {
+        "A": "=",
+        "B": "%",
+        "C": "==",
+        "D": "&"
+      },
+      "options_ur": {
+        "A": "=",
+        "B": "%",
+        "C": "==",
+        "D": "&"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-062"
+    },
+    {
+      "id": 63,
+      "category": "additional",
+      "question_en": "Single .................................. assigns right operand to the variable on left side.",
+      "question_ur": "ایک .................................. بائیں طرف کے متغیر کے لیے دائیں طرف اوپرینڈ اسائن کرتا ہے۔",
+      "options": {
+        "A": "+",
+        "B": "<",
+        "C": ">",
+        "D": "="
+      },
+      "options_ur": {
+        "A": "+",
+        "B": "<",
+        "C": ">",
+        "D": "="
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-063"
+    },
+    {
+      "id": 64,
+      "category": "additional",
+      "question_en": ".................................. operator is used as a logical AND.",
+      "question_ur": "لاجیکل AND کے لیے .................................. آپریٹر استعمال کیا جاتا ہے۔",
+      "options": {
+        "A": "&",
+        "B": "&&",
+        "C": "||",
+        "D": "!"
+      },
+      "options_ur": {
+        "A": "&",
+        "B": "&&",
+        "C": "||",
+        "D": "!"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-064"
+    },
+    {
+      "id": 65,
+      "category": "additional",
+      "question_en": ".................................. operator is used as a logical OR.",
+      "question_ur": "لاجیکل OR کے لیے .................................. آپریٹر استعمال کیا جاتا ہے۔",
+      "options": {
+        "A": "&",
+        "B": "&&",
+        "C": "||",
+        "D": "!"
+      },
+      "options_ur": {
+        "A": "&",
+        "B": "&&",
+        "C": "||",
+        "D": "!"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-065"
+    },
+    {
+      "id": 66,
+      "category": "additional",
+      "question_en": ".................................. operator is used as a logical NOT.",
+      "question_ur": "لاجیکل NOT کے لیے .................................. آپریٹر استعمال کیا جاتا ہے۔",
+      "options": {
+        "A": "!",
+        "B": "!!",
+        "C": "||",
+        "D": "&&"
+      },
+      "options_ur": {
+        "A": "!",
+        "B": "!!",
+        "C": "||",
+        "D": "&&"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-066"
+    },
+    {
+      "id": 67,
+      "category": "additional",
+      "question_en": "The result of the expression False && False is ..................................",
+      "question_ur": "مساوات False && False کا رزلٹ .................................. ہے۔",
+      "options": {
+        "A": "False",
+        "B": "True",
+        "C": "0, 1",
+        "D": "1, 0"
+      },
+      "options_ur": {
+        "A": "False",
+        "B": "True",
+        "C": "0, 1",
+        "D": "1, 0"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-067"
+    },
+    {
+      "id": 68,
+      "category": "additional",
+      "question_en": "The result of the expression True || False is ..................................",
+      "question_ur": "مساوات True || False کا رزلٹ .................................. ہے۔",
+      "options": {
+        "A": "false",
+        "B": "true",
+        "C": "1, 0",
+        "D": "0, 1"
+      },
+      "options_ur": {
+        "A": "false",
+        "B": "true",
+        "C": "1, 0",
+        "D": "0, 1"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-068"
+    },
+    {
+      "id": 69,
+      "category": "additional",
+      "question_en": "The result of the expression !(False) is ..................................",
+      "question_ur": "مساوات !(False) کا رزلٹ .................................. ہے۔",
+      "options": {
+        "A": "true",
+        "B": "false",
+        "C": "0,1",
+        "D": "1,0"
+      },
+      "options_ur": {
+        "A": "true",
+        "B": "false",
+        "C": "0,1",
+        "D": "1,0"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-069"
+    },
+    {
+      "id": 70,
+      "category": "additional",
+      "question_en": "Unary operators are applied over ..................................",
+      "question_ur": "یونری آپریٹرز .................................. پر اپلائی ہوتے ہیں۔",
+      "options": {
+        "A": "Two operands",
+        "B": "One operand",
+        "C": "Three operands",
+        "D": "Multiple operands"
+      },
+      "options_ur": {
+        "A": "دو اوپرینڈز",
+        "B": "ایک اوپرینڈ",
+        "C": "تین اوپرینڈز",
+        "D": "کئی اوپرینڈز"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-070"
+    },
+    {
+      "id": 71,
+      "category": "additional",
+      "question_en": "Binary operators require .................................. to perform the operation.",
+      "question_ur": "ثنائی آپریٹرز کو عمل سر انجام دینے کے لیے .................................. کی ضرورت ہوتی ہے۔",
+      "options": {
+        "A": "One operand",
+        "B": "Two operands",
+        "C": "Three operands",
+        "D": "Multiple operands"
+      },
+      "options_ur": {
+        "A": "ایک اوپرینڈ",
+        "B": "دو اوپرینڈز",
+        "C": "تین اوپرینڈز",
+        "D": "کئی اوپرینڈز"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-071"
+    },
+    {
+      "id": 72,
+      "category": "additional",
+      "question_en": "Ternary operator applied on .................................. operand(s).",
+      "question_ur": "ٹرنری آپریٹر .................................. اوپرینڈ پر اپلائی ہوتا ہے۔",
+      "options": {
+        "A": "1",
+        "B": "2",
+        "C": "3",
+        "D": "4"
+      },
+      "options_ur": {
+        "A": "1",
+        "B": "2",
+        "C": "3",
+        "D": "4"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-072"
+    },
+    {
+      "id": 73,
+      "category": "pastpapers",
+      "question_en": "What will be the output of code: void main(){ printf (\"2\");}",
+      "question_ur": "درج ذیل کوڈ کا آؤٹ پٹ ہو گا: void main(){ printf \"2\";}",
+      "options": {
+        "A": "3",
+        "B": "1",
+        "C": "2",
+        "D": "4"
+      },
+      "options_ur": {
+        "A": "3",
+        "B": "1",
+        "C": "2",
+        "D": "4"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-073"
+    },
+    {
+      "id": 74,
+      "category": "pastpapers",
+      "question_en": "Which of the following format specifier is used for character data type:",
+      "question_ur": "درج ذیل میں سے کونسا فارمیٹ سپیسی فائر کریکٹر ڈیٹا ٹائپ کے لیے استعمال ہوتا ہے:",
+      "options": {
+        "A": "%c",
+        "B": "%d",
+        "C": "%f",
+        "D": "%i"
+      },
+      "options_ur": {
+        "A": "% c",
+        "B": "% d",
+        "C": "% f",
+        "D": "% i"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-074"
+    },
+    {
+      "id": 75,
+      "category": "pastpapers",
+      "question_en": "In C language ...... is used as statement terminator:",
+      "question_ur": "C لینگوئج میں ...... کو سٹیٹمنٹ ٹرمینیٹر کے طور پر استعمال کیا جاتا ہے:",
+      "options": {
+        "A": "#",
+        "B": ";",
+        "C": "%",
+        "D": "&"
+      },
+      "options_ur": {
+        "A": "#",
+        "B": ";",
+        "C": "%",
+        "D": "&"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-075"
+    },
+    {
+      "id": 76,
+      "category": "pastpapers",
+      "question_en": "What will be the output of code? void abc(){printf(\"1/n\");}",
+      "question_ur": "کوڈ کا آؤٹ پٹ کیا ہو گا؟ void abc(){printf(\"1/n\");}",
+      "options": {
+        "A": "\"1\"",
+        "B": "\"2\"",
+        "C": "1",
+        "D": "2"
+      },
+      "options_ur": {
+        "A": "\"1\"",
+        "B": "\"2\"",
+        "C": "1",
+        "D": "2"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-076"
+    },
+    {
+      "id": 77,
+      "category": "pastpapers",
+      "question_en": "It is a very common mistake to forget ...... operator in the scanf function.",
+      "question_ur": "scanf فنکشن میں ...... آپریٹر کو بھول جانا ایک بہت عام غلطی ہے۔",
+      "options": {
+        "A": "&",
+        "B": "%",
+        "C": "*",
+        "D": "$"
+      },
+      "options_ur": {
+        "A": "&",
+        "B": "%",
+        "C": "*",
+        "D": "$"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-077"
+    },
+    {
+      "id": 78,
+      "category": "pastpapers",
+      "question_en": "Which operator is used as assignment operators:",
+      "question_ur": "اسائنمنٹ آپریٹر کے طور پر کونسا آپریٹر استعمال کیا جاتا ہے:",
+      "options": {
+        "A": "<=",
+        "B": ">=",
+        "C": "=",
+        "D": "= ="
+      },
+      "options_ur": {
+        "A": "<=",
+        "B": ">=",
+        "C": "=",
+        "D": "= ="
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-078"
+    },
+    {
+      "id": 79,
+      "category": "pastpapers",
+      "question_en": "What will be the value of variable \"a\" after execution of the following part of code: int a=4; float b=2.2; a=a*b;",
+      "question_ur": "کوڈ کے درج ذیل حصے پر عمل درآمد کے بعد متغیر \"a\" کی قدر کیا ہوگی ;int a=4; float b=2.2; a=a*b",
+      "options": {
+        "A": "8",
+        "B": "8.0",
+        "C": "8.8",
+        "D": "8.2"
+      },
+      "options_ur": {
+        "A": "8",
+        "B": "8.0",
+        "C": "8.8",
+        "D": "8.2"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-079"
+    },
+    {
+      "id": 80,
+      "category": "pastpapers",
+      "question_en": "...... relational operator is used for equal in C language:",
+      "question_ur": "C لینگوئج میں برابر ہے کے لیے ...... ریلیشنل آپریٹر استعمال کیا جاتا ہے:",
+      "options": {
+        "A": "=",
+        "B": "= =",
+        "C": "! =",
+        "D": "> ="
+      },
+      "options_ur": {
+        "A": "=",
+        "B": "= =",
+        "C": "! =",
+        "D": "> ="
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-080"
+    },
+    {
+      "id": 81,
+      "category": "pastpapers",
+      "question_en": "Which symbol is used for logical AND operators:",
+      "question_ur": "لاجیکل AND آپریٹر کے لیے کونسی علامت استعمال کی جاتی ہے:",
+      "options": {
+        "A": "&&",
+        "B": "||",
+        "C": "!",
+        "D": "$$"
+      },
+      "options_ur": {
+        "A": "&&",
+        "B": "||",
+        "C": "!",
+        "D": "$$"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-081"
+    },
+    {
+      "id": 82,
+      "category": "pastpapers",
+      "question_en": "In C language, which of the following is logical operator:",
+      "question_ur": "C لینگوئج میں، مندرجہ ذیل میں سے کونسا منطقی آپریٹر ہے:",
+      "options": {
+        "A": "+",
+        "B": "<",
+        "C": "%",
+        "D": "NOT"
+      },
+      "options_ur": {
+        "A": "+",
+        "B": "<",
+        "C": "%",
+        "D": "NOT"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-082"
+    },
+    {
+      "id": 83,
+      "category": "pastpapers",
+      "question_en": "Ternary operator is applied on ...... operands:",
+      "question_ur": "ٹرنری آپریٹر کا اطلاق ...... آپرینڈز پر ہوتا ہے:",
+      "options": {
+        "A": "1",
+        "B": "2",
+        "C": "3",
+        "D": "4"
+      },
+      "options_ur": {
+        "A": "1",
+        "B": "2",
+        "C": "3",
+        "D": "4"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-083"
+    },
+    {
+      "id": 84,
+      "category": "pastpapers",
+      "question_en": "Among the following ...... operator has the lowest precedence:",
+      "question_ur": "مندرجہ ذیل میں ...... آپریٹر کو سب سے کم ترجیح حاصل ہے:",
+      "options": {
+        "A": "\\",
+        "B": "=",
+        "C": ">",
+        "D": "!"
+      },
+      "options_ur": {
+        "A": "\\",
+        "B": "=",
+        "C": ">",
+        "D": "!"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-084"
+    }
+  ],
+  "shortQuestions": [
+    {
+      "id": 1,
+      "category": "Exercise",
+      "question_en": "Define statement terminator.",
+      "question_ur": "سٹیٹمنٹ ٹرمی نیٹر کی تعریف کریں۔",
+      "contentType": "short",
+      "itemCode": "SHORT-001"
+    },
+    {
+      "id": 2,
+      "category": "Exercise",
+      "question_en": "Define format specifier.",
+      "question_ur": "فارمیٹ سپیسی فائر کی تعریف کریں۔",
+      "contentType": "short",
+      "itemCode": "SHORT-002"
+    },
+    {
+      "id": 3,
+      "category": "Exercise",
+      "question_en": "Define escape sequence.",
+      "question_ur": "ایسکیپ سیکوئنس کی تعریف کریں۔",
+      "contentType": "short",
+      "itemCode": "SHORT-003"
+    },
+    {
+      "id": 4,
+      "category": "Exercise",
+      "question_en": "Define scanf.",
+      "question_ur": "scanf کی تعریف کریں۔",
+      "contentType": "short",
+      "itemCode": "SHORT-004"
+    },
+    {
+      "id": 5,
+      "category": "Exercise",
+      "question_en": "Define modulus operator",
+      "question_ur": "ماڈولس آپریٹر کی تعریف کریں۔",
+      "contentType": "short",
+      "itemCode": "SHORT-005"
+    },
+    {
+      "id": 6,
+      "category": "Additional",
+      "question_en": "Define computer.",
+      "question_ur": "کمپیوٹر کی تعریف کریں۔",
+      "contentType": "short",
+      "itemCode": "SHORT-006"
+    },
+    {
+      "id": 7,
+      "category": "Additional",
+      "question_en": "What is the purpose of printf() function?",
+      "question_ur": "printf() فنکشن کا مقصد کیا ہے؟",
+      "contentType": "short",
+      "itemCode": "SHORT-007"
+    },
+    {
+      "id": 8,
+      "category": "Additional",
+      "question_en": "Write any program to show printf() purpose.",
+      "question_ur": "printf() کا مقصد دکھانے کے لیے کوئی ایک پروگرام تحریر کریں۔",
+      "contentType": "short",
+      "itemCode": "SHORT-008"
+    },
+    {
+      "id": 9,
+      "category": "Additional",
+      "question_en": "Write a program that shows your first name in Uppercase and your last name in lower case letters on screen.",
+      "question_ur": "ایک پروگرام تحریر کریں جو آپ کے پہلے نام کو بڑے حروف میں اور دوسرے نام کو چھوٹے حروف میں سکرین پر دِکھائے۔",
+      "contentType": "short",
+      "itemCode": "SHORT-009"
+    },
+    {
+      "id": 10,
+      "category": "Additional",
+      "question_en": "Make a table of data type and format specifier.",
+      "question_ur": "ڈیٹا ٹائپ اور فارمیٹ سپیسی فائر کا ٹیبل بنائیں۔",
+      "contentType": "short",
+      "itemCode": "SHORT-010"
+    },
+    {
+      "id": 11,
+      "category": "Additional",
+      "question_en": "Write any program to show the purpose of format specifiers.",
+      "question_ur": "فارمیٹ سپیسی فائرز کا مقصد دکھانے کے لیے کوئی ایک پروگرام تحریر کریں۔",
+      "contentType": "short",
+      "itemCode": "SHORT-011"
+    },
+    {
+      "id": 12,
+      "category": "Additional",
+      "question_en": "Write any program to show the purpose of scanf() function.",
+      "question_ur": "scanf() فنکشن کا مقصد دکھانے کے لیے کوئی ایک پروگرام تحریر کریں۔",
+      "contentType": "short",
+      "itemCode": "SHORT-012"
+    },
+    {
+      "id": 13,
+      "category": "Additional",
+      "question_en": "Define getch() function.",
+      "question_ur": "getch() فنکشن کی تعریف کریں۔",
+      "contentType": "short",
+      "itemCode": "SHORT-013"
+    },
+    {
+      "id": 14,
+      "category": "Additional",
+      "question_en": "Write any program to show the purpose of getch() function.",
+      "question_ur": "getch() فنکشن کا مقصد دکھانے کے لیے کوئی ایک پروگرام تحریر کریں۔",
+      "contentType": "short",
+      "itemCode": "SHORT-014"
+    },
+    {
+      "id": 15,
+      "category": "Additional",
+      "question_en": "Write about formation of escape sequence.",
+      "question_ur": "ایسکیپ سیکوئنس کی فارمیشن کے بارے میں تحریر کریں۔",
+      "contentType": "short",
+      "itemCode": "SHORT-015"
+    },
+    {
+      "id": 16,
+      "category": "Additional",
+      "question_en": "Make a table of escape sequences.",
+      "question_ur": "ایسکیپ سیکوئنسز کا ٹیبل بنائیں۔",
+      "contentType": "short",
+      "itemCode": "SHORT-016"
+    },
+    {
+      "id": 17,
+      "category": "Additional",
+      "question_en": "How to create a new line in C program? Define.",
+      "question_ur": "C پروگرام میں نیو لائن کیسے بناتے ہیں؟ تعریف کریں۔",
+      "contentType": "short",
+      "itemCode": "SHORT-017"
+    },
+    {
+      "id": 18,
+      "category": "Additional",
+      "question_en": "Write any program to show the purpose of \\n.",
+      "question_ur": "\\n کا مقصد دکھانے کے لیے پروگرام تحریر کریں۔",
+      "contentType": "short",
+      "itemCode": "SHORT-018"
+    },
+    {
+      "id": 19,
+      "category": "Additional",
+      "question_en": "What is the purpose of \\t in C?",
+      "question_ur": "C میں \\t کا مقصد کیا ہے؟",
+      "contentType": "short",
+      "itemCode": "SHORT-019"
+    },
+    {
+      "id": 20,
+      "category": "Additional",
+      "question_en": "Write any program to show the purpose of \\t.",
+      "question_ur": "\\t کا مقصد دکھانے کے لیے کوئی ایک پروگرام تحریر کریں۔",
+      "contentType": "short",
+      "itemCode": "SHORT-020"
+    },
+    {
+      "id": 21,
+      "category": "Additional",
+      "question_en": "Define operator.",
+      "question_ur": "آپریٹر کی تعریف کریں۔",
+      "contentType": "short",
+      "itemCode": "SHORT-021"
+    },
+    {
+      "id": 22,
+      "category": "Additional",
+      "question_en": "How many types of operators are there?",
+      "question_ur": "آپریٹر کی کتنی اقسام ہیں؟",
+      "contentType": "short",
+      "itemCode": "SHORT-022"
+    },
+    {
+      "id": 23,
+      "category": "Additional",
+      "question_en": "Define assignment operator.",
+      "question_ur": "اسائنمنٹ آپریٹر کی تعریف کریں۔",
+      "contentType": "short",
+      "itemCode": "SHORT-023"
+    },
+    {
+      "id": 24,
+      "category": "Additional",
+      "question_en": "Write any program to show the purpose of assignment operator.",
+      "question_ur": "اسائنمنٹ آپریٹر کا مقصد دکھانے کے لیے کوئی ایک پروگرام تحریر کریں۔",
+      "contentType": "short",
+      "itemCode": "SHORT-024"
+    },
+    {
+      "id": 25,
+      "category": "Additional",
+      "question_en": "Define arithmetic operator.",
+      "question_ur": "ارِتھ میٹک آپریٹر کی تعریف کریں۔",
+      "contentType": "short",
+      "itemCode": "SHORT-025"
+    },
+    {
+      "id": 26,
+      "category": "Additional",
+      "question_en": "Define the purpose of division operator.",
+      "question_ur": "ڈیویژن آپریٹر کے مقصد کی تعریف کریں۔",
+      "contentType": "short",
+      "itemCode": "SHORT-026"
+    },
+    {
+      "id": 27,
+      "category": "Additional",
+      "question_en": "Define the purpose of multiplication operator.",
+      "question_ur": "ملٹی پلیکیشن آپریٹر کے مقصد کی تعریف کریں۔",
+      "contentType": "short",
+      "itemCode": "SHORT-027"
+    },
+    {
+      "id": 28,
+      "category": "Additional",
+      "question_en": "Write a program that takes as input the length of one side of a square and calculates the area of square.",
+      "question_ur": "ایک پروگرام تحریر کریں جو ایک مربع کے ایک سائیڈ کی لمبائی کا اِن پُٹ لے اور مربع کے رقبے کو کیلکولیٹ کریں۔",
+      "contentType": "short",
+      "itemCode": "SHORT-028"
+    },
+    {
+      "id": 29,
+      "category": "Additional",
+      "question_en": "Write the purpose of addition operator.",
+      "question_ur": "ایڈیشن آپریٹر کا مقصد تحریر کریں۔",
+      "contentType": "short",
+      "itemCode": "SHORT-029"
+    },
+    {
+      "id": 30,
+      "category": "Additional",
+      "question_en": "Write the purpose of subtraction operator.",
+      "question_ur": "نفی کے آپریٹر کا مقصد تحریر کریں۔",
+      "contentType": "short",
+      "itemCode": "SHORT-030"
+    },
+    {
+      "id": 31,
+      "category": "Additional",
+      "question_en": "Define relational operators.",
+      "question_ur": "ریلیشنل آپریٹرز کی تعریف کریں۔",
+      "contentType": "short",
+      "itemCode": "SHORT-031"
+    },
+    {
+      "id": 32,
+      "category": "Additional",
+      "question_en": "Make a complete table of relational operators with their description.",
+      "question_ur": "ریلیشنل آپریٹرز کا انکی تفصیل کے ساتھ مکمل ٹیبل بنائیں۔",
+      "contentType": "short",
+      "itemCode": "SHORT-032"
+    },
+    {
+      "id": 33,
+      "category": "Additional",
+      "question_en": "Make a table of relational expression, explanation and their result.",
+      "question_ur": "ریلیشنل ایکسپریشن، وضاحت اور انکے نتائج کا ٹیبل بنائیں۔",
+      "contentType": "short",
+      "itemCode": "SHORT-033"
+    },
+    {
+      "id": 34,
+      "category": "Additional",
+      "question_en": "Define equal to operator.",
+      "question_ur": "== کی تعریف کریں۔",
+      "contentType": "short",
+      "itemCode": "SHORT-034"
+    },
+    {
+      "id": 35,
+      "category": "Additional",
+      "question_en": "Differentiate between assignment and equal to operator.",
+      "question_ur": "= اور == میں فرق بیان کریں۔",
+      "contentType": "short",
+      "itemCode": "SHORT-035"
+    },
+    {
+      "id": 36,
+      "category": "Additional",
+      "question_en": "Define logical operators.",
+      "question_ur": "منطقی آپریٹرز کی تعریف کریں۔",
+      "contentType": "short",
+      "itemCode": "SHORT-036"
+    },
+    {
+      "id": 37,
+      "category": "Additional",
+      "question_en": "Make a table of logical operators with their description.",
+      "question_ur": "منطقی آپریٹرز کا انکی تفصیل کے ساتھ ٹیبل بنائیں۔",
+      "contentType": "short",
+      "itemCode": "SHORT-037"
+    },
+    {
+      "id": 38,
+      "category": "Additional",
+      "question_en": "Define AND operator.",
+      "question_ur": "AND آپریٹر کی تعریف کریں۔",
+      "contentType": "short",
+      "itemCode": "SHORT-038"
+    },
+    {
+      "id": 39,
+      "category": "Additional",
+      "question_en": "Make a truth table for AND operator.",
+      "question_ur": "AND آپریٹر کا ٹروتھ ٹیبل بنائیں۔",
+      "contentType": "short",
+      "itemCode": "SHORT-039"
+    },
+    {
+      "id": 40,
+      "category": "Additional",
+      "question_en": "Define OR operator.",
+      "question_ur": "OR آپریٹر کی تعریف کریں۔",
+      "contentType": "short",
+      "itemCode": "SHORT-040"
+    },
+    {
+      "id": 41,
+      "category": "Additional",
+      "question_en": "Make a truth table for OR operator.",
+      "question_ur": "OR آپریٹر کا ٹروتھ ٹیبل بنائیں۔",
+      "contentType": "short",
+      "itemCode": "SHORT-041"
+    },
+    {
+      "id": 42,
+      "category": "Additional",
+      "question_en": "Define NOT operator.",
+      "question_ur": "NOT آپریٹر کی تعریف کریں۔",
+      "contentType": "short",
+      "itemCode": "SHORT-042"
+    },
+    {
+      "id": 43,
+      "category": "Additional",
+      "question_en": "Make a truth table for NOT operator.",
+      "question_ur": "NOT آپریٹر کا ٹروتھ ٹیبل بنائیں۔",
+      "contentType": "short",
+      "itemCode": "SHORT-043"
+    },
+    {
+      "id": 44,
+      "category": "Additional",
+      "question_en": "What is meant by short-circuit evaluation?",
+      "question_ur": "شارٹ سرکٹ کی تشخیص کا کیا مطلب ہے؟",
+      "contentType": "short",
+      "itemCode": "SHORT-044"
+    },
+    {
+      "id": 45,
+      "category": "Additional",
+      "question_en": "Define unary operators.",
+      "question_ur": "یونری آپریٹرز کی تعریف کریں۔",
+      "contentType": "short",
+      "itemCode": "SHORT-045"
+    },
+    {
+      "id": 46,
+      "category": "Additional",
+      "question_en": "Define binary operators.",
+      "question_ur": "ثنائی آپریٹرز کی تعریف کریں۔",
+      "contentType": "short",
+      "itemCode": "SHORT-046"
+    },
+    {
+      "id": 47,
+      "category": "Additional",
+      "question_en": "What do you know about operator’s precedence?",
+      "question_ur": "آپریٹرز کی ترجیح کے بارے میں آپ کیا جانتے ہیں؟",
+      "contentType": "short",
+      "itemCode": "SHORT-047"
+    },
+    {
+      "id": 48,
+      "category": "Past Papers",
+      "question_en": "Why printf() function is used in C language?",
+      "question_ur": "C لینگوئج میں ()printf فنکشن کیوں استعمال ہوتا ہے؟",
+      "contentType": "short",
+      "itemCode": "SHORT-048"
+    },
+    {
+      "id": 49,
+      "category": "Past Papers",
+      "question_en": "What are format specifier?",
+      "question_ur": "فارمیٹ سپیسی فائر کیا ہیں؟",
+      "contentType": "short",
+      "itemCode": "SHORT-049"
+    },
+    {
+      "id": 50,
+      "category": "Past Papers",
+      "question_en": "What is the use of scanf() function?",
+      "question_ur": "scanf() فنکشن کا کیا استعمال ہے؟",
+      "contentType": "short",
+      "itemCode": "SHORT-050"
+    },
+    {
+      "id": 51,
+      "category": "Past Papers",
+      "question_en": "What is the difference between printf() and scanf()?",
+      "question_ur": "()printf اور ()scanf میں کیا فرق ہے؟",
+      "contentType": "short",
+      "itemCode": "SHORT-051"
+    },
+    {
+      "id": 52,
+      "category": "Past Papers",
+      "question_en": "Why getch() function is used at the end of program?",
+      "question_ur": "پروگرام کے اختتام پر ()getch فنکشن کیوں استعمال کیا جاتا ہے؟",
+      "contentType": "short",
+      "itemCode": "SHORT-052"
+    },
+    {
+      "id": 53,
+      "category": "Past Papers",
+      "question_en": "What is meant by getch()?",
+      "question_ur": "()getch سے کیا مراد ہے؟",
+      "contentType": "short",
+      "itemCode": "SHORT-053"
+    },
+    {
+      "id": 54,
+      "category": "Past Papers",
+      "question_en": "What do you know about statement terminator?",
+      "question_ur": "سٹیٹمنٹ ٹرمی نیٹر کے بارے میں آپ کیا جانتے ہیں؟",
+      "contentType": "short",
+      "itemCode": "SHORT-054"
+    },
+    {
+      "id": 55,
+      "category": "Past Papers",
+      "question_en": "What is the purpose of escape sequences?",
+      "question_ur": "ایسکیپ سیکوئنسز کا کیا مقصد ہے؟",
+      "contentType": "short",
+      "itemCode": "SHORT-055"
+    },
+    {
+      "id": 56,
+      "category": "Past Papers",
+      "question_en": "What is the purpose of \\n?",
+      "question_ur": "n\\ کا کیا مقصد ہے؟",
+      "contentType": "short",
+      "itemCode": "SHORT-056"
+    },
+    {
+      "id": 57,
+      "category": "Past Papers",
+      "question_en": "Write the purpose of \\t and \\n.",
+      "question_ur": "t\\ اور n\\ کا مقصد تحریر کریں۔",
+      "contentType": "short",
+      "itemCode": "SHORT-057"
+    },
+    {
+      "id": 58,
+      "category": "Past Papers",
+      "question_en": "What will be the output of this code? void main() { printf (\"Pakistan\\ n Punjab\\n \"); printf (\"Pakistan\\n Punjab\"); }",
+      "question_ur": "اس کوڈ کا آؤٹ پٹ کیا ہو گا؟ void main() { printf (\"Pakistan\\ n Punjab\\n \"); printf (\"Pakistan\\n Punjab\"); }",
+      "contentType": "short",
+      "itemCode": "SHORT-058"
+    },
+    {
+      "id": 59,
+      "category": "Past Papers",
+      "question_en": "Define operators.",
+      "question_ur": "آپریٹرز کی تعریف کریں۔",
+      "contentType": "short",
+      "itemCode": "SHORT-059"
+    },
+    {
+      "id": 60,
+      "category": "Past Papers",
+      "question_en": "What is assignment operator? Give example.",
+      "question_ur": "اسائنمنٹ آپریٹر کیا ہے؟ مثال دیں۔",
+      "contentType": "short",
+      "itemCode": "SHORT-060"
+    },
+    {
+      "id": 61,
+      "category": "Past Papers",
+      "question_en": "Define arithmetic operators.",
+      "question_ur": "ارِتھ میٹک آپریٹرز کی تعریف کریں۔",
+      "contentType": "short",
+      "itemCode": "SHORT-061"
+    },
+    {
+      "id": 62,
+      "category": "Past Papers",
+      "question_en": "What are logical operators.",
+      "question_ur": "منطقی آپریٹرز کیا ہیں؟",
+      "contentType": "short",
+      "itemCode": "SHORT-062"
+    },
+    {
+      "id": 63,
+      "category": "Past Papers",
+      "question_en": "What is AND operator?",
+      "question_ur": "AND آپریٹر سے کیا مراد ہے؟",
+      "contentType": "short",
+      "itemCode": "SHORT-063"
+    },
+    {
+      "id": 64,
+      "category": "Past Papers",
+      "question_en": "Write down the truth table for OR operator.",
+      "question_ur": "OR آپریٹر کے لیے ٹروتھ ٹیبل تحریر کریں۔",
+      "contentType": "short",
+      "itemCode": "SHORT-064"
+    },
+    {
+      "id": 65,
+      "category": "Past Papers",
+      "question_en": "What are operators? Write down the basic operators of C language.",
+      "question_ur": "آپریٹرز کیا ہیں؟ C لینگوئج کے بنیادی آپریٹرز تحریر کریں۔",
+      "contentType": "short",
+      "itemCode": "SHORT-065"
+    },
+    {
+      "id": 66,
+      "category": "Past Papers",
+      "question_en": "What is the purpose of a modulus operator? Give an example.",
+      "question_ur": "ماڈولس آپریٹر کا کیا مقصد ہے؟ مثال دیں۔",
+      "contentType": "short",
+      "itemCode": "SHORT-066"
+    },
+    {
+      "id": 67,
+      "category": "Past Papers",
+      "question_en": "What is the use of relational operators?",
+      "question_ur": "ریلیشنل آپریٹرز کا کیا استعمال ہے؟",
+      "contentType": "short",
+      "itemCode": "SHORT-067"
+    },
+    {
+      "id": 68,
+      "category": "Past Papers",
+      "question_en": "What is the difference between unary operators and binary operators?",
+      "question_ur": "یونری آپریٹرز اور بائنری آپریٹرز میں کیا فرق ہے؟",
+      "contentType": "short",
+      "itemCode": "SHORT-068"
+    },
+    {
+      "id": 69,
+      "category": "Past Papers",
+      "question_en": "What is operator precedence?",
+      "question_ur": "آپریٹر کی ترجیح کیا ہے؟",
+      "contentType": "short",
+      "itemCode": "SHORT-069"
+    },
+    {
+      "id": 70,
+      "category": "Past Papers",
+      "question_en": "Solve the expression: 18 / (15 - 3 * 2)",
+      "question_ur": "ایکسپریشن حل کریں: (2 * 3 - 15) / 18",
+      "contentType": "short",
+      "itemCode": "SHORT-070"
+    },
+    {
+      "id": 71,
+      "category": "Past Papers",
+      "question_en": "Solve the given expression. 7 + 3 * (12 + 2)",
+      "question_ur": "دی گئی ایکسپریشن حل کریں۔ (2 + 12) * 3 + 7",
+      "contentType": "short",
+      "itemCode": "SHORT-071"
+    },
+    {
+      "id": 72,
+      "category": "Past Papers",
+      "question_en": "Solve the following expression. 6 + 5 * (3 + 2)",
+      "question_ur": "درج ذیل ایکسپریشن حل کریں۔ (2 + 3) * 5 + 6",
+      "contentType": "short",
+      "itemCode": "SHORT-072"
+    },
+    {
+      "id": 73,
+      "category": "Past Papers",
+      "question_en": "Solve the following expression: 4 + 2 * (11 - 5)",
+      "question_ur": "درج ذیل ایکسپریشن حل کریں: (5 - 11) * 2 + 4",
+      "contentType": "short",
+      "itemCode": "SHORT-073"
+    },
+    {
+      "id": 74,
+      "category": "Past Papers",
+      "question_en": "Find the result of the given expression: 7 + 4 * (9 + 2)",
+      "question_ur": "دی گئی ایکسپریشن کا رزلٹ تلاش کریں: (2 + 9) * 4 + 7",
+      "contentType": "short",
+      "itemCode": "SHORT-074"
+    }
+  ],
+  "longQuestions": [
+    {
+      "id": 1,
+      "category": "Exercise",
+      "question_en": "What is the difference between scanf and getch?",
+      "question_ur": "scanf اور getch میں کیا فرق ہے؟",
+      "contentType": "long",
+      "itemCode": "LONG-001"
+    },
+    {
+      "id": 2,
+      "category": "Exercise",
+      "question_en": "Which function of C language is used to display output on screen? Define briefly.",
+      "question_ur": "سکرین پر آؤٹ پُٹ کو دکھانے کے لیے C لینگوئج کا کونسا فنکشن استعمال کیا جاتا ہے؟ تفصیلاً بیان کریں۔",
+      "contentType": "long",
+      "itemCode": "LONG-002"
+    },
+    {
+      "id": 3,
+      "category": "Exercise",
+      "question_en": "Why format specifiers are important to be specific in I/O operations?",
+      "question_ur": "اِن پُٹ اور آؤٹ پُٹ آپریشنز میں فارمیٹ سپیسی فائرز کیوں اہم ہیں؟",
+      "contentType": "long",
+      "itemCode": "LONG-003"
+    },
+    {
+      "id": 4,
+      "category": "Exercise",
+      "question_en": "What are escape sequences? Why do we need them?",
+      "question_ur": "ایسکیپ سیکوئنسز کیا ہیں؟ ہمیں انکی ضرورت کیوں ہے؟",
+      "contentType": "long",
+      "itemCode": "LONG-004"
+    },
+    {
+      "id": 5,
+      "category": "Exercise",
+      "question_en": "Which operators are used for arithmetic operations? Explain.",
+      "question_ur": "ارتھ میٹک آپریشنز کے لیے کونسے آپریٹرز استعمال کیے جاتے ہیں؟ وضاحت کریں۔",
+      "contentType": "long",
+      "itemCode": "LONG-005"
+    },
+    {
+      "id": 6,
+      "category": "Exercise",
+      "question_en": "What are relational operators? Describe with an example.",
+      "question_ur": "ریلیشنل آپریٹرز کیا ہیں؟ ایک مثال سے وضاحت کریں۔",
+      "contentType": "long",
+      "itemCode": "LONG-006"
+    },
+    {
+      "id": 7,
+      "category": "Exercise",
+      "question_en": "What are logical operators? Describe with an example.",
+      "question_ur": "منطقی آپریٹرز کیا ہیں؟ ایک مثال سے وضاحت کریں۔",
+      "contentType": "long",
+      "itemCode": "LONG-007"
+    },
+    {
+      "id": 8,
+      "category": "Exercise",
+      "question_en": "Briefly explain unary operators and binary operators.",
+      "question_ur": "یونری آپریٹرز اور ثنائی آپریٹرز کو تفصیلی بیان کریں۔",
+      "contentType": "long",
+      "itemCode": "LONG-008"
+    },
+    {
+      "id": 9,
+      "category": "Exercise",
+      "question_en": "Briefly describe == operator and = operator with examples.",
+      "question_ur": "مثالوں کے ساتھ == آپریٹر اور = آپریٹر کی وضاحت کریں۔",
+      "contentType": "long",
+      "itemCode": "LONG-009"
+    },
+    {
+      "id": 10,
+      "category": "Exercise",
+      "question_en": "What is meant by precedence of operators? Write operators with their precedence.",
+      "question_ur": "آپریٹرز کی ترجیح سے کیا مراد ہے؟ آپریٹرز کو انکی ترجیح کے ساتھ تحریر کریں۔",
+      "contentType": "long",
+      "itemCode": "LONG-010"
+    },
+    {
+      "id": 11,
+      "category": "Additional",
+      "question_en": "Write a detailed note on printf() function.",
+      "question_ur": "printf() فنکشن پر تفصیلی نوٹ تحریر کریں۔",
+      "contentType": "long",
+      "itemCode": "LONG-011"
+    },
+    {
+      "id": 12,
+      "category": "Additional",
+      "question_en": "Write a detailed note on scanf() function.",
+      "question_ur": "scanf() فنکشن پر تفصیلی نوٹ تحریر کریں۔",
+      "contentType": "long",
+      "itemCode": "LONG-012"
+    },
+    {
+      "id": 13,
+      "category": "Additional",
+      "question_en": "Write a detailed note on getch() function.",
+      "question_ur": "getch() فنکشن پر تفصیلی نوٹ تحریر کریں۔",
+      "contentType": "long",
+      "itemCode": "LONG-013"
+    },
+    {
+      "id": 14,
+      "category": "Additional",
+      "question_en": "Write a detailed note on New line(\\n) and Tab (\\t) escape sequence.",
+      "question_ur": "n\\ اور t\\ ایسکیپ سیکوئنسز پر تفصیلی نوٹ تحریر کریں۔",
+      "contentType": "long",
+      "itemCode": "LONG-014"
+    },
+    {
+      "id": 15,
+      "category": "Additional",
+      "question_en": "Briefly describe assignment operator.",
+      "question_ur": "اسائنمنٹ آپریٹر کو تفصیلی بیان کریں۔",
+      "contentType": "long",
+      "itemCode": "LONG-015"
+    },
+    {
+      "id": 16,
+      "category": "Additional",
+      "question_en": "Write a program that takes as input the price of a box of chocolates and the total number of chocolates in the box. The program finds and displays the price of one chocolate.",
+      "question_ur": "ایک پروگرام تحریر کریں جو چاکلیٹ کے ایک ڈبے کی قیمت اور ڈبے میں کُل چاکلیٹس کی تعداد کا اِن پُٹ لے۔ پروگرام ایک چاکلیٹ کی قیمت معلوم اور ڈسپلے کرے۔",
+      "contentType": "long",
+      "itemCode": "LONG-016"
+    },
+    {
+      "id": 17,
+      "category": "Additional",
+      "question_en": "Write a program that takes as input the length and width of a rectangle. Program calculates and displays the area of rectangle on screen.",
+      "question_ur": "ایک پروگرام تحریر کریں جو ایک مستطیل کی لمبائی اور چوڑائی کا اِن پُٹ لے۔ پروگرام مستطیل کا رقبہ معلوم کرے اور سکرین پر دکھائے۔",
+      "contentType": "long",
+      "itemCode": "LONG-017"
+    },
+    {
+      "id": 18,
+      "category": "Additional",
+      "question_en": "Write a program that takes as input the length of one side of a square and calculates the area of square.",
+      "question_ur": "ایک پروگرام تحریر کریں جو ایک مربع کی ایک سِمت کی لمبائی کا اِن پُٹ لے اور مربع کا رقبہ معلوم کرے۔",
+      "contentType": "long",
+      "itemCode": "LONG-018"
+    },
+    {
+      "id": 19,
+      "category": "Additional",
+      "question_en": "Write a program that takes marks of two subjects from user and displays the sum of marks on console.",
+      "question_ur": "ایک پروگرام تحریر کریں جو یوزر سے دو مضامین کے نمبرز معلوم کرے اور نمبرز کو جمع کر کے ظاہر کرے۔",
+      "contentType": "long",
+      "itemCode": "LONG-019"
+    },
+    {
+      "id": 20,
+      "category": "Additional",
+      "question_en": "Write a program that takes as input the number of balls in jar A and the number of balls in jar B. The program calculates and displays the total number of balls.",
+      "question_ur": "ایک پروگرام تحریر کریں جو جار A اور جار B کی گیندوں کی تعداد کا اِن پُٹ لے۔ پروگرام کُل گیندوں کی تعداد معلوم کرے اور دکھائے۔",
+      "contentType": "long",
+      "itemCode": "LONG-020"
+    },
+    {
+      "id": 21,
+      "category": "Additional",
+      "question_en": "Write a program that finds and displays the right most digit of an input number.",
+      "question_ur": "ایک پروگرام تحریر کریں جو ایک اِن پُٹ میں دیئے گئے نمبر کا انتہائی دایاں ہندسہ معلوم کرے اور دکھائے۔",
+      "contentType": "long",
+      "itemCode": "LONG-021"
+    },
+    {
+      "id": 22,
+      "category": "Past Papers",
+      "question_en": "Explain the use of printf() and scanf() in C language with example.",
+      "question_ur": "C لینگوئج میں ()prinf اور ()scanf کی وضاحت مثال کے ساتھ کریں۔",
+      "contentType": "long",
+      "itemCode": "LONG-022"
+    },
+    {
+      "id": 23,
+      "category": "Past Papers",
+      "question_en": "Define format specifier. Explain different format specifier used in C-language with examples.",
+      "question_ur": "فارمیٹ سپیسی فائر کی تعریف کریں۔ C لینگوئج میں استعمال ہونے والے مختلف فارمیٹ سپیسی فائر کی مثالوں کے ساتھ وضاحت کریں۔",
+      "contentType": "long",
+      "itemCode": "LONG-023"
+    },
+    {
+      "id": 24,
+      "category": "Past Papers",
+      "question_en": "What is escape sequence? Explain with example.",
+      "question_ur": "ایسکیپ سیکوئنس کیا ہے؟ مثال کے ساتھ وضاحت کریں۔",
+      "contentType": "long",
+      "itemCode": "LONG-024"
+    },
+    {
+      "id": 25,
+      "category": "Past Papers",
+      "question_en": "Write the detailed note on assignment operators and relational operators.",
+      "question_ur": "اسائنمنٹ آپریٹرز اور ریلیشنل آپریٹرز پر تفصیلی نوٹ تحریر کریں۔",
+      "contentType": "long",
+      "itemCode": "LONG-025"
+    },
+    {
+      "id": 26,
+      "category": "Past Papers",
+      "question_en": "Define operators. Explain any three arithmetic operators in C-language with example.",
+      "question_ur": "آپریٹرز کی تعریف کریں۔ C لینگوئج میں مثال کے ساتھ کوئی سے تین ارتھ میٹک آپریٹرز کی وضاحت کریں۔",
+      "contentType": "long",
+      "itemCode": "LONG-026"
+    },
+    {
+      "id": 27,
+      "category": "Past Papers",
+      "question_en": "What are arithmetic operators? Explain any three arithmetic operators.",
+      "question_ur": "ارتھ میٹک آپریٹرز کیا ہیں؟ کوئی سے تین ارتھ میٹک آپریٹرز کی وضاحت کریں۔",
+      "contentType": "long",
+      "itemCode": "LONG-027"
+    },
+    {
+      "id": 28,
+      "category": "Past Papers",
+      "question_en": "What is the difference between <, >, =, == operators?",
+      "question_ur": "== ,= ,< ,> آپریٹرز میں کیا فرق ہے؟",
+      "contentType": "long",
+      "itemCode": "LONG-028"
+    },
+    {
+      "id": 29,
+      "category": "Past Papers",
+      "question_en": "Describe the arithmetic operators and relational operators.",
+      "question_ur": "ارتھ میٹک آپریٹرز اور ریلیشنل آپریٹرز کی وضاحت کریں۔",
+      "contentType": "long",
+      "itemCode": "LONG-029"
+    },
+    {
+      "id": 30,
+      "category": "Past Papers",
+      "question_en": "What is meant by operators? Describe relational operators with examples.",
+      "question_ur": "آپریٹرز سے کیا مراد ہے؟ ریلیشنل آپریٹرز کی مثال کے ساتھ وضاحت کریں۔",
+      "contentType": "long",
+      "itemCode": "LONG-030"
+    },
+    {
+      "id": 31,
+      "category": "Past Papers",
+      "question_en": "What are operators? Explain assignment operator and arithmetic operators.",
+      "question_ur": "آپریٹرز کیا ہیں؟ اسائنمنٹ آپریٹر اور ارتھ میٹک آپریٹرز کی وضاحت کریں۔",
+      "contentType": "long",
+      "itemCode": "LONG-031"
+    },
+    {
+      "id": 32,
+      "category": "Past Papers",
+      "question_en": "Define operators. Explain different types of logical operators.",
+      "question_ur": "آپریٹرز کی تعریف کریں۔ منطقی آپریٹرز کی مختلف اقسام کی وضاحت کریں۔",
+      "contentType": "long",
+      "itemCode": "LONG-032"
+    },
+    {
+      "id": 33,
+      "category": "Past Papers",
+      "question_en": "What is operator? Explain the unary and binary operator with example.",
+      "question_ur": "آپریٹر کیا ہے؟ یونری اور بائنری آپریٹر کی مثال کے ساتھ وضاحت کریں۔",
+      "contentType": "long",
+      "itemCode": "LONG-033"
+    }
+  ]
+}

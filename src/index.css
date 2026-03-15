@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 138 38% 97%;
+    --foreground: 152 20% 14%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 152 20% 14%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 152 20% 14%;
+
+    --primary: 148 63% 36%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 145 36% 92%;
+    --secondary-foreground: 152 20% 14%;
+
+    --muted: 142 24% 93%;
+    --muted-foreground: 152 10% 40%;
+
+    --accent: 160 65% 42%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 146 18% 86%;
+    --input: 146 18% 86%;
+    --ring: 148 63% 36%;
+
+    --radius: 0.75rem;
+
+    --pts-blue: 148 63% 36%;
+    --pts-dark: 154 28% 12%;
+    --pts-light-blue: 145 38% 92%;
+    --pts-gradient: linear-gradient(135deg, hsl(148 63% 34%), hsl(164 56% 40%));
+    --pts-hero-bg: radial-gradient(circle at 70% 50%, hsl(145 38% 92%) 0%, hsl(138 38% 97%) 70%);
+    --pts-green: 153 60% 45%;
+    --pts-orange: 30 95% 55%;
+    --pts-purple: 270 70% 55%;
+    --pts-teal: 170 58% 36%;
+    --pts-red: 0 75% 55%;
+    --pts-dark-bar: 154 22% 18%;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+    font-family: 'Poppins', sans-serif;
+  }
+}
+
+@layer utilities {
+  .pts-section-title {
+    @apply text-2xl md:text-3xl font-bold text-foreground;
+  }
+
+  .pts-card {
+    @apply bg-card rounded-xl shadow-sm border border-border p-6 text-center transition-all duration-300 hover:shadow-lg hover:-translate-y-1 hover:border-primary/25;
+  }
+
+  .pts-hero-circle {
+    background: var(--pts-hero-bg);
+}
+
+/* Urdu / Arabic text styling */
+[dir="rtl"], .font-urdu {
+  font-family: 'Noto Nastaliq Urdu', 'Jameel Noori Nastaleeq', serif;
+  line-height: 2;
+}
+}
+
+@page {
+  size: A4;
+  margin: 10mm;
+}
+
+@media print {
+  html,
+  body {
+    background: #ffffff !important;
+  }
+
+  .saved-paper-print {
+    width: 100%;
+    background: #ffffff !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .saved-paper-print.compact-print {
+    font-size: 11px;
+  }
+
+  .saved-paper-print.compact-print .saved-paper-page {
+    padding: 6mm 6mm 5mm 6mm !important;
+  }
+
+  .saved-paper-print.compact-print .saved-paper-header {
+    padding-bottom: 4px !important;
+    margin-bottom: 4px !important;
+  }
+
+  .saved-paper-print.compact-print .saved-paper-header h1 {
+    line-height: 1.1 !important;
+  }
+
+  .saved-paper-print.compact-print .saved-paper-header p {
+    margin-top: 1px !important;
+    font-size: 10px !important;
+    line-height: 1.2 !important;
+  }
+
+  .saved-paper-print.compact-print .saved-paper-syllabus,
+  .saved-paper-print.compact-print .saved-paper-bubble {
+    margin-top: 6px !important;
+    padding: 6px 8px !important;
+  }
+
+  .saved-paper-print.compact-print .saved-paper-sections {
+    margin-top: 8px !important;
+    gap: 8px !important;
+    line-height: 1.28 !important;
+  }
+
+  .saved-paper-print.compact-print .saved-paper-section {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  .saved-paper-print.compact-print .saved-paper-question {
+    padding-bottom: 3px !important;
+    margin-bottom: 0 !important;
+  }
+
+  .saved-paper-print.compact-print .saved-paper-question textarea {
+    line-height: 1.2 !important;
+  }
+}
+
+.saved-paper-print [dir="rtl"] {
+  line-height: 1.45;
+}

@@ -1,0 +1,1825 @@
+{
+  "subject": "Computer",
+  "board": "PTB",
+  "class": "10",
+  "chapter": 4,
+  "chapterTitle": "Arrays and Loops",
+  "mcqs": [
+    {
+      "id": 1,
+      "category": "exercise",
+      "question_en": "An array is a .................................. structure.",
+      "question_ur": "ارے ایک .................................. سٹرکچر ہے:",
+      "options": {
+        "A": "Loop",
+        "B": "Control",
+        "C": "Data",
+        "D": "Conditional"
+      },
+      "options_ur": {
+        "A": "لوپ",
+        "B": "کنٹرول",
+        "C": "ڈیٹا",
+        "D": "مشروط"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-001"
+    },
+    {
+      "id": 2,
+      "category": "exercise",
+      "question_en": "Array elements are stored at .................................. memory locations.",
+      "question_ur": "ارے کے ایلیمنٹس میموری کے مقامات .................................. پر محفوظ ہوتے ہیں:",
+      "options": {
+        "A": "Contiguous",
+        "B": "Scattered",
+        "C": "Divided",
+        "D": "None"
+      },
+      "options_ur": {
+        "A": "منسلک",
+        "B": "بکھرے ہوئے",
+        "C": "تقسیم شدہ",
+        "D": "کوئی بھی نہیں"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-002"
+    },
+    {
+      "id": 3,
+      "category": "exercise",
+      "question_en": "If the size of an array is 100, the range of indexes will be ..................................",
+      "question_ur": "اگر ارے کا سائز 100 ہے تو انڈیکسز کی رینج .................................. ہو گی:",
+      "options": {
+        "A": "0-99",
+        "B": "0-100",
+        "C": "1-100",
+        "D": "2-2012"
+      },
+      "options_ur": {
+        "A": "0-99",
+        "B": "0-100",
+        "C": "1-100",
+        "D": "2-2012"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-003"
+    },
+    {
+      "id": 4,
+      "category": "exercise",
+      "question_en": ".................................. structure allows repetition of a set of instructions.",
+      "question_ur": ".................................. سٹرکچر ہمیشہ ہدایات کے مجموعے کو بار بار دہرانے کے لیے استعمال ہوتا ہے:",
+      "options": {
+        "A": "Loop",
+        "B": "Condtional",
+        "C": "Control",
+        "D": "Data"
+      },
+      "options_ur": {
+        "A": "لوپ",
+        "B": "مشروط",
+        "C": "کنٹرول",
+        "D": "ڈیٹا"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-004"
+    },
+    {
+      "id": 5,
+      "category": "exercise",
+      "question_en": ".................................. is the unique identifier, used to refer to the array.",
+      "question_ur": ".................................. ایک مخصوص شناخت ہے جو ارے کا حوالہ دیتا ہے:",
+      "options": {
+        "A": "Data type",
+        "B": "Array name",
+        "C": "Array size",
+        "D": "None"
+      },
+      "options_ur": {
+        "A": "ڈیٹا ٹائپ",
+        "B": "ارے کا نام",
+        "C": "ارے کا سائز",
+        "D": "کوئی بھی نہیں"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-005"
+    },
+    {
+      "id": 6,
+      "category": "exercise",
+      "question_en": "Array can be initialized .................................. declaration.",
+      "question_ur": "ارے کو ڈکلیئریشن کے .................................. انیشلائز کیا جا سکتا ہے:",
+      "options": {
+        "A": "At the time of",
+        "B": "After",
+        "C": "Before",
+        "D": "Both A & B"
+      },
+      "options_ur": {
+        "A": "اس وقت",
+        "B": "اس کے بعد",
+        "C": "اس کے پہلے",
+        "D": "(a) اور (b) دونوں"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-006"
+    },
+    {
+      "id": 7,
+      "category": "exercise",
+      "question_en": "Using loops inside loops is called .................................. loops.",
+      "question_ur": "لوپس کے اندر لوپس کا استعمال .................................. لوپس کہلاتا ہے:",
+      "options": {
+        "A": "for",
+        "B": "while",
+        "C": "do-while",
+        "D": "Nested"
+      },
+      "options_ur": {
+        "A": "for",
+        "B": "while",
+        "C": "do-while",
+        "D": "Nested"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-007"
+    },
+    {
+      "id": 8,
+      "category": "exercise",
+      "question_en": ".................................. part of for loop is executed first.",
+      "question_ur": "لوپ کا .................................. حصہ سب سے پہلے چلتا ہے:",
+      "options": {
+        "A": "Condition",
+        "B": "Body",
+        "C": "Initialization",
+        "D": "Increment / decrement"
+      },
+      "options_ur": {
+        "A": "شرط",
+        "B": "باڈی",
+        "C": "انیشلائزیشن",
+        "D": "اضافہ/کمی"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-008"
+    },
+    {
+      "id": 9,
+      "category": "exercise",
+      "question_en": ".................................. make it easier to read and write values in array.",
+      "question_ur": ".................................. سے ارے میں قیمتیں لکھنا اور پڑھنا آسان ہو جاتا ہے:",
+      "options": {
+        "A": "Loops",
+        "B": "Conditions",
+        "C": "Expressions",
+        "D": "Functions"
+      },
+      "options_ur": {
+        "A": "لوپس",
+        "B": "شرائط",
+        "C": "ایکسپریشنز",
+        "D": "فنکشنز"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-009"
+    },
+    {
+      "id": 10,
+      "category": "exercise",
+      "question_en": "To initialize the array in a single statement, initialize it .................................. declaration.",
+      "question_ur": "ارے کو ایک سٹیٹمنٹ میں انیشلائز کرنے کے لئے اسے ڈکلیئریشن کے .................................. انیشلائز کریں۔",
+      "options": {
+        "A": "At the time of",
+        "B": "After",
+        "C": "Before",
+        "D": "Both A & B"
+      },
+      "options_ur": {
+        "A": "وقت",
+        "B": "بعد",
+        "C": "پہلے",
+        "D": "(a) اور (b) دونوں"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-010"
+    },
+    {
+      "id": 11,
+      "category": "additional",
+      "question_en": ".................................. can be initialized at the time of its declaration, or later.",
+      "question_ur": ".................................. کو اسکی ڈکلیریشن کے وقت یا بعد میں انیشلائز کیا جا سکتا ہے۔",
+      "options": {
+        "A": "An array",
+        "B": "A variable",
+        "C": "A constant",
+        "D": "A function"
+      },
+      "options_ur": {
+        "A": "ایک ارے",
+        "B": "ایک متغیر",
+        "C": "ایک کانسٹنٹ",
+        "D": "ایک فنکشن"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-011"
+    },
+    {
+      "id": 12,
+      "category": "additional",
+      "question_en": "We cannot initialize all the elements of array in .................................. statement(s).",
+      "question_ur": "ہم .................................. سٹیٹمنٹ میں ارے کے تمام ارکان کو انیشلائز نہیں کروا سکتے۔",
+      "options": {
+        "A": "Single",
+        "B": "Double",
+        "C": "Triple",
+        "D": "Multiple"
+      },
+      "options_ur": {
+        "A": "سنگل",
+        "B": "ڈبل",
+        "C": "ٹرپل",
+        "D": "کئی"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-012"
+    },
+    {
+      "id": 13,
+      "category": "additional",
+      "question_en": ".................................. is a container to store collection of data items in a specific layout.",
+      "question_ur": "مخصوص لے آؤٹ میں ڈیٹا آئٹمز کا مجموعہ محفوظ کرنے کے لیے .................................. ایک کنٹینر ہے۔",
+      "options": {
+        "A": "Data",
+        "B": "Data structure",
+        "C": "database",
+        "D": "Program"
+      },
+      "options_ur": {
+        "A": "ڈیٹا",
+        "B": "ڈیٹا سٹرکچر",
+        "C": "ڈیٹا بیس",
+        "D": "پروگرام"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-013"
+    },
+    {
+      "id": 14,
+      "category": "additional",
+      "question_en": ".................................. is a data structure that can hold multiple values of same data type.",
+      "question_ur": ".................................. ایک ڈیٹا سٹرکچر ہے جو کہ ایک جیسی ڈیٹا ٹائپ کی مختلف ویلیوز کو سنبھال سکتا ہے۔",
+      "options": {
+        "A": "An array",
+        "B": "A program",
+        "C": "Statement",
+        "D": "Function"
+      },
+      "options_ur": {
+        "A": "ایک ارے",
+        "B": "ایک پروگرام",
+        "C": "سٹیٹمنٹ",
+        "D": "فنکشن"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-014"
+    },
+    {
+      "id": 15,
+      "category": "additional",
+      "question_en": "An important property of array is that it stores all the values at consecutive locations inside the ..................................",
+      "question_ur": "ارے کی اہم خصوصیت یہ ہے کہ یہ .................................. میں مسلسل لوکیشنز پر تمام ویلیوز کو سٹور کرتا ہے۔",
+      "options": {
+        "A": "Program",
+        "B": "Database",
+        "C": "Array",
+        "D": "Computer memory"
+      },
+      "options_ur": {
+        "A": "پروگرام",
+        "B": "ڈیٹا بائٹس",
+        "C": "ارے",
+        "D": "کمپیوٹر میموری"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-015"
+    },
+    {
+      "id": 16,
+      "category": "additional",
+      "question_en": ".................................. values to an array for the first time, is called array initialization.",
+      "question_ur": "پہلی مرتبہ ارے کی ویلیوز کو .................................. ارے انیشلائزیشن کہلاتا ہے۔",
+      "options": {
+        "A": "Creating",
+        "B": "Modifying",
+        "C": "Assigning",
+        "D": "None of these"
+      },
+      "options_ur": {
+        "A": "بنانا",
+        "B": "تبدیل کرنا",
+        "C": "اسائن کرنا",
+        "D": "ان میں سے کوئی نہیں"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-016"
+    },
+    {
+      "id": 17,
+      "category": "additional",
+      "question_en": "Each element of .................................. has an index that can be used with the array name.",
+      "question_ur": ".................................. کے ہر رکن کا ایک انڈیکس ہوتا ہے جسے ارے کے نام کے ساتھ استعمال کیا جا سکتا ہے۔",
+      "options": {
+        "A": "A variable",
+        "B": "A constant",
+        "C": "A function",
+        "D": "An array"
+      },
+      "options_ur": {
+        "A": "ایک متغیر",
+        "B": "ایک کانسٹنٹ",
+        "C": "ایک فنکشن",
+        "D": "ایک ارے"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-017"
+    },
+    {
+      "id": 18,
+      "category": "additional",
+      "question_en": "First element has the index ..................................",
+      "question_ur": "پہلے رکن کا انڈیکس .................................. ہوتا ہے۔",
+      "options": {
+        "A": "1",
+        "B": "0",
+        "C": "2",
+        "D": "3"
+      },
+      "options_ur": {
+        "A": "1",
+        "B": "0",
+        "C": "2",
+        "D": "3"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-018"
+    },
+    {
+      "id": 19,
+      "category": "additional",
+      "question_en": "We can use .................................. as array indices.",
+      "question_ur": "ہم .................................. کو ارے کے اشارہ کے طور پر استعمال کر سکتے ہیں۔",
+      "options": {
+        "A": "Array name",
+        "B": "Constant",
+        "C": "Variable",
+        "D": "Function"
+      },
+      "options_ur": {
+        "A": "ارے کا نام",
+        "B": "کانسٹنٹ",
+        "C": "متغیر",
+        "D": "فنکشن"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-019"
+    },
+    {
+      "id": 20,
+      "category": "additional",
+      "question_en": "C language provides .................................. kind of loop structures.",
+      "question_ur": "C لینگوئج .................................. طرح کے لُوپ سٹرکچرز مہیا کرتی ہے۔",
+      "options": {
+        "A": "1",
+        "B": "2",
+        "C": "3",
+        "D": "4"
+      },
+      "options_ur": {
+        "A": "1",
+        "B": "2",
+        "C": "3",
+        "D": "4"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-020"
+    },
+    {
+      "id": 21,
+      "category": "additional",
+      "question_en": "C language provides .................................. loop structure(s).",
+      "question_ur": "C لینگوئج .................................. لُوپ سٹرکچر مہیا کرتی ہے۔",
+      "options": {
+        "A": "for",
+        "B": "while",
+        "C": "do-while",
+        "D": "All of these"
+      },
+      "options_ur": {
+        "A": "for",
+        "B": "while",
+        "C": "do-while",
+        "D": "یہ تمام"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-021"
+    },
+    {
+      "id": 22,
+      "category": "additional",
+      "question_en": "If we need to repeat one or more statements, then we use ..................................",
+      "question_ur": "اگر ہمیں ایک یا زیادہ سٹیٹمنٹس کو دہرانے کی ضرورت پڑے، تو ہم .................................. استعمال کرتے ہیں۔",
+      "options": {
+        "A": "Programs",
+        "B": "Variables",
+        "C": "Constants",
+        "D": "Loops"
+      },
+      "options_ur": {
+        "A": "پروگرامز",
+        "B": "متغیرات",
+        "C": "کانسٹنٹس",
+        "D": "لُوپس"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-022"
+    },
+    {
+      "id": 23,
+      "category": "additional",
+      "question_en": "Always make sure that the .................................. becomes false at some point.",
+      "question_ur": "ہمیشہ یقینی بنائیں کہ کسی پوائنٹ پر .................................. غلط بن جائے۔",
+      "options": {
+        "A": "loop",
+        "B": "condition",
+        "C": "variable",
+        "D": "constant"
+      },
+      "options_ur": {
+        "A": "لُوپ",
+        "B": "شرط (کنڈیشن)",
+        "C": "متغیر",
+        "D": "کانسٹنٹ"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-023"
+    },
+    {
+      "id": 24,
+      "category": "additional",
+      "question_en": "Each run of a loop is called ..................................",
+      "question_ur": "ایک لُوپ کا ہر بار چلنا .................................. کہلاتا ہے۔",
+      "options": {
+        "A": "Iteration",
+        "B": "Cycle",
+        "C": "Movement",
+        "D": "Both A & C"
+      },
+      "options_ur": {
+        "A": "تکرار",
+        "B": "چکر",
+        "C": "حرکت",
+        "D": "A اور C دونوں"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-024"
+    },
+    {
+      "id": 25,
+      "category": "pastpapers",
+      "question_en": "Which of the following is correct declaration of array:",
+      "question_ur": "درج ذیل میں سے کونسی ارے کی درست ڈکلیریشن ہے:",
+      "options": {
+        "A": "int array [10];",
+        "B": "int array {10};",
+        "C": "int array;",
+        "D": "int array (10);"
+      },
+      "options_ur": {
+        "A": "int array [10];",
+        "B": "int array {10};",
+        "C": "int array;",
+        "D": "int array (10);"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-025"
+    },
+    {
+      "id": 26,
+      "category": "pastpapers",
+      "question_en": "The index of first element of an array is:",
+      "question_ur": "ارے کے پہلے عنصر کی انڈیکس ہوتی ہے:",
+      "options": {
+        "A": "0",
+        "B": "1",
+        "C": "2",
+        "D": "3"
+      },
+      "options_ur": {
+        "A": "0",
+        "B": "1",
+        "C": "2",
+        "D": "3"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-026"
+    },
+    {
+      "id": 27,
+      "category": "pastpapers",
+      "question_en": "The index of an element in array is written within ......:",
+      "question_ur": "ارے میں ایک عنصر کی اینڈیکس ...... میں لکھی جاتی ہے:",
+      "options": {
+        "A": "< >",
+        "B": "[ ]",
+        "C": "{]",
+        "D": "{ }"
+      },
+      "options_ur": {
+        "A": "< >",
+        "B": "[ ]",
+        "C": "{]",
+        "D": "{ }"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-027"
+    },
+    {
+      "id": 28,
+      "category": "pastpapers",
+      "question_en": "Which is the second element in an array:",
+      "question_ur": "ایک ارے میں دوسرا عنصر کونسا ہے:",
+      "options": {
+        "A": "n[0]",
+        "B": "n[2]",
+        "C": "n[3]",
+        "D": "n[1]"
+      },
+      "options_ur": {
+        "A": "n[0]",
+        "B": "n[2]",
+        "C": "n[3]",
+        "D": "n[1]"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-028"
+    },
+    {
+      "id": 29,
+      "category": "pastpapers",
+      "question_en": "If size of an array is 10, the range of indexes will be:",
+      "question_ur": "اگر ایک ارے کا سائز 10 ہو تو، انڈیکسز کی رینج ہو گی:",
+      "options": {
+        "A": "0-10",
+        "B": "0-9",
+        "C": "1-110",
+        "D": "2-10"
+      },
+      "options_ur": {
+        "A": "0-10",
+        "B": "0-9",
+        "C": "1-110",
+        "D": "2-10"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-029"
+    },
+    {
+      "id": 30,
+      "category": "pastpapers",
+      "question_en": "What is the output of the following code: int b [3] = {15,20,16}; printf(\"%d\", b[2]);",
+      "question_ur": "درج ذیل کوڈ کا آؤٹ پُٹ کیا ہو گا ;int b [3] = {15,20,16}; printf(\"%d\", b[2])",
+      "options": {
+        "A": "16",
+        "B": "17",
+        "C": "18",
+        "D": "19"
+      },
+      "options_ur": {
+        "A": "16",
+        "B": "17",
+        "C": "18",
+        "D": "19"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-030"
+    },
+    {
+      "id": 31,
+      "category": "pastpapers",
+      "question_en": "...... is the output of the following code: int n {4} = {8,7,6,3}; printf(\"%d\", n[3]);",
+      "question_ur": "درج ذیل کوڈ کا آؤٹ پُٹ ہو گاint n {4} = {8,7,6,3}printf (\"%d\", n[3]);:",
+      "options": {
+        "A": "0",
+        "B": "-1",
+        "C": "1",
+        "D": "3"
+      },
+      "options_ur": {
+        "A": "0",
+        "B": "-1",
+        "C": "1",
+        "D": "3"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-031"
+    },
+    {
+      "id": 32,
+      "category": "pastpapers",
+      "question_en": "What is the output of the following code: int c [2] = {25,30}; printf(\"%d\", C[1]);",
+      "question_ur": "درج ذیل کوڈ کا آؤٹ پُٹ کیا ہو گا ;int c [2] = {25,30}; printf( \"%d\",C[1] )",
+      "options": {
+        "A": "30",
+        "B": "25",
+        "C": "24",
+        "D": "23"
+      },
+      "options_ur": {
+        "A": "30",
+        "B": "25",
+        "C": "24",
+        "D": "23"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-032"
+    },
+    {
+      "id": 33,
+      "category": "pastpapers",
+      "question_en": "If the size of an array is 50, the range of indexes will be ......:",
+      "question_ur": "اگر ایک ارے کا سائز 50 ہے، تو اسکے انڈیکسز کی رینج ہو گی:",
+      "options": {
+        "A": "0-50",
+        "B": "0-49",
+        "C": "1-49",
+        "D": "1-50"
+      },
+      "options_ur": {
+        "A": "0-50",
+        "B": "0-49",
+        "C": "1-49",
+        "D": "1-50"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-033"
+    },
+    {
+      "id": 34,
+      "category": "pastpapers",
+      "question_en": "What will be the output of the following: void abc() { printf(\"Pakistan\"); }",
+      "question_ur": "درج ذیل کا آؤٹ پُٹ کیا ہو گا void abc(){printf (\"Pakistan\"); }",
+      "options": {
+        "A": "Punjab",
+        "B": "Pak",
+        "C": "Pakistan",
+        "D": "Pun"
+      },
+      "options_ur": {
+        "A": "Punjab",
+        "B": "Pak",
+        "C": "Pakistan",
+        "D": "Pun"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-034"
+    },
+    {
+      "id": 35,
+      "category": "pastpapers",
+      "question_en": "What will be the output of this code: void abc(){ printf(\"Punjab\");}",
+      "question_ur": "اس کوڈ کا آؤٹ پُٹ کیا ہو گا: void abc(){ printf (\"Punjab\");}",
+      "options": {
+        "A": "Punjab",
+        "B": "Pun",
+        "C": "Pak",
+        "D": "Pakistan"
+      },
+      "options_ur": {
+        "A": "Punjab",
+        "B": "Pun",
+        "C": "Pak",
+        "D": "Pakistan"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-035"
+    },
+    {
+      "id": 36,
+      "category": "pastpapers",
+      "question_en": "How many times the word \"PAKISTAN\" will be printed through the loop: for (int a = 0 ; a <= 3 ; a++) { printf \"PAKISTAN\"; }",
+      "question_ur": "لُوپ کے ذریعے کتنی مرتبہ لفظ \"PAKISTAN\" پرنٹ ہو گا for (int a = 0 ; a <= 3 ; a++) { printf \"PAKISTAN\"; }",
+      "options": {
+        "A": "5",
+        "B": "4",
+        "C": "3",
+        "D": "1"
+      },
+      "options_ur": {
+        "A": "5",
+        "B": "4",
+        "C": "3",
+        "D": "1"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-036"
+    },
+    {
+      "id": 37,
+      "category": "pastpapers",
+      "question_en": "How many times the word \"PAKISTAN\" will be printed through the loop for (int x=0 ; x<10 ; x++){ printf(\"PAKISTAN\"); }:",
+      "question_ur": "لُوپ کے ذریعے کتنی مرتبہ لفظ \"PAKISTAN\" پرنٹ ہو گا for (int x=0 ; x<10 ; x++){ printf (\"PAKISTAN\"); }",
+      "options": {
+        "A": "10",
+        "B": "1",
+        "C": "9",
+        "D": "0"
+      },
+      "options_ur": {
+        "A": "10",
+        "B": "1",
+        "C": "9",
+        "D": "0"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-037"
+    },
+    {
+      "id": 38,
+      "category": "pastpapers",
+      "question_en": "Each run of a loop is called:",
+      "question_ur": "لُوپ کا ہر بار چلنا کہلاتا ہے:",
+      "options": {
+        "A": "Cycle",
+        "B": "Iteration",
+        "C": "Duration",
+        "D": "Test"
+      },
+      "options_ur": {
+        "A": "سائیکل",
+        "B": "تکرار",
+        "C": "مدت",
+        "D": "ٹیسٹ"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-038"
+    },
+    {
+      "id": 39,
+      "category": "pastpapers",
+      "question_en": "Loop within a loop is called ......:",
+      "question_ur": "ایک لُوپ کے اندر لُوپ کو کہتے ہیں:",
+      "options": {
+        "A": "For loop",
+        "B": "While loop",
+        "C": "do while loop",
+        "D": "Nested loop"
+      },
+      "options_ur": {
+        "A": "For لُوپ",
+        "B": "While لُوپ",
+        "C": "do while لُوپ",
+        "D": "نیسٹڈ لُوپ"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-039"
+    }
+  ],
+  "shortQuestions": [
+    {
+      "id": 1,
+      "category": "Exercise",
+      "question_en": "Define data structure.",
+      "question_ur": "ڈیٹا سٹرکچر کی تعریف کریں۔",
+      "contentType": "short",
+      "itemCode": "SHORT-001"
+    },
+    {
+      "id": 2,
+      "category": "Exercise",
+      "question_en": "Define array.",
+      "question_ur": "ارے کی تعریف کریں۔",
+      "contentType": "short",
+      "itemCode": "SHORT-002"
+    },
+    {
+      "id": 3,
+      "category": "Exercise",
+      "question_en": "Define array initialization.",
+      "question_ur": "ارے انیشلائزیشن کی تعریف کریں۔",
+      "contentType": "short",
+      "itemCode": "SHORT-003"
+    },
+    {
+      "id": 4,
+      "category": "Exercise",
+      "question_en": "Define loop structure.",
+      "question_ur": "لُوپ سٹرکچر کی تعریف کریں۔",
+      "contentType": "short",
+      "itemCode": "SHORT-004"
+    },
+    {
+      "id": 5,
+      "category": "Exercise",
+      "question_en": "Define nested loops.",
+      "question_ur": "نیسٹڈ لُوپس کی تعریف کریں۔",
+      "contentType": "short",
+      "itemCode": "SHORT-005"
+    },
+    {
+      "id": 6,
+      "category": "Additional",
+      "question_en": "Write the general syntax of array initialization.",
+      "question_ur": "ارے انیشلائزیشن کا جنرل سنٹیکس تحریر کریں۔",
+      "contentType": "short",
+      "itemCode": "SHORT-006"
+    },
+    {
+      "id": 7,
+      "category": "Additional",
+      "question_en": "What do you know about array elements?",
+      "question_ur": "ارے کے ارکان کے بارے میں آپ کیا جانتے ہیں؟",
+      "contentType": "short",
+      "itemCode": "SHORT-007"
+    },
+    {
+      "id": 8,
+      "category": "Additional",
+      "question_en": "How many types of loop structures are there?",
+      "question_ur": "لُوپ سٹرکچرز کی کتنی اقسام ہیں؟",
+      "contentType": "short",
+      "itemCode": "SHORT-008"
+    },
+    {
+      "id": 9,
+      "category": "Additional",
+      "question_en": "Write general syntax of loop.",
+      "question_ur": "لُوپ کا جنرل سنٹیکس تحریر کریں۔",
+      "contentType": "short",
+      "itemCode": "SHORT-009"
+    },
+    {
+      "id": 10,
+      "category": "Additional",
+      "question_en": "Draw a flowchart to show the purpose of loop.",
+      "question_ur": "لُوپ کا مقصد ظاہر کرنے کے لیے فلوچارٹ بنائیں۔",
+      "contentType": "short",
+      "itemCode": "SHORT-010"
+    },
+    {
+      "id": 11,
+      "category": "Additional",
+      "question_en": "What can we observe from the flowchart of loop structure? Write any two points.",
+      "question_ur": "ہم لُوپ سٹرکچر کے فلوچارٹ سے کیا مشاہدہ کر سکتے ہیں؟ کوئی سے دو پوائنٹس تحریر کریں۔",
+      "contentType": "short",
+      "itemCode": "SHORT-011"
+    },
+    {
+      "id": 12,
+      "category": "Additional",
+      "question_en": "Write any program to show the purpose of for loop.",
+      "question_ur": "for لُوپ کے مقصد کو ظاہر کرنے کے لیے کوئی پروگرام تحریر کریں۔",
+      "contentType": "short",
+      "itemCode": "SHORT-012"
+    },
+    {
+      "id": 13,
+      "category": "Additional",
+      "question_en": "Write a program that displays the value from 1 - 10 on the computer screen.",
+      "question_ur": "ایک پروگرام تحریر کریں جو کمپیوٹر سکرین پر10-1 تک کی ویلیوز دکھائے۔",
+      "contentType": "short",
+      "itemCode": "SHORT-013"
+    },
+    {
+      "id": 14,
+      "category": "Additional",
+      "question_en": "Write a program that displays the table of 2.",
+      "question_ur": "ایک پروگرام تحریر کریں جو 2 کا پہاڑا ظاہر کرے۔",
+      "contentType": "short",
+      "itemCode": "SHORT-014"
+    },
+    {
+      "id": 15,
+      "category": "Additional",
+      "question_en": "Define iteration.",
+      "question_ur": "اِٹریشن کی تعریف کریں۔",
+      "contentType": "short",
+      "itemCode": "SHORT-015"
+    },
+    {
+      "id": 16,
+      "category": "Additional",
+      "question_en": "Write general syntax of nested loop.",
+      "question_ur": "نیسٹڈ لُوپ کا جنرل سنٹیکس تحریر کریں۔",
+      "contentType": "short",
+      "itemCode": "SHORT-016"
+    },
+    {
+      "id": 17,
+      "category": "Additional",
+      "question_en": "When do we use nested loop?",
+      "question_ur": "ہم نیسٹڈ لُوپ کب استعمال کرتے ہیں؟",
+      "contentType": "short",
+      "itemCode": "SHORT-017"
+    },
+    {
+      "id": 18,
+      "category": "Additional",
+      "question_en": "Write any program to show the purpose of nested loop.",
+      "question_ur": "نیسٹڈ لُوپ کا مقصد ظاہر کرنے کے لیے ایک پروگرام تحریر کریں۔",
+      "contentType": "short",
+      "itemCode": "SHORT-018"
+    },
+    {
+      "id": 19,
+      "category": "Additional",
+      "question_en": "Write any program to show the purpose of writing values in arrays using loops.",
+      "question_ur": "لُوپ کو استعمال کرتے ہوئے ارے میں ویلیوز لکھنے کے لیے کوئی پروگرام تحریر کریں۔",
+      "contentType": "short",
+      "itemCode": "SHORT-019"
+    },
+    {
+      "id": 20,
+      "category": "Additional",
+      "question_en": "Write a program that assigns first 5 multiples of 23 to an array of size 5.",
+      "question_ur": "ایک پروگرام تحریر کریں جو سائز 5 کے ارے کو 23 کے پہلے 5 ملٹی پلز اسائن کرے۔",
+      "contentType": "short",
+      "itemCode": "SHORT-020"
+    },
+    {
+      "id": 21,
+      "category": "Additional",
+      "question_en": "Write any program to show the purpose of reading values from arrays using loops.",
+      "question_ur": "لُوپ کو استعمال کرتے ہوئے ارے سے ویلیوز پڑھنے کے لیے کوئی پروگرام تحریر کریں۔",
+      "contentType": "short",
+      "itemCode": "SHORT-021"
+    },
+    {
+      "id": 22,
+      "category": "Past Papers",
+      "question_en": "Write the general syntax of array initialization.",
+      "question_ur": "ارے انیشلائزیشن کا جنرل سنٹیکس تحریر کریں۔",
+      "contentType": "short",
+      "itemCode": "SHORT-022"
+    },
+    {
+      "id": 23,
+      "category": "Past Papers",
+      "question_en": "How can declare an array in C language?",
+      "question_ur": "ہم C لینگوئج میں ایک ارے کو کیسے ڈکلیئر کر سکتے ہیں؟",
+      "contentType": "short",
+      "itemCode": "SHORT-023"
+    },
+    {
+      "id": 24,
+      "category": "Past Papers",
+      "question_en": "Write the name of parts of an array declaration.",
+      "question_ur": "ارے ڈکلیریشن کے حصوں کے نام لکھیں۔",
+      "contentType": "short",
+      "itemCode": "SHORT-024"
+    },
+    {
+      "id": 25,
+      "category": "Past Papers",
+      "question_en": "What is meant by array size?",
+      "question_ur": "ارے سائز سے کیا مراد ہے؟",
+      "contentType": "short",
+      "itemCode": "SHORT-025"
+    },
+    {
+      "id": 26,
+      "category": "Past Papers",
+      "question_en": "Define array initialization and give example.",
+      "question_ur": "ارے انیشلائیشن کی تعریف کریں اور مثال دیں۔",
+      "contentType": "short",
+      "itemCode": "SHORT-026"
+    },
+    {
+      "id": 27,
+      "category": "Past Papers",
+      "question_en": "Declare an array which initialize height of five people.",
+      "question_ur": "ایک ارے ڈکلیئر کریں جو پانچ لوگوں کی اُونچائی انیشلائز کرے۔",
+      "contentType": "short",
+      "itemCode": "SHORT-027"
+    },
+    {
+      "id": 28,
+      "category": "Past Papers",
+      "question_en": "Write the example of the declaration of a float type array that holds marks of ten students.",
+      "question_ur": "ایک فلوئٹ قسم کی ارے ڈکلیریشن کی مثال تحریر کریں جس میں دس طلبا کے نمبرز ہوں۔",
+      "contentType": "short",
+      "itemCode": "SHORT-028"
+    },
+    {
+      "id": 29,
+      "category": "Past Papers",
+      "question_en": "Declare an array of float type to store marks of 40 students.",
+      "question_ur": "40 طلبا کے نمبر محفوظ کرنے کے لیے فلوئٹ قسم کی ایک ارے ڈکلیئر کریں۔",
+      "contentType": "short",
+      "itemCode": "SHORT-029"
+    },
+    {
+      "id": 30,
+      "category": "Past Papers",
+      "question_en": "Write the output of the given code. int g[4]={100,200,300,400}; printf(\"%d\",g[0]);",
+      "question_ur": "دیے گئے کوڈ کا آؤٹ پُٹ تحریر کریں۔ int g[4]={100,200,300,400}; printf(\"%d\",g[0]);",
+      "contentType": "short",
+      "itemCode": "SHORT-030"
+    },
+    {
+      "id": 31,
+      "category": "Past Papers",
+      "question_en": "How is an array element accessed?",
+      "question_ur": "ایک ارے ایلیمنٹ تک رسائی کیسے حاصل کی جاتی ہے؟",
+      "contentType": "short",
+      "itemCode": "SHORT-031"
+    },
+    {
+      "id": 32,
+      "category": "Past Papers",
+      "question_en": "How we can use variables as array indexes? Give example.",
+      "question_ur": "ہم کیسے متغیرات کو ارے انڈیکسز کے طور پر استعمال کر سکتے ہیں؟ مثال دیں۔",
+      "contentType": "short",
+      "itemCode": "SHORT-032"
+    },
+    {
+      "id": 33,
+      "category": "Past Papers",
+      "question_en": "How many types of loop structures are in C language?",
+      "question_ur": "C لینگوئج میں لُوپ سٹرکچرز کی کتنی اقسام ہیں؟",
+      "contentType": "short",
+      "itemCode": "SHORT-033"
+    },
+    {
+      "id": 34,
+      "category": "Past Papers",
+      "question_en": "What is the use of loop structure? Give an example.",
+      "question_ur": "لُوپ سٹرکچر کا استعمال کیا ہے؟ ایک مثال دیں۔",
+      "contentType": "short",
+      "itemCode": "SHORT-034"
+    },
+    {
+      "id": 35,
+      "category": "Past Papers",
+      "question_en": "Write the name of any two loops which use in C?",
+      "question_ur": "C میں استعمال ہونے والے کوئی سے دو لُوپس کے نام تحریر کریں۔",
+      "contentType": "short",
+      "itemCode": "SHORT-035"
+    },
+    {
+      "id": 36,
+      "category": "Past Papers",
+      "question_en": "Write the general structure of loops.",
+      "question_ur": "لُوپس کا جنرل سٹرکچر تحریر کریں۔",
+      "contentType": "short",
+      "itemCode": "SHORT-036"
+    },
+    {
+      "id": 37,
+      "category": "Past Papers",
+      "question_en": "Describe the structure of for loop.",
+      "question_ur": "for لُوپ کا سٹرکچر بیان کریں۔",
+      "contentType": "short",
+      "itemCode": "SHORT-037"
+    },
+    {
+      "id": 38,
+      "category": "Past Papers",
+      "question_en": "Write the syntax of array declaration.",
+      "question_ur": "ارے کو ڈکلیئر کرنے کا سینٹیکس لکھیے۔",
+      "contentType": "short",
+      "itemCode": "SHORT-038"
+    },
+    {
+      "id": 39,
+      "category": "Past Papers",
+      "question_en": "What is array?",
+      "question_ur": "ارے کیا ہوتی ہے؟",
+      "contentType": "short",
+      "itemCode": "SHORT-039"
+    },
+    {
+      "id": 40,
+      "category": "Past Papers",
+      "question_en": "Differentiate between array declaration and array initialization.",
+      "question_ur": "ارے ڈیکلیریشن اور ارے انیشیلائریشن میں فرق بیان کریں۔",
+      "contentType": "short",
+      "itemCode": "SHORT-040"
+    },
+    {
+      "id": 41,
+      "category": "Past Papers",
+      "question_en": "Define data structure.",
+      "question_ur": "ڈیٹا اسٹرکچر کی تعریف کریں۔",
+      "contentType": "short",
+      "itemCode": "SHORT-041"
+    },
+    {
+      "id": 42,
+      "category": "Past Papers",
+      "question_en": "What is meant by \"Array initialization\"?",
+      "question_ur": "ارے انیشیلائزیشن سے کیا مراد ہے؟",
+      "contentType": "short",
+      "itemCode": "SHORT-042"
+    },
+    {
+      "id": 43,
+      "category": "Past Papers",
+      "question_en": "Declare an array which initialize height of five people.",
+      "question_ur": "ایک ارے ڈکلیئر کریں جو پانچ لوگوں کی قامت انیشیلائز کرے۔",
+      "contentType": "short",
+      "itemCode": "SHORT-043"
+    },
+    {
+      "id": 44,
+      "category": "Past Papers",
+      "question_en": "Write the example of the declaration of a float type array that holds marks of forty students.",
+      "question_ur": "40 طلبہ کے نمبرز رکھنے کے لیے فلوٹ ٹائپ ارے کی مثال ڈکلیئر کریں۔",
+      "contentType": "short",
+      "itemCode": "SHORT-044"
+    },
+    {
+      "id": 45,
+      "category": "Past Papers",
+      "question_en": "Declare an array of float type to store marks of five students.",
+      "question_ur": "پانچ طلبہ کے نمبرز رکھنے کے لیے فلوٹ ٹائپ ارے کی ڈکلیریشن کی مثال لکھیں۔",
+      "contentType": "short",
+      "itemCode": "SHORT-045"
+    },
+    {
+      "id": 46,
+      "category": "Past Papers",
+      "question_en": "Declare an array of char type of 5 students.",
+      "question_ur": "5 طلبہ کی char ٹائپ کی ارے ڈکلیئر کریں۔",
+      "contentType": "short",
+      "itemCode": "SHORT-046"
+    },
+    {
+      "id": 47,
+      "category": "Past Papers",
+      "question_en": "How does an array differ from simple variable?",
+      "question_ur": "ارے عام متغیر سے کیسے مختلف ہے؟",
+      "contentType": "short",
+      "itemCode": "SHORT-047"
+    },
+    {
+      "id": 48,
+      "category": "Past Papers",
+      "question_en": "Write the example of the declaration of a float type array that holds marks of ten students.",
+      "question_ur": "دس طلبہ کے نمبرز رکھنے کے لیے فلوٹ ٹائپ ارے کی ڈکلیریشن کی مثال لکھیے۔",
+      "contentType": "short",
+      "itemCode": "SHORT-048"
+    },
+    {
+      "id": 49,
+      "category": "Past Papers",
+      "question_en": "What do you know about the index of an array?",
+      "question_ur": "آپ ارے کے انڈیکس کے بارے میں کیا جانتے ہیں؟",
+      "contentType": "short",
+      "itemCode": "SHORT-049"
+    },
+    {
+      "id": 50,
+      "category": "Past Papers",
+      "question_en": "Declare an array with 3 elements.",
+      "question_ur": "ایک ارے ڈکلیئر کریں جو کہ 3 ایلیمنٹس پر مشتمل ہو۔",
+      "contentType": "short",
+      "itemCode": "SHORT-050"
+    },
+    {
+      "id": 51,
+      "category": "Past Papers",
+      "question_en": "Write one use of an array.",
+      "question_ur": "ارے کا ایک استعمال بیان کریں۔",
+      "contentType": "short",
+      "itemCode": "SHORT-051"
+    },
+    {
+      "id": 52,
+      "category": "Past Papers",
+      "question_en": "Write the use of \"for\" loop.",
+      "question_ur": "for لوپ کا استعمال تحریر کریں۔",
+      "contentType": "short",
+      "itemCode": "SHORT-052"
+    },
+    {
+      "id": 53,
+      "category": "Past Papers",
+      "question_en": "What is meant by loop structure?",
+      "question_ur": "لوپ اسٹرکچر سے کیا مراد ہے؟",
+      "contentType": "short",
+      "itemCode": "SHORT-053"
+    },
+    {
+      "id": 54,
+      "category": "Past Papers",
+      "question_en": "Write down the output of the code. for (int a = 1; a <=3; a++) { printf(\"pakistan\"); }",
+      "question_ur": "کوڈ کی آؤٹ پٹ تحریرکریں۔ for (int a = 1; a <=3; a++) { printf(\"pakistan\"); }",
+      "contentType": "short",
+      "itemCode": "SHORT-054"
+    },
+    {
+      "id": 55,
+      "category": "Past Papers",
+      "question_en": "How many types of loops are there in C language? Write down their names.",
+      "question_ur": "سی لینگوئج میں کتنی اقسام کی لوپس ہیں؟ اُن کے نام تحریر کریں۔",
+      "contentType": "short",
+      "itemCode": "SHORT-055"
+    },
+    {
+      "id": 56,
+      "category": "Past Papers",
+      "question_en": "How is loop used to write values in array?",
+      "question_ur": "ارے میں قیمتیں لکھنے کے لیے لوپ کیسے استعمال کی جاتی ہے؟",
+      "contentType": "short",
+      "itemCode": "SHORT-056"
+    },
+    {
+      "id": 57,
+      "category": "Past Papers",
+      "question_en": "What do you mean by an iteration in a loop?",
+      "question_ur": "لوپ کی آئٹریشن سے کیا مراد ہے؟",
+      "contentType": "short",
+      "itemCode": "SHORT-057"
+    },
+    {
+      "id": 58,
+      "category": "Past Papers",
+      "question_en": "What is the output of following code? int S=0; for (int a =1;a<5; a++) { S=S+a; printf(\"Sun=%d\",S); }",
+      "question_ur": "درج ذیل کوڈ کی آؤٹ پٹ کیا ہے؟ int S=0; for (int a =1;a<5; a++) { S=S+a; printf (\"Sun=%d\",S); }",
+      "contentType": "short",
+      "itemCode": "SHORT-058"
+    },
+    {
+      "id": 59,
+      "category": "Past Papers",
+      "question_en": "Identify the errors of this code: for (int i = 1; i<5;i ++) { printf (\"pakistan\") }",
+      "question_ur": "اس کوڈ میں غلطیوں کی نشاندہی کریں۔ for (int i = 1; i<5;i ++) { printf (\"pakistan\") }",
+      "contentType": "short",
+      "itemCode": "SHORT-059"
+    },
+    {
+      "id": 60,
+      "category": "Past Papers",
+      "question_en": "Define nested loop.",
+      "question_ur": "نیسٹڈ لوپ کی تعریف کریں۔",
+      "contentType": "short",
+      "itemCode": "SHORT-060"
+    },
+    {
+      "id": 61,
+      "category": "Past Papers",
+      "question_en": "Define loop.",
+      "question_ur": "لوپ کی تعریف کریں۔",
+      "contentType": "short",
+      "itemCode": "SHORT-061"
+    },
+    {
+      "id": 62,
+      "category": "Past Papers",
+      "question_en": "Write output of the following code: for(int i=0;i<2;i++) { printf (\"Pakistan \" ); }",
+      "question_ur": "درج ذیل کوڈ کی آؤٹ پٹ لکھیں۔ for(int i=0;i<2;i++) { printf (\"Pakistan \" ); }",
+      "contentType": "short",
+      "itemCode": "SHORT-062"
+    },
+    {
+      "id": 63,
+      "category": "Past Papers",
+      "question_en": "Identify the errors in this code. for (int x=0; x<5; x++) printf (\"PAKISTAN\")",
+      "question_ur": "اس کوڈ غلطیوں کی نشان دہی کریں۔ for (int x=0; x<5; x++) printf (\"PAKISTAN\")",
+      "contentType": "short",
+      "itemCode": "SHORT-063"
+    },
+    {
+      "id": 64,
+      "category": "Past Papers",
+      "question_en": "Write the output of this code: int x; for (x=0;x<3; x++) { printf (\"*\\n\"); }",
+      "question_ur": "اس کوڈ کی آؤٹ پٹ لکھیں۔ int x; for (x=0;x<3; x++) { printf (\"*\\n\"); }",
+      "contentType": "short",
+      "itemCode": "SHORT-064"
+    },
+    {
+      "id": 65,
+      "category": "Past Papers",
+      "question_en": "Write the output of the following code? for (int n=1; n<3;n++) { printf (\"irfan \" ); }",
+      "question_ur": "درج ذیل کوڈ کی آؤٹ پٹ لکھیے۔ for (int n=1; n<3;n++) { printf (\"irfan \" ); }",
+      "contentType": "short",
+      "itemCode": "SHORT-065"
+    },
+    {
+      "id": 66,
+      "category": "Past Papers",
+      "question_en": "What is the output of the following code? for (int j=2;j<10;j=j+2) { printf (\"%d\",j); }",
+      "question_ur": "درج ذیل کوڈ کی آؤٹ پٹ کیا ہے؟ for (int j=2;j<10;j=j+2) { printf (\"%d\",j); }",
+      "contentType": "short",
+      "itemCode": "SHORT-066"
+    },
+    {
+      "id": 67,
+      "category": "Past Papers",
+      "question_en": "Find out the error from the given statement. for (int a =1,a<10;a++)",
+      "question_ur": "دیے گئے سٹیٹمنٹ میں ایرر تلاش کریں۔ for (int a =1,a<10;a++)",
+      "contentType": "short",
+      "itemCode": "SHORT-067"
+    },
+    {
+      "id": 68,
+      "category": "Past Papers",
+      "question_en": "What is the output of code. int b[]={6,7,8,9,10}; for (int l=0;l<5;l++) { printf (\"%d \", b[1]); }",
+      "question_ur": "اس کوڈ کی آؤٹ پٹ کیا ہوگی؟ int b[]={6,7,8,9,10}; for (int l=0;l<5;l++) { printf (\"%d \", b[1]); }",
+      "contentType": "short",
+      "itemCode": "SHORT-068"
+    },
+    {
+      "id": 69,
+      "category": "Past Papers",
+      "question_en": "What is the output of code? void main () { int i, arr[]={2,3,4,5,6}; for (i=0;i<5;i++){ printf (\"%d \",ar[i]); } }",
+      "question_ur": "اس کوڈ کی آؤٹ پٹ کیا ہوگی؟ void main () { int i, arr[]={2,3,4,5,6}; for (i=0;i<5;i++){ printf (\"%d \",ar[i]); } }",
+      "contentType": "short",
+      "itemCode": "SHORT-069"
+    },
+    {
+      "id": 70,
+      "category": "Past Papers",
+      "question_en": "What is the output of the following? int i; for (i=1;i<5;i++) { printf (\"*\"); }",
+      "question_ur": "درج ذیل کی کیا آؤٹ پٹ ہے؟ int i; for (i=1;i<5;i++) { printf (\"*\"); }",
+      "contentType": "short",
+      "itemCode": "SHORT-070"
+    },
+    {
+      "id": 71,
+      "category": "Past Papers",
+      "question_en": "Write the output of the following code: for (int h=0;h<2;h++) { printf (\"Aslam \" ); }",
+      "question_ur": "درج ذیل کوڈ کی آؤٹ پٹ لکھیے۔ for (int h=0;h<2;h++) { printf (\"Aslam \" ); }",
+      "contentType": "short",
+      "itemCode": "SHORT-071"
+    },
+    {
+      "id": 72,
+      "category": "Past Papers",
+      "question_en": "Draw the Flow Chart of \"for Loop\".",
+      "question_ur": "\"for Loop\" کا فلوچارٹ بنائیں۔",
+      "contentType": "short",
+      "itemCode": "SHORT-072"
+    },
+    {
+      "id": 73,
+      "category": "Past Papers",
+      "question_en": "What will be the output of the following code? for (int i=0;i<3;i++) { printf (\"Pakistan \" ); }",
+      "question_ur": "درج ذیل کوڈ کی آؤٹ پٹ کیا ہوگی؟ for (int i=0;i<3;i++) { printf (\"Pakistan \" ); }",
+      "contentType": "short",
+      "itemCode": "SHORT-073"
+    },
+    {
+      "id": 74,
+      "category": "Past Papers",
+      "question_en": "What is the output of following code? int a=4; if (a % 2 ==0) printf (\"Even\"); else printf (\"OK\");",
+      "question_ur": "درج ذیل کوڈ کی آؤٹ پٹ کیا ہے؟ int a=4; if (a % 2 ==0) printf (\"Even\"); else printf (\"OK\");",
+      "contentType": "short",
+      "itemCode": "SHORT-074"
+    },
+    {
+      "id": 75,
+      "category": "Past Papers",
+      "question_en": "Identify the errors of this code: int a; if (a>40) printf (PASS);",
+      "question_ur": "اس کوڈ میں غلطیوں کی نشان دہی کریں۔ int a; if (a>40) printf (PASS);",
+      "contentType": "short",
+      "itemCode": "SHORT-075"
+    },
+    {
+      "id": 76,
+      "category": "Past Papers",
+      "question_en": "Identify the errors of this code: int a [3 ={2,3,4}",
+      "question_ur": "اس کوڈ میں غلطیوں کی نشان دہی کریں۔ int a [3 ={2,3,4}",
+      "contentType": "short",
+      "itemCode": "SHORT-076"
+    },
+    {
+      "id": 77,
+      "category": "Past Papers",
+      "question_en": "Trace an error of the following code: Void main() { in array[5 }",
+      "question_ur": "مندرجہ ذیل کوڈ میں سے غلطی تلاش کریں۔ Void main() { in array[5 }",
+      "contentType": "short",
+      "itemCode": "SHORT-077"
+    },
+    {
+      "id": 78,
+      "category": "Past Papers",
+      "question_en": "Trace an error from the syntax of an array. array-name [array-size];",
+      "question_ur": "ارے کے سینٹیکس میں غلطی تلاش کریں۔ array-name [array-size];",
+      "contentType": "short",
+      "itemCode": "SHORT-078"
+    },
+    {
+      "id": 79,
+      "category": "Past Papers",
+      "question_en": "Find errors in following code: for (int x =0; x<5;x+) printf (\"World\");",
+      "question_ur": "درج ذیل کوڈ میں سے ایررز تلاش کریں۔ for (int x =0; x<5;x+) printf (\"World\");",
+      "contentType": "short",
+      "itemCode": "SHORT-079"
+    },
+    {
+      "id": 80,
+      "category": "Past Papers",
+      "question_en": "Write output of following code: for (int a=1;a<4;a++) printf(Hello\\n \" );",
+      "question_ur": "درج ذیل کوڈ کی آؤٹ پٹ لکھیے۔ for (int a=1;a<4;a++) printf(Hello\\n \" );",
+      "contentType": "short",
+      "itemCode": "SHORT-080"
+    },
+    {
+      "id": 81,
+      "category": "Past Papers",
+      "question_en": "Write down the name of parts of for loop syntax.",
+      "question_ur": "For لوپ کے ڈھانچے (Syntax) کے حصّوں کے نام لکھیے۔",
+      "contentType": "short",
+      "itemCode": "SHORT-081"
+    },
+    {
+      "id": 82,
+      "category": "Past Papers",
+      "question_en": "Write down the output of the following code segments? int i; for (i=1;i<10;i=i+2) printf (\"i \\n\");",
+      "question_ur": "درج ذیل کوڈ کے حصوں کی آؤٹ پٹ لکھیں۔ int i; for (i=1;i<10;i=i+2) printf (\"i\");",
+      "contentType": "short",
+      "itemCode": "SHORT-082"
+    },
+    {
+      "id": 83,
+      "category": "Past Papers",
+      "question_en": "Write the output of code? for (int i=0;i<3;i++) { printf (\"Pakistan \\n\" ); }",
+      "question_ur": "درج ذیل کوڈ کی آؤٹ پٹ کیا ہوگی؟ for (int i=0;i<3;i++) { printf (\"Pakistan \\n\" ); }",
+      "contentType": "short",
+      "itemCode": "SHORT-083"
+    }
+  ],
+  "longQuestions": [
+    {
+      "id": 1,
+      "category": "Exercise",
+      "question_en": "What is the advantage of initializing an array at the time of declaration?",
+      "question_ur": "ارے کو ڈیکلیئر کرتے وقت انیشلائز کرنے کا کیا فائدہ ہے؟",
+      "contentType": "long",
+      "itemCode": "LONG-001"
+    },
+    {
+      "id": 2,
+      "category": "Exercise",
+      "question_en": "How can you declare an array? Briefly describe the three parts of array declaration.",
+      "question_ur": "آپ ایک ارے کو کیسے ڈکلیئر کر سکتے ہیں؟ ارے ڈکلیریشن کے تین حصے تفصیل سے بیان کریں۔",
+      "contentType": "long",
+      "itemCode": "LONG-002"
+    },
+    {
+      "id": 3,
+      "category": "Exercise",
+      "question_en": "Is loop a data structure? Justify your answer.",
+      "question_ur": "کیا لُوپ ڈیٹا سٹرکچر ہے؟ اپنا جواب بیان کریں۔",
+      "contentType": "long",
+      "itemCode": "LONG-003"
+    },
+    {
+      "id": 4,
+      "category": "Exercise",
+      "question_en": "What is the use of nested loops?",
+      "question_ur": "نیسٹڈ لُوپس کا کیا استعمال ہے؟",
+      "contentType": "long",
+      "itemCode": "LONG-004"
+    },
+    {
+      "id": 5,
+      "category": "Exercise",
+      "question_en": "Describe the structure of a for loop.",
+      "question_ur": "for لُوپ کے سٹرکچر کو بیان کریں۔",
+      "contentType": "long",
+      "itemCode": "LONG-005"
+    },
+    {
+      "id": 6,
+      "category": "Additional",
+      "question_en": "Write a detailed note on an array.",
+      "question_ur": "ارے پر تفصیلی نوٹ تحریر کریں۔",
+      "contentType": "long",
+      "itemCode": "LONG-006"
+    },
+    {
+      "id": 7,
+      "category": "Additional",
+      "question_en": "Write a program that stores the ages of five persons in an array, and then display on screen.",
+      "question_ur": "ایک پروگرام تحریر کریں جو ایک ارے میں پانچ اشخاص کی عمریں سٹور کرے، اور پھر سکرین پر دکھائے۔",
+      "contentType": "long",
+      "itemCode": "LONG-007"
+    },
+    {
+      "id": 8,
+      "category": "Additional",
+      "question_en": "Write a program that takes the marks obtained in 4 subjects as input from the user, calculates the total marks and displays on screen.",
+      "question_ur": "ایک پروگرام تحریر کریں جو یوزر سے اِن پُٹ کے طور پر 4 مضامین کے حاصل کردہ نمبرز لے، ٹوٹل نمبرز کو کیلکولیٹ کرے اور سکرین پر دکھائے۔",
+      "contentType": "long",
+      "itemCode": "LONG-008"
+    },
+    {
+      "id": 9,
+      "category": "Additional",
+      "question_en": "Draw a flowchart to understand the for loop structure and discuss the observations from it.",
+      "question_ur": "for لُوپ سٹرکچر کو سمجھنے کے لیے فلوچارٹ بنائیں اور اس سے مشاہدات کو بیان کریں۔",
+      "contentType": "long",
+      "itemCode": "LONG-009"
+    },
+    {
+      "id": 10,
+      "category": "Additional",
+      "question_en": "Write a program that calculates the factorial of a number input by user.",
+      "question_ur": "ایک پروگرام تحریر کریں جو یوزر کے دیئے گئے نمبر کا فیکٹوریئل کیلکولیٹ کرے۔",
+      "contentType": "long",
+      "itemCode": "LONG-010"
+    },
+    {
+      "id": 11,
+      "category": "Additional",
+      "question_en": "Write a program that counts multiples of a given number lying between two numbers.",
+      "question_ur": "ایک پروگرام تحریر کریں جو دو نمبروں کے درمیان دیئے گئے ایک نمبر کے ملٹی پلز کو گِنے۔",
+      "contentType": "long",
+      "itemCode": "LONG-011"
+    },
+    {
+      "id": 12,
+      "category": "Additional",
+      "question_en": "Write a program to find even number in integers ranging from n1 to n2 (where n1 is greater than n2)",
+      "question_ur": "n1 سے n2 تک کے انٹیجرز میں سے طاق نمبرز معلوم کرنے کا ایک پروگرام تحریر کریں۔",
+      "contentType": "long",
+      "itemCode": "LONG-012"
+    },
+    {
+      "id": 13,
+      "category": "Additional",
+      "question_en": "Write a program to determine whether a given number is prime number or not.",
+      "question_ur": "ایک پروگرام تحریر کریں جو یہ بتائے کہ کیا دیا گیا نمبر مفرد عدد ہے یا نہیں۔",
+      "contentType": "long",
+      "itemCode": "LONG-013"
+    },
+    {
+      "id": 14,
+      "category": "Additional",
+      "question_en": "Write a program to display prime numbers ranging from 2 to 100.",
+      "question_ur": "2 سے 100 تک کی رینج میں مفرد اعداد کو پرنٹ کرنے کا پروگرام تحریر کریں۔",
+      "contentType": "long",
+      "itemCode": "LONG-014"
+    },
+    {
+      "id": 15,
+      "category": "Additional",
+      "question_en": "Briefly describe the use of loops and arrays.",
+      "question_ur": "لُوپس اور اریز کے استعمال کو تفصیل سے بیان کریں۔",
+      "contentType": "long",
+      "itemCode": "LONG-015"
+    },
+    {
+      "id": 16,
+      "category": "Past Papers",
+      "question_en": "Write a program using for loop to print even numbers from 21 to 30.",
+      "question_ur": "for لُوپ کو استعمال کرتے ہوئے 30 - 21 تک جفت اعداد پرنٹ کرنے کا پروگرام تحریر کریں۔",
+      "contentType": "long",
+      "itemCode": "LONG-016"
+    },
+    {
+      "id": 17,
+      "category": "Past Papers",
+      "question_en": "Write a program using for loop to print sum of first 10 natural numbers.",
+      "question_ur": "for لُوپ کو استعمال کرتے ہوئے پہلے 10 قدرتی اعداد کا مجموعہ پرنٹ کرنے کا پروگرام تحریر کریں۔",
+      "contentType": "long",
+      "itemCode": "LONG-017"
+    },
+    {
+      "id": 18,
+      "category": "Past Papers",
+      "question_en": "Write a program using for loop to print even numbers from 2 to 20.",
+      "question_ur": "for لُوپ کو استعمال کرتے ہوئے 2 تا 20 جفت اعداد کو پرنٹ کرنے کا پروگرام تحریر کریں۔",
+      "contentType": "long",
+      "itemCode": "LONG-018"
+    },
+    {
+      "id": 19,
+      "category": "Past Papers",
+      "question_en": "Write a program using FOR loop to print table of any number.",
+      "question_ur": "FOR لُوپ کو استعمال کرتے ہوئے کسی بھی نمبر کا ٹیبل پرنٹ کرنے کا پروگرام تحریر کریں۔",
+      "contentType": "long",
+      "itemCode": "LONG-019"
+    },
+    {
+      "id": 20,
+      "category": "Past Papers",
+      "question_en": "Write down a program to print odd numbers from 1-19 using FOR loop.",
+      "question_ur": "FOR لُوپ کو استعمال کرتے ہوئے 19-1 طاق اعداد کر پرنٹ کرنے کا پروگرام تحریر کریں۔",
+      "contentType": "long",
+      "itemCode": "LONG-020"
+    },
+    {
+      "id": 21,
+      "category": "Past Papers",
+      "question_en": "Write down a program using FOR loop to print \"PUNJAB\" 10 times.",
+      "question_ur": "FOR لُوپ کو استعمال کرتے ہوئے 10 مرتبہ \"PUNJAB\" پرنٹ کرنے کا پروگرام تحریر کریں۔",
+      "contentType": "long",
+      "itemCode": "LONG-021"
+    },
+    {
+      "id": 22,
+      "category": "Past Papers",
+      "question_en": "Write a program using FOR loop which can find out the factorial of any number.",
+      "question_ur": "FOR لُوپ کو استعمال کرتے ہوئے ایک پروگرام تحریر کریں جو کسی نمبر کا فیکٹوریل تلاش کر سکے۔",
+      "contentType": "long",
+      "itemCode": "LONG-022"
+    },
+    {
+      "id": 23,
+      "category": "Past Papers",
+      "question_en": "Write a program to print sum of first ten natural numbers using FOR loop.",
+      "question_ur": "FOR لُوپ کو استعمال کرتے ہوئے ایک پروگرام تحریر کریں جو پہلے دس قدرتی اعداد کا مجموعہ پرنٹ کرے۔",
+      "contentType": "long",
+      "itemCode": "LONG-023"
+    },
+    {
+      "id": 24,
+      "category": "Past Papers",
+      "question_en": "Write a program using FOR loop to print Alphabets from A to Z.",
+      "question_ur": "FOR لُوپ کو استعمال کرتے ہوئے ایک پروگرام تحریر کریں جو A تا Z الفابیٹس پرنٹ کرے۔",
+      "contentType": "long",
+      "itemCode": "LONG-024"
+    },
+    {
+      "id": 25,
+      "category": "Past Papers",
+      "question_en": "Write a program using FOR loop to print counting from 11 to 50.",
+      "question_ur": "FOR لُوپ کو استعمال کرتے ہوئے ایک پروگرام تحریر کریں جو 11 تا 50 کی گنتی کو پرنٹ کرے۔",
+      "contentType": "long",
+      "itemCode": "LONG-025"
+    },
+    {
+      "id": 26,
+      "category": "Past Papers",
+      "question_en": "Write a program using FOR loop to print first five even numbers.",
+      "question_ur": "FOR لُوپ کو استعمال کرتے ہوئے ایک پروگرام تحریر کریں جو پہلے پانچ جفت اعداد کو پرنٹ کرے۔",
+      "contentType": "long",
+      "itemCode": "LONG-026"
+    },
+    {
+      "id": 27,
+      "category": "Past Papers",
+      "question_en": "Write a program in C language to print 1 to 1000 numbers on screen using FOR loop.",
+      "question_ur": "C لینگوئج میں FOR لُوپ کو استعمال کرتے ہوئے ایک پروگرام تحریر کریں جو 1 تا 1000 نمبرز کو سکرین پر پرنٹ کرے۔",
+      "contentType": "long",
+      "itemCode": "LONG-027"
+    },
+    {
+      "id": 28,
+      "category": "Past Papers",
+      "question_en": "Write a program using FOR loop to print counting from 1-10.",
+      "question_ur": "FOR لُوپ کو استعمال کرتے ہوئے ایک پروگرام تحریر کریں جو 10-1 گنتی کو پرنٹ کرے۔",
+      "contentType": "long",
+      "itemCode": "LONG-028"
+    },
+    {
+      "id": 29,
+      "category": "Past Papers",
+      "question_en": "Write a program using FOR loop in C language that prints odd numbers between 5 to 15 on computer screen.",
+      "question_ur": "C لینگوئج میں FOR لُوپ کو استعمال کرتے ہوئے ایک پروگرام تحریر کریں جو 5 تا 15 کے درمیان طاق اعداد کو کمپیوٹر سکرین پر پرنٹ کرے۔",
+      "contentType": "long",
+      "itemCode": "LONG-029"
+    },
+    {
+      "id": 30,
+      "category": "Past Papers",
+      "question_en": "Write a program that print counting from 5-10 using FOR loop.",
+      "question_ur": "FOR لُوپ کو استعمال کرتے ہوئے ایک پروگرام تحریر کریں جو 10-5 گنتی کو پرنٹ کرے۔",
+      "contentType": "long",
+      "itemCode": "LONG-030"
+    },
+    {
+      "id": 31,
+      "category": "Past Papers",
+      "question_en": "Write a program using FOR loop to print first five odd numbers.",
+      "question_ur": "FOR لُوپ کو استعمال کرتے ہوئے ایک پروگرام تحریر کریں جو پہلے پانچ طاق اعداد کو پرنٹ کرے۔",
+      "contentType": "long",
+      "itemCode": "LONG-031"
+    },
+    {
+      "id": 32,
+      "category": "Past Papers",
+      "question_en": "Write a program that print \"Pakistan\" five times on screen.",
+      "question_ur": "سکرین پر پانچ مرتبہ \"Pakistan\" پرنٹ کرنے کے لیے ایک پروگرام تحریر کریں۔",
+      "contentType": "long",
+      "itemCode": "LONG-032"
+    },
+    {
+      "id": 33,
+      "category": "Past Papers",
+      "question_en": "Write a program to print odd numbers using FOR loop.",
+      "question_ur": "FOR لُوپ کو استعمال کرتے ہوئے ایک پروگرام تحریر کریں جو طاق اعداد کو پرنٹ کرے۔",
+      "contentType": "long",
+      "itemCode": "LONG-033"
+    },
+    {
+      "id": 34,
+      "category": "Past Papers",
+      "question_en": "Write a program using FOR loop in C language that print even numbers form 40 to 60 on the computer screen.",
+      "question_ur": "C لینگوئج میں FOR لُوپ کو استعمال کرتے ہوئے ایک پروگرام تحریر کریں جو کمپیوٹر سکرین پر 40 تا 60 کے جفت اعداد پرنٹ کرے۔",
+      "contentType": "long",
+      "itemCode": "LONG-034"
+    },
+    {
+      "id": 35,
+      "category": "Past Papers",
+      "question_en": "Write a detailed note on an array.",
+      "question_ur": "ارے پر تفصیلی نوٹ تحریر کریں۔",
+      "contentType": "long",
+      "itemCode": "LONG-035"
+    },
+    {
+      "id": 36,
+      "category": "Past Papers",
+      "question_en": "Write a program that stores the ages of five persons in an array, and then display on screen.",
+      "question_ur": "ایک پروگرام تحریر کریں جو ایک ارے میں پانچ اشخاص کی عمریں سٹور کرے، اور پھر سکرین پر دکھائے۔",
+      "contentType": "long",
+      "itemCode": "LONG-036"
+    },
+    {
+      "id": 37,
+      "category": "Past Papers",
+      "question_en": "Write a program that takes the marks obtained in 4 subjects as input from the user, calculates the total marks and displays on screen.",
+      "question_ur": "ایک پروگرام تحریر کریں جو یوزر سے اِن پُٹ کے طور پر 4 مضامین کے حاصل کردہ نمبرز لے، ٹوٹل نمبرز کو کیلکولیٹ کرے اور سکرین پر دکھائے۔",
+      "contentType": "long",
+      "itemCode": "LONG-037"
+    },
+    {
+      "id": 38,
+      "category": "Past Papers",
+      "question_en": "Write a program to display the following pattern of \"*\" on the screen. * ** *** **** ***** ******",
+      "question_ur": "\"*\" کا درج ذیل پیٹرن سکرین پر دکھانے کا پروگرام تحریر کریں۔ * ** *** **** ***** ******",
+      "contentType": "long",
+      "itemCode": "LONG-038"
+    },
+    {
+      "id": 39,
+      "category": "Past Papers",
+      "question_en": "Write a program to display the following output. ***** **** *** ** *",
+      "question_ur": "درج ذیل آؤٹ پُٹ ظاہر کرنے کے لیے پروگرام لکھیں۔ ***** **** *** ** *",
+      "contentType": "long",
+      "itemCode": "LONG-039"
+    },
+    {
+      "id": 40,
+      "category": "Past Papers",
+      "question_en": "Write a program that displays the following output. 1 22 333 4444 55555",
+      "question_ur": "ایک پروگرام لکھیں جو درج ذیل آؤٹ پُٹ دکھاۓ۔ 1 22 333 4444 55555",
+      "contentType": "long",
+      "itemCode": "LONG-040"
+    },
+    {
+      "id": 41,
+      "category": "Past Papers",
+      "question_en": "What are loops used in arrays for? Explain with examples.",
+      "question_ur": "اریز میں لوپس کس لیے استعمال ہوتے ہیں؟ مثالوں سے وضاحت کریں۔",
+      "contentType": "long",
+      "itemCode": "LONG-041"
+    },
+    {
+      "id": 42,
+      "category": "Past Papers",
+      "question_en": "Write down a program that assigns first 5 multiples of 23 to an array of size 5.",
+      "question_ur": "ایک پروگرام لکھیں جو سائز5کی ایک ارے میں23کے پہلے 5حاصل ضرب لکھے۔",
+      "contentType": "long",
+      "itemCode": "LONG-042"
+    },
+    {
+      "id": 43,
+      "category": "Past Papers",
+      "question_en": "Write a program that takes the matriculation marks of 30 students of a class and returns their average.",
+      "question_ur": "ایک پروگرام لکھیں جو ایک جماعت کے30طالبہ کے میٹرک کے نمبر اِن پُٹ لے اور ان کی اوسط بتاۓ۔",
+      "contentType": "long",
+      "itemCode": "LONG-043"
+    },
+    {
+      "id": 44,
+      "category": "Past Papers",
+      "question_en": "How can you declare an array? Briefly explain the three parts of an array declaration.",
+      "question_ur": "آپ ارے کو کیسے ڈکلیئر کرسکتے ہیں؟ ارے ڈکلیئریشن کے تین حصوں کی مختصروضاحت کریں۔",
+      "contentType": "long",
+      "itemCode": "LONG-044"
+    },
+    {
+      "id": 45,
+      "category": "Past Papers",
+      "question_en": "What is the benefit of initializing an array at declaration time?",
+      "question_ur": "ایک ارے کو ڈکلیئریشن کے وقت انیشلائز کرنے کا فائدہ کیا ہے؟",
+      "contentType": "long",
+      "itemCode": "LONG-045"
+    },
+    {
+      "id": 46,
+      "category": "Past Papers",
+      "question_en": "What is meant by accessing array elements? Explain with example.",
+      "question_ur": "ارے ایلیمنٹس تک رسائی سے کیا مراد ہے؟ مثال سے وضاحت کریں۔",
+      "contentType": "long",
+      "itemCode": "LONG-046"
+    }
+  ]
+}

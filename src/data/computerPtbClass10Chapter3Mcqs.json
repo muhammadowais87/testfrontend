@@ -1,0 +1,1253 @@
+{
+  "subject": "Computer",
+  "board": "PTB",
+  "class": "10",
+  "chapter": 3,
+  "chapterTitle": "Control Structures",
+  "mcqs": [
+    {
+      "id": 1,
+      "category": "exercise",
+      "question_en": "Conditional logic helps in ..................................",
+      "question_ur": "کنڈیشنل لاجک .................................. میں مدد دیتی ہے۔",
+      "options": {
+        "A": "Decisions",
+        "B": "Iterations",
+        "C": "Traversing",
+        "D": "All"
+      },
+      "options_ur": {
+        "A": "فیصلوں",
+        "B": "تکراروں",
+        "C": "ٹریورسنگ (گزرنا)",
+        "D": "پہلے تینوں"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-001"
+    },
+    {
+      "id": 2,
+      "category": "exercise",
+      "question_en": ".................................. statements describe the sequence in which statements of the program should be executed.",
+      "question_ur": ".................................. سٹیٹمنٹس بتاتی ہیں کہ پروگرام میں سٹیٹمنٹس کس ترتیب سے ایگزیکیوٹ ہوں گی۔",
+      "options": {
+        "A": "Loop",
+        "B": "Conditional",
+        "C": "Control",
+        "D": "All"
+      },
+      "options_ur": {
+        "A": "لُوپ",
+        "B": "مشروط",
+        "C": "کنٹرول",
+        "D": "پہلے تینوں"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-002"
+    },
+    {
+      "id": 3,
+      "category": "exercise",
+      "question_en": "In if statement, what happens if condition is false?",
+      "question_ur": "if سٹیٹمنٹ میں اگر کنڈیشن پوری نہ ہو تو کیا ہوتا ہے؟",
+      "options": {
+        "A": "Program crashes",
+        "B": "Index out of bound error",
+        "C": "Further code executes",
+        "D": "Compiler asks to change condition"
+      },
+      "options_ur": {
+        "A": "پروگرام رُک جاتا ہے",
+        "B": "انڈیکس آؤٹ آف باؤنڈ ایرر آتا ہے",
+        "C": "باقی کوڈ چلنے لگتا ہے",
+        "D": "کمپائلر کنڈیشن بدلنے کا مطالبہ کرتا ہے"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-003"
+    },
+    {
+      "id": 4,
+      "category": "exercise",
+      "question_en": "Which of the following statements will execute? int a=5; if (a<10) a++; else if(a>4) a--;",
+      "question_ur": "ان میں سے کونسی سٹیٹمنٹ چلے گی؟ int a=5; if (a<10) a++; else if(a>4) a--;",
+      "options": {
+        "A": "a++;",
+        "B": "a--;",
+        "C": "Both A & B",
+        "D": "None"
+      },
+      "options_ur": {
+        "A": "a++;",
+        "B": "a--;",
+        "C": "A اور B دونوں",
+        "D": "کوئی نہیں"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-004"
+    },
+    {
+      "id": 5,
+      "category": "exercise",
+      "question_en": "Which of the following is the condition to check a is a factor of c?",
+      "question_ur": "ان میں سے کونسی کنڈیشن یہ بتاتی ہے کہ c ،a کا فیکٹر ہے یا نہیں؟",
+      "options": {
+        "A": "a%c==0",
+        "B": "c%a==0",
+        "C": "a*c==0",
+        "D": "a+c==0"
+      },
+      "options_ur": {
+        "A": "a%c==0",
+        "B": "c%a==0",
+        "C": "a*c==0",
+        "D": "a+c==0"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-005"
+    },
+    {
+      "id": 6,
+      "category": "exercise",
+      "question_en": "A condition can be any .................................. expression.",
+      "question_ur": "ایک کنڈیشن کوئی بھی .................................. ایکسپریشن ہو سکتی ہے۔",
+      "options": {
+        "A": "Arithmetic",
+        "B": "Relational",
+        "C": "Logical",
+        "D": "Arithmetic, relational or logical"
+      },
+      "options_ur": {
+        "A": "ارتھمیٹک",
+        "B": "ریلیشنل",
+        "C": "لاجیکل",
+        "D": "ارتھمیٹک اور ریلیشنل یا لاجل"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-006"
+    },
+    {
+      "id": 7,
+      "category": "exercise",
+      "question_en": "An if statement inside another if statement is called .................................. structure.",
+      "question_ur": "اگر if سٹیٹمنٹ کے اندر ایک اور if سٹیٹمنٹ ہو تو یہ سٹرکچر .................................. کہلاتا ہے۔",
+      "options": {
+        "A": "Nested",
+        "B": "boxed",
+        "C": "repeated",
+        "D": "decomposed"
+      },
+      "options_ur": {
+        "A": "نیسٹڈ",
+        "B": "بوکسڈ",
+        "C": "ریپیٹڈ",
+        "D": "ڈیکمپوزر"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-007"
+    },
+    {
+      "id": 8,
+      "category": "exercise",
+      "question_en": "A set of multiple instructions enclosed in braces is called a ..................................",
+      "question_ur": "قوسین میں بند ایک سے زیادہ ہدایات کا سیٹ .................................. کہلاتا ہے۔",
+      "options": {
+        "A": "box",
+        "B": "list",
+        "C": "block",
+        "D": "job"
+      },
+      "options_ur": {
+        "A": "بوکس",
+        "B": "لسٹ",
+        "C": "بلاک",
+        "D": "جوب"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-008"
+    },
+    {
+      "id": 9,
+      "category": "additional",
+      "question_en": "How many types of control statements are there in C language?",
+      "question_ur": "C میں کنٹرول سٹیٹمنٹ کی کتنی اقسام ہیں؟",
+      "options": {
+        "A": "1",
+        "B": "2",
+        "C": "3",
+        "D": "4"
+      },
+      "options_ur": {
+        "A": "1",
+        "B": "2",
+        "C": "3",
+        "D": "4"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-009"
+    },
+    {
+      "id": 10,
+      "category": "additional",
+      "question_en": "Control statement type(s) is/are ..................................",
+      "question_ur": "کنٹرول سٹیٹمنٹ کی قسم ہے ..................................",
+      "options": {
+        "A": "Sequential",
+        "B": "Selection",
+        "C": "Repetition",
+        "D": "All of these"
+      },
+      "options_ur": {
+        "A": "ترتیب",
+        "B": "سلیکشن",
+        "C": "دہرانا",
+        "D": "یہ تمام"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-010"
+    },
+    {
+      "id": 11,
+      "category": "additional",
+      "question_en": "Sometimes, If the condition is not true then we perform some other task. This is called ..................................",
+      "question_ur": "بعض اوقات، اگر شرط (کنڈیشن) درست نہ ہو تو، تب ہم کوئی دوسرا کام سر انجام دیتے ہیں۔ اسے .................................. کہتے ہیں۔",
+      "options": {
+        "A": "Conditional logic",
+        "B": "Condtion",
+        "C": "Expression",
+        "D": "Variable"
+      },
+      "options_ur": {
+        "A": "مشروط لاجک",
+        "B": "شرط",
+        "C": "مساوات",
+        "D": "متغیر"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-011"
+    },
+    {
+      "id": 12,
+      "category": "additional",
+      "question_en": ".................................. control is the default control structure in C language.",
+      "question_ur": "C میں پہلے سے موجود کنٹرول سٹرکچر .................................. کنٹرول ہے۔",
+      "options": {
+        "A": "Repetition",
+        "B": "Selection",
+        "C": "Sequential",
+        "D": "All of these"
+      },
+      "options_ur": {
+        "A": "دہرانا",
+        "B": "سلیکشن",
+        "C": "ترتیب",
+        "D": "یہ تمام"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-012"
+    },
+    {
+      "id": 13,
+      "category": "additional",
+      "question_en": "According to the .................................. control, all the statements are executed in the given sequence.",
+      "question_ur": ".................................. کنٹرول کے مطابق، تمام سٹیٹمنٹس دی گئی ترتیب میں ایگزیکیوٹ ہوتی ہیں۔",
+      "options": {
+        "A": "Sequential",
+        "B": "Selection",
+        "C": "Repetition",
+        "D": "All of these"
+      },
+      "options_ur": {
+        "A": "ترتیب",
+        "B": "سلیکشن",
+        "C": "دہرانا",
+        "D": "یہ تمام"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-013"
+    },
+    {
+      "id": 14,
+      "category": "additional",
+      "question_en": "The statement which help us to decide which statements should be executed next, are called .................................. statements.",
+      "question_ur": "وہ سٹیٹمنٹ جو ہمیں فیصلہ کرنے میں مدد دیتی ہے کہ بعد میں کونسی سٹیٹمنٹ ایگزیکیوٹ ہونی چاہیے، .................................. سٹیٹمنٹ کہلاتی ہے۔",
+      "options": {
+        "A": "Sequential",
+        "B": "Selection",
+        "C": "Repetition",
+        "D": "All of these"
+      },
+      "options_ur": {
+        "A": "ترتیب",
+        "B": "سلیکشن",
+        "C": "دہرانا",
+        "D": "یہ تمام"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-014"
+    },
+    {
+      "id": 15,
+      "category": "additional",
+      "question_en": "How many type of selection statements are there?",
+      "question_ur": "سلیکشن سٹیٹمنٹس کی کتنی اقسام ہیں؟",
+      "options": {
+        "A": "1",
+        "B": "2",
+        "C": "3",
+        "D": "4"
+      },
+      "options_ur": {
+        "A": "1",
+        "B": "2",
+        "C": "3",
+        "D": "4"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-015"
+    },
+    {
+      "id": 16,
+      "category": "additional",
+      "question_en": "Type(s) of selection statements is/are ..................................",
+      "question_ur": "سلیکشن سٹیٹمنٹ کی قسم/اقسام ہیں:",
+      "options": {
+        "A": "If statement",
+        "B": "If-else statement",
+        "C": "Both A & B",
+        "D": "None of these"
+      },
+      "options_ur": {
+        "A": "if سٹیٹمنٹ",
+        "B": "if-else سٹیٹمنٹ",
+        "C": "A اور B دونوں",
+        "D": "ان میں سے کوئی نہیں"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-016"
+    },
+    {
+      "id": 17,
+      "category": "additional",
+      "question_en": "C language provides .................................. statement in which we specify a condition, and associate a code to it.",
+      "question_ur": "C لینگوئج .................................. سٹیٹمنٹ مہیا کرتی ہے جس میں ہم ایک شرط مخصوص کرتے ہیں، اور اسے ایک کوڈ جوڑ دیتے ہیں۔",
+      "options": {
+        "A": "If",
+        "B": "If-else",
+        "C": "goto",
+        "D": "scanf"
+      },
+      "options_ur": {
+        "A": "If",
+        "B": "If-else",
+        "C": "goto",
+        "D": "scanf"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-017"
+    },
+    {
+      "id": 18,
+      "category": "additional",
+      "question_en": "Any expression that has a non-zero value, calculates to ..................................",
+      "question_ur": "کوئی مساوات جو نان زیرو ویلیو رکھتی ہو، .................................. کیلکولیٹ کرتی ہے۔",
+      "options": {
+        "A": "True",
+        "B": "False",
+        "C": "Result",
+        "D": "Expression"
+      },
+      "options_ur": {
+        "A": "درست",
+        "B": "غلط",
+        "C": "رزلٹ",
+        "D": "مساوات"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-018"
+    },
+    {
+      "id": 19,
+      "category": "additional",
+      "question_en": "if is a ..................................",
+      "question_ur": "if ایک .................................. ہے۔",
+      "options": {
+        "A": "Variable",
+        "B": "Constant",
+        "C": "Keyword",
+        "D": "None of these"
+      },
+      "options_ur": {
+        "A": "متغیر",
+        "B": "کانسٹنٹ",
+        "C": "کی ورڈ",
+        "D": "ان میں سے کوئی نہیں"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-019"
+    },
+    {
+      "id": 20,
+      "category": "additional",
+      "question_en": "To associate more than one statements to an if statement, then need to be enclosed inside a .................................. block.",
+      "question_ur": "ایک if سٹیٹمنٹ کے ساتھ ایک سے زیادہ سٹیٹمنٹس کو جوڑنے کے لیے، ایک .................................. بلاک کے اندر بند کرنے کے ضرورت ہو گی۔",
+      "options": {
+        "A": "()",
+        "B": "{}",
+        "C": "[]",
+        "D": "Any of these"
+      },
+      "options_ur": {
+        "A": "()",
+        "B": "{}",
+        "C": "[]",
+        "D": "ان میں سے کوئی بھی"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-020"
+    },
+    {
+      "id": 21,
+      "category": "additional",
+      "question_en": "The associated code of if statement is any valid C language ..................................",
+      "question_ur": "if سٹیٹمنٹ کا وابستہ کوڈ C لینگوئج کا کوئی درست .................................. ہے۔",
+      "options": {
+        "A": "Set of variables",
+        "B": "Set of constants",
+        "C": "Set of functions",
+        "D": "Set of statements"
+      },
+      "options_ur": {
+        "A": "متغیرات کا سیٹ",
+        "B": "کانسٹنٹس کا سیٹ",
+        "C": "فنکشنز کا سیٹ",
+        "D": "سٹیٹمنٹس کا سیٹ"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-021"
+    },
+    {
+      "id": 22,
+      "category": "additional",
+      "question_en": "Properly indent the instructions under if statement using ..................................",
+      "question_ur": "مناسب طریقے سے اِنڈینٹ سٹیٹمنٹس if سٹیٹمنٹ استعمال کرتے ہوئے ..................................",
+      "options": {
+        "A": "Spacebar",
+        "B": "Shift",
+        "C": "Tab",
+        "D": "Enter"
+      },
+      "options_ur": {
+        "A": "Spacebar",
+        "B": "Shift",
+        "C": "Tab",
+        "D": "Enter"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-022"
+    },
+    {
+      "id": 23,
+      "category": "additional",
+      "question_en": "Associated code of if statement is executed if the condition is ..................................",
+      "question_ur": "if سٹیٹمنٹ کے ساتھ جڑا کوڈ ایگزیکیوٹ ہوتا ہے اگر شرط .................................. ہو۔",
+      "options": {
+        "A": "False",
+        "B": "True",
+        "C": "Missing",
+        "D": "Blocked"
+      },
+      "options_ur": {
+        "A": "غلط",
+        "B": "درست",
+        "C": "غائب",
+        "D": "بلاک کی ہوئی"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-023"
+    },
+    {
+      "id": 24,
+      "category": "additional",
+      "question_en": "An if statement may not have an associated .................................. statement.",
+      "question_ur": "ہو سکتا ہے کہ ایک if سٹیٹمنٹ کے ساتھ .................................. سٹیٹمنٹ وابستہ نہ ہو۔",
+      "options": {
+        "A": "else",
+        "B": "if",
+        "C": "if-else",
+        "D": "None of these"
+      },
+      "options_ur": {
+        "A": "else",
+        "B": "if",
+        "C": "if-else",
+        "D": "ان میں سے کوئی نہیں"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-024"
+    },
+    {
+      "id": 25,
+      "category": "additional",
+      "question_en": "A set of multiple instructions enclosed in braces is called a ..................................",
+      "question_ur": "بریکٹس میں بند مختلف ہدایات کا سیٹ .................................. کہلاتا ہے۔",
+      "options": {
+        "A": "Set",
+        "B": "Block",
+        "C": "Compound statement",
+        "D": "Both B & C"
+      },
+      "options_ur": {
+        "A": "سیٹ",
+        "B": "بلاک",
+        "C": "کمپاؤنڈ سٹیٹمنٹ",
+        "D": "B اور C دونوں"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-025"
+    },
+    {
+      "id": 26,
+      "category": "additional",
+      "question_en": "Conditional statements within conditional statements are called .................................. structure.",
+      "question_ur": "کنڈیشنل سٹیٹمنٹس میں کنڈیشنل سٹیٹمنٹس .................................. سٹرکچر کہلاتا ہے۔",
+      "options": {
+        "A": "Nested",
+        "B": "Selection",
+        "C": "Nested selection",
+        "D": "Repetition"
+      },
+      "options_ur": {
+        "A": "نیسٹڈ",
+        "B": "سلیکشن",
+        "C": "نیسٹڈ سلیکشن",
+        "D": "دہرانا"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-026"
+    },
+    {
+      "id": 27,
+      "category": "additional",
+      "question_en": "In compound statements, it is common mistake to omit one or two .................................. while typing.",
+      "question_ur": "کمپاؤنڈ سٹیٹمنٹس میں، لکھتے ہوئے ایک یا دو .................................. چھوڑ دینا ایک عام غلطی ہے۔",
+      "options": {
+        "A": "Semi colons",
+        "B": "colons",
+        "C": "Functions",
+        "D": "Braces"
+      },
+      "options_ur": {
+        "A": "سیمی کالنز",
+        "B": "کالنز",
+        "C": "فنکشنز",
+        "D": "بریکٹس"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-027"
+    },
+    {
+      "id": 28,
+      "category": "pastpapers",
+      "question_en": "There are ...... of control statements in C language:",
+      "question_ur": "C لینگوئج میں...... کنٹرول سٹیٹمنٹس ہیں:",
+      "options": {
+        "A": "two",
+        "B": "three",
+        "C": "four",
+        "D": "five"
+      },
+      "options_ur": {
+        "A": "دو",
+        "B": "تین",
+        "C": "چار",
+        "D": "پانچ"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-028"
+    },
+    {
+      "id": 29,
+      "category": "pastpapers",
+      "question_en": "In C-language which is the default control structure:",
+      "question_ur": "C لینگوئج میں ڈیفالٹسٹرکچر کونسا ہے:",
+      "options": {
+        "A": "Sequential control",
+        "B": "Random control",
+        "C": "Conditional control",
+        "D": "All of these"
+      },
+      "options_ur": {
+        "A": "سیکوئینشل کنٹرول",
+        "B": "رینڈم کنٹرول",
+        "C": "کنڈیشنل کنٹرول",
+        "D": "یہ تمام"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-029"
+    },
+    {
+      "id": 30,
+      "category": "pastpapers",
+      "question_en": "Which is a control statement:",
+      "question_ur": "کونسی کنٹرول سٹیٹمنٹ ہے:",
+      "options": {
+        "A": "Relation",
+        "B": "Function",
+        "C": "Selection",
+        "D": "Array"
+      },
+      "options_ur": {
+        "A": "ریلیشن",
+        "B": "فنکشن",
+        "C": "سلیکشن",
+        "D": "ارے"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-030"
+    },
+    {
+      "id": 31,
+      "category": "pastpapers",
+      "question_en": "Which is NOT a type of control statement in C language:",
+      "question_ur": "C لینگوئج میںکونسی کنٹرول سٹیٹمنٹکی قسم نہیں ہے:",
+      "options": {
+        "A": "Sequential control statements",
+        "B": "Selection control statements",
+        "C": "Repetition control statements",
+        "D": "Check statements"
+      },
+      "options_ur": {
+        "A": "سیکوئینشل کنٹرول سٹیٹمنٹس",
+        "B": "سلیکشن کنٹرول سٹیٹمنٹس",
+        "C": "ریپیٹیشن کنٹرول سٹیٹمنٹس",
+        "D": "چیک سٹیٹمنٹس"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-031"
+    },
+    {
+      "id": 32,
+      "category": "pastpapers",
+      "question_en": "Sequential control is the ...... control structure in C-language:",
+      "question_ur": "C لینگوئج میں سیکوئینشل کنٹرول ...... کنٹرول سٹرکچر ہے:",
+      "options": {
+        "A": "Selection",
+        "B": "Repetition",
+        "C": "Relation",
+        "D": "Default"
+      },
+      "options_ur": {
+        "A": "سلیکشن",
+        "B": "ریپیٹیشن",
+        "C": "ریلیشن",
+        "D": "ڈیفالٹ"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-032"
+    },
+    {
+      "id": 33,
+      "category": "pastpapers",
+      "question_en": "Which control structure executes the statement in order:",
+      "question_ur": "کون سا کنٹرول سٹرکچرترتیب سے بیان کو انجام دیتا ہے:",
+      "options": {
+        "A": "Sequential",
+        "B": "Repetition",
+        "C": "Selection",
+        "D": "Relational"
+      },
+      "options_ur": {
+        "A": "سیکوئینشل",
+        "B": "ریپیٹیشن",
+        "C": "سلیکشن",
+        "D": "ریلیشنل"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-033"
+    },
+    {
+      "id": 34,
+      "category": "pastpapers",
+      "question_en": "Which control structure repeats a set of statement for a number of times:",
+      "question_ur": "کون سا کنٹرول سٹرکچر متعدد بار بیان کے سیٹ کو دہراتا ہے:",
+      "options": {
+        "A": "Sequential",
+        "B": "Repetition",
+        "C": "Selection",
+        "D": "Relation"
+      },
+      "options_ur": {
+        "A": "سیکوئینشل",
+        "B": "ریپیٹیشن",
+        "C": "سلیکشن",
+        "D": "ریلیشن"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-034"
+    },
+    {
+      "id": 35,
+      "category": "pastpapers",
+      "question_en": "Which of the following is a selection statements:",
+      "question_ur": "مندرجہ ذیل میں سے سلیکشن سٹیٹمنٹسکونسی ہے:",
+      "options": {
+        "A": "if",
+        "B": "for",
+        "C": "while",
+        "D": "do while"
+      },
+      "options_ur": {
+        "A": "if",
+        "B": "for",
+        "C": "while",
+        "D": "do while"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-035"
+    },
+    {
+      "id": 36,
+      "category": "pastpapers",
+      "question_en": "In if statement, the condition is enclosed within:",
+      "question_ur": "if سٹیٹمنٹ میں، شرط...... میں بند کی جاتی ہے:",
+      "options": {
+        "A": "{ }",
+        "B": "( )",
+        "C": "[ ]",
+        "D": "< >"
+      },
+      "options_ur": {
+        "A": "{ }",
+        "B": "( )",
+        "C": "[ ]",
+        "D": "< >"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-036"
+    },
+    {
+      "id": 37,
+      "category": "pastpapers",
+      "question_en": "Which symbol is used if to enter the condition:",
+      "question_ur": "شرط لکھنے کے لیے if میں کونسی علامت استعمال کی جاتی ہے:",
+      "options": {
+        "A": "[ ]",
+        "B": "\" \"",
+        "C": "{ }",
+        "D": "( )"
+      },
+      "options_ur": {
+        "A": "[ ]",
+        "B": "\" \"",
+        "C": "{ }",
+        "D": "( )"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-037"
+    },
+    {
+      "id": 38,
+      "category": "pastpapers",
+      "question_en": "Which of the following option is used for making two way decisions:",
+      "question_ur": "مندرجہ ذیل میں سے کونسیآپشن دو طرفہ فیصلہ کرنے میںاستعمال ہوتی ہے:",
+      "options": {
+        "A": "for",
+        "B": "if-else",
+        "C": "while",
+        "D": "if"
+      },
+      "options_ur": {
+        "A": "for",
+        "B": "if-else",
+        "C": "while",
+        "D": "if"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-038"
+    },
+    {
+      "id": 39,
+      "category": "pastpapers",
+      "question_en": "A selection statement within another selection statement is called ...... selection structure:",
+      "question_ur": "ایک سلیکشن سٹیٹمنٹکے اندر دوسری سلیکشن سٹیٹمنٹ...... سلیکشن سٹرکچر کہلاتا ہے:",
+      "options": {
+        "A": "Nested",
+        "B": "Dual",
+        "C": "Infinite",
+        "D": "Complex"
+      },
+      "options_ur": {
+        "A": "نیسٹڈ",
+        "B": "دوہرا",
+        "C": "لا محدود",
+        "D": "پیچیدہ"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-039"
+    },
+    {
+      "id": 40,
+      "category": "pastpapers",
+      "question_en": "C programming language also provides ...... to deal with conditions:",
+      "question_ur": "C پروگرامنگ لینگوئجحالات سے نمٹنے کے لیے......بھی فراہم کرتی ہے:",
+      "options": {
+        "A": "Upper case structure",
+        "B": "Lower case structure",
+        "C": "Switch case structure",
+        "D": "All of these"
+      },
+      "options_ur": {
+        "A": "اَپر کیس سٹرکچر",
+        "B": "لَوور کیس سٹرکچر",
+        "C": "سوئچ کیس سٹرکچر",
+        "D": "یہ تمام"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-040"
+    }
+  ],
+  "shortQuestions": [
+    {
+      "id": 1,
+      "category": "Exercise",
+      "question_en": "Define control statements.",
+      "question_ur": "کنٹرول سٹیٹمنٹس کی تعریف کریں۔",
+      "contentType": "short",
+      "itemCode": "SHORT-001"
+    },
+    {
+      "id": 2,
+      "category": "Exercise",
+      "question_en": "Define selection statements.",
+      "question_ur": "سلیکشن سٹیٹمنٹس کی تعریف کریں۔",
+      "contentType": "short",
+      "itemCode": "SHORT-002"
+    },
+    {
+      "id": 3,
+      "category": "Exercise",
+      "question_en": "Define sequential control.",
+      "question_ur": "ترتیب کنٹرول کی تعریف کریں۔",
+      "contentType": "short",
+      "itemCode": "SHORT-003"
+    },
+    {
+      "id": 4,
+      "category": "Exercise",
+      "question_en": "Define condition.",
+      "question_ur": "شرط (کنڈیشن) کی تعریف کریں۔",
+      "contentType": "short",
+      "itemCode": "SHORT-004"
+    },
+    {
+      "id": 5,
+      "category": "Exercise",
+      "question_en": "Define nested selection structures.",
+      "question_ur": "نیسٹڈ سلیکشن سٹرکچرز کی تعریف کریں۔",
+      "contentType": "short",
+      "itemCode": "SHORT-005"
+    },
+    {
+      "id": 6,
+      "category": "Additional",
+      "question_en": "Define conditional logic.",
+      "question_ur": "کنڈیشنل لاجک کی تعریف کریں۔",
+      "contentType": "short",
+      "itemCode": "SHORT-006"
+    },
+    {
+      "id": 7,
+      "category": "Additional",
+      "question_en": "How many types of control statements are there in C?",
+      "question_ur": "C میں کنٹرول سٹیٹمنٹس کی کتنی اقسام ہیں؟",
+      "contentType": "short",
+      "itemCode": "SHORT-007"
+    },
+    {
+      "id": 8,
+      "category": "Additional",
+      "question_en": "How many types of selection statements area there in C?",
+      "question_ur": "C میں سلیکشن سٹیٹمنٹس کی کتنی اقسام ہیں؟",
+      "contentType": "short",
+      "itemCode": "SHORT-008"
+    },
+    {
+      "id": 9,
+      "category": "Additional",
+      "question_en": "What is the purpose of if statement?",
+      "question_ur": "if سٹیٹمنٹ کا مقصد کیا ہے؟",
+      "contentType": "short",
+      "itemCode": "SHORT-009"
+    },
+    {
+      "id": 10,
+      "category": "Additional",
+      "question_en": "Write general syntax of if statement.",
+      "question_ur": "if سٹیٹمنٹ کا جنرل سنٹیکس تحریر کریں۔",
+      "contentType": "short",
+      "itemCode": "SHORT-010"
+    },
+    {
+      "id": 11,
+      "category": "Additional",
+      "question_en": "Define associated code.",
+      "question_ur": "وابستہ کوڈ کی تعریف کریں۔",
+      "contentType": "short",
+      "itemCode": "SHORT-011"
+    },
+    {
+      "id": 12,
+      "category": "Additional",
+      "question_en": "Draw a flowchart to show the basic flow of an if statement.",
+      "question_ur": "if سٹیٹمنٹ کے بنیادی فلو کو دکھانے کے لیے ایک فلوچارٹ بنائیں۔",
+      "contentType": "short",
+      "itemCode": "SHORT-012"
+    },
+    {
+      "id": 13,
+      "category": "Additional",
+      "question_en": "Write any program to show the purpose of if statement.",
+      "question_ur": "if سٹیٹمنٹ کا مقصد دکھانے کے لیے کوئی پروگرام تحریر کریں۔",
+      "contentType": "short",
+      "itemCode": "SHORT-013"
+    },
+    {
+      "id": 14,
+      "category": "Additional",
+      "question_en": "Write a program that takes the age of a person as an input and display \"Teenager\" if the age lies between 13 and 19.",
+      "question_ur": "ایک پروگرام تحریر کریں جو ایک شخص کی عمر کا اِن پُٹ لے اور اگر عمر 13 اور 19 سال کے درمیان ہو تو \"Teenager\" ظاہر کرے۔",
+      "contentType": "short",
+      "itemCode": "SHORT-014"
+    },
+    {
+      "id": 15,
+      "category": "Additional",
+      "question_en": "Write a program that takes year as input and display \"Leap Year\" if the input year is leap year. Leap years are divisible by 4.",
+      "question_ur": "ایک پروگرام تحریر کریں جو سال کو بطور اِن پُٹ لے اور اگر اِن پُٹ والا سال لیپ کا سال ہوا تو \"Leap Year\" ظاہر کرے۔ لیپ کا سال 4 پر تقسیم ہوتا ہے۔",
+      "contentType": "short",
+      "itemCode": "SHORT-015"
+    },
+    {
+      "id": 16,
+      "category": "Additional",
+      "question_en": "What is the purpose of if-else statement?",
+      "question_ur": "if-else سٹیٹمنٹ کا مقصد کیا ہے؟",
+      "contentType": "short",
+      "itemCode": "SHORT-016"
+    },
+    {
+      "id": 17,
+      "category": "Additional",
+      "question_en": "Write general syntax of if-else statement.",
+      "question_ur": "if-else سیٹمنٹ کا جنرل سنٹیکس تحریر کریں۔",
+      "contentType": "short",
+      "itemCode": "SHORT-017"
+    },
+    {
+      "id": 18,
+      "category": "Additional",
+      "question_en": "Draw a flowchart to show the structure of if-else statement.",
+      "question_ur": "if-else سٹیٹمنٹ کے سٹرکچر کو دکھانے کے لیے ایک فلوچارٹ بنائیں۔",
+      "contentType": "short",
+      "itemCode": "SHORT-018"
+    },
+    {
+      "id": 19,
+      "category": "Additional",
+      "question_en": "Write any program to show the purpose of if-else statement.",
+      "question_ur": "if-else سٹیٹمنٹ کا مقصد ظاہر کرنے کے لیے کوئی پروگرام تحریر کریں۔",
+      "contentType": "short",
+      "itemCode": "SHORT-019"
+    },
+    {
+      "id": 20,
+      "category": "Additional",
+      "question_en": "Define compound statement.",
+      "question_ur": "کمپاؤنڈ سٹیٹمنٹ کی تعریف کریں۔",
+      "contentType": "short",
+      "itemCode": "SHORT-020"
+    },
+    {
+      "id": 21,
+      "category": "Additional",
+      "question_en": "Write the general syntax of nested selection structure.",
+      "question_ur": "نیسٹڈ سلیکشن سٹرکچر کا جنرل سنٹیکس تحریر کریں۔",
+      "contentType": "short",
+      "itemCode": "SHORT-021"
+    },
+    {
+      "id": 22,
+      "category": "Additional",
+      "question_en": "What do you know about switch-case structure?",
+      "question_ur": null,
+      "contentType": "short",
+      "itemCode": "SHORT-022"
+    },
+    {
+      "id": 23,
+      "category": "Past Papers",
+      "question_en": "How many type of control statements in C language?",
+      "question_ur": "C لینگوئج میں کنٹرول سٹیٹمنٹس کی کتنی اقسام ہیں؟",
+      "contentType": "short",
+      "itemCode": "SHORT-023"
+    },
+    {
+      "id": 24,
+      "category": "Past Papers",
+      "question_en": "What is sequential statements?",
+      "question_ur": "سیکوئینشل سٹیٹمنٹس کیا ہیں؟",
+      "contentType": "short",
+      "itemCode": "SHORT-024"
+    },
+    {
+      "id": 25,
+      "category": "Past Papers",
+      "question_en": "Draw a flowchart to show the basic flow of an if statement.",
+      "question_ur": "if سٹیٹمنٹ کے بنیادی فلو کو دکھانے کے لیے ایک فلوچارٹ بنائیں۔",
+      "contentType": "short",
+      "itemCode": "SHORT-025"
+    },
+    {
+      "id": 26,
+      "category": "Past Papers",
+      "question_en": "Draw a flowchart to show the structure of if-else statement.",
+      "question_ur": "if-else سٹیٹمنٹ کے سٹرکچر کو دکھانے کے لیے ایک فلوچارٹ بنائیں۔",
+      "contentType": "short",
+      "itemCode": "SHORT-026"
+    },
+    {
+      "id": 27,
+      "category": "Past Papers",
+      "question_en": "What is switch-case structure?",
+      "question_ur": "switch-case سٹرکچر کیا ہے؟",
+      "contentType": "short",
+      "itemCode": "SHORT-027"
+    },
+    {
+      "id": 28,
+      "category": "Past Papers",
+      "question_en": "How many types of selection statements?",
+      "question_ur": "سلیکشن سٹیٹمنٹس کے کتنی اقسام ہیں؟",
+      "contentType": "short",
+      "itemCode": "SHORT-028"
+    },
+    {
+      "id": 29,
+      "category": "Past Papers",
+      "question_en": "What is if statement?",
+      "question_ur": "if سٹیٹمنٹ کیا ہے؟",
+      "contentType": "short",
+      "itemCode": "SHORT-029"
+    },
+    {
+      "id": 30,
+      "category": "Past Papers",
+      "question_en": "What is the structure of if statement in C language?",
+      "question_ur": "C لینگوئج میں if سٹیٹمنٹ کا سٹرکچر کیا ہے؟",
+      "contentType": "short",
+      "itemCode": "SHORT-030"
+    },
+    {
+      "id": 31,
+      "category": "Past Papers",
+      "question_en": "What is condition in if statement structure?",
+      "question_ur": "if سٹیٹمنٹ سٹرکچر میں شرط کیا ہے؟",
+      "contentType": "short",
+      "itemCode": "SHORT-031"
+    },
+    {
+      "id": 32,
+      "category": "Past Papers",
+      "question_en": "Draw a flow chart to show the basic flow of an if statement.",
+      "question_ur": "if سٹیٹمنٹ کے بنیادی فلو کو ظاہر کرنے کے لیے فلوچارٹ بنائیں۔",
+      "contentType": "short",
+      "itemCode": "SHORT-032"
+    },
+    {
+      "id": 33,
+      "category": "Past Papers",
+      "question_en": "What is the use of if-else statement?",
+      "question_ur": "if-else سٹیٹمنٹ کا کیا استعمال ہے؟",
+      "contentType": "short",
+      "itemCode": "SHORT-033"
+    },
+    {
+      "id": 34,
+      "category": "Past Papers",
+      "question_en": "Describe general structure of the if-else statement.",
+      "question_ur": "if-else سٹیٹمنٹ کا جنرل سٹرکچر بیان کریں۔",
+      "contentType": "short",
+      "itemCode": "SHORT-034"
+    },
+    {
+      "id": 35,
+      "category": "Past Papers",
+      "question_en": "Define block or compound statement.",
+      "question_ur": "بلاک یا کمپاؤنڈ سٹیٹمنٹ کی تعریف کریں۔",
+      "contentType": "short",
+      "itemCode": "SHORT-035"
+    },
+    {
+      "id": 36,
+      "category": "Past Papers",
+      "question_en": "What is the output of the following?\nvoid main ()\n\n{\n\nint a = 7;\n\nif(a%2 = = 0)\n\nprintf(\"Even\");\n\nprintf(\"OK\");\n\n}",
+      "question_ur": "درج ذیل کا آؤٹ پٹ کیا ہے؟\nvoid main ()\n\n{\n\nint a = 7;\n\nif(a%2 = = 0)\n\nprintf(\"Even\");\n\nprintf(\"OK\");\n\n}",
+      "contentType": "short",
+      "itemCode": "SHORT-036"
+    },
+    {
+      "id": 37,
+      "category": "Past Papers",
+      "question_en": "What is the output of the following?\nvoid main ()\n\n{\n\nint a = 7;\n\nif(a%2 = = 0)\n\n   printf(\"Even\");\n\n   printf(\"OK\");\n\n}",
+      "question_ur": "درج ذیل کا آؤٹ پٹ کیا ہے؟\nvoid main ()\n\n{\n\nint a = 7;\n\nif(a%2 = = 0)\n\n   printf(\"Even\");\n\n   printf(\"OK\");\n\n}",
+      "contentType": "short",
+      "itemCode": "SHORT-037"
+    },
+    {
+      "id": 38,
+      "category": "Past Papers",
+      "question_en": "What is the output of the following?\nint n;\nfor (n=5;n>=1;--)\n\nprintf(\"%d\",n);",
+      "question_ur": "درج ذیل کا آؤٹ پٹ کیا ہے؟\nint n;\nfor (n=5;n>=1;--)\n\nprintf(\"%d\",n);",
+      "contentType": "short",
+      "itemCode": "SHORT-038"
+    },
+    {
+      "id": 39,
+      "category": "Past Papers",
+      "question_en": "What is the output of the following?\nint a = 3, b=5;\na=a+b;\n\nif (a>8 && b<8)\n\nb=a+b;\n\nprintf(\"a=%d,b=%d\", a,b);",
+      "question_ur": "درج ذیل کا آؤٹ پٹ کیا ہے؟\nint a = 3, b=5;\na=a+b;\n\nif (a>8 && b<8)\n\nb=a+b;\n\nprintf(\"a=%d,b=%d\", a,b);",
+      "contentType": "short",
+      "itemCode": "SHORT-039"
+    },
+    {
+      "id": 40,
+      "category": "Past Papers",
+      "question_en": "Find the errors.\nint age = 20;\nif(age>18);\n\nprintf(\"Elder\");",
+      "question_ur": "ایررز تلاش کریں۔\n;int age = 20\n;if(age>18)\n\n;printf(\"Elder\")",
+      "contentType": "short",
+      "itemCode": "SHORT-040"
+    },
+    {
+      "id": 41,
+      "category": "Past Papers",
+      "question_en": "What is the structure of nested selection?",
+      "question_ur": "نیسٹڈ سلیکشن کے سٹرکچر سے کیا مراد ہے؟",
+      "contentType": "short",
+      "itemCode": "SHORT-041"
+    },
+    {
+      "id": 42,
+      "category": "Past Papers",
+      "question_en": "What is common mistake in compound statement?",
+      "question_ur": "کمپاؤنڈ سٹیٹمنٹ میں عام غلطی کونسی ہے؟",
+      "contentType": "short",
+      "itemCode": "SHORT-042"
+    },
+    {
+      "id": 43,
+      "category": "Past Papers",
+      "question_en": "What is Switch-Case structure?",
+      "question_ur": "سوئچ کیس سٹرکچر کیا ہے؟",
+      "contentType": "short",
+      "itemCode": "SHORT-043"
+    },
+    {
+      "id": 44,
+      "category": "Past Papers",
+      "question_en": "Identify errors in the following code segment. Assume that variables have already been declared.\nif (a < b && b < c)\nsum = a + b + c;\n\nelse\n\nmultiply = a * b * c;",
+      "question_ur": "درج ذیل کوڈ سیگمنٹ میں غلطیوں کی نشاندہی کریں۔ فرض کریں کہ متغیرات کا پہلے ہی اعلان کیا جا چکا ہے۔\nif (a < b && b < c)\n;sum = a + b + c\n\nelse\n\n;multiply = a * b * c",
+      "contentType": "short",
+      "itemCode": "SHORT-044"
+    }
+  ],
+  "longQuestions": [
+    {
+      "id": 1,
+      "category": "Exercise",
+      "question_en": "Why do we need selection statements?",
+      "question_ur": "ہمیں سلیکشن سٹیٹمنٹس کی ضرورت کیوں ہے؟",
+      "contentType": "long",
+      "itemCode": "LONG-001"
+    },
+    {
+      "id": 2,
+      "category": "Exercise",
+      "question_en": "Differentiate between sequential and selection statements.",
+      "question_ur": "ترتیب اور سلیکشن سٹیٹمنٹس میں فرق بیان کریں۔",
+      "contentType": "long",
+      "itemCode": "LONG-002"
+    },
+    {
+      "id": 3,
+      "category": "Exercise",
+      "question_en": "Differentiate between if statement and if else statement with an example",
+      "question_ur": "if سٹیٹمنٹ اور if-else سٹیٹمنٹ میں فرق ایک مثال کے ساتھ بیان کریں۔",
+      "contentType": "long",
+      "itemCode": "LONG-003"
+    },
+    {
+      "id": 4,
+      "category": "Exercise",
+      "question_en": "What is the use of nested selection structures?",
+      "question_ur": "نیسٹڈ سلیکشن سٹرکچرز کا کیا استعمال ہے؟",
+      "contentType": "long",
+      "itemCode": "LONG-004"
+    },
+    {
+      "id": 5,
+      "category": "Exercise",
+      "question_en": "Write the structure of if statement with brief description.",
+      "question_ur": "if سٹیٹمنٹ کا سٹرکچر تفصیل کے ساتھ تحریر کریں۔",
+      "contentType": "long",
+      "itemCode": "LONG-005"
+    },
+    {
+      "id": 6,
+      "category": "Additional",
+      "question_en": "Write the structure of if-else statement with brief description.",
+      "question_ur": "if-else سٹیٹمنٹ کے سٹرکچر کو تفصیل کے ساتھ تحریر کریں۔",
+      "contentType": "long",
+      "itemCode": "LONG-006"
+    },
+    {
+      "id": 7,
+      "category": "Additional",
+      "question_en": "Write a program that takes a character as input and displays \"DIGIT\" if the character entered by user is a digit between 0 to 9, otherwise displays \"NOT DIGIT\".",
+      "question_ur": "ایک پروگرام تحریر کریں جو اِن پُٹ کے طور پر ایک کریکٹر لے اور اگر یوزر کی طرف سے دیا گیا کریکٹر 0 سے 9 کے درمیان کا ڈیجٹ ہوا تو \"DIGIT\"، ورنہ \"NOT DIGIT\" کا پیغام ظاہر کرے۔",
+      "contentType": "long",
+      "itemCode": "LONG-007"
+    },
+    {
+      "id": 8,
+      "category": "Additional",
+      "question_en": "Write a program that takes the value of body temperature of a person as an input and displays \"You have fever.\" If body temperature is more than 98.6 otherwise displays \"You don’t have fever.\"",
+      "question_ur": "ایک پروگرام تحریر کریں جو اِن پُٹ کے طور پر ایک شخص کے باڈی ٹمپریچر کی ویلیو لے اور اگر باڈی ٹمپریچر 98.6 سے زیادہ ہو تو \"You have fever\"، وگرنہ \"You don't have fever\" کا پیغام ظاہر کرے۔",
+      "contentType": "long",
+      "itemCode": "LONG-008"
+    },
+    {
+      "id": 9,
+      "category": "Additional",
+      "question_en": "Write a program that displays larger one out of the three given numbers.",
+      "question_ur": "ایک پروگرام تحریر کریں جو دئیے گئے تین نمبروں میں سے ایک بڑے نمبر کو ظاہر کرے۔",
+      "contentType": "long",
+      "itemCode": "LONG-009"
+    },
+    {
+      "id": 10,
+      "category": "Additional",
+      "question_en": "Write a program that calculates the volume of cube, cylinder or sphere, according to the choice of user.",
+      "question_ur": "ایک پروگرام تحریر کریں جو مکعب، سیلنڈر یا سفیئر کے والیوم کو یوزر کے انتخاب کے مطابق کیلکولیٹ کرے۔",
+      "contentType": "long",
+      "itemCode": "LONG-010"
+    },
+    {
+      "id": 11,
+      "category": "Additional",
+      "question_en": "Write a program that finds and displays area of a triangle, parallelogram, rhombus of trapezium according to the choice of user.",
+      "question_ur": "ایک پروگرام تحریر کریں جو یوزر کے انتخاب کے مطابق ایک مثلث، متوازی الاضلاع یا ٹریپیزیم کے رومبس کا رقبہ معلوم کرے اور ظاہر کرے۔",
+      "contentType": "long",
+      "itemCode": "LONG-011"
+    }
+  ]
+}

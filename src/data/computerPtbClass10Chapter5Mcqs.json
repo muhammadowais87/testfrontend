@@ -1,0 +1,1393 @@
+{
+  "subject": "Computer",
+  "board": "PTB",
+  "class": "10",
+  "chapter": 5,
+  "chapterTitle": "Functions",
+  "mcqs": [
+    {
+      "id": 1,
+      "category": "exercise",
+      "question_en": "Functions could be built-in or ..................................",
+      "question_ur": "فنکشن بلٹ اِن یا .................................. ہو سکتے ہیں:",
+      "options": {
+        "A": "Admin defined",
+        "B": "Server defined",
+        "C": "User defined",
+        "D": "Both A & C"
+      },
+      "options_ur": {
+        "A": "ایڈمن ڈیفائنڈ",
+        "B": "سرور ڈیفائنڈ",
+        "C": "یوزر ڈیفائنڈ",
+        "D": "دونوں الف اور ج"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-001"
+    },
+    {
+      "id": 2,
+      "category": "exercise",
+      "question_en": "The functions which are available in C standard library are called ..................................",
+      "question_ur": "c۔سٹینڈرڈ لائبریری میں موجود فنکشنز .................................. کہلاتے ہیں:",
+      "options": {
+        "A": "User defined",
+        "B": "Built-in",
+        "C": "Recursive",
+        "D": "Repetitive"
+      },
+      "options_ur": {
+        "A": "یوزر ڈیفائنڈ",
+        "B": "بلٹ اِن",
+        "C": "تکرار پر مبنی",
+        "D": "تکراری"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-002"
+    },
+    {
+      "id": 3,
+      "category": "exercise",
+      "question_en": "The values passed to a function are called ..................................",
+      "question_ur": "فنکشن کو پاس کی گئی قیمتیں .................................. کہلاتی ہیں:",
+      "options": {
+        "A": "Bodies",
+        "B": "Return types",
+        "C": "Arrays",
+        "D": "Arguments"
+      },
+      "options_ur": {
+        "A": "باڈیز",
+        "B": "ریٹرن ٹائپس",
+        "C": "ارے",
+        "D": "آرگیومنٹس"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-003"
+    },
+    {
+      "id": 4,
+      "category": "exercise",
+      "question_en": "char cd() {return 'a'}. in this function \"char\" is ..................................",
+      "question_ur": "char cd() {return 'a'} اس فنکشن میں \"char\" .................................. ہے:",
+      "options": {
+        "A": "Body",
+        "B": "Return type",
+        "C": "Array",
+        "D": "Arguments"
+      },
+      "options_ur": {
+        "A": "باڈی",
+        "B": "ریٹرن ٹائپ",
+        "C": "ارے",
+        "D": "آرگیومنٹس"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-004"
+    },
+    {
+      "id": 5,
+      "category": "exercise",
+      "question_en": "The advantages of using functions are ..................................",
+      "question_ur": "فنکشنز کو استعمال کرنے کے فوائد .................................. ہیں:",
+      "options": {
+        "A": "Readability",
+        "B": "Reusability",
+        "C": "Easy debugging",
+        "D": "All"
+      },
+      "options_ur": {
+        "A": "پڑھے جانے کی صلاحیت",
+        "B": "بار بار استعمال",
+        "C": "ڈی بگنگ میں آسانی",
+        "D": "پہلے تینوں"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-005"
+    },
+    {
+      "id": 6,
+      "category": "exercise",
+      "question_en": "If there are three return statements in the function body, .................................. of them will be executed.",
+      "question_ur": "اگر فنکشن باڈی میں تین ریٹرن سٹیٹمنٹس ہوں تو ان میں سے .................................. چلیں گی:",
+      "options": {
+        "A": "one",
+        "B": "Two",
+        "C": "Three",
+        "D": "First and last"
+      },
+      "options_ur": {
+        "A": "ایک",
+        "B": "دو",
+        "C": "تین",
+        "D": "پہلی اور آخری"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-006"
+    },
+    {
+      "id": 7,
+      "category": "exercise",
+      "question_en": "Readability helps to .................................. the code.",
+      "question_ur": "پڑھے جانے کی صلاحیت (readability) کوڈ کو .................................. کرنے میں مدد دیتی ہے:",
+      "options": {
+        "A": "Understand",
+        "B": "Modify",
+        "C": "Debug",
+        "D": "All"
+      },
+      "options_ur": {
+        "A": "سمجھنے",
+        "B": "تبدیل کرنے",
+        "C": "ڈیبگ کرنے",
+        "D": "پہلے تینوں"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-007"
+    },
+    {
+      "id": 8,
+      "category": "exercise",
+      "question_en": ".................................. means to transfer the control to another function.",
+      "question_ur": ".................................. سے مراد کوڈ ایک اور فنکشن میں ٹرانسفر کرنا ہے:",
+      "options": {
+        "A": "Calling",
+        "B": "Defining",
+        "C": "Re-writing",
+        "D": "Including"
+      },
+      "options_ur": {
+        "A": "کالنگ",
+        "B": "ڈیفائننگ",
+        "C": "ری۔رائٹنگ",
+        "D": "اِنکلیوڈنگ (including)"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-008"
+    },
+    {
+      "id": 9,
+      "category": "additional",
+      "question_en": "Dividing a big problem into multiple smaller parts and then try to solve each part is called ..................................",
+      "question_ur": "ایک بڑے مسئلے کو چند چھوٹے حصوں میں تقسیم کرنا اور تب ہر حصے کو حل کرنا .................................. کہلاتا ہے۔",
+      "options": {
+        "A": "Dividing problem",
+        "B": "Divide and conquer",
+        "C": "Conquer rule",
+        "D": "Solution"
+      },
+      "options_ur": {
+        "A": "مسئلے کو تقسیم کرنا",
+        "B": "تقسیم کرنا اور فتح کرنا",
+        "C": "فتح کا اصول",
+        "D": "حل"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-009"
+    },
+    {
+      "id": 10,
+      "category": "additional",
+      "question_en": ".................................. is a block of statements which performs a particular task.",
+      "question_ur": "..................................، سٹیٹمنٹس کا ایک بلاک ہوتا ہے جو کہ ایک مخصوص کام کر سر انجام دیتا ہے۔",
+      "options": {
+        "A": "A variable",
+        "B": "A constant",
+        "C": "A function",
+        "D": "A loop"
+      },
+      "options_ur": {
+        "A": "ایک متغیر",
+        "B": "ایک کانسٹنٹ",
+        "C": "ایک فنکشن",
+        "D": "ایک لُوپ"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-010"
+    },
+    {
+      "id": 11,
+      "category": "additional",
+      "question_en": "printf is a .................................. that is used to display anything on computer screen.",
+      "question_ur": "printf ایک .................................. ہے جو کہ کمپیوٹر سکرین پر کچھ دیکھنے کے لیے استعمال ہوتا ہے۔",
+      "options": {
+        "A": "Variable",
+        "B": "Constant",
+        "C": "Function",
+        "D": "Array"
+      },
+      "options_ur": {
+        "A": "متغیر",
+        "B": "کانسٹنٹ",
+        "C": "فنکشن",
+        "D": "ارے"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-011"
+    },
+    {
+      "id": 12,
+      "category": "additional",
+      "question_en": "scanf is a .................................. that is used to take input from the user.",
+      "question_ur": "scanf ایک .................................. ہے جو کہ یوزر سے اِن پُٹ لینے کے لیے استعمال کیا جاتا ہے۔",
+      "options": {
+        "A": "Function",
+        "B": "Variable",
+        "C": "Program",
+        "D": "Constant"
+      },
+      "options_ur": {
+        "A": "فنکشن",
+        "B": "متغیر",
+        "C": "پروگرام",
+        "D": "کانسٹنٹ"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-012"
+    },
+    {
+      "id": 13,
+      "category": "additional",
+      "question_en": "Types of functions are ..................................",
+      "question_ur": "فنکشنز کی .................................. اقسام ہیں۔",
+      "options": {
+        "A": "2",
+        "B": "3",
+        "C": "4",
+        "D": "5"
+      },
+      "options_ur": {
+        "A": "2",
+        "B": "3",
+        "C": "4",
+        "D": "5"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-013"
+    },
+    {
+      "id": 14,
+      "category": "additional",
+      "question_en": "Type(s) of function is/are ..................................",
+      "question_ur": ".................................. فنکشن کی اقسام ہیں۔",
+      "options": {
+        "A": "Built-in function",
+        "B": "User defined function",
+        "C": "Both A & B",
+        "D": "Array"
+      },
+      "options_ur": {
+        "A": "بِلٹ۔اِن فنکشن",
+        "B": "یوزر ڈیفائنڈ فنکشن",
+        "C": "A اور B دونوں",
+        "D": "ارے"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-014"
+    },
+    {
+      "id": 15,
+      "category": "additional",
+      "question_en": "The example(s) of built-in function is/are ..................................",
+      "question_ur": ".................................. بِلٹ۔اِن فنکشن کی مثال/مثالیں ہیں۔",
+      "options": {
+        "A": "printf",
+        "B": "Scanf",
+        "C": "Both A & B",
+        "D": "Loop"
+      },
+      "options_ur": {
+        "A": "Print",
+        "B": "Scanf",
+        "C": "A اور B دونوں",
+        "D": "لُوپ"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-015"
+    },
+    {
+      "id": 16,
+      "category": "additional",
+      "question_en": "The functions which are defined by a programmer are called .................................. functions.",
+      "question_ur": "پروگرامر کی طرف سے ڈیفائن کیے گئے فنکشنز .................................. فنکشنز کہلاتے ہیں۔",
+      "options": {
+        "A": "Built-in",
+        "B": "User defined",
+        "C": "Both A & B",
+        "D": "None of these"
+      },
+      "options_ur": {
+        "A": "بِلٹ۔اِن",
+        "B": "یوزر ڈیفائنڈ",
+        "C": "A اور B دونوں",
+        "D": "ان میں سے کوئی نہیں"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-016"
+    },
+    {
+      "id": 17,
+      "category": "additional",
+      "question_en": "Advantage(s) of functions ..................................",
+      "question_ur": "فنکشنز کے فوائد ہیں:",
+      "options": {
+        "A": "Reusability",
+        "B": "Separation of tasks",
+        "C": "Readability",
+        "D": "All of these"
+      },
+      "options_ur": {
+        "A": "ری یوز ابیلیٹی",
+        "B": "سیپریشن آف ٹاسکس",
+        "C": "رِیڈ ابیلیٹی",
+        "D": "یہ تمام"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-017"
+    },
+    {
+      "id": 18,
+      "category": "additional",
+      "question_en": "A .................................. is a block of statements that gets some inputs and provides some outputs.",
+      "question_ur": "ایک ..................................، سٹیٹمنٹ کا ایک بلاک ہوتا ہے جو کچھ اِن پُٹس لیتا ہے اور کچھ آؤٹ پُٹس مہیا کرتا ہے۔",
+      "options": {
+        "A": "Function",
+        "B": "Statement",
+        "C": "Return value",
+        "D": "Function signature"
+      },
+      "options_ur": {
+        "A": "فنکشن",
+        "B": "سٹیٹمنٹ",
+        "C": "ریٹرن ویلیو",
+        "D": "فنکشن سِگنیچر"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-018"
+    },
+    {
+      "id": 19,
+      "category": "additional",
+      "question_en": "Inputs of a function are called .................................. of the function.",
+      "question_ur": "فنکشن کا اِن پُٹ فنکشن کا .................................. کہلاتا ہے۔",
+      "options": {
+        "A": "Function",
+        "B": "Parameters",
+        "C": "Return value",
+        "D": "Function signature"
+      },
+      "options_ur": {
+        "A": "فنکشن",
+        "B": "پیرامیٹرز",
+        "C": "ریٹرن ویلیو",
+        "D": "فنکشن سِگنیچر"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-019"
+    },
+    {
+      "id": 20,
+      "category": "additional",
+      "question_en": "Output of the function is called its ..................................",
+      "question_ur": "فنکشن کا آؤٹ پُٹ اسکا .................................. کہلاتا ہے۔",
+      "options": {
+        "A": "Function",
+        "B": "Parameters",
+        "C": "Return value",
+        "D": "Function signature"
+      },
+      "options_ur": {
+        "A": "فنکشن",
+        "B": "پیرامیٹرز",
+        "C": "ریٹرن ویلیو",
+        "D": "فنکشن سِگنیچر"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-020"
+    },
+    {
+      "id": 21,
+      "category": "additional",
+      "question_en": "A function can have multiple parameters, but it cannot return more than .................................. values.",
+      "question_ur": "ایک فنکشن کے کئی پیرامیٹرز ہو سکتے ہیں، مگر یہ .................................. سے زیادہ ویلیوز ریٹرن نہیں کر سکتا۔",
+      "options": {
+        "A": "1",
+        "B": "2",
+        "C": "3",
+        "D": "4"
+      },
+      "options_ur": {
+        "A": "1",
+        "B": "2",
+        "C": "3",
+        "D": "4"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-021"
+    },
+    {
+      "id": 22,
+      "category": "additional",
+      "question_en": ".................................. is used to defined the inputs and output of a function.",
+      "question_ur": "ایک فنکشن کے اِن پُٹ اور آؤٹ پُٹ کو ڈیفائن کرنے کے لیے .................................. استعمال کیا جاتا ہے۔",
+      "options": {
+        "A": "Parameters",
+        "B": "Return value",
+        "C": "Function",
+        "D": "Function signature"
+      },
+      "options_ur": {
+        "A": "پیرامیٹرز",
+        "B": "ریٹرن ویلیو",
+        "C": "فنکشن",
+        "D": "فنکشن سِگنیچر"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-022"
+    },
+    {
+      "id": 23,
+      "category": "additional",
+      "question_en": "A function that takes an integer as input and returns its square ..................................",
+      "question_ur": "ایک فنکشن جو کہ اِن پُٹ کے طور پر انٹیجر لیتا ہے اور .................................. اسکا مربع ریٹرن کرتا ہے۔",
+      "options": {
+        "A": "int square (int);",
+        "B": "float area (float);",
+        "C": "int isVowel (char);",
+        "D": "int largest (int, int, int);"
+      },
+      "options_ur": {
+        "A": "int square (int);",
+        "B": "float area (float);",
+        "C": "int isVowel (char);",
+        "D": "int largest (int, int, int);"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-023"
+    },
+    {
+      "id": 24,
+      "category": "additional",
+      "question_en": "A function that takes radius of a circle as input and returns the area of circle ..................................",
+      "question_ur": "ایک فنکشن جو جہ ایک دائرے کا رداس اِن پُٹ کے طور پر لیتا ہے اور .................................. دائرے کا رقبہ ریٹرن کرتا ہے۔",
+      "options": {
+        "A": "int square (int);",
+        "B": "int isVowel (char);",
+        "C": "float area (float);",
+        "D": "int largest (int, int, int);"
+      },
+      "options_ur": {
+        "A": "int square (int);",
+        "B": "int isVowel (char);",
+        "C": "float area (float);",
+        "D": "int largest (int, int, int);"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-024"
+    },
+    {
+      "id": 25,
+      "category": "additional",
+      "question_en": "Body of the function is the set of ..................................",
+      "question_ur": "فنکشن کی باڈی .................................. کا سیٹ ہے۔",
+      "options": {
+        "A": "Functions",
+        "B": "Statements",
+        "C": "Parameters",
+        "D": "All of these"
+      },
+      "options_ur": {
+        "A": "فنکشنز",
+        "B": "سٹیٹمنٹس",
+        "C": "پیرامیٹرز",
+        "D": "یہ تمام"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-025"
+    },
+    {
+      "id": 26,
+      "category": "additional",
+      "question_en": "Just after the function’s signature, the set of statements enclosed inside .................................. form the body of the function.",
+      "question_ur": "فنکشن کے سِگنیچر کے بعد، .................................. میں بند سٹیٹمنٹس کا سیٹ فنکشن کی باڈی بناتا ہے۔",
+      "options": {
+        "A": "()",
+        "B": "{}",
+        "C": "[]",
+        "D": "< >"
+      },
+      "options_ur": {
+        "A": "()",
+        "B": "{}",
+        "C": "[]",
+        "D": "< >"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-026"
+    },
+    {
+      "id": 27,
+      "category": "additional",
+      "question_en": "A function cannot return more than .................................. value(s).",
+      "question_ur": "ایک فنکشن .................................. سے زیادہ ویلیوز ریٹرن نہیں",
+      "options": {
+        "A": "1",
+        "B": "2",
+        "C": "3",
+        "D": "4"
+      },
+      "options_ur": {
+        "A": "1",
+        "B": "2",
+        "C": "3",
+        "D": "4"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-027"
+    },
+    {
+      "id": 28,
+      "category": "additional",
+      "question_en": "There may be .................................. return statement(s) in a function.",
+      "question_ur": "ایک فنکشن میں .................................. ریٹرن سٹیٹمنٹس ہو سکتی ہیں۔",
+      "options": {
+        "A": "1",
+        "B": "2",
+        "C": "3",
+        "D": "Multiple"
+      },
+      "options_ur": {
+        "A": "1",
+        "B": "2",
+        "C": "3",
+        "D": "Multiple"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-028"
+    },
+    {
+      "id": 29,
+      "category": "additional",
+      "question_en": "We can see that the program starts its execution from .................................. function.",
+      "question_ur": "ہم دیکھ سکتے ہیں کہ پروگرام اپنی ایگزیکیوشن .................................. فنکشن سے سٹارٹ کرتا ہے۔",
+      "options": {
+        "A": "void()",
+        "B": "main()",
+        "C": "printf",
+        "D": "scanf"
+      },
+      "options_ur": {
+        "A": "void()",
+        "B": "main()",
+        "C": "printf",
+        "D": "scanf"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-029"
+    },
+    {
+      "id": 30,
+      "category": "additional",
+      "question_en": "The values passed to the function are called ..................................",
+      "question_ur": "فنکشن کو پاس ہونے والی ویلیوز .................................. کہلاتی ہیں۔",
+      "options": {
+        "A": "Statement",
+        "B": "Function",
+        "C": "Return value",
+        "D": "Arguments"
+      },
+      "options_ur": {
+        "A": "سٹیٹمنٹ",
+        "B": "فنکشن",
+        "C": "ریٹرن ویلیو",
+        "D": "آرگیومنٹس"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-030"
+    },
+    {
+      "id": 31,
+      "category": "additional",
+      "question_en": "Variables in the function definition that receive these values are called .................................. of the function.",
+      "question_ur": "فنکشن ڈیفی نیشن میں متغیرات جو یہ ویلیوز وصول کرتے ہیں، فنکشن کے .................................. کہلاتے ہیں۔",
+      "options": {
+        "A": "Parameters",
+        "B": "Statements",
+        "C": "Arguments",
+        "D": "Functions"
+      },
+      "options_ur": {
+        "A": "پیرامیٹرز",
+        "B": "سٹیٹمنٹس",
+        "C": "آرگیومنٹس",
+        "D": "فنکشنز"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-031"
+    },
+    {
+      "id": 32,
+      "category": "additional",
+      "question_en": "It is not necessary to pass the .................................. with same names to the function as the names of the parameters.",
+      "question_ur": "یہ ضروری نہیں ہے کہ .................................. کو اسی ناموں کے ساتھ فنکشن میں منتقل کیا جائے جیسا کہ پیرامیٹرز کے نام ہیں۔",
+      "options": {
+        "A": "Constants",
+        "B": "Functions",
+        "C": "Variables",
+        "D": "Parameters"
+      },
+      "options_ur": {
+        "A": "کانسٹنٹس",
+        "B": "فنکشنز",
+        "C": "متغیرات",
+        "D": "پیرامیٹرز"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-032"
+    },
+    {
+      "id": 33,
+      "category": "pastpapers",
+      "question_en": "A block of statements that performs a particular task is called:",
+      "question_ur": "سٹیٹمنٹس کا ایک بلاک ہے جو ایک خاص کام انجام دیتا ہے:",
+      "options": {
+        "A": "Variable",
+        "B": "Constant",
+        "C": "Function",
+        "D": "Loop"
+      },
+      "options_ur": {
+        "A": "متغیر",
+        "B": "کانسٹینٹ",
+        "C": "فنکشن",
+        "D": "لُوپ"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-033"
+    },
+    {
+      "id": 34,
+      "category": "pastpapers",
+      "question_en": "...... is the block of statement which performs a particular task:",
+      "question_ur": "...... سٹیٹمنٹس کا ایک بلاک ہے جو ایک خاص کام انجام دیتا ہے:",
+      "options": {
+        "A": "Computer",
+        "B": "Program",
+        "C": "Functions",
+        "D": "Parameters"
+      },
+      "options_ur": {
+        "A": "کمپیوٹر",
+        "B": "پروگرام",
+        "C": "فنکشنز",
+        "D": "پیرامیٹرز"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-034"
+    },
+    {
+      "id": 35,
+      "category": "pastpapers",
+      "question_en": "The functions which are available in C standard library are called:",
+      "question_ur": "وہ فنکشنز جو C کی سٹینڈرڈ لائبریری میں موجود ہیں...... کہلاتے ہیں:",
+      "options": {
+        "A": "built-in functions",
+        "B": "custom built function",
+        "C": "common function",
+        "D": "none of these"
+      },
+      "options_ur": {
+        "A": "بلٹ اِن فنکشنز",
+        "B": "سکٹم بلٹ فنکشنز",
+        "C": "عام فنکشنز",
+        "D": "ان میں سے کوئی نہیں"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-035"
+    },
+    {
+      "id": 36,
+      "category": "pastpapers",
+      "question_en": "The functions which are defined by a programmer are called ......:",
+      "question_ur": "وہ فنکشنزجو پروگرامر ڈیفائن کرتا ہے:",
+      "options": {
+        "A": "user-defined functions",
+        "B": "built-in function",
+        "C": "common function",
+        "D": "none of these"
+      },
+      "options_ur": {
+        "A": "یورز ڈیفائنڈ فنکشنز",
+        "B": "بلٹ ان فنکشن",
+        "C": "عام فنکشن",
+        "D": "ان میں سے کوئی نہیں"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-036"
+    },
+    {
+      "id": 37,
+      "category": "pastpapers",
+      "question_en": "The printf and scanf are ...... functions:",
+      "question_ur": "printf اور scanf فنکشنز ہیں:",
+      "options": {
+        "A": "built-in",
+        "B": "artithmetic",
+        "C": "user defined",
+        "D": "custom"
+      },
+      "options_ur": {
+        "A": "بلٹ اِن",
+        "B": "ارتھ میٹک",
+        "C": "یوزر ڈیفائنڈ",
+        "D": "کسٹم"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-037"
+    },
+    {
+      "id": 38,
+      "category": "pastpapers",
+      "question_en": "Inputs of a function are called ...... of the function:",
+      "question_ur": "ایک فنکشن کے اِن پُٹسفنکشن کے ...... کہلاتے ہیں:",
+      "options": {
+        "A": "arguments",
+        "B": "block",
+        "C": "statement",
+        "D": "parameter"
+      },
+      "options_ur": {
+        "A": "آرگیومینٹس",
+        "B": "بلاک",
+        "C": "سٹیٹمنٹ",
+        "D": "پیرامیٹر"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-038"
+    },
+    {
+      "id": 39,
+      "category": "pastpapers",
+      "question_en": "...... is used to define the inputs and output of a function:",
+      "question_ur": "...... فنکشن کے اِن پُٹساور آؤٹ پُٹ کو ڈیفائن کرنے کے لیے استعمال ہوتا ہے:",
+      "options": {
+        "A": "function signature",
+        "B": "main",
+        "C": "printf",
+        "D": "scanf"
+      },
+      "options_ur": {
+        "A": "function signature",
+        "B": "main",
+        "C": "printf",
+        "D": "scanf"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-039"
+    },
+    {
+      "id": 40,
+      "category": "pastpapers",
+      "question_en": "In void main () \"void\" is ......:",
+      "question_ur": "()void main میں، void ہے:",
+      "options": {
+        "A": "return type",
+        "B": "variable",
+        "C": "constant",
+        "D": "condition"
+      },
+      "options_ur": {
+        "A": "ریٹرن ٹائپ",
+        "B": "ویری ایبل",
+        "C": "کانسٹینٹ",
+        "D": "کنڈیشن"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-040"
+    },
+    {
+      "id": 41,
+      "category": "pastpapers",
+      "question_en": "What is the type of parameter in the function:",
+      "question_ur": "فنکشن میں پیرامیٹر کی قسمکیا ہے:",
+      "options": {
+        "A": "int",
+        "B": "char",
+        "C": "area",
+        "D": "float"
+      },
+      "options_ur": {
+        "A": "int",
+        "B": "char",
+        "C": "area",
+        "D": "float"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-041"
+    },
+    {
+      "id": 42,
+      "category": "pastpapers",
+      "question_en": "A function can return ...... values:",
+      "question_ur": "ایک فنکشن ...... ویلیو ریٹرن کر سکتا ہے:",
+      "options": {
+        "A": "1",
+        "B": "2",
+        "C": "3",
+        "D": "4"
+      },
+      "options_ur": {
+        "A": "1",
+        "B": "2",
+        "C": "3",
+        "D": "4"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-042"
+    },
+    {
+      "id": 43,
+      "category": "pastpapers",
+      "question_en": "A function cannot return more than ...... value(s):",
+      "question_ur": "ایک فنکشن ...... سے زیادہ ویلیوز ریٹرن نہیں:",
+      "options": {
+        "A": "1",
+        "B": "2",
+        "C": "3",
+        "D": "4"
+      },
+      "options_ur": {
+        "A": "1",
+        "B": "2",
+        "C": "3",
+        "D": "4"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-043"
+    },
+    {
+      "id": 44,
+      "category": "pastpapers",
+      "question_en": "The ...... of the function is the data type of the value returned by the function:",
+      "question_ur": "فنکشن کے ذریعہدی گئیویلیوکی ڈیٹا ٹائپ، فنکشن کی ...... ہے:",
+      "options": {
+        "A": "name",
+        "B": "parameters",
+        "C": "arguments",
+        "D": "return type"
+      },
+      "options_ur": {
+        "A": "نام",
+        "B": "پیرامیٹرز",
+        "C": "آرگومینٹ",
+        "D": "ریٹرن ٹائپ"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-044"
+    },
+    {
+      "id": 45,
+      "category": "pastpapers",
+      "question_en": "The keywords used to transfer the control from a function back to the calling functions is:",
+      "question_ur": "کنٹرول کو فنکشن سے واپس کالنگ فنکشنز میں منتقل کرنے کے لیے استعمال ہونے والےکی ورڈزیہ ہیں:",
+      "options": {
+        "A": "return",
+        "B": "switch",
+        "C": "goto",
+        "D": "back"
+      },
+      "options_ur": {
+        "A": "return",
+        "B": "switch",
+        "C": "goto",
+        "D": "back"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-045"
+    },
+    {
+      "id": 46,
+      "category": "pastpapers",
+      "question_en": "A function that does not return anything has return type:",
+      "question_ur": "ایک فنکشن جو کچھ بھی ریٹرن نہیں کرتا، اسکی ریٹرن ٹائپ ہوتی ہے:",
+      "options": {
+        "A": "int",
+        "B": "float",
+        "C": "void",
+        "D": "char"
+      },
+      "options_ur": {
+        "A": "int",
+        "B": "float",
+        "C": "void",
+        "D": "char"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-046"
+    },
+    {
+      "id": 47,
+      "category": "pastpapers",
+      "question_en": "Which of the following are used to receive the values passed to the function as input:",
+      "question_ur": "مندرجہ ذیل میں سے کون سے ان پٹ کے طور پر فنکشن کو بھیجی گئی ویلیو وصول کرنے کے لیے استعمال ہوتے ہیں:",
+      "options": {
+        "A": "constants",
+        "B": "arguments",
+        "C": "parameters",
+        "D": "expressions"
+      },
+      "options_ur": {
+        "A": "کانسٹینٹس",
+        "B": "آرگومینٹس",
+        "C": "پیرامیٹرز",
+        "D": "ایکسپریشنز"
+      },
+      "contentType": "mcq",
+      "itemCode": "MCQ-047"
+    }
+  ],
+  "shortQuestions": [
+    {
+      "id": 1,
+      "category": "Exercise",
+      "question_en": "Define functions.",
+      "question_ur": "فنکشنز کی تعریف کریں۔",
+      "contentType": "short",
+      "itemCode": "SHORT-001"
+    },
+    {
+      "id": 2,
+      "category": "Exercise",
+      "question_en": "Define built-in functions.",
+      "question_ur": "بِلٹ۔اِن فنکشنز کی تعریف کریں۔",
+      "contentType": "short",
+      "itemCode": "SHORT-002"
+    },
+    {
+      "id": 3,
+      "category": "Exercise",
+      "question_en": "Define functions parameters.",
+      "question_ur": "فنکشن پیرامیٹرز کی تعریف کریں۔",
+      "contentType": "short",
+      "itemCode": "SHORT-003"
+    },
+    {
+      "id": 4,
+      "category": "Exercise",
+      "question_en": "Define reusability.",
+      "question_ur": "ری یُوزابیلیٹی کی تعریف کریں۔",
+      "contentType": "short",
+      "itemCode": "SHORT-004"
+    },
+    {
+      "id": 5,
+      "category": "Exercise",
+      "question_en": "Define calling a function.",
+      "question_ur": "کالنگ فنکشن کی تعریف کریں۔",
+      "contentType": "short",
+      "itemCode": "SHORT-005"
+    },
+    {
+      "id": 6,
+      "category": "Exercise",
+      "question_en": "What do you know about the return keyword?",
+      "question_ur": "آپ ریٹرن کی ورڈ کے بارے میں کیا جانتے ہیں؟",
+      "contentType": "short",
+      "itemCode": "SHORT-006"
+    },
+    {
+      "id": 7,
+      "category": "Additional",
+      "question_en": "What is meant by divide and conquer?",
+      "question_ur": "تقسیم کرو اور فتح کرو سے کیا مراد ہے؟",
+      "contentType": "short",
+      "itemCode": "SHORT-007"
+    },
+    {
+      "id": 8,
+      "category": "Additional",
+      "question_en": "How many types of functions are there in C?",
+      "question_ur": "C میں فنکشنز کی کتنی اقسام ہیں؟",
+      "contentType": "short",
+      "itemCode": "SHORT-008"
+    },
+    {
+      "id": 9,
+      "category": "Additional",
+      "question_en": "Define user defined functions.",
+      "question_ur": "یوزر ڈیفائنڈ فنکشنز کی تعریف کریں۔",
+      "contentType": "short",
+      "itemCode": "SHORT-009"
+    },
+    {
+      "id": 10,
+      "category": "Additional",
+      "question_en": "Write advantages of functions. Only names.",
+      "question_ur": "فنکشنز کے فوائد تحریر کریں۔ صرف نام۔",
+      "contentType": "short",
+      "itemCode": "SHORT-010"
+    },
+    {
+      "id": 11,
+      "category": "Additional",
+      "question_en": "Define separation of tasks.",
+      "question_ur": "ٹاسکس کی علیحدگی کی تعریف کریں۔",
+      "contentType": "short",
+      "itemCode": "SHORT-011"
+    },
+    {
+      "id": 12,
+      "category": "Additional",
+      "question_en": "What is meant by handling the complexity of the problem?",
+      "question_ur": "مسئلے کی پچیدگی کو ہینڈل کرنے سے کیا مراد ہے؟",
+      "contentType": "short",
+      "itemCode": "SHORT-012"
+    },
+    {
+      "id": 13,
+      "category": "Additional",
+      "question_en": "Define readability.",
+      "question_ur": "رِیڈ ابیلیٹی کی تعریف کریں۔",
+      "contentType": "short",
+      "itemCode": "SHORT-013"
+    },
+    {
+      "id": 14,
+      "category": "Additional",
+      "question_en": "Define return value.",
+      "question_ur": "ریٹرن ایلیو کی تعریف کریں۔",
+      "contentType": "short",
+      "itemCode": "SHORT-014"
+    },
+    {
+      "id": 15,
+      "category": "Additional",
+      "question_en": "Define function signature.",
+      "question_ur": "فنکشن سِگنیچر کی تعریف کریں۔",
+      "contentType": "short",
+      "itemCode": "SHORT-015"
+    },
+    {
+      "id": 16,
+      "category": "Additional",
+      "question_en": "Write the general structure of function signature.",
+      "question_ur": "فنکشن سِگنیچر کا جنرل سنٹیکس تحریر کریں۔",
+      "contentType": "short",
+      "itemCode": "SHORT-016"
+    },
+    {
+      "id": 17,
+      "category": "Additional",
+      "question_en": "Write any two signatures and the description of these functions.",
+      "question_ur": "کوئی سے دو سِگنیچرز اور ان فنکشنز کی وضاحت تحریر کریں۔",
+      "contentType": "short",
+      "itemCode": "SHORT-017"
+    },
+    {
+      "id": 18,
+      "category": "Additional",
+      "question_en": "Write the general structure of function definition.",
+      "question_ur": "فنکشن ڈیفی نیشن کا جنرل سنٹیکس تحریر کریں۔",
+      "contentType": "short",
+      "itemCode": "SHORT-018"
+    },
+    {
+      "id": 19,
+      "category": "Additional",
+      "question_en": "Define body of the function.",
+      "question_ur": "فنکشن کی باڈی کی تعریف کریں۔",
+      "contentType": "short",
+      "itemCode": "SHORT-019"
+    },
+    {
+      "id": 20,
+      "category": "Additional",
+      "question_en": "What is the purpose of a function showPangram()?",
+      "question_ur": "showPangram() فنکشن کا مقصد کیا ہے؟",
+      "contentType": "short",
+      "itemCode": "SHORT-020"
+    },
+    {
+      "id": 21,
+      "category": "Additional",
+      "question_en": "Write a program to show the purpose of showPangram() function.",
+      "question_ur": "showPangram() فنکشن کا مقصد ظاہر کرنے کے لیے ایک پروگرام تحریر کریں۔",
+      "contentType": "short",
+      "itemCode": "SHORT-021"
+    },
+    {
+      "id": 22,
+      "category": "Additional",
+      "question_en": "Define arguments.",
+      "question_ur": "آرگیومنٹس کی تعریف کریں۔",
+      "contentType": "short",
+      "itemCode": "SHORT-022"
+    },
+    {
+      "id": 23,
+      "category": "Additional",
+      "question_en": "Define parameters.",
+      "question_ur": "پیرامیٹرز کی تعریف کریں۔",
+      "contentType": "short",
+      "itemCode": "SHORT-023"
+    },
+    {
+      "id": 24,
+      "category": "Additional",
+      "question_en": "Differentiate between arguments and parameters.",
+      "question_ur": "آرگیومنٹس اور پیرامیٹرز میں فرق بیان کریں۔",
+      "contentType": "short",
+      "itemCode": "SHORT-024"
+    },
+    {
+      "id": 25,
+      "category": "Past Papers",
+      "question_en": "What is meant by divide and conquer approach?",
+      "question_ur": "تقسیم کرو اور فتح کرو کی حکمتِ عملی سے کیا مراد ہے؟",
+      "contentType": "short",
+      "itemCode": "SHORT-025"
+    },
+    {
+      "id": 26,
+      "category": "Past Papers",
+      "question_en": "How many types of functions are there in C? Write their names.",
+      "question_ur": "C میں فنکشنز کی کتنی اقسام ہیں؟ انکے نام تحریر کریں۔",
+      "contentType": "short",
+      "itemCode": "SHORT-026"
+    },
+    {
+      "id": 27,
+      "category": "Past Papers",
+      "question_en": "Define user defined functions.",
+      "question_ur": "یوزر ڈیفائنڈ فنکشنز کی تعریف کریں-",
+      "contentType": "short",
+      "itemCode": "SHORT-027"
+    },
+    {
+      "id": 28,
+      "category": "Past Papers",
+      "question_en": "What is readability of function?",
+      "question_ur": "فنکشن کی رِیڈ ابیلیٹی کیا ہوتی ہے؟",
+      "contentType": "short",
+      "itemCode": "SHORT-028"
+    },
+    {
+      "id": 29,
+      "category": "Past Papers",
+      "question_en": "What is the general structure of a function signature?",
+      "question_ur": "فنکشن سِگنیچر کا جنرل سٹرکچر کیا ہے؟",
+      "contentType": "short",
+      "itemCode": "SHORT-029"
+    },
+    {
+      "id": 30,
+      "category": "Past Papers",
+      "question_en": "Define function and give example.",
+      "question_ur": "فنکشن کی تعریف کریں اور مثال دیں۔",
+      "contentType": "short",
+      "itemCode": "SHORT-030"
+    },
+    {
+      "id": 31,
+      "category": "Past Papers",
+      "question_en": "What is the use of function?",
+      "question_ur": "فنکشن کا استعمال کیا ہے؟",
+      "contentType": "short",
+      "itemCode": "SHORT-031"
+    },
+    {
+      "id": 32,
+      "category": "Past Papers",
+      "question_en": "What is function body?",
+      "question_ur": "فنکشن باڈی کیا ہے؟",
+      "contentType": "short",
+      "itemCode": "SHORT-032"
+    },
+    {
+      "id": 33,
+      "category": "Past Papers",
+      "question_en": "What is the use of built-in functions?",
+      "question_ur": "بلٹ اِن فنکشنز کا استعمال کیا ہے؟",
+      "contentType": "short",
+      "itemCode": "SHORT-033"
+    },
+    {
+      "id": 34,
+      "category": "Past Papers",
+      "question_en": "Write down advantages of functions.",
+      "question_ur": "فنکشنز کے استعمالات تحریر کریں۔",
+      "contentType": "short",
+      "itemCode": "SHORT-034"
+    },
+    {
+      "id": 35,
+      "category": "Past Papers",
+      "question_en": "What is the advantage of function reusability?",
+      "question_ur": "فنکشن کے دوبارہ استعمال کا فائدہ کیا ہے؟",
+      "contentType": "short",
+      "itemCode": "SHORT-035"
+    },
+    {
+      "id": 36,
+      "category": "Past Papers",
+      "question_en": "What is the use of function signature?",
+      "question_ur": "فنکشن سِگنیچر کا استعمال کیا ہے؟",
+      "contentType": "short",
+      "itemCode": "SHORT-036"
+    },
+    {
+      "id": 37,
+      "category": "Past Papers",
+      "question_en": "What does the return type of a function indicate?",
+      "question_ur": "فنکشن کی ریٹرن ٹائپ کیا ظاہر کرتی ہے؟",
+      "contentType": "short",
+      "itemCode": "SHORT-037"
+    },
+    {
+      "id": 38,
+      "category": "Past Papers",
+      "question_en": "What is the purpose of int isVowel (char);?",
+      "question_ur": ";int isVowel (char) کا کیا مقصد ہے؟",
+      "contentType": "short",
+      "itemCode": "SHORT-038"
+    },
+    {
+      "id": 39,
+      "category": "Past Papers",
+      "question_en": "What is function defining?",
+      "question_ur": "فنکشن کو ڈیفائن کرنا کیا ہے؟",
+      "contentType": "short",
+      "itemCode": "SHORT-039"
+    },
+    {
+      "id": 40,
+      "category": "Past Papers",
+      "question_en": "Write down the general structure of a function definition.",
+      "question_ur": "فنکشن ڈیفینیشن کا جنرل ڈھانچہ تحریر کریں۔",
+      "contentType": "short",
+      "itemCode": "SHORT-040"
+    },
+    {
+      "id": 41,
+      "category": "Past Papers",
+      "question_en": "What is the use of return keyword?",
+      "question_ur": "ریٹرن کی ورڈ کا کیا استعمال ہے؟",
+      "contentType": "short",
+      "itemCode": "SHORT-041"
+    },
+    {
+      "id": 42,
+      "category": "Past Papers",
+      "question_en": "Can there are multiple return statements in a function?",
+      "question_ur": "کیا ایک فنکشن میں کئی ریٹرن سٹیٹمنٹس ہو سکتی ہیں؟",
+      "contentType": "short",
+      "itemCode": "SHORT-042"
+    },
+    {
+      "id": 43,
+      "category": "Past Papers",
+      "question_en": "How the function is called?",
+      "question_ur": "فنکشن کو کیسے کال کیا جاتا ہے؟",
+      "contentType": "short",
+      "itemCode": "SHORT-043"
+    },
+    {
+      "id": 44,
+      "category": "Past Papers",
+      "question_en": "Write the procedure to call a function.",
+      "question_ur": "ایک فنکشن کو کال کرنے کا طریقہ تحریر کریں۔",
+      "contentType": "short",
+      "itemCode": "SHORT-044"
+    },
+    {
+      "id": 45,
+      "category": "Past Papers",
+      "question_en": "Define a function with name of \"product\".",
+      "question_ur": "\"product\" نام کے فنکشن کی تعریف کریں۔",
+      "contentType": "short",
+      "itemCode": "SHORT-045"
+    },
+    {
+      "id": 46,
+      "category": "Past Papers",
+      "question_en": "What is meant by to call a function?",
+      "question_ur": "\"ایک فنکشن کو کال کرنے کے لیے\" سے کیا مراد ہے؟",
+      "contentType": "short",
+      "itemCode": "SHORT-046"
+    },
+    {
+      "id": 47,
+      "category": "Past Papers",
+      "question_en": "Define a function with name of sum which can add 2 numbers.",
+      "question_ur": "sum نام کے فنکشن کی تعریف کریں جو 2 نمبرز کو جمع کر سکتا ہو۔",
+      "contentType": "short",
+      "itemCode": "SHORT-047"
+    },
+    {
+      "id": 48,
+      "category": "Past Papers",
+      "question_en": "What is meant by return statement?",
+      "question_ur": "ریٹرن سٹیٹمنٹ سے کیا مراد ہے؟",
+      "contentType": "short",
+      "itemCode": "SHORT-048"
+    }
+  ],
+  "longQuestions": [
+    {
+      "id": 1,
+      "category": "Exercise",
+      "question_en": "What is the difference between arguments and parameters? Give an example.",
+      "question_ur": "آرگیومنٹس اور پیرامیٹرز میں کیا فرق ہے؟ ایک مثال دیں۔",
+      "contentType": "long",
+      "itemCode": "LONG-001"
+    },
+    {
+      "id": 2,
+      "category": "Exercise",
+      "question_en": "Enlist the parts of a function definition.",
+      "question_ur": "فنکشن ڈیفی نیشن کے حصوں کی لسٹ بنائیں۔",
+      "contentType": "long",
+      "itemCode": "LONG-002"
+    },
+    {
+      "id": 3,
+      "category": "Exercise",
+      "question_en": "Is it necessary to use compatible data types in function definition and function call? Justify your answer with an example.",
+      "question_ur": "کیا فنکشن ڈیفی نیشن اور فنکشن کال میں ڈیٹا ٹائپس کا ہم آہنگ ہونا ضروری ہے؟ اپنے جواب کو ایک مثال سے بیان کریں۔",
+      "contentType": "long",
+      "itemCode": "LONG-003"
+    },
+    {
+      "id": 4,
+      "category": "Exercise",
+      "question_en": "Describe the advantage of using functions.",
+      "question_ur": "فنکشنز کو استعمال کرنے کے فوائد بیان کریں۔",
+      "contentType": "long",
+      "itemCode": "LONG-004"
+    },
+    {
+      "id": 5,
+      "category": "Additional",
+      "question_en": "Write a note on types of functions.",
+      "question_ur": "فنکشنز کی اقسام پر تفصیلی نوٹ تحریر کریں۔",
+      "contentType": "long",
+      "itemCode": "LONG-005"
+    },
+    {
+      "id": 6,
+      "category": "Additional",
+      "question_en": "Write a detailed note on signature of a function.",
+      "question_ur": "سگنیچر آف فنکشن پر تفصیلی نوٹ تحریر کریں۔",
+      "contentType": "long",
+      "itemCode": "LONG-006"
+    },
+    {
+      "id": 7,
+      "category": "Additional",
+      "question_en": "Write a function isPrime() that takes a number as input and returns 1 if the input number is prime, otherwise returns 0. Use this function in main().",
+      "question_ur": "isPrime() کا ایک فنکشن تحریر کریں جو اِن پُٹ کے طور پر ایک نمبر لے اور اگر نمبر مفرد ہوا تو 1 ریٹرن کرے، وگرنہ 0 ریٹرن کرے۔ اس فنکشن کو main() میں استعمال کریں۔",
+      "contentType": "long",
+      "itemCode": "LONG-007"
+    }
+  ]
+}
