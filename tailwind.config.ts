@@ -3,6 +3,33 @@ import type { Config } from "tailwindcss";
 export default {
   darkMode: ["class"],
   content: ["./pages/**/*.{ts,tsx}", "./components/**/*.{ts,tsx}", "./app/**/*.{ts,tsx}", "./src/**/*.{ts,tsx}"],
+  safelist: [
+    // Dynamic board gradient classes from src/data/subjectData.ts
+    "from-cyan-300",
+    "to-blue-400",
+    "from-green-600",
+    "to-lime-400",
+    "from-cyan-500",
+    "to-blue-500",
+    "from-amber-300",
+    "to-orange-300",
+    "from-orange-500",
+    "to-yellow-400",
+    "from-blue-400",
+    "to-cyan-400",
+    "from-purple-500",
+    "to-pink-400",
+    "from-emerald-400",
+    "to-blue-700",
+    "from-green-400",
+    "to-lime-300",
+    "from-orange-300",
+    "to-amber-400",
+    "from-cyan-400",
+    "from-green-500",
+    "from-yellow-400",
+    "to-amber-500",
+  ],
   prefix: "",
   theme: {
     container: {
