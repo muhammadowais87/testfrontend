@@ -637,7 +637,7 @@ const GeneratePaper = () => {
       <div className={`px-4 md:px-6 py-6 ${!isMobile && sidebarOpen ? "lg:ml-[260px]" : ""}`}>
         <main className="space-y-5 min-w-0 max-w-7xl mx-auto">
           <div className={`${showPaperWorkspace ? "hidden" : "flex items-center justify-between mb-4 gap-2"}`}>
-            <h2 className="text-2xl sm:text-3xl font-bold text-foreground">
+            <h2 className="text-xl sm:text-2xl font-bold text-foreground">
               {selectedBoard && selectedLevel && selectedSubject
                 ? "Select Chapters"
                 : selectedBoard && selectedLevel
@@ -670,11 +670,15 @@ const GeneratePaper = () => {
                   key={board.name}
                   type="button"
                   onClick={() => setSelectedBoard(board.name)}
-                  className={`bg-gradient-to-br ${board.gradient} rounded-2xl p-4 sm:p-6 text-center min-h-[150px] sm:min-h-[200px] flex flex-col items-center justify-center shadow-md hover:scale-[1.02] transition-transform`}
+                  className="group relative overflow-hidden rounded-2xl border border-primary/20 bg-gradient-to-br from-card via-card to-secondary/60 p-4 sm:p-6 text-center min-h-[150px] sm:min-h-[200px] flex flex-col items-center justify-center shadow-[0_8px_24px_-14px_hsl(var(--primary)/0.45)] hover:-translate-y-1 hover:shadow-[0_18px_36px_-16px_hsl(var(--primary)/0.6)] hover:border-primary/40 transition-all duration-300"
                 >
-                  <img src={board.logo} alt={board.label} className="w-16 h-16 sm:w-24 sm:h-24 object-contain mb-3 sm:mb-4" />
-                  <p className="text-lg sm:text-2xl font-extrabold text-foreground tracking-wide">{board.label}</p>
-                  <p className="text-sm sm:text-base text-foreground/80 mt-1">{board.subtitle}</p>
+                  <div className={`pointer-events-none absolute inset-x-0 top-0 h-1.5 bg-gradient-to-r ${board.gradient} opacity-70`} />
+                  <div className={`pointer-events-none absolute inset-x-0 bottom-0 h-1.5 bg-gradient-to-r ${board.gradient} opacity-55`} />
+                  <div className={`pointer-events-none absolute -left-8 -bottom-10 h-28 w-28 rounded-full bg-gradient-to-br ${board.gradient} opacity-20 blur-2xl transition-opacity duration-300 group-hover:opacity-30`} />
+                  <div className="pointer-events-none absolute -right-10 -top-10 h-28 w-28 rounded-full bg-primary/10 blur-2xl transition-opacity duration-300 group-hover:opacity-90" />
+                  <img src={board.logo} alt={board.label} className="relative z-10 w-16 h-16 sm:w-24 sm:h-24 object-contain mb-3 sm:mb-4 drop-shadow-[0_6px_10px_rgba(0,0,0,0.12)]" />
+                  <p className="relative z-10 text-lg sm:text-2xl font-extrabold text-foreground tracking-wide">{board.label}</p>
+                  <p className="relative z-10 text-sm sm:text-base text-foreground/80 mt-1">{board.subtitle}</p>
                 </button>
               ))}
             </div>
@@ -685,10 +689,14 @@ const GeneratePaper = () => {
                   key={card.title}
                   type="button"
                   onClick={() => setSelectedLevel(card.title)}
-                  className={`bg-gradient-to-r ${card.gradient} rounded-2xl px-4 sm:px-5 py-5 sm:py-6 text-center min-h-[90px] sm:min-h-[108px] flex flex-col items-center justify-center shadow-sm hover:scale-[1.01] transition-transform`}
+                  className="group relative overflow-hidden rounded-2xl border border-primary/20 bg-gradient-to-br from-card to-secondary/50 px-4 sm:px-5 py-5 sm:py-6 text-center min-h-[90px] sm:min-h-[108px] flex flex-col items-center justify-center shadow-[0_8px_20px_-14px_hsl(var(--primary)/0.55)] hover:-translate-y-1 hover:shadow-[0_16px_30px_-16px_hsl(var(--primary)/0.65)] hover:border-primary/40 transition-all duration-300"
                 >
-                  <p className="text-xl sm:text-2xl font-extrabold text-foreground tracking-wide">{card.title}</p>
-                  <p className="text-base sm:text-lg font-medium text-foreground/80 mt-1">{card.board}</p>
+                  <div className={`pointer-events-none absolute inset-x-0 top-0 h-1.5 bg-gradient-to-r ${card.gradient} opacity-75`} />
+                  <div className={`pointer-events-none absolute inset-x-0 bottom-0 h-1.5 bg-gradient-to-r ${card.gradient} opacity-60`} />
+                  <div className={`pointer-events-none absolute -left-8 -bottom-10 h-24 w-24 rounded-full bg-gradient-to-br ${card.gradient} opacity-20 blur-2xl transition-opacity duration-300 group-hover:opacity-30`} />
+                  <div className="pointer-events-none absolute -right-8 -top-8 h-20 w-20 rounded-full bg-primary/10 blur-xl" />
+                  <p className="relative z-10 text-xl sm:text-2xl font-extrabold text-foreground tracking-wide">{card.title}</p>
+                  <p className="relative z-10 text-base sm:text-lg font-medium text-foreground/80 mt-1">{card.board}</p>
                 </button>
               ))}
             </div>
@@ -777,11 +785,11 @@ const GeneratePaper = () => {
             </div>
           ) : showQuestionSelection ? null : selectedSubject && selectedBoard && selectedLevel ? (
             <div className="space-y-6">
-              <div className="bg-card border border-border rounded-xl p-6">
-                <h3 className="text-xl font-bold text-foreground mb-4">{selectedSubject} - {selectedLevel}</h3>
-                <p className="text-sm text-muted-foreground mb-6">Select Chapter(s)</p>
+              <div className="bg-card border border-border rounded-xl p-4 sm:p-5">
+                <h3 className="text-base sm:text-lg font-bold text-foreground mb-3">{selectedSubject} - {selectedLevel}</h3>
+                <p className="text-[11px] sm:text-xs text-muted-foreground mb-5">Select Chapter(s)</p>
                 
-                <div className="mb-6">
+                <div className="mb-5">
                   <label className="flex items-center gap-3 cursor-pointer">
                     <input
                       type="checkbox"
@@ -793,16 +801,16 @@ const GeneratePaper = () => {
                           setSelectedChapters([]);
                         }
                       }}
-                      className="h-5 w-5 accent-primary rounded"
+                      className="h-4 w-4 accent-primary rounded"
                     />
-                    <span className="text-sm font-bold text-foreground uppercase tracking-wide">Select All Chapters</span>
+                    <span className="text-[11px] sm:text-xs font-bold text-foreground uppercase tracking-wide">Select All Chapters</span>
                   </label>
                 </div>
                 
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
                   {getChaptersForSubject(selectedSubject, selectedLevel, selectedBoard).map((group, groupIdx) => (
-                    <div key={groupIdx} className="bg-background border border-border rounded-lg p-5">
-                      <label className="flex items-start gap-3 mb-4 cursor-pointer">
+                    <div key={groupIdx} className="bg-background border border-border rounded-lg p-4">
+                      <label className="flex items-start gap-2.5 mb-3 cursor-pointer">
                         <input
                           type="checkbox"
                           checked={selectedChapters.includes(group.name)}
@@ -813,14 +821,14 @@ const GeneratePaper = () => {
                               setSelectedChapters(selectedChapters.filter(ch => ch !== group.name && !group.chapters.includes(ch)));
                             }
                           }}
-                          className="h-5 w-5 accent-primary rounded mt-0.5 flex-shrink-0"
+                          className="h-4 w-4 accent-primary rounded mt-0.5 flex-shrink-0"
                         />
-                        <span className="text-sm font-bold text-foreground">{group.name}</span>
+                        <span className="text-[11px] sm:text-xs font-bold text-foreground">{group.name}</span>
                       </label>
                       
-                      <div className="space-y-3 ml-8">
+                      <div className="space-y-2 ml-7">
                         {group.chapters.map((chapter, chIdx) => (
-                          <label key={chIdx} className="flex items-center gap-3 cursor-pointer">
+                          <label key={chIdx} className="flex items-center gap-2.5 cursor-pointer">
                             <input
                               type="checkbox"
                               checked={selectedChapters.includes(chapter)}
@@ -831,9 +839,9 @@ const GeneratePaper = () => {
                                   setSelectedChapters(selectedChapters.filter(ch => ch !== chapter));
                                 }
                               }}
-                              className="h-4 w-4 accent-primary rounded"
+                              className="h-3.5 w-3.5 accent-primary rounded"
                             />
-                            <span className="text-sm text-foreground">{chapter}</span>
+                            <span className="text-[11px] sm:text-xs text-foreground">{chapter}</span>
                           </label>
                         ))}
                       </div>
@@ -863,7 +871,7 @@ const GeneratePaper = () => {
                     setShowPaperWorkspace(true);
                     setSidebarOpen(true);
                   }}
-                  className="bg-foreground text-background font-semibold py-3 px-8 rounded-full hover:opacity-90 disabled:opacity-50 disabled:cursor-not-allowed transition-opacity flex items-center gap-2"
+                  className="bg-foreground text-background text-xs font-semibold py-2.5 px-7 rounded-full hover:opacity-90 disabled:opacity-50 disabled:cursor-not-allowed transition-opacity flex items-center gap-2"
                 >
                   NEXT <span>›</span>
                 </button>
