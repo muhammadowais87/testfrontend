@@ -1,4 +1,4 @@
-const PROD_API_BASE_URL = "https://testbackend-production-244d.up.railway.app/api";
+const PROD_API_BASE_URL = "https://testbackend-production-8e30.up.railway.app/api";
 
 const defaultApiBaseUrl = (() => {
 	if (typeof window === "undefined") {
