@@ -1160,6 +1160,9 @@ const SavedPapersView = () => {
                             <button
                               type="button"
                               onClick={() => {
+                                navigate(`/dashboard/saved-paper/${p.id}/view`, {
+                                  state: { autoPrint: true, printMode: "single" },
+                                });
                                 setOpenMenuPaperId(null);
                               }}
                               className="w-full flex items-center gap-2 px-3 py-2 text-sm rounded-md hover:bg-secondary/70"
@@ -1170,6 +1173,9 @@ const SavedPapersView = () => {
                             <button
                               type="button"
                               onClick={() => {
+                                navigate(`/dashboard/saved-paper/${p.id}/view`, {
+                                  state: { printMode: "double" },
+                                });
                                 setOpenMenuPaperId(null);
                               }}
                               className="w-full flex items-center gap-2 px-3 py-2 text-sm rounded-md hover:bg-secondary/70"
@@ -1180,6 +1186,9 @@ const SavedPapersView = () => {
                             <button
                               type="button"
                               onClick={() => {
+                                navigate(`/dashboard/saved-paper/${p.id}/view`, {
+                                  state: { printMode: "half" },
+                                });
                                 setOpenMenuPaperId(null);
                               }}
                               className="w-full flex items-center gap-2 px-3 py-2 text-sm rounded-md hover:bg-secondary/70"
@@ -1190,6 +1199,12 @@ const SavedPapersView = () => {
                             <button
                               type="button"
                               onClick={() => {
+                                navigate("/dashboard/generate-paper", {
+                                  state: {
+                                    editPaperId: p.id,
+                                    openQuestionMenu: true,
+                                  },
+                                });
                                 setOpenMenuPaperId(null);
                               }}
                               className="w-full flex items-center gap-2 px-3 py-2 text-sm rounded-md hover:bg-secondary/70"

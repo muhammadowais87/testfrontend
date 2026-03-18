@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Menu, X, Home, Key, Settings, LogOut, CreditCard, ChevronLeft, List, PencilLine, Save, Printer, Shuffle, Trash2 } from "lucide-react";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
 import {
@@ -7,15 +7,27 @@ import {
 } from "@/data/subjectData";
 import SubjectButton from "@/components/SubjectButton";
 import { useIsMobile } from "@/hooks/use-mobile";
-import { addSavedPaper } from "@/lib/savedPapers";
+import { addSavedPaper, getSavedPaperById, type SavedPaperRecord } from "@/lib/savedPapers";
 import { buildPriorityOptions, buildQuestionsForSelection } from "@/lib/questionBank";
 import { useInstituteSessionStore } from "@/stores/instituteSessionStore";
 
 const isUrdu = (text: string) => /[\u0600-\u06FF]/.test(text);
+type WorkspaceQuestionType = "mcq" | "short" | "long";
+type EditedQuestion = { text: string; urdu: string; contentType?: WorkspaceQuestionType };
+const inferContentType = (id: number, text: string): WorkspaceQuestionType => {
+  const normalized = Math.abs(id) % 100000;
+  if (normalized >= 10000 && normalized < 20000) return "mcq";
+  if (normalized >= 20000 && normalized < 30000) return "short";
+  if (normalized >= 30000 && normalized < 40000) return "long";
+  if (id >= 100 && id < 200) return "mcq";
+  if (id >= 200) return "long";
+  return /\([A-D]\)/.test(text) ? "mcq" : "short";
+};
 
 const GeneratePaper = () => {
   const isMobile = useIsMobile();
   const navigate = useNavigate();
+  const location = useLocation();
   const session = useInstituteSessionStore((s) => s.session);
   const logout = useInstituteSessionStore((s) => s.logout);
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -39,7 +51,7 @@ const GeneratePaper = () => {
   const [selectedQuestions, setSelectedQuestions] = useState<number[]>([]);
   const [selectionError, setSelectionError] = useState("");
   const [isManualEditing, setIsManualEditing] = useState(false);
-  const [editedQuestions, setEditedQuestions] = useState<Record<number, {text: string; urdu: string}>>({});
+  const [editedQuestions, setEditedQuestions] = useState<Record<number, EditedQuestion>>({});
   const [shuffledOrder, setShuffledOrder] = useState<number[]>([]);
   const [showSavePaperDialog, setShowSavePaperDialog] = useState(false);
   const [paperName, setPaperName] = useState("");
@@ -81,9 +93,10 @@ const GeneratePaper = () => {
     const uniqueIds = Array.from(new Set(ids));
     const getTypeWeight = (id: number) => {
       const matched = allQuestions.find((q) => q.id === id);
-      if (!matched) return 99;
-      if (matched.contentType === "mcq") return 1;
-      if (matched.contentType === "short") return 2;
+      const fallback = editedQuestions[id];
+      const resolvedType = matched?.contentType || fallback?.contentType || inferContentType(id, fallback?.text || "");
+      if (resolvedType === "mcq") return 1;
+      if (resolvedType === "short") return 2;
       return 3;
     };
 
@@ -97,12 +110,32 @@ const GeneratePaper = () => {
 
   const workspaceQuestions = useMemo(
     () => shuffledOrder
-      .map((id) => allQuestions.find((q) => q.id === id))
-      .filter((q): q is (typeof allQuestions)[number] => Boolean(q)),
-    [allQuestions, shuffledOrder]
+      .map((id) => {
+        const matched = allQuestions.find((q) => q.id === id);
+        if (matched) {
+          return {
+            id,
+            text: editedQuestions[id]?.text ?? matched.text,
+            urdu: editedQuestions[id]?.urdu ?? matched.urdu,
+            contentType: matched.contentType,
+          };
+        }
+
+        const edited = editedQuestions[id];
+        if (!edited) return null;
+
+        return {
+          id,
+          text: edited.text,
+          urdu: edited.urdu,
+          contentType: edited.contentType || inferContentType(id, edited.text),
+        };
+      })
+      .filter((q): q is { id: number; text: string; urdu: string; contentType: WorkspaceQuestionType } => Boolean(q)),
+    [allQuestions, editedQuestions, shuffledOrder]
   );
 
-  const sectionMeta: Record<(typeof allQuestions)[number]["contentType"], { english: string; urdu: string }> = {
+  const sectionMeta: Record<WorkspaceQuestionType, { english: string; urdu: string }> = {
     mcq: {
       english: "Choose the correct option(s) for the following questions.",
       urdu: "مندرجہ ذیل سوالات کے درست جواب کا انتخاب کریں۔",
@@ -118,7 +151,7 @@ const GeneratePaper = () => {
   };
 
   const workspaceSections = useMemo(() => {
-    const orderedTypes: Array<(typeof allQuestions)[number]["contentType"]> = ["mcq", "short", "long"];
+    const orderedTypes: WorkspaceQuestionType[] = ["mcq", "short", "long"];
     return orderedTypes
       .map((type) => ({
         type,
@@ -175,7 +208,7 @@ const GeneratePaper = () => {
       const next = { ...prev };
       activeQuestions.filter((q) => ids.includes(q.id)).forEach((q) => {
         if (!next[q.id]) {
-          next[q.id] = { text: q.text, urdu: q.urdu };
+          next[q.id] = { text: q.text, urdu: q.urdu, contentType: q.contentType };
         }
       });
       return next;
@@ -236,16 +269,47 @@ const GeneratePaper = () => {
     setShowSavePaperDialog(true);
   };
 
-  const handleSavePaper = () => {
-    const activeQuestions = shuffledOrder
-      .map((id) => allQuestions.find((question) => question.id === id))
-      .filter((question): question is (typeof allQuestions)[number] => Boolean(question))
-      .map((question) => ({
+  const openViewerPreview = (mode: "single" | "half" | "double") => {
+    if (!showPaperWorkspace || workspaceQuestions.length === 0) {
+      window.alert("Please add questions first.");
+      return;
+    }
+
+    const previewPaper: SavedPaperRecord = {
+      id: Date.now(),
+      title: paperName || `${selectedSubject || "Paper"} Test`,
+      subject: selectedSubject || "",
+      className: selectedLevel || "",
+      board: selectedBoard || "",
+      teacherName: session?.name || "Institute",
+      date: paperDate || new Date().toLocaleDateString("en-GB"),
+      paperCategory: paperCategory || `${selectedSubject || "Paper"} - ${questionType}`,
+      timeAllowed: timeAllowed || "40",
+      totalMarks: totalMarks && totalMarks !== "0" ? totalMarks : String(workspaceQuestions.length * (Number(eachQMarks) || 2)),
+      questionType,
+      questions: workspaceQuestions.map((question) => ({
         id: question.id,
         contentType: question.contentType,
         text: editedQuestions[question.id]?.text ?? question.text,
         urdu: editedQuestions[question.id]?.urdu ?? question.urdu,
-      }));
+      })),
+    };
+
+    navigate(`/dashboard/saved-paper/${previewPaper.id}/view`, {
+      state: {
+        paperOverride: previewPaper,
+        printMode: mode,
+      },
+    });
+  };
+
+  const handleSavePaper = () => {
+    const activeQuestions = workspaceQuestions.map((question) => ({
+      id: question.id,
+      contentType: question.contentType,
+      text: editedQuestions[question.id]?.text ?? question.text,
+      urdu: editedQuestions[question.id]?.urdu ?? question.urdu,
+    }));
 
     const dateForStorage = paperDate || new Date().toLocaleDateString("en-GB");
     const marksPerQuestion = Number(eachQMarks) || 2;
@@ -278,6 +342,45 @@ const GeneratePaper = () => {
   }, [navigate, session]);
 
   useEffect(() => {
+    const state = location.state as { editPaperId?: number; openQuestionMenu?: boolean } | null;
+    if (!state?.editPaperId) return;
+
+    const savedPaper = getSavedPaperById(state.editPaperId);
+    if (!savedPaper) return;
+
+    const orderedIds = savedPaper.questions.map((q) => q.id);
+    const marksPerQuestion = savedPaper.questions.length > 0
+      ? Math.max(1, Math.round(Number(savedPaper.totalMarks || 0) / savedPaper.questions.length))
+      : Number(eachQMarks || 2);
+    const chapterGroups = getChaptersForSubject(savedPaper.subject || "", savedPaper.className || "", savedPaper.board || "");
+    const allChapterSelections = chapterGroups.flatMap((group) => [group.name, ...group.chapters]);
+
+    setSelectedBoard(savedPaper.board || null);
+    setSelectedLevel(savedPaper.className || null);
+    setSelectedSubject(savedPaper.subject || null);
+    setSelectedChapters(allChapterSelections);
+    setQuestionType(savedPaper.questionType || "");
+    setRequiredQuestions(String(savedPaper.questions.length || 0));
+    setEachQMarks(String(marksPerQuestion));
+    setShuffledOrder(orderedIds);
+    setEditedQuestions(
+      Object.fromEntries(
+        savedPaper.questions.map((q) => [q.id, { text: q.text, urdu: q.urdu, contentType: q.contentType }])
+      )
+    );
+    setPaperName(savedPaper.title || "");
+    setPaperCategory(savedPaper.paperCategory || "");
+    setTimeAllowed(savedPaper.timeAllowed || "40");
+    setPaperDate(savedPaper.date || "");
+    setTotalMarks(savedPaper.totalMarks || "0");
+    setShowSearchResults(false);
+    setShowQuestionSelection(Boolean(state.openQuestionMenu));
+    setShowPaperWorkspace(true);
+    setSidebarOpen(true);
+    setIsManualEditing(false);
+  }, [location.state]);
+
+  useEffect(() => {
     setSelectedQuestions([]);
     setShowSearchResults(false);
     setSelectionError("");
@@ -304,15 +407,15 @@ const GeneratePaper = () => {
           <Save className="w-4 h-4" />
           Save Paper
         </button>
-        <button type="button" className="w-full flex items-center gap-2.5 px-3 py-2 rounded-lg text-sm font-medium text-foreground hover:text-primary hover:bg-secondary text-left">
+        <button type="button" onClick={() => openViewerPreview("single")} className="w-full flex items-center gap-2.5 px-3 py-2 rounded-lg text-sm font-medium text-foreground hover:text-primary hover:bg-secondary text-left">
           <Printer className="w-4 h-4" />
           Print Paper Single
         </button>
-        <button type="button" className="w-full flex items-center gap-2.5 px-3 py-2 rounded-lg text-sm font-medium text-foreground hover:text-primary hover:bg-secondary text-left">
+        <button type="button" onClick={() => openViewerPreview("half")} className="w-full flex items-center gap-2.5 px-3 py-2 rounded-lg text-sm font-medium text-foreground hover:text-primary hover:bg-secondary text-left">
           <Printer className="w-4 h-4" />
           Print Paper Double (Vertical)
         </button>
-        <button type="button" className="w-full flex items-center gap-2.5 px-3 py-2 rounded-lg text-sm font-medium text-foreground hover:text-primary hover:bg-secondary text-left">
+        <button type="button" onClick={() => openViewerPreview("double")} className="w-full flex items-center gap-2.5 px-3 py-2 rounded-lg text-sm font-medium text-foreground hover:text-primary hover:bg-secondary text-left">
           <Printer className="w-4 h-4" />
           Print Paper Double (Horizontal)
         </button>
@@ -770,7 +873,7 @@ const GeneratePaper = () => {
                     );
                   })}
                 </div>
-                <div className="flex items-center gap-3 mt-2">
+                <div className="workspace-actions flex items-center gap-3 mt-2">
                   <button type="button" onClick={() => setIsManualEditing(prev => !prev)} className={`transition-colors ${isManualEditing ? 'text-orange-600' : 'text-orange-500 hover:text-orange-600'}`}>
                     <PencilLine className="w-5 h-5" />
                   </button>

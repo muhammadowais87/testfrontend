@@ -163,3 +163,75 @@
 .saved-paper-print [dir="rtl"] {
   line-height: 1.45;
 }
+
+.saved-paper-copies.mode-single {
+  display: block;
+}
+
+.saved-paper-copies.mode-double {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.saved-paper-copies.mode-half {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.saved-paper-print.mode-half .saved-paper-copy {
+  overflow: hidden;
+}
+
+.saved-paper-print.mode-half .saved-paper-canvas {
+  width: 200%;
+  min-width: 200%;
+  transform: scale(0.5);
+  transform-origin: top left;
+}
+
+@media (max-width: 1200px) {
+  .saved-paper-copies.mode-half {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media print {
+  .saved-paper-print.mode-double .saved-paper-copies.mode-double {
+    display: block;
+  }
+
+  .saved-paper-print.mode-double .saved-paper-copy {
+    break-inside: auto;
+    page-break-inside: auto;
+  }
+
+  .saved-paper-print.mode-double .saved-paper-copy + .saved-paper-copy {
+    margin-top: 6mm;
+  }
+
+  .saved-paper-print.mode-half .saved-paper-copies.mode-half {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 3mm;
+  }
+
+  .saved-paper-print.mode-half .saved-paper-copy {
+    overflow: hidden;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  .saved-paper-print.mode-half .saved-paper-canvas {
+    width: 200% !important;
+    min-width: 200% !important;
+    transform: scale(0.5);
+    transform-origin: top left;
+    box-shadow: none !important;
+  }
+
+  .saved-paper-print.mode-half .saved-paper-page {
+    padding: 3.5mm !important;
+  }
+}

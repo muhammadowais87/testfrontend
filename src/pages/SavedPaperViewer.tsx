@@ -1,20 +1,24 @@
-import { useEffect, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 import { useNavigate, useParams, useLocation } from "react-router-dom";
 import { Barcode, BookOpen, Calculator, CalendarDays, ChevronDown, ChevronLeft, Clock3, GraduationCap, Hash, PenLine, Printer, User } from "lucide-react";
-import { getSavedPaperById } from "@/lib/savedPapers";
+import { getSavedPaperById, type SavedPaperRecord } from "@/lib/savedPapers";
 import { API_BASE_URL } from "@/lib/api";
 import { useInstituteSessionStore } from "@/stores/instituteSessionStore";
 import { useTeacherSessionStore } from "@/stores/teacherSessionStore";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 const SavedPaperViewer = () => {
+  const DESKTOP_PREVIEW_WIDTH = 1100;
   const navigate = useNavigate();
   const location = useLocation();
   const instituteSession = useInstituteSessionStore((s) => s.session);
   const teacherSession = useTeacherSessionStore((s) => s.session);
   const isTeacherRoute = location.pathname.startsWith("/teacher/");
+  const navState = location.state as { autoPrint?: boolean; printMode?: "single" | "double" | "half"; paperOverride?: SavedPaperRecord } | null;
   const { id } = useParams();
+  const isMobile = useIsMobile();
   const paperId = Number(id);
-  const [paper, setPaper] = useState(() => getSavedPaperById(paperId));
+  const [paper, setPaper] = useState(() => navState?.paperOverride ?? getSavedPaperById(paperId));
   const [lineHeight, setLineHeight] = useState("1.28");
   const [urduFontSize, setUrduFontSize] = useState("12");
   const [englishFontSize, setEnglishFontSize] = useState("11");
@@ -63,8 +67,9 @@ const SavedPaperViewer = () => {
     testDetails: "",
   });
   const [editableQuestions, setEditableQuestions] = useState<Array<{ id: number; text: string; urdu: string; contentType?: "mcq" | "short" | "long" }>>([]);
+  const [mobilePreviewZoom, setMobilePreviewZoom] = useState(1);
 
-  const handlePrintPaper = () => {
+  const handlePrintPaper = useCallback(() => {
     const prevTitle = document.title;
     const printStyle = document.createElement("style");
     printStyle.setAttribute("data-print-cleanup", "saved-paper-viewer");
@@ -84,7 +89,7 @@ const SavedPaperViewer = () => {
       document.title = prevTitle;
       printStyle.remove();
     }
-  };
+  }, []);
 
   const applySelectionStyle = (e: React.MouseEvent, styles: Partial<CSSStyleDeclaration>) => {
     e.preventDefault();
@@ -149,7 +154,7 @@ const SavedPaperViewer = () => {
   };
 
   useEffect(() => {
-    const latestPaper = getSavedPaperById(paperId);
+    const latestPaper = navState?.paperOverride ?? getSavedPaperById(paperId);
     setPaper(latestPaper);
     setPaperFields((prev) => ({
       ...prev,
@@ -167,7 +172,7 @@ const SavedPaperViewer = () => {
         contentType: q.contentType,
       }))
     );
-  }, [paperId]);
+  }, [paperId, navState?.paperOverride]);
 
   useEffect(() => {
     const handleSelectionChange = () => {
@@ -183,11 +188,37 @@ const SavedPaperViewer = () => {
   }, []);
 
   useEffect(() => {
+    if (!isMobile) {
+      setMobilePreviewZoom(1);
+      return;
+    }
+
+    const updateZoom = () => {
+      const availableWidth = Math.max(320, window.innerWidth - 16);
+      setMobilePreviewZoom(Math.min(1, availableWidth / DESKTOP_PREVIEW_WIDTH));
+    };
+
+    updateZoom();
+    window.addEventListener("resize", updateZoom);
+    return () => window.removeEventListener("resize", updateZoom);
+  }, [isMobile, DESKTOP_PREVIEW_WIDTH]);
+
+  useEffect(() => {
     setHeaderInfo((prev) => ({
       ...prev,
       schoolName: teacherSession?.schoolName || instituteSession?.name || prev.schoolName,
     }));
   }, [instituteSession?.name, teacherSession?.schoolName]);
+
+  useEffect(() => {
+    if (!navState?.autoPrint) return;
+
+    const timer = window.setTimeout(() => {
+      handlePrintPaper();
+    }, 120);
+
+    return () => window.clearTimeout(timer);
+  }, [navState, handlePrintPaper]);
 
   useEffect(() => {
     const instituteToken = instituteSession?.token;
@@ -355,6 +386,15 @@ const SavedPaperViewer = () => {
   ].includes(layout) ? layout : "Layout 1";
   const hasPrintExtras = printExamSyllabus || printBubbleSheet || printAnswerKeys;
   const compactPrintMode = totalQuestionCount <= 12 && (hasPrintExtras || selectedLayout === "Layout 1");
+  const printMode = navState?.printMode === "double" || navState?.printMode === "half" ? navState.printMode : "single";
+  const previewCopyIndexes = printMode === "single" ? [0] : [0, 1];
+  const previewCopiesClass =
+    printMode === "half"
+      ? "saved-paper-copies mode-half"
+      : printMode === "double"
+        ? "saved-paper-copies mode-double"
+        : "saved-paper-copies mode-single";
+  const mobileCanvasStyle = isMobile ? { zoom: mobilePreviewZoom } : undefined;
 
   const updateField = (key: keyof typeof paperFields, value: string) => {
     setPaperFields((prev) => ({ ...prev, [key]: value }));
@@ -392,7 +432,7 @@ const SavedPaperViewer = () => {
   }
 
   return (
-    <div className={`saved-paper-print min-h-screen bg-slate-200 print:bg-white ${compactPrintMode ? "compact-print" : ""}`}>
+    <div className={`saved-paper-print min-h-screen bg-slate-200 print:bg-white mode-${printMode} ${compactPrintMode ? "compact-print" : ""}`}>
       <div className="sticky top-0 z-20 select-none bg-[#24364a] text-white shadow-sm print:hidden">
         <div className="grid grid-cols-2 gap-1 border-b border-black/30 px-2 pb-1 pt-1 md:grid-cols-6 xl:grid-cols-12">
           <ToolbarField label="Line Height" value={lineHeight} onChange={setLineHeight} />
@@ -534,7 +574,7 @@ const SavedPaperViewer = () => {
           </button>
 
           {/* Selected Text Controls */}
-          <div className="inline-flex h-7 items-center gap-1 rounded-sm border border-slate-300 bg-white px-1.5 text-[10px] text-[#2d2d2d]">
+          <div className="inline-flex h-7 max-w-full items-center gap-1 overflow-x-auto rounded-sm border border-slate-300 bg-white px-1.5 text-[10px] text-[#2d2d2d]">
             <span className="whitespace-nowrap font-medium text-slate-600">Selected Text:</span>
             <span className={`rounded px-1.5 py-0.5 text-[10px] font-semibold ${hasTextSelection ? "bg-emerald-100 text-emerald-700" : "bg-amber-100 text-amber-700"}`}>
               {hasTextSelection ? "Text selected" : "Select text first"}
@@ -641,9 +681,15 @@ const SavedPaperViewer = () => {
         </div>
       </div>
 
-      <div className="mx-auto max-w-[1400px] px-3 py-4 print:max-w-none print:px-0 print:py-0">
-        <div className="overflow-x-auto print:overflow-visible">
-        <div className={`mx-auto min-w-[1100px] bg-white shadow-sm print:min-w-0 print:shadow-none ${pageBorderClass}`}>
+      <div className="mx-auto max-w-[1400px] px-2 py-3 sm:px-3 sm:py-4 print:max-w-none print:px-0 print:py-0">
+        <div className="overflow-hidden print:overflow-visible">
+        <div className={previewCopiesClass}>
+        {previewCopyIndexes.map((copyIndex) => (
+        <div key={`paper-copy-${copyIndex}`} className="saved-paper-copy">
+        <div
+          className={`saved-paper-canvas mx-auto w-[1100px] min-w-[1100px] bg-white shadow-sm print:min-w-0 print:w-full print:shadow-none ${pageBorderClass}`}
+          style={mobileCanvasStyle}
+        >
           <div
             className="saved-paper-page relative p-7 print:p-3"
             style={{ "--logo-scale": `${resolvedLogoScale / 100}` } as React.CSSProperties}
@@ -651,7 +697,7 @@ const SavedPaperViewer = () => {
             <button
               type="button"
               onClick={() => navigate(isTeacherRoute ? "/teacher/dashboard" : "/dashboard", { state: { activeView: "savedpapers" } })}
-              className="mb-4 inline-flex items-center gap-2 rounded-lg border border-border px-3 py-2 text-sm font-semibold text-foreground hover:bg-secondary/60 print:hidden"
+              className={`mb-4 inline-flex items-center gap-2 rounded-lg border border-border px-3 py-2 text-sm font-semibold text-foreground hover:bg-secondary/60 print:hidden ${copyIndex > 0 ? "hidden" : ""}`}
             >
               <ChevronLeft className="w-4 h-4" />
               Back to Saved Papers
@@ -1365,7 +1411,10 @@ const SavedPaperViewer = () => {
           </div>
         </div>
         </div>
+        ))}
+        </div>
       </div>
+    </div>
     </div>
   );
 };

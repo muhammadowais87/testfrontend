@@ -346,6 +346,8 @@ const DashboardHome = ({
 /* ── Teacher Saved Papers View ── */
 const TeacherSavedPapersView = () => {
   const navigate = useNavigate();
+  const teacherSession = useTeacherSessionStore((s) => s.session);
+  const generatePaperPath = teacherSession?.portalType === "sub-user" ? "/sub-user/generate-paper" : "/teacher/generate-paper";
   const [search, setSearch] = useState("");
   const [teacherPapers, setTeacherPapers] = useState<SavedPaperRecord[]>([]);
 
@@ -472,6 +474,9 @@ const TeacherSavedPapersView = () => {
                             <button
                               type="button"
                               onClick={() => {
+                                navigate(`/teacher/saved-paper/${p.id}/view`, {
+                                  state: { autoPrint: true, printMode: "single" },
+                                });
                                 setOpenMenuPaperId(null);
                               }}
                               className="w-full flex items-center gap-2 px-3 py-2 text-sm rounded-md hover:bg-secondary/70"
@@ -493,6 +498,9 @@ const TeacherSavedPapersView = () => {
                             <button
                               type="button"
                               onClick={() => {
+                                navigate(`/teacher/saved-paper/${p.id}/view`, {
+                                  state: { printMode: "double" },
+                                });
                                 setOpenMenuPaperId(null);
                               }}
                               className="w-full flex items-center gap-2 px-3 py-2 text-sm rounded-md hover:bg-secondary/70"
@@ -503,6 +511,9 @@ const TeacherSavedPapersView = () => {
                             <button
                               type="button"
                               onClick={() => {
+                                navigate(`/teacher/saved-paper/${p.id}/view`, {
+                                  state: { printMode: "half" },
+                                });
                                 setOpenMenuPaperId(null);
                               }}
                               className="w-full flex items-center gap-2 px-3 py-2 text-sm rounded-md hover:bg-secondary/70"
@@ -513,6 +524,12 @@ const TeacherSavedPapersView = () => {
                             <button
                               type="button"
                               onClick={() => {
+                                navigate(generatePaperPath, {
+                                  state: {
+                                    editPaperId: p.id,
+                                    openQuestionMenu: true,
+                                  },
+                                });
                                 setOpenMenuPaperId(null);
                               }}
                               className="w-full flex items-center gap-2 px-3 py-2 text-sm rounded-md hover:bg-secondary/70"
