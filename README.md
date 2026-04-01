@@ -1,6 +1,6 @@
-# ExamSync
+# Apextestsolution
 
-ExamSync is a React + TypeScript web application for school workflows, paper generation, and dashboard management.
+Apextestsolution is a React + TypeScript web application for school workflows, paper generation, and dashboard management.
 
 ## Local Development
 

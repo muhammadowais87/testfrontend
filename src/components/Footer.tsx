@@ -7,7 +7,7 @@ const Footer = () => {
         <div className="rounded-2xl border border-primary/25 bg-background/5 p-6 grid grid-cols-1 md:grid-cols-3 gap-6">
           <div>
             <h3 className="text-xl font-bold mb-3">
-              Exam <span className="text-primary">Sync</span>
+              Apex Test <span className="text-primary">Solution</span>
             </h3>
             <p className="text-sm opacity-85">
               Pakistan's digital paper generation platform for schools, academies and teachers.
@@ -48,7 +48,7 @@ const Footer = () => {
         </div>
 
         <div className="text-center text-sm opacity-60">
-          © 2026 Exam Sync. All Rights Reserved.
+          © 2026 Apex Test Solution. All Rights Reserved.
         </div>
       </div>
     </footer>

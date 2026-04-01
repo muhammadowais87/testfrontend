@@ -55,7 +55,7 @@ const AdminLayout = ({ children, title, subtitle }: AdminLayoutProps) => {
         </div>
         {(!collapsed || isMobile) && (
           <div className="overflow-hidden flex-1">
-            <p className="text-sm font-bold text-white leading-tight truncate">Exam Sync</p>
+            <p className="text-sm font-bold text-white leading-tight truncate">Apex Test Solution</p>
             <p className="text-[10px] text-white/50 truncate">Admin Portal</p>
           </div>
         )}

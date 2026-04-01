@@ -68,7 +68,7 @@ const InstituteLogin = () => {
           </div>
 
           <h1 className="text-3xl font-bold text-foreground mb-2">Institute Login</h1>
-          <p className="text-muted-foreground text-sm mb-8">Login with credentials provided by Exam Sync</p>
+          <p className="text-muted-foreground text-sm mb-8">Login with credentials provided by Apex Test Solution</p>
 
           <form onSubmit={handleLogin} className="space-y-5">
             {error && (
@@ -85,7 +85,7 @@ const InstituteLogin = () => {
                 type="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                placeholder="institute@examsync.com"
+                placeholder="institute@apextestsolution.com"
                 className="w-full border border-border rounded-md px-4 py-3 text-foreground bg-background focus:outline-none focus:ring-2 focus:ring-primary"
               />
             </div>

@@ -10,12 +10,15 @@ const HeroSection = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10 items-center">
             <div className="space-y-6 text-center lg:text-left">
               <div>
+                <p className="text-xs md:text-sm font-semibold uppercase tracking-wide text-primary">
+                  Apex Test Solution, Lahore Pakistan
+                </p>
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-foreground">
-                  Smarter Papers,<br />
-                  Better Results
+                  Apex Test Solution:<br />
+                  Smarter Papers, Better Results
                 </h1>
                 <p className="mt-4 text-base md:text-lg text-muted-foreground">
-                  Complete online paper generation system with board-wise patterns, fast output, and teacher-friendly controls.
+                  Pakistan's digital paper generation platform for schools, academies and teachers. Complete board-wise paper generation with fast output and teacher-friendly controls.
                 </p>
               </div>
 

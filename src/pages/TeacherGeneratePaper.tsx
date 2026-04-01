@@ -698,7 +698,7 @@ const TeacherGeneratePaper = () => {
               {sidebarOpen && !showQuestionSelection && !showPaperWorkspace ? <X size={22} /> : <Menu size={22} />}
             </button>
             <div>
-              <h1 className="text-base font-bold tracking-wide text-primary-foreground">EXAMSYNC</h1>
+              <h1 className="text-base font-bold tracking-wide text-primary-foreground">APEXTESTSOLUTION</h1>
               <p className="text-xs text-primary-foreground/50">{isSubUserPortal ? "Sub User Portal" : "Teacher Portal"}</p>
             </div>
           </div>

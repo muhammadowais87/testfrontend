@@ -17,13 +17,13 @@ const WhyUsSection = () => {
     <section className="py-14 md:py-16 bg-gradient-to-b from-secondary to-secondary/65">
       <div className="container mx-auto max-w-6xl space-y-8">
         <div className="text-center space-y-2">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground">Why Exam Sync works better</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground">Why Apex Test Solution works better</h2>
           <p className="text-muted-foreground">Built for teachers who need speed, control and board accuracy.</p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-5">
           <div className="lg:col-span-1 rounded-2xl bg-primary text-primary-foreground p-6 shadow-lg">
-            <img src="/images/WhyUs.png" alt="Why Exam Sync" className="w-full max-w-[220px] mx-auto mb-4" />
+            <img src="/images/WhyUs.png" alt="Why Apex Test Solution" className="w-full max-w-[220px] mx-auto mb-4" />
             <p className="text-sm text-primary-foreground/90">Complete automation with manual flexibility so teachers can generate papers exactly the way they want.</p>
           </div>
 

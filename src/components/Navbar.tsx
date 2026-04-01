@@ -46,8 +46,8 @@ const Navbar = () => {
     <nav className="sticky top-0 z-50 bg-background/90 backdrop-blur border-b border-primary/10">
       <div className="w-full px-4 md:px-6 py-3 flex items-center justify-between">
         <Link to="/" className="flex items-center gap-2 shrink-0">
-          <img src="/images/phn.png" alt="Exam Sync" className="h-12 w-auto" />
-          <span className="text-lg sm:text-xl font-bold text-foreground leading-none">Exam Sync</span>
+          <img src="/images/phn.png" alt="Apex Test Solution" className="h-12 w-auto" />
+          <span className="text-lg sm:text-xl font-bold text-foreground leading-none">Apex Test Solution</span>
         </Link>
 
         <div className="hidden lg:flex items-center gap-2 xl:gap-3">

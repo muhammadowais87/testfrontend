@@ -8,7 +8,7 @@ const SchoolSoftwareSection = () => {
               Advanced School Management Software
             </h2>
             <p className="text-muted-foreground mb-5 max-w-2xl">
-              Exam Sync also offers smart school software for attendance, fee, student records and reporting in one clean dashboard.
+              Apex Test Solution also offers smart school software for attendance, fee, student records and reporting in one clean dashboard.
             </p>
             <div className="flex flex-wrap gap-2">
               <span className="px-3 py-1 rounded-full text-xs font-medium bg-secondary text-primary">Attendance</span>

@@ -30,7 +30,7 @@ const AdminLogin = () => {
           <div className="mx-auto w-14 h-14 rounded-2xl bg-primary/20 flex items-center justify-center">
             <Shield className="w-7 h-7 text-primary" />
           </div>
-          <h1 className="text-2xl font-bold text-foreground">Exam Sync</h1>
+          <h1 className="text-2xl font-bold text-foreground">Apex Test Solution</h1>
           <p className="text-sm text-muted-foreground">Admin Portal — Sign in to continue</p>
         </div>
 
@@ -48,7 +48,7 @@ const AdminLogin = () => {
                 <Input
                   id="email" type="email" value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  placeholder="admin@examsync.com" required
+                  placeholder="admin@apextestsolution.com" required
                   className="h-11"
                 />
               </div>
