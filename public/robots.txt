@@ -1,16 +1,21 @@
 User-agent: Googlebot
 Allow: /
+Disallow: /portal-x9k7m/
 
 User-agent: Bingbot
 Allow: /
+Disallow: /portal-x9k7m/
 
 User-agent: Twitterbot
 Allow: /
+Disallow: /portal-x9k7m/
 
 User-agent: facebookexternalhit
 Allow: /
+Disallow: /portal-x9k7m/
 
 User-agent: *
 Allow: /
+Disallow: /portal-x9k7m/
 
 Sitemap: https://apextestsolution.app/sitemap.xml

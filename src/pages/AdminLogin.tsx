@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -11,6 +11,50 @@ const AdminLogin = () => {
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const navigate = useNavigate();
+
+  useEffect(() => {
+    const robotsMeta = document.querySelector('meta[name="robots"]') as HTMLMetaElement | null;
+    const googlebotMeta = document.querySelector('meta[name="googlebot"]') as HTMLMetaElement | null;
+
+    const previousRobots = robotsMeta?.getAttribute("content") ?? null;
+    const previousGooglebot = googlebotMeta?.getAttribute("content") ?? null;
+
+    const injectedRobotsMeta = !robotsMeta ? document.createElement("meta") : null;
+    const injectedGooglebotMeta = !googlebotMeta ? document.createElement("meta") : null;
+
+    const robotsTarget = robotsMeta ?? injectedRobotsMeta;
+    const googlebotTarget = googlebotMeta ?? injectedGooglebotMeta;
+
+    if (robotsTarget) {
+      robotsTarget.setAttribute("name", "robots");
+      robotsTarget.setAttribute("content", "noindex, nofollow, noarchive");
+      if (injectedRobotsMeta) {
+        document.head.appendChild(injectedRobotsMeta);
+      }
+    }
+
+    if (googlebotTarget) {
+      googlebotTarget.setAttribute("name", "googlebot");
+      googlebotTarget.setAttribute("content", "noindex, nofollow, noarchive");
+      if (injectedGooglebotMeta) {
+        document.head.appendChild(injectedGooglebotMeta);
+      }
+    }
+
+    return () => {
+      if (injectedRobotsMeta) {
+        injectedRobotsMeta.remove();
+      } else if (robotsMeta && previousRobots) {
+        robotsMeta.setAttribute("content", previousRobots);
+      }
+
+      if (injectedGooglebotMeta) {
+        injectedGooglebotMeta.remove();
+      } else if (googlebotMeta && previousGooglebot) {
+        googlebotMeta.setAttribute("content", previousGooglebot);
+      }
+    };
+  }, []);
 
   const handleLogin = (e: React.FormEvent) => {
     e.preventDefault();

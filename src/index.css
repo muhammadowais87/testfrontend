@@ -164,6 +164,10 @@
   line-height: 1.45;
 }
 
+.saved-paper-canvas.preview-zoom {
+  zoom: var(--mobile-preview-zoom, 1);
+}
+
 .saved-paper-copies.mode-single {
   display: block;
 }
@@ -198,6 +202,10 @@
 }
 
 @media print {
+  .saved-paper-canvas.preview-zoom {
+    zoom: 1 !important;
+  }
+
   .saved-paper-print.mode-double .saved-paper-copies.mode-double {
     display: block;
   }

@@ -3,12 +3,12 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Menu, X, Home, Key, Settings, LogOut, CreditCard, ChevronLeft, List, PencilLine, Save, Printer, Shuffle, Trash2 } from "lucide-react";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
 import {
-  boardClassMap, boardCards, boardSubjectsMap, getChaptersForSubject,
+  boardClassMap, boardCards, boardSubjectsMap, getChaptersForSubject, type ChapterGroup,
 } from "@/data/subjectData";
 import SubjectButton from "@/components/SubjectButton";
 import { useIsMobile } from "@/hooks/use-mobile";
 import { addSavedPaper, getSavedPaperById, type SavedPaperRecord } from "@/lib/savedPapers";
-import { buildPriorityOptions, buildQuestionsForSelection } from "@/lib/questionBank";
+import { buildPriorityOptions, fetchChapterGroupsForSelection, fetchQuestionsForSelection, type PaperQuestion } from "@/lib/questionBank";
 import { useInstituteSessionStore } from "@/stores/instituteSessionStore";
 
 const isUrdu = (text: string) => /[\u0600-\u06FF]/.test(text);
@@ -45,8 +45,6 @@ const GeneratePaper = () => {
   const [blankLines, setBlankLines] = useState("");
   const [blankLineType, setBlankLineType] = useState("1 LINE");
   const [questionPriority, setQuestionPriority] = useState("all");
-  const [twoQuestionsPerLine, setTwoQuestionsPerLine] = useState(false);
-  const [longQuestionsParts, setLongQuestionsParts] = useState(false);
   const [showSearchResults, setShowSearchResults] = useState(false);
   const [selectedQuestions, setSelectedQuestions] = useState<number[]>([]);
   const [selectionError, setSelectionError] = useState("");
@@ -61,8 +59,16 @@ const GeneratePaper = () => {
   const [totalMarks, setTotalMarks] = useState("0");
   const [showValidationDialog, setShowValidationDialog] = useState(false);
   const [validationMessage, setValidationMessage] = useState("");
+  const [allQuestions, setAllQuestions] = useState<PaperQuestion[]>([]);
+  const [dbChapterGroups, setDbChapterGroups] = useState<ChapterGroup[] | null>(null);
 
-  const allQuestions = useMemo(() => buildQuestionsForSelection(selectedChapters), [selectedChapters]);
+  const chapterGroups = useMemo(() => {
+    if (!selectedSubject || !selectedLevel || !selectedBoard) {
+      return [];
+    }
+
+    return dbChapterGroups ?? getChaptersForSubject(selectedSubject, selectedLevel, selectedBoard);
+  }, [dbChapterGroups, selectedBoard, selectedLevel, selectedSubject]);
 
   const priorityOptions = useMemo(
     () => buildPriorityOptions(allQuestions, selectedChapters),
@@ -303,7 +309,7 @@ const GeneratePaper = () => {
     });
   };
 
-  const handleSavePaper = () => {
+  const handleSavePaper = async () => {
     const activeQuestions = workspaceQuestions.map((question) => ({
       id: question.id,
       contentType: question.contentType,
@@ -315,7 +321,7 @@ const GeneratePaper = () => {
     const marksPerQuestion = Number(eachQMarks) || 2;
     const calculatedTotalMarks = totalMarks || String(activeQuestions.length * marksPerQuestion);
 
-    addSavedPaper({
+    await addSavedPaper({
       id: Date.now(),
       title: paperName || `${selectedSubject || "Paper"} Test`,
       subject: selectedSubject || "",
@@ -345,40 +351,101 @@ const GeneratePaper = () => {
     const state = location.state as { editPaperId?: number; openQuestionMenu?: boolean } | null;
     if (!state?.editPaperId) return;
 
-    const savedPaper = getSavedPaperById(state.editPaperId);
-    if (!savedPaper) return;
+    let cancelled = false;
+    const loadSavedPaper = async () => {
+      const savedPaper = await getSavedPaperById(state.editPaperId as number);
+      if (!savedPaper || cancelled) return;
 
-    const orderedIds = savedPaper.questions.map((q) => q.id);
-    const marksPerQuestion = savedPaper.questions.length > 0
-      ? Math.max(1, Math.round(Number(savedPaper.totalMarks || 0) / savedPaper.questions.length))
-      : Number(eachQMarks || 2);
-    const chapterGroups = getChaptersForSubject(savedPaper.subject || "", savedPaper.className || "", savedPaper.board || "");
-    const allChapterSelections = chapterGroups.flatMap((group) => [group.name, ...group.chapters]);
+      const orderedIds = savedPaper.questions.map((q) => q.id);
+      const marksPerQuestion = savedPaper.questions.length > 0
+        ? Math.max(1, Math.round(Number(savedPaper.totalMarks || 0) / savedPaper.questions.length))
+        : Number(eachQMarks || 2);
+      const chapterGroups = getChaptersForSubject(savedPaper.subject || "", savedPaper.className || "", savedPaper.board || "");
+      const allChapterSelections = chapterGroups.flatMap((group) => [group.name, ...group.chapters]);
 
-    setSelectedBoard(savedPaper.board || null);
-    setSelectedLevel(savedPaper.className || null);
-    setSelectedSubject(savedPaper.subject || null);
-    setSelectedChapters(allChapterSelections);
-    setQuestionType(savedPaper.questionType || "");
-    setRequiredQuestions(String(savedPaper.questions.length || 0));
-    setEachQMarks(String(marksPerQuestion));
-    setShuffledOrder(orderedIds);
-    setEditedQuestions(
-      Object.fromEntries(
-        savedPaper.questions.map((q) => [q.id, { text: q.text, urdu: q.urdu, contentType: q.contentType }])
-      )
-    );
-    setPaperName(savedPaper.title || "");
-    setPaperCategory(savedPaper.paperCategory || "");
-    setTimeAllowed(savedPaper.timeAllowed || "40");
-    setPaperDate(savedPaper.date || "");
-    setTotalMarks(savedPaper.totalMarks || "0");
-    setShowSearchResults(false);
-    setShowQuestionSelection(Boolean(state.openQuestionMenu));
-    setShowPaperWorkspace(true);
-    setSidebarOpen(true);
-    setIsManualEditing(false);
+      setSelectedBoard(savedPaper.board || null);
+      setSelectedLevel(savedPaper.className || null);
+      setSelectedSubject(savedPaper.subject || null);
+      setSelectedChapters(allChapterSelections);
+      setQuestionType(savedPaper.questionType || "");
+      setRequiredQuestions(String(savedPaper.questions.length || 0));
+      setEachQMarks(String(marksPerQuestion));
+      setShuffledOrder(orderedIds);
+      setEditedQuestions(
+        Object.fromEntries(
+          savedPaper.questions.map((q) => [q.id, { text: q.text, urdu: q.urdu, contentType: q.contentType }])
+        )
+      );
+      setPaperName(savedPaper.title || "");
+      setPaperCategory(savedPaper.paperCategory || "");
+      setTimeAllowed(savedPaper.timeAllowed || "40");
+      setPaperDate(savedPaper.date || "");
+      setTotalMarks(savedPaper.totalMarks || "0");
+      setShowSearchResults(false);
+      setShowQuestionSelection(Boolean(state.openQuestionMenu));
+      setShowPaperWorkspace(true);
+      setSidebarOpen(true);
+      setIsManualEditing(false);
+    };
+
+    loadSavedPaper();
+    return () => {
+      cancelled = true;
+    };
   }, [location.state]);
+
+  useEffect(() => {
+    let isMounted = true;
+
+    if (!selectedSubject || !selectedLevel || !selectedBoard) {
+      setDbChapterGroups(null);
+      return () => {
+        isMounted = false;
+      };
+    }
+
+    const loadChapterGroups = async () => {
+      try {
+        const groups = await fetchChapterGroupsForSelection(selectedSubject, selectedLevel, selectedBoard);
+        if (isMounted) {
+          setDbChapterGroups(groups.length > 0 ? groups : null);
+        }
+      } catch {
+        if (isMounted) {
+          setDbChapterGroups(null);
+        }
+      }
+    };
+
+    loadChapterGroups();
+
+    return () => {
+      isMounted = false;
+    };
+  }, [selectedBoard, selectedLevel, selectedSubject]);
+
+  useEffect(() => {
+    let isMounted = true;
+
+    const loadQuestions = async () => {
+      try {
+        const questions = await fetchQuestionsForSelection(selectedChapters);
+        if (isMounted) {
+          setAllQuestions(questions);
+        }
+      } catch {
+        if (isMounted) {
+          setAllQuestions([]);
+        }
+      }
+    };
+
+    loadQuestions();
+
+    return () => {
+      isMounted = false;
+    };
+  }, [selectedChapters]);
 
   useEffect(() => {
     setSelectedQuestions([]);
@@ -544,8 +611,8 @@ const GeneratePaper = () => {
                       </div>
                     </div>
 
-                    {/* Third Row: Blank Line Type and Checkboxes */}
-                    <div className="grid grid-cols-3 gap-4">
+                    {/* Third Row: Blank Line Type */}
+                    <div className="grid grid-cols-1 gap-4">
                       <div>
                         <label className="block text-[11px] font-semibold text-gray-700 mb-2">Blank Line Type</label>
                         <select value={blankLineType} onChange={(e) => setBlankLineType(e.target.value)} className="w-full border border-gray-300 rounded px-3 py-2 text-sm text-gray-700 bg-white">
@@ -553,18 +620,6 @@ const GeneratePaper = () => {
                           <option>2 LINES</option>
                           <option>3 LINES</option>
                         </select>
-                      </div>
-                      <div className="flex items-end">
-                        <label className="flex items-center gap-2 cursor-pointer">
-                          <input type="checkbox" checked={twoQuestionsPerLine} onChange={(e) => setTwoQuestionsPerLine(e.target.checked)} className="w-4 h-4 rounded" />
-                          <span className="text-[11px] font-medium text-gray-700">2 Questions Per Line</span>
-                        </label>
-                      </div>
-                      <div className="flex items-end">
-                        <label className="flex items-center gap-2 cursor-pointer">
-                          <input type="checkbox" checked={longQuestionsParts} onChange={(e) => setLongQuestionsParts(e.target.checked)} className="w-4 h-4 rounded" />
-                          <span className="text-[11px] font-medium text-gray-700">Long Questions Parts</span>
-                        </label>
                       </div>
                     </div>
 
@@ -896,10 +951,10 @@ const GeneratePaper = () => {
                   <label className="flex items-center gap-3 cursor-pointer">
                     <input
                       type="checkbox"
-                      checked={selectedChapters.length === getChaptersForSubject(selectedSubject, selectedLevel, selectedBoard).flatMap(g => [g.name, ...g.chapters]).length && selectedChapters.length > 0}
+                      checked={selectedChapters.length === chapterGroups.flatMap(g => [g.name, ...g.chapters]).length && selectedChapters.length > 0}
                       onChange={(e) => {
                         if (e.target.checked) {
-                          setSelectedChapters(getChaptersForSubject(selectedSubject, selectedLevel, selectedBoard).flatMap(g => [g.name, ...g.chapters]));
+                          setSelectedChapters(chapterGroups.flatMap(g => [g.name, ...g.chapters]));
                         } else {
                           setSelectedChapters([]);
                         }
@@ -911,7 +966,7 @@ const GeneratePaper = () => {
                 </div>
                 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
-                  {getChaptersForSubject(selectedSubject, selectedLevel, selectedBoard).map((group, groupIdx) => (
+                  {chapterGroups.map((group, groupIdx) => (
                     <div key={groupIdx} className="bg-background border border-border rounded-lg p-4">
                       <label className="flex items-start gap-2.5 mb-3 cursor-pointer">
                         <input

@@ -2,18 +2,15 @@ import { Phone } from "lucide-react";
 
 const HeroSection = () => {
   return (
-    <section id="home" className="relative overflow-hidden py-12 md:py-16 lg:py-20">
+    <section id="home" className="relative overflow-hidden pt-2 pb-12 md:pt-4 md:pb-16 lg:pt-6 lg:pb-20">
       <div className="absolute inset-x-0 top-0 h-36 bg-gradient-to-b from-secondary to-transparent -z-10" />
 
       <div className="container mx-auto max-w-6xl">
         <div className="rounded-3xl bg-card border border-primary/15 shadow-sm p-6 md:p-8 lg:p-10">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10 items-start">
             <div className="space-y-6 text-center lg:text-left">
               <div>
-                <p className="text-xs md:text-sm font-semibold uppercase tracking-wide text-primary">
-                  Apex Test Solution, Lahore Pakistan
-                </p>
-                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-foreground">
+                <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold leading-snug text-foreground">
                   Apex Test Solution:<br />
                   Smarter Papers, Better Results
                 </h1>

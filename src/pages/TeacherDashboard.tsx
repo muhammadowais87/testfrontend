@@ -1,6 +1,6 @@
 import { useEffect, useState, useMemo, useRef } from "react";
 import { Link, useNavigate, useLocation } from "react-router-dom";
-import { getSavedPapers, deleteSavedPaper } from "@/lib/savedPapers";
+import { getSavedPapers, deleteSavedPaper, migrateLegacySavedPapersToDb } from "@/lib/savedPapers";
 import type { SavedPaperRecord } from "@/lib/savedPapers";
 import {
   Menu, X, Home, LogOut, ClipboardList, FileText,
@@ -266,14 +266,36 @@ const DashboardHome = ({
     return "Good Evening";
   };
 
-  const recentPapers = useMemo(
-    () => getSavedPapers().slice(0, 4).map((paper) => ({
-      title: paper.title,
-      class: paper.className,
-      date: paper.date,
-    })),
-    []
-  );
+  const [recentPapers, setRecentPapers] = useState<Array<{ title: string; class: string; date: string }>>([]);
+
+  useEffect(() => {
+    let cancelled = false;
+
+    const loadRecent = async () => {
+      try {
+        await migrateLegacySavedPapersToDb();
+        const papers = await getSavedPapers();
+        if (!cancelled) {
+          setRecentPapers(
+            papers.slice(0, 4).map((paper) => ({
+              title: paper.title,
+              class: paper.className,
+              date: paper.date,
+            }))
+          );
+        }
+      } catch {
+        if (!cancelled) {
+          setRecentPapers([]);
+        }
+      }
+    };
+
+    loadRecent();
+    return () => {
+      cancelled = true;
+    };
+  }, []);
 
   return (
     <>
@@ -352,7 +374,25 @@ const TeacherSavedPapersView = () => {
   const [teacherPapers, setTeacherPapers] = useState<SavedPaperRecord[]>([]);
 
   useEffect(() => {
-    setTeacherPapers(getSavedPapers());
+    let cancelled = false;
+    const loadSavedPapers = async () => {
+      try {
+        await migrateLegacySavedPapersToDb();
+        const papers = await getSavedPapers();
+        if (!cancelled) {
+          setTeacherPapers(papers);
+        }
+      } catch {
+        if (!cancelled) {
+          setTeacherPapers([]);
+        }
+      }
+    };
+
+    loadSavedPapers();
+    return () => {
+      cancelled = true;
+    };
   }, []);
   const [entriesPerPage, setEntriesPerPage] = useState(5);
   const [currentPage, setCurrentPage] = useState(1);
@@ -539,8 +579,8 @@ const TeacherSavedPapersView = () => {
                             </button>
                             <button
                               type="button"
-                              onClick={() => {
-                                deleteSavedPaper(p.id);
+                              onClick={async () => {
+                                await deleteSavedPaper(p.id);
                                 setTeacherPapers((prev) => prev.filter((item) => item.id !== p.id));
                                 setOpenMenuPaperId(null);
                               }}

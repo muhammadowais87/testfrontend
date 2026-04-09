@@ -81,22 +81,16 @@ const Navbar = () => {
           )}
           <div className="flex items-center gap-2">
             <Link
-              to="/teacher/login"
-              className="bg-secondary text-foreground border border-primary/15 px-4 py-2 rounded-lg text-sm font-semibold hover:bg-secondary/80 transition-colors"
-            >
-              Teacher Login
-            </Link>
-            <Link
-              to="/portal-x9k7m/login"
-              className="bg-secondary text-foreground border border-primary/15 px-4 py-2 rounded-lg text-sm font-semibold hover:bg-secondary/80 transition-colors"
-            >
-              Admin Login
-            </Link>
-            <Link
               to="/institute/login"
               className="bg-primary text-primary-foreground px-4 py-2 rounded-lg text-sm font-semibold hover:opacity-90 transition-opacity"
             >
               Institute Login
+            </Link>
+            <Link
+              to="/teacher/login"
+              className="bg-secondary text-foreground border border-primary/15 px-4 py-2 rounded-lg text-sm font-semibold hover:bg-secondary/80 transition-colors"
+            >
+              Teacher Login
             </Link>
           </div>
         </div>
@@ -143,27 +137,20 @@ const Navbar = () => {
                   </a>
                 )
               )}
-              <div className="mt-2 grid grid-cols-1 sm:grid-cols-3 gap-2">
-                <Link
-                  to="/teacher/login"
-                  className="inline-flex justify-center bg-secondary text-foreground border border-primary/15 px-5 py-2 rounded-lg text-sm font-semibold"
-                  onClick={() => setOpen(false)}
-                >
-                  Teacher Login
-                </Link>
-                <Link
-                  to="/portal-x9k7m/login"
-                  className="inline-flex justify-center bg-secondary text-foreground border border-primary/15 px-5 py-2 rounded-lg text-sm font-semibold"
-                  onClick={() => setOpen(false)}
-                >
-                  Admin Login
-                </Link>
+              <div className="mt-2 grid grid-cols-1 sm:grid-cols-2 gap-2">
                 <Link
                   to="/institute/login"
                   className="inline-flex justify-center bg-primary text-primary-foreground px-5 py-2 rounded-lg text-sm font-semibold"
                   onClick={() => setOpen(false)}
                 >
                   Institute Login
+                </Link>
+                <Link
+                  to="/teacher/login"
+                  className="inline-flex justify-center bg-secondary text-foreground border border-primary/15 px-5 py-2 rounded-lg text-sm font-semibold"
+                  onClick={() => setOpen(false)}
+                >
+                  Teacher Login
                 </Link>
               </div>
             </div>

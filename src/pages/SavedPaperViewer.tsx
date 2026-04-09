@@ -18,7 +18,7 @@ const SavedPaperViewer = () => {
   const { id } = useParams();
   const isMobile = useIsMobile();
   const paperId = Number(id);
-  const [paper, setPaper] = useState(() => navState?.paperOverride ?? getSavedPaperById(paperId));
+  const [paper, setPaper] = useState<SavedPaperRecord | null>(navState?.paperOverride ?? null);
   const [lineHeight, setLineHeight] = useState("1.28");
   const [urduFontSize, setUrduFontSize] = useState("12");
   const [englishFontSize, setEnglishFontSize] = useState("11");
@@ -154,24 +154,35 @@ const SavedPaperViewer = () => {
   };
 
   useEffect(() => {
-    const latestPaper = navState?.paperOverride ?? getSavedPaperById(paperId);
-    setPaper(latestPaper);
-    setPaperFields((prev) => ({
-      ...prev,
-      className: latestPaper?.className || "",
-      subjectName: latestPaper?.subject || "",
-      timeAllowed: latestPaper?.timeAllowed || "40",
-      totalMarks: latestPaper?.totalMarks || "0",
-      examDate: latestPaper?.date || "",
-    }));
-    setEditableQuestions(
-      (latestPaper?.questions || []).map((q) => ({
-        id: q.id,
-        text: q.text,
-        urdu: q.urdu,
-        contentType: q.contentType,
-      }))
-    );
+    let cancelled = false;
+
+    const loadPaper = async () => {
+      const latestPaper = navState?.paperOverride ?? await getSavedPaperById(paperId);
+      if (cancelled) return;
+
+      setPaper(latestPaper);
+      setPaperFields((prev) => ({
+        ...prev,
+        className: latestPaper?.className || "",
+        subjectName: latestPaper?.subject || "",
+        timeAllowed: latestPaper?.timeAllowed || "40",
+        totalMarks: latestPaper?.totalMarks || "0",
+        examDate: latestPaper?.date || "",
+      }));
+      setEditableQuestions(
+        (latestPaper?.questions || []).map((q) => ({
+          id: q.id,
+          text: q.text,
+          urdu: q.urdu,
+          contentType: q.contentType,
+        }))
+      );
+    };
+
+    loadPaper();
+    return () => {
+      cancelled = true;
+    };
   }, [paperId, navState?.paperOverride]);
 
   useEffect(() => {
@@ -394,7 +405,9 @@ const SavedPaperViewer = () => {
       : printMode === "double"
         ? "saved-paper-copies mode-double"
         : "saved-paper-copies mode-single";
-  const mobileCanvasStyle = isMobile ? { zoom: mobilePreviewZoom } : undefined;
+  const mobileCanvasStyle = isMobile
+    ? ({ "--mobile-preview-zoom": String(mobilePreviewZoom) } as React.CSSProperties)
+    : undefined;
 
   const updateField = (key: keyof typeof paperFields, value: string) => {
     setPaperFields((prev) => ({ ...prev, [key]: value }));
@@ -687,7 +700,7 @@ const SavedPaperViewer = () => {
         {previewCopyIndexes.map((copyIndex) => (
         <div key={`paper-copy-${copyIndex}`} className="saved-paper-copy">
         <div
-          className={`saved-paper-canvas mx-auto w-[1100px] min-w-[1100px] bg-white shadow-sm print:min-w-0 print:w-full print:shadow-none ${pageBorderClass}`}
+          className={`saved-paper-canvas preview-zoom mx-auto w-[1100px] min-w-[1100px] bg-white shadow-sm print:min-w-0 print:w-full print:shadow-none ${pageBorderClass}`}
           style={mobileCanvasStyle}
         >
           <div

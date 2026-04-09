@@ -30,7 +30,7 @@ import {
 import { Switch } from "@/components/ui/switch";
 import { useIsMobile } from "@/hooks/use-mobile";
 import { allBoardSubjectOptions, boardSubjectsMap } from "@/data/subjectData";
-import { deleteSavedPaper, getSavedPapers, type SavedPaperRecord } from "@/lib/savedPapers";
+import { deleteSavedPaper, getSavedPapers, migrateLegacySavedPapersToDb, type SavedPaperRecord } from "@/lib/savedPapers";
 import { useInstituteSessionStore } from "@/stores/instituteSessionStore";
 import { API_BASE_URL } from "@/lib/api";
 import { useToast } from "@/hooks/use-toast";
@@ -89,6 +89,8 @@ const Dashboard = () => {
   const [activeView, setActiveView] = useState<ActiveView>(() => location.state?.activeView ?? "dashboard");
   const [profile, setProfile] = useState<InstituteProfile | null>(null);
   const [isLoadingProfile, setIsLoadingProfile] = useState(true);
+  const [savedPapersCount, setSavedPapersCount] = useState(0);
+  const [recentActivity, setRecentActivity] = useState<Array<{ title: string; meta: string; time: string }>>([]);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -138,8 +140,6 @@ const Dashboard = () => {
     if (isMobile) setSidebarOpen(false);
   };
 
-  const savedPapersCount = useMemo(() => getSavedPapers().length, []);
-
   const quickStats = [
     { label: "Generated Papers", value: String(savedPapersCount), icon: <ClipboardList className="w-5 h-5" /> },
     { label: "Saved Papers", value: String(savedPapersCount), icon: <FileText className="w-5 h-5" /> },
@@ -154,15 +154,36 @@ const Dashboard = () => {
     { title: "Settings", subtitle: "Account and app settings", icon: <Settings className="w-7 h-7" />, onClick: () => handleNav("settings") },
   ];
 
-  const recentActivity = useMemo(() => {
-    return getSavedPapers()
-      .slice(0, 5)
-      .map((paper) => ({
-        title: paper.title,
-        meta: `${paper.subject} · Class ${paper.className}`,
-        time: paper.date,
-      }));
-  }, []);
+  useEffect(() => {
+    if (!session?.token) return;
+
+    let cancelled = false;
+    const loadSavedPapersMeta = async () => {
+      try {
+        await migrateLegacySavedPapersToDb();
+        const papers = await getSavedPapers();
+        if (cancelled) return;
+
+        setSavedPapersCount(papers.length);
+        setRecentActivity(
+          papers.slice(0, 5).map((paper) => ({
+            title: paper.title,
+            meta: `${paper.subject} · Class ${paper.className}`,
+            time: paper.date,
+          }))
+        );
+      } catch {
+        if (cancelled) return;
+        setSavedPapersCount(0);
+        setRecentActivity([]);
+      }
+    };
+
+    loadSavedPapersMeta();
+    return () => {
+      cancelled = true;
+    };
+  }, [session?.token]);
 
   const sidebarContent = (
     <>
@@ -1023,16 +1044,32 @@ const mapSavedPaperRecordToTablePaper = (paper: SavedPaperRecord): SavedPaper =>
 const SavedPapersView = () => {
   const navigate = useNavigate();
   const [search, setSearch] = useState("");
-  const [savedPapers, setSavedPapers] = useState<SavedPaper[]>(() =>
-    getSavedPapers().map(mapSavedPaperRecordToTablePaper)
-  );
+  const [savedPapers, setSavedPapers] = useState<SavedPaper[]>([]);
   const [entriesPerPage, setEntriesPerPage] = useState(5);
   const [currentPage, setCurrentPage] = useState(1);
   const [openMenuPaperId, setOpenMenuPaperId] = useState<number | null>(null);
   const [menuBtnPos, setMenuBtnPos] = useState<{ top: number; right: number } | null>(null);
 
   useEffect(() => {
-    setSavedPapers(getSavedPapers().map(mapSavedPaperRecordToTablePaper));
+    let cancelled = false;
+    const loadSavedPapers = async () => {
+      try {
+        await migrateLegacySavedPapersToDb();
+        const papers = await getSavedPapers();
+        if (!cancelled) {
+          setSavedPapers(papers.map(mapSavedPaperRecordToTablePaper));
+        }
+      } catch {
+        if (!cancelled) {
+          setSavedPapers([]);
+        }
+      }
+    };
+
+    loadSavedPapers();
+    return () => {
+      cancelled = true;
+    };
   }, []);
 
   useEffect(() => {
@@ -1214,8 +1251,8 @@ const SavedPapersView = () => {
                             </button>
                             <button
                               type="button"
-                              onClick={() => {
-                                deleteSavedPaper(p.id);
+                              onClick={async () => {
+                                await deleteSavedPaper(p.id);
                                 setSavedPapers((prev) => prev.filter((item) => item.id !== p.id));
                                 setOpenMenuPaperId(null);
                               }}
