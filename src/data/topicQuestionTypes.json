@@ -1,0 +1,3364 @@
+{
+  "علم شہریت": {
+    "علم شہریت کا تعارف": ["MCQs", "Short Questions", "Long Questions"],
+    "افراد کے روابط": ["MCQs", "Short Questions", "Long Questions"],
+    "ریاست": ["MCQs", "Short Questions", "Long Questions"],
+    "حکومت": ["MCQs", "Short Questions", "Long Questions"],
+    "شہری اور ریاست": ["MCQs", "Short Questions", "Long Questions"],
+    "(Before any topic)": ["MCQs", "Short Questions", "Long Questions"]
+  },
+  "Biology": {
+    "1.1": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "1.2": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "1.3": [
+      "MCQs",
+      "Short Questions"
+    ],
+    "1.4": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "1.5": [
+      "MCQs",
+      "Short Questions"
+    ],
+    "1.6": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "1.7": [
+      "MCQs",
+      "Short Questions"
+    ],
+    "1.8": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "2.1": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "2.2": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "2.3": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "2.4": [
+      "MCQs",
+      "Short Questions"
+    ],
+    "2.5": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "2.6": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "2.7": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "2.8": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "3.1": [
+      "MCQs",
+      "Short Questions"
+    ],
+    "3.2": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "3.3": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "3.4": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "4.1": [
+      "MCQs",
+      "Short Questions"
+    ],
+    "4.2": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "4.3": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "4.4": [
+      "MCQs",
+      "Short Questions"
+    ],
+    "5.1": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "5.2": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "5.3": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "5.4": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "5.5": [
+      "MCQs",
+      "Short Questions"
+    ],
+    "6.1": [
+      "MCQs",
+      "Short Questions"
+    ],
+    "6.2": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "6.3": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "6.4": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "6.5": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "6.6": [
+      "MCQs",
+      "Short Questions"
+    ],
+    "7.1": [
+      "MCQs",
+      "Short Questions"
+    ],
+    "7.2": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "7.3": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "7.4": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "7.5": [
+      "MCQs",
+      "Short Questions"
+    ],
+    "8.1": [
+      "MCQs",
+      "Short Questions"
+    ],
+    "8.2": [
+      "MCQs",
+      "Short Questions"
+    ],
+    "8.3": [
+      "MCQs",
+      "Short Questions"
+    ],
+    "9.1": [
+      "MCQs",
+      "Short Questions"
+    ],
+    "9.2": [
+      "MCQs",
+      "Short Questions"
+    ],
+    "9.3": [
+      "MCQs",
+      "Short Questions"
+    ],
+    "9.4": [
+      "MCQs",
+      "Short Questions"
+    ],
+    "9.5": [
+      "MCQs",
+      "Short Questions"
+    ],
+    "9.6": [
+      "Short Questions"
+    ],
+    "9.7": [
+      "Short Questions"
+    ],
+    "9.8": [
+      "MCQs",
+      "Short Questions"
+    ],
+    "10.1": [
+      "MCQs",
+      "Short Questions"
+    ],
+    "10.2": [
+      "MCQs",
+      "Short Questions"
+    ],
+    "10.3": [
+      "MCQs",
+      "Short Questions"
+    ],
+    "11.1": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "11.2": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "11.3": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ]
+  },
+  "Chemistry": {
+    "1.1": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "1.2": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "1.3": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "1.6": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "1.4": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "1.5": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "1.7": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "1.8": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "2.1": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "2.2": [
+      "MCQs",
+      "Short Questions"
+    ],
+    "2.3": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "2.4": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "3.1": [
+      "MCQs",
+      "Short Questions"
+    ],
+    "3.2": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "3.3": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "3.4": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "3.5": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "3.6": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "3.7": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "3.8": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "4.1": [
+      "MCQs",
+      "Short Questions"
+    ],
+    "4.2": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "4.3": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "4.4": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "4.5": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "4.6": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "4.7": [
+      "MCQs",
+      "Short Questions"
+    ],
+    "4.8": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "4.9": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "4.0": [
+      "MCQs",
+      "Short Questions"
+    ],
+    "Introduction": [
+      "MCQs",
+      "Short Questions"
+    ],
+    "5.1": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "5.2": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "5.3": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "5.4": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "5.5": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "6.1": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "6.2": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "6.3": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "7.1": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "7.2": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "7.3": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "7.4": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "7.5": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "8.1": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "8.2": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "8.3": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "8.4": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "8.5": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "9.1": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "9.2": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "9.3": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "9.4": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "9.5": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "10.1": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "10.2": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "10.3": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "10.4": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "10.5": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "11.1": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "11.2": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "11.3": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "11.4": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "12.1": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "12.2": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "12.3": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "13.1": [
+      "MCQs",
+      "Short Questions"
+    ],
+    "13.2": [
+      "MCQs",
+      "Short Questions"
+    ],
+    "13.3": [
+      "MCQs",
+      "Short Questions"
+    ],
+    "13.4": [
+      "MCQs",
+      "Short Questions"
+    ],
+    "13.5": [
+      "MCQs",
+      "Short Questions"
+    ],
+    "1.9": [
+      "Short Questions",
+      "Long Questions"
+    ]
+  },
+  "Computer": {
+    "1.1": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "1.2": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "1.3": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "1.4": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "1.5": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "1.6": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "2.1": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "2.2": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "2.3": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "2.4": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "2.5": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "2.6": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "3.1": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "3.2": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "3.3": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "3.4": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "3.5": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "4.1": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "4.2": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "5.1": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "5.2": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "5.3": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "6.1": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "6.2": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "6.3": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "6.4": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "6.5": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "6.6": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "6.7": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "6.8": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "6.9": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "6.10": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "6.11": [
+      "Short Questions",
+      "Long Questions"
+    ],
+    "6.12": [
+      "MCQs",
+      "Short Questions"
+    ],
+    "6.13": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "6.14": [
+      "MCQs"
+    ],
+    "7.0": [
+      "Short Questions"
+    ],
+    "7.1": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "7.2": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "7.3": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "7.4": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "7.5": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "7.6": [
+      "Short Questions",
+      "Long Questions"
+    ],
+    "7.7": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "7.8": [
+      "MCQs"
+    ],
+    "8.1": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "8.2": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "8.3": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "8.4": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "8.5": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "8.6": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "8.7": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "8.8": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "9.1": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "9.2": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "9.3": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "9.4": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "9.5": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "9.6": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "9.7": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "9.8": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "9.9": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "9.10": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "10.1": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "10.2": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "10.3": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "10.4": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "11.1": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "11.2": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "11.3": [
+      "MCQs",
+      "Short Questions"
+    ],
+    "11.4": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "11.5": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "11.6": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "11.7": [
+      "MCQs",
+      "Short Questions"
+    ],
+    "12.1": [
+      "MCQs",
+      "Short Questions"
+    ],
+    "12.2": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "12.3": [
+      "MCQs",
+      "Short Questions"
+    ],
+    "12.4": [
+      "MCQs",
+      "Short Questions"
+    ],
+    "12.5": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "12.6": [
+      "MCQs",
+      "Short Questions"
+    ],
+    "(Before any topic)": [
+      "MCQs", "Short Questions", "Long Questions"
+    ]
+  },
+  "Education": {
+    "تعلیم کا تعارف اور معنی": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "تعلیم کا عمومی تصور": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "تعلیم کا اسلامی تصور": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "علم التعلیم کا دائرہ کار": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "تعلیم کے وظائف": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "نشو نما کے معنی و تعریف": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "شیر خوارگی": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "تعلم کے معنی اور تعریف": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "تعلم میں انفرادی اختلافات": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "گھر،سکول اور معاشرہ کے معنی اور تعریف": [
+      "MCQs",
+      "Short Questions"
+    ],
+    "تعلیم کے متعلقہ ادارے": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "معاشرے کی تشکیل میں تعلیم کا کردار": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "سکول،کمیونٹی اور معاشرے میں تعلق": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "گھر،سکول اور کمیونٹی کے تعلقات میں فروغ کے لیے اقدامات": [
+      "MCQs",
+      "Short Questions"
+    ]
+  },
+  "English": {
+    "The Saviour of Mankind": [
+      "MCQs", "Grammar", "Idioms/Sentences", "Words into Sentences",
+      "Question And Answers", "Translate Into Urdu Paragraph", "Word Meanings", "Summary",
+      "Tick Correct Spellings", "Correct Meaning of Underline Word",
+      "Tick Correct Form of Verb", "Tick Correct According to Grammer"
+    ],
+    "Patriotism": [
+      "MCQs", "Grammar", "Idioms/Sentences", "Words into Sentences",
+      "Question And Answers", "Translate Into Urdu Paragraph", "Word Meanings", "Summary",
+      "Tick Correct Spellings", "Correct Meaning of Underline Word",
+      "Tick Correct Form of Verb", "Tick Correct According to Grammer"
+    ],
+    "Daffodils": [
+      "MCQs", "Grammar", "Question And Answers", "Summary",
+      "Tick Correct Spellings", "Correct Meaning of Underline Word",
+      "Tick Correct Form of Verb", "Tick Correct According to Grammer"
+    ],
+    "Hazrat Asma (رضي الله عنها)": [
+      "MCQs", "Grammar", "Idioms/Sentences", "Words into Sentences",
+      "Question And Answers", "Translate Into Urdu Paragraph", "Word Meanings", "Summary",
+      "Tick Correct Spellings", "Correct Meaning of Underline Word",
+      "Tick Correct Form of Verb", "Tick Correct According to Grammer"
+    ],
+    "Women Empowerment through Entrepreneurship": [
+      "MCQs", "Grammar", "Idioms/Sentences", "Words into Sentences",
+      "Question And Answers", "Translate Into Urdu Paragraph", "Word Meanings", "Summary",
+      "Tick Correct Spellings", "Correct Meaning of Underline Word",
+      "Tick Correct Form of Verb", "Tick Correct According to Grammer"
+    ],
+    "The Value of Time": [
+      "MCQs", "Grammar", "Idioms/Sentences", "Words into Sentences",
+      "Question And Answers", "Translate Into Urdu Paragraph", "Word Meanings", "Summary",
+      "Tick Correct Spellings", "Correct Meaning of Underline Word",
+      "Tick Correct Form of Verb", "Tick Correct According to Grammer"
+    ],
+    "If": [
+      "MCQs", "Grammar", "Question And Answers", "Summary", "Translate Into Urdu Paragraph",
+      "Tick Correct Spellings", "Correct Meaning of Underline Word",
+      "Tick Correct Form of Verb", "Tick Correct According to Grammer"
+    ],
+    "Globalisation's Impact on Culture and Economy": [
+      "MCQs", "Grammar", "Idioms/Sentences", "Words into Sentences",
+      "Question And Answers", "Translate Into Urdu Paragraph", "Word Meanings", "Summary",
+      "Tick Correct Spellings", "Correct Meaning of Underline Word",
+      "Tick Correct Form of Verb", "Tick Correct According to Grammer"
+    ],
+    "Quality Education A Key to Success": [
+      "MCQs", "Grammar", "Idioms/Sentences", "Words into Sentences",
+      "Question And Answers", "Translate Into Urdu Paragraph", "Word Meanings", "Summary",
+      "Tick Correct Spellings", "Correct Meaning of Underline Word",
+      "Tick Correct Form of Verb", "Tick Correct According to Grammer"
+    ],
+    "Wildlife Vignettes Fascinating Nature": [
+      "MCQs", "Grammar", "Idioms/Sentences", "Words into Sentences",
+      "Question And Answers", "Translate Into Urdu Paragraph", "Word Meanings", "Summary",
+      "Tick Correct Spellings", "Correct Meaning of Underline Word",
+      "Tick Correct Form of Verb", "Tick Correct According to Grammer"
+    ],
+    "The Dear Departed (One-Act Play) Stanley Houghton": [
+      "MCQs", "Grammar", "Idioms/Sentences", "Words into Sentences",
+      "Question And Answers", "Translate Into Urdu Paragraph", "Word Meanings", "Summary",
+      "Tick Correct Spellings", "Correct Meaning of Underline Word",
+      "Tick Correct Form of Verb", "Tick Correct According to Grammer"
+    ],
+    "1 Letters": ["Letter Writing"],
+    "2 Stories": ["Story"],
+    "3 Dialogues": ["Dialogue Writing"],
+    "4 Comprehension Paragraphs": ["Comprehension"],
+    "5 Idioms": ["Ideoms", "Words Meanings"],
+    "(Before any topic)": [
+      "MCQs", "Grammar", "Idioms/Sentences", "Words into Sentences",
+      "Question And Answers", "Translate Into Urdu Paragraph", "Word Meanings", "Summary",
+      "Tick Correct Spellings", "Correct Meaning of Underline Word",
+      "Tick Correct Form of Verb", "Tick Correct According to Grammer",
+      "Letter Writing", "Active and Passive Voice", "Stories", "Dialogue Writing",
+      "Comprehension", "Poem Stanzas", "Ideoms", "Fill In Tha Blanks",
+      "Direct and Indirect", "Pair of Words", "Punctuate the Paragraph", "Writing Paragraphs"
+    ]
+  },
+  "Farsi": {
+    ". ترجمہ سورہ الحمد": [
+      "MCQs",
+      "Short Questions",
+      "Grammar",
+      "Word Meanings"
+    ],
+    "نعت": [
+      "MCQs",
+      "Short Questions",
+      "Grammar",
+      "Word Meanings"
+    ],
+    "کلام خدا": [
+      "MCQs",
+      "Short Questions",
+      "Grammar",
+      "Word Meanings"
+    ],
+    "کتاب": [
+      "MCQs",
+      "Short Questions",
+      "Grammar",
+      "Word Meanings"
+    ],
+    "سید علی ہجویریؒ (خلفای رشدین)": [
+      "MCQs",
+      "Short Questions",
+      "Grammar",
+      "Word Meanings"
+    ],
+    "درد صفِ داغگاہ": [
+      "MCQs",
+      "Short Questions",
+      "Grammar",
+      "Word Meanings"
+    ],
+    "امام غزالی (نامہ امام بہ سلطان سنجر سلجوقی)": [
+      "MCQs",
+      "Short Questions",
+      "Grammar",
+      "Word Meanings"
+    ],
+    "مسعود سعد سلطان لاھوری": [
+      "MCQs",
+      "Short Questions",
+      "Grammar",
+      "Word Meanings"
+    ],
+    "جوامع الحکایات": [
+      "MCQs",
+      "Short Questions",
+      "Grammar",
+      "Word Meanings"
+    ],
+    "پندھا(نظم)": [
+      "MCQs",
+      "Short Questions",
+      "Grammar",
+      "Word Meanings"
+    ],
+    "موسی و شبان( نظم)": [
+      "MCQs",
+      "Short Questions",
+      "Grammar",
+      "Word Meanings"
+    ],
+    "سخنان خواجہ نظام الدین اولیاءؒ": [
+      "MCQs",
+      "Short Questions",
+      "Grammar",
+      "Word Meanings"
+    ],
+    "غزالھای خسرو": [
+      "MCQs",
+      "Short Questions",
+      "Grammar",
+      "Word Meanings"
+    ],
+    "مرواریدھایی ازسلک السلوک": [
+      "MCQs",
+      "Short Questions",
+      "Grammar",
+      "Word Meanings"
+    ],
+    "غزلھای حافظ": [
+      "MCQs",
+      "Short Questions",
+      "Grammar",
+      "Word Meanings"
+    ],
+    "گزیدہ ای ازبھارستان": [
+      "MCQs",
+      "Short Questions",
+      "Grammar",
+      "Word Meanings"
+    ],
+    "گزیدہ ای ازتوزک جھانگیری": [
+      "MCQs",
+      "Short Questions",
+      "Grammar",
+      "Word Meanings"
+    ],
+    "حضرت سچل سر مستؒ": [
+      "MCQs",
+      "Short Questions",
+      "Grammar",
+      "Word Meanings"
+    ],
+    "دردبہ پاکستان": [
+      "MCQs",
+      "Short Questions",
+      "Grammar",
+      "Word Meanings"
+    ],
+    "در کلاس": [
+      "MCQs",
+      "Short Questions",
+      "Word Meanings"
+    ],
+    "فاطمہ جناح": [
+      "MCQs",
+      "Short Questions",
+      "Grammar",
+      "Word Meanings"
+    ],
+    "محاورہ بین خداوانسان": [
+      "MCQs",
+      "Short Questions",
+      "Grammar",
+      "Word Meanings"
+    ],
+    "داستان پرواز": [
+      "MCQs",
+      "Short Questions",
+      "Grammar",
+      "Word Meanings"
+    ],
+    "آمدبھاران": [
+      "MCQs",
+      "Short Questions",
+      "Grammar",
+      "Word Meanings"
+    ],
+    "نامہ ای بہ پسرم": [
+      "MCQs",
+      "Short Questions",
+      "Grammar",
+      "Letter Writing",
+      "Word Meanings"
+    ],
+    "غزل": [
+      "MCQs",
+      "Short Questions",
+      "Grammar",
+      "Word Meanings"
+    ],
+    "راشد منھاس،نشان حیدر": [
+      "MCQs",
+      "Short Questions",
+      "Grammar",
+      "Word Meanings"
+    ],
+    "ارزشِ روزش": [
+      "MCQs",
+      "Short Questions",
+      "Grammar",
+      "Word Meanings"
+    ],
+    "درکتابخانہ": [
+      "MCQs",
+      "Short Questions",
+      "Grammar",
+      "Word Meanings"
+    ],
+    "گرائمر": [
+      "Grammar",
+      "Letter Writing",
+      "Translation"
+    ],
+    "(Before any topic)": [
+      "Grammar"
+    ]
+  },
+  "Gaza Aur Gazaiyat": {
+    "غذااورغذائیت کا تعارف": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "توانائی اورغذائی اجزاء": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "متوازن غذا": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "غذاؤں کی اجزائےترکیبی": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "اشیائےخوردنی کی خریداری اورسٹورکرنا": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ]
+  },
+  "General Science": {
+    "1.1": [
+      "MCQs",
+      "Short Questions"
+    ],
+    "اسلام میں سائنس کا تصور 1.2": [
+      "MCQs",
+      "Short Questions"
+    ],
+    "مسلم اور پاکستانی سائنسدانوں کی خدمات 1.3": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "سائنس کی شاخیں 1.4": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "زندگی کے بنیادی تعمیراتی ایلیمنٹس 2.1": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "کاربن اور اُس کی اہمیت 2.2": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "نامیاتی کیمیا 2.3": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "پانی 2.4": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "ہوا 2.5": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "زندگی کے لیے اہم ایلیمنٹس 2.6": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "میٹابولزم 3.1": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "انزائمز 3.2": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "خون اور اُسکے افعال 3.3": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "ڈی این اے بطور وراثتی مادہ 3.4": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "فصلوں کی بہتری میں بائیو ٹیکنالوجی کا کردار 3.6": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "اینٹی بائیوٹکس اور ویکسینز 3.7": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "غذا اور اُس کے اجزا 4.1": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "غذا اور انرجی 4.2": [
+      "MCQs"
+    ],
+    "متوازن غذا 4.3": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "جسمانی افعال میں کوآرڈینیشن 4.4": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "انسانی زندگی کے مختلف مراحل 4.5": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "جراثیم سے پیدا ہونے والی بیماریاں 5.1": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "جراثیم کا پھیلاؤ 5.2": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "جراثیم سے بچاؤ 5.3": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "دھواں اور تمباکو نوشی کے مضر اثرات 5.4": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "دماغی بیماریاں 5.5": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "ڈرگ 5.6": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "زمین کا ایٹما سفیئر 6.1": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "ماحول کی آلودگی 6.2": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "معدنیات اور فوسل فیولز 6.3": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "زراعت اور پاکستان کی فصلیں 6.4": [
+      "MCQs",
+      "Long Questions"
+    ],
+    "ڈیری اور پولٹری فارمنگ 6.5": [
+      "MCQs",
+      "Long Questions"
+    ],
+    "جنگلی حیات اور نیشنل پارکس 6.6": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "اضافہ آبادی کے ماحول پر اثرات 6.7": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "(Before any topic)": [
+      "Long Questions"
+    ]
+  },
+  "Home Economics": {
+    "ہوم اکنامکس کی تعریف": [
+      "MCQs",
+      "Short Questions"
+    ],
+    "ہوم اکنامکس کے اغراض و مقاصد": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "ہوم اکنامکس کا دیگر مضامین سے تعلق": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "خاندان اور معاشرے میں ہوم اکنامکس کا کردار اور ذمہ داریاں": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "غذا اور غذائیت کی تعریف": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "نقص غذائیت کے اثرات": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "غذا کے کام": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "بنیادی غذائی اجزاء کا مطالعہ": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "خوراک اور صحت": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "متوازن غذا کی تعریف": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "بنیادی غذائی گروہ": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "افراد کی غذائی ضروریات": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "کھانا پکانا": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "کھانا پیش کرنا": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "خوراک سٹور کرنا": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "باورچی خانے میں حفاظتی تد بیر اور اقدامات": [
+      "MCQs"
+    ],
+    "انسانی نشونما کے معنی اور تعریف": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "انسانی نشونما کے مطالعہ کی اہمیت": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "نوزائیدگی کا دور": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "شیر خوارگی": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "ابدتائی بچپن": [
+      "MCQs",
+      "Short Questions"
+    ],
+    "درمیانی بچپن": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "نو بلوغت": [
+      "MCQs"
+    ],
+    "رویوں کے مسائل کی تعریف اور اقسام": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "رویوں کے مسائل کی وجوہات": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "رویوں کے مسائل کی روک تھام اور ان کا حل": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "والدین اور بچوں کے تعلقات": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "ہم عمروں سے تعلقات": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "بہن بھائیوں سے تعلقات": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "نگران کا کردار": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ]
+  },
+  "Ikhlaqiat": {
+    "مذاہب کی ذاتی اور نفسیاتی اہمیت": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "مذہب،سماج اور اخلاق": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "جین مت- تعارف اور ارتقا": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "خدا کی عظمت": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "عبادت گاہ اور نظام ہائے عبادت کا انسانی رویوں پر اثر": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "عبادت گاہوں کے آداب": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "عوامی مقامات کے آداب": [
+      "MCQs",
+      "Short Questions"
+    ],
+    "امام غزالیؒ": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "فلورنس نائیٹ انگیل": [
+      "MCQs",
+      "Short Questions"
+    ]
+  },
+  "Islamiyat Ikhtayari": {
+    "آیت نمبر :1": [
+      "MCQs",
+      "Short Questions",
+      "Ayat"
+    ],
+    "آیت نمبر :2": [
+      "MCQs",
+      "Short Questions",
+      "Ayat"
+    ],
+    "آیت نمبر :3": [
+      "MCQs",
+      "Short Questions",
+      "Ayat"
+    ],
+    "آیت نمبر :4": [
+      "MCQs",
+      "Short Questions",
+      "Ayat"
+    ],
+    "آیت نمبر :5": [
+      "MCQs",
+      "Short Questions",
+      "Ayat"
+    ],
+    "آیت نمبر :6": [
+      "MCQs",
+      "Short Questions",
+      "Ayat"
+    ],
+    "آیت نمبر :7": [
+      "MCQs",
+      "Short Questions",
+      "Ayat"
+    ],
+    "آیت نمبر :8": [
+      "MCQs",
+      "Short Questions",
+      "Ayat"
+    ],
+    "آیت نمبر :9": [
+      "MCQs",
+      "Short Questions",
+      "Ayat"
+    ],
+    "آیت نمبر :10": [
+      "MCQs",
+      "Short Questions",
+      "Ayat"
+    ],
+    "حدیث نمبر :1": [
+      "MCQs",
+      "Short Questions",
+      "Hadith"
+    ],
+    "حدیث نمبر :2": [
+      "MCQs",
+      "Short Questions",
+      "Hadith"
+    ],
+    "حدیث نمبر :3": [
+      "MCQs",
+      "Short Questions",
+      "Hadith"
+    ],
+    "حدیث نمبر :4": [
+      "MCQs",
+      "Short Questions",
+      "Hadith"
+    ],
+    "حدیث نمبر :5": [
+      "MCQs",
+      "Short Questions",
+      "Hadith"
+    ],
+    "حدیث نمبر :6": [
+      "MCQs",
+      "Short Questions",
+      "Hadith"
+    ],
+    "حدیث نمبر :7": [
+      "MCQs",
+      "Short Questions",
+      "Hadith"
+    ],
+    "حدیث نمبر :8": [
+      "MCQs",
+      "Short Questions",
+      "Hadith"
+    ],
+    "حدیث نمبر :9": [
+      "MCQs",
+      "Short Questions",
+      "Hadith"
+    ],
+    "حدیث نمبر :10": [
+      "MCQs",
+      "Short Questions",
+      "Hadith"
+    ],
+    "حدیث نمبر :11": [
+      "MCQs",
+      "Short Questions",
+      "Hadith"
+    ],
+    "حدیث نمبر :12": [
+      "MCQs",
+      "Short Questions",
+      "Hadith"
+    ],
+    "القرآن": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "رسالت کا مفہوم، منصب اور اس کی عظمت": [
+      "MCQs",
+      "Short Questions"
+    ],
+    "انبیاء کرام کی تبلیغی مساعی": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "آنحضورﷺ کی تکمیل فریضہ رسالت": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "ختم نبوت": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "آنحضورﷺ کا پاکیزہ کردار": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "اخلاق نبویﷺ": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "کلمہ": [
+      "MCQs",
+      "Long Questions"
+    ],
+    "اسم نکرہ و اسم معرفہ": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "مذکر مونث (مونث لفظی و مونث معنوی)": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "مفرد، تثنیہ، جمع": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "جمع کی قسمیں (جمع مکسرو جمع سالم)": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "جمع کی سالم قسمیں (جمع مذکر سالم و مونث سالم)": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ]
+  },
+  "Islamiyat Lazmi": {
+    "1.1": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "1.2": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "1.3": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions",
+      "Hadith"
+    ],
+    "2.1": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "2.2": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "2.3": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "2.4": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "2.5": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "2.6": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "2.7": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "2.8": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "2.9": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "3.1": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "3.2": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "3.3": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "3.4": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "3.5": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "3.6": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "3.7": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "3.8": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "3.9": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "3.10": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "3.11": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "3.12": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "4.1": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "4.2": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "4.3": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "4.4": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "4.5": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "4.6": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "4.7": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "4.8": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "4.9": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "5.1": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "5.2": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "5.3": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "5.4": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "5.5": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "5.6": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "6.1": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions",
+      "Shakhsiyaat"
+    ],
+    "6.2": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions",
+      "Shakhsiyaat"
+    ],
+    "6.3": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions",
+      "Shakhsiyaat"
+    ],
+    "6.4": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions",
+      "Shakhsiyaat"
+    ],
+    "6.5": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions",
+      "Shakhsiyaat"
+    ],
+    "6.6": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions",
+      "Shakhsiyaat"
+    ],
+    "6.7": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions",
+      "Shakhsiyaat"
+    ],
+    "6.8": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions",
+      "Shakhsiyaat"
+    ],
+    "6.9": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions",
+      "Shakhsiyaat"
+    ],
+    "6.10": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions",
+      "Shakhsiyaat"
+    ],
+    "6.11": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions",
+      "Shakhsiyaat"
+    ],
+    "7.1": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "7.2": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "7.3": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "7.4": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "(Before any topic)": [
+      "MCQs", "Short Questions", "Long Questions",
+      "Hadith", "Ahadees", "Shakhsiyaat", "Shakhsiyat"
+    ]
+  },
+  "Maashiyat": {
+    "معاشیات کا تعارف": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "معاشیات کا نفسِ مضمون": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "طلب": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "رسد": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "توازن اور قیمت کا تعین": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "منڈی اور پیدائش دولت": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "پاکستان کے معاشی مسائل اور ان کا حل": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ]
+  },
+  "Murgbani": {
+    "مرغبانی کا تعارف و اہمیت": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "مرغ کا جسم اور مختلف اعضاء": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "مرغیوں کی نسلیں": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "ہیچری کے انتظامات": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "مرغی خانے کی عمارت": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "مرغی خانے کا سامان": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ]
+  },
+  "Pakistan Studies": {
+    "Definition, Sources and Significance of Ideology": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "Meaning of Ideology of Pakistan": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "Elements of Ideology of Pakistan": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "Two-Nation Theory: Origin and Evolution": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "Allama Iqbal, Quaid-e-Azam and Ideology of Pakistan": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "Background of Pakistan Movement": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "Early Problems": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "Quaid-e-Azam & Liaqat Ali Khan Role and Achievements": [
+      "MCQs",
+      "Short Questions"
+    ],
+    "Objective Resolution": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "Constitutional Stages in Pakistan": [
+      "MCQs",
+      "Short Questions"
+    ],
+    "Accession of States and Tribal Areas to Pakistan": [
+      "MCQs"
+    ],
+    "Ayub Khan Era, 1958-1969": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "Economic Development": [
+      "MCQs",
+      "Short Questions"
+    ],
+    "Five Year Development Plans of Ayub Khan's Era": [
+      "MCQs",
+      "Short Questions"
+    ],
+    "Yahya Khan Regime, 1969-71": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "Separation of East Pakistan and Emergence of Bangladesh": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "Location of Pakistan": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "Physical Features of Pakistan": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "Climate of Pakistan": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "Major Glaciers and Rivers of Pakistan": [
+      "MCQs",
+      "Short Questions"
+    ],
+    "Forests and Wildlife in Pakistan": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "Natural Regions of Pakistan": [
+      "MCQs",
+      "Short Questions"
+    ],
+    "Major Environmental Hazards and their Remedies": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "Women's Right is Islam in the Light of Quran and Sunnah": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "Women's Role in Pakistan Movement": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "Women's Contribution in National Development from 1947 Till Now": [
+      "MCQs",
+      "Long Questions"
+    ],
+    "Definition of Violence and Violence Against Women": [
+      "MCQs",
+      "Short Questions"
+    ],
+    "Government's efforts to Address the Issue of Violence Against Women in Pakistan": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ]
+  },
+  "Parcha Bafi Aur Labas": {
+    "1.1": [
+      "MCQs",
+      "Short Questions"
+    ],
+    "1.2": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "1.3": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "1.4": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "2.1": [
+      "MCQs",
+      "Short Questions"
+    ],
+    "2.2": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "2.3": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "3.1": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "3.2": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "3.3": [
+      "MCQs",
+      "Short Questions"
+    ],
+    "4.1": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "5.1": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "5.2": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "6.1": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "6.2": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "6.3": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "7.1": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "7.2": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "7.3": [
+      "Short Questions",
+      "Long Questions"
+    ]
+  },
+  "Physical Education": {
+    "تعلیم جسمانی کی تعریف": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "حرکات": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "تعلیمی جمناسٹک": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "قامت": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "منظم کھیل": [
+      "MCQs",
+      "Short Questions"
+    ],
+    "اتھلیٹکس کے قوانین اور بنیادی مہارتیں": [
+      "MCQs",
+      "Short Questions"
+    ],
+    "علم الصحت اور اس کی وسعت": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "شخصی حفظان صحت": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "جسم کے حرکاتی کل پرزے": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ]
+  },
+  "Physics": {
+    "1.1": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "1.2": [
+      "Short Questions",
+      "Long Questions"
+    ],
+    "1.3": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "1.4": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "1.5": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "1.6": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "1.7": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "1.8": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "1.9": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "1.10": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "1.11": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "1.12": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "1.13": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "2.1": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "2.2": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "2.3": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "2.4": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "2.5": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "2.6": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "2.7": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "2.8": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "2.9": [
+      "MCQs",
+      "Long Questions"
+    ],
+    "2.10": [
+      "MCQs",
+      "Long Questions"
+    ],
+    "2.11": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "2.12": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "2.13": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "3.1": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "3.2": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "3.3": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "3.4": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "3.5": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "3.6": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "3.7": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "3.8": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "3.9": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "3.10": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "4.1": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "4.2": [
+      "MCQs",
+      "Short Questions"
+    ],
+    "4.3": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "4.4": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "4.5": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "4.6": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "4.7": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "4.8": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "4.9": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "4.10": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "4.11": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "4.12": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "4.13": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "4.14": [
+      "Short Questions"
+    ],
+    "5.1": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "5.2": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "5.3": [
+      "Short Questions",
+      "Long Questions"
+    ],
+    "5.4": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "5.5": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "5.6": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "5.7": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "5.8": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "6.1": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "6.2": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "6.3": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "6.4": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "6.5": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "6.6": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "6.7": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "6.8": [
+      "Short Questions",
+      "Long Questions"
+    ],
+    "6.9": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "7.1": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "7.2": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "7.3": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "7.4": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "7.5": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "8.1": [
+      "MCQs",
+      "Short Questions"
+    ],
+    "8.2": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "8.3": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "8.4": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "8.5": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "8.6": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "8.7": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "8.8": [
+      "MCQs",
+      "Short Questions"
+    ],
+    "8.9": [
+      "Short Questions"
+    ],
+    "8.10": [
+      "MCQs",
+      "Short Questions"
+    ],
+    "8.11": [
+      "MCQs",
+      "Short Questions"
+    ],
+    "9.1": [
+      "MCQs",
+      "Short Questions"
+    ],
+    "9.2": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "9.3": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "9.4": [
+      "MCQs",
+      "Short Questions"
+    ],
+    "9.5": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "9.6": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "(Before any topic)": [
+      "MCQs", "Short Questions", "Long Questions"
+    ]
+  },
+  "Punjabi": {
+    "ذات نبیﷺدی رحمت جھڑیاں": [
+      "MCQs",
+      "Short Questions"
+    ],
+    "لمیاں اُڈیکاں": [
+      "MCQs",
+      "Short Questions"
+    ],
+    "قائداعظم بارے کجھ یاد گار واقعے": [
+      "MCQs",
+      "Short Questions"
+    ],
+    "آسرا": [
+      "MCQs",
+      "Short Questions"
+    ],
+    "حضرت نوشہ گنج بخش": [
+      "MCQs",
+      "Short Questions"
+    ],
+    "ہن کوئی دیوا نہیں بلدا": [
+      "MCQs",
+      "Short Questions"
+    ],
+    "حمد": [
+      "MCQs",
+      "Short Questions",
+      "Poetry"
+    ],
+    "نعت": [
+      "MCQs",
+      "Short Questions",
+      "Poetry"
+    ],
+    "کافی": [
+      "MCQs",
+      "Short Questions",
+      "Poetry"
+    ],
+    "ابیات باہو": [
+      "MCQs",
+      "Short Questions",
+      "Poetry"
+    ],
+    "کر کتن ول دھیان کڑے": [
+      "MCQs",
+      "Short Questions",
+      "Poetry"
+    ],
+    "غفلت نامہ": [
+      "MCQs",
+      "Short Questions",
+      "Poetry"
+    ],
+    "کلام وارث شاہ": [
+      "MCQs",
+      "Short Questions",
+      "Poetry"
+    ],
+    "دوہڑے": [
+      "MCQs",
+      "Short Questions",
+      "Poetry"
+    ],
+    "استغفار": [
+      "MCQs",
+      "Short Questions",
+      "Poetry"
+    ],
+    "حضرت یوسف دا خواب": [
+      "MCQs",
+      "Short Questions",
+      "Poetry"
+    ],
+    "عید": [
+      "MCQs",
+      "Short Questions",
+      "Poetry"
+    ],
+    "مولا بخش کشتہ": [
+      "MCQs",
+      "Short Questions",
+      "Poetry"
+    ],
+    "پیر فضل گجراتی": [
+      "MCQs",
+      "Short Questions",
+      "Poetry"
+    ],
+    "حکیم شیر محمد ناصر": [
+      "MCQs",
+      "Short Questions",
+      "Poetry"
+    ],
+    "شریف کنجاہی": [
+      "MCQs",
+      "Short Questions",
+      "Poetry"
+    ],
+    "خطوط": [
+      "Letter Writing"
+    ],
+    "کہانیاں": [
+      "Story"
+    ],
+    "مذکر مونث واحد جمع": [
+      "MCQs",
+      "Wahid Jama",
+      "Muzakir Monas"
+    ],
+    "(Before any topic)": [
+      "MCQs", "Short Questions",
+      "Ashar Ki Tashreeh", "Letter Writing", "Muzakir Monas",
+      "Paragraph Ki Tashreeh", "Story", "Wahid Jama", "Words into Sentences"
+    ]
+  },
+  "Tarjuma tul Quran": {
+    "سُورَۃُ مَریَمِ": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions",
+      "Ayat",
+      "Word Meanings"
+    ],
+    "سُورَۃُ طٰہٰ": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions",
+      "Ayat",
+      "Word Meanings"
+    ],
+    "سُورَۃُ الاَنبِیَاءِ": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions",
+      "Ayat",
+      "Word Meanings"
+    ],
+    "سُورَۃُ الَحَجّ": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions",
+      "Ayat",
+      "Word Meanings"
+    ],
+    "سُورَۃُ الفُرقَانَ": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions",
+      "Ayat",
+      "Word Meanings"
+    ],
+    "سُورَۃُ الشّعَرَآءِ": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions",
+      "Ayat"
+    ],
+    "سُورَۃُ النُّملِ": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions",
+      "Ayat"
+    ],
+    "سُورَۃُ القَصَصِ": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions",
+      "Ayat"
+    ],
+    "سُورَۃُ العَنکَبُوتَ": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions",
+      "Ayat"
+    ],
+    "سُورَۃُ الرُّومہِ": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions",
+      "Ayat"
+    ],
+    "سُورَۃُ لُقمنَ": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions",
+      "Ayat"
+    ],
+    "سُورَۃُ السَّجدَۃِ": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions",
+      "Ayat"
+    ],
+    "سُورَۃُ سَبَاِِ": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions",
+      "Ayat"
+    ],
+    "سُورَۃُ فَاطِرِِ": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions",
+      "Ayat"
+    ],
+    "سُورَۃُ یَس": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions",
+      "Ayat"
+    ],
+    "سُورَۃُ الصّٰفّٰتِ": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "سُورَۃُ صٓ": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "سُورَۃُ الاَحقَافِ": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions",
+      "Ayat",
+      "Word Meanings"
+    ],
+    "(Before any topic)": [
+      "MCQs", "Short Questions", "Long Questions",
+      "Ayat", "Word Meanings"
+    ]
+  },
+  "Urdu": {
+    "اخلاق حسنہ": [
+      "MCQs",
+      "Short Questions",
+      "Tafheem Ibarat",
+      "Ilfaz Ko Jumlo Mein Istamal",
+      "Summary",
+      "Ilfaz Maani"
+    ],
+    "اپنی مدد آپ": [
+      "MCQs",
+      "Short Questions",
+      "Tafheem Ibarat",
+      "Ilfaz Ko Jumlo Mein Istamal",
+      "Summary",
+      "Ilfaz Maani"
+    ],
+    "کلیم اور مرزا ظاہر دار بیگ": [
+      "MCQs",
+      "Short Questions",
+      "Tafheem Ibarat",
+      "Ilfaz Ko Jumlo Mein Istamal",
+      "Summary",
+      "Ilfaz Maani"
+    ],
+    "نام دیو-مالی": [
+      "MCQs",
+      "Short Questions",
+      "Tafheem Ibarat",
+      "Summary"
+    ],
+    "آرام و سکون": [
+      "MCQs",
+      "Short Questions",
+      "Tafheem Ibarat",
+      "Summary"
+    ],
+    "کتبہ": [
+      "MCQs",
+      "Short Questions",
+      "Tafheem Ibarat",
+      "Ilfaz Ko Jumlo Mein Istamal",
+      "Summary",
+      "Ilfaz Maani"
+    ],
+    "ابتدائی حساب": [
+      "MCQs",
+      "Short Questions",
+      "Tafheem Ibarat",
+      "Summary"
+    ],
+    "لڑی میں پروے ہوئے منظر": [
+      "MCQs",
+      "Short Questions",
+      "Tafheem Ibarat",
+      "Summary"
+    ],
+    "بھیڑیا": [
+      "MCQs",
+      "Short Questions",
+      "Tafheem Ibarat",
+      "Summary"
+    ],
+    "حوصلہ نہ ہارو آگے بڑھو منزل اب کے دور نہیں": [
+      "MCQs",
+      "Short Questions",
+      "Tafheem Ibarat",
+      "Summary"
+    ],
+    "حمد": [
+      "MCQs",
+      "Short Questions",
+      "Poetry"
+    ],
+    "نعت": [
+      "MCQs",
+      "Short Questions",
+      "Poetry"
+    ],
+    "محنت کی برکت": [
+      "MCQs",
+      "Short Questions",
+      "Poetry"
+    ],
+    "جاوید کے نام": [
+      "MCQs",
+      "Short Questions",
+      "Poetry"
+    ],
+    "پیام لطیف": [
+      "MCQs",
+      "Short Questions",
+      "Poetry"
+    ],
+    "کرکٹ اور مشاعرہ": [
+      "MCQs",
+      "Short Questions",
+      "Poetry"
+    ],
+    "فقیرا نہ آئے صدا کر چلے": [
+      "MCQs",
+      "Short Questions",
+      "Poetry"
+    ],
+    "سن تو سہی جہاں میں ہے تیرا افسانہ کیا": [
+      "MCQs",
+      "Short Questions",
+      "Poetry"
+    ],
+    "غم ہے یا خوشی ہے تو": [
+      "MCQs",
+      "Short Questions",
+      "Poetry"
+    ],
+    "کاش طوفاں میں سفینے کو اتارا ہو": [
+      "MCQs",
+      "Short Questions",
+      "Poetry"
+    ],
+    "واحد / جمع": [
+      "MCQs"
+    ],
+    "مذکر / مونث": [
+      "MCQs"
+    ],
+    "الفاظ / متضاد": [
+      "MCQs"
+    ],
+    "الفاظ / مترادف": [
+      "MCQs"
+    ],
+    "اُردو (ب)": [
+      "MCQs",
+      "Short Questions",
+      "Ashaar Ki Tashreeh"
+    ],
+    "غلط محاورات / جملوں کی درستگی": [
+      "Jumlo Ki Darustagi"
+    ],
+    "محاورات کی تکمیل": [
+      "Jumlo Ki Takmeel"
+    ],
+    "خطوط": [
+      "Letter Writing"
+    ],
+    "کہانیاں": [
+      "Story"
+    ],
+    "مکالمے": [
+      "Mukalmy"
+    ],
+    "درخواستیں": [
+      "Application Writing"
+    ],
+    "(Before any topic)": [
+      "MCQs", "Short Questions",
+      "Araab Lagaein", "Ashaar Ki Tashreeh", "Application Writing",
+      "Ilfaz Ko Jumlo Mein Istamal", "Ilfaz Maani", "Ilfaz Mutaradif", "Ilfaz Mutazad",
+      "Jumlo Ki Darustagi", "Jumlo Ki Takmeel", "Khali Jaga Pur Karein",
+      "Letter Writing", "Markazi Khayal", "Mukalmy", "Muzakir Monas",
+      "Paragraph Ki Tashreeh", "Story", "Summary", "Tafheem Ibarat", "Wahid Jama"
+    ]
+  }
+}

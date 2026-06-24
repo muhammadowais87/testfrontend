@@ -101,8 +101,9 @@ const TeacherDashboard = () => {
             teacherId: data.subUser?.subUserId,
             name: data.subUser?.name || session.name || "Sub User",
             email: data.subUser?.email || session.email || "",
-            schoolName: data.subUser?.schoolName || session.schoolName,
+            schoolName: data.subUser?.portalSettings?.schoolName || data.subUser?.schoolName || session.schoolName,
             monthlyPayments: [],
+            portalSettings: data.subUser?.portalSettings || {},
           });
         } else {
           setProfile({

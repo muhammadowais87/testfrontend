@@ -48,7 +48,7 @@ const Footer = () => {
         </div>
 
         <div className="text-center text-sm opacity-60">
-          © 2026 Apex Test Solution. All Rights Reserved.
+          © 2027 Apex Test Solution. All Rights Reserved.
         </div>
       </div>
     </footer>

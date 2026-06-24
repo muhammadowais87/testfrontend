@@ -1,0 +1,4043 @@
+1.1 mcqs
+1.1 Software Development
+Additional	1.	Which of the following is NOT part of software development:
+(A)Writing code(B)Testing the software(C)Installing hardware(D)Fixing issues in the program
+Additional	2.	Creating computer programs to perform specific tasks is called:
+(A)Designing a software(B)software development(C)coding(D)SDLC
+
+1.1 short
+1.1 Software Development
+1	.	What is software development?
+Additional
+
+1.2 mcqs
+1.2 Introduction to Software Development Life Cycle (SDLC)
+Exercise	1.	Primary purpose of the Software Development Life Cycle (SDLC) is to:
+(A)design websites(B)deliver high-quality software within time and cost estimates(C)manage database systems(D)create hardware components
+Exercise	2.	A type of requirement specifying system performance:
+(A)Functional Requirements(B)Non-Functional Requirements(C)Technical Requirements(D)Operational Requirements
+Exercise	3.	Role of a framework in the context of SDLC is to:
+(A)write code from scratch(B)provide a structured foundation with predefined components andarchitectures(C)manage hardware(D)perform manual testing
+Additional	4.	A reusable set of tools, concepts, and practices for software development is called:
+(A)software framework(B)software development(C)SDLC(D)testing
+Additional	5.	What does SDLC stand for:
+(A)Software Data Logic Control(B)System Design Language Code(C)Software Development Life Cycle(D)Standardized Development Logic Chain
+Additional	6.	What is an example of a software development framework for websites:
+(A)Windows(B)Django(C)Excel(D)Java
+Additional	7.	What is the benefit of using a framework in software development:
+(A)increases project costs(B)reduces code efficiency(C)eliminates the need for testing(D)promotes reusability and consistency
+Additional	8.	What happens during the requirement gathering phase of SDLC:
+(A)Software is tested for bugs(B)Developers write the final code(C)Needs and expectations of users are collected(D)Maintenance of software begins
+Additional	9.	Which of the following is a method used during requirement gathering:
+(A)Coding(B)Encryption(C)Document review(D)Debugging
+Additional	10.	Requirements that describe what the system should do are called ..........:
+(A)functional requirements(B)non-functional requirements(C)important requirements(D)not important requirements
+Additional	11.	How the system performs its functions is called:
+(A)functional requirements(B)non-functional requirements(C)important requirements(D)not important requirements
+Additional	12.	What does the term "reliability" mean in non-functional requirements:
+(A)System can run games(B)System has modern interface(C)System is available 99.9% of the time(D)System supports only one user
+Additional	13.	In which phase of SDLC weplan how the software will look and work SDLC:
+(A)Design(B)coding(C)modeling(D)testing
+Additional	14.	To show how different parts of the software connect and work together is called:
+(A)develop Models(B)requiremnts gathering(C)tesing(D)creating diagrams
+Additional	15.	In the design phase whichrepresent the structure and interface of the software:
+(A)creating diagrams(B)develop models(C)testing(D)flow charts
+Additional	16.	Which of following involve deciding how components will interact and work together:
+(A)software architecture(B)develop models(C)create diagrams(D)testing
+Additional	17.	Which ensures all features are clearly defined and planned :
+(A)create diagrams(B)specifying requirements(C)develop models(D)deployment
+Additional	18.	Which phase ensures the software works as expected before deployment:
+(A)Requirement gathering(B)Design(C)Testing(D)Maintenance
+Additional	19.	Who is primarily responsible for the development phase in SDLC:
+(A)Testers(B)Stakeholders(C)Programmers(D)Designers
+Additional	20.	In which phase of SDLC software specifications are converted into a programming language:
+(A)coding(B)Design(C)Testing(D)Maintenance
+Additional	21.	What type of testing would be used to evaluate software speed during heavy usage:
+(A)Performance Testing(B)Unit Testing(C)Functionality Testing(D)Manual Testing
+Additional	22.	Which type of testing checks if the software behaves correctly on iOS, Android, and Windows:
+(A)Functionality Testing(B)Performance Testing(C)Compatibility Testing(D)Security Testing
+Additional	23.	Which type of testing checks if the software works on various devices and operating systems:
+(A)Functionality Testing(B)Performance Testing(C)Security Testing(D)Compatibility Testing
+Additional	24.	What type of testing would be used to measuring software response under various conditions:
+(A)Performance Testing(B)Unit Testing(C)Functionality Testing(D)Manual Testing
+Additional	25.	In which phase of SDLC making the software available for use:
+(A)coding(B)desiginig(C)tesing(D)deployment
+Additional	26.	Copying files and setting up configurations during deployment involve:
+(A)installation(B)configurations(C)real-world testing(D)Testing source code
+Additional	27.	To adjust settings for user or organization needs during deployment involve:
+(A)installation(B)configurations(C)real-world testing(D)Testing source code
+Additional	28.	Integration with other systems and user satisfaction during deployment involve:
+(A)installation(B)configurations(C)real-world testing(D)Testing source code
+Additional	29.	Which phase of SDLC ensures long-term functionality and adaptation:
+(A)designing(B)coding(C)testing(D)maintenance
+
+
+1.2 short
+1.2 Introduction to Software Development Life Cycle (SDLC)
+1	.	Differentiate between functional and non-functional requirements.
+Exercise
+2	.	Explain why the testing phase is important in the Software Development Life Cycle (SDLC), and provide two reasons for its significance.
+Exercise
+3	.	Define Software Development Life Cycle (SDLC).
+Additional
+4	.	What is the purpose of SDLC?
+Additional
+5	.	What is a framework in software engineering?
+Additional
+6	.	What does SDLC stand for?
+Additional
+7	.	How does a framework help improve software quality?
+Additional
+8	.	What is the goal of the requirement gathering phase?
+Additional
+9	.	What are the three main activities involved in requirements gathering?
+Additional
+10	.	What are functional requirements in software development?
+Additional
+11	.	What are non-functional requirements?
+Additional
+12	.	What is the purpose of the design phase in software development?
+Additional
+13	.	What do diagrams in the design phase represent?
+Additional
+14	.	What is the purpose of creating flowcharts during design?
+Additional
+15	.	Why are models developed in the design phase?
+Additional
+16	.	What is planned during the architecture step?
+Additional
+17	.	What is the purpose of software testing?
+Additional
+18	.	What does functionality testing check?
+Additional
+19	.	What is performance testing in software development?
+Additional
+20	.	Why is compatibility testing important?
+Additional
+21	.	What is software deployment?
+Additional
+22	.	What happens during the installation step of deployment?
+Additional
+23	.	What is configuration in the deployment process?
+Additional
+24	.	Why is real-world testing important after deployment?
+Additional
+25	.	What is the purpose of the maintenance phase?
+Additional
+26	.	How many types of testing? write their names.
+Additional
+27	.	How many phases of SDLC? write their names.
+Additional
+
+1.3 mcqs
+1.3 Software Developnient Methodologies
+Exercise	1.	Software development model involving short cycles or sprints:
+(A)Waterfall Model(B)Agile Methodology(C)Lean Software Development(D)Scrum
+Additional	2.	Which of the following is NOT a benefit of software process models:
+(A)Predictability(B)Efficiency(C)Quality(D)Unlimited budgets
+Additional	3.	Abstract representations of software development processes is called:
+(A)software process models(B)software development(C)Methodologies(D)software quality
+Additional	4.	Structured approaches to guide software projects are called :
+(A)software development methodologies(B)Programming languages(C)SDLC(D)software development
+Additional	5.	How do software process models help in software development:
+(A)By avoiding project planning(B)By randomly assigning tasks(C)By predicting outcomes and managing risks(D)By skipping testing phases
+Additional	6.	A linear and sequential development model is called:
+(A)Agile Methodology(B)process model(C)software development(D)Waterfall Model
+Additional	7.	In the Waterfall Model, when can you go back to a previous phase:
+(A)At any point during the process(B)Only after deployment(C)Never, once a phase is completed(D)After writing test cases
+Additional	8.	What is a key benefit of the Waterfall Model:
+(A)Flexible process(B)Adapts to change(C)Easy to follow(D)Fast feedback
+Additional	9.	When can changes be made in Waterfall Model phases:
+(A)Anytime(B)After release(C)Before coding(D)Not allowed
+Additional	10.	What is the Waterfall Model in software development:
+(A)Linear process(B)Programming language(C)Visual tool(D)Design cycle
+Additional	11.	What is a main limitation of the Waterfall Model:
+(A)Suits Agile teams(B)Gives fast feedback(C)Rigid for updates(D)Requires real-time coding
+Additional	12.	Why is Waterfall not ideal for complex projects:
+(A)Too flexible(B)Hard to adapt(C)No documents(D)Needs big team
+Additional	13.	What is Agile methodology:
+(A)Fixed plan approach(B)Step-by-step coding(C)Flexible development(D)One-time delivery
+Additional	14.	What is an iteration in Agile called:
+(A)Task(B)Sprint(C)Phase(D)Release
+Additional	15.	Which Agile practice involves writing tests before code:
+(A)Test-first coding(B)Code review(C)Trial coding(D)Test-driven development
+Additional	16.	What does Agile use for frequent code merging:
+(A)Continuous integration(B)Test loops(C)Shared scripting(D)Debug mode
+Additional	17.	What is a key benefit of Agile:
+(A)Fewer meetings(B)Easy deadlines(C)High flexibility(D)Large teams
+Additional	18.	Why is Agile customer-friendly:
+(A)One-time delivery(B)Quick design changes(C)Focus on coding only(D)Regular feedback
+Additional	19.	What is a major challenge in Agile:
+(A)Scaling large projects(B)Too much planning(C)No coding standards(D)Long test cycles
+Additional	20.	Why is Agile less predictable:
+(A)Lacks design(B)Code-first focus(C)Frequent changes(D)Fixed sprints
+
+
+1.3 short
+1.3 Software Developnient Methodologies
+1	.	Illustrate the concept of continuous integration in Agile Methodology and discuss its importance in software development.
+Exercise
+2	.	What are software development methodologies?
+Additional
+3	.	What are software process models?
+Additional
+4	.	What does predictability in a process model allow?
+Additional
+5	.	How do process models improve efficiency?
+Additional
+6	.	How do process models ensure software quality?
+Additional
+7	.	How do software process models help in SDLC?
+Additional
+8	.	List three benefits of using software process models in development projects.
+Additional
+9	.	What is the Waterfall Model?
+Additional
+10	.	How many phases of Waterfall Model? write their names.
+Additional
+11	.	Write any two benefits of using the Waterfall Model.
+Additional
+12	.	Why is the Waterfall Model considered a linear and sequential approach?
+Additional
+13	.	What are the main limitations of the Waterfall Model?
+Additional
+14	.	What is Agile Methodology?
+Additional
+15	.	How Agile Methodology differ from the Waterfall Model?
+Additional
+16	.	What is continuous integration?
+Additional
+17	.	What is test-driven development?
+Additional
+18	.	What is pair programming?
+Additional
+19	.	What are the main benefits of using Agile Methodology?
+Additional
+20	.	What is a challenge when scaling Agile to large projects?
+Additional
+21	.	Why is stakeholder involvement important in Agile?
+Additional
+22	.	Why can Agile be less predictable than other models?
+Additional
+23	.	Why is the Waterfall Model not ideal for complex or evolving projects?
+Conceptuals
+24	.	Why is the Waterfall Model considered inflexible?
+Conceptuals
+25	.	Why are sprints or iterations important in Agile?
+Conceptuals
+
+1.3 long
+1.3 Software Developnient Methodologies
+1.	Imagine you are managing a project to develop a simple mobile application. Describe how you would use the Agile Methodology te handle this project.
+Exercise
+2.	A startup wants to develop a new mobile app with evolving user requirements. Why should they choose Agile?
+Conceptuals
+3.	A large corporation tries to implement Agile across 10+ teams but faces coordination issues. What might be the problem?
+Conceptuals
+4.	A client complains that Agile projects lack a fixed deadline. How would you explain Agile’s approach to timelines?
+Conceptuals
+5.	During a sprint, a key stakeholder is unavailable for feedback. How does this impact the Agile process?
+Conceptuals
+6.	How does Pair Programming in Agile help reduce bugs compared to solo coding?
+Conceptuals
+
+1.4 mcqs
+1.4 Project Planning and Management
+Exercise	1.	Crucial aspect of comprehensive project planning:
+(A)Understanding the project scope and tasks(B)Deciding the project's colour scheme(C)Hiring a large development team(D)Ignoring potential risks
+Exercise	2.	Factor that doés not influence cost estimation of a software project:
+(A)Scope of the project(B)Technology stack(C)Number of meetings held(D)Operational costs
+Additional	3.	What is the purpose of project planning in software development:
+(A)Write code quickly(B)Avoid all risks(C)Define goals and details(D)Reduce developer count
+Additional	4.	What does setting a project timeline help with:
+(A)Delaying tasks(B)Speeding up testing(C)Ignoring deadlines(D)Keeping project on track
+Additional	5.	Why is cost estimation important:
+(A)To reduce software size(B)For better budgeting(C)To avoid all testing(D)For hiring designers only
+Additional	6.	Which factor directly affects the project cost:
+(A)Team size and skills(B)Project topic(C)Color theme(D)Customer reviews
+Additional	7.	How does technology stack impact cost:
+(A)May need special tools or skills(B)Changes design layout(C)Adds more users(D)Reduces testing needs
+Additional	8.	What happens if a project takes longer:
+(A)Costs increase(B)Costs reduce(C)Quality improves(D)Deadlines shrink
+Additional	9.	What is a contingency fund used for:
+(A)Team vacations(B)Extra features(C)Bonus payments(D)Unforeseen issues
+Additional	10.	What is included in quality assurance cost:
+(A)Only design review(B)Testing and bug fixing(C)Internet fees(D)Documentation printing
+Additional	11.	What is the first step in risk management:
+(A)Testing code(B)Writing plans(C)Identifying risks(D)Creating backups
+Additional	12.	What happens during the execution phase:
+(A)Development work(B)Team building(C)Risk review(D)Planning schedules
+Additional	13.	What is the purpose of risk analysis:
+(A)Write risk reports(B)Increase cost(C)Predict impact and likelihood(D)Hire more testers
+Additional	14.	What are mitigation strategies used for:
+(A)Avoid teamwork(B)Minimize risk effects(C)Increase bugs(D)Build software
+Additional	15.	What is the final step in risk management:
+(A)Ignore problems(B)Monitor and review(C)Plan new software(D)Change developers
+Additional	16.	Which company had a worth of $2 Trillion in 2023:
+(A)Apple(B)Google(C)Amazon(D)Microsoft
+
+1.4 short
+1.4 Project Planning and Management
+1	.	What is project planning in software development?
+Additional
+2	.	What is comprehensive project planning?
+Additional
+3	.	What does setting project timelines mean?
+Additional
+4	.	Why are project timelines important?
+Additional
+5	.	What is the purpose of cost estimation in project planning?
+Additional
+6	.	How does risk management affect cost estimation?
+Additional
+7	.	What is the goal of quality assurance in a project?
+Additional
+8	.	What is the execution phase of a software project?
+Additional
+9	.	What is a mitigation strategy?
+Additional
+10	.	What types of risks can affect a software project?
+Additional
+
+1.4 long
+1.4 Project Planning and Management
+1.	Evaluate the main steps involved in risk assessment and management, and assess their importance in a software project.
+Exercise
+
+1.5 mcqs
+1.5 Graphical-Representation of Software Systems
+Exercise	1.	The purpose of Use Case Diagrams is to:
+(A)document the system's architecture(B)identify and document the system's functional requirements(C)illustrate the database schema(D)define the system's user interface design
+Additional	2.	What is the purpose of graphical representation in software systems:
+(A)Writing long code(B)Visualizing structure and behavior(C)Debugging errors(D)Enhancing screen color
+Additional	3.	Which UML diagram shows interaction between users and the system:
+(A)Class diagram(B)Sequence diagram(C)Use case diagram(D)Flowchart
+Additional	4.	What does UML stand for:
+(A)Uniform Markup Language(B)Unified Modeling Language(C)User Management Logic(D)Universal Modeling Logic
+Additional	5.	What is UML used for in software development:
+(A)Coding algorithms(B)Visualizing software design(C)Creating passwords(D)Storing backups
+Additional	6.	Use case diagrams help in identifying:
+(A)Code errors(B)System speed(C)User requirements and interactions(D)Database structure
+Additional	7.	A set of interactions between a user and a system is called:
+(A)use case(B)activity diagrams(C)UML(D)communication
+Additional	8.	What should be done after use cases are identified:
+(A)Ignore them(B)Save them without review(C)Delete extra ones(D)Validate with stakeholders
+Additional	9.	What is the first step in identifying use cases:
+(A)Write test cases(B)Identify actors(C)Deploy the system(D)Code the modules
+Additional	10.	A user or external system interacting with the system is called:
+(A)A programmer(B)user(C)actor(D)A software tester
+Additional	11.	Organization and structure of classes in a system is called:
+(A)class diagram(B)Sequence diagrams(C)activity diagrams(D)UML
+Additional	12.	In the class diagram analogy, what does the “Room” represent:
+(A)An actor(B)A method(C)The overall structure of the system(D)A single function
+Additional	13.	What do the specific boxes like ToyBox or BookBox represent in a class diagram:
+(A)Variables(B)Subsystems(C)Flowcharts(D)Instances of a class
+Additional	14.	In a class diagram, Actions or operations that a class can perform is called:
+(A)Data values(B)Variables(C)Instances of a class(D)methods
+Additional	15.	Which part of the class diagram is represented by “attributes” in the analogy:
+(A)Colors of boxes(B)Contents inside each box(C)Lids of boxes(D)Lights in the room
+Additional	16.	What do sequence diagrams primarily illustrate:
+(A)Class inheritance(B)Code syntax(C)Message flow between objects over time(D)Folder structure
+Additional	17.	To illustrate the flow of steps in a process is called:
+(A)class diagram(B)Sequence diagrams(C)activity diagram(D)UML
+Additional	18.	What is the main purpose of an activity diagram:
+(A)Show database structure(B)Show flow of activities(C)Display user interface(D)Define class hierarchy
+Additional	19.	Activity diagrams are best suited for modeling:
+(A)Hardware systems(B)Data storage methods(C)Logic of complex processes(D)Simple code syntax
+Additional	20.	Activity diagrams are best suited for modeling:
+(A)Hardware systems(B)Data storage methods(C)Logic of complex processes(D)Simple code syntax
+Additional	21.	What type of visual model is an activity diagram:
+(A)Structural(B)Behavioral(C)Physical(D)Abstract
+
+1.5 short
+1.5 Graphical-Representation of Software Systems
+1	.	Explain the purpose of a Use Case Diagram in software development.
+Exercise
+2	.	Compare and contrast a Sequence Diagram with an Activity Diagram, highlighting the key differences.
+Exercise
+3	.	What is the purpose of graphical representation in software systems?
+Additional
+4	.	What does UML stand for?
+Additional
+5	.	How does UML help developers?
+Additional
+6	.	What is Use Case Diagrams?
+Additional
+7	.	What is a use case in software development?
+Additional
+8	.	What are the purposes of use case?
+Additional
+9	.	What is class diagram?
+Additional
+10	.	What are Sequence Diagrams?
+Additional
+11	.	What is difference between sequence diagrams and class diagram?
+Additional
+12	.	What are activity diagrams?
+Additional
+13	.	Write about practical applications of UML.
+Additional
+14	.	Define actor in use case.
+Additional
+
+1.5 long
+1.5 Graphical-Representation of Software Systems
+1.	Consider an online banking system.Create a Use Case Diagram to show the interactions between customers, bank staff, and the system.
+Exercise
+2.	You are developing a food delivery application. Create a Sequence Diagram to show the process of placing an order, from the customer selecting items to the delivery of the order.
+Exercise
+3.	Design a flowchart for a user registration process in-a software application. Outline its key steps.
+Exercise
+
+1.6 mcqs
+1.6 Introduction to Design Patterns
+Additional	1.	Which design pattern is like a workshop that creates objects on request:
+(A)Singleton Pattern(B)Factory Pattern(C)Observer Pattern(D)Strategy Pattern
+Additional	2.	In which design pattern one object is created once and reused:
+(A)Singleton Pattern(B)Factory Pattern(C)Observer Pattern(D)Strategy Pattern
+Additional	3.	In which design pattern sending updates to multiple listeners:
+(A)Singleton Pattern(B)Factory Pattern(C)Observer Pattern(D)Strategy Pattern
+Additional	4.	Which design pattern switching between different algorithms or methods:
+(A)Singleton Pattern(B)Factory Pattern(C)Observer Pattern(D)Strategy Pattern
+Additional	5.	Which design pattern is commonly used in web development frameworks:
+(A)Singleton(B)Factory(C)Observer(D)Model-View-Controller
+Additional	6.	What does MVC stand for in software design:
+(A)Module-Vector-Class(B)Main-View-Controller(C)Model-View-Controller(D)Method-Variable-Class
+Additional	7.	Which of the following frameworks uses the MVC pattern:
+(A)Laravel and Vue(B)Ruby on Rails and Angular(C)React and Python(D)Flask and TensorFlow
+
+1.6 short
+1.6 Introduction to Design Patterns
+1	.	Describe the Factory Pattern and explain how it differs from directly creating objects, with an example.
+Exercise
+2	.	Define design pattern.
+Additional
+3	.	How many types of design patterns? Write their names.
+Additional
+4	.	What is Singleton Design Pattern?
+Additional
+5	.	What is Factory Design Pattern?
+Additional
+6	.	What is Observer Design Pattern?
+Additional
+7	.	What is Strategy Design Pattern?
+Additional
+8	.	Why design patterns are used in software development?
+Additional
+9	.	Write the benefits of design patterns in software development?
+Additional
+10	.	Write differene between Singleton and Factory Design Patterns.
+Additional
+11	.	Write differene between Observer and Strategy Design Patterns.
+Additional
+
+1.6 long
+1.6 Introduction to Design Patterns
+1.	What is design pattern? Explain its types.
+Additional
+2.	What is Singleton Pattern? Write applications of Design Patterns in Software Design.
+Additional
+
+1.7 mcqs
+1.7 Software Debugging and Testing
+Additional	1.	Which tool allows developers to step through code and inspect variables:
+(A)Compiler(B)Debugger(C)Editor(D)Emulator
+Additional	2.	An error causing unexpected behavior is called :
+(A)bug(B)error(C)Debugger(D)fault
+Additional	3.	Which help spot potential errors in debugging:
+(A)system testing(B)unit testing(C)tesing(D)code reviews
+Additional	4.	Which show variable values at runtime in debugging:
+(A)compiler(B)print statements(C)code reviews(D)Debugger
+Additional	5.	Tested of individual components or modules is called:
+(A)acceptance testing(B)system testing(C)unit testing(D)integration testing
+Additional	6.	What is the first level of the software testing hierarchy:
+(A)Integration testing(B)Unit testing(C)System testing(D)Acceptance testing
+Additional	7.	To evaluate software functionality and requirements is called testing:
+(A)testing(B)debugging(C)code review(D)fix error
+Additional	8.	Who typically performs acceptance testing:
+(A)Programmers only(B)Quality analysts(C)End-users or clients(D)Project managers only
+Additional	9.	At which level is the entire software system tested as a complete unit:
+(A)Unit testing(B)Integration testing(C)System testing(D)Acceptance testing
+Additional	10.	What kind of issues does integration testing help identify:
+(A)Network errors(B)Code syntax errors(C)Interface and interaction errors(D)Power consumption issues
+Additional	11.	Testing interaction between modules is called:
+(A)Unit testing(B)Integration testing(C)System testing(D)Acceptance testing
+Additional	12.	What is another name for Acceptance Testing:
+(A)Developer Testing(B)System Testing(C)User Acceptance Testing(D)Module Testing
+
+1.7 short
+1.7 Software Debugging and Testing
+1	.	Why software debugging and testing are important?
+Additional
+2	.	What is debugging?
+Additional
+3	.	What is testing?
+Additional
+4	.	How debugging and testing are different?
+Additional
+5	.	Define Debuggers?
+Additional
+6	.	What is the difference between debugging and debuggers?
+Additional
+7	.	What is unit testing?
+Additional
+8	.	What is primary goal of unit testing?
+Additional
+9	.	What is integration testing?
+Additional
+10	.	What is System Testing?
+Additional
+11	.	What is Acceptance Testing?
+Additional
+12	.	What is the difference between System testing and unit testing?
+Additional
+13	.	Define bug.
+Additional
+
+1.7 long
+1.7 Software Debugging and Testing
+1.	What testing? Write the note on its type.
+Additional
+2.	Write noitew on the following terms. (i) Unit testing (ii) System testing (iii) Debugg and debugger
+Additional
+
+1.8 mcqs
+1.8 Software Development Tools
+Additional	1.	Which code editor is known for supporting extensions and multiple languages:
+(A)Notepad++(B)MS Word(C)VS Code(D)Windows Explorer
+Additional	2.	Which of the following is an example of a simple code editor:
+(A)Python(B)Notepad++(C)Excel(D)Oracle
+Additional	3.	What is another name for a language editor:
+(A)Compiler(B)Debugger(C)Terminal(D)Code editor
+Additional	4.	Which type of translator converts code line-by-line:
+(A)Compiler(B)Interpreter(C)Debugger(D)Editor
+Additional	5.	Which type of translator converts entire code at once:
+(A)Compiler(B)Interpreter(C)Debugger(D)Editor
+Additional	6.	Which convert code into machine language:
+(A)Compiler(B)Interpreter(C)Debugger(D)translator
+Additional	7.	Which translator is used for Python:
+(A)GCC(B)JVM(C)Python Interpreter(D)Turbo C
+Additional	8.	Which compiler is commonly used for C/C++:
+(A)JDK(B)Python IDE(C)HTML(D)GCC
+Additional	9.	What is the main purpose of a debugger:
+(A)Write code(B)Compile code(C)Find and fix errors(D)Translate languages
+Additional	10.	Which tool is used to debug C/C++ code:
+(A)Notepad++(B)GDB(C)GCC(D)JVM
+Additional	11.	Which of the following is integrated with Visual Studio IDE for debugging:
+(A)Visual Studio Debugger(B)NetBeans(C)Python Shell(D)Code Blocks
+Additional	12.	Which tool is typically not part of an IDE:
+(A)Compiler(B)Web browser(C)Code editor(D)Debugger
+Additional	13.	Which IDE is commonly used for Python development:
+(A)Visual Studio(B)Code Blocks(C)PyCharm(D)Eclipse
+Additional	14.	Which IDE is popular for .NET and C++ development:
+(A)Visual Studio(B)NetBeans(C)BlueJ(D)Brackets
+Additional	15.	What does IDE stand for in software development:
+(A)Integrated Debugging Environment(B)Internal Development Editor(C)Integrated Development Environment(D)Intelligent Design Editor
+Additional	16.	Which platform is popular for open-source projects:
+(A)Bitbucket(B)Dropbox(C)OneDrive(D)GitHub
+Additional	17.	What does version control in a repository help with:
+(A)Deleting files(B)Code formatting(C)Installing software(D)Tracking code changes
+Additional	18.	What is the main purpose of a source code repository:
+(A)Store movies(B)Design graphics(C)Manage and track code(D)Print code
+Additional	19.	What is an offline computing platform:
+(A)Cloud-based code editor(B)Physical hard drive(C)Local software IDE(D)Internet-only browser
+Additional	20.	Which is an example of an online platform:
+(A)Notepad++(B)Gitpod(C)PyCharm(D)Code Blocks
+Additional	21.	What is an online computing platform:
+(A)Installed software(B)Internet-based code editor(C)Mobile app(D)File compressor
+
+1.8 short
+1.8 Software Development Tools
+1	.	What are software develonment tools?
+Additional
+2	.	What is the puspose of "Language Editors"?
+Additional
+3	.	What are translators?
+Additional
+4	.	Write difference between compilers and Interpreters.
+Additional
+5	.	What IDEs stand for?
+Additional
+6	.	What are IDEs? Why we use them?
+Additional
+7	.	Write difference between Online Platforms and Offline Platforms.
+Additional
+8	.	What are source code repositories? write examples too.
+Additional
+
+1.8 long
+1.8 Software Development Tools
+1.	Discuss the importance, of software development tools in the software development pracess.
+a) Explain the role of language editors, translators, and debuggers in creating and maintaining software.
+b) Provide examples of each tool and describe how they contribute to the efficiency and accuracy of software development.
+Exercise
+2.	What is purspose of software development tools ? Also explain the following
+(i)
+Language Editors
+(ii)
+Translators
+(iii)
+Debuggers
+
+Additional
+
+2.1 mcqs
+2.1 Introduction to Python Programming
+Exercise	1.	An action needed during Python installation to run from the command line easily:
+(A)Uncheck "Add Python to PΑΤΗ"(B)Choose a different IDE(C)Check "Add Python to PATH"(D)Install only the IDE
+Additional	2.	Translates code into machine language is called:
+(A)Runs the code(B)Compile/Interpret(C)Excute(D)Deletes the program
+Additional	3.	What is the first step in writing a computer program:
+(A)Execute(B)Output(C)Compile(D)Write code
+Additional	4.	To write instructions computers can understand:
+(A)programming languages(B)foreign languages(C)languages(D)T internet connections
+Additional	5.	The result shown after executing the code is called:
+(A)Output(B)Input(C)Result(D)Execution
+Additional	6.	What should you do during installation to run Python from the command line:
+(A)Restart the PC(B)Choose dark mode(C)Check “Add Python to PATH”(D)Install antivirus
+Additional	7.	What can be used instead of local installation to write and run Python code:
+(A)Web hosting(B)Online services(C)Photoshop(D)Video editing tools
+Additional	8.	What is a benefit of using an IDE for Python programming:
+(A)It slows down coding(B)It avoids debugging(C)It makes coding easier(D)It replaces the need for code
+
+2.1 short
+2.1 Introduction to Python Programming
+1	.	What is computer programming?
+Additional
+2	.	Which steps computer programming involves while write a program?
+Additional
+3	.	What does the "Compile/Interpret" step in programming do?
+Additional
+4	.	What is meant by "Output" in programming?
+Additional
+5	.	What is development environment?
+Additional
+6	.	Why "Add Python to PATH" checking is important while installing Python?
+Additional
+7	.	What is the purpose of programming languages?
+Conceptuals
+
+2.2 mcqs
+2.2 Basic Python Syntax and Structure
+Exercise	1.	A valid variable name in Python is:
+(A)variable1(B)1variable(C)variable-name(D)agerable name
+Exercise	2.	Output of the following piece of code is:  age = 25 print(" Age:", age) :
+(A)Age:25(B)25(C)Age(D)age
+Additional	3.	What is the primary use of the print function in Python:
+(A)To read data(B)To close files(C)To display output(D)To perform calculations
+Additional	4.	How do you write a single-line comment in Python:
+(A)// comment(B)<!-- comment -->(C)/* comment */(D)# comment
+Additional	5.	A note in the code ignored by the interpreter is called:
+(A)variable(B)comment(C)hidden code(D)output
+Additional	6.	How are multi-line comments written in Python:
+(A)/* ... */(B)//(C)''' '''(D)//
+Additional	7.	A memory container for storing and changing data is called:
+(A)constant(B)variable(C)value(D)memory location
+Additional	8.	Which of the following is a valid variable name in Python:
+(A)2value(B)while(C)_name(D)first-name
+Additional	9.	Which of the following cannot be used as a variable name in Python:
+(A)score(B)_total(C)if(D)max_value
+Additional	10.	Which characters can a Python variable name begin with:
+(A)A digit or underscore(B)A letter or underscore(C)Only a letter(D)Any symbol
+Additional	11.	Which data type is used to store whole numbers in Python:
+(A)float(B)str(C)int(D)bool
+Additional	12.	What will be the data type of the variable price = 19.99 in Python:
+(A)int(B)float(C)str(D)bool
+Additional	13.	Which of the following variables stores text in Python:
+(A)count = 10(B)age = 21(C)name = "Ali"(D)is_ready = True
+Additional	14.	What is the correct Boolean value for a variable in Python:
+(A)TRUE(B)"False"(C)Yes(D)True
+Additional	15.	What is the type of variable in this code:
+(A)Integer(B)String(C)Boolean(D)Float
+Additional	16.	What is the type of variable in this code is_student = False:
+(A)Integer(B)String(C)Boolean(D)Float
+Additional	17.	Which of the following is a good practice for naming variables in Python:
+(A)Using lowercase letters and underscores(B)Using spaces between words(C)Using capital letters and hyphens(D)Using digits as the first character
+Additional	18.	Which function is used in Python to take user input:
+(A)print()(B)enter()(C)scan()(D)input()
+Additional	19.	What does the input() function return by default:
+(A)Integer(B)Float(C)String(D)Boolean
+Additional	20.	Which Python function is used to display output on the screen:
+(A)output()(B)echo()(C)display()(D)print()
+Additional	21.	What is the result of this code, print("Hello, World!"):
+(A)Prints nothing(B)Takes user input(C)Displays Hello, World!(D)Returns a string
+Additional	22.	Which function is used to convert user input to an integer in Python:
+(A)str()(B)float()(C)int()(D)input()
+Additional	23.	If a user enters 9.8, and the code is int(input("Enter a number:
+(A)Stores as 9.8(B)Gives error(C)Stores as string(D)Stores as 10
+Additional	24.	What is the output type of the expression int(input("Enter a number:
+(A)str(B)float(C)bool(D)int
+Additional	25.	Which function Converts input to floating-point number in Python:
+(A)float()(B)str()(C)print()(D)int()
+
+2.2 short
+2.2 Basic Python Syntax and Structure
+1	.	Explain the purpose of using comments in Python code.
+Exercise
+2	.	Describe the difference between integer and float data types in Python. Provide an example of each.
+Exercise
+3	.	What is the difference single line and multi lines comments?
+Additional
+4	.	What is variable in Python?
+Additional
+5	.	How many types of Variables? List them.
+Additional
+6	.	What is the purpose of input and output operations?
+Additional
+7	.	What is the purpose of input() function in Python?
+Additional
+8	.	Why is print() function used in Python?
+Additional
+9	.	How integer and float inputs are handled in Python?
+Additional
+10	.	What is the difference between print() and input() functions?
+Additional
+
+2.2 long
+2.2 Basic Python Syntax and Structure
+1.	Explain the concept of variables in Python.
+Exercise
+
+2.3 mcqs
+2.3 Operators and Expressions
+Exercise	1.	The operator used for exponentiation in Python is:
+(A)*(B)**(C)//(D)/
+Additional	2.	A symbol that performs operations on variables and values in Python:
+(A)Operator(B)Expression(C)Arithematic Operator(D)Boolean expression
+Additional	3.	A combination of variables, operators, and values that produces a result:
+(A)Operator(B)Expression(C)Arithematic Operator(D)Boolean expression
+Additional	4.	Which operators are used to perform basic mathematical operations:
+(A)Assign Operator(B)Comparison Operator(C)Arithematic Operator(D)Boolean expression
+Additional	5.	What kind of expression is a + b * c:
+(A)Logical expression(B)Boolean expression(C)Relational expression(D)Arithmetic expression
+Additional	6.	What will print(a, "**", b, "=", a ** b) output when a = 10, b = 3:
+(A)100(B)30(C)1000(D)13
+Additional	7.	Which operator is used to calculate powers in Python:
+(A)^(B)**(C)^^(D)#
+Additional	8.	What does print(a, "%", b, "=", a % b) display if a = 10 and b = 3:
+(A)10 % 3 = 0(B)10 % 3 = 1(C)10 % 3 = 3(D)10 % 3 = 10
+Additional	9.	Which operator returns the quotient without the remainder in Python:
+(A)/(B)%(C)//(D)**
+Additional	10.	In the expression a = 10, b = 3, what is the value of a // b:
+(A)3.0(B)3(C)3.333(D)1
+Additional	11.	What is the correct syntax to multiply two variables a and b in Python:
+(A)a x b(B)a * b(C)a . b(D)a ^ b
+Additional	12.	What type of operator is * in Python:
+(A)Logical operator(B)Relational operator(C)Arithmetic operator(D)Bitwise operator
+Additional	13.	Comparison operators return values of which type:
+(A)String(B)Integer(C)Boolean(D)Float
+Additional	14.	Which comparison operator checks for equality:
+(A)=(B)!=(C)==(D)<>
+Additional	15.	What is the output of 10 <= 5:
+(A)False(B)15(C)True(D)SyntaxError
+Additional	16.	What is the result of 10 > 5 in Python:
+(A)False(B)True(C)10(D)5
+Additional	17.	Which operators are used to compare two values or expressions:
+(A)Assign Operator(B)Comparison Operator(C)Arithematic Operator(D)Boolean expression
+Additional	18.	Which symbol is used to assign a value to a variable in Python:
+(A)==(B):=(C)=>(D)=
+Additional	19.	Which of the following is a compound assignment operator:
+(A)++(B)+=(C)==(D):=
+Additional	20.	What will be the value of x after executing x = 5; x += 3:
+(A)3(B)5(C)8(D)15
+Additional	21.	Which operators are used to combine multiple conditions or expressions in a program:
+(A)Assign Operator(B)Comparison Operator(C)Arithematic Operator(D)Logical Operator
+Additional	22.	What will be the output of this code:
+(A)True(B)False(C)x(D)y
+Additional	23.	Which logical operator returns True only if both conditions are True:
+(A)or(B)not(C)and(D)==
+Additional	24.	Which of the following is a logical operator in Python:
+(A)+(B)and(C)==(D)+=
+Additional	25.	What will be the result of the expression (2 + 3) * 4:
+(A)14(B)20(C)10(D)24
+Additional	26.	What will be the result of the expression (3 + 4) * 2 in Python:
+(A)20(B)14(C)24(D)10
+
+2.3 short
+2.3 Operators and Expressions
+1	.	Define operator precedence and give an example of an expression where operator precedence affects the result.
+Exercise
+2	.	What is an operator in Python?
+Additional
+3	.	What is an expression in Python?
+Additional
+4	.	What is difference between operators and expressions?
+Additional
+5	.	Why are Arithmetic Operators used in python?
+Additional
+6	.	What are Comparison Operators?
+Additional
+7	.	What are Assignment Operators?
+Additional
+8	.	What is the purpose of Logical Operators ?
+Additional
+9	.	What is difference between "=" and "=="?
+Additional
+10	.	What are logical Operators? Why they are used in Python?
+Additional
+11	.	What is difference between logical and assignment operators?
+Additional
+12	.	What is operator Precedence in Python?
+Additional
+13	.	Compute the following expression: 10 + 3*2**2-5/5
+Additional
+14	.	Compute the following expression: (10 + 3)*(2**(2-1))/5
+Additional
+15	.	Why are parentheses used in Python expressions?
+Conceptuals
+
+2.3 long
+2.3 Operators and Expressions
+1.	Evaluate the following Python expressions.
+ 
+(b)  
+(25+3*4** 2-6)/(2** 3 + 1)-7 
+(d)   
+45/(2**2+3*4)+8* (7-3)
+
+Exercise
+2.	Translating the following mathematical expressions to Python syntax:
+(a)
+  5x (3+2
+2
+) 
+(b)
+  6-2x3   
+(b)
+  7 +2
+2
+
+Exercise
+3.	Expain the following terms in Python with example.
+(
+i
+) Assign Operator (
+ii
+) Logical Operator (
+iii
+) Arithematic Operator
+
+Additional
+
+2.4 mcqs
+2.4 Control Structures
+Exercise	1.	A loop used to iterate over a collection such as lists is:
+(A)while(B)for(C)do-while(D)repeat
+Exercise	2.	The Output of the following code is temperature, humidity, wind_speed = 25, 60, 15 print("Hot and humid" if temperature > 30 and humidity > 50 else"Warm and breezy" if temperature == 25 and wind_speed > 10 else "Cool and dry" if temperature < 20 and humidity < 30 else "Moderate") X:
+(A)Hot(B)Warm(C)Cool(D)Nothing
+Additional	3.	Which controls the flow of the program in Python:
+(A)control structures(B)statements(C)loops(D)compiler
+Additional	4.	Which of the following is NOT a type of control structure:
+(A)Looping(B)Compilation(C)Decision Making(D)Conditional Statements
+Additional	5.	Executes code only if a condition is true :
+(A)if-then statement(B)if statement(C)if-else statement(D)if-elif-else statement
+Additional	6.	To choose between two code blocks based on condition :
+(A)if-then statement(B)if statement(C)if-else statement(D)if-elif-else statement
+Additional	7.	In shorthand if-else statement, how is the syntax written:
+(A)if-then-else(B)condition if value else value(C)value else value if condition(D)if condition else
+Additional	8.	In if-elif-else, which block is executed if none of the conditions are true:
+(A)if block(B)elif block(C)else block(D)All blocks
+Additional	9.	What does elif stand for in Python:
+(A)Else-if(B)Else-in-function(C)End-if(D)Extended-if
+Additional	10.	What is the main purpose of if-elif-else statements in Python:
+(A)To declare variables(B)To perform looping(C)To check multiple conditions(D)To import modules
+Additional	11.	How many elif blocks can be used in a single if-elif-else statement:
+(A)Only one(B)Exactly two(C)Zero or more(D)Maximum three
+Additional	12.	When does a while loop stop executing:
+(A)When the loop is broken manually(B)When the condition becomes false(C)When the list ends(D)After 10 iterations only
+Additional	13.	Which type of loop checks the condition before each iteration:
+(A)for loop(B)do-while loop(C)while loop(D)infinite loop
+Additional	14.	What happens if the condition in a while loop never becomes false:
+(A)Loop runs once only(B)Syntax error occurs(C)Loop is skipped(D)Infinite loop occurs
+Additional	15.	What is a for loop mainly used for in Python:
+(A)To perform calculations(B)To iterate over a sequence(C)To define strings(D)To create lists
+Additional	16.	Which of the following is a correct for loop syntax in Python:
+(A)for i in range(B)for(C)loop for i from 0 to 5(D)repeat i in range
+Additional	17.	Which sequences can be used in a for loop:
+(A)Strings(B)Lists(C)Tuples(D)All of these
+
+2.4 short
+2.4 Control Structures
+1	.	How does the short-hand if-else statement differ from the regular if-else statement?
+Exercise
+2	.	Explain the use of the  'range()'   function in a for loop.
+Exercise
+3	.	Why Control Structures are used in Python?
+Additional
+4	.	How many types of Control Structures? Write their names.
+Additional
+5	.	What is decision making?
+Additional
+6	.	Why is "If" statement used in Python? Write its syntax.
+Additional
+7	.	Why is "If-else" statement used in Python? Write its syntax.
+Additional
+8	.	Why is short hand "if-else" used? Write its syntax.
+Additional
+9	.	Write an if-elif-else statement to check ifar anumberis positive, negative, or zero.
+Additional
+10	.	What is the output of following?
+temperature = 35
+
+if temperature > 30:
+
+    print("It is a hot day")
+
+Additional
+11	.	Find errors in the  of following code?
+temperature = 35
+
+If temperature > 30
+
+    print("It is a hot day"}
+
+Additional
+12	.	Find the output of following: 
+temperature = 15
+
+if temperature > 30:
+
+   print ("It’s a hot day")
+
+else:
+
+   print ("It's not a hot day")
+
+Additional
+13	.	Find the erros of following code: 
+temperature = 15
+
+IF temperature > 30:
+
+   print (It’s a hot day)
+
+ELSE:
+
+   print ("It's not a hot day)
+
+Additional
+14	.	What is the use of "if-elif-else" statement?
+Additional
+15	.	Find the output of following:
+weather = "clouay"
+
+if weather == "sunny":
+
+  print("Wear sunglasses")
+
+elif weather == "rainy":
+
+ print(“Take an umbrella”)
+
+else:
+
+  print("Enjoy your day!")
+
+Additional
+16	.	Find error in of the following code:
+weather = "clouay"
+
+if Weather== "sunny":
+
+  print("Wear sunglasses")
+
+elseif weather = "rainy":
+
+ print("Take an umbrella")
+
+else:
+
+  print("Enjoy your day!")
+
+Additional
+17	.	Why loops are used in Python? Write its types.
+Additional
+18	.	What is "while" loop? Write its syntax.
+Additional
+19	.	How does "while" loop work?
+Additional
+20	.	What is "for" loop? Write its sytax.
+Additional
+21	.	Where is "for" loops commonly used?
+Additional
+22	.	How "while" loop is different than "for" loop?
+Additional
+23	.	Write program using "while" loop to add 1 to a number until it reaches 10.
+Additional
+24	.	Write the output of following: 
+number = 1
+
+while number < 10:
+
+   print(number)
+
+   number += 1
+
+Additional
+25	.	Write the output of following: 
+friends = ["Ahmad") "All", "Hassan"]
+
+  for friend in friends:
+
+  print("Hello", friend)
+
+ 
+
+Additional
+
+2.4 long
+2.4 Control Structures
+1.	Write a Python program using a while loop that prints all the odd numbers between 1 and 100. Also, count and print the total number of odd numbers.
+Exercise
+2.	Write a Python program that takes a number as input and checks whether it is positive, negative, or zero using an if-elif-else statement.
+Exercise
+3.	What is decision making? Explain conditional statements with example.
+Additional
+4.	Write a Python program that prints even and counts the odd numbers from 1 to 20 using a while loop.
+Additional
+5.	Write a for loop using  range()  to print the even numbers from 2 to 10.
+Additional
+6.	Write a Python program that prints the first 10 multiples of 3 using a for loop and the  range() function.
+Additional
+7.	Explain the "while" and "for" loops with example.
+Additional
+8.	Write an if-else statement ana a short-hand if-else statement to check if a number is even or odd and print the appropriate message.
+Conceptuals
+
+2,5 mcqs
+2.5 Python Modules and Built-in Data Structures
+Exercise	1.	A keyword used to define a function in Python:
+(A)define(B)function(C)def(D)func
+Additional	2.	Which keyword is used to define a function in Python:
+(A)define(B)function(C)fun(D)def
+Additional	3.	How many parameters can a Python function accept:
+(A)Only 1(B)Up to 3(C)Unlimited(D)None
+Additional	4.	How can you make a function return a value in Python:
+(A)Using send(B)Using return(C)Using output(D)Using pass
+Additional	5.	What must follow the def keyword when defining a function:
+(A)Return type(B)Function name and parentheses(C)Function call(D)String value
+Additional	6.	Which keyword is used to import a module in Python:
+(A)include(B)import(C)require(D)use
+Additional	7.	To provide pre-built tools and functions for solving problems in Python:
+(A)libraries and modules(B)functions(C)code(D)pyCharm
+Additional	8.	A directory containing related modules in Python is called:
+(A)package(B)collection(C)list(D)record
+Additional	9.	What type of Python files are usually inside a package:
+(A)Only HTML files(B)Only Java code(C)Modules(D)Images and videos
+
+2.5 short
+2.5 Python Modules and Built-in Data Structures
+1	.	Why are functions and modules used in Python?
+Additional
+2	.	What is function? Write its syntax.
+Additional
+3	.	What is module?
+Additional
+4	.	How functions and modules are different?
+Additional
+5	.	Define a function which take two numbers as parameters and return their sum.
+Additional
+6	.	What is parameter of a function?
+Additional
+7	.	What is return value?
+Additional
+8	.	What is default parameters?
+Additional
+9	.	Define a function with a default parameter which print.
+Additional
+10	.	Why are libraries and modules usefull in Python?
+Additional
+11	.	What are Libraries in Python? How they include in program?
+Additional
+12	.	What is Package?
+Additional
+13	.	What is difference between package and libraries?
+Additional
+14	.	Writ output of following code:
+def greet(name = "Student") :
+
+     return "Hello"+ name +"!"
+
+print(greet())
+
+print(greet(‘Umer ")) 
+
+ 
+
+Additional
+15	.	Why def keyword is used?
+Additional
+16	.	What difference between "def" and "return" keyword?
+Additional
+17	.	Write the output of following code:
+def greet(name):
+
+   print("Hello”, name)
+
+greet (‘Ali’)
+
+Additional
+
+2.5 long
+2.5 Python Modules and Built-in Data Structures
+1.	Write a note on functions in Python.
+Additional
+2.	Define a function that takes a list of numbers and retums the maximum value.
+Additional
+
+2.6 mcqs
+2.6 Built-in Data Structures
+Exercise	1.	The operation used to combine two lists in Python:
+(A)combine(B)concat(C)+(D)merge
+Additional	2.	Which method is used to add an item to the end of a list:
+(A)insert()(B)add()(C)append()(D)extend()
+Additional	3.	Which method is used to reverse the order of elements in a list:
+(A)back()(B)flip()(C)backward()(D)reverse()
+Additional	4.	Which method sorts the list in ascending order:
+(A)order()(B)sort()(C)arrange()(D)sequence()
+Additional	5.	Which method removes the first occurrence of a specific item from a list:
+(A)remove()(B)pop()(C)delete()(D)discard()
+Additional	6.	What will fruits[1] return if fruits = ["apple", "banana", "cherry"]:
+(A)apple(B)banana(C)cherry(D)1
+Additional	7.	What is the index of the first item in a list:
+(A)1(B)0(C)-1(D)It varies
+Additional	8.	What is the output of the following code numbers = [10, 20, 30, 40] print(numbers[2]):
+(A)10(B)20(C)30(D)40
+Additional	9.	List in python is ..........:
+(A)Mutable(B)Immutable(C)Variable(D)fixed
+Additional	10.	What is a tuple in Python:
+(A)A variable(B)A loop(C)An immutable list(D)A function
+Additional	11.	Accessing elements of a sequence using position in Python is called :
+(A)indexing(B)slicing(C)list(D)tuple
+Additional	12.	What is the index of the first element in a Python list or tuple:
+(A)0(B)1(C)-1(D)+2
+Additional	13.	Access a range of items in a sequence in Python is called :
+(A)indexing(B)slicing(C)list(D)tuple
+Additional	14.	What does the syntax sequence[1:4] return?
+(A)Elements from index 1 to 3(B)Elements from index 1 to 4(C)Elements from index 0 to 4(D)Only element at index 4
+Additional	15.	What does the negative index -1 represent in Python:
+(A)First element(B)Last element(C)Second element(D)No element
+
+2.6 short
+2.6 Built-in Data Structures
+1	.	Why built-in data structures are essentail?
+Additional
+2	.	How many built-in data structures in python? write their names.
+Additional
+3	.	What is the purpose of "List" in Python?
+Additional
+4	.	What is the role of "appened()" method in Python?
+Additional
+5	.	How "sort()" and "reverse()" methods are different?
+Additional
+6	.	What are Tuples in python?
+Additional
+7	.	How tuples are different from lists in Python?
+Additional
+8	.	Why Indexing and slicing are essential techniques in Python?
+Additional
+9	.	What is indexing?
+Additional
+10	.	What is slicing?
+Additional
+11	.	What is difference indexing and slicing?
+Additional
+12	.	What is term "mutable" mean in Python?
+Additional
+13	.	Write the output of following code: 
+fruits = ["Mango", “Apple”, ” Banana”]
+
+print(fruits [1])
+
+Additional
+14	.	Write the output of following code: 
+numbers = [1, 2, 3, 4, 5]
+
+slice = numbers [1:4] 
+
+extra_numbers = [6, 7]
+
+combined = slice + extra numbers
+
+print(combined)
+
+Additional
+15	.	Find the errors in following code: 
+numbers = [1, 2, '3', 4, 5]
+
+slice = numbers [1:4] 
+
+extra_numbers = [6, 7]
+
+combined = slice + extra numbers
+
+print{combined}
+
+Additional
+16	.	Write the output of following code: 
+student _names= ["Ahmed", “Sara”, "Ali", "Hina”]
+
+student_names.sort ()
+
+student names.remove("Sara")
+
+print(student names)
+
+Additional
+
+2.6 long
+2.6 Built-in Data Structures
+1.	Explain the "List" data structure with examples.
+Additional
+2.	Write the note on followings : (a) Tuples  (b) Indexing and Slicing
+Additional
+3.	Imagine you are maintaining a list of your favorite books: ["To Kill a Mocking bird", "1984", "The Great Gatsby", "Pride and Prejudice"]. Perform the following tasks using Python:
+1. Add anew book "Moby Dick" to the list.
+
+2. Replace "1984" with "Brave New World".
+
+3. Remove "The Great Gatsby" from the list.
+
+4. Merge this list with another list of books: [War and Peace", "Hamlet"].
+
+5. Print the final list of books.
+
+Additional
+
+2.7 mcqs
+2.7 Modular Programming in Python
+Additional	1.	a technique used to divide a program into smaller, manageable and resuable pieces:
+(A)modular programming(B)Breaking code(C)Writing code(D)programming
+Additional	2.	A reusable piece of code in Python is called:
+(A)function(B)library(C)module(D)file
+Additional	3.	What does the main() function represent in Python:
+(A)The end of a program(B)The largest function(C)The starting point of the program(D)The name of a class
+Additional	4.	What is the main purpose of modular programming:
+(A)To avoid functions(B)To make code complex(C)To manage and reuse code easily(D)To write code in one block
+
+2.7 short
+2.7 Modular Programming in Python
+1	.	Explain why modular programming is useful in Python.
+Exercise
+2	.	What is modular programming?
+Additional
+3	.	Define modules.
+Additional
+4	.	What are the advantages to break a program into modules?
+Additional
+5	.	What is main Function in Python?
+Additional
+6	.	What is the role of main Function in Python?
+Additional
+7	.	What is Python's standard library?
+Additional
+
+2.8 mcqs
+2.8 Object-Oriented Programming in Python
+Additional	1.	An actual instance created from a class is called in OOP:
+(A)instance(B)object(C)blue print(D)operator
+Additional	2.	A template for creating objects in OOP is called:
+(A)class(B)object(C)code(D)design
+Additional	3.	A way to design and organize code using objects and classes:
+(A)OOP(B)Programming(C)Class(D)Object
+Additional	4.	In the toy car example, what does the blueprint represent:
+(A)A function(B)An object(C)A class(D)A loop
+
+2.8 short
+2.8 Object-Oriented Programming in Python
+1	.	Explain the difference between a class and an object in Python.
+Exercise
+2	.	What is Object-Oriented Programming (OOP)?
+Additional
+3	.	What is class in Python?
+Additional
+4	.	What is an object in Python?
+Additional
+5	.	What is the purpose "self" keyword in Python?
+Additional
+6	.	What is purspose of describe() method?
+Additional
+
+2.9 mcqs
+2.9 Advanced Python Concepts
+Additional	1.	Amechanism to manage errors that occur during program execution is called:
+(A)Exception(B)File handling(C)Errors handling(D)Exception handling
+Additional	2.	What kind of error occurs if 3÷0:
+(A)TypeError(B)SyntaxError(C)ZeroDivisionError(D)NameError
+Additional	3.	Which block contains code that might cause an errorin Python:
+(A)Try Block(B)Except Block(C)Catch Block(D)Try-Catch
+Additional	4.	Which does handle errors that occur in try block in Python:
+(A)Try Block(B)Except Block(C)Catch Block(D)Try-Catch
+Additional	5.	A mechanism of reading from and writing to files is called:
+(A)Exception(B)File handling(C)Errors handling(D)Exception handling
+Additional	6.	What does the file.write() function do:
+(A)Reads data from a file(B)Deletes file content(C)Writes data to a file(D)Prints file size
+Additional	7.	Which mode is used to add content to an existing file without deleting it:
+(A)"r"(B)"w"(C)"a"(D)"t"
+Additional	8.	Which mode is used to write new data and overwrite existing content in a file:
+(A)"r"(B)"a"(C)"x"(D)"w"
+Additional	9.	What happens if an error occurs during a with block while handling a file:
+(A)The program exits immediately(B)The file remains open(C)The file is still properly closed(D)The error is ignored
+
+2.9 short
+2.9 Advanced Python Concepts
+1	.	What is "Exception Handling"?
+Additional
+2	.	What is purspose of "Try-Except" blocks in Python?
+Additional
+3	.	What is file handling?
+Additional
+4	.	What is difference betwene mode (w) and mode (a) in Python ?
+Additional
+5	.	Wrtie the difference beween Exception handling and file handling.
+Additional
+6	.	What is try block?
+Additional
+7	.	How try block is diffrent from except block?
+Additional
+8	.	Fing output of following code.
+a=0
+
+try:
+
+result =10/a 
+
+print("Hello Python!")
+
+except ZeroDivisionError:
+
+print("You can't divide by zero!")
+
+Additional
+9	.	Fing an errors of following code.
+a=0
+
+Try:
+
+result =10/a 
+
+print(Hello Python!")
+
+EXCEPTY ZeroDivisionError;
+
+print("You can't divide by zero!")
+
+Additional
+10	.	What is the purpose of using the "with" statement in file handling?
+Conceptuals
+
+2.9 long
+2.9 Advanced Python Concepts
+1.	Write the note on followings: (a) Exception handling (b)File handling
+Additional
+
+
+2.10 mcqs
+2.10 Testing and Debugging in Python
+Additional	1.	What is the main purpose of testing in Python programming:
+(A)To make the code faster(B)To test memory usage(C)To check if code behaves as expected(D)To change the syntax of the code
+Additional	2.	Testing individual functions or classes in isolation is called:
+(A)Unit Testing(B)System Testing(C)Functional Testing(D)Regression Testing
+Additional	3.	Which module is commonly used for unit testing in Python:
+(A)testlib(B)unittest(C)pytest(D)debug
+Additional	4.	To check interaction of code parts together is called:
+(A)Unit Testing(B)Integration Testing(C)Functional Testing(D)Regression Testing
+Additional	5.	Which testing type checks if software behaves correctly from the user’s view:
+(A)Unit Testing(B)Integration Testing(C)Functional Testing(D)Regression Testing
+Additional	6.	Which ensures that new changes don't break existing functionality:
+(A)Unit Testing(B)System Testing(C)Functional Testing(D)Regression Testing
+Additional	7.	Finding and fixing errors in the code in Python is called:
+(A)Fixing(B)Solution(C)Testing(D)Debugging
+Additional	8.	What is the first step in debugging:
+(A)Writing documentation(B)Identifying the root cause of problems(C)Renaming variables(D)Changing the file type
+Additional	9.	Which of the following is a common debugging technique:
+(A)Removing all spaces(B)Adding print statements(C)Copying code to another file(D)Converting code to binary
+Additional	10.	What is 'pdb' in Python:
+(A)A package manager(B)A text editor(C)A debugging tool(D)A compiler
+
+2.10 short
+2.10 Testing and Debugging in Python
+1	.	Why testing and debugging are essential?
+Additional
+2	.	What is testing?
+Additional
+3	.	What is the goal of testing?
+Additional
+4	.	How many types of testing? List their names.
+Additional
+5	.	What is unit testing?
+Additional
+6	.	What is integration testing?
+Additional
+7	.	What is functional testing?
+Additional
+8	.	What is regression testing?
+Additional
+9	.	What is difference between unit testing and regression testing?
+Additional
+10	.	What is difference between functional testing and integration testing?
+Additional
+11	.	What is debugging in Python?
+Additional
+12	.	What is difference between testing and debugging?
+Additional
+13	.	What is "pdb"?
+Additional
+
+2.10 long
+2.10 Testing and Debugging in Python
+1.	Write note on testing and debugging in Python.
+Additional
+
+3.1 mcqs
+3.1 Understanding Computational Problems
+Exercise	1.	The characteristic of a well-defined problem is:
+(A)Ambiguous goals and unclear requirements(B)Vague processes and inputs(C)Clear goals, inputs, processes, and outputs(D)Undefined solutions
+Exercise	2.	A set of step-by-step instructions is called:
+(A)Software(B)Hardware(C)CPU(D)Algorithm
+Exercise	3.	What is the first step in solving a computational problem:
+(A)Output(B)Coding(C)Input(D)Printing
+Exercise	4.	The algorithm applied to input in a computational problem refer to:
+(A)Process(B)Input(C)Output(D)Solution
+Exercise	5.	What is produced after the input is processed by the algorithm:
+(A)Problem(B)Input again(C)Hardware(D)Output
+Exercise	6.	Which type of computational problem has a "yes" or "no" output:
+(A)Search Problem(B)Optimization Problem(C)Decision Problem(D)Counting Problem
+Additional	7.	A problem where the goal is to find the best solution according to specific criteria is called a/an:
+(A)Decision Problem(B)Search Problem(C)Counting Problem(D)Optimization Problem
+Additional	8.	What type of computational problem involves finding an item that meets certain conditions:
+(A)Decision Problem(B)Search Problem(C)Counting Problem(D)Optimization Problem
+Additional	9.	If a problem requires counting the number of valid solutions, it falls under:
+(A)Decision Problem(B)Search Problem(C)Optimization Problem(D)Counting Problem
+Additional	10.	Identifying whether a number is prime or not is an example of a:
+(A)Search Problem(B)Decision Problem(C)Optimization Problem(D)Counting Problem
+Additional	11.	In a well-defined problem, the output is always:
+(A)Open to interpretation(B)Ambiguous and debatable(C)Clear and unambiguous(D)Dependent on external factors
+Additional	12.	What are the three main components required to solve a computational problem:
+(A)Algorithm, memory, speed(B)Input, output, process(C)Hardware, software, data(D)Code, compiler, debugger
+
+3.1 short
+3.1 Understanding Computational Problems
+1	.	Differentiate between well-defined and ill-defined problems within the realm of computational problem-solving.
+Exercise
+2	.	What is a computational problem?
+Additional
+3	.	What is an algorithm in computing?
+Additional
+4	.	What are the key components of a computational problem?
+Additional
+5	.	What is the 'process' in a computational problem?
+Additional
+6	.	How is an optimization problem different from a search problem?
+Additional
+7	.	What is the goal of a search problem?
+Additional
+8	.	How are computational problems classified?
+Additional
+9	.	What is a well-defined problem?
+Additional
+10	.	What is an ill-defined problem?
+Additional
+
+3.1 long
+3.1 Understanding Computational Problems
+1.	Define a computational problem. Explain its main components with examples.
+Additional
+2.	Differentiate between well-defined and ill-defined problems with examples.
+Additional
+
+3.2 mcqs
+3.2 Algorithms for Problem Solving
+Additional	1.	What is an algorithm:
+(A)A tool(B)A formula(C)A step-by-step method(D)A software
+Additional	2.	Why are algorithms important:
+(A)Improve design(B)Control hardware(C)Store data(D)Solve problems
+Additional	3.	What does the Generate-and-Test method involve:
+(A)Generating and checking(B)Testing known answer(C)Guessing only(D)Using fixed rules
+Additional	4.	When is Generate-and-Test most useful:
+(A)Problem is large(B)No clear strategy(C)Solution is known(D)Limited time
+Additional	5.	How do heuristics help Generate-and-Test:
+(A)Increase trials(B)Skip testing(C)Reduce search space(D)Avoid answers
+Additional	6.	What algorithm does Google use to rank web pages:
+(A)LinkSort(B)PageRank(C)WebOrder(D)SiteScore
+Additional	7.	What does PageRank help determine:
+(A)Page speed(B)Page design(C)Page relevance(D)Page views
+Additional	8.	Where is the Generate-and-Test method commonly used:
+(A)Web design(B)AI applications(C)Data storage(D)Image editing
+Additional	9.	What makes Generate-and-Test suitable for problem-solving:
+(A)Fixed output(B)Small input size(C)Large solution space(D)Predefined answers
+
+
+3.2 short
+3.2 Algorithms for Problem Solving
+1	.	Outline the main steps involved in the Generate-and-Test method.
+Exercise
+2	.	What is an algorithm?
+Additional
+3	.	Why are algorithms important in problem solving?
+Additional
+4	.	What is PageRank algorithm and how does it work?
+Additional
+5	.	What is the Generate-and-Test method?
+Additional
+6	.	When is the Generate-and-Test method useful?
+Additional
+7	.	What role do heuristics play in the Generate-and-Test method?
+Additional
+8	.	Where is Generate-and-Test commonly used?
+Additional
+9	.	Make the flowchart of the Generate and Test Method.
+Additional
+10	.	Why is Generate-and-Test suitable for large solution spaces?
+Conceptuals
+
+3.2 long
+3.2 Algorithms for Problem Solving
+1.	Describe the Generate-and-Test method in detail. Provide examples where it can be effectively used.
+Additional
+
+
+3.3 mcqs
+3.3 Problem Solvability and Complexity
+Additional	1.	Which of the following is an example of an unsolvable problem:
+(A)Sorting numbers(B)Halting Problem(C)Calculating GCD(D)Finding minimum
+Additional	2.	Which of the following is a solvable problem:
+(A)Halting Problem(B)Page ranking(C)GCD of two integers(D)Program debugging
+Additional	3.	What makes a problem solvable:
+(A)Runs forever(B)Needs manual steps(C)Has multiple answers(D)Solved in limited time
+Additional	4.	What is the main consideration after determining that a problem is solvable:
+(A)Input method(B)Programming language(C)Computational complexity(D)Storage capacity
+Additional	5.	On what basis are problems categorized as tractable or intractable:
+(A)Output method(B)Time and space resources(C)Number of instructions(D)Programming algorithm
+Additional	6.	A problem that can be solved in polynomial time is.....:
+(A)Tractable problem(B)Intractable problem(C)Complex problem(D)Solvable problem
+Additional	7.	What is the symbol used to represent polynomial time:
+(A)T(B)P(C)Q(D)S
+Additional	8.	How does the time taken to solve a tractable problem increase:
+(A)Logarithmically(B)Linearly(C)Exponentially(D)As a polynomial function
+Additional	9.	Which algorithm is an example of a tractable problem:
+(A)Bubble Sort(B)Merge Sort(C)Brute Force(D)Linear Search
+Additional	10.	What is the time complexity of Quick Sort in the average case:
+(A)O(n²)(B)O(log n)(C)O(n³)(D)O(n log n)
+Additional	11.	What is the role of 'n' in the complexity O(n log n):
+(A)Size of memory(B)Number of iterations(C)Size of the input(D)Length of the output
+Additional	12.	How does the time requirement of intractable problems grow with input size:
+(A)Constantly(B)Linearly(C)Logarithmically(D)Exponentially
+Additional	13.	What is the role of 'n' in the complexity O(n log n):
+(A)Size of the input(B)Number of iterations(C)Size of memory(D)Length of the output
+
+
+3.3 short
+3.3 Problem Solvability and Complexity
+1	.	Compare tractable and intractable problems in the context of computational complexity.
+Exercise
+2	.	Discuss the nature of optimization problems and provide examples of their applications in real-world scenarios.
+Exercise
+3	.	How are problem solvability and complexity helpfull?
+Additional
+4	.	What is a solvable problem?
+Additional
+5	.	Give one example of a solvable problem.
+Additional
+6	.	What is an unsolvable problem?
+Additional
+7	.	Why is the Halting Problem considered unsolvable?
+Additional
+8	.	Who proved that the Halting Problem is unsolvable?
+Additional
+9	.	What does problem complexity help determine?
+Additional
+10	.	What is polynomial time in the context of tractable problems?
+Additional
+11	.	Define intractable problems.
+Additional
+12	.	Define tractable problem with example.
+Additional
+13	.	What is the Knapsack Problem?
+Additional
+14	.	What is the main goal in the Knapsack Problem?
+Additional
+15	.	Why is understanding complexity classes important for algorithm design?
+Conceptuals
+
+3.3 long
+3.3 Problem Solvability and Complexity
+1.	Discuss the nature of optimization problems and provide examples of their applications in real-world scenarios.
+Exercise
+2.	Explain the difference between solvable and unsolvable problems with examples.
+Additional
+3.	Discuss the difference between tractable and intractable problems.
+Additional
+
+
+3.4 mcqs
+3.4 Algorithm Analysis
+Exercise	1.	Best description of time complexity:
+(A)Amount of memory an algorithm needs(B)Time taken as a function of input size(C)Efficiency as input size grows(D)Upper bound of space requirements
+Additional	2.	What does algorithm analysis determine:
+(A)Input data type(B)Output accuracy(C)Computational complexity(D)Programming language
+Additional	3.	Which two complexities are analyzed in algorithm analysis:
+(A)Speed and color(B)Time and space(C)Size and length(D)Input and output
+Additional	4.	What is the approximate formula for n(n–1) comparisons:
+(A)Quadratic(B)Constant(C)Linear(D)Logarithmic
+Additional	5.	What does O(n²) represent:
+(A)Constant runtime(B)Quadratic time(C)Linear memory(D)Logarithmic time
+Additional	6.	What is the meaning of O(n) in Big O notation:
+(A)Exponential growth(B)Constant performance(C)No runtime(D)Linear time
+Additional	7.	What does O(1) represent:
+(A)Time grows with input(B)Time grows exponentially(C)Constant time(D)No solution found
+Additional	8.	What does Big O notation provide:
+(A)Minimum bound of time(B)Random guess of runtime(C)Lower bound on memory(D)Upper bound on runtime
+Additional	9.	What is Big O notation used for:
+(A)Naming variables(B)Measuring algorithm speed for small inputs(C)Describing time complexity(D)Sorting data
+Additional	10.	What happens to time complexity when data size increases:
+(A)It increases(B)It stays constant(C)It decreases(D)It depends on language
+Additional	11.	What does space complexity measure:
+(A)CPU speed(B)Screen size(C)Memory used by an algorithm(D)Input-output ratio
+Additional	12.	What happens to the execution time in O(1) complexity when input size increases:
+(A)It remains unchanged(B)It grows slowly(C)It doubles(D)It becomes zero
+
+
+3.4 short
+3.4 Algorithm Analysis
+1	.	What is algorithm analysis?
+Additional
+2	.	Define time complexity.
+Additional
+3	.	What is the purpose of analyzing an algorithm?
+Additional
+4	.	Define Big O notation.
+Additional
+5	.	What does O(1) time complexity mean?
+Additional
+6	.	What does O(n) time complexity indicate?
+Additional
+7	.	Give an example of an algorithm with O(n²) time complexity.
+Additional
+8	.	What is logarithmic time complexity?
+Additional
+9	.	Why is Big O notation important?
+Additional
+10	.	What is space complexity?
+Additional
+11	.	Why is Big O notation useful?
+Additional
+12	.	Why is Big O notation used in computer science?
+Conceptuals
+
+3,4 long
+3.4 Algorithm Analysis
+1.	Discuss the differences between time complexity and space complexity. How do they impact the choice of an algorithm for a specific problem?
+Exercise
+2.	What is Big O notation? Describe O(1), O(n), O(n²), and O(log n) with real-life examples.
+Additional
+3.	Differentiate between time complexity and space complexity with examples.
+Additional
+4.	A college wants to compare all students in a competition to form the best team. Explain the time complexity of this task.
+Conceptuals
+
+
+3.5 mcqs
+3.5 Algorithm Design Techniques
+Exercise	1.	A scenario where Dynamic Programming proves most useful:
+(A)Problems without overlapping subproblems(B)Problems solved by making local choices(C)Problems with overlapping subproblems and optimal substructure(D)Problems divided into independent subproblems
+Additional	2.	A critical aspect of problem-solving in computer science is .......:
+(A)Algorithm design(B)Algorithm analysis(C)Problem solving(D)Analysis
+Additional	3.	What property must a problem have for greedy algorithms to work well:
+(A)Optimal substructure(B)Nested loops(C)Random outputs(D)Fixed data types
+Additional	4.	What is a classic example of a greedy algorithm:
+(A)Fibonacci sequence(B)Bubble sort(C)Coin Change problem(D)Sudoku puzzle
+Additional	5.	What type of decisions do greedy algorithms make:
+(A)Globally optimal(B)Locally optimal(C)Random(D)Delayed
+Additional	6.	How are the subproblems in Divide and Conquer solved:
+(A)Together(B)In reverse(C)Independently(D)Randomly
+Additional	7.	Break a problem into smaller parts is .......:
+(A)Divide and Conquer(B)Backtracking(C)Problem solving(D)Analysis
+Additional	8.	What is a classic example of a problem where DP can be used:
+(A)Coin change(B)Sudoku(C)Fibonacci sequence(D)Binary search
+Additional	9.	To store subproblem results and avoid redundant calculations:
+(A)Divide and Conquer(B)Backtracking(C)Problem solving(D)Dynamic Programming
+Additional	10.	What does backtracking do when a path fails:
+(A)Continues blindly(B)Goes back and tries a different path(C)Ignores the failure(D)Changes the data
+
+
+3.5 short
+3.5 Algorithm Design Techniques
+1	.	Summarize the key idea behind Greedy Algorithms.
+Exercise
+2	.	Discuss the advantages of using Dynamic Programming.
+Exercise
+3	.	Explain the importance of breaking down a problem into smaller components in algorithmic thinking.
+Exercise
+4	.	What is the purpose of algorithm design in computer science?
+Additional
+5	.	Name any four common algorithm design techniques.
+Additional
+6	.	What is the Divide and Conquer technique?
+Additional
+7	.	When is greedy algorithms used?
+Additional
+8	.	What is Dynamic Programming, and when is it used?
+Additional
+9	.	How does Dynamic Programming optimize the Fibonacci sequence calculation?
+Additional
+10	.	What is the backtracking technique?
+Additional
+11	.	What kind of problems is Backtracking typically used for?
+Additional
+12	.	How do Greedy Algorithms differ from Dynamic Programming?
+Additional
+13	.	What is one advantage of greedy algorithms?
+Additional
+14	.	What is a limitation of greedy algorithms?
+Conceptuals
+
+
+3.6 mcqs
+3.6 Commonly Used Algorithms
+Exercise	1.	Search algorithm more efficient for large datasets:
+(A)Bubble Sort(B)Merge Sort(C)Selection Sort(D)Quick Sort
+Exercise	2.	An algorithm that sorts data by stepping through the list and swapping adjacent elements if needed is:
+(A)Selection Sort(B)Quick Sort(C)Bubble Sort(D)Merge Sort
+Exercise	3.	Time complexity of Depth-First Search (DFS) in a graph is:
+(A)O (n log n)(B)O (V)(C)O (V + E)(D)O (n)
+Exercise	4.	An algorithm with a time complexity of O(n log n):
+(A)Bubble Sort(B)Binary Search(C)Merge Sort(D)Insertion Sort
+Additional	5.	What will be the sorted result of [5, 3, 8, 4, 2] using Bubble Sort:
+(A)[8, 5, 4, 3, 2](B)[2, 3, 4, 5, 8](C)[3, 2, 5, 8, 4](D)[1, 2, 3, 4, 5]
+Additional	6.	What happens if two adjacent elements are in the wrong order:
+(A)Skip them(B)Add them(C)Delete them(D)Swap them
+Additional	7.	What pair of elements does Bubble Sort compare during sorting:
+(A)Random pairs(B)Middle and last(C)First and last(D)Adjacent elements
+Additional	8.	When does Bubble Sort stop:
+(A)After comparing all elements once(B)When no more swaps are needed(C)After five passes(D)When half the list is sorted
+Additional	9.	What type of sorting algorithm is Bubble Sort:
+(A)Recursive(B)Complex(C)Simple(D)Parallel
+Additional	10.	In what order do sorting algorithms typically arrange data:
+(A)Random(B)descending(C)Ascending(D)Both B and C
+Additional	11.	Why is Bubble Sort not efficient for large datasets:
+(A)It uses recursion(B)It stores too much memory(C)Its time complexity is quadratic(D)It doesn't use loops
+Additional	12.	What is the time complexity of Bubble Sort:
+(A)O(1)(B)O(n)(C)O(n log n)(D)O(n²)
+Additional	13.	What is a key advantage of Bubble Sort:
+(A)It is the fastest algorithm(B)It uses the least memory(C)It is easy to implement(D)It uses recursion
+Additional	14.	Which sorting algorithms are more efficient than Bubble Sort for large datasets:
+(A)Selection Sort and Insertion Sort(B)Bubble Sort and Binary Sort(C)Linear Sort and Hash Sort(D)Quick Sort and Merge Sort
+Additional	15.	What does Selection Sort do with the smallest element in the unsorted part:
+(A)Deletes it(B)Swaps it with the last element(C)Swaps it with the first unsorted element(D)Reverses it
+Additional	16.	What is the process repeated on in Selection Sort:
+(A)Sorted part(B)Remaining unsorted part(C)Entire list again and again(D)Reversed part
+Additional	17.	What happens to the half where the item cannot be in binary search:
+(A)It is reversed(B)It is discarded(C)It is counted again(D)It is sorted
+Additional	18.	What condition must be met to use binary search:
+(A)The list must be unsorted(B)The list must be short(C)The list must be sorted(D)The list must be reversed
+Additional	19.	Which item is being searched for in [Karachi, Lahore, Islamabad, Faisalabad] of linear search:
+(A)Karachi(B)Lahore(C)Faisalabad(D)Islamabad
+Additional	20.	What is the basic strategy of linear search:
+(A)Check each item one by one(B)Divide the list in half(C)Skip items randomly(D)Sort the list first
+Additional	21.	What is linear search also called:
+(A)Binary pass(B)Direct comparison(C)Sequential checking(D)Straight line check
+Additional	22.	What is the time complexity of Selection Sort:
+(A)O n(B)O log n(C)O n²(D)O 1
+Additional	23.	What does Binary Search do if the middle element is the target:
+(A)Moves to the left half(B)Returns its position(C)Searches all elements again(D)Restarts the search
+Additional	24.	What is the time complexity of Binary Search:
+(A)O log n(B)O n²(C)O n(D)O 1
+Additional	25.	In the example, what is the middle element of the list [1, 3, 5, 7, 9, 11, 13]:
+(A)5(B)7(C)9(D)11
+Additional	26.	What must a list be for Binary Search to work:
+(A)Random(B)Short(C)Sorted(D)Reversed
+Additional	27.	What do graph algorithms explore:
+(A)Arrays(B)Graphs(C)Strings(D)Trees
+Additional	28.	What are graphs made of:
+(A)Tables and rows(B)Nodes and edges(C)Files and folders(D)Lines and circles
+Additional	29.	In which field are graph algorithms commonly used:
+(A)Animation(B)Route planning(C)Game audio(D)Data entry
+Additional	30.	What does BFS use for traversal:
+(A)Stack(B)Queue(C)List(D)Heap
+Additional	31.	How does BFS explore nodes:
+(A)Randomly(B)One side only(C)Depth first(D)Level by level
+Additional	32.	What is the first step in BFS:
+(A)Push root node(B)Dequeue neighbors(C)Enqueue root node(D)Sort all nodes
+Additional	33.	Which is better for shallow graphs:
+(A)BFS(B)Bubble Sort(C)DFS(D)Merge Sort
+Additional	34.	Which is better for deep graphs:
+(A)BFS(B)DFS(C)Both(D)Neither
+Additional	35.	What is the time complexity of DFS:
+(A)O n²(B)O n(C)O V + E(D)O 1
+Additional	36.	What example is given for DFS:
+(A)Route planning(B)Social networks(C)Solving mazes(D)Data sorting
+Additional	37.	When does DFS stop:
+(A)When path ends(B)When stack is empty(C)When graph ends(D)After visiting root
+Additional	38.	What is the first step in DFS:
+(A)Enqueue root(B)Sort edges(C)Push root node(D)Label all vertices
+Additional	39.	What happens when DFS hits a dead end:
+(A)Stops(B)Backtracks(C)Starts over(D)Skips
+Additional	40.	What does DFS use for traversal:
+(A)Queue(B)Stack(C)Graph(D)List
+Additional	41.	When does BFS stop:
+(A)When graph ends(B)When root is processed(C)When queue is empty(D)When path is found
+
+
+3.6 short
+3.6 Commonly Used Algorithms
+1	.	Compare the advantages of Breadth-First Search (BFS) with Depth-First Search (DFS) in graph traversal.
+Exercise
+2	.	Why are sorting algorithms used?
+Additional
+3	.	What is Bubble Sort?
+Additional
+4	.	What is Selection Sort?
+Additional
+5	.	How does Linear Search work?
+Additional
+6	.	What is the purpose of search algorithms?
+Additional
+7	.	What is a search algorithm?
+Additional
+8	.	What is Binary Search?
+Additional
+9	.	What is the time complexity of Binary Search?
+Additional
+10	.	What are graph algorithms used for in computer science?
+Additional
+11	.	Name any two commonly used graph traversal algorithms.
+Additional
+12	.	What is Breadth-First Search (BFS)?
+Additional
+13	.	What is the time complexity of BFS, and what do V and E represent?
+Additional
+14	.	What is Depth-First Search (DFS). How does it work?
+Additional
+15	.	How does Depth-First Search (DFS) differ from BFS in its approach?
+Additional
+16	.	Why is Bubble Sort inefficient for large datasets?
+Conceptuals
+17	.	Why is Binary Search faster than Linear Search?
+Conceptuals
+18	.	When is Binary Search used instead of Linear Search?
+Conceptuals
+
+
+3.6 long
+3.6 Commonly Used Algorithms
+1.	Discuss the characteristics of search problems and compare the efficiency of Linear Search and Binary Search algorithm.
+Exercise
+2.	Explain the process and time complexity of the Bubble Sort algorithm. Compare it with another sorting algorithm of your choice in terms of efficiency.
+Exercise
+3.	Describe Selection Sort. How does it sort elements in a list? Give an example.
+Additional
+4.	Explain the working of Bubble Sort with an example. What is its time complexity?
+Additional
+5.	What are search algorithms? Explain Linear Search with an example.
+Additional
+6.	Describe the Binary Search technique. Give an example to explain its working.
+Additional
+7.	What is Breadth-First Search (BFS)? Describe its working process with an example.
+Additional
+8.	Explain Depth-First Search (DFS). How does it work? Support your answer with a real-life application.
+Additional
+
+
+4.2 mcqs
+4.1.1 Lists
+Exercise	1.	The function used to add an item at the end of a list in Python:
+(A)insert(B)append(C)remove(D)pop
+Exercise	2.	The purpose of the in keyword used with a Python list:
+(A)Adds an item to the list(B)Removes an item from the list(C)Checks if an item exists in the list(D)Returns the length of the list
+Additional	3.	A data structure to store multiple elements in sequence in Python is called:
+(A)List(B)Queue(C)Trees(D)Graphs
+Additional	4.	Which symbol is used to create a list in Python:
+(A)Curly braces {}(B)Parentheses(C)Square brackets [](D)Angle brackets <>
+Additional	5.	List size changes automatically with insertions or deletions mean:
+(A)Ordered Collection(B)Static Size(C)Variable size(D)Dynamic size
+Additional	6.	What is the index of the first element in a Python list:
+(A)1(B)-1(C)0(D)Undefined
+Additional	7.	Which of the following is true about lists in Python:
+(A)Items are stored in a random order(B)Lists have a fixed size(C)Lists cannot store strings(D)Lists allow duplicate items
+Additional	8.	Which method is used to insert an item at a specific position in a list:
+(A)add(B)insert(C)include(D)put
+Additional	9.	Which function is used to insert an item at a specific position in a list:
+(A)add(B)insert(C)put(D)append
+Additional	10.	Which function removes the first occurrence of a specific value from the list:
+(A)remove(B)pop(C)delete(D)discard
+Additional	11.	Which keyword is used to check if an item exists in a list:
+(A)check(B)has(C)find(D)in
+Additional	12.	Lists can be used to implement which of the following data structures:
+(A)Stack(B)Queue(C)Both A and B(D)None of these
+Additional	13.	Which of the following is NOT a common list operation:
+(A)Searching(B)Deletion(C)Insertion(D)Division
+Additional	14.	Which structure is hierarchical by definition:
+(A)Graph(B)List(C)Tree(D)Queue
+
+4.2 short
+4.1.1 Lists
+1	.	Explain the potential issues which could arise when two variables reference the same list in a program? Provide an example.
+Exercise
+2	.	Explain how the 'insert()' function works in python lists. Provide an example.
+Exercise
+3	.	What is a list in Python?
+Additional
+4	.	How is a list created in Python?
+Additional
+5	.	What is index-based access in Python lists?
+Additional
+6	.	What does dynamic size mean in the context of Python lists?
+Additional
+7	.	Name any two properties of a Python list.
+Additional
+8	.	What does it mean that a list is an ordered collection?
+Additional
+9	.	What does the insert() function do in Python?
+Additional
+10	.	Write any two the properties of Python lists in detail.
+Additional
+11	.	What is meant by insertion in a Python list?
+Additional
+12	.	Which function is used to insert an item at a specific index in a list?
+Additional
+13	.	What is "remove()" function in Python list.
+Additional
+14	.	What is "pop()" function in Python list.
+Additional
+15	.	What is the difference between remove() and pop()?
+Additional
+16	.	What does the "in" keyword do in Python lists?
+Additional
+17	.	What is the use of print() in list operations?
+Additional
+18	.	Name two common applications of lists in Python.
+Additional
+19	.	Write applications of Lists in detail.
+Additional
+20	.	What type of data structures can be implemented using lists?
+Additional
+21	.	What does the pop(0) function do?
+Additional
+22	.	Does the order of items remain the same in a Python list?
+Conceptuals
+
+4.2 long
+4.1.1 Lists
+1.	Discuss the dynamic size property of lists in Python. How does this property make lists more flexible?
+Exercise
+2.	Define a list in Python. Explain how lists are created with an example and discuss the properties of Python lists in detail.
+Additional
+3.	Explain the different types of list operations in Python with examples.
+Additional
+
+4.3 mcqs
+4.1.2 Stacks
+Exercise	1.	An operation that removes an item from the top of the stack:
+(A)Push(B)Pop(C)Peek(D)Add
+Additional	2.	What is the principle on which a stack operates:
+(A)FIFO(B)LILO(C)LIFO(D)FILO
+Additional	3.	What is the end of the stack called where operations are performed:
+(A)Base(B)Head(C)Bottom(D)Top
+Additional	4.	Which element is removed first in a stack:
+(A)First added(B)Last added(C)Random(D)Middle
+Additional	5.	Which operation removes the top item from a stack:
+(A)Delete(B)Remove(C)Drop(D)Pop
+Additional	6.	Which operation is used to add an item to the top of the stack:
+(A)Append(B)Push(C)Insert(D)Add
+
+4.3 short
+4.1.2 Stacks
+1	.	Define a stack and explain the Last-In, First-Out (LIFO) principle.
+Exercise
+2	.	Name two basic operations performed on stack.
+Exercise
+3	.	What is a stack in data structures?
+Additional
+4	.	Name the two basic operations of a stack.
+Additional
+5	.	What does the push operation do in a stack?
+Additional
+6	.	What does the pop operation do in a stack?
+Additional
+7	.	Differentiate push and pop operation of stack.
+Additional
+
+4.3 long
+4.1.2 Stacks
+1.	Explain the operations on stack with real-life example and Python code.
+Exercise
+2.	Define a stack. Explain its working principle with the help of an example.
+Additional
+
+4.4mcqs
+4.1.3 Queues
+Exercise	1.	The operation used to add an item to a queue:
+(A)Dequeue(B)Peek(C)Enqueue(D)Remove
+Additional	2.	Which principle does a queue follow:
+(A)LIFO(B)FILO(C)FIFO(D)LILO
+Additional	3.	What is the operation called when an item is removed from a queue:
+(A)Dequeue(B)Pop(C)Delete(D)Remove
+Additional	4.	What is the operation called when an item is added to a queue:
+(A)Push(B)Append(C)Enqueue(D)Insert
+Additional	5.	In a queue, from where is an item removed:
+(A)Front(B)Back(C)Middle(D)Top
+Additional	6.	In a queue, where is a new item added:
+(A)Front(B)Middle(C)Top(D)Back
+
+4.4 short
+4.1.3 Queues
+1	.	Differentiate between the Enqueue and Dequeue operations of queue.
+Exercise
+2	.	What is difference between enqueue() and dequeue ().
+Exercise
+3	.	What does the pop(0) function do?
+Additional
+4	.	What is a queue in data structures?
+Additional
+5	.	Which real-life scenario is used to explain the working of a queue?
+Additional
+6	.	What does FIFO stand for?
+Additional
+7	.	What is the enqueue operation in a queue?
+Additional
+8	.	What does dequeue mean in a queue?
+Additional
+9	.	Name the two primary operations supported by a queue.
+Additional
+10	.	What is the difference between a stack and a queue in terms of item removal?
+Additional
+11	.	Can you retrieve the front element of a queue without removing it?
+Additional
+
+4.4 long
+4.1.3 Queues
+1.	Write a simple program to implement a queue (insertion and deletion).
+Exercise
+2.	Compare queue and stack data structures with examples.
+Additional
+3.	Define a queue. Describe the operations of enqueue and dequeue in detail with example.
+Additional
+
+
+4.5 mcqs
+4.1.4 Trees
+Exercise	1.	True statement about the height of a tree:
+(A)Number of edges from the root to the deepest node(B)Number of nodes from the root to the deepest node(C)Number of children of the root node(D)Always equal to the number of nodes in the tree
+Additional	2.	What is the topmost node in a tree called:
+(A)Parent Node(B)Root Node(C)Leaf Node(D)Top Node
+Additional	3.	What do we call a node that has no child nodes:
+(A)Branch Node(B)Root Node(C)Leaf Node(D)Edge Node
+Additional	4.	Longest path from root to leaf of a tree represent:
+(A)Height(B)Root(C)Node(D)Child
+Additional	5.	When left and right branches have nearly the same height is called:
+(A)Height(B)Root(C)Node(D)balanced tree
+Additional	6.	What kind of tree is used in decision-making algorithms:
+(A)Family tree(B)Directory tree(C)Decision tree(D)Balanced tree
+Additional	7.	Which of the following is a common application of trees:
+(A)Linear searching(B)Sorting arrays(C)Hierarchical data representation(D)Binary arithmetic
+Additional	8.	Which traversal is used for deleting directories and files in correct order:
+(A)Pre-order(B)Post-order(C)In-order(D)Random-order
+Additional	9.	Which traversal is used to back up a file system:
+(A)Post-order(B)In-order(C)Pre-order(D)Level-order
+Additional	10.	What are individual elements in a tree called:
+(A)Leaves(B)Branches(C)Nodes(D)Roots
+Additional	11.	What do we call a node with no child nodes:
+(A)Root Node(B)Parent Node(C)Edge Node(D)Leaf Node
+Additional	12.	What connects the nodes in a tree:
+(A)Links(B)Branches(C)Paths(D)Edges
+
+
+4.5 short
+4.1.4 Trees
+1	.	What is a tree in data structures?
+Additional
+2	.	What is the root node in a tree?
+Additional
+3	.	How is the height of a tree defined?
+Additional
+4	.	What is a balanced tree?
+Additional
+5	.	How is a tree different from a list?
+Additional
+6	.	Name two real-world applications of trees.
+Additional
+7	.	What is the role of edges amd in a tree?
+Additional
+8	.	Write two the main properties of a tree.
+Additional
+9	.	Define node and leaf of a tree.
+Additional
+10	.	Why are decision trees used?
+Additional
+11	.	What is pre-order traversal used for in file systems?
+Additional
+12	.	What is post-order traversal used for in file deletion?
+Additional
+13	.	Explain any two applications of a tree.
+Additional
+14	.	Why is a tree  suitable for representing hierarchical data?
+Additional
+15	.	Why is a list not suitable for representing hierarchical data?
+Conceptuals
+
+
+4.5 long
+4.1.4 Trees
+1.	Define Tree and explain its properties.
+Exercise
+2.	Define a tree data structure. Discuss the applications of trees.
+Additional
+
+
+4.5 mcqs
+4.1.5 Introduction to Graphs
+Exercise	1.	A scenario where a graph data structure is most suitable:
+(A)Managing a to-do list(B)Modeling a line of customers in a store(C)Representing connections in a social network(D)All of the above
+Additional	2.	What does a graph consist of:
+(A)Trees and branches(B)Vertices and edges(C)Nodes and roots(D)Keys and values
+Additional	3.	What type of graph contains one-way connections between nodes:
+(A)Undirected graph(B)Weighted graph(C)Cyclic graph(D)Directed graph
+Additional	4.	What kind of edge allows travel in both directions between vertices:
+(A)Directed edge(B)Rooted edge(C)Undirected edge(D)Recursive edge
+Additional	5.	Which data structure is more flexible in representing relationships:
+(A)Graph(B)Tree(C)List(D)Stack
+Additional	6.	What does the 'weight' of an edge in a graph represent:
+(A)Size of a node(B)Number of vertices(C)Distance, time, or cost(D)Direction of movement
+Additional	7.	The number of edges connected to a vertex is called:
+(A)Degree(B)Height(C)Weight(D)Node
+Additional	8.	Edges of a graph can be:
+(A)Directed(B)Undirected(C)Circular(D)Both A and B
+Additional	9.	If edges have one-way connection are called......edges:
+(A)Directed(B)Undirected(C)Circular(D)Weighted
+Additional	10.	If edges have two-way connection are called......edges:
+(A)Directed(B)Undirected(C)Circular(D)Weighted
+Additional	11.	Which of following represent the values like costs or distances:
+(A)Nodes(B)Root(C)Vartex(D)Edges
+Additional	12.	What do the edges in a graph represent:
+(A)Heights(B)Loops(C)Relationships(D)Levels
+Additional	13.	In a graph representing cities and roads, what does each city correspond to:
+(A)Edge(B)Root(C)Vertex(D)Node
+Additional	14.	What does a road between two cities represent in a graph:
+(A)Vertex(B)Edge(C)Leaf(D)Branch
+Additional	15.	What is the structure of a graph described as:
+(A)Circular(B)Linear(C)Tree-like(D)Web-like
+Additional	16.	Which structure does not require a root node:
+(A)Graph(B)List(C)Tree(D)Queue
+Additional	17.	Which data structure is best suited for representing a family tree:
+(A)Graph(B)Stack(C)Queue(D)Tree
+Additional	18.	Which structure is more flexible in representing complex connections like networks or transport systems:
+(A)Graph(B)Stack(C)Tree(D)Queue
+Additional	19.	Web links and social networks are best represented by which structure:
+(A)Tree(B)Stack(C)Queue(D)Graph
+Additional	20.	Organizational charts are commonly modeled using which data structure:
+(A)List(B)Graph(C)Tree(D)Queue
+
+
+4.5 short
+4.1.5 Introduction to Graphs
+1	.	What is a graph in data structures?
+Additional
+2	.	How is a graph different from a tree?
+Additional
+3	.	What are the main components of a graph?
+Additional
+4	.	What does the term "degree" mean in a graph?
+Additional
+5	.	What is a weighted edge in a graph?
+Additional
+6	.	What is the difference between directed and undirected edges?
+Additional
+7	.	What is a directed graph?
+Additional
+8	.	What is an undirected graph?
+Additional
+9	.	What is a weighted graph?
+Additional
+10	.	Which real-world application is best modeled using a weighted graph?
+Conceptuals
+11	.	What is the benefit of using weights on edges in a graph?
+Conceptuals
+
+4.5 long
+4.1.5 Introduction to Graphs
+1.	What is a graph? Explain differences between directed and undirected graphs.
+Exercise
+2.	Define a graph. Explain its structure with real-life examples.
+Additional
+3.	How is a graph different from a tree? Write at least three key differences.
+Additional
+4.	Describe the main properties of a graph: degree, weight, and direction.
+Additional
+5.	Explain the types of graphs with examples: directed, undirected, and weighted.
+Additional
+
+5.1 mcqs
+5.1 Basic Statistical Concepts
+Additional	1.	Which of the following is used to examining data to support decision-making:
+(A)Database(B)Data analytics(C)Data entry(D)Data cleaning
+Additional	2.	The branch of mathematics that helps us understand and analyze data is called:
+(A)Physics(B)Algebra(C)Statistics(D)Arithmetic
+Additional	3.	A measure that represents the average or central value in a dataset is known as:
+(A)Outlier(B)Central limit(C)Dispersion(D)Measure of central tendency
+Additional	4.	What do measures of central tendency identify in a dataset:
+(A)Extreme values(B)Middle or typical value(C)Errors(D)Graph trends
+Additional	5.	Which measure shows the middle value of ordered data:
+(A)Mode(B)Range(C)Mean(D)Median
+Additional	6.	Which value occurs most often in a dataset:
+(A)Median(B)Mode(C)Mean(D)Range
+Additional	7.	What is the mode in the dataset 50, 60, 70, 70, 90:
+(A)60(B)70(C)90(D)50
+Additional	8.	In the dataset 50, 60, 70, 70, 60, 90, what are the modes:
+(A)60 only(B)70 only(C)60 and 70(D)90
+Additional	9.	Which of the following is a measure of dispersion:
+(A)Variance(B)Median(C)Mode(D)Mean
+Additional	10.	Which formula is used for variance:
+(A)Σx/N(B)Σ(C)Σ(x² - x̄)2 /N(D)x̄ × N
+Additional	11.	The average of all values in a dataset, found by dividing the total by the number of values, is called:
+(A)Median(B)Mean(C)Mode(D)Range
+Additional	12.	A statistical concept used to find whether data points are close to the mean or widely spread:
+(A)Dispersion(B)Mode(C)Frequency(D)Median
+Additional	13.	In the dataset 30, 45, 55, 75, 90, the numbers are more spread out compared to 50, 52, 55, 57, 60. This shows higher:
+(A)Frequency(B)Dispersion(C)Center(D)Mode
+Additional	14.	In a dataset, a higher result of variance calculation shows a greater degree of:
+(A)Centrality(B)Similarity(C)Dispersion(D)Accurac
+Additional	15.	In the dataset 50, 52, 55, 57, 60, the value at the exact middle position is called the:
+(A)Mean(B)Median(C)Mode(D)Spread
+Additional	16.	The measure that shows how much values differ from the mean in a dataset is called:
+(A)Standard(B)Variation(C)Range(D)Variance
+Additional	17.	The concept that describes how spread out the data is in a dataset is called:
+(A)Central Tendency(B)Average(C)Dispersion(D)Estimation
+Additional	18.	The square root of variance is called:
+(A)Mean(B)Standard deviation(C)Median(D)Range
+Additional	19.	A measure that shows how spread out values are from the mean and is in the same unit as the original data:
+(A)Mean(B)Variance(C)Mode(D)Standard deviation
+Additional	20.	The study of how likely an event is to happen is called:
+(A)Estimation(B)Forecasting(C)Probability(D)Sampling
+Additional	21.	The formula “Number of favorable outcomes / Total number of outcomes” defines:
+(A)Frequency(B)Probability(C)Variance(D)Dispersion
+
+
+5.1 short
+5.1 Basic Statistical Concepts
+1	.	What is data analytics?
+Additional
+2	.	Define statistics.
+Additional
+3	.	What is measures of central tendency?
+Additional
+4	.	Name the three measures of central tendency.
+Additional
+5	.	What is mean?
+Additional
+6	.	What is the median in a dataset?
+Additional
+7	.	What is meant by mode in statistics?
+Additional
+8	.	What are measures of dispersion?
+Additional
+9	.	Name two common measures of dispersion.
+Additional
+10	.	What is standard deviation?
+Additional
+11	.	What is probability?
+Additional
+12	.	What is variance?
+Additional
+13	.	Write the formula for calculating variance.
+Additional
+14	.	What is the purpose of using statistics in data analysis?
+Additional
+
+
+5.1 long
+5.1 Basic Statistical Concepts
+1.	Discuss the concept of measure of tendency with example.
+Exercise
+2.	What are the measures of central tendency? Explain mean, median, and mode with examples.
+Additional
+3.	Explain variance in detail. Why is it important in statistics?
+Additional
+4.	Define standard deviation. How is it calculated? Why is it useful in data analysis?
+Additional
+5.	Explain the difference between variance and standard deviation with examples.
+Additional
+
+
+5.2 mcqs
+5.2 Data Collection and Preparation
+Exercise	1.	The activity involved in experimental design in data science:
+(A)Creating visualizations(B)Collecting and analyzing data systematically(C)Writing code for machine learning(D)Building databases
+Additional	2.	The process of gathering relevant information for a specific research purpose is known as:
+(A)Experimentation(B)Data analysis(C)Data collection(D)Survey
+Additional	3.	The step that directly affects the results and insights of research due to the quality of data is:
+(A)Data collection and preparation(B)Graph designing(C)Sampling errors(D)Result prediction
+Additional	4.	Asking structured questions to a group is called:
+(A)Observation(B)Survey(C)Experiment(D)Review
+Additional	5.	Collecting data by watching subjects without interference is called:
+(A)Survey(B)Measurement(C)Sampling(D)Observation
+Additional	6.	A method using online forms or interviews to gather data is:
+(A)Survey(B)Analysis(C)Research(D)Monitoring
+Additional	7.	Watching natural behavior to gather data is:
+(A)Survey(B)Interview(C)Observation(D)Experiment
+Additional	8.	Method choice depends on purpose and data type in:
+(A)Planning(B)Data collection(C)Data visualization(D)Storage
+Additional	9.	Changing variables to see their effect on another is called:
+(A)Survey(B)Experiment(C)Observation(D)Preparation
+Additional	10.	A method used in scientific fields under controlled conditions is:
+(A)Observation(B)Sampling(C)Experiment(D)Survey
+Additional	11.	Studying effects of printed notes on test performance is an example of:
+(A)Observation(B)Survey(C)Interview(D)Experiment
+Additional	12.	Making data ready for analysis by cleaning and organizing is called:
+(A)Analysis(B)Preparation(C)Transformation(D)Evaluation
+Additional	13.	Removing errors and formatting data for analysis is called:
+(A)Visualization(B)Data collection(C)Modeling(D)Data preparation
+Additional	14.	Estimating missing values in data is part of:
+(A)Survey design(B)Interpolation(C)Sampling(D)Experimentation
+Additional	15.	Ensuring reliability of results by fixing data issues is part of:
+(A)Data analysis(B)Data preparation(C)Data storage(D)Field work
+Additional	16.	Fixing errors and removing problems in data is called:
+(A)Transformation(B)Cleaning(C)Grouping(D)Formatting
+Additional	17.	Converting cleaned data into usable format is called:
+(A)Transformation(B)Grouping(C)Filtering(D)Estimation
+Additional	18.	Step taken to correct missing values, wrong entries, or duplicates is:
+(A)Analysis(B)Cleaning(C)Aggregation(D)Sampling
+Additional	19.	Changing data format or structure after cleaning is known as:
+(A)Normalization(B)Sorting(C)Transformation(D)Cleaning
+Additional	20.	Process that prevents misleading results by fixing raw data errors is called:
+(A)Data cleaning(B)Data analysis(C)Data visualization(D)Data encoding
+Additional	21.	Creating new columns or summarizing data for analysis is part of:
+(A)Data mining(B)Data modeling(C)Data transformation(D)Data collection
+Additional	22.	Step that organizes data into class-level averages instead of individual records is:
+(A)Aggregation(B)Sorting(C)Cleaning(D)Sampling
+Additional	23.	Incomplete or blank values in a dataset are known as:
+(A)Duplicates(B)Missing data(C)Noise(D)Errors
+Additional	24.	Removing rows with blanks if they are very few is called:
+(A)Filtering(B)Imputation(C)Removal(D)Cleaning
+Additional	25.	Estimating missing values using averages or similar data is called:
+(A)Interpolation(B)Flagging(C)Removal(D)Imputation
+Additional	26.	Adding a note to indicate missing values in the dataset is called:
+(A)Tagging(B)Imputation(C)Flagging(D)Filtering
+Additional	27.	Choosing to drop incomplete records when few values are missing is known as:
+(A)Cleaning(B)Imputation(C)Flagging(D)Removal
+
+
+5.2 short
+5.2 Data Collection and Preparation
+1	.	What is data collection?
+Additional
+2	.	Name any three data collection methods.
+Additional
+3	.	What is a survey?
+Additional
+4	.	What is meant by observation in data collection?
+Additional
+5	.	Define observation as a data collection method.
+Additional
+6	.	In what situation is observation most useful?
+Additional
+7	.	Define experiment as a data collection method.
+Additional
+8	.	What is data preparation?
+Additional
+9	.	Why are data cleaning and transformations important?
+Additional
+10	.	Define data cleaning.
+Additional
+11	.	What is data transformation?
+Additional
+12	.	What is meant by handling missing data?
+Additional
+13	.	Name three methods to handle missing data.
+Additional
+14	.	What is imputation in data handling?
+Additional
+15	.	What is flagging data handling?
+Additional
+16	.	What is difference between imputation and flagging?
+Additional
+17	.	Define missing data.
+Additional
+
+
+5.2 long
+5.2 Data Collection and Preparation
+1.	Explain data collection methods.
+Exercise
+2.	Describe the three common methods of data collection: surveys, observations, and experiments. Give examples of each.
+Additional
+3.	Explain the process and importance of data cleaning with suitable examples.
+Additional
+4.	What is data transformation? How does it improve data analysis? Provide examples.
+Additional
+5.	Define missing data. Discuss different techniques for handling missing data, including imputation, flagging, and removal.
+Additional
+
+
+5.3 mcqs
+5.3 Building Statistical Models
+Exercise	1.	An example of a basic statistical model:
+(A)Linear Regresion(B)Neural Networks(C)Decision Trees(D)Support Vector Machines
+Exercise	2.	The meaning of the slope in a linear regression model:
+(A)The intercept of the model(B)The change in the dependent variable for a unit change in the independentvariable(C)The error term(D)The mean of the data
+Exercise	3.	An example of a real-world application of statistical models:
+(A)Predicting house prices(B)Creating social media posts(C)Designing websites(D)Writing essays
+Exercise	4.	A primary goal of K-Means Clustering:
+(A)To classify data into predefined categories(B)To group data into clusters based on similarity(C)To predict continuous outcomes(D)To reduce the dimensionality of data
+Exercise	5.	The meaning of "K" in K-Means Clustering:
+(A)Number of features in the dataset(B)Number of clusters to be formed(C)Number of iterations required for convergence(D)Number of data points in the dataset
+Additional	6.	A process used to estimate future outcomes using past data is called:
+(A)Flagging(B)Statistical modeling(C)Experimentation(D)Normalization
+Additional	7.	The first step in model building, identifying what needs to be solved, is called:
+(A)Evaluation(B)Prediction(C)Algorithm selection(D)Define the problem
+Additional	8.	Gathering related information for a prediction task is called:
+(A)Feature engineering(B)Data collection(C)Data cleaning(D)Data labeling
+Additional	9.	Choosing a suitable method to create a model is called:
+(A)Training(B)Preprocessing(C)Algorithm selection(D)Transformation
+Additional	10.	Letting the model learn patterns from given data is called:
+(A)Model testing(B)Model training(C)Data visualization(D)Feature scaling
+Additional	11.	Testing model accuracy with new data is called:
+(A)Evaluation(B)Scaling(C)Training(D)Aggregation
+Additional	12.	Linear regression and logistic regression are examples of:
+(A)Algorithms(B)Graphs(C)Errors(D)Outliers
+Additional	13.	A model that shows the relationship between two variables is called:
+(A)Logistic regression(B)Linear regression(C)Probability model(D)Normal distribution
+Additional	14.	A variable used to predict another is called:
+(A)Dependent variable(B)Forecast variable(C)Independent variable(D)Outcome variable
+Additional	15.	The variable whose value depends on another is called:
+(A)Constant(B)Predictor(C)Independent variable(D)Dependent variable
+Additional	16.	The formula Y = B₀ + B₁X + e represents:
+(A)Linear regression(B)Mean calculation(C)Logistic regression(D)Variance formula
+Additional	17.	In the formula Y = B₀ + B₁X + e, B₀ is the:
+(A)Slope(B)Output(C)Intercept(D)Error
+Additional	18.	In the formula Y = B₀ + B₁X + e, B₁ is the:
+(A)Average(B)Slope(C)Error(D)Constant
+Additional	19.	The value that explains how much Y changes with each unit of X is called:
+(A)Intercept(B)Mean(C)Error(D)Slope
+Additional	20.	The difference between predicted and actual values is called:
+(A)Slope(B)Outlier(C)Error(D)Intercept
+Additional	21.	The point where the regression line crosses the Y-axis is the:
+(A)Intercept(B)Mean(C)Slope(D)Median
+Additional	22.	In linear regression, Y is the:
+(A)Input variable(B)Predictor variable(C)Dependent variable(D)Independent variable
+Additional	23.	In the model Earnings = 100 + 40 × Customers, the fixed value 100 is the:
+(A)Error(B)Slope(C)Intercept(D)Variable
+Additional	24.	In the model Earnings = 100 + 40 × Customers, the value 40 is the:
+(A)Intercept(B)Slope(C)Error(D)Output
+Additional	25.	If the model predicts 1,220 Rs and actual earning is 1,250 Rs, then -30 Rs is the:
+(A)Error(B)Slope(C)Intercept(D)Prediction
+Additional	26.	Used to predict outcomes like “yes” or “no”:
+(A)Logistic regression(B)Linear regression(C)Probability model(D)Decision tree
+Additional	27.	Regression model that gives a probability between 0 and 1 is called:
+(A)Linear regression(B)Mean regression(C)Logistic regression(D)Variance model
+Additional	28.	Model used to estimate chances of an event happening:
+(A)Logistic regression(B)Standard deviation(C)Frequency distribution(D)Hypothesis test
+Additional	29.	Predicting pass/fail outcome based on study hours uses:
+(A)Frequency analysis(B)Linear regression(C)Logistic regression(D)Median prediction
+Additional	30.	Grouping similar data points based on characteristics is called:
+(A)Regression(B)Sorting(C)Sampling(D)Clustering
+Additional	31.	A method that forms groups of students based on subject performance is:
+(A)Classification(B)Regression(C)Clustering(D)Evaluation
+Additional	32.	A simple and popular technique used in clustering is called:
+(A)K-means(B)Logistic regression(C)K-nearest neighbor(D)Decision tree
+Additional	33.	Clustering technique where number of groups is decided in advance is:
+(A)Logistic regression(B)Linear regression(C)K-means(D)Random forest
+Additional	34.	Clustering works by grouping data using:
+(A)Mean and mode(B)Standard deviation(C)Time and location(D)Distance and similarity
+Additional	35.	Checking how well a model performs is called:
+(A)Interpretation(B)Validation(C)Model evaluation(D)Model training
+Additional	36.	Values used to assess model performance are called:
+(A)Equations(B)Metrics(C)Factors(D)Labels
+Additional	37.	Percentage of correct predictions made by a model is measured by:
+(A)Accuracy(B)Slope(C)Regression(D)Variance
+Additional	38.	Understanding what model results reveal is called:
+(A)Scaling(B)Testing(C)Interpreting output(D)Fitting model
+Additional	39.	Ensuring a model does not unfairly favor a group is called:
+(A)Fairness(B)Privacy(C)Transparency(D)Accuracy
+Additional	40.	Protecting user information used in models is called:
+(A)Privacy(B)Sampling(C)Regression(D)Bias
+Additional	41.	Model results should not favor one group unfairly to avoid:
+(A)Accuracy loss(B)Bias(C)Outliers(D)Clustering
+
+
+5.3 short
+5.3 Building Statistical Models
+1	.	What is the importance of building statistical models in real-world applications?
+Exercise
+2	.	Name one basic statistical model used for predicting outcomes and explain its purpose.
+Exercise
+3	.	What is statistical modeling?
+Additional
+4	.	List the five steps involved in developing a statistical model.
+Additional
+5	.	Name two popular modeling algorithms.
+Additional
+6	.	What does it mean to train a model?
+Additional
+7	.	Why is model evaluation important?
+Additional
+8	.	What is linear regression used for?
+Additional
+9	.	Write the formula for simple linear regression.
+Additional
+10	.	What are suggestions to improve statistical model?
+Additional
+11	.	What is logistic regression used for?
+Additional
+12	.	How is logistic regression different from linear regression?
+Additional
+13	.	What is clustering?
+Additional
+14	.	What is the main purpose of clustering?
+Additional
+15	.	What is K-means clustering?
+Additional
+16	.	In K-means, what must we decide before applying the algorithm?
+Additional
+17	.	How does K-means clustering group similar items?
+Additional
+18	.	What is model evaluation?
+Additional
+19	.	Name two common performance metrics used in model evaluation.
+Additional
+20	.	What is error metrics?
+Additional
+21	.	What is accuracy metrics?
+Additional
+
+5.3 long
+5.3 Building Statistical Models
+1.	Describe the steps involved in building a basic statistical model (e.g., linear regression). Include details on data collection, model training, and evaluation.
+Exercise
+2.	Explain the role and importance of statistical models in solving real-world problems.
+Exercise
+3.	Define statistical modeling. Discuss the five steps involved in model development, using the example.
+Additional
+
+
+5.4 mcqs
+5.4 Introduction to Data Visualization
+Exercise	1.	Option not considered a benefit of data visualization:
+(A)Identifying trends and patterns(B)Communicating insights effectively(C)Making data more complex(D)Summarizing large datasets
+Additional	2.	Showing data using graphs or charts is called:
+(A)Data modeling(B)Data cleaning(C)Data prediction(D)Data visualization
+Additional	3.	Visual format that helps identify patterns and trends is known as:
+(A)Regression(B)Clustering(C)Sorting(D)Visualization
+Additional	4.	Chart type best for comparing categories is called:
+(A)Line graph(B)Bar chart(C)Boxplot(D)Histogram
+Additional	5.	Graph used to show trends over time is called:
+(A)Scatterplot(B)Histogram(C)Line graph(D)Pie chart
+Additional	6.	Used to show distribution of values in grouped intervals:
+(A)Line graph(B)Histogram(C)Scatterplot(D)Bar chart
+Additional	7.	Used to display relationships between two variables:
+(A)Scatterplot(B)Line graph(C)Boxplot(D)Histogram
+Additional	8.	Graph type for comparing exam scores across classes:
+(A)Line graph(B)Scatterplot(C)Boxplot(D)Histogram
+Additional	9.	Graph best for tracking temperature change over a week:
+(A)Bar chart(B)Scatterplot(C)Histogram(D)Line graph
+Additional	10.	Graph for analyzing math score distribution:
+(A)Line graph(B)Histogram(C)Boxplot(D)Scatterplot
+
+
+5.4 short
+5.4 Introduction to Data Visualization
+1	.	How does visualizing data help in understanding descriptive statistics?
+Exercise
+2	.	List two types of data visualizations and describe when you would use each.
+Exercise
+3	.	What is data visualization?
+Additional
+4	.	Why is data visualization important?
+Additional
+5	.	Name any two types of data visualizations.
+Additional
+6	.	What is a bar chart used for?
+Additional
+7	.	What is a line graph?
+Additional
+8	.	What is histogram?
+Additional
+9	.	What is scatterplot? Where can it be used?
+Additional
+
+
+5.4 long
+5.4 Introduction to Data Visualization
+1.	Discuss the types of data visualizations and their uses.
+Exercise
+
+
+5.5 mcqs
+5.5 Tools for Data Visualization
+Exercise	1.	A commonly used tool for creating data visualizations:
+(A)MS Excel(B)Python(C)Tableau(D)All of the above
+Additional	2.	Turning numbers into easy-to-understand charts is called:
+(A)Data visualization(B)Data cleaning(C)Data modeling(D)Data scaling
+Additional	3.	Common tools for making charts and graphs include:
+(A)Python and Java(B)Excel and Google Sheets(C)Photoshop and Illustrator(D)SQL and MongoDB
+Additional	4.	Tool that helps create bar charts and line graphs easily:
+(A)Microsoft Word(B)Google Forms(C)Excel(D)Notepad
+Additional	5.	Online spreadsheet tool useful for visualizing sales data:
+(A)Gmail(B)Google Sheets(C)Google Slides(D)Google Docs
+Additional	6.	The first step in creating a chart in Excel is:
+(A)Print the sheet(B)Customize the layout(C)Enter your data(D)Export the graph
+Additional	7.	To visualize data in Excel, you must first:
+(A)Sort the file(B)Highlight the cells(C)Close the file(D)Format the rows
+Additional	8.	To insert a chart, use the tab called:
+(A)File(B)Format(C)Tools(D)Insert
+Additional	9.	Adding axis labels makes the chart more:
+(A)Colorful(B)Complex(C)Interpretable(D)Static
+
+
+5.5 short
+5.5 Tools for Data Visualization
+1	.	Name two commonly used tools for creating data visualizations.
+Additional
+
+5.5 long
+5.5 Tools for Data Visualization
+1.	Describe the steps to create a bar chart in Excel using monthly sales data.
+Additional
+
+
+6.1 mcqs
+6.1 Definition and Overview of Emerging Technologies
+Exercise	1.	Technology that enables machines to learn and act like humans:
+(A)Quantum Computing(B)Artificial Intelligence(C)Blockchain(D)Augmented Reality
+Exercise	2.	Technology for accessing data over internet instead of local storage:
+(A)Cloud Computing(B)Internet of Things(C)Blockchain(D)5G
+Additional	3.	Technology for accessing data over internet instead of local storage:
+(A)Cloud Computing(B)Internet of Things(C)Blockchain(D)5G
+Additional	4.	Technology that enables machines to learn and act like humans:
+(A)Quantum Computing(B)Artificial Intelligence(C)Blockchain(D)Augmented Reality
+Additional	5.	AI example used in cars and voice assistants:
+(A)Blockchain(B)Siri(C)Cloud Drive(D)5G Network
+Additional	6.	Technology that connects physical devices to the internet:
+(A)Virtual Reality(B)Artificial Intelligence(C)Internet of Things(D)Cloud Computing
+Additional	7.	Smart thermostats are an example of:
+(A)Quantum Computing(B)IoT(C)VR(D)Cloud
+Additional	8.	Technology that adds digital content to real-world views:
+(A)Augmented Reality(B)Virtual Reality(C)Blockchain(D)Cloud
+Additional	9.	Technology that creates an entirely artificial environment:
+(A)AI(B)IoT(C)5G(D)Virtual Reality
+Additional	10.	AR and VR are used in:
+(A)Construction only(B)Gaming and education(C)Shopping and packaging(D)Weather forecasting
+Additional	11.	New generation wireless technology with faster speed:
+(A)4G(B)Wi-Fi(C)LAN(D)5G
+Additional	12.	5G technology improves performance of:
+(A)Landlines(B)Smart devices(C)Gas appliances(D)Electrical circuits
+Additional	13.	Computing type that uses qubits instead of bits:
+(A)Cloud Computing(B)Quantum Computing(C)Blockchain(D)Machine Learning
+Additional	14.	Qubits differ from classical bits because they can be:
+(A)Only 1(B)Only 0(C)Both 0 and 1(D)Negative
+
+
+6.1 short
+6.1 Definition and Overview of Emerging Technologies
+1	.	What is Artificial Intelligence (AI)?
+Additional
+2	.	What is 5G technology?
+Additional
+3	.	Define quantum computing in simple words.
+Additional
+4	.	What are qubits?
+Additional
+5	.	What is the difference between AR and VR?
+Additional
+6	.	What is the advantage of 5G over older wireless technologies?
+Additional
+7	.	What does IoT stand for? How does it work?
+Additional
+
+
+6.1 long
+6.1 Definition and Overview of Emerging Technologies
+1.	Define cloud deployment models and assess the differences among them.
+Exercise
+2.	Classify the various types of cloud services and compare them, highlighting key distinctions.
+Exercise
+
+
+6.2 mcqs
+6.2 Cloud Computing
+Exercise	1.	A cloud deployment model with resources shared among multiple organizations with common concerns:
+(A)Public Cloud(B)Private Cloud(C)Community Cloud(D)Hybrid Cloud
+Exercise	2.	A cloud service offering a platform for developing, running, and managingapplications without managing infrastructure:
+(A)Infrastructure as a Service(B)Platform as a Service(C)Software as a Service(D)Data as a Service
+Exercise	3.	A cloud deployment model combining public and private cloud features:
+(A)Public Cloud(B)Hybrid Cloud(C)Community Cloud(D)Multi-Cloud
+Additional	4.	Technology that allows online storage and access:
+(A)Blockchain(B)Internet of Things(C)Cloud Computing(D)Quantum Computing
+Additional	5.	Concept allowing one machine to act as many:
+(A)Duplication(B)Virtualization(C)Automation(D)Backup
+Additional	6.	What cloud computing concept means increasing resources when demand rises:
+(A)Virtualization(B)Elasticity(C)Automation(D)Scalability
+Additional	7.	What refers to automatic increase or decrease of resources based on usage:
+(A)Scalability(B)Cloud flexibility(C)Virtualization(D)Elasticity
+Additional	8.	What does elasticity automatically manage in cloud computing:
+(A)Users(B)Costs(C)Computing resources(D)Security
+Additional	9.	What allows instant use of cloud resources without delay:
+(A)Backup system(B)On-demand access(C)Scheduling tool(D)Manual provisioning
+Additional	10.	What cloud computing feature lets a student instantly get more storage for a project:
+(A)Offline backup(B)Hardware upgrade(C)On-demand access(D)Storage compression
+Additional	11.	What allows a website to handle increased visitors during a special event:
+(A)Compression(B)Virtualization(C)Rebooting(D)Scalability
+Additional	12.	What concept allows one physical machine to function as multiple independent systems:
+(A)Multi-threading(B)Virtualization(C)Centralization(D)Debugging
+Additional	13.	What are the three main types of cloud services:
+(A)IaaS, VPN, SMTP(B)DNS, SaaS, BIOS(C)SaaS, HTTP, FTP(D)IaaS, PaaS, SaaS
+Additional	14.	Which cloud model provides virtual servers and storage:
+(A)SaaS(B)IaaS(C)PaaS(D)BIOS
+Additional	15.	Users control operating systems in:
+(A)SaaS(B)PaaS(C)IaaS(D)All cloud types
+Additional	16.	Which of the following is an example of IaaS:
+(A)Gmail(B)Google App Engine(C)AWS EC2(D)Microsoft Word
+Additional	17.	Which provide the complete development environment:
+(A)SaaS(B)PaaS(C)IaaS(D)All cloud types
+Additional	18.	Which is a PaaS example:
+(A)Heroku(B)Dropbox(C)Google Docs(D)Amazon S3
+Additional	19.	Which service delivers fully functional applications over the internet:
+(A)IaaS(B)BIOS(C)PaaS(D)SaaS
+Additional	20.	The user , uses applications via internet in:
+(A)SaaS(B)BIOS(C)IaaS(D)PaaS
+Additional	21.	Which of these is a SaaS platform:
+(A)Microsoft Azure(B)Gmail(C)Google App Engine(D)Ubuntu Server
+Additional	22.	How cloud services are offered and used called :
+(A)Cloud deployment model(B)Cloud computing(C)SaaS(D)Cloud model
+Additional	23.	Which of the following is a public cloud provider:
+(A)Dell(B)Red Hat(C)AWS(D)Oracle VM
+Additional	24.	Share services among multiple organizations is:
+(A)Private cloud(B)Multi-cloud(C)Hybrid cloud(D)Public cloud
+Additional	25.	In which model is cloud infrastructure hosted either on-premises or by a trusted third party:
+(A)Private cloud(B)Hybrid cloud(C)Public cloud(D)Multi-cloud
+Additional	26.	Which organization is likely to use a private cloud:
+(A)Local bakery(B)Online game server(C)Bank(D)Public library
+Additional	27.	Which cloud model combines public and private clouds:
+(A)Hybrid cloud(B)Open cloud(C)Isolated cloud(D)Distributed cloud
+Additional	28.	Which model uses multiple cloud providers at once:
+(A)Private Cloud(B)Hybrid Cloud(C)Multi-cloud(D)Fog Cloud
+Additional	29.	A company using AWS, Azure, and GCP together is an example of:
+(A)Private cloud(B)Multi-cloud(C)Fog computing(D)Edge cloud
+Additional	30.	Which deployment model is most cost-effective but less secure:
+(A)Private cloud(B)Multi-cloud(C)Hybrid cloud(D)Public cloud
+Additional	31.	Which cloud model provides the highest resilience using multiple vendors:
+(A)Hybrid cloud(B)Private cloud(C)Community cloud(D)Multi-cloud
+
+6.2 short
+6.2 Cloud Computing
+1	.	Differentiate between Elasticity and On-Demand access in cloud computing.
+Exercise
+2	.	What is cloud computing?
+Additional
+3	.	How does cloud computing help users save money?
+Additional
+4	.	What is virtualization in cloud computing?
+Additional
+5	.	What does virtualization allow a single computer to do?
+Additional
+6	.	Define scalability in the context of cloud computing.
+Additional
+7	.	What is elasticity in cloud computing?
+Additional
+8	.	How does elasticity differ from scalability in managing cloud resources?
+Additional
+9	.	What is on-demand access in cloud computing?
+Additional
+10	.	Give an example of when scalability is useful.
+Additional
+11	.	What are the three main types of cloud services?
+Additional
+12	.	What is Infrastructure as a Service (IaaS)?
+Additional
+13	.	What is Platform as a Service (PaaS)?
+Additional
+14	.	What is Software as a Service (SaaS), and how is it accessed?
+Additional
+15	.	Why is SaaS convenient for end-users?
+Additional
+16	.	What are cloud deployment models?
+Additional
+17	.	Name the four main cloud deployment models.
+Additional
+18	.	What is a public cloud?
+Additional
+19	.	What is a private cloud? Who can access a private cloud?
+Additional
+20	.	Define hybrid cloud with an example.
+Additional
+21	.	What is the main benefit of a hybrid cloud?
+Additional
+22	.	What is a multi-cloud model?
+Additional
+23	.	Why might an organization choose to use multiple cloud providers?
+Additional
+
+6.2 long
+6.2 Cloud Computing
+1.	Classify the various types of cloud services and compare them, highlighting key distinctions.
+Exercise
+2.	Define cloud deployment models and assess the differences among them.
+Exercise
+3.	Describe "Cloud Deployment Models" with examples.
+Exercise
+
+
+6.3 mcqs
+6.3 Applications and Implications of Cloud Computing
+Additional	1.	Which service provides cloud-based file storage:
+(A)VLC Media Player(B)Dropbox(C)Photoshop(D)Notepad++
+Additional	2.	What feature in cloud computing helps match resources with user demand:
+(A)Virtualization(B)Hard coding(C)Scalability(D)Optimization
+Additional	3.	What does resource management in cloud computing help control:
+(A)Time zones(B)Internet speed(C)Mobile data usage(D)Cost and performance
+Additional	4.	Which platform offers web hosting services using cloud infrastructure:
+(A)Amazon Web Services(B)MS Paint(C)Turbo C++(D)Adobe Illustrator
+Additional	5.	Which tool is used to build and deploy machine learning models in the cloud:
+(A)Excel(B)Google Docs(C)VLC(D)AWS SageMaker
+Additional	6.	What is a major concern when storing data on the cloud:
+(A)Lack of formatting tools(B)Color display problems(C)Data security and breaches(D)Limited internet access
+Additional	7.	What must organizations consider when using cloud services across different regions:
+(A)File size only(B)Weather conditions(C)Compliance with regulations(D)Browser compatibility
+
+
+6.3 short
+6.3 Applications and Implications of Cloud Computing
+1	.	What is cloud storage?
+Additional
+2	.	What is a CDN (Content Delivery Network)?
+Additional
+3	.	How does cloud computing support machine learning and AI?
+Additional
+4	.	How can users protect their data in the cloud.
+Additional
+5	.	What does scalability mean in cloud computing?
+Additional
+6	.	Why is resource management important in the cloud?
+Additional
+7	.	What is meant by compliance in cloud computing?
+Additional
+
+
+6.3 long
+6.3 Applications and Implications of Cloud Computing
+1.	Describe any three major applications of cloud computing with examples.
+Additional
+
+
+6.4 mcqs
+6.4 Introduction to Blockchain Technology
+Exercise	1.	The advantage of using a distributed ledger in blockchain technology:
+(A)Centralized control for quick decision-making(B)Easy alteration of transaction histories(C)Enhanced transparency and security through decentralized verification(D)Lower computational requirements
+Additional	2.	Secure digital ledger system:
+(A)Cloud computing(B)Blockchain(C)IoT(D)AI
+Additional	3.	What is a blockchain often compared to for easier understanding:
+(A)A typewriter(B)A shared digital notebook(C)A television remote(D)A video game console
+Additional	4.	Which feature of blockchain makes it hard to change or erase information:
+(A)Animation(B)Compression(C)Decoration(D)Cryptography
+Additional	5.	What ensures that no single person controls the blockchain:
+(A)Password protection(B)Encryption(C)Decentralization(D)File compression
+Additional	6.	Which of the following is NOT a feature of blockchain:
+(A)Transparency(B)Immutability(C)Centralized storage(D)Decentralization
+Additional	7.	What makes blockchain records permanent and tamper-proof:
+(A)Immutability(B)Erasers(C)Stamps(D)Download buttons
+Additional	8.	Which principle helps blockchain avoid a single point of failure:
+(A)Centralization(B)Virtualization(C)Decentralization(D)Rotation
+Additional	9.	What do blockchain networks use to agree on the validity of a transaction:
+(A)Authentication tools(B)Consensus mechanisms(C)Peer-to-peer messages(D)Firewalls
+Additional	10.	What makes blockchain data visible to all participants:
+(A)Encryption(B)Transparency(C)Firewalls(D)Central servers
+Additional	11.	A computer that maintains a copy of the blockchain is.......:
+(A)Node(B)Ladger(C)Block(D)Transaction
+Additional	12.	What is the digital record of all blockchain transactions called:
+(A)Report(B)Ledger(C)File system(D)Database
+Additional	13.	A hash, parent hash, and transactions in the blockchain is.......:
+(A)Node(B)Ladger(C)Block(D)Transaction
+Additional	14.	A transfer of assets or information in the blockchain is.......:
+(A)Node(B)Ladger(C)Block(D)Transaction
+Additional	15.	What defines the rules for validating transactions and adding blocks:
+(A)Web protocol(B)HTML rules(C)Server policy(D)Blockchain protocol
+Additional	16.	What ensures integrity and security in a blockchain system:
+(A)Blockchain hosting(B)Blockchain protocol(C)System firewall(D)Machine learning
+Additional	17.	A network where nodes directly share resources is.......:
+(A)Node(B)Server(C)Block(D)P2P
+Additional	18.	Which of the following is NOT a use case of blockchain:
+(A)Medical record security(B)Cryptocurrency transactions(C)Image editing(D)Voting systems
+Additional	19.	What are cryptocurrencies primarily known as:
+(A)Paper money(B)Arcade tokens(C)Digital currencies(D)Bank savings
+Additional	20.	What feature makes cryptocurrencies different from traditional currencies:
+(A)Bank requirement(B)Physical coins(C)Government approval(D)Blockchain use
+Additional	21.	Which technology ensures the security of cryptocurrency transactions:
+(A)Blockchain(B)Private servers(C)Government regulation(D)User passwords
+Additional	22.	Digital agreements that self-execute under set conditions:
+(A)Smart contracts(B)Blockchain(C)Cryptocurrencies(D)GPS
+Additional	23.	What technology do smart contracts use:
+(A)Bluetooth(B)Blockchain(C)Web servers(D)GPS
+Additional	24.	Which platform allows developers to build DApps using smart contracts:
+(A)Android Studio(B)Ethereum(C)Chrome OS(D)Salesforce
+Additional	25.	What is a major challenge of smart contracts:
+(A)Electricity-free(B)Handwritten format(C)Error-free code(D)Store-based use
+Additional	26.	What is a key benefit of using smart contracts:
+(A)Manual enforcement(B)Lawyer approval(C)Editable terms(D)Automatic execution
+
+
+6.4 short
+6.4 Introduction to Blockchain Technology
+1	.	Describe the concept of immutability in blockchain. Why is it a critical feature?
+Exercise
+2	.	Analyze the role of Peer-to-Peer Networks in Blockchain. How do they function and why are they essential?
+Exercise
+3	.	What is blockchain technology?
+Additional
+4	.	How does blockchain ensure transparency?
+Additional
+5	.	What makes blockchain secure?
+Additional
+6	.	What is meant by decentralization in blockchain?
+Additional
+7	.	What is immutability? Why is it important in blockchain?
+Additional
+8	.	What is the role of consensus mechanisms in blockchain?
+Additional
+9	.	How does decentralization improve the security of blockchain?
+Additional
+10	.	What is a node in blockchain?
+Additional
+11	.	What is the role of a ledger in blockchain?
+Additional
+12	.	Define a block in the context of blockchain.
+Additional
+13	.	What is a transaction in blockchain?
+Additional
+14	.	What is blockchain protocol?
+Additional
+15	.	What is a peer-to-peer (P2P) network?
+Additional
+16	.	Give one example of a P2P network in use.
+Additional
+17	.	How can blockchain be used in voting systems?
+Additional
+18	.	What are cryptocurrencies?
+Additional
+19	.	What is the main role of cryptocurrencies in the digital economy?
+Additional
+20	.	Define smart contracts.
+Additional
+21	.	What are DApps?
+Additional
+22	.	Write the challenges associated with smart contracts.
+Additional
+23	.	What is a distributed ledger?
+Conceptuals
+24	.	Why is it difficult to alter information in a blockchain?
+Conceptuals
+25	.	How do cryptocurrencies differ from traditional money?
+Conceptuals
+
+
+6.4 long
+6.4 Introduction to Blockchain Technology
+1.	Describe the key components of a blockchain system and their functions.
+Additional
+2.	Describe four practical use cases of blockchain technology.
+Additional
+3.	What are cryptocurrencies? Explain the "role of cryptocurrencies" and "smart contracts" .
+Additional
+
+
+6.5 mcqs
+6.5 Applications and Implications of Blockchain
+Additional	1.	What technology ensures transparency in tracking products:
+(A)GPS(B)Barcode(C)Blockchain(D)Wi-Fi
+Additional	2.	What feature of blockchain makes product tracking secure:
+(A)Decentralization(B)Random sampling(C)Color codes(D)Local servers
+Additional	3.	Which process is made traceable by blockchain in a supply chain:
+(A)Advertising(B)Manufacturing(C)Recruitment(D)Product journey
+Additional	4.	Which of the following is a supply chain entity recorded on blockchain:
+(A)Accountant(B)Retailer(C)Designer(D)Security guard
+Additional	5.	Which technology helps artists prove the originality of digital art:
+(A)Photoshop(B)Blockchain(C)Illustrator(D)Animation
+Additional	6.	1. What helps banks make international transactions faster and cheaper:
+(A)Currency(B)Blockchain(C)ATM(D)Ledger
+Additional	7.	2. What does sealing a letter in blockchain security represent:
+(A)Verification(B)Decentralization(C)Encryption(D)Consensus
+Additional	8.	What is the digital signature compared to in the mail example:
+(A)Password(B)Signature(C)Lock(D)Address
+Additional	9.	4. What part of blockchain is similar to using multiple delivery routes to ensure safe arrival:
+(A)Network(B)Hash(C)Node(D)Decentralization
+Additional	10.	What part of blockchain ensures tampering is detected during data delivery:
+(A)Network(B)Protocol(C)Ledger(D)Key
+Additional	11.	Which of the following companies uses powerful computers to help run blockchain networks:
+(A)Amazon(B)Facebook(C)Adobe(D)Twitter
+Additional	12.	What is used to prove the authenticity of digital art on a blockchain:
+(A)Digital signature(B)Password(C)QR code(D)Barcode
+
+
+6.5 short
+6.5 Applications and Implications of Blockchain
+1	.	What is the role of a decentralized ledger in supply chain tracking?
+Additional
+2	.	How blockchain technology is used to track the origin of products?
+Additional
+3	.	Why is decentralization important for data security in blockchain?
+Additional
+4	.	What is encryption in blockchain?
+Additional
+5	.	What is data security in blockchain?
+Additional
+6	.	What does a digital signature do in blockchain?
+Additional
+7	.	How does the blockchain network detect unauthorized changes?
+Additional
+
+
+6.6 mcqs
+6.6 Future Trends and Innovations
+Exercise	1.	The main benefit of edge computing:
+(A)Lower cost(B)Reduced latency(C)Increased complexity(D)Enhanced security
+Exercise	2.	The primary advantage of serverless architectures:
+(A)Cost savings(B)Constant server management(C)Increased hardware needs(D)Manual scaling
+Exercise	3.	The service model enabling application deployment without server management:
+(A)Infrastructure as a Service(B)Platform as a Service(C)Software as a Service(D)Serverless Architecture
+Additional	4.	What is the main benefit of edge computing:
+(A)Centralized storage(B)Lower latency(C)Expensive hardware(D)Remote access
+Additional	5.	Where does edge computing process data:
+(A)Cloud servers(B)Data warehouses(C)Near the data source(D)Central control room
+Additional	6.	What technology allows real-time data processing in autonomous vehicles:
+(A)Cloud computing(B)Edge computing(C)Blockchain(D)Big Data
+Additional	7.	Which technology allows developers to build applications without managing servers:
+(A)Blockchain(B)SaaS(C)Serverless architecture(D)Virtualization
+Additional	8.	What is an example of a serverless computing service:
+(A)Microsoft Word(B)AWS Lambda(C)Google Drive(D)Oracle VM
+Additional	9.	What does serverless architecture eliminate the need for:
+(A)User authentication(B)High-speed internet(C)Installing software manually(D)Managing servers
+Additional	10.	Edge computing is most beneficial for applications that require:
+(A)Large-scale backups(B)Real-time processing(C)Offline storage(D)Static data analysis
+Additional	11.	Which of the following is NOT typically associated with edge computing applications:
+(A)Smart cities(B)Healthcare monitoring(C)Industrial automation(D)Manual bookkeeping
+
+6.6 short
+6.6 Future Trends and Innovations
+1	.	What is edge computing and how does it benefit data processing?
+Exercise
+2	.	Describe the concept of serverless architectures.
+Exercise
+3	.	What advantages do serverless architectures offer to developers?
+Exercise
+4	.	How does edge computing improve the efficiency of autonomous vehicles?
+Exercise
+5	.	What is edge computing?
+Additional
+6	.	Why is edge computing important for autonomous vehicles?
+Additional
+7	.	What are serverless architectures?
+Additional
+8	.	In which areas is edge computing especially beneficial?
+Additional
+9	.	How does edge computing improve real-time data processing?
+Conceptuals
+10	.	How does edge computing reduce latency?
+Conceptuals
+
+
+6.6 long
+6.6 Future Trends and Innovations
+1.	Discuss the advancements and benefits of edge computing in modern technology.
+Exercise
+
+
+7.1 mcqs
+7.1 Understanding Terms of Us
+Exercise	1.	Option typically included in common Terms of Use clauses:
+(A)User obligations(B)Privacy and data use(C)Product advertising(D)Termination of service
+Exercise	2.	The purpose of the "Limitations of Liability" clause in Terms of Use:
+(A)Ensures full company responsibility(B)Limits company's liability(C)Provides user rights for damages(D)Guarantees constant service availability
+Additional	3.	What are "Terms of Use" also known as:
+(A)Privacy Policies(B)Terms and Conditions(C)Purchase Agreements(D)Shipping Guidelines
+Additional	4.	Who sets the Terms of Use:
+(A)The government(B)The user(C)The provider(D)The customer service
+Additional	5.	Who must agree to the Terms of Use:
+(A)The manager(B)The provider(C)The developer(D)The user
+Additional	6.	What is one example of a company that has Terms of Use:
+(A)National Bank(B)Daraz(C)HBL(D)PTV
+Additional	7.	What user right is typically protected by Terms of Use:
+(A)Right to own a website(B)Right to privacy(C)Right to create policies(D)Right to edit services
+Additional	8.	Intellectual Property clauses mainly protect:
+(A)User documents(B)Customer reviews(C)Provider's content and logos(D)Billing details
+Additional	9.	What clause in Terms of Use defines user expectations:
+(A)Limitation of Liability(B)Termination of Service(C)Privacy Policy(D)User Obligations
+Additional	10.	Legal safeguards in Terms of Use protect:
+(A)Only users(B)Only the government(C)Only sellers(D)Both users and service providers
+Additional	11.	What is covered under "Privacy and Data Use" clauses:
+(A)Return policies(B)How user data is collected and protected(C)App design(D)Product warranty
+Additional	12.	What do Terms of Use provide to avoid misunderstandings:
+(A)Promotions(B)Warranties(C)Clarity and transparency(D)Free services
+Additional	13.	What can be a legal consequence of violating the Terms of Use:
+(A)Free upgrades(B)Receiving discounts(C)Faster delivery(D)Fines or bans from service
+Additional	14.	Using software without a license can lead to:
+(A)Extended warranties(B)Software piracy issues(C)Free subscriptions(D)Online advertisements
+Additional	15.	Option typically included in common Terms of Use clauses:
+(A)User obligations(B)Privacy and data use(C)Product advertising(D)Termination of service
+
+
+7.1 short
+7.1 Understanding Terms of Us
+1	.	Why is it important for users to understand Terms of Use?
+Exercise
+2	.	What are "Terms of Use"?
+Additional
+3	.	What does the clause "Limitations of Liability" mean?
+Additional
+4	.	What is included under the “Privacy and Data Use” clause?
+Additional
+5	.	What are "User Obligations" in Terms of Use?
+Additional
+6	.	How do Terms of Use provide clarity and transparency?
+Additional
+7	.	What ethical aspects should Terms of Use include?
+Additional
+8	.	What personal rights do users have under Terms of Use?
+Additional
+9	.	What happens when a user violates the Terms of Use?
+Additional
+10	.	What is the main purpose of Terms of Use?
+Additional
+11	.	Discuss the importance of understanding Terms of Use in the digital world.
+Additional
+
+
+7.1 long
+7.1 Understanding Terms of Us
+1.	Explain the common clauses found in Terms of Use and describe how they protect both the service provider and the user.
+Exercise
+
+
+7.2 mcqs
+7.2 Privacy and Security Threats
+Exercise	1.	The type of harmful software that secretly monitors user activity:
+(A)Spam(B)Cookies(C)Spyware(D)Pharming
+Exercise	2.	The threat involving user redirection to fake websites:
+(A)Phishing(B)Spam(C)Spyware(D)Pharming
+Additional	3.	Unwanted messages received through email or phone is.....:
+(A)Spam(B)Virus(C)Cookie(D)Firewall
+Additional	4.	Harmful software that secretly monitors your activity is called:
+(A)Adware(B)Spyware(C)Malware(D)Botnet
+Additional	5.	What are small files that websites place on a device are called:
+(A)Spam(B)Cookies(C)Spyware(D)Antivirus
+Additional	6.	A scam where someone tricks you into giving personal info is called:
+(A)Malware(B)Trojan(C)Phishing(D)Cracking
+Additional	7.	Redirecting users to fake websites without their knowledge is called:
+(A)Adware(B)Phishing(C)Spyware(D)Pharming
+Additional	8.	Texts from unknown numbers offering services is the example of:
+(A)Spyware(B)Phishing(C)Cookies(D)Spam
+Additional	9.	You enter personal details on a fake website is example of .....attack:
+(A)Adware(B)Phishing(C)Pharming(D)Spyware
+Additional	10.	What is the most common method used in phishing attacks:
+(A)Phone calls(B)Social media posts(C)Emails(D)Pop-up ads
+Additional	11.	Which medium is used in over 90% of phishing attacks:
+(A)Email(B)Phone(C)Text message(D)Social media
+Additional	12.	Which tool helps automatically move unwanted emails to a separate folder:
+(A)Spam filter(B)Antivirus(C)Cookie manager(D)Firewall
+Additional	13.	What software checks files for hidden threats and prevents damage to your device:
+(A)Antivirus software(B)Spyware(C)Spam filter(D)Router
+Additional	14.	What helps you choose which stored website data to keep or delete:
+(A)Pop-up blocker(B)Antivirus(C)Firewall(D)Cookie management
+Additional	15.	What technique involves spotting fake messages that try to steal your personal data:
+(A)Cookie blocking(B)Recognizing phishing(C)Encryption(D)Disabling pop-ups
+Additional	16.	What technique helps you avoid being redirected to a fake website that looks real:
+(A)Guarding against pharming(B)Spam filtering(C)Disabling cookies(D)Encrypting emails
+
+
+7.2 short
+7.2 Privacy and Security Threats
+1	.	Differentiate between phishing and pharming.
+Exercise
+2	.	What are the five primary categories of security threats?
+Additional
+3	.	What is spam?
+Additional
+4	.	What is spyware?
+Additional
+5	.	How can spyware infect a device? (Give an example)
+Additional
+6	.	What are cookies?
+Additional
+7	.	How do cookies benefit users?
+Additional
+8	.	How can cookies pose a privacy risk?
+Additional
+9	.	What is phishing?
+Additional
+10	.	Provide an example of a phishing attack.
+Additional
+11	.	What is pharming ?
+Additional
+12	.	How is pharming different from phishing?
+Additional
+13	.	What is the function of a spam filter?
+Additional
+14	.	How does antivirus software protect your device?
+Additional
+15	.	What is cookie management?
+Additional
+16	.	Why is it important to delete cookies from unfamiliar websites?
+Additional
+
+
+7.2 long
+7.2 Privacy and Security Threats
+1.	Describe five major types of security threats with examples.
+Additional
+2.	Describe any five techniques used to prevent online security threats.
+Additional
+
+
+7.3 mcqs
+7.3 The Digital Divide and Its Impacts
+Exercise	1.	The impact of the digital divide on education:
+(A)Improves learning for all(B)No educational impact(C)Creates inequality in digital resource access(D)Replaces traditional teaching methods
+Exercise	2.	The reason for understanding bias during information evaluation:
+(A)Ignoring other viewpoints(B)Recognizing the source's agenda(C)Validating all sources equally(D)Avoiding evaluation altogether
+Additional	3.	A gap between those who have access to modern technology and those who do not is called:
+(A)Digital divide(B)Economic disparity(C)Online access(D)Tech awareness
+Additional	4.	What is a major economic cause of the digital divide:
+(A)Cultural values(B)Economic barriers(C)Time constraints(D)Online scams
+Additional	5.	Which barrier to ICT access is due to the absence of internet infrastructure in rural areas:
+(A)Privacy threats(B)Economic barriers(C)Geographical barriers(D)Hardware limitations
+Additional	6.	What kind of barrier is caused by a lack of digital literacy and training:
+(A)Legal restrictions(B)Social barriers(C)Economic barriers(D)Educational barriers
+Additional	7.	What kind of barrier is related to age, gender, or disability limiting ICT use:
+(A)Social barriers(B)Legal barriers(C)Economic inequality(D)Physical limitation
+Additional	8.	Which inequality worsened during the COVID-19 pandemic due to online learning:
+(A)Economic disparity(B)Educational inequality(C)Health gap(D)Social bias
+Additional	9.	Lack of access to job portals and digital banking mainly contributes to:
+(A)Environmental gaps(B)Educational inequalities(C)Civic exclusion(D)Economic disparities
+Additional	10.	Lack of access to e-government services affects:
+(A)Social and civic participation(B)Digital literacy(C)Private data(D)Online marketing
+Additional	11.	Which impact of digital divide limits access to online health information and services:
+(A)Social disconnect(B)Economic gaps(C)Health disparities(D)Legal threats
+Additional	12.	What is created when some people lack the opportunity to learn digital skills:
+(A)Legal gap(B)Health gap(C)Employment gap(D)Digital literacy gap
+Additional	13.	What is one solution to bridge the digital divide by building internet infrastructure:
+(A)Government initiatives(B)Private schools(C)Digital advertising(D)Job portals
+Additional	14.	Teaching people how to use technology can be done through:
+(A)Mobile games(B)Educational programs(C)Digital surveillance(D)Private hospitals
+Additional	15.	Collaboration between government and private sector to make tech more affordable is called:
+(A)Technological mergers(B)Crowd funding(C)Personal investment(D)Public-private partnerships
+Additional	16.	Why might rural populations struggle with e-government services:
+(A)Lack of hospitals(B)Lack of social media(C)Limited internet access(D)Poor weather
+Additional	17.	How can governments help bridge the digital divide:
+(A)Provide free TV channels(B)Ban gaming apps(C)Build internet infrastructure(D)Reduce school holidays
+Additional	18.	What is a key educational cause of the digital divide:
+(A)Free textbooks(B)Lack of interest in reading(C)Absence of sports(D)Lack of digital literacy
+
+
+7.3 short
+7.3 The Digital Divide and Its Impacts
+1	.	Identify two impacts of the digital divide on social and civic participation.
+Exercise
+2	.	What is the digital divide?
+Additional
+3	.	Why is the digital divide a critical issue in society?
+Additional
+4	.	What are the four main causes of the digital divide?
+Additional
+5	.	How do economic barriers contribute to the digital divide?
+Additional
+6	.	What is the digital literacy gap?
+Additional
+7	.	How does the digital divide lead to economic disparities?
+Additional
+8	.	Why is the digital divide a problem for healthcare access?
+Additional
+9	.	What are three ways to reduce the digital divide?
+Additional
+
+
+7.3 long
+7.3 The Digital Divide and Its Impacts
+1.	Explain the concept of bridging the digital divide and discuss the roles of government initiatives in addressing this issue. Provide relevant examples from Pakistan.
+Exercise
+2.	What are the major causes of the digital divide? Explain with examples.
+Additional
+
+
+7.4 mcqs
+7.4 Computing's Impact on Individuals and Society
+Exercise	1.	The positive societal impact of computing systems:
+(A)Spread of misinformation(B)Improved information accessibility(C)Heightened privacy concerns(D)Widened technology gap
+Additional	2.	What is one major benefit of computing systems in the field of education:
+(A)Accessibility to information(B)Job competition(C)Internet shutdown(D)Fake reviews
+Additional	3.	Platforms like Coursera and edX are examples of computing improving:
+(A)Social gaming(B)Online education(C)Marketing tools(D)Cloud storage
+Additional	4.	How has computing improved global interaction:
+(A)Population growth(B)Transportation(C)Communication(D)Food supply
+Additional	5.	Social movements like #MeToo gained global attention through:
+(A)Local speeches(B)Television ads(C)Printed newspapers(D)Social media
+Additional	6.	What has transformed traditional business models through computing:
+(A)E-commerce(B)Digital drawing(C)Tax software(D)Online gaming
+Additional	7.	What is a key positive economic effect of computing systems:
+(A)Currency devaluation(B)Job opportunities(C)Inflation control(D)Market closure
+Additional	8.	What is a major concern due to unequal access to computing technology:
+(A)Network lag(B)Identity theft(C)Digital divide(D)Content creation
+Additional	9.	Which problem arises from unreliable internet in rural areas:
+(A)Urban migration(B)High tax rates(C)Power shortages(D)Unequal opportunities
+Additional	10.	The spread of misinformation is a ........... impact of computing:
+(A)Negative(B)Positive(C)Neutral(D)Temporary
+Additional	11.	What issue became serious on social media during COVID-19:
+(A)Price increase(B)Misinformation(C)Power theft(D)Overfishing
+Additional	12.	What kind of skills help people evaluate online information critically:
+(A)Gaming habits(B)Cooking skills(C)Digital literacy(D)Driving techniques
+Additional	13.	What major risk arises from storing vast amounts of personal data:
+(A)Screen time(B)Memory shortage(C)Data backup(D)Privacy concerns
+Additional	14.	Which Pakistani organization has faced data leakage incidents:
+(A)NADRA(B)PTCL(C)PEMRA(D)SNGPL
+Additional	15.	What is needed to fight misinformation online:
+(A)Fast internet(B)Free smartphones(C)Digital literacy(D)Private browsing
+Additional	16.	Which platform is an example of e-commerce in Pakistan:
+(A)TikTok(B)Daraz(C)WhatsApp(D)NADRA
+Additional	17.	What social movement gained traction through social media:
+(A)Green Revolution(B)Industrial Movement(C)#MeToo Movement(D)Red Cross Campaign
+Additional	18.	What is the purpose of “Internet in a Box” projects enabled by computing technology:
+(A)Offline education(B)Online marketing(C)Social networking(D)Online gaming
+
+
+7.4 short
+7.4 Computing's Impact on Individuals and Society
+1	.	How has computing improved global communication?
+Additional
+2	.	Why is the digital divide a problem in rural areas of Pakistan?
+Additional
+3	.	Why is data protection important in the digital age?
+Additional
+4	.	What is the role of digital literacy in controlling misinformation?
+Additional
+5	.	What is the function of e-commerce platforms like Daraz?
+Additional
+6	.	Why is digital literacy essential in today’s world?
+Additional
+7	.	What is the purpose of “Internet in a Box” projects?
+Additional
+
+7.4 long
+7.4 Computing's Impact on Individuals and Society
+1.	Explain how critical thinking skills contribute to responsible information utilization. Provide examples of how these skills can be applied in real-life scenarios.
+Exercise
+2.	Describe three positive impacts of computing systems on individuals and society. Support your answer with examples.
+Additional
+
+
+
+7.5 mcqs
+7.5 Digital Citizenship and Ethical Considerations
+Exercise	1.	The practice considered ethical when using information:
+(A)Copying content without permission(B)Respecting copyright and avoiding plagiarism(C)Ignoring source attribution(D)Using unverified information
+Exercise	2.	The behavior considered responsible digital conduct:
+(A)Using secure websites(B)Spreading false info online(C)Respecting online privacy(D)Reporting suspicious activity
+Additional	3.	What term refers to behaving responsibly and ethically while using digital technologies:
+(A)Cybercrime(B)Digital Citizenship(C)Online Shopping(D)Social Media
+Additional	4.	What is the practice of using technology in safe, respectful, and appropriate ways online:
+(A)Online Piracy(B)Responsible Digital Behavior(C)Phishing(D)Digital Surveillance
+Additional	5.	What term describes copying someone else's content without proper citation:
+(A)Plagiarism(B)Phishing(C)Collaboration(D)Encryption
+Additional	6.	What refers to the awareness and use of methods to protect oneself from online threats:
+(A)Hacking(B)Cookie Policy(C)Cybersecurity Awareness(D)Malware Installation
+Additional	7.	Whicj using tools and combining human and machine skills:
+(A)Data Storage(B)Artificial Intelligence(C)Human-Machine Collaboration(D)Hardware Installation
+Additional	8.	What refers to Content usable by everyone, including people with disabilities:
+(A)Design for Accessibility(B)User Feedback(C)Online Marketing(D)Ad Personalization
+Additional	9.	What method can be used to collect user feedback:
+(A)Ignoring reviews(B)Using surveys and forms(C)Posting ads(D)Blocking users
+
+
+7.5 short
+7.5 Digital Citizenship and Ethical Considerations
+1	.	How does responsible data sharing contribute to ethical use of information?
+Exercise
+2	.	What are the key steps involved in evaluating information sources?
+Exercise
+3	.	What is digital citizenship?
+Additional
+4	.	What is plagiarism?
+Additional
+5	.	What is meant by respecting copyright?
+Additional
+6	.	What is responsible data sharing?
+Additional
+7	.	What is human-machine collaboration?
+Additional
+8	.	What is alternative text for images?
+Additional
+9	.	What is the purpose of collecting user feedback?
+Additional
+10	.	Why is accessible digital content important?
+Additional
+11	.	What is cybersecurity awareness, and why is it important?
+Additional
+12	.	Why is it important to use strong passwords?
+Additional
+13	.	Give an example of using tools in digital problem solving.
+Additional
+
+
+7.5 long
+7.5 Digital Citizenship and Ethical Considerations
+1.	Discuss the importance of collaborative problem solving in a digital environment and provide examples of how human-machine collaboration can enhance this process.
+Exercise
+
+
+8.1 mcqs
+8.1 Online Research and Digital Literacy
+Exercise	1.	The key component of digital literacy:
+(A)Writing poetry(B)Understanding agricultural methods(C)Using digital tools effectively(D)Practicing public speaking
+Exercise	2.	Boolean operator used to exclude a term from search results:
+(A)OR(B)AND(C)NOT(D)NEITHER
+Exercise	3.	The essential skill for evaluating online sources:
+(A)Guessing the source's credibility(B)Knowing the content creator's name(C)Checking if content is from a trusted entity(D)Reading the content multiple times
+Exercise	4.	Importance of being specific when formulating a research question:
+(A)To ensure it covers a wide range of topics(B)To clearly define what you want to find and avoid vagueness(C)To include as much information as possible(D)To make the research more generalizable
+Additional	5.	What term refers to the activity of finding information on the internet about a particular topic:
+(A)Digital Literacy(B)Online Research(C)Cybersecurity(D)Data Entry
+Additional	6.	What skill allows people to use digital tools to find, understand, and share information:
+(A)Online Research(B)Data Mining(C)Digital Literacy(D)Programming
+Additional	7.	What type of online research involves finding scholarly materials for education purposes:
+(A)Market Research(B)Academic Research(C)Health Research(D)Fact-Checking
+Additional	8.	What type of research helps verify whether a piece of information is accurate:
+(A)Health Research(B)General Research(C)Educational Research(D)Fact-Checking Research
+Additional	9.	What type of online research helps businesses understand customers and competitors:
+(A)Academic Research(B)Market Research(C)Health Research(D)General Research
+Additional	10.	What is the process of using search engines to locate online data by entering relevant keywords:
+(A)Evaluating Sources(B)Data Sharing(C)Searching for Information(D)Data Analysis
+Additional	11.	What skill involves checking whether online information is reliable and comes from a trustworthy source:
+(A)Searching for Information(B)Copyright Protection(C)Online Publishing(D)Evaluating Sources
+Additional	12.	What type of research is used to find medical or health-related information online:
+(A)Health Research(B)Market Research(C)Academic Research(D)News Research
+Additional	13.	What type of research involves looking for basic knowledge through search engines and websites:
+(A)General Information Research(B)Health Research(C)Fact-Checking(D)Legal Research
+Additional	14.	What is the ability to operate devices like computers, smartphones, and tablets effectively:
+(A)Evaluating Sources(B)Cybersecurity Awareness(C)Using Technology(D)Online Communication
+Additional	15.	Which type of research would someone use to learn about a medical condition:
+(A)Market research(B)Academic research(C)Health research(D)General research
+Additional	16.	How much of the world's population uses the internet:
+(A)Less than 25%(B)Around one-third(C)More than half(D)Only students
+Additional	17.	What does it mean to use online tools and information effectively to support work or learning:
+(A)Digital Literacy(B)Online Navigation(C)Managing Data(D)Utilizing Digital Resources
+
+
+8.1 short
+8.1 Online Research and Digital Literacy
+1	.	Why is it important to use specific keywords when searching for information online?
+Exercise
+2	.	Why is it important to evaluate the reliability of online sources?
+Exercise
+3	.	How can one ensure the reliability of information found online research?
+Exercise
+4	.	What is online research?
+Additional
+5	.	What is the main goal of online research?
+Additional
+6	.	Why is online research considered important in today’s world?
+Additional
+7	.	List the names types of online research.
+Additional
+8	.	What is general information research?
+Additional
+9	.	What is academic research?
+Additional
+10	.	What is market research? How it is helpfull?
+Additional
+11	.	What is the purpose of fact-checking research?
+Additional
+12	.	What is digital literacy?
+Additional
+13	.	What is meant by "using technology" in digital literacy?
+Additional
+14	.	What does "searching for information" involve?
+Additional
+15	.	What does "evaluating sources" mean?
+Additional
+16	.	Why is it important to check the reliability of online content?
+Conceptuals
+
+
+8.1 long
+8.1 Online Research and Digital Literacy
+1.	Discuss the different types of online research and their purposes, providing examples for each type.
+Exercise
+2.	Explain the concept of digital literacy and its key components. How does it contribute to effective use of digital tools and resources?
+Exercise
+3.	Explain the process of developing a clear and focused research question.Illustrate your answer with examples of well-formulated and poorly-formulated research questions.
+Exercise
+
+
+8.2 mcqs
+8.2 Utilizing Digital Resources
+Exercise	1.	The key purpose of online libraries:
+(A)Providing access to entertainment(B)Offering a variety of academic resources(C)Promoting social media interaction(D)Selling digital books and materials
+Exercise	2.	The meaning of "peer-reviewed" article:
+(A)Edited by a single expert(B)Published in a magazine(C)Reviewed by other experts in the field(D)Freely available online
+Additional	3.	What are collections of expert-written, peer-reviewed articles used for academic research:
+(A)Blog Posts(B)Academic Journals(C)Newsletters(D)Discussion Forums
+Additional	4.	What does it mean to use online tools and information effectively to support work or learning:
+(A)Digital Literacy(B)Online Navigation(C)Utilizing Digital Resources(D)Managing Data
+Additional	5.	What is the process of using specific keywords and filters to find relevant online information:
+(A)Online Editing(B)Data Conversion(C)Content Creation(D)Effective Navigation
+Additional	6.	What skill involves saving, organizing, and keeping track of useful digital information for future reference:
+(A)Cloud Backup(B)Data Mining(C)Managing Digital Information(D)Web Hosting
+Additional	7.	What should you use to search effectively online:
+(A)Full sentences(B)Hashtags(C)Specific keywords(D)Random questions
+Additional	8.	Where can students access academic journals online:
+(A)Social networks(B)School libraries(C)University portals(D)Both B and C
+
+
+8.2 short
+8.2 Utilizing Digital Resources
+1	.	What does utilizing digital resources mean?
+Additional
+2	.	What are online libraries?
+Additional
+3	.	What is an academic journal?
+Additional
+4	.	Who writes articles in academic journals?
+Additional
+5	.	What does "peer-reviewed" mean?
+Additional
+6	.	Where can students access academic journals?
+Additional
+7	.	Why is it important to use specific keywords while searching online?
+Additional
+8	.	Name any two ways to manage digital information.
+Additional
+9	.	What tools can help in organizing online research data?
+Additional
+
+
+8.3 mcqs
+8.3 Research Ethics
+Exercise	1.	The research ethics principle focused on honesty in reporting findings:
+(A)Confidentiality(B)Integrity(C)Informed Consent(D)Avoiding Bias
+Exercise	2.	An essential component of ethical research:
+(A)Collecting data regardless of participant privacy(B)Avoiding plagiarism and giving proper credit(C)Publishing only positive results(D)Ignoring consent if research is important
+Additional	3.	What are the principles that ensure research is honest, respectful, and fair:
+(A)Digital Literacy(B)Survey Design(C)Research Ethics(D)Data Collection
+Additional	4.	What ensures that research findings are trustworthy and the rights of participants are respected:
+(A)Informed Consent(B)Peer Review(C)Data Mining(D)Ethical Research
+Additional	5.	Which telling participants about the study and getting their permission:
+(A)Confidentiality(B)Informed Consent(C)Data Accuracy(D)Plagiarism
+Additional	6.	What principle involves keeping participants' personal information private:
+(A)Transparency(B)Respect(C)Confidentiality(D)Verification
+Additional	7.	What principle requires honesty, no falsification of data, and transparency in research:
+(A)Integrity(B)Objectivity(C)Accuracy(D)Peer Review
+Additional	8.	What principle requires treating participants well and avoiding any harm during research:
+(A)Analysis(B)Consent(C)Respect for Participants(D)Sample Selection
+Additional	9.	What is an example of unethical research behavior:
+(A)Getting informed consent(B)Respecting participants’ privacy(C)Falsifying data(D)Using open-access sources
+Additional	10.	What helps protect participants and ensure research contributes positively to society:
+(A)Digital Tools(B)Research Methods(C)Ethical Guidelines(D)Data Analysis
+
+
+8.3 short
+8.3 Research Ethics
+1	.	What are research ethics?
+Additional
+2	.	Why are research ethics important?
+Additional
+3	.	Give one example of ethical behavior in research.
+Additional
+4	.	What is meant by informed consent in research?
+Additional
+5	.	Define confidentiality in research ethics.
+Additional
+6	.	What does integrity mean in research work?
+Additional
+7	.	How should participants be treated during research?
+Additional
+8	.	What does it mean to falsify data?
+Additional
+9	.	Name any two key principles of research ethics.
+Additional
+10	.	Why were ethical guidelines in research developed?
+Additional
+11	.	How do ethical guidelines help researchers?
+Additional
+12	.	What are the key principles of research ethics.
+Additional
+
+
+8.3 long
+8.3 Research Ethics
+1.	Discuss the importance of research ethics in maintaining the credibility and reliability of research findings. Explain how unethical practices could affect the research community and society.
+Exercise
+2.	Describe the key principles of research ethics in detail.
+Additional
+
+
+8.4 mcqs
+8.4 Understanding Intellectual Property
+Exercise	1.	Way for a company to protect a trade secret:
+(A)Register it with the IPO(B)Apply for a trademark(C)Keep it confidential and use legal agreements(D)Publish it in a journal
+Exercise	2.	The option falls outside the category of intellectual property is:
+(A)Patents(B)Trademarks(C)Copyrights(D)Physical Properties
+Additional	3.	Legal rights protecting creative works and inventions is called:
+(A)Intellectual property(B)Copyright(C)Patent(D)Trade Secret
+Additional	4.	What does intellectual property encourage:
+(A)Government control(B)Public debates(C)Innovation and creativity(D)Social media use
+Additional	5.	What protects inventions and gives exclusive rights to the inventor:
+(A)Trademark(B)Copyright(C)Patent(D)Trade Secret
+Additional	6.	Which protects brand names, signs, or logos used to identify goods or services:
+(A)Trademark(B)Patent(C)Industrial Design(D)Copyright
+Additional	7.	What protects original works like books, music, and films from being copied without permission:
+(A)Copyright(B)Trade Secret(C)Patent(D)Trademark
+Additional	8.	Which type of intellectual property protects the visual design or shape of a product:
+(A)Patent(B)Industrial Design(C)Copyright(D)Trade Secret
+Additional	9.	What protects confidential business information that gives a company a competitive advantage:
+(A)Copyright(B)Trade Secret(C)Trademark(D)Patent
+Additional	10.	Which type of property encourages innovation by rewarding creators for their inventions and ideas:
+(A)Intellectual Property(B)Financial Property(C)Social Media Rights(D)Brand Assets
+Additional	11.	What is an example of a copyrighted work:
+(A)Solar panel invention(B)Pakistani novel(C)Company recipe(D)Unique bottle design
+Additional	12.	What is an example of an industrial design:
+(A)Secret recipe(B)Stylish bottle shape(C)Brand slogan(D)Music album
+Additional	13.	What protects a company’s confidential information:
+(A)Trademark(B)Patent(C)Trade secret(D)Copyright
+Additional	14.	What is an example of a trademark:
+(A)Pakola recipe(B)Software code(C)Stylish bottle shape(D)National Foods logo
+
+
+8.4 short
+8.4 Understanding Intellectual Property
+1	.	Describe the purpose of a trademark.
+Exercise
+2	.	How does copyright differ from patent protection?
+Exercise
+3	.	What is Intellectual Property (IP)?
+Additional
+4	.	What is a patent?
+Additional
+5	.	What is a trademark?
+Additional
+6	.	How does a patent benefit the inventor?
+Additional
+7	.	How are trade secrets different from patents?
+Additional
+8	.	What are Industrial design rights?
+Additional
+9	.	What is a trade secret?
+Additional
+10	.	What does copyright protect?
+Additional
+11	.	What is the importance of copyright law?
+Additional
+12	.	Name types of intellectual property.
+Additional
+13	.	Why is intellectual property important?
+Additional
+14	.	How does intellectual property encourage innovation?
+Additional
+15	.	What is IPO Pakistan?
+Additional
+16	.	What is the role of IPO in Pakistan?
+Additional
+
+
+8.4 long
+8.4 Understanding Intellectual Property
+1.	Discuss the various types of intellectual property and provide examples of each. Explain how each type helps in protecting different kinds of creations and innovations.
+Exercise
+2.	Describe different types of intellectual property with examples.
+Additional
+
+
+9.1 mcqs
+9.1 Design Thinking and Business Solutions
+Exercise	1.	The primary goal of entrepreneurship is:
+(A)To create new technologies(B)To solve problems and create value(C)To manage finances(D)To compete with large corporations
+Exercise	2.	A principle of Design Thinking is:
+(A)Focusing on profits(B)Human-centered approach(C)Minimizing risks(D)Emphasizing short-term gains
+Exercise	3.	A technique commonly used in Design Thinking is:
+(A)SWOT Analysis Sale(B)Lean manufacturing(C)Brainstorming(D)Data mining
+Additional	4.	What is the human-centered approach used to solve business problems creatively:
+(A)Marketing Plan(B)Revenue Model(C)Design Thinking(D)Business Audit
+Additional	5.	Which step of Design Thinking involves understanding the needs and feelings of users:
+(A)Prototype(B)Define(C)Test(D)Empathize
+Additional	6.	What is the second step in the Design Thinking process:
+(A)Empathize(B)Ideate(C)Define(D)Test
+Additional	7.	Which Design Thinking step encourages generating multiple creative ideas:
+(A)Empathize(B)Ideate(C)Prototype(D)Finalize
+Additional	8.	What is a basic and quick version of an idea called in Design Thinking:
+(A)Prototype(B)Final Product(C)Blueprint(D)Sample Plan
+Additional	9.	What step comes after creating a prototype in the Design Thinking process:
+(A)Define(B)Ideate(C)Launch(D)Test
+Additional	10.	What is the goal of the Test phase in Design Thinking:
+(A)Sell the product(B)Finalize branding(C)Gather feedback for improvement(D)Produce in bulk
+Additional	11.	What do we call methods or tools that help businesses solve problems efficiently:
+(A)Business Solutions(B)Customer Reviews(C)Sales Funnels(D)Expense Sheets
+Additional	12.	What business problem can be solved by using software to track stock:
+(A)Out-of-stock items(B)Poor advertisement(C)Too many customers(D)Lack of delivery service
+Additional	13.	How does Design Thinking help in business:
+(A)Reduces salaries(B)Avoids hiring(C)Creates user-friendly products and services(D)Focuses only on profit
+
+
+9.2 short
+9.2 Creating a Business Plan
+9.1 Design Thinking and Business Solutions
+1	.	What is the main focus of Design Thinking?
+Exercise
+2	.	Define entrepreneurship in your own words.
+Exercise
+3	.	What is Design Thinking?
+Additional
+4	.	Name the five key steps of Design Thinking.
+Additional
+5	.	What does the "Empathize" step in Design Thinking mean?
+Additional
+6	.	What is meant by the "Prototype" stage?
+Additional
+7	.	How does the "Test" stage improve a product?
+Additional
+8	.	How can Design Thinking help in solving business problems?
+Additional
+9	.	What is the purpose of the "Define" step in Design Thinking?
+Additional
+10	.	Why is creativity important in entrepreneurship?
+Additional
+11	.	What role does innovation play in business success?
+Additional
+12	.	What is the purpose of a prototype?
+Additional
+13	.	What are customer surveys used for?
+Additional
+
+
+9.1 long
+9.1 Design Thinking and Business Solutions
+1.	Discuss the importance of Design Thinking in developing business solutions. Provide examples of how it can be applied.
+Exercise
+
+
+9.2 mcqs
+9.2 Creating a Business Plan
+Exercise	1.	The first step in creating a business plan involves:
+(A)Financial forecasting(B)Defining the business idea(C)Market analysis(D)Setting sales targets
+Additional	2.	What is a written document that outlines a business idea and how to make it successful:
+(A)Budget(B)Business Plan(C)Marketing Strategy(D)Revenue Report
+Additional	3.	What is the name of the short section that summarizes the entire business plan:
+(A)Executive Summary(B)Market Overview(C)Budget Plan(D)Financial Goal
+Additional	4.	Which part of a business plan explains what your business does and what makes it special:
+(A)Sales Strategy(B)Business Description(C)Cost Analysis(D)Investor Profile
+Additional	5.	Which part of a business plan includes information about potential customers and competitors:
+(A)Product List(B)Target Sheet(C)Market Analysis(D)Investor Data
+Additional	6.	What section of a business plan explains what you are offering and its benefits:
+(A)Products or Services(B)Revenue Stream(C)Partnership Agreement(D)Customer List
+Additional	7.	Which part of a business plan explains how to attract and retain customers:
+(A)Budget Sheet(B)Resource Allocation(C)Marketing and Sales Strategy(D)Hiring Policy
+Additional	8.	What is the part of a business plan that outlines revenue, funding needs, and budget:
+(A)HR Policy(B)Market Forecast(C)Financial Plan(D)Legal Strategy
+Additional	9.	What kind of tools provide templates and financial modeling features for planning:
+(A)Communication Apps(B)Business Plan Software(C)Accounting Forms(D)Email Clients
+Additional	10.	What tool allows multiple people to work on a business plan at the same time:
+(A)Time Tracker(B)Budget Calculator(C)Collaborative Tool(D)Flowchart Maker
+
+
+9.2 short
+9.2 Creating a Business Plan
+1	.	List the key steps involved in creating a business plan.
+Exercise
+2	.	What is a business plan?
+Additional
+3	.	Why is a business plan important for starting a business?
+Additional
+4	.	What is the purpose of market analysis in a business plan?
+Additional
+5	.	What does the financial plan section include?
+Additional
+6	.	What should be described in the business description section?
+Additional
+7	.	What is included in an executive summary?
+Additional
+
+
+9.2 long
+9.2 Creating a Business Plan
+1.	Explain the process of creating a business plan, and why each step is critical to the success of a new business.
+Exercise
+
+
+9.3 mcqs
+9.3 Collecting Market Insights
+Exercise	1.	The purpose of collecting market insights is:
+(A)To set product prices(B)To understand customer needs and market trends(C)To calculate taxes(D)To manage inventory
+Exercise	2.	A successful business pitch should be:
+(A)Long and detailed(B)Clear and persuasive(C)Focused on personal achievements(D)Directed only at investors
+Additional	3.	What is the process of gathering and analyzing information about customers and competitors:
+(A)Budgeting(B)Branding(C)Market Research(D)Networking
+Additional	4.	What type of research focuses on opinions, motivations, and feelings:
+(A)Predictive Analysis(B)Qualitative Research(C)Financial Research(D)Quantitative Research
+Additional	5.	What research method uses statistical and numerical data:
+(A)Observational Research(B)Focus Group(C)Quantitative Research(D)Qualitative Research
+Additional	6.	What is used to collect information from many people using a set of questions:
+(A)Prototype(B)Interview(C)Brainstorming(D)Customer Survey
+Additional	7.	What research method gathers feedback through a small group discussion:
+(A)Case Study(B)Focus Group(C)Field Trial(D)Questionnaire
+Additional	8.	What do we call the process of breaking down a target market into smaller groups:
+(A)Market Segmentation(B)Competitor Mapping(C)Survey Distribution(D)Data Visualization
+Additional	9.	What analysis uses past data to forecast future trends:
+(A)Market Segmentation(B)Quantitative Study(C)SWOT Analysis(D)Predictive Analysis
+Additional	10.	What is the goal of making data-driven decisions:
+(A)Increase meetings(B)Reduce employee feedback(C)Improve business success(D)Design surveys
+Additional	11.	What pattern might be identified if bakery sales are highest on weekends:
+(A)Customer Buying Trend(B)Weekly Budgeting(C)Competitor Pricing(D)Data Error
+Additional	12.	A short presentation of a business idea is called:
+(A)Business pitch(B)Pitch(C)Business idea(D)Suggestion
+Additional	13.	What makes a pitch more convincing to customers or investors:
+(A)Fancy vocabulary(B)A unique selling point(C)Multiple slides(D)High pricing
+
+
+9.3 short
+9.3 Collecting Market Insights
+1	.	Explain the importance of a business pitch.
+Exercise
+2	.	Why is market research important for a new business?
+Exercise
+3	.	What is market research?
+Additional
+4	.	How many type of market reseach? List their names.
+Additional
+5	.	What is qualitative research?
+Additional
+6	.	What is quantitative research?
+Additional
+7	.	Define market segmentation.
+Additional
+8	.	What is competitor analysis?
+Additional
+9	.	What is the purpose of customer surveys?
+Additional
+10	.	What is predictive analysis?
+Additional
+11	.	What is a focus group?
+Additional
+12	.	What is the purpose of analyzing market data?
+Additional
+13	.	What is the difference between qualitative and quantitative research?
+Additional
+14	.	Define market insights.
+Additional
+15	.	What is a business pitch?
+Additional
+16	.	Why is pitching important for new businesses?
+Additional
+17	.	Why is it important to know your audience during a pitch?
+Additional
+18	.	What makes a business idea unique in a pitch?
+Additional
+
+
+9.3 long
+9.3 Collecting Market Insights
+1.	How does market insight influence business decisions? Give examples of how businesses can use this information.
+Exercise
+2.	Explain the five steps involved in pitching your business idea.
+Additional
+3.	Describe the difference between qualitative and quantitative research with examples.
+Additional
+4.	Explain the importance of collecting market insights for a business.
+Additional
+
+
+9.4 mcqs
+9.4 Developing Effective Marketing and Sales Strategies
+Exercise	1.	A key component of effective marketing is:
+(A)High pricing(B)Random advertising(C)Strong brand identity(D)Reducing production costs
+Additional	2.	What is the process of attracting customers and growing a brand called:
+(A)Accounting(B)Designing(C)Marketing(D)Manufacturing
+Additional	3.	What is the activity of encouraging people to buy a product called:
+(A)Budgeting(B)Sales(C)Advertising(D)Management
+Additional	4.	What do we call the group of people a business wants to sell its product to:
+(A)Retailers(B)Target Market(C)Shareholders(D)Suppliers
+Additional	5.	What is the term for a detailed strategy to promote a product:
+(A)Sales pitch(B)Investment plan(C)Marketing Plan(D)Business license
+Additional	6.	What do effective marketing strategies help businesses to do:
+(A)Attract Customers(B)Reduce prices(C)Hire employees(D)Buy property
+Additional	7.	What should a business understand before promoting a product:
+(A)Factory operations(B)Market(C)Currency rate(D)Product color
+Additional	8.	What is the most important thing to understand when designing a product for customers:
+(A)Cost(B)Trend(C)Customer Needs(D)Tax
+Additional	9.	Which of the following is a good platform to advertise Pakistani spices:
+(A)Fitness clubs(B)Car shows(C)Cooking shows(D)Political rallies
+Additional	10.	What method of promotion involves people talking about the product:
+(A)Social media(B)Radio(C)Word-of-mouth(D)Flyers
+
+
+9.4 short
+9.4 Developing Effective Marketing and Sales Strategies
+1	.	What is the importance of marketing in a business?
+Additional
+2	.	Why is it important to understand your market?
+Additional
+3	.	Define a marketing plan.
+Additional
+4	.	What promotional channels can be used for marketing?
+Additional
+5	.	What is meant by understanding customer needs?
+Additional
+
+
+9.4 long
+9.4 Developing Effective Marketing and Sales Strategies
+1.	What are the essential components of a marketing and sales strategy? Discuss how these strategies can be tailored for different markets.
+Exercise
+
+
+9.5 mcqs
+9.5 Financial Concepts for Business
+Exercise	1.	Financial concepts for business help entrepreneurs to:
+(A)Avoid paying taxes(B)Manage resources and plan for growth(C)Increase spending(D)Compete with larger companies
+Additional	2.	Salaries, rent, and utilities are examples of what:
+(A)Revenue(B)Profit(C)Expenses(D)Investment
+Additional	3.	What is the money earned by a business from selling its goods or services called:
+(A)Revenue(B)Expense(C)Profit(D)Budget
+Additional	4.	What is the money remaining after deducting all business expenses:
+(A)Revenue(B)Profit(C)Investment(D)Tax
+Additional	5.	What are costs like rent, salaries, and raw materials known as:
+(A)Budget(B)Revenue(C)Expenses(D)Capital
+Additional	6.	What is the name of the financial plan that estimates future business spending:
+(A)Income(B)Loan(C)Budget(D)Sales
+Additional	7.	Which financial concept helps businesses plan and control spending:
+(A)Expense(B)Budget(C)Profit(D)Loss
+
+9.5 short
+9.5 Financial Concepts for Business
+1	.	Describe one financial concept that is important for business.
+Exercise
+2	.	What is revenue?
+Additional
+3	.	Define profit in business terms.
+Additional
+4	.	What is a budget?
+Additional
+5	.	What are business expenses?
+Additional
+6	.	How can budgeting help a business?
+Additional
+7	.	Mention two common types of business expenses.
+Additional
+
+
+9.6 mcqs
+9.6 Communication and Storytelling Skills
+Exercise	1.	A crucial skill for storytelling in business is:
+(A)Technical expertise(B)Emotional connection(C)Physical strength(D)High financial investment
+Additional	2.	What is the process of exchanging information, ideas, or feelings with others:
+(A)Creativity(B)Expression(C)Communication(D)Storytelling
+Additional	3.	What skill involves using words, emotions, and visuals to create a narrative that engages the audience:
+(A)Explanation(B)Storytelling(C)Reporting(D)Editing
+Additional	4.	What communication technique involves gestures, facial expressions, and body posture:
+(A)Verbal communication(B)Storytelling(C)Writing(D)Non-verbal communication
+Additional	5.	What does speaking clearly and confidently in front of others demonstrate:
+(A)Public hesitation(B)Effective communication(C)Silent communication(D)Fear of speaking
+Additional	6.	What storytelling element makes your message easier to remember and emotionally engaging:
+(A)Data(B)Facts(C)Narrative(D)Chart
+Additional	7.	What should you use to make your story easier to understand and more engaging:
+(A)Long explanations(B)Humor only(C)Visual aids(D)Technical terms
+Additional	8.	What skill is shown by addressing the audience's questions and feedback:
+(A)Persuasion(B)Listening(C)Ignoring(D)Narrating
+Additional	9.	What habit helps build confidence in speaking and storytelling:
+(A)Reading(B)Practice regularly(C)Memorizing(D)Acting alone
+Additional	10.	What advice helps you communicate more effectively by avoiding extra details:
+(A)Be clear and concise(B)Add more stories(C)Talk faster(D)Use difficult words
+Additional	11.	What makes communication more emotional and relatable:
+(A)Complex vocabulary(B)Formal speech(C)Showing emotion(D)Writing reports
+
+
+9.6 short
+9.6 Communication and Storytelling Skills
+1	.	How can storytelling benefit a business?
+Exercise
+2	.	What is communication?
+Additional
+3	.	Name two types of communication.
+Additional
+4	.	What is storytelling?
+Additional
+5	.	How can storytelling help in a debate?
+Additional
+6	.	Why is knowing your audience important?
+Additional
+7	.	How can visual aids improve storytelling?
+Additional
+8	.	What does "being clear and concise" mean in communication?
+Additional
+
+
+9.6 long
+9.6 Communication and Storytelling Skills
+1.	Discuss the role of communication and storytelling in building a brand and connecting with customers.
+Exercise
+
+
+9.7 mcqs
+9.7 Collaborating and Iteration
+Additional	1.	Working together to achieve a common goal is called:
+(A)Collaboration(B)Teamwork(C)Helping(D)Work together
+Additional	2.	What is the term for repeating a process to improve the outcome:
+(A)Elimination(B)Delegation(C)Iteration(D)Exploration
+Additional	3.	What is the term for people working together to achieve a shared goal:
+(A)Competition(B)Collaboration(C)Experimentation(D)Planning
+Additional	4.	What does the town planning of the Indus Valley Civilization demonstrate:
+(A)Competition(B)Collaboration(C)Migration(D)Isolation
+
+9.7 short
+9.7 Collaborating and Iteration
+1	.	Why is collaboration important in the entrepreneurial process?
+Exercise
+2	.	What is collaboration?
+Additional
+3	.	Define iteration.
+Additional
+4	.	What is the purpose of iteration?
+Additional
+5	.	Why are collaboration and iteration important?
+Additional
+6	.	How do feedback and revision relate to iteration?
+Additional
+
+9.8 mcqs
+9.8 Innovation and Creativity
+Exercise	1.	Innovation in business focuses on:
+(A)Inventing new technologies(B)Improving existing products and processes(C)Reducing operational costs(D)Increasing production speed
+Additional	2.	What is the process of developing new ideas or improving existing ones:
+(A)Creativity(B)Innovation(C)Planning(D)Tradition
+Additional	3.	What term refers to the ability to think in new and original ways:
+(A)Curiosity(B)Practice(C)Creativity(D)Logic
+Additional	4.	What skill involves asking questions and exploring how things work:
+(A)Focus(B)Curiosity(C)Confidence(D)Obedience
+Additional	5.	What mindset encourages people to consider unusual solutions:
+(A)Routine thinking(B)Fear of failure(C)Think outside the box(D)Strict discipline
+Additional	6.	What skill encourages experimenting even if the outcome is uncertain:
+(A)Caution(B)Take risks(C)Follow rules(D)Repeat old methods
+Additional	7.	What action helps spark new ideas by working with others:
+(A)Collaborating(B)Competing(C)Avoiding teamwork(D)Solving alone
+Additional	8.	What is shown by mobile banking services in Pakistan:
+(A)Tradition(B)Invention(C)Regulation(D)Innovation
+Additional	9.	What skill is demonstrated when a brand connects emotionally with customers through ads:
+(A)Budgeting(B)Creativity(C)Engineering(D)Imitation
+
+
+9.8 short
+9.8 Innovation and Creativity
+1	.	Why is curiosity important for innovation?
+Additional
+2	.	What is innovation?
+Additional
+3	.	Define creativity.
+Additional
+4	.	How is creativity useful in marketing?
+Additional
+5	.	Differenciate between innovation and creativity.
+Additional
+6	.	List ways to foster creativity and innovation.
+Additional
+
+
+9.8 long
+9.8 Innovation and Creativity
+1.	Explain the concept of innovation and creativity with a practical example.
+Additional
+
+
+

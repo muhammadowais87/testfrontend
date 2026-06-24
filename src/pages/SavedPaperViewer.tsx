@@ -6,6 +6,7 @@ import { API_BASE_URL } from "@/lib/api";
 import { useInstituteSessionStore } from "@/stores/instituteSessionStore";
 import { useTeacherSessionStore } from "@/stores/teacherSessionStore";
 import { useIsMobile } from "@/hooks/use-mobile";
+import { getQuestionStems, mergeMcqOptions, parseQuestionOptions } from "@/lib/questionDisplay";
 
 const SavedPaperViewer = () => {
   const DESKTOP_PREVIEW_WIDTH = 1100;
@@ -234,20 +235,35 @@ const SavedPaperViewer = () => {
   useEffect(() => {
     const instituteToken = instituteSession?.token;
     const teacherToken = teacherSession?.token;
-    const token = isTeacherRoute ? teacherToken : instituteToken;
+    const isTeacherPortalSession = Boolean(teacherToken) && (location.pathname.startsWith("/teacher/") || location.pathname.startsWith("/sub-user/"));
+    const isSubUserPortal = teacherSession?.portalType === "sub-user";
+    const token = isTeacherPortalSession ? teacherToken : instituteToken;
     if (!token) return;
 
     let cancelled = false;
     const loadHeaderSettings = async () => {
       try {
-        const endpoint = isTeacherRoute ? "/teacher-auth/me" : "/institute-auth/me";
+        const endpoint = isTeacherPortalSession
+          ? (isSubUserPortal ? "/teacher-auth/sub-user/me" : "/teacher-auth/me")
+          : "/institute-auth/me";
         const response = await fetch(`${API_BASE_URL}${endpoint}`, {
           headers: { Authorization: `Bearer ${token}` },
         });
         const data = await response.json();
         if (!response.ok || cancelled) return;
 
-        if (isTeacherRoute && data?.teacher) {
+        if (isTeacherPortalSession && isSubUserPortal && data?.subUser) {
+          const subUserSettings = data.subUser.portalSettings || {};
+          setHeaderInfo((prev) => ({
+            ...prev,
+            schoolName: subUserSettings.schoolName || data.subUser.schoolName || teacherSession?.schoolName || prev.schoolName,
+            addressLine: subUserSettings.schoolAddress || prev.addressLine,
+            logoUrl: subUserSettings.logoUrl || prev.logoUrl,
+          }));
+          return;
+        }
+
+        if (isTeacherPortalSession && data?.teacher) {
           const teacher = data.teacher;
           const teacherSettings = teacher.portalSettings || {};
           setHeaderInfo((prev) => ({
@@ -259,7 +275,7 @@ const SavedPaperViewer = () => {
           return;
         }
 
-        if (!isTeacherRoute && data?.institute) {
+        if (!isTeacherPortalSession && data?.institute) {
           const institute = data.institute;
           const phones = [institute.phonePrimary, institute.phoneSecondary].filter(Boolean).join(", ");
           const addressLine = [
@@ -285,7 +301,13 @@ const SavedPaperViewer = () => {
     return () => {
       cancelled = true;
     };
-  }, [instituteSession?.token, teacherSession?.token, teacherSession?.schoolName, isTeacherRoute]);
+  }, [
+    instituteSession?.token,
+    teacherSession?.token,
+    teacherSession?.schoolName,
+    teacherSession?.portalType,
+    location.pathname,
+  ]);
 
   const parseQuestionOptions = (text: string) => {
     const optionRegex = /\(([A-D])\)\s*([^()]+?)(?=\s*\([A-D]\)|$)/g;
@@ -297,11 +319,15 @@ const SavedPaperViewer = () => {
     }
 
     if (options.length === 0) {
-      return { stem: text.trim(), options: [] };
+      // Strip leading "1. " / "12. " style prefix embedded from DB storage
+      const cleanStem = text.trim().replace(/^\d+[\s.,،。]+/, "").trim();
+      return { stem: cleanStem, options: [] };
     }
 
     const firstOptionIndex = text.search(/\([A-D]\)/);
-    const stem = firstOptionIndex > -1 ? text.slice(0, firstOptionIndex).trim() : text.trim();
+    const rawStem = firstOptionIndex > -1 ? text.slice(0, firstOptionIndex).trim() : text.trim();
+    // Strip leading "1. " style prefix from stem
+    const stem = rawStem.replace(/^\d+[\s.,،。]+/, "").trim();
     return { stem, options };
   };
 
@@ -1322,17 +1348,12 @@ const SavedPaperViewer = () => {
 
                     <div className="space-y-2 print:space-y-1.5">
                       {section.questions.map((question, index) => {
-                        const parsed = parseQuestionOptions(question.text);
-                        const parsedUrdu = parseQuestionOptions(question.urdu || "");
-                        const englishQuestionText = parsed.stem || question.text || "";
-                        const urduQuestionText = cleanUrduStem(parsedUrdu.stem || question.urdu || "");
-                        const showUrduQuestion = normalizeComparableText(urduQuestionText) !== normalizeComparableText(englishQuestionText);
+                        const { englishStem, urduStem, parsedText, parsedUrdu } = getQuestionStems(question.text, question.urdu || "");
+                        const showUrduQuestion = urduStem.trim() !== englishStem.trim();
                         const isMcq = section.key === "mcq";
                         const answerKey = getAnswerKey(question.id);
-                        const optionKeys = Array.from(new Set([
-                          ...parsed.options.map((o) => o.key),
-                          ...parsedUrdu.options.map((o) => o.key),
-                        ]));
+                        const mergedOptions = mergeMcqOptions(parsedText, parsedUrdu);
+                        const optionKeys = mergedOptions.map((o) => o.key);
 
                         return (
                           <div key={question.id} className={`saved-paper-question pb-2 print:pb-1.5 ${questionBorderClass} ${questionBorderClass ? "px-2 py-1" : ""}`} style={{ breakInside: "avoid" }}>
@@ -1350,7 +1371,7 @@ const SavedPaperViewer = () => {
                                 />
                               ) : (
                                 <div className="text-slate-900" style={{ fontSize: `${resolvedEnglishFontSize}px`, color: resolvedTextColor, fontWeight: resolvedFontWeight, fontFamily: englishFontFamily }}>
-                                  {`${index + 1}. ${englishQuestionText}`}
+                                  {`${index + 1}. ${englishStem}`}
                                 </div>
                               )}
 
@@ -1368,7 +1389,7 @@ const SavedPaperViewer = () => {
                                 />
                               ) : question.urdu && showUrduQuestion ? (
                                 <div className="text-right text-slate-900" dir="rtl" style={{ fontSize: `${resolvedUrduFontSize}px`, color: resolvedTextColor, fontWeight: resolvedFontWeight, fontFamily: urduFontFamily }}>
-                                  {`${index + 1}۔ ${urduQuestionText}`}
+                                  {`${index + 1}۔ ${cleanUrduStem(urduStem)}`}
                                 </div>
                               ) : (
                                 <div />
@@ -1378,9 +1399,10 @@ const SavedPaperViewer = () => {
                             {isMcq && optionKeys.length > 0 && (
                               <div className="mt-1 grid grid-cols-2 gap-x-4 gap-y-1">
                                 {optionKeys.map((key) => {
-                                  const enOption = parsed.options.find((o) => o.key === key)?.value || "";
-                                  const urOption = parsedUrdu.options.find((o) => o.key === key)?.value || "";
-                                  const showUrduOption = normalizeComparableText(urOption) !== normalizeComparableText(enOption);
+                                  const merged = mergedOptions.find((o) => o.key === key);
+                                  const enOption = merged?.english || merged?.urdu || "";
+                                  const urOption = merged?.urdu || merged?.english || "";
+                                  const showUrduOption = urOption.trim() !== enOption.trim();
                                   return (
                                     <div key={`${question.id}-opt-${key}`} className="flex items-baseline gap-1 text-slate-900" style={{ fontSize: `${resolvedEnglishFontSize}px`, color: resolvedTextColor, fontWeight: resolvedFontWeight, fontFamily: englishFontFamily }}>
                                       <span dir="ltr">

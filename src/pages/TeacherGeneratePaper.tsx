@@ -1,17 +1,104 @@
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { addSavedPaper, getSavedPaperById, type SavedPaperRecord } from "@/lib/savedPapers";
 import { Menu, X, Home, LogOut, ChevronLeft, GraduationCap, List, PencilLine, Save, Printer, Shuffle, Trash2 } from "lucide-react";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
 import { useIsMobile } from "@/hooks/use-mobile";
-import { buildPriorityOptions, fetchChapterGroupsForSelection, fetchQuestionsForSelection, type PaperQuestion } from "@/lib/questionBank";
+import {
+  buildPriorityOptions,
+  clearQuestionBankCache,
+  fetchChapterGroupsForSelection,
+  fetchQuestionsForSelection,
+  fetchAvailableQuestionTypes,
+  type PaperQuestion,
+  type QuestionContentType,
+  type QuestionTypeOption,
+} from "@/lib/questionBank";
 import { useTeacherSessionStore } from "@/stores/teacherSessionStore";
 import {
   boardClassMap, boardCards, boardSubjectsMap, getChaptersForSubject, type ChapterGroup,
 } from "@/data/subjectData";
+import { getNineTopicChapters } from "@/data/nineTopicChapters";
+import { getAvailableQuestionTypesForTopics } from "@/data/topicQuestionTypes";
 import SubjectButton from "@/components/SubjectButton";
+import DualMediumQuestion from "@/components/DualMediumQuestion";
+import { getQuestionStems } from "@/lib/questionDisplay";
 
 const isUrdu = (text: string) => /[\u0600-\u06FF]/.test(text);
+// Strip a leading "<number>. " prefix embedded in stored question text
+const stripLeadingNumber = (text: string) => text.replace(/^\d+[\s.。،]+/, "").trim();
+
+const defaultQuestionTypeOptions: QuestionTypeOption[] = [
+  { value: "mcq", label: "Multiple Option (متعدد انتخابی)" },
+  { value: "short", label: "Short Questions (مختصر سوالات)" },
+  { value: "long", label: "Long Questions (تفصیلی سوالات)" },
+];
+const english10thQuestionTypeOptions: QuestionTypeOption[] = [
+  { value: "questions_answers", label: "Questions and answers" },
+  { value: "tick_correct_grammar", label: "Tick correct according to grammer" },
+  { value: "tick_correct_spelling", label: "Tick correct spelling" },
+  { value: "correct_meaning_underlined", label: "correct meaning of underlined word" },
+  { value: "translate_urdu_paragraph", label: "translate into urdu paragraph" },
+];
+const allPossibleQuestionTypeOptions: QuestionTypeOption[] = [
+  // Basic types
+  { value: "mcq", label: "Multiple Option (متعدد انتخابی)" },
+  { value: "short", label: "Short Questions (مختصر سوالات)" },
+  { value: "long", label: "Long Questions (تفصیلی سوالات)" },
+  // Grammar & Language
+  { value: "grammar", label: "Grammar (گرائمر)" },
+  { value: "ilfaz_ko_jumlo_mein_istamal", label: "Use Words in Sentences (الفاظ کا جملوں میں استعمال)" },
+  { value: "words_into_sentences", label: "Words into Sentences (الفاظ کا جملوں میں استعمال)" },
+  { value: "words_meanings", label: "Words Meanings (الفاظ و معنی)" },
+  { value: "ilfaz_maani", label: "Words Meanings / Ilfaz Maani (الفاظ و معنی)" },
+  { value: "jumlo_ki_darustagi", label: "Correction of Sentences (جملوں کی درستگی)" },
+  { value: "jumlo_ki_takmeel", label: "Completion of Sentences (جملوں کی تکمیل)" },
+  { value: "wahid_jama", label: "Singular / Plural (واحد / جمع)" },
+  { value: "muzakir_monas", label: "Masculine / Feminine (مذکر / مونث)" },
+  { value: "ilfaz_mutazad", label: "Antonyms (الفاظ / متضاد)" },
+  { value: "ilfaz_mutaradif", label: "Synonyms (الفاظ / مترادف)" },
+  { value: "araab_lagaein", label: "Put Araab (اعراب لگائیں)" },
+  { value: "fill_in_tha_blanks", label: "Fill in the Blanks (خالی جگہ پر کریں)" },
+  { value: "khali_jaga_pur_karein", label: "Fill in the Blanks / Khali Jaga (خالی جگہ پُر کریں)" },
+  { value: "ideoms", label: "Idioms (محاورات)" },
+  // English-specific types
+  { value: "tick_correct_spellings", label: "Tick Correct Spellings (درست ہجے کا انتخاب)" },
+  { value: "correct_meaning_of_underline_word", label: "Correct Meaning of Underlined Word (خط کشیدہ الفاظ کے درست معنی)" },
+  { value: "tick_correct_form_of_verb", label: "Tick Correct Form of Verb (فعل کی درست حالت کا انتخاب)" },
+  { value: "tick_correct_according_to_grammer", label: "Tick Correct According to Grammar (گرائمر کے مطابق درست انتخاب)" },
+  { value: "active_and_passive_voice", label: "Active & Passive Voice (فعال اور مجہول آواز)" },
+  { value: "direct_and_indirect", label: "Direct & Indirect (بلاواسطہ اور بالواسطہ)" },
+  { value: "pair_of_words", label: "Pair of Words (الفاظ کے جوڑے)" },
+  { value: "punctuate_the_paragraph", label: "Punctuate the Paragraph (رموزِ اوقاف)" },
+  // Writing & Composition
+  { value: "letters", label: "Letters (خطوط)" },
+  { value: "stories", label: "Stories (کہانیاں)" },
+  { value: "summary", label: "Summary (خلاصہ)" },
+  { value: "dialoges", label: "Dialogues (مکالمے)" },
+  { value: "mukalmy", label: "Mukalmy / Dialogues (مکالمے)" },
+  { value: "darkhaastein", label: "Applications (درخواستیں)" },
+  { value: "writing_paragraphs", label: "Writing Paragraphs (پیراگراف نویسی)" },
+  // Reading Comprehension
+  { value: "comprehension_paragraph", label: "Comprehension Paragraph (تفہیمی پیرا گراف)" },
+  { value: "tafheem_ibarat", label: "Comprehension of Passage (تفہیم عبارت)" },
+  // Poetry & Literature
+  { value: "ashaar_ki_tashreeh", label: "Explanation of Verses (اشعار کی تشریح)" },
+  { value: "ashar_ki_tashreeh", label: "Explanation of Verses / Ashar (اشعار کی تشریح)" },
+  { value: "paragraph_ki_tashreeh", label: "Explanation of Paragraph (پیراگراف کی تشریح)" },
+  { value: "poem_stanzas", label: "Poem Stanzas (نظم کے بند)" },
+  { value: "markazi_khayal", label: "Central Idea (مرکزی خیال)" },
+  // Translation
+  { value: "farsi_tarjuma", label: "Translation (ترجمہ)" },
+  { value: "translate_into_urdu_paragraph", label: "Translate into Urdu Paragraph (اردو میں ترجمہ)" },
+  // Q&A
+  { value: "questions_answers", label: "Questions & Answers (سوالات و جوابات)" },
+  // Islamic Studies
+  { value: "ayaat", label: "Ayat (آیاتِ مبارکہ)" },
+  { value: "hadith", label: "Hadith (حدیث مبارکہ)" },
+  { value: "ahadees", label: "Ahadees (احادیث مبارکہ)" },
+  { value: "shakhsiyat", label: "Personalities (شخصیات)" },
+  { value: "shakhsiyaat", label: "Personalities / Shakhsiyaat (شخصیات)" },
+];
 type WorkspaceQuestionType = "mcq" | "short" | "long";
 type EditedQuestion = { text: string; urdu: string; contentType?: WorkspaceQuestionType };
 const inferContentType = (id: number, text: string): WorkspaceQuestionType => {
@@ -23,6 +110,67 @@ const inferContentType = (id: number, text: string): WorkspaceQuestionType => {
   if (id >= 200) return "long";
   return /\([A-D]\)/.test(text) ? "mcq" : "short";
 };
+
+const getProfessionalQuestionTypeLabel = (value: string, fallbackLabel: string): string => {
+  const normalizedValue = value.toLowerCase().trim();
+  const labelMap: Record<string, string> = {
+    mcq: "Multiple Option (متعدد انتخابی)",
+    mcqs: "Multiple Option (متعدد انتخابی)",
+    short: "Short Questions (مختصر سوالات)",
+    long: "Long Questions (تفصیلی سوالات)",
+    question_and_answers: "Questions & Answers (سوالات و جوابات)",
+    questions_answers: "Questions & Answers (سوالات و جوابات)",
+    tick_correct_spellings: "Tick Correct Spellings (درست ہجے کا انتخاب)",
+    tick_correct_spelling: "Tick Correct Spellings (درست ہجے کا انتخاب)",
+    correct_meaning_of_underline_word: "Correct Meaning of Underlined Word (خط کشیدہ الفاظ کے درست معنی)",
+    correct_meaning_underlined: "Correct Meaning of Underlined Word (خط کشیدہ الفاظ کے درست معنی)",
+    tick_correct_form_of_verb: "Tick Correct Form of Verb (فعل کی درست حالت کا انتخاب)",
+    tick_correct_according_to_grammer: "Tick Correct According to Grammar (گرائمر کے مطابق درست انتخاب)",
+    tick_correct_grammar: "Tick Correct According to Grammar (گرائمر کے مطابق درست انتخاب)",
+    letters: "Letters (خطوط)",
+    active_and_passive_voice: "Active & Passive Voice (فعال اور مجہول آواز)",
+    stories: "Stories (کہانیاں)",
+    summary: "Summary (خلاصہ)",
+    dialoges: "Dialogues (مکالمے)",
+    translate_into_urdu_paragraph: "Translate into Urdu Paragraph (اردو میں ترجمہ)",
+    translate_urdu_paragraph: "Translate into Urdu Paragraph (اردو میں ترجمہ)",
+    comprehension_paragraph: "Comprehension Paragraph (تفہیمی پیرا گراف)",
+    poem_stanzas: "Poem Stanzas (نظم کے بند)",
+    ideoms: "Idioms (محاورات)",
+    words_meanings: "Words Meanings (الفاظ و معنی)",
+    fill_in_tha_blanks: "Fill in the Blanks (خالی جگہ پر کریں)",
+    direct_and_indirect: "Direct & Indirect (بلاواسطہ اور بالواسطہ)",
+    pair_of_words: "Pair of Words (الفاظ کے جوڑے)",
+    punctuate_the_paragraph: "Punctuate the Paragraph (رموزِ اوقاف)",
+    writing_paragraphs: "Writing Paragraphs (پیراگراف نویسی)",
+    mukalmy: "Dialogues (مکالمے)",
+    ilfaz_ko_jumlo_mein_istamal: "Use Words in Sentences (الفاظ کا جملوں میں استعمال)",
+    ashaar_ki_tashreeh: "Explanation of Verses (اشعار کی تشریح)",
+    ashar_ki_tashreeh: "Explanation of Verses (اشعار کی تشریح)",
+    jumlo_ki_darustagi: "Correction of Sentences (جملوں کی درستگی)",
+    jumlo_ki_takmeel: "Completion of Sentences (جملوں کی تکمیل)",
+    markazi_khayal: "Central Idea (مرکزی خیال)",
+    paragraph_ki_tashreeh: "Explanation of Paragraph (پیراگراف کی تشریح)",
+    darkhaastein: "Applications (درخواستیں)",
+    ilfaz_maani: "Words Meanings (الفاظ و معنی)",
+    khali_jaga_pur_karein: "Fill in the Blanks (خالی جگہ پر کریں)",
+    wahid_jama: "Singular / Plural (واحد / جمع)",
+    muzakir_monas: "Masculine / Feminine (مذکر / مونث)",
+    ilfaz_mutazad: "Antonyms (الفاظ / متضاد)",
+    ilfaz_mutaradif: "Synonyms (الفاظ / مترادف)",
+    araab_lagaein: "Put Araab (اعراب لگائیں)",
+    hadith: "Hadith (حدیث مبارکہ)",
+    ahadees: "Ahadees (احادیث مبارکہ)",
+    shakhsiyat: "Personalities (شخصیات)",
+    shakhsiyaat: "Personalities (شخصیات)",
+    tafheem_ibarat: "Comprehension of Passage (تفہیم عبارت)",
+    words_into_sentences: "Words into Sentences (الفاظ کا جملوں میں استعمال)",
+    ayaat: "Ayat (آیاتِ مبارکہ)",
+  };
+
+  return labelMap[normalizedValue] || fallbackLabel;
+};
+
 
 const TeacherGeneratePaper = () => {
   const isMobile = useIsMobile();
@@ -38,20 +186,25 @@ const TeacherGeneratePaper = () => {
   const [selectedLevel, setSelectedLevel] = useState<string | null>(null);
   const [selectedSubject, setSelectedSubject] = useState<string | null>(null);
   const [selectedChapters, setSelectedChapters] = useState<string[]>([]);
+  const lastInitializedRef = useRef<{ key: string; isDb: boolean; isTopicsFile?: boolean } | null>(null);
   const [showQuestionSelection, setShowQuestionSelection] = useState(false);
   const [showPaperWorkspace, setShowPaperWorkspace] = useState(false);
   const [questionType, setQuestionType] = useState("");
+  const [appliedQuestionType, setAppliedQuestionType] = useState("");
   const [dualMedium, setDualMedium] = useState("dual");
+  const [appliedDualMedium, setAppliedDualMedium] = useState("dual");
   const [requiredQuestions, setRequiredQuestions] = useState("");
   const [eachQMarks, setEachQMarks] = useState("");
   const [ignoreQuestions, setIgnoreQuestions] = useState("");
   const [blankLines, setBlankLines] = useState("");
   const [blankLineType, setBlankLineType] = useState("1 LINE");
   const [questionPriority, setQuestionPriority] = useState("all");
+  const [appliedQuestionPriority, setAppliedQuestionPriority] = useState("all");
   const [showSearchResults, setShowSearchResults] = useState(false);
   const [selectedQuestions, setSelectedQuestions] = useState<number[]>([]);
   const [selectionError, setSelectionError] = useState("");
   const [isManualEditing, setIsManualEditing] = useState(false);
+  const [availableDbTypes, setAvailableDbTypes] = useState<string[] | null>(null);
   const [editedQuestions, setEditedQuestions] = useState<Record<number, EditedQuestion>>({});
   const [shuffledOrder, setShuffledOrder] = useState<number[]>([]);
   const [showSavePaperDialog, setShowSavePaperDialog] = useState(false);
@@ -63,15 +216,72 @@ const TeacherGeneratePaper = () => {
   const [showValidationDialog, setShowValidationDialog] = useState(false);
   const [validationMessage, setValidationMessage] = useState("");
   const [allQuestions, setAllQuestions] = useState<PaperQuestion[]>([]);
+  const [isSearchingQuestions, setIsSearchingQuestions] = useState(false);
   const [dbChapterGroups, setDbChapterGroups] = useState<ChapterGroup[] | null>(null);
+  const [dbQuestionTypes, setDbQuestionTypes] = useState<QuestionTypeOption[] | null>(null);
 
   const chapterGroups = useMemo(() => {
     if (!selectedSubject || !selectedLevel || !selectedBoard) {
       return [];
     }
 
+    const fromTopicsFile = getNineTopicChapters(selectedSubject, selectedLevel, selectedBoard);
+    if (fromTopicsFile && fromTopicsFile.length > 0) {
+      return fromTopicsFile;
+    }
+
     return dbChapterGroups ?? getChaptersForSubject(selectedSubject, selectedLevel, selectedBoard);
   }, [dbChapterGroups, selectedBoard, selectedLevel, selectedSubject]);
+
+  const questionTypeOptions = useMemo(() => {
+    const groupNameSet = new Set(chapterGroups.map((g) => g.name));
+    const chapterNamesOnly = selectedChapters.filter((ch) => !groupNameSet.has(ch));
+    const topicTypes = getAvailableQuestionTypesForTopics(
+      selectedSubject ?? "",
+      chapterNamesOnly,
+      selectedLevel ?? ""
+    );
+
+    let rawOptions: QuestionTypeOption[] = [];
+    if (topicTypes !== null) {
+      rawOptions = allPossibleQuestionTypeOptions;
+    } else if (dbQuestionTypes && dbQuestionTypes.length > 0) {
+      rawOptions = dbQuestionTypes;
+    } else {
+      rawOptions = defaultQuestionTypeOptions;
+    }
+
+    let allowedSet: Set<string> | null = null;
+    if (topicTypes && topicTypes.length > 0) {
+      allowedSet = new Set(topicTypes);
+    } else if (availableDbTypes && availableDbTypes.length > 0) {
+      allowedSet = new Set(availableDbTypes);
+    }
+
+    if (allowedSet) {
+      rawOptions = rawOptions.filter((opt) => allowedSet!.has(opt.value));
+    }
+
+    // Debug logs for runtime inspection — remove after verification
+    // eslint-disable-next-line no-console
+    console.debug('TeacherGeneratePaper: rawOptions labels ->', rawOptions.map((o) => o.label));
+    // eslint-disable-next-line no-console
+    console.debug('TeacherGeneratePaper: availableDbTypes ->', availableDbTypes);
+    // eslint-disable-next-line no-console
+    console.debug('TeacherGeneratePaper: topicTypes ->', topicTypes);
+
+    return rawOptions.map((opt) => ({
+      value: opt.value,
+      label: getProfessionalQuestionTypeLabel(opt.value, opt.label),
+    }));
+  }, [dbQuestionTypes, selectedLevel, selectedSubject, availableDbTypes, selectedChapters, chapterGroups]);
+
+  useEffect(() => {
+    if (questionType && !questionTypeOptions.some((option) => option.value === questionType)) {
+      setQuestionType("");
+      setAppliedQuestionType("");
+    }
+  }, [questionType, questionTypeOptions]);
 
   const priorityOptions = useMemo(
     () => buildPriorityOptions(allQuestions, selectedChapters),
@@ -81,22 +291,35 @@ const TeacherGeneratePaper = () => {
   const activeQuestions = useMemo(() => {
     let filtered = allQuestions;
 
-    if (questionType === "mcq") filtered = filtered.filter((q) => q.contentType === "mcq");
-    if (questionType === "short") filtered = filtered.filter((q) => q.contentType === "short");
-    if (questionType === "long") filtered = filtered.filter((q) => q.contentType === "long");
+    if (appliedQuestionType === "mcq") filtered = filtered.filter((q) => q.contentType === "mcq");
+    if (appliedQuestionType === "short") filtered = filtered.filter((q) => q.contentType === "short");
+    if (appliedQuestionType === "long") filtered = filtered.filter((q) => q.contentType === "long");
+    if (appliedQuestionType && !["mcq", "short", "long"].includes(appliedQuestionType)) {
+      filtered = filtered.filter((q) => q.chapterPart === appliedQuestionType);
+    }
 
-    if (questionPriority && questionPriority !== "all") {
-      if (questionPriority.startsWith("cat:")) {
-        const categoryValue = questionPriority.replace("cat:", "");
+    if (appliedQuestionPriority && appliedQuestionPriority !== "all") {
+      if (appliedQuestionPriority.startsWith("cat:")) {
+        const categoryValue = appliedQuestionPriority.replace("cat:", "");
         filtered = filtered.filter((q) => q.priorityKey === categoryValue);
-      } else if (questionPriority.startsWith("part:")) {
-        const partValue = questionPriority.replace("part:", "");
+      } else if (appliedQuestionPriority.startsWith("part:")) {
+        const partValue = appliedQuestionPriority.replace("part:", "");
         filtered = filtered.filter((q) => q.chapterPart === partValue);
       }
     }
 
     return filtered;
-  }, [allQuestions, questionPriority, questionType]);
+  }, [allQuestions, appliedQuestionPriority, appliedQuestionType]);
+
+  const groupedQuestions = useMemo(() => {
+    const groups: Record<string, typeof activeQuestions> = {};
+    activeQuestions.forEach(q => {
+      const part = q.chapterPart || `Chapter ${q.chapter}`;
+      if (!groups[part]) groups[part] = [];
+      groups[part].push(q);
+    });
+    return groups;
+  }, [activeQuestions]);
 
   const orderQuestionIds = (ids: number[]) => {
     const uniqueIds = Array.from(new Set(ids));
@@ -169,7 +392,7 @@ const TeacherGeneratePaper = () => {
       .filter((section) => section.questions.length > 0);
   }, [workspaceQuestions]);
 
-  const handleSearchClick = () => {
+  const handleSearchClick = async () => {
     if (!questionType) {
       setSelectionError("Please select question type first.");
       setShowSearchResults(false);
@@ -195,8 +418,52 @@ const TeacherGeneratePaper = () => {
       setShowValidationDialog(true);
       return;
     }
+
+    if (!selectedSubject || !selectedLevel || !selectedBoard || selectedChapters.length === 0) {
+      setSelectionError("Please select board, class, subject and chapters first.");
+      setShowSearchResults(false);
+      return;
+    }
+
     setSelectionError("");
     setShowSearchResults(true);
+    setIsSearchingQuestions(true);
+    setAllQuestions([]);
+    setSelectedQuestions([]);
+    setAppliedQuestionType(questionType);
+    setAppliedQuestionPriority(questionPriority);
+    setAppliedDualMedium(dualMedium);
+
+    try {
+      const contentTypeFilter = ["mcq", "short", "long"].includes(questionType)
+        ? (questionType as QuestionContentType)
+        : null;
+      const sectionTypeFilter = questionType && !["mcq", "short", "long"].includes(questionType)
+        ? questionType
+        : null;
+      const questions = await fetchQuestionsForSelection(
+        selectedChapters,
+        selectedSubject,
+        selectedLevel,
+        selectedBoard,
+        chapterGroups,
+        contentTypeFilter,
+        sectionTypeFilter,
+      );
+      const uniqueQuestions = questions.map((q, idx) => ({ ...q, id: idx + 1 }));
+      setAllQuestions(uniqueQuestions);
+      if (uniqueQuestions.length === 0) {
+        setSelectionError("No questions found for the selected filters.");
+      }
+    } catch (error) {
+      if (error instanceof DOMException && error.name === "AbortError") {
+        return;
+      }
+      setAllQuestions([]);
+      setSelectionError("Failed to load questions. Please try again.");
+    } finally {
+      setIsSearchingQuestions(false);
+    }
   };
 
   const handleAddQuestions = () => {
@@ -292,6 +559,9 @@ const TeacherGeneratePaper = () => {
       setSelectedSubject(savedPaper.subject || null);
       setSelectedChapters(allChapterSelections);
       setQuestionType(savedPaper.questionType || "");
+      setAppliedQuestionType(savedPaper.questionType || "");
+      setAppliedQuestionPriority("all");
+      setAppliedDualMedium("dual");
       setRequiredQuestions(String(savedPaper.questions.length || 0));
       setEachQMarks(String(marksPerQuestion));
       setShuffledOrder(orderedIds);
@@ -402,6 +672,7 @@ const TeacherGeneratePaper = () => {
 
     if (!selectedSubject || !selectedLevel || !selectedBoard) {
       setDbChapterGroups(null);
+      setDbQuestionTypes(null);
       return () => {
         isMounted = false;
       };
@@ -409,13 +680,19 @@ const TeacherGeneratePaper = () => {
 
     const loadChapterGroups = async () => {
       try {
-        const groups = await fetchChapterGroupsForSelection(selectedSubject, selectedLevel, selectedBoard);
+        const { groups, questionTypes } = await fetchChapterGroupsForSelection(
+          selectedSubject,
+          selectedLevel,
+          selectedBoard,
+        );
         if (isMounted) {
           setDbChapterGroups(groups.length > 0 ? groups : null);
+          setDbQuestionTypes(questionTypes.length > 0 ? questionTypes : null);
         }
       } catch {
         if (isMounted) {
           setDbChapterGroups(null);
+          setDbQuestionTypes(null);
         }
       }
     };
@@ -427,34 +704,75 @@ const TeacherGeneratePaper = () => {
     };
   }, [selectedBoard, selectedLevel, selectedSubject]);
 
+  // Auto-select all chapters when chapter groups load for a chosen subject
   useEffect(() => {
-    let isMounted = true;
+    if (!selectedSubject || !selectedLevel || !selectedBoard) {
+      lastInitializedRef.current = null;
+      return;
+    }
 
-    const loadQuestions = async () => {
-      try {
-        const questions = await fetchQuestionsForSelection(selectedChapters);
-        if (isMounted) {
-          setAllQuestions(questions);
-        }
-      } catch {
-        if (isMounted) {
-          setAllQuestions([]);
-        }
+    const currentKey = `${selectedBoard}-${selectedLevel}-${selectedSubject}`;
+    const fromTopicsFile = getNineTopicChapters(selectedSubject, selectedLevel, selectedBoard);
+    const hasTopicsFile = Boolean(fromTopicsFile && fromTopicsFile.length > 0);
+    const hasDb = Boolean(dbChapterGroups && dbChapterGroups.length > 0);
+
+    if (
+      lastInitializedRef.current &&
+      lastInitializedRef.current.key === currentKey &&
+      (lastInitializedRef.current.isTopicsFile || (!hasTopicsFile && (lastInitializedRef.current.isDb || !hasDb)))
+    ) {
+      return;
+    }
+
+    const groups = fromTopicsFile?.length
+      ? fromTopicsFile
+      : (dbChapterGroups ?? getChaptersForSubject(selectedSubject, selectedLevel, selectedBoard));
+    if (groups && groups.length > 0) {
+      if (selectedLevel === "9TH" || selectedLevel === "11TH" || selectedLevel === "INTER-I") {
+        setSelectedChapters([]);
+      } else {
+        setSelectedChapters(groups.flatMap((g) => [g.name, ...g.chapters]));
       }
-    };
+      lastInitializedRef.current = { key: currentKey, isDb: hasDb, isTopicsFile: hasTopicsFile };
+    }
+  }, [dbChapterGroups, selectedSubject, selectedLevel, selectedBoard]);
 
-    loadQuestions();
-
-    return () => {
-      isMounted = false;
-    };
-  }, [selectedChapters]);
+  useEffect(() => {
+    setAllQuestions([]);
+    setSelectedQuestions([]);
+    setShowSearchResults(false);
+    setSelectionError("");
+    clearQuestionBankCache();
+    setAppliedQuestionType("");
+    setAppliedQuestionPriority("all");
+    setAppliedDualMedium("dual");
+  }, [selectedBoard, selectedLevel, selectedSubject]);
 
   useEffect(() => {
     setSelectedQuestions([]);
     setShowSearchResults(false);
     setSelectionError("");
-  }, [questionType, questionPriority, selectedChapters]);
+    setAllQuestions([]);
+    setAppliedQuestionType("");
+    setAppliedQuestionPriority("all");
+    setAppliedDualMedium("dual");
+  }, [selectedChapters]);
+
+  useEffect(() => {
+    if (showQuestionSelection && selectedChapters.length > 0) {
+      fetchAvailableQuestionTypes(
+        selectedChapters,
+        selectedSubject,
+        selectedLevel,
+        selectedBoard,
+        chapterGroups,
+      )
+        .then(setAvailableDbTypes)
+        .catch(() => setAvailableDbTypes(null));
+    } else {
+      setAvailableDbTypes(null);
+    }
+  }, [showQuestionSelection, selectedChapters, selectedSubject, selectedLevel, selectedBoard, chapterGroups]);
 
   const sidebarContent = (showQuestionSelection || showPaperWorkspace) ? (
     <>
@@ -537,216 +855,254 @@ const TeacherGeneratePaper = () => {
   return (
     <div className="min-h-screen bg-background">
       <header className="sticky top-0 z-40 bg-[hsl(var(--pts-dark))] w-full">
-              <Dialog open={showQuestionSelection} onOpenChange={(open) => {
-                setShowQuestionSelection(open);
-                if (!open) {
-                  setSidebarOpen(true);
-                  setShowPaperWorkspace(true);
-                }
-              }}>
-                <DialogContent className="w-[95vw] max-w-5xl max-h-[90vh] overflow-y-auto">
-                  <div className="space-y-4">
-                    {/* Header */}
-                    <div className="flex items-center justify-between pb-4 border-b border-gray-200">
-                      <h2 className="text-base font-semibold text-gray-900">Select Your Questions Here ... {selectedLevel} - {selectedSubject}</h2>
+        <Dialog open={showQuestionSelection} onOpenChange={(open) => {
+          setShowQuestionSelection(open);
+          if (!open) {
+            setSidebarOpen(true);
+            setShowPaperWorkspace(true);
+          }
+        }}>
+          <DialogContent className="w-[95vw] max-w-5xl max-h-[90vh] overflow-y-auto">
+            <div className="space-y-4">
+              {/* Header */}
+              <div className="flex items-center justify-between pb-4 border-b border-gray-200">
+                <h2 className="text-base font-semibold text-gray-900">Select Your Questions Here ... {selectedLevel} - {selectedSubject}</h2>
+              </div>
+
+              {/* First Row: Question Type and Dual Medium */}
+              <div className="grid grid-cols-2 gap-6">
+                <div>
+                  <label className="block text-[11px] font-semibold text-gray-700 mb-2">SELECT QUESTION TYPE</label>
+                  <select value={questionType} onChange={(e) => setQuestionType(e.target.value)} className="w-full border border-gray-300 rounded px-3 py-2 text-sm text-gray-700 bg-white">
+                    <option value="">Select question type</option>
+                    {questionTypeOptions.map((option) => (
+                      <option key={option.value} value={option.value}>{option.label}</option>
+                    ))}
+                  </select>
+                </div>
+                <div>
+                  <label className="block text-[11px] font-semibold text-gray-700 mb-2">DUAL MEDIUM</label>
+                  <select value={dualMedium} onChange={(e) => setDualMedium(e.target.value)} className="w-full border border-gray-300 rounded px-3 py-2 text-sm text-gray-700 bg-white">
+                    <option value="dual">Dual</option>
+                    <option value="english">English</option>
+                    <option value="urdu">Urdu</option>
+                  </select>
+                </div>
+              </div>
+
+              {/* Second Row: Input Fields */}
+              <div className="grid grid-cols-5 gap-3">
+                <div>
+                  <label className="block text-[11px] font-semibold text-gray-700 mb-2">Required Questions *</label>
+                  <input type="text" value={requiredQuestions} onChange={(e) => setRequiredQuestions(e.target.value)} className="w-full border border-gray-300 rounded px-3 py-2 text-sm text-gray-700" placeholder="0" />
+                </div>
+                <div>
+                  <label className="block text-[11px] font-semibold text-gray-700 mb-2">Each Q Marks *</label>
+                  <input type="text" value={eachQMarks} onChange={(e) => setEachQMarks(e.target.value)} className="w-full border border-gray-300 rounded px-3 py-2 text-sm text-gray-700" placeholder="0" />
+                </div>
+                <div>
+                  <label className="block text-[11px] font-semibold text-gray-700 mb-2">Question Priority</label>
+                  <select value={questionPriority} onChange={(e) => setQuestionPriority(e.target.value)} className="w-full border border-gray-300 rounded px-3 py-2 text-sm text-gray-700 bg-white">
+                    {priorityOptions.map((option) => (
+                      <option key={option.value} value={option.value}>{option.label}</option>
+                    ))}
+                  </select>
+                </div>
+                <div>
+                  <label className="block text-[11px] font-semibold text-gray-700 mb-2">Ignore Questions</label>
+                  <input type="text" value={ignoreQuestions} onChange={(e) => setIgnoreQuestions(e.target.value)} className="w-full border border-gray-300 rounded px-3 py-2 text-sm text-gray-700" placeholder="0" />
+                </div>
+                <div>
+                  <label className="block text-[11px] font-semibold text-gray-700 mb-2">Blank Lines</label>
+                  <input type="text" value={blankLines} onChange={(e) => setBlankLines(e.target.value)} className="w-full border border-gray-300 rounded px-3 py-2 text-sm text-gray-700" placeholder="0" />
+                </div>
+              </div>
+
+              {/* Third Row: Blank Line Type */}
+              <div className="grid grid-cols-1 gap-4">
+                <div>
+                  <label className="block text-[11px] font-semibold text-gray-700 mb-2">Blank Line Type</label>
+                  <select value={blankLineType} onChange={(e) => setBlankLineType(e.target.value)} className="w-full border border-gray-300 rounded px-3 py-2 text-sm text-gray-700 bg-white">
+                    <option>1 LINE</option>
+                    <option>2 LINES</option>
+                    <option>3 LINES</option>
+                  </select>
+                </div>
+              </div>
+
+              {/* Search Button */}
+              <div className="flex gap-3">
+                <button
+                  type="button"
+                  disabled={isSearchingQuestions}
+                  onClick={handleSearchClick}
+                  className="bg-green-600 text-white text-sm font-semibold px-6 py-2 rounded hover:bg-green-700 disabled:opacity-60 disabled:cursor-not-allowed"
+                >
+                  {isSearchingQuestions ? "SEARCHING..." : "SEARCH"}
+                </button>
+              </div>
+
+              {selectionError && (
+                <p className="text-sm font-semibold text-red-600">{selectionError}</p>
+              )}
+
+              {/* Questions List */}
+              {showSearchResults && (
+                <div className="space-y-4 max-h-[500px] overflow-y-auto pr-2">
+                  {isSearchingQuestions ? (
+                    <div className="p-4 text-center text-sm font-semibold text-gray-500 bg-gray-50 border border-gray-200 rounded-lg">
+                      Loading questions...
                     </div>
-
-                    {/* First Row: Question Type and Dual Medium */}
-                    <div className="grid grid-cols-2 gap-6">
-                      <div>
-                        <label className="block text-[11px] font-semibold text-gray-700 mb-2">SELECT QUESTION TYPE</label>
-                        <select value={questionType} onChange={(e) => setQuestionType(e.target.value)} className="w-full border border-gray-300 rounded px-3 py-2 text-sm text-gray-700 bg-white">
-                          <option value="">Select question type</option>
-                          <option value="mcq">Multiple Option (متعدد انتخابی)</option>
-                          <option value="short">Short Questions (مختصر سوالات)</option>
-                          <option value="long">Long Questions (تفصیلی سوالات)</option>
-                        </select>
-                      </div>
-                      <div>
-                        <label className="block text-[11px] font-semibold text-gray-700 mb-2">DUAL MEDIUM</label>
-                        <select value={dualMedium} onChange={(e) => setDualMedium(e.target.value)} className="w-full border border-gray-300 rounded px-3 py-2 text-sm text-gray-700 bg-white">
-                          <option value="dual">Dual</option>
-                          <option value="english">English</option>
-                          <option value="urdu">Urdu</option>
-                        </select>
-                      </div>
+                  ) : activeQuestions.length === 0 ? (
+                    <div className="p-4 text-center text-sm font-semibold text-gray-500 bg-gray-50 border border-gray-200 rounded-lg">
+                      No questions found for the selected filters. Please ensure data is available for this subject.
                     </div>
-
-                    {/* Second Row: Input Fields */}
-                    <div className="grid grid-cols-5 gap-3">
-                      <div>
-                        <label className="block text-[11px] font-semibold text-gray-700 mb-2">Required Questions *</label>
-                        <input type="text" value={requiredQuestions} onChange={(e) => setRequiredQuestions(e.target.value)} className="w-full border border-gray-300 rounded px-3 py-2 text-sm text-gray-700" placeholder="0" />
-                      </div>
-                      <div>
-                        <label className="block text-[11px] font-semibold text-gray-700 mb-2">Each Q Marks *</label>
-                        <input type="text" value={eachQMarks} onChange={(e) => setEachQMarks(e.target.value)} className="w-full border border-gray-300 rounded px-3 py-2 text-sm text-gray-700" placeholder="0" />
-                      </div>
-                      <div>
-                        <label className="block text-[11px] font-semibold text-gray-700 mb-2">Question Priority</label>
-                        <select value={questionPriority} onChange={(e) => setQuestionPriority(e.target.value)} className="w-full border border-gray-300 rounded px-3 py-2 text-sm text-gray-700 bg-white">
-                          {priorityOptions.map((option) => (
-                            <option key={option.value} value={option.value}>{option.label}</option>
-                          ))}
-                        </select>
-                      </div>
-                      <div>
-                        <label className="block text-[11px] font-semibold text-gray-700 mb-2">Ignore Questions</label>
-                        <input type="text" value={ignoreQuestions} onChange={(e) => setIgnoreQuestions(e.target.value)} className="w-full border border-gray-300 rounded px-3 py-2 text-sm text-gray-700" placeholder="0" />
-                      </div>
-                      <div>
-                        <label className="block text-[11px] font-semibold text-gray-700 mb-2">Blank Lines</label>
-                        <input type="text" value={blankLines} onChange={(e) => setBlankLines(e.target.value)} className="w-full border border-gray-300 rounded px-3 py-2 text-sm text-gray-700" placeholder="0" />
-                      </div>
-                    </div>
-
-                    {/* Third Row: Blank Line Type */}
-                    <div className="grid grid-cols-1 gap-4">
-                      <div>
-                        <label className="block text-[11px] font-semibold text-gray-700 mb-2">Blank Line Type</label>
-                        <select value={blankLineType} onChange={(e) => setBlankLineType(e.target.value)} className="w-full border border-gray-300 rounded px-3 py-2 text-sm text-gray-700 bg-white">
-                          <option>1 LINE</option>
-                          <option>2 LINES</option>
-                          <option>3 LINES</option>
-                        </select>
-                      </div>
-                    </div>
-
-                    {/* Search Button */}
-                    <div className="flex gap-3">
-                      <button type="button" onClick={handleSearchClick} className="bg-green-600 text-white text-sm font-semibold px-6 py-2 rounded hover:bg-green-700">
-                        SEARCH
-                      </button>
-                    </div>
-
-                    {selectionError && (
-                      <p className="text-sm font-semibold text-red-600">{selectionError}</p>
-                    )}
-
-                    {/* Questions List */}
-                    {showSearchResults && (
-                      <div className="space-y-3 max-h-[400px] overflow-y-auto">
-                        {activeQuestions.map((q, idx) => (
-                          <div key={q.id} className="flex items-start gap-3 p-3 bg-white rounded-lg border border-gray-200">
-                            <input
-                              type="checkbox"
-                              checked={selectedQuestions.includes(q.id)}
-                              onChange={(e) => {
-                                if (e.target.checked) {
-                                  const requiredCount = getRequiredCount();
-                                  if (requiredCount && selectedQuestions.length >= requiredCount) {
-                                    setSelectionError(`You can select only ${requiredCount} question(s).`);
-                                    return;
-                                  }
-                                  setSelectionError("");
-                                  setSelectedQuestions([...selectedQuestions, q.id]);
-                                } else {
-                                  setSelectionError("");
-                                  setSelectedQuestions(selectedQuestions.filter(id => id !== q.id));
-                                }
-                              }}
-                              className="w-4 h-4 rounded mt-0.5 flex-shrink-0"
-                            />
-                            <div className="flex-1 min-w-0">
-                              {(dualMedium === "dual" || dualMedium === "english") && (
-                                <p className="text-[13px] font-medium text-gray-800">{idx + 1}. {q.text}</p>
-                              )}
-                              {(dualMedium === "dual" || dualMedium === "urdu") && (
-                                <p className={`text-sm text-gray-700 mt-1 ${isUrdu(q.urdu) ? "font-urdu" : ""}`} dir={isUrdu(q.urdu) ? "rtl" : "ltr"}>{q.urdu}</p>
-                              )}
-                            </div>
-                            <span className={`px-2 py-1 rounded text-xs font-semibold whitespace-nowrap flex-shrink-0 ${q.type === "Exercise" ? "bg-green-600 text-white" : "bg-yellow-300 text-gray-800"}`}>
-                              {q.type}
-                            </span>
-                          </div>
-                        ))}
-                      </div>
-                    )}
-
-                    {/* Green Selected Questions Area */}
-                    <div className="bg-green-200 border-2 border-green-300 rounded-xl p-4 min-h-[200px]">
-                      {selectedQuestions.length > 0 && (
-                        <div className="space-y-2">
-                          {activeQuestions.filter(q => selectedQuestions.includes(q.id)).map((q, idx) => (
-                            <div key={q.id} className="p-2 bg-white rounded text-sm">
-                              {(dualMedium === "dual" || dualMedium === "english") && (
-                                <p className="text-[13px] font-medium text-gray-800">{idx + 1}. {q.text}</p>
-                              )}
-                              {(dualMedium === "dual" || dualMedium === "urdu") && (
-                                <p className={`mt-1 text-gray-700 ${isUrdu(q.urdu) ? "font-urdu" : ""}`} dir={isUrdu(q.urdu) ? "rtl" : "ltr"}>{q.urdu}</p>
-                              )}
+                  ) : (
+                    (() => {
+                      const groupEntries = Object.entries(groupedQuestions);
+                      let globalOffset = 0;
+                      return groupEntries.map(([topic, qs]) => {
+                        const topicOffset = globalOffset;
+                        globalOffset += qs.length;
+                        return (
+                      <div key={topic} className="border border-gray-200 rounded-lg overflow-hidden bg-white shadow-sm">
+                        <div className="bg-[#311b92] text-white text-center py-2 px-4 font-semibold text-sm">
+                          {topic}
+                        </div>
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-0">
+                          {qs.map((q, idx) => (
+                            <div key={q.id} className="p-4 border-b border-r border-gray-100 flex flex-col justify-between hover:bg-slate-50 transition-colors">
+                              <div className="flex gap-3 items-start mb-3">
+                                <input
+                                  type="checkbox"
+                                  checked={selectedQuestions.includes(q.id)}
+                                  onChange={(e) => {
+                                    if (e.target.checked) {
+                                      const requiredCount = getRequiredCount();
+                                      if (requiredCount && selectedQuestions.length >= requiredCount) {
+                                        setSelectionError(`You can select only ${requiredCount} question(s).`);
+                                        return;
+                                      }
+                                      setSelectionError("");
+                                      setSelectedQuestions([...selectedQuestions, q.id]);
+                                    } else {
+                                      setSelectionError("");
+                                      setSelectedQuestions(selectedQuestions.filter(id => id !== q.id));
+                                    }
+                                  }}
+                                  className="w-4 h-4 rounded mt-0.5 flex-shrink-0 cursor-pointer"
+                                />
+                                <div className="flex-1 min-w-0">
+                                  <DualMediumQuestion
+                                    text={q.text}
+                                    urdu={q.urdu}
+                                    index={topicOffset + idx + 1}
+                                    dualMedium={appliedDualMedium}
+                                    textClassName="text-[13px] font-medium text-gray-800"
+                                    urduClassName="text-[13px] text-gray-800 font-medium"
+                                  />
+                                </div>
+                              </div>
+                              <div className="flex justify-center mt-auto pt-2">
+                                <span className={`px-4 py-1 rounded-sm text-[10px] font-bold uppercase tracking-wider ${q.type === "Exercise" ? "bg-green-600 text-white" : "bg-yellow-400 text-black shadow-sm"}`}>
+                                  {q.type}
+                                </span>
+                              </div>
                             </div>
                           ))}
                         </div>
-                      )}
-                    </div>
+                      </div>
+                        );
+                      });
+                    })()
+                  )}
+                </div>
+              )}
 
-                    {/* Action Buttons */}
-                    <div className="grid grid-cols-2 gap-4 py-4">
-                      <button type="button" onClick={handleRandomSelect} className="bg-cyan-500 text-white text-sm font-semibold py-2 rounded hover:bg-cyan-600">
-                        ↻ RANDOM SELECT ›
-                      </button>
-                      <button type="button" onClick={handleAddQuestions} className="bg-green-600 text-white text-sm font-semibold py-2 rounded hover:bg-green-700">
-                        ADD QUESTIONS ›
-                      </button>
-                    </div>
-                  </div>
-                </DialogContent>
-              </Dialog>
-              <Dialog open={showValidationDialog} onOpenChange={setShowValidationDialog}>
-                <DialogContent className="max-w-[380px] p-5 text-center">
-                  <div className="mx-auto mb-4 w-20 h-20 rounded-full border-4 border-red-400 flex items-center justify-center">
-                    <X className="w-10 h-10 text-red-400" />
-                  </div>
-                  <h3 className="text-2xl font-bold text-gray-600 mb-5">{validationMessage}</h3>
-                  <button
-                    type="button"
-                    onClick={() => setShowValidationDialog(false)}
-                    className="px-6 py-2 rounded-lg text-white text-lg font-semibold bg-indigo-500 hover:bg-indigo-600"
-                  >
-                    OK
-                  </button>
-                </DialogContent>
-              </Dialog>
-              <Dialog open={showSavePaperDialog} onOpenChange={setShowSavePaperDialog}>
-                <DialogContent className="max-w-xl p-0 overflow-hidden">
-                  <div className="bg-gradient-to-r from-indigo-800 to-purple-700 px-4 py-3 flex items-center justify-between">
-                    <h2 className="text-xl font-bold text-white">Save Paper</h2>
-                    <button type="button" onClick={() => setShowSavePaperDialog(false)} className="text-white/80 hover:text-white">
-                      <X className="w-5 h-5" />
-                    </button>
-                  </div>
-                  <div className="p-5 space-y-4">
-                    <div>
-                      <label className="block text-sm font-semibold text-gray-800 mb-1">Paper Name <span className="text-red-500">*</span></label>
-                      <input type="text" value={paperName} onChange={(e) => setPaperName(e.target.value)} className="w-full border border-gray-300 rounded px-3 py-2 text-sm" />
-                    </div>
-                    <div>
-                      <label className="block text-sm font-semibold text-gray-800 mb-1">Paper Category <span className="text-red-500">*</span></label>
-                      <input type="text" value={paperCategory} onChange={(e) => setPaperCategory(e.target.value)} placeholder="Like Monthly Exams, Daily Test System etc." className="w-full border border-gray-300 rounded px-3 py-2 text-sm" />
-                    </div>
-                    <div>
-                      <label className="block text-sm font-semibold text-gray-800 mb-1">Time Allowed <span className="text-red-500">*</span></label>
-                      <input type="text" value={timeAllowed} onChange={(e) => setTimeAllowed(e.target.value)} className="w-full border border-gray-300 rounded px-3 py-2 text-sm" />
-                    </div>
-                    <div className="grid grid-cols-2 gap-4">
-                      <div>
-                        <label className="block text-sm font-semibold text-gray-800 mb-1">Paper Date <span className="text-red-500">*</span></label>
-                        <input type="text" value={paperDate} onChange={(e) => setPaperDate(e.target.value)} className="w-full border border-gray-300 rounded px-3 py-2 text-sm" />
+              {/* Green Selected Questions Area */}
+              <div className="bg-green-200 border-2 border-green-300 rounded-xl p-4 min-h-[200px]">
+                {selectedQuestions.length > 0 && (
+                  <div className="space-y-2">
+                    {activeQuestions.filter(q => selectedQuestions.includes(q.id)).map((q, idx) => (
+                      <div key={q.id} className="p-2 bg-white rounded text-sm">
+                        <DualMediumQuestion
+                          text={q.text}
+                          urdu={q.urdu}
+                          index={idx + 1}
+                          dualMedium={appliedDualMedium}
+                        />
                       </div>
-                      <div>
-                        <label className="block text-sm font-semibold text-gray-800 mb-1">Total Marks <span className="text-red-500">*</span></label>
-                        <input type="text" value={totalMarks} onChange={(e) => setTotalMarks(e.target.value)} className="w-full border border-gray-300 rounded px-3 py-2 text-sm text-center" />
-                      </div>
-                    </div>
-                    <div className="flex justify-end pt-2">
-                      <button type="button" onClick={handleSavePaper} className="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-2 rounded shadow-sm">
-                        + SAVE PAPER
-                      </button>
-                    </div>
+                    ))}
                   </div>
-                </DialogContent>
-              </Dialog>
+                )}
+              </div>
+
+              {/* Action Buttons */}
+              <div className="grid grid-cols-2 gap-4 py-4">
+                <button type="button" onClick={handleRandomSelect} className="bg-cyan-500 text-white text-sm font-semibold py-2 rounded hover:bg-cyan-600">
+                  ↻ RANDOM SELECT ›
+                </button>
+                <button type="button" onClick={handleAddQuestions} className="bg-green-600 text-white text-sm font-semibold py-2 rounded hover:bg-green-700">
+                  ADD QUESTIONS ›
+                </button>
+              </div>
+            </div>
+          </DialogContent>
+        </Dialog>
+        <Dialog open={showValidationDialog} onOpenChange={setShowValidationDialog}>
+          <DialogContent className="max-w-[380px] p-5 text-center">
+            <div className="mx-auto mb-4 w-20 h-20 rounded-full border-4 border-red-400 flex items-center justify-center">
+              <X className="w-10 h-10 text-red-400" />
+            </div>
+            <h3 className="text-2xl font-bold text-gray-600 mb-5">{validationMessage}</h3>
+            <button
+              type="button"
+              onClick={() => setShowValidationDialog(false)}
+              className="px-6 py-2 rounded-lg text-white text-lg font-semibold bg-indigo-500 hover:bg-indigo-600"
+            >
+              OK
+            </button>
+          </DialogContent>
+        </Dialog>
+        <Dialog open={showSavePaperDialog} onOpenChange={setShowSavePaperDialog}>
+          <DialogContent className="max-w-xl p-0 overflow-hidden">
+            <div className="bg-gradient-to-r from-indigo-800 to-purple-700 px-4 py-3 flex items-center justify-between">
+              <h2 className="text-xl font-bold text-white">Save Paper</h2>
+              <button type="button" onClick={() => setShowSavePaperDialog(false)} className="text-white/80 hover:text-white">
+                <X className="w-5 h-5" />
+              </button>
+            </div>
+            <div className="p-5 space-y-4">
+              <div>
+                <label className="block text-sm font-semibold text-gray-800 mb-1">Paper Name <span className="text-red-500">*</span></label>
+                <input type="text" value={paperName} onChange={(e) => setPaperName(e.target.value)} className="w-full border border-gray-300 rounded px-3 py-2 text-sm" />
+              </div>
+              <div>
+                <label className="block text-sm font-semibold text-gray-800 mb-1">Paper Category <span className="text-red-500">*</span></label>
+                <input type="text" value={paperCategory} onChange={(e) => setPaperCategory(e.target.value)} placeholder="Like Monthly Exams, Daily Test System etc." className="w-full border border-gray-300 rounded px-3 py-2 text-sm" />
+              </div>
+              <div>
+                <label className="block text-sm font-semibold text-gray-800 mb-1">Time Allowed <span className="text-red-500">*</span></label>
+                <input type="text" value={timeAllowed} onChange={(e) => setTimeAllowed(e.target.value)} className="w-full border border-gray-300 rounded px-3 py-2 text-sm" />
+              </div>
+              <div className="grid grid-cols-2 gap-4">
+                <div>
+                  <label className="block text-sm font-semibold text-gray-800 mb-1">Paper Date <span className="text-red-500">*</span></label>
+                  <input type="text" value={paperDate} onChange={(e) => setPaperDate(e.target.value)} className="w-full border border-gray-300 rounded px-3 py-2 text-sm" />
+                </div>
+                <div>
+                  <label className="block text-sm font-semibold text-gray-800 mb-1">Total Marks <span className="text-red-500">*</span></label>
+                  <input type="text" value={totalMarks} onChange={(e) => setTotalMarks(e.target.value)} className="w-full border border-gray-300 rounded px-3 py-2 text-sm text-center" />
+                </div>
+              </div>
+              <div className="flex justify-end pt-2">
+                <button type="button" onClick={handleSavePaper} className="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-2 rounded shadow-sm">
+                  + SAVE PAPER
+                </button>
+              </div>
+            </div>
+          </DialogContent>
+        </Dialog>
         <div className="px-4 md:px-6 py-3 flex items-center justify-between">
           <div className="flex items-center gap-3">
             <button onClick={() => setSidebarOpen(!sidebarOpen)} className="text-primary-foreground">
@@ -789,20 +1145,28 @@ const TeacherGeneratePaper = () => {
               {selectedBoard && selectedLevel && selectedSubject
                 ? "Select Chapters"
                 : selectedBoard && selectedLevel
-                ? "Select Subject"
-                : selectedBoard
-                ? "Select Class"
-                : "Select Syllabus"}
+                  ? "Select Subject"
+                  : selectedBoard
+                    ? "Select Class"
+                    : "Select Syllabus"}
             </h2>
             <button
               type="button"
               onClick={() => {
                 if (showQuestionSelection) setShowQuestionSelection(false);
                 else if (showPaperWorkspace) setShowPaperWorkspace(false);
-                else if (selectedSubject) setSelectedSubject(null);
-                else if (selectedLevel) setSelectedLevel(null);
-                else if (selectedBoard) setSelectedBoard(null);
-                else window.location.href = `${basePath}/dashboard`;
+                else if (selectedSubject) {
+                  setSelectedSubject(null);
+                  setSelectedChapters([]);
+                } else if (selectedLevel) {
+                  setSelectedLevel(null);
+                  setSelectedChapters([]);
+                } else if (selectedBoard) {
+                  setSelectedBoard(null);
+                  setSelectedChapters([]);
+                } else {
+                  window.location.href = `${basePath}/dashboard`;
+                }
               }}
               className="inline-flex items-center gap-1 rounded-lg bg-card border border-border px-4 py-2 text-sm font-semibold text-foreground hover:bg-secondary"
             >
@@ -814,7 +1178,12 @@ const TeacherGeneratePaper = () => {
           {!selectedBoard ? (
             <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-5">
               {boardCards.map((board) => (
-                <button key={board.name} type="button" onClick={() => setSelectedBoard(board.name)} className="group relative overflow-hidden rounded-2xl border border-primary/20 bg-gradient-to-br from-card via-card to-secondary/60 p-6 text-center min-h-[200px] flex flex-col items-center justify-center shadow-[0_8px_24px_-14px_hsl(var(--primary)/0.45)] hover:-translate-y-1 hover:shadow-[0_18px_36px_-16px_hsl(var(--primary)/0.6)] hover:border-primary/40 transition-all duration-300">
+                <button key={board.name} type="button" onClick={() => {
+                  setSelectedBoard(board.name);
+                  setSelectedLevel(null);
+                  setSelectedSubject(null);
+                  setSelectedChapters([]);
+                }} className="group relative overflow-hidden rounded-2xl border border-primary/20 bg-gradient-to-br from-card via-card to-secondary/60 p-6 text-center min-h-[200px] flex flex-col items-center justify-center shadow-[0_8px_24px_-14px_hsl(var(--primary)/0.45)] hover:-translate-y-1 hover:shadow-[0_18px_36px_-16px_hsl(var(--primary)/0.6)] hover:border-primary/40 transition-all duration-300">
                   <div className={`pointer-events-none absolute inset-x-0 top-0 h-1.5 bg-gradient-to-r ${board.gradient} opacity-70`} />
                   <div className={`pointer-events-none absolute inset-x-0 bottom-0 h-1.5 bg-gradient-to-r ${board.gradient} opacity-55`} />
                   <div className={`pointer-events-none absolute -left-8 -bottom-10 h-28 w-28 rounded-full bg-gradient-to-br ${board.gradient} opacity-20 blur-2xl transition-opacity duration-300 group-hover:opacity-30`} />
@@ -828,7 +1197,11 @@ const TeacherGeneratePaper = () => {
           ) : selectedBoard && !selectedLevel ? (
             <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4">
               {(boardClassMap[selectedBoard] || []).map((card) => (
-                <button key={card.title} type="button" onClick={() => setSelectedLevel(card.title)} className="group relative overflow-hidden rounded-2xl border border-primary/20 bg-gradient-to-br from-card to-secondary/50 px-5 py-6 text-center min-h-[108px] flex flex-col items-center justify-center shadow-[0_8px_20px_-14px_hsl(var(--primary)/0.55)] hover:-translate-y-1 hover:shadow-[0_16px_30px_-16px_hsl(var(--primary)/0.65)] hover:border-primary/40 transition-all duration-300">
+                <button key={card.title} type="button" onClick={() => {
+                  setSelectedLevel(card.title);
+                  setSelectedSubject(null);
+                  setSelectedChapters([]);
+                }} className="group relative overflow-hidden rounded-2xl border border-primary/20 bg-gradient-to-br from-card to-secondary/50 px-5 py-6 text-center min-h-[108px] flex flex-col items-center justify-center shadow-[0_8px_20px_-14px_hsl(var(--primary)/0.55)] hover:-translate-y-1 hover:shadow-[0_16px_30px_-16px_hsl(var(--primary)/0.65)] hover:border-primary/40 transition-all duration-300">
                   <div className={`pointer-events-none absolute inset-x-0 top-0 h-1.5 bg-gradient-to-r ${card.gradient} opacity-75`} />
                   <div className={`pointer-events-none absolute inset-x-0 bottom-0 h-1.5 bg-gradient-to-r ${card.gradient} opacity-60`} />
                   <div className={`pointer-events-none absolute -left-8 -bottom-10 h-24 w-24 rounded-full bg-gradient-to-br ${card.gradient} opacity-20 blur-2xl transition-opacity duration-300 group-hover:opacity-30`} />
@@ -847,7 +1220,10 @@ const TeacherGeneratePaper = () => {
                     <button
                       key={s.title}
                       type="button"
-                      onClick={() => setSelectedSubject(s.title)}
+                      onClick={() => {
+                        setSelectedSubject(s.title);
+                        setSelectedChapters([]);
+                      }}
                       className="flex items-center gap-4 rounded-xl bg-card border border-border p-4 hover:shadow-md hover:bg-secondary/50 transition-all"
                     >
                       <img src={s.image} alt={s.title} className="w-16 h-16 object-contain shrink-0" />
@@ -897,8 +1273,17 @@ const TeacherGeneratePaper = () => {
                                 </>
                               ) : (
                                 <>
-                                  <p className="text-sm text-gray-800">{idx + 1} . {editedQuestions[q.id]?.text ?? q.text}</p>
-                                  <p className="text-sm text-gray-800 text-right" dir="rtl">{idx + 1} ۔ {editedQuestions[q.id]?.urdu ?? q.urdu}</p>
+                                  {(() => {
+                                    const qText = editedQuestions[q.id]?.text ?? q.text;
+                                    const qUrdu = editedQuestions[q.id]?.urdu ?? q.urdu;
+                                    const { englishStem, urduStem } = getQuestionStems(qText, qUrdu);
+                                    return (
+                                      <>
+                                        <p className="text-sm text-gray-800">{idx + 1}. {englishStem}</p>
+                                        <p className="text-sm text-gray-800 text-right" dir="rtl">{idx + 1}۔ {urduStem}</p>
+                                      </>
+                                    );
+                                  })()}
                                 </>
                               )}
                             </div>
@@ -926,7 +1311,7 @@ const TeacherGeneratePaper = () => {
               <div className="bg-card border border-border rounded-xl p-4 sm:p-5">
                 <h3 className="text-base sm:text-lg font-bold text-foreground mb-3">{selectedSubject} - {selectedLevel}</h3>
                 <p className="text-[11px] sm:text-xs text-muted-foreground mb-5">Select Chapter(s)</p>
-                
+
                 <div className="mb-5">
                   <label className="flex items-center gap-3 cursor-pointer">
                     <input
@@ -944,7 +1329,7 @@ const TeacherGeneratePaper = () => {
                     <span className="text-[11px] sm:text-xs font-bold text-foreground uppercase tracking-wide">Select All Chapters</span>
                   </label>
                 </div>
-                
+
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
                   {chapterGroups.map((group, groupIdx) => (
                     <div key={groupIdx} className="bg-background border border-border rounded-lg p-4">
@@ -963,7 +1348,7 @@ const TeacherGeneratePaper = () => {
                         />
                         <span className="text-[11px] sm:text-xs font-bold text-foreground">{group.name}</span>
                       </label>
-                      
+
                       <div className="space-y-2 ml-7">
                         {group.chapters.map((chapter, chIdx) => (
                           <label key={chIdx} className="flex items-center gap-2.5 cursor-pointer">
@@ -974,7 +1359,7 @@ const TeacherGeneratePaper = () => {
                                 if (e.target.checked) {
                                   setSelectedChapters([...selectedChapters, chapter]);
                                 } else {
-                                  setSelectedChapters(selectedChapters.filter(ch => ch !== chapter));
+                                  setSelectedChapters(selectedChapters.filter(ch => ch !== chapter && ch !== group.name));
                                 }
                               }}
                               className="h-3.5 w-3.5 accent-primary rounded"
@@ -993,7 +1378,7 @@ const TeacherGeneratePaper = () => {
                       .filter((q) => selectedQuestions.includes(q.id))
                       .map((q) => (
                         <div key={q.id} className="text-sm text-foreground">
-                          {q.id}. {q.text}
+                          {q.id}. {stripLeadingNumber(q.text)}
                         </div>
                       ))}
                   </div>
@@ -1033,14 +1418,14 @@ const TeacherGeneratePaper = () => {
                   <label className="block text-sm font-semibold text-foreground mb-2">SELECT QUESTION TYPE</label>
                   <select value={questionType} onChange={(e) => setQuestionType(e.target.value)} className="w-full border border-border rounded-lg bg-card text-foreground px-3 py-2 text-sm">
                     <option value="">Select question type</option>
-                    <option value="mcq">Multiple Option (متعدد انتخابی)</option>
-                    <option value="short">Short Questions (مختصر سوالات)</option>
-                    <option value="long">Long Questions (تفصیلی سوالات)</option>
+                    {questionTypeOptions.map((option) => (
+                      <option key={option.value} value={option.value}>{option.label}</option>
+                    ))}
                   </select>
                 </div>
                 <div>
                   <label className="block text-sm font-semibold text-foreground mb-2">DUAL MEDIUM</label>
-                  <select value="" onChange={() => {}} className="w-full border border-border rounded-lg bg-card text-foreground px-3 py-2 text-sm">
+                  <select value="" onChange={() => { }} className="w-full border border-border rounded-lg bg-card text-foreground px-3 py-2 text-sm">
                     <option>English/Urdu</option>
                   </select>
                 </div>

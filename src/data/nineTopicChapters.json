@@ -1,0 +1,1729 @@
+{
+  "Physics-9TH-PTB": [
+    {
+      "name": "Physical Quantities and Measurements",
+      "chapters": [
+        "1.1 Physical and Non-Physical Quantities",
+        "1.2 Base and Derived Physical Quantities",
+        "1.3 International System of Units",
+        "1.4 Scientific Notation",
+        "1.5 Length Measuring Instruments",
+        "1.6 Mass Measuring Instruments",
+        "1.7 Time Measuring Instruments",
+        "1.8 Volume Measuring Instruments",
+        "1.9 Errors in Measurements",
+        "1.10 Uncertainity in a Measurement",
+        "1.11 Significant Figures",
+        "1.12 Precision and Accuracy",
+        "1.13 Rounding off the digits",
+        "Exercise"
+      ]
+    },
+    {
+      "name": "Kinematics",
+      "chapters": [
+        "2.1 Scalars and Vectors",
+        "2.2 Rest and Motion",
+        "2.3 Types of Motion",
+        "2.4 Distance and Displacement",
+        "2.5 Speed and Velocity",
+        "2.6 Acceleration",
+        "2.7 Graphical Analysis of Motion",
+        "2.8 Gradient of a Distance-Time Graph",
+        "2.9 Speed-Time Graph",
+        "2.10 Gradient of a Speed-Time Graph",
+        "2.11 Area Under Speed-Time Graph",
+        "2.12 Solving Problems for Motion Under Gravity",
+        "2.13 Free Fall Acceleration",
+        "Exercise"
+      ]
+    },
+    {
+      "name": "Dynamics",
+      "chapters": [
+        "3.1 Concept of Force",
+        "3.2 Fundamental Forces",
+        "3.3 Forces in a Free- Body Diagram",
+        "3.4 Newton’s Laws of Motion",
+        "3.5 Limitations of Newton’s Laws of Motion",
+        "3.6 Mass and Weight",
+        "3.7 Mechanical and Electronic Balances",
+        "3.8 Friction",
+        "3.9 Momentum and Impulse",
+        "3.10 Principle of Conservation of Momentum"
+      ]
+    },
+    {
+      "name": "Turning Effects of Forces",
+      "chapters": [
+        "4.1 Like and Unlike Parallel Forces",
+        "4.2 Addition of Forces",
+        "4.3 Turning Effect of a Force",
+        "4.4 Resolution of Vectors",
+        "4.5 Determination of a Force from its Prependicular Components",
+        "4.6 Principle of Moments",
+        "4.7 Centre of Gravity and Centre of Mass",
+        "4.8 Equilibrium",
+        "4.9 Conditions of Equilibrium",
+        "4.10 States of Equilibrium",
+        "4.11 Improvement of Stability",
+        "4.12 Application of Stability in Real Life",
+        "4.13 Centripetal Force",
+        "4.14 Constructed Response"
+      ]
+    },
+    {
+      "name": "Work, Energy and Power",
+      "chapters": [
+        "5.1 Work",
+        "5.2 Energy",
+        "5.3 Conservation of Energy",
+        "5.4 Sources of Energy",
+        "5.5 Renewable and Non-Renewable Sources",
+        "5.6 The Advantages and Disadvantages of methods of Energy production",
+        "5.7 Power",
+        "5.8 Efficiency",
+        "Constructed Response"
+      ]
+    },
+    {
+      "name": "Mechanical Properties of Matter",
+      "chapters": [
+        "6.1 Deformation of solids",
+        "6.2 Hooke’s law",
+        "6.3 Density",
+        "6.4 Pressure",
+        "6.5 Pressure in Liquids",
+        "6.6 Atmospheric Pressure",
+        "6.7 Measurement of Atmospheric Pressure",
+        "6.8 Measurement of Pressure by Manometer",
+        "6.9 Pascal’s Law",
+        "Constructed Response"
+      ]
+    },
+    {
+      "name": "Thermal Properties of Matter",
+      "chapters": [
+        "7.1 Kinetic Molecular Theory of Matter",
+        "7.2 Temperature and Heat",
+        "7.3 Thermometers",
+        "7.4 Sensitivity, Range and Linearity of Thermometers",
+        "7.5 Structure of A Liquid-in-Glass Thermometer",
+        "Constructed Response"
+      ]
+    },
+    {
+      "name": "Magnetism",
+      "chapters": [
+        "8.1 Magnetic Materials",
+        "8.2 Properties of Magnets",
+        "8.3 Induced Magnetism",
+        "8.4 Temporary and Permanent Magnets",
+        "8.5 Magnetic Fields",
+        "8.6 Uses of Permanent Magnets",
+        "8.7 Electromagnets",
+        "8.8 Domain Theory of Magnetism",
+        "8.9 Magnetization and Demagnetization",
+        "8.10 Applications of Magnets in Recording Technology",
+        "8.11 Soft Iron as Magnetic Shield",
+        "Exercise",
+        "Constructed Response"
+      ]
+    },
+    {
+      "name": "Nature of Science",
+      "chapters": [
+        "9.1 Scope of Physics",
+        "9.2 Branches of Physics",
+        "9.3 Interdisciplinary Nature of Physics",
+        "9.4 Interdisciplinary Research",
+        "9.5 Scientific Method",
+        "9.6 Scientific Base of Technology and Engineering",
+        "Exercise Constructed Response"
+      ]
+    }
+  ],
+  "اسلامیات لازمی-9TH-PTB": [
+    {
+      "name": "باب اول: قرآن مجید اور حدیث نبوی خاتم النبین ﷺ",
+      "chapters": [
+        "1.1 قرآن مجید کی تدوین اور اس کی حفاظت",
+        "1.2 حفاظت و تدوین حدیث (دوراول)",
+        "1.3 احادیثِ نبویہ (خاتم النبین ﷺ)"
+      ]
+    },
+    {
+      "name": "باب دوم: ایمانیات و عبادات",
+      "chapters": [
+        "2.1 عقیدہ توحید",
+        "2.2 عقیدہ رسالت",
+        "2.3 ملائکہ (فرشتے)",
+        "2.4 کُتب سماویہ (آسمانی کتابیں)",
+        "2.5 عقیدہ آخرت",
+        "2.6 نماز",
+        "2.7 روزہ",
+        "2.8 زکوۃ",
+        "2.9 حج اور قربانی"
+      ]
+    },
+    {
+      "name": "باب سوم: سیرت نبوی خاتم النبین ﷺ",
+      "chapters": [
+        "3.1 فتح مکہ",
+        "3.2 غزوہ حنین",
+        "3.3 عامُ الوفود (9 ہجری)",
+        "3.4 غزوہ تبوک",
+        "3.5 حجۃ الوداع",
+        "3.6 وصال نبوی (خاتم النبینﷺ)",
+        "3.7 حضرت محمد مصطفی خاتم النبین ﷺ کا بچپن اور جوانی",
+        "3.8 حضرت محمد مصطفی ﷺ کا ذوق عبادت",
+        "3.9 حضرت محمد مصطفی ﷺ کی سخاوت و ایثار",
+        "3.10 صلہ رحمی",
+        "3.11 خواتین کے ساتھ حسن سلوک",
+        "3.12 انداز تربیت"
+      ]
+    },
+    {
+      "name": "باب چہارم: اخلاق و آداب",
+      "chapters": [
+        "4.1 شکروقناعت",
+        "4.2 امانت و دیانت",
+        "4.3 اخلاص و تقوی",
+        "4.4 پردہ پوشی",
+        "4.5 تکبر",
+        "4.6 حسد",
+        "4.7 جھوٹ",
+        "4.8 غیبت اور بہتان",
+        "4.9 جادو،فال اور توہم پرستی"
+      ]
+    },
+    {
+      "name": "باب پنجم: حسن معاملات و معاشرت",
+      "chapters": [
+        "5.1 قسم کے احکام و مسائل",
+        "5.2 گواہی کے احکام و مسائل",
+        "5.3 حقوق العباد (ہمسایوں کے حقوق)",
+        "5.4 سود کی حرمت",
+        "5.5 اسلامی ریاست",
+        "5.6 جہاد فی سبیل اللہ"
+      ]
+    },
+    {
+      "name": "باب ششم: ہدایت کے سرچشمے اور مشاہیر اسلام",
+      "chapters": [
+        "6.1 حضرت امام زین العابدین رحمۃ اللہ علیہ",
+        "6.2 حضرت امام زید بن علی رحمۃ اللہ علیہ",
+        "6.3 حضرت ابو موسی اشعری رضی اللہ تعالیٰ عنہ",
+        "6.4 حضرت عبداللہ بن عمروبن العاص رضی اللہ تعالیٰ عنھما",
+        "6.5 حضرت عمرو بن امیہ رضی اللہ تعالیٰ عنہ",
+        "6.6 حضرت عمرو بن العاص رضی اللہ تعالیٰ عنہ",
+        "6.7 حضرت جابر بن عبداللہ رضی اللہ تعالیٰ عنہ",
+        "6.8 حضرت انس بن مالک رضی اللہ تعالیٰ عنہ",
+        "6.9 صحابیات رضی اللہ تعالی عنھن",
+        "6.10 صوفیہ کرام رحمۃ اللہ علیہھم",
+        "6.11 علماومفکرین رحمۃ اللہ علیہھم"
+      ]
+    },
+    {
+      "name": "باب ہفتم: اسلامی تعلیمات اور عصر حاضر کے تقاضے",
+      "chapters": [
+        "7.1 خود اعتمادی و خود انحصاری",
+        "7.2 جسمانی و ذہنی صحت اور جسمانی ریاضت",
+        "7.3 اسلام میں مستقبل کی منصوبہ بندی کی اہمیت 7.4 اسلامی تہذیب کے امتیازات"
+      ]
+    }
+  ],
+  "English-9TH-PTB": [
+    {
+      "name": "UNIT 1: The Saviour of Mankind",
+      "chapters": [
+        "The Saviour of Mankind"
+      ]
+    },
+    {
+      "name": "UNIT 2: Patriotism",
+      "chapters": [
+        "Patriotism"
+      ]
+    },
+    {
+      "name": "UNIT 3: Daffodils",
+      "chapters": [
+        "Daffodils"
+      ]
+    },
+    {
+      "name": "UNIT 4: Hazrat Asma (رضي الله عنها)",
+      "chapters": [
+        "Hazrat Asma (رضي الله عنها)"
+      ]
+    },
+    {
+      "name": "UNIT 5: Women Empowerment through Entrepreneurship",
+      "chapters": [
+        "Women Empowerment through Entrepreneurship"
+      ]
+    },
+    {
+      "name": "UNIT 6: The Value of Time",
+      "chapters": [
+        "The Value of Time"
+      ]
+    },
+    {
+      "name": "UNIT 7: If",
+      "chapters": [
+        "If"
+      ]
+    },
+    {
+      "name": "UNIT 8: Globalisation's Impact on Culture and Economy",
+      "chapters": [
+        "Globalisation's Impact on Culture and Economy"
+      ]
+    },
+    {
+      "name": "UNIT 9: Quality Education A Key to Success",
+      "chapters": [
+        "Quality Education A Key to Success"
+      ]
+    },
+    {
+      "name": "UNIT 10: The Silent Predator and the Majestic Prey-Snow Leopard and Markhor",
+      "chapters": [
+        "Wildlife Vignettes Fascinating Nature"
+      ]
+    },
+    {
+      "name": "UNIT 11: The Dear Departed (One-Act Play) Stanley Houghton",
+      "chapters": [
+        "The Dear Departed (One-Act Play) Stanley Houghton"
+      ]
+    },
+    {
+      "name": "English B",
+      "chapters": [
+        "1 Letters",
+        "2 Stories",
+        "3 Dialogues",
+        "4 Comprehension Paragraphs",
+        "5 Idioms"
+      ]
+    },
+    {
+      "name": "TENSES",
+      "chapters": [
+        "1 Use of 'is', 'am', 'are' and 'was', were",
+        "2 Use of 'has' and 'have'",
+        "3 Use of 'had'",
+        "4 Present Indefinite Tense",
+        "5 Present Continuous Tense",
+        "6 Present Perfect Tense",
+        "7 Present Perfect Continuous Tense",
+        "8 Past Indefinite Tense",
+        "9 Past Continuous Tense",
+        "10 Past Perfect Tense",
+        "11 Past Perfect Continuous Tense",
+        "12 Future Indefinite Tense",
+        "13 Future Continuous Tense",
+        "14 Future Perfect Tense",
+        "15 Future Perfect Continuous Tense"
+      ]
+    },
+    {
+      "name": "Review Exercises",
+      "chapters": [
+        "Review-01 Review-02"
+      ]
+    }
+  ],
+  "اردو لازمی-9TH-PTB": [
+    {
+      "name": "نثر نمبر1: اخلاق حسنہ",
+      "chapters": [
+        "اخلاق حسنہ"
+      ]
+    },
+    {
+      "name": "نثر نمبر 2: اپنی مدد آپ",
+      "chapters": [
+        "اپنی مدد آپ"
+      ]
+    },
+    {
+      "name": "نثر نمبر 3: کلیم اور مرزا ظاہر دار بیگ",
+      "chapters": [
+        "کلیم اور مرزا ظاہر دار بیگ"
+      ]
+    },
+    {
+      "name": "نثر نمبر 4: نام دیو-مالی",
+      "chapters": [
+        "نام دیو-مالی"
+      ]
+    },
+    {
+      "name": "نثر نمبر 5: آرام و سکون",
+      "chapters": [
+        "آرام و سکون"
+      ]
+    },
+    {
+      "name": "نثر نمبر 6: کتبہ",
+      "chapters": [
+        "کتبہ"
+      ]
+    },
+    {
+      "name": "نثر نمبر 7: ابتدائی حساب",
+      "chapters": [
+        "ابتدائی حساب"
+      ]
+    },
+    {
+      "name": "نثر نمبر 8: لڑی میں پروے ہوئے منظر",
+      "chapters": [
+        "لڑی میں پروے ہوئے منظر"
+      ]
+    },
+    {
+      "name": "نثر نمبر 9: بھیڑیا",
+      "chapters": [
+        "بھیڑیا"
+      ]
+    },
+    {
+      "name": "نثر نمبر 10: حوصلہ نہ ہارو آگے بڑھو منزل اب کے دور نہیں",
+      "chapters": [
+        "حوصلہ نہ ہارو آگے بڑھو منزل اب کے دور نہیں"
+      ]
+    },
+    {
+      "name": "نظم نمبر 1: حمد",
+      "chapters": [
+        "حمد"
+      ]
+    },
+    {
+      "name": "نظم نمبر 2: نعت",
+      "chapters": [
+        "نعت"
+      ]
+    },
+    {
+      "name": "نظم نمبر 3: محنت کی برکت",
+      "chapters": [
+        "محنت کی برکت"
+      ]
+    },
+    {
+      "name": "نظم نمبر 4: جاوید کے نام",
+      "chapters": [
+        "جاوید کے نام"
+      ]
+    },
+    {
+      "name": "نظم نمبر 5: پیام لطیف",
+      "chapters": [
+        "پیام لطیف"
+      ]
+    },
+    {
+      "name": "نظم نمبر 6: کرکٹ اور مشاعرہ",
+      "chapters": [
+        "کرکٹ اور مشاعرہ"
+      ]
+    },
+    {
+      "name": "غزل نمبر 1: فقیرا نہ آئے صدا کرچل",
+      "chapters": [
+        "فقیرا نہ آئے صدا کر چلے"
+      ]
+    },
+    {
+      "name": "غزل نمبر 2: سن تو سہی جہاں میں ہے تیرا افسانہ کیا",
+      "chapters": [
+        "سن تو سہی جہاں میں ہے تیرا افسانہ کیا"
+      ]
+    },
+    {
+      "name": "غزل نمبر 3: غم ہے یا خوشی ہے تو",
+      "chapters": [
+        "غم ہے یا خوشی ہے تو"
+      ]
+    },
+    {
+      "name": "غزل نمبر 4: کاش طوفاں میں سفینے کو اتارا ہو",
+      "chapters": [
+        "کاش طوفاں میں سفینے کو اتارا ہو",
+        "اُردو (ب)",
+        "واحد / جمع",
+        "مذکر / مونث",
+        "الفاظ / متضاد",
+        "الفاظ / مترادف",
+        "غلط محاورات / جملوں کی درستگی",
+        "محاورات کی تکمیل"
+      ]
+    },
+    {
+      "name": "درخواستیں",
+      "chapters": [
+        "کہانیاں مکالمے"
+      ]
+    }
+  ],
+  "Biology-9TH-PTB": [
+    {
+      "name": "CHAP 1: The Science of Biology",
+      "chapters": [
+        "1.1 Biology and its Branches",
+        "1.2 Relation of Biology With Other Sciences",
+        "1.3 Careers in Biology",
+        "1.4 Quranic Instructions to Reveal the Study of Life",
+        "1.5 Science as a Collaborative Field",
+        "1.6 Scientific Method",
+        "1.7 Theory and Law/Principle",
+        "1.8 Malaria-An Example of Biological Method",
+        "Exercise"
+      ]
+    },
+    {
+      "name": "CHAP 2: Biodiversity",
+      "chapters": [
+        "2.1 Biodiversity",
+        "2.2 Classification",
+        "2.3 Taxonomic Ranks",
+        "2.4 History of Classification",
+        "2.5 Domains of Living Organisms",
+        "2.6 Classification of Domain Eukarya",
+        "2.7 Status of Virus in Classification",
+        "2.8 Binomial Nomenclature"
+      ]
+    },
+    {
+      "name": "CHAP 3: The Cell",
+      "chapters": [
+        "3.1 Cell",
+        "3.2 Structure of Cell",
+        "3.2.1 Cell Wall",
+        "3.2.2 Cell Membrane",
+        "3.2.3 Cytoplasm",
+        "3.2.4 Nucleus",
+        "3.2.5 Cytoskeleton",
+        "3.2.6 Ribosome",
+        "3.2.7 Endoplasmic Reticulum",
+        "3.2.8 Golgi Apparatus",
+        "3.2.9 Lysosomes",
+        "3.2.10 Mitochondria",
+        "3.2.11 Plasitids",
+        "3.2.12 Vacuoles",
+        "3.2.13 Centrioles",
+        "3.3 STRUCTURAL ADVANTAGES OF PLANT AND ANIMAL CELLS",
+        "3.4 CELL SPECIALIZATION",
+        "5.5 Stem Cells"
+      ]
+    },
+    {
+      "name": "CHAP 4: Cell Cycle",
+      "chapters": [
+        "4.1 Cell Cycle",
+        "4.2 Mitosis",
+        "4.2.1 Phases Of Mitosis",
+        "4.2.2 Significance Of Mitosis",
+        "4.3 Meiosis",
+        "4.3.1 Phases Of Meiosis",
+        "4.3.2 Significance Of Meiosis",
+        "4.4 Comparison between Meiosis and Mitosis"
+      ]
+    },
+    {
+      "name": "CHAP 5: Tissues, Organs, And Organ System",
+      "chapters": [
+        "5.1 Levels of Organization",
+        "5.2 Organs and Organ system in Plants",
+        "5.3 Organs and Organ system in Humans",
+        "5.4 Homeostasis"
+      ]
+    },
+    {
+      "name": "CHAP 6: Biomolecules",
+      "chapters": [
+        "6.1 Biomolecules",
+        "6.2 Carbohydrates",
+        "6.3 Proteins",
+        "6.4 Lipids",
+        "6.5 Nucleic Acids",
+        "6.6 The Working of DNA and RNA"
+      ]
+    },
+    {
+      "name": "CHAP 7: Enzymes",
+      "chapters": [
+        "7.1 Metabolism",
+        "7.2 Enzymes",
+        "7.3 Mechanism of Enzyme Action",
+        "7.4 Factors that Affect the Activity of Enzymes",
+        "7.5 Enzyme Inhibition"
+      ]
+    },
+    {
+      "name": "CHAP 8: Bioenergetics",
+      "chapters": [
+        "8.1 ATP: The Cell's Energy Currency",
+        "8.2 Photosynthesis",
+        "8.3 Cellular Respiration",
+        "Exercise"
+      ]
+    },
+    {
+      "name": "CHAP 9: Plant Physiology",
+      "chapters": [
+        "9.1 Nutrition in Plants",
+        "9.2 Transport in Plants",
+        "9.3 Transpiration",
+        "9.4 Transport of Water and salts in Plants",
+        "9.5 Translocation of Food in Plants",
+        "9.6 Gaseous Exchange in Plants",
+        "9.7 Mechanisms for Excretion in Plants",
+        "9.8 Osmotic Adjustments in Plants",
+        "Exercise"
+      ]
+    },
+    {
+      "name": "CHAP 10: Reproduction In Plants",
+      "chapters": [
+        "10.1 Types of Asexual Reproduction",
+        "10.2 Artificial Propagation",
+        "10.3 Sexual Reproduction in Plants",
+        "Exercise"
+      ]
+    },
+    {
+      "name": "CHAP 11: Biostatistics",
+      "chapters": [
+        "11.1 Introduction of Biostatistics",
+        "11.2 Mean, Median, and Mode",
+        "11.3 Bar Chart Exercise"
+      ]
+    }
+  ],
+  "Chemistry-9TH-PTB": [
+    {
+      "name": "CHAP 1: States of Matter and Phase Changes",
+      "chapters": [
+        "1.1 What is Chemistry?",
+        "1.2 States of Matter",
+        "1.3 Element, Compound and Mixture",
+        "1.6 Solution, Colloidal Solutionsand Suspension",
+        "1.4 Allotropic Forms of Substances",
+        "1.5 Differences between Elements, Compounds and Mixtures",
+        "1.7 Formation of Unsaturated and Saturated Solutions",
+        "1.8 Effect of Temperature on the Solubility of Solutes",
+        "1.9 Exercise"
+      ]
+    },
+    {
+      "name": "CHAP 2: Atomic Structure",
+      "chapters": [
+        "2.1 Structure of Atom",
+        "2.1.1 Discovery of Electrons",
+        "2.1.2 Discovery of Protons",
+        "2.1.3 Origin of Cathode and Anode Rays",
+        "2.1.4 Discovery of Neutron",
+        "2.2 Atomic Number and Mass Number",
+        "2.3 Isotopes and their Masses",
+        "2.3.1 Radioactive Isotopes",
+        "2.3.2 Applications of Radioactive Isotopes",
+        "2.3.3 Ionization of Atom By a Radioactive Source",
+        "2.4 Relative Atomic Mass",
+        "2.4.1 Calculation of Relative Atomic Mass From Isotopic Abundancec"
+      ]
+    },
+    {
+      "name": "CHAP 3: Chemical Bonding",
+      "chapters": [
+        "3.1: Why do atoms form chemical bonds?",
+        "3.2 Chemical Bond",
+        "3.2.1 Ionic Bond",
+        "3.2.2 Covalent Bond",
+        "3.2.3 Coordinate Covalent Bond",
+        "3.3 Metallic Bond",
+        "3.4 Electropositive Character of Metals",
+        "3.5 Electronegative character of Non-metals",
+        "3.6 Compare the properties of ionic and covalent compounds",
+        "3.7 Intermolecular Forces of Attraction",
+        "3.8 Nature of Bonding and Properties"
+      ]
+    },
+    {
+      "name": "CHAP 4: Stoichiometry",
+      "chapters": [
+        "4.1 Chemical formula",
+        "4.2 Empirical Formula",
+        "4.3 Chemical Formula of Binary lonic Compounds",
+        "4.4 Chemical Formula of Compounds",
+        "4.5 Deduce the molecular formula from the structural formula",
+        "4.6 Avogadro's Number",
+        "4.7 The Mole and Molar Mass",
+        "4.8 Chemical Equations and Chemical Reactions",
+        "4.9 Calculations Based on Chemical Equation",
+        "4.0 Introduction"
+      ]
+    },
+    {
+      "name": "CHAP 5: Energetics",
+      "chapters": [
+        "Introduction",
+        "5.1 System and Surounding",
+        "5.2 Enthalpy",
+        "5.3 Exothermic and Endothermic Reactions",
+        "5.4. Plow does a Reaction take place?",
+        "5.5 Aerobic and Anaerobic Respiration"
+      ]
+    },
+    {
+      "name": "CHAP 6: Equilibria",
+      "chapters": [
+        "6.1 Reversible and Irreversible Changes",
+        "6.2 Dynamic Equilibrium",
+        "6.3 Changes the Physical Conditions of a Chemical Reaction"
+      ]
+    },
+    {
+      "name": "CHAP 7: Acid Base Chemistry",
+      "chapters": [
+        "7.1 Acids.and Bases",
+        "7.2 DIFFERENT CONCEPTS OF ACIDS AND BASES",
+        "7.3 Bronsted ~ Lowry concepts of Acicis and Bases",
+        "7.4 Properties of Acids and Bases",
+        "7.5 Acid Rain and its Effects"
+      ]
+    },
+    {
+      "name": "CHAP 8: Periodic Table and Periodicity",
+      "chapters": [
+        "8.1 Modern Periodic Table",
+        "8.2 Salient Features of Modern Periodic Table",
+        "8.3 Similarities in the Chemical Properties of Elements in the Same Group",
+        "8.4 Variation of Periodic Properties in Periods and Groups",
+        "8.5 Metallic Character and Reactivity"
+      ]
+    },
+    {
+      "name": "CHAP 9: Group Properties and Elements",
+      "chapters": [
+        "9.1 Properties of Group 1 Elements",
+        "9.2 Properties of Group 17 Elements",
+        "9.3 Group Properties of Transition elements",
+        "9.4 Properties of Noble Gases",
+        "9.5 Physical Properties of Metals and Non-metals",
+        "Exercise"
+      ]
+    },
+    {
+      "name": "CHAP 10: Environmental Chemistry",
+      "chapters": [
+        "Introduction",
+        "10.1 Composition Of Atmosphere",
+        "10.2 Air Pollutants",
+        "10.3 Acid Rain",
+        "10.4 Global Warming (Greenhouse Effect)",
+        "10.5 Strategies to Reduce Environmental Issues",
+        "Exercise"
+      ]
+    },
+    {
+      "name": "CHAP 11: Hydrocarbons",
+      "chapters": [
+        "Introduction",
+        "11.1 Hyrocarbons",
+        "11.2 Alkanes",
+        "11.3 Preparation",
+        "11.4 Important Reactions",
+        "Exercise"
+      ]
+    },
+    {
+      "name": "CHAP 12: Empirical Data Collection and Analysis",
+      "chapters": [
+        "Introduction",
+        "12.1 SI Units in Chemistry",
+        "12.2 Tools and Techniques to Manage Accuracy and Precision",
+        "12.3 Accuracy and Precision"
+      ]
+    },
+    {
+      "name": "CHAP 13: Laboratory and Practical Skills",
+      "chapters": [
+        "Introduction",
+        "13.1 Chemical Hazards in the Laboratory",
+        "13.2 Hazard Signs",
+        "13.3 Personal Protective Equipment (PPE) in the Laboratory",
+        "13.4 Location of Fire Extinguisher",
+        "13.5 Emergency Situation in the Lab Exercise"
+      ]
+    }
+  ],
+  "Computer-9TH-PTB": [
+    {
+      "name": "UNIT 1: Introduction to Systems",
+      "chapters": [
+        "1.1 Theory of Systems",
+        "1.2 Types of Systems",
+        "1.3 System and Science",
+        "1.4 Computer as System",
+        "1.5 The Architecture of von Neumann Computers",
+        "1.6 Computing Systems",
+        "Exercise"
+      ]
+    },
+    {
+      "name": "UNIT 2: Number Systems",
+      "chapters": [
+        "2.1 Numbering Systems",
+        "2.2 Data Representation in Computing Systems",
+        "2.3 Storing Real Values in Computer Memory",
+        "2.4 Binary Arithmetic Operations",
+        "2.5 Common Text Encoding Schemes",
+        "2.6 Storing Images, Audio, and Video in Computers"
+      ]
+    },
+    {
+      "name": "UNIT 3: Digital Systems and Logic Design",
+      "chapters": [
+        "3.1 Basics of Digital Systems",
+        "3.1.1 What is an Analog Signal",
+        "3.1.2 Fundamentals of Digital Logic",
+        "3.2 Boolean Algebra and Logic Gates",
+        "3. 2.1 Boolean Functions and Expressions",
+        "3.2.2 Logic Gates and their Functions",
+        "3.3 Simplification of Boolean Functions",
+        "3.4. Creating Logic Diagrams",
+        "3.5. Application of Digital Logic",
+        "3.5.1 Half-adder and Full-adder Circuits",
+        "3.5.2 Karnaugh Map( K-Map)"
+      ]
+    },
+    {
+      "name": "UNIT 4: System Troubleshooting",
+      "chapters": [
+        "4.1 System Troubleshooting",
+        "4.1.1 Systematic Process of Troubleshooting",
+        "4.1.2 Importance of Troubleshooting in Computing Systems",
+        "4.2 Troubleshooting Strategies",
+        "4.2.1 Basic Software-Related Issues",
+        "4.2.2 Basic Hardware-Related Issues",
+        "4.2.3 Hardware Diagnosis and Maintenance",
+        "4.2.4 Security and Maintenance",
+        "4.2.5 Data Management and Backups",
+        "4.2.6 Using Resources for Troubleshooting",
+        "Exercise"
+      ]
+    },
+    {
+      "name": "UNIT 5: Software System",
+      "chapters": [
+        "5.1 Software",
+        "5.2 Introduction to System Software",
+        "5.2.1 Operating System",
+        "5.2.2 Utility Programs",
+        "5.2.3 Device Drivers",
+        "5.3 Application Software",
+        "5.3.1 Commonly used application software"
+      ]
+    },
+    {
+      "name": "UNIT 6: Introduction to Computer Networks",
+      "chapters": [
+        "6.1 Network as a System",
+        "6.2 Fundamental Concepts in Data Communication",
+        "6.3 Networking Devices",
+        "6.4 Network Topologies",
+        "6.5 Transmission Modes",
+        "6.6 The OSI Networking Model",
+        "6.7 Ipv4 and Ipv6",
+        "6.8 Protocols and Network Services",
+        "6.9 Network Security",
+        "6.10 Types of Networks",
+        "6.11 Real-World Applications of Computer Networks",
+        "6.12. Standard Protocols in TCP/IP Communications",
+        "6.13 Network Security Methods",
+        "6.14 Exercise Mcqs"
+      ]
+    },
+    {
+      "name": "UNIT 7: Computational Thinking",
+      "chapters": [
+        "7.0 Introduction",
+        "7.1 Definition.of Computational Thinking",
+        "7.2 Principles of Computational Thinking",
+        "7.3 Algorithm Design Methods",
+        "7.4 Algorithmic Activities",
+        "7.5 Dry Run",
+        "7.6 Introduction to LARP",
+        "7.7 Error ldentification and Debugging",
+        "7.8 Exercise Mcqs"
+      ]
+    },
+    {
+      "name": "UNIT 8: Web Development with HTML, CSS and JavaScript",
+      "chapters": [
+        "8.1 Web Development",
+        "8.2 Basic Components of Web Development",
+        "8.3 Getting Started with HTML",
+        "8.4 HTML Basic Structure",
+        "8.5 Creating Content with HTML",
+        "8.6 Styling with CSS",
+        "8.7 Introduction to JavaScript",
+        "8.8 Developing and Debugging",
+        "8.9 Exercise Mcqs"
+      ]
+    },
+    {
+      "name": "UNIT 9: Data Science and Data Gathering",
+      "chapters": [
+        "9.1 Data",
+        "9.2 Data Types",
+        "9.3 Organising and Analysing Data",
+        "9.4 Data Types",
+        "9.5 Data Storage Techniques",
+        "9.6 Data Visualization",
+        "9.7 Data Pre-Processing and Analysis",
+        "9.8 Collaborative Tools and Cloud Storage",
+        "9.9 Introduction to Data Science",
+        "9.10 Big Data and its Applications"
+      ]
+    },
+    {
+      "name": "UNIT 10: Emerging Technologies in Computer Science",
+      "chapters": [
+        "10.1 Introduction to Artificial Intelligence (Al)",
+        "10.2 Al Algorithms and Techniques",
+        "10.3 Introduction to Internet of Things (loT)",
+        "10.4 Implications and Future of Emerging Technologies"
+      ]
+    },
+    {
+      "name": "UNIT 11: Ethical, Social, and Legal Concerns in Computer Usage",
+      "chapters": [
+        "11.1 Responsible Computer Usage",
+        "11.2 Safe and Secure Operation of Digital Platforms",
+        "11.3 Best Practices in Online Behavior",
+        "11.4 Legal and Ethical Frameworks",
+        "11.5 Intellectual Property Rights",
+        "11.6 Responsible Internet Use",
+        "11.7 Impact of Computing on Society"
+      ]
+    },
+    {
+      "name": "UNIT 12: Entrepreneurship in Digital Age",
+      "chapters": [
+        "12.1 Entrepreneurship",
+        "12.2 Entrepreneurship in the Digital Landscape",
+        "12.3 Digital Tools and Platforms",
+        "12.4 Business Idea Generation",
+        "12.5 Developing Business Plans",
+        "12.6 Ethical and Sustainable Entrepreneurship Exercise"
+      ]
+    }
+  ],
+  "ترجمہ القرآن المجید-9TH-PTB": [
+    {
+      "name": "سورۃ نمبر 1: سُورَۃُ مَریَمِ",
+      "chapters": [
+        "سُورَۃُ مَریَمِ"
+      ]
+    },
+    {
+      "name": "سورۃ نمبر 2: سُورَۃُ طٰہٰ",
+      "chapters": [
+        "سُورَۃُ طٰہٰ"
+      ]
+    },
+    {
+      "name": "سورۃ نمبر 3: سُورَۃُ الاَنبِیَاءِ",
+      "chapters": [
+        "سُورَۃُ الاَنبِیَاءِ"
+      ]
+    },
+    {
+      "name": "سورۃ نمبر 4: سُورَۃُ الَحَجّ",
+      "chapters": [
+        "سُورَۃُ الَحَجّ"
+      ]
+    },
+    {
+      "name": "سورۃ نمبر 5: سُورَۃُ الفُرقَانَ",
+      "chapters": [
+        "سُورَۃُ الفُرقَانَ"
+      ]
+    },
+    {
+      "name": "سورۃ نمبر 6: سُورَۃُ الشّعَرَآءِ",
+      "chapters": [
+        "سُورَۃُ الشّعَرَآءِ"
+      ]
+    },
+    {
+      "name": "سورۃ نمبر 7: سُورَۃُ النُّملِ",
+      "chapters": [
+        "سُورَۃُ النُّملِ"
+      ]
+    },
+    {
+      "name": "سورۃ نمبر 8: سُورَۃُ القَصَصِ",
+      "chapters": [
+        "سُورَۃُ القَصَصِ"
+      ]
+    },
+    {
+      "name": "سورۃ نمبر 9: سُورَۃُ العَنکَبُوتَ",
+      "chapters": [
+        "سُورَۃُ العَنکَبُوتَ"
+      ]
+    },
+    {
+      "name": "سورۃ نمبر 10: سُورَۃُ الرُّومہِ",
+      "chapters": [
+        "سُورَۃُ الرُّومہِ"
+      ]
+    },
+    {
+      "name": "سورۃ نمبر 11: سُورَۃُ لُقمنَ",
+      "chapters": [
+        "سُورَۃُ لُقمنَ"
+      ]
+    },
+    {
+      "name": "سورۃ نمبر 12: سُورَۃُ السَّجدَۃِ",
+      "chapters": [
+        "سُورَۃُ السَّجدَۃِ"
+      ]
+    },
+    {
+      "name": "سورۃ نمبر 13: سُورَۃُ سَبَاِِ",
+      "chapters": [
+        "سُورَۃُ سَبَاِِ"
+      ]
+    },
+    {
+      "name": "سورۃ نمبر 14: سُورَۃُ فَاطِرِِ",
+      "chapters": [
+        "سُورَۃُ فَاطِرِِ"
+      ]
+    },
+    {
+      "name": "سورۃ نمبر 15: سُورَۃُ یَس",
+      "chapters": [
+        "سُورَۃُ یَس"
+      ]
+    },
+    {
+      "name": "سورۃ نمبر 16: سُورَۃُ الصّٰفّٰتِ",
+      "chapters": [
+        "سُورَۃُ الصّٰفّٰتِ"
+      ]
+    },
+    {
+      "name": "سورۃ نمبر 17: سُورَۃُ صٓ",
+      "chapters": [
+        "سُورَۃُ صٓ"
+      ]
+    },
+    {
+      "name": "سورۃ نمبر 18: سُورَۃُ الاَحقَافِ",
+      "chapters": [
+        "سُورَۃُ الاَحقَافِ"
+      ]
+    }
+  ],
+  "Pakistan Studies-9TH-PTB": [
+    {
+      "name": "CHAP 1: Ideological Basis of Pakistan",
+      "chapters": [
+        "1.1 Definition, Sources and Significance of Ideology",
+        "1.2 Meaning of Ideology of Pakistan",
+        "1.3 Elements of Ideology of Pakistan",
+        "1.4 Two-Nation Theory: Origin and Evolution",
+        "1.5 Allama Iqbal, Quaid-e-Azam and Ideology of Pakistan"
+      ]
+    },
+    {
+      "name": "CHAP 2: The Pakistan Movement and Emergence of Pakistan",
+      "chapters": [
+        "2.1 Background of Pakistan Movement",
+        "2.2 Early Problems",
+        "2.3 Quaid-e-Azam & Liaqat Ali Khan Role and Achievements",
+        "2.4 Objective Resolution",
+        "2.5 Constitutional Stages in Pakistan",
+        "2.6 Accession of States and Tribal Areas to Pakistan",
+        "2.7 Ayub Khan Era, 1958-1969",
+        "2.8 Economic Development",
+        "2.9 Five Year Development Plans of Ayub Khan's Era",
+        "2.10 Yahya Khan Regime, 1969-71",
+        "2.11 Separation of East Pakistan and Emergence of Bangladesh"
+      ]
+    },
+    {
+      "name": "CHAP 3: Land and Environment",
+      "chapters": [
+        "3.1 Location of Pakistan",
+        "3.2 Physical Features of Pakistan",
+        "3.3 Climate of Pakistan",
+        "3.4 Major Glaciers and Rivers of Pakistan",
+        "3.5 Forests and Wildlife in Pakistan",
+        "3.6 Natural Regions of Pakistan",
+        "3.7 Major Environmental Hazards and their Remedies"
+      ]
+    },
+    {
+      "name": "CHAP 4: Women's Empowerment",
+      "chapters": [
+        "4.1 Women's Right is Islam in the Light of Quran and Sunnah",
+        "4.2 Women's Role in Pakistan Movement",
+        "4.3 Women's Contribution in National Development from 1947 Till Now",
+        "4.4 Definition of Violence and Violence Against Women",
+        "4.5 Violence Impacts upon Pakistan's Society with Reference to Constitutional Provisions",
+        "4.6 Government's efforts to Address the Issue of Violence Against Women in Pakistan 4.7 Government's efforts to Address Regarding Women's Protection and Women's Empowerment"
+      ]
+    }
+  ],
+  "General Science-9TH-PTB": [
+    {
+      "name": "باب نمبر 1: سائنس کا تعارف اور کردار",
+      "chapters": [
+        "سائنس کی تاریخ 1.1",
+        "اسلام میں سائنس کا تصور 1.2",
+        "مسلم اور پاکستانی سائنسدانوں کی خدمات 1.3",
+        "سائنس کی شاخیں 1.4",
+        "سائنس اور ٹیکنالوجی کا ہماری زندگی میں کردار 1.5",
+        "موجودہ سائنس کی حدود 1.6"
+      ]
+    },
+    {
+      "name": "باب نمبر 2: ہماری زندگی اور کیمیا",
+      "chapters": [
+        "زندگی کے بنیادی تعمیراتی ایلیمنٹس 2.1",
+        "کاربن اور اُس کی اہمیت 2.2",
+        "نامیاتی کیمیا 2.3",
+        "پانی 2.4",
+        "ہوا 2.5",
+        "زندگی کے لیے اہم ایلیمنٹس 2.6"
+      ]
+    },
+    {
+      "name": "باب نمبر 3: بائیو کیمسٹری اور بائیوٹیکنالوجی",
+      "chapters": [
+        "میٹابولزم 3.1",
+        "انزائمز 3.2",
+        "خون اور اُسکے افعال 3.3",
+        "ڈی این اے بطور وراثتی مادہ 3.4",
+        "جنیٹک انجینئرنگ 3.5",
+        "فصلوں کی بہتری میں بائیو ٹیکنالوجی کا کردار 3.6",
+        "اینٹی بائیوٹکس اور ویکسینز 3.7",
+        "فالتو اور کمیاب اشیاء کو دوبارہ استعمال کے قابل بنانا 3.8"
+      ]
+    },
+    {
+      "name": "باب نمبر 4: انسانی صحت",
+      "chapters": [
+        "غذا اور اُس کے اجزا 4.1",
+        "غذا اور انرجی 4.2",
+        "متوازن غذا 4.3",
+        "جسمانی افعال میں کوآرڈینیشن 4.4",
+        "انسانی زندگی کے مختلف مراحل 4.5",
+        "ورزش اور صحت 4.6",
+        "فرسٹ ایڈ 4.7"
+      ]
+    },
+    {
+      "name": "باب نمبر 5: بیماریاں، وجوہات اور بچاؤ",
+      "chapters": [
+        "جراثیم سے پیدا ہونے والی بیماریاں 5.1",
+        "جراثیم کا پھیلاؤ 5.2",
+        "جراثیم سے بچاؤ 5.3",
+        "دھواں اور تمباکو نوشی کے مضر اثرات 5.4",
+        "دماغی بیماریاں 5.5",
+        "ڈرگ 5.6"
+      ]
+    },
+    {
+      "name": "باب نمبر 6: ماحول اور قدرتی وسائل",
+      "chapters": [
+        "زمین کا ایٹما سفیئر 6.1",
+        "ماحول کی آلودگی 6.2",
+        "معدنیات اور فوسل فیولز 6.3",
+        "زراعت اور پاکستان کی فصلیں 6.4",
+        "ڈیری اور پولٹری فارمنگ 6.5",
+        "جنگلی حیات اور نیشنل پارکس 6.6 اضافہ آبادی کے ماحول پر اثرات 6.7"
+      ]
+    }
+  ],
+  "پنجابی-9TH-PTB": [
+    {
+      "name": "باب نمبر 1: ذات نبیﷺدی رحمت جھڑیاں",
+      "chapters": [
+        "ذات نبیﷺدی رحمت جھڑیاں"
+      ]
+    },
+    {
+      "name": "باب نمبر 2: لمیاں اُڈیکاں",
+      "chapters": [
+        "لمیاں اُڈیکاں"
+      ]
+    },
+    {
+      "name": "باب نمبر 3: قائداعظم بارے کجھ یاد گار واقعے",
+      "chapters": [
+        "قائداعظم بارے کجھ یاد گار واقعے"
+      ]
+    },
+    {
+      "name": "باب نمبر 4: آسرا",
+      "chapters": [
+        "آسرا"
+      ]
+    },
+    {
+      "name": "باب نمبر 5: حضرت نوشہ گنج بخش",
+      "chapters": [
+        "حضرت نوشہ گنج بخش"
+      ]
+    },
+    {
+      "name": "باب نمبر 6: ہن کوئی دیوا نہیں بلدا",
+      "chapters": [
+        "ہن کوئی دیوا نہیں بلدا"
+      ]
+    },
+    {
+      "name": "نظم نمبر 1: حمد",
+      "chapters": [
+        "حمد"
+      ]
+    },
+    {
+      "name": "نظم نمبر 2: نعت",
+      "chapters": [
+        "نعت"
+      ]
+    },
+    {
+      "name": "نظم نمبر 3: کافی",
+      "chapters": [
+        "کافی"
+      ]
+    },
+    {
+      "name": "نظم نمبر 4: ابیات باہو",
+      "chapters": [
+        "ابیات باہو"
+      ]
+    },
+    {
+      "name": "نظم نمبر 5: کر کتن ول دھیان کڑے",
+      "chapters": [
+        "کر کتن ول دھیان کڑے"
+      ]
+    },
+    {
+      "name": "نظم نمبر 6: غفلت نامہ",
+      "chapters": [
+        "غفلت نامہ"
+      ]
+    },
+    {
+      "name": "نظم نمبر 7: کلام وارث شاہ",
+      "chapters": [
+        "کلام وارث شاہ"
+      ]
+    },
+    {
+      "name": "نظم نمبر 8: دوہڑے",
+      "chapters": [
+        "دوہڑے"
+      ]
+    },
+    {
+      "name": "نظم نمبر 9: استغفار",
+      "chapters": [
+        "استغفار"
+      ]
+    },
+    {
+      "name": "نظم نمبر 10: حضرت یوسف دا خواب",
+      "chapters": [
+        "حضرت یوسف دا خواب"
+      ]
+    },
+    {
+      "name": "نظم نمبر 11: عید",
+      "chapters": [
+        "عید"
+      ]
+    },
+    {
+      "name": "غزل نمبر 1: مولا بخش کشتہ",
+      "chapters": [
+        "مولا بخش کشتہ"
+      ]
+    },
+    {
+      "name": "غزل نمبر 2: پیر فضل گجراتی",
+      "chapters": [
+        "پیر فضل گجراتی"
+      ]
+    },
+    {
+      "name": "غزل نمبر 3: حکیم شیر محمد ناصر",
+      "chapters": [
+        "حکیم شیر محمد ناصر"
+      ]
+    },
+    {
+      "name": "غزل نمبر 4: شریف کنجاہی",
+      "chapters": [
+        "شریف کنجاہی"
+      ]
+    },
+    {
+      "name": "کہانیاں",
+      "chapters": [
+        "مذکر مونث واحد جمع"
+      ]
+    }
+  ],
+  "اسلامیات اختیاری-9TH-PTB": [
+    {
+      "name": "آیات کریمہ",
+      "chapters": [
+        "آیت نمبر :1",
+        "آیت نمبر :2",
+        "آیت نمبر :3",
+        "آیت نمبر :4",
+        "آیت نمبر :5",
+        "آیت نمبر :6",
+        "آیت نمبر :7",
+        "آیت نمبر :8",
+        "آیت نمبر :9",
+        "آیت نمبر :10"
+      ]
+    },
+    {
+      "name": "احادیث مبارکہ",
+      "chapters": [
+        "حدیث نمبر :1",
+        "حدیث نمبر :2",
+        "حدیث نمبر :3",
+        "حدیث نمبر :4",
+        "حدیث نمبر :5",
+        "حدیث نمبر :6",
+        "حدیث نمبر :7",
+        "حدیث نمبر :8",
+        "حدیث نمبر :9",
+        "حدیث نمبر :10",
+        "حدیث نمبر :11",
+        "حدیث نمبر :12",
+        "باب اوّل ۔ القرآن"
+      ]
+    },
+    {
+      "name": "باب چہارم ۔ سیرت طیبہ ﷺ",
+      "chapters": [
+        "رسالت کا مفہوم، منصب اور اس کی عظمت",
+        "انبیاء کرام کی تبلیغی مساعی",
+        "آنحضورﷺ کی تکمیل فریضہ رسالت",
+        "ختم نبوت",
+        "آنحضورﷺ کا پاکیزہ کردار",
+        "اخلاق نبویﷺ"
+      ]
+    },
+    {
+      "name": "باب پنجم ۔ عربی زبان کی گرامر",
+      "chapters": [
+        "کلمہ",
+        "اسم نکرہ و اسم معرفہ",
+        "مذکر مونث (مونث لفظی و مونث معنوی)",
+        "مفرد، تثنیہ، جمع",
+        "جمع کی قسمیں (جمع مکسرو جمع سالم) جمع کی سالم قسمیں (جمع مذکر سالم و مونث سالم)"
+      ]
+    }
+  ],
+  "ایجوکیشن-9TH-PTB": [
+    {
+      "name": "CHAP 1: باب نمبر 1: تعلیم کے تصورات",
+      "chapters": [
+        "1.1 تعلیم کا تعارف اور معنی",
+        "1.2 تعلیم کا عمومی تصور",
+        "1.3 تعلیم کا اسلامی تصور"
+      ]
+    },
+    {
+      "name": "CHAP 2: باب نمبر 2: تعلیم کا دائرہ کار اور وضائف",
+      "chapters": [
+        "2.1 علم التعلیم کا دائرہ کار",
+        "2.2 تعلیم کے وظائف"
+      ]
+    },
+    {
+      "name": "CHAP 3: باب نمبر 3: انسانی نشونما اور بالیدگی",
+      "chapters": [
+        "3.1 نشو نما کے معنی و تعریف",
+        "3.2 شیر خوارگی"
+      ]
+    },
+    {
+      "name": "CHAP 4: باب نمبر 4:تعلم",
+      "chapters": [
+        "4.1 تعلم کے معنی اور تعریف",
+        "4.2 تعلم میں انفرادی اختلافات"
+      ]
+    },
+    {
+      "name": "CHAP 5: باب نمبر 5:گھر،سکول اور معاشرہ",
+      "chapters": [
+        "5.1 گھر،سکول اور معاشرہ کے معنی اور تعریف",
+        "5.2 تعلیم کے متعلقہ ادارے",
+        "5.3 معاشرے کی تشکیل میں تعلیم کا کردار",
+        "5.4 سکول،کمیونٹی اور معاشرے میں تعلق 5.5 گھر،سکول اور کمیونٹی کے تعلقات میں فروغ کے لیے اقدامات"
+      ]
+    }
+  ],
+  "معاشیات-9TH-PTB": [
+    {
+      "name": "باب نمبر 1: معاشیات کا تعارف",
+      "chapters": [
+        "معاشیات کا تعارف"
+      ]
+    },
+    {
+      "name": "باب نمبر 2: معاشیات کا نفسِ مضمون",
+      "chapters": [
+        "معاشیات کا نفسِ مضمون"
+      ]
+    },
+    {
+      "name": "باب نمبر 3: طلب",
+      "chapters": [
+        "طلب"
+      ]
+    },
+    {
+      "name": "باب نمبر 4: رسد",
+      "chapters": [
+        "رسد"
+      ]
+    },
+    {
+      "name": "باب نمبر 5: توازن اور قیمت کا تعین",
+      "chapters": [
+        "توازن اور قیمت کا تعین"
+      ]
+    },
+    {
+      "name": "باب نمبر 6: منڈی اور پیدائش دولت",
+      "chapters": [
+        "منڈی اور پیدائش دولت"
+      ]
+    }
+  ],
+  "علم شہریت-9TH-PTB": [
+    {
+      "name": "باب نمبر: 1 علم شہریت کا تعارف",
+      "chapters": ["علم شہریت کا تعارف"]
+    },
+    {
+      "name": "باب نمبر: 2 افراد کے روابط",
+      "chapters": ["افراد کے روابط"]
+    },
+    {
+      "name": "باب نمبر: 3 ریاست",
+      "chapters": ["ریاست"]
+    },
+    {
+      "name": "باب نمبر: 4 حکومت",
+      "chapters": ["حکومت"]
+    },
+    {
+      "name": "باب نمبر: 5 شہری اور ریاست",
+      "chapters": ["شہری اور ریاست"]
+    }
+  ],
+  "اخلاقیات-9TH-PTB": [
+    {
+      "name": "باب اول: مذاہب کا تعارف",
+      "chapters": [
+        "مذاہب کی ذاتی اور نفسیاتی اہمیت",
+        "مذہب،سماج اور اخلاق"
+      ]
+    },
+    {
+      "name": "باب دوم: عالمی مذاہب",
+      "chapters": [
+        "جین مت- تعارف اور ارتقا"
+      ]
+    },
+    {
+      "name": "باب سوم: اخلاق و اقدار",
+      "chapters": [
+        "خدا کی عظمت",
+        "عبادت گاہ اور نظام ہائے عبادت کا انسانی رویوں پر اثر"
+      ]
+    },
+    {
+      "name": "باب چہارم: آداب",
+      "chapters": [
+        "عبادت گاہوں کے آداب",
+        "عوامی مقامات کے آداب"
+      ]
+    },
+    {
+      "name": "باب پنجم: مشاہیر",
+      "chapters": [
+        "امام غزالیؒ فلورنس نائیٹ انگیل"
+      ]
+    }
+  ],
+  "ہوم اکنامکس-9TH-PTB": [
+    {
+      "name": "CHAP 1: باب نمبر 1: ہوم اکنامکس کا تعارف",
+      "chapters": [
+        "1.1 ہوم اکنامکس کی تعریف",
+        "1.2 ہوم اکنامکس کے اغراض و مقاصد",
+        "1.3 ہوم اکنامکس کی افادیت اور اہمیت",
+        "1.4 ہوم اکنامکس کا دیگر مضامین سے تعلق",
+        "1.5 خاندان اور معاشرے میں ہوم اکنامکس کا کردار اور ذمہ داریاں"
+      ]
+    },
+    {
+      "name": "CHAP 2: باب نمبر 2: غذا اور غذائیت",
+      "chapters": [
+        "2.1 غذا اور غذائیت کی تعریف",
+        "2.2 نقص غذائیت کے اثرات",
+        "2.3 غذا کے کام",
+        "2.4 بنیادی غذائی اجزاء کا مطالعہ",
+        "2.5 خوراک اور صحت"
+      ]
+    },
+    {
+      "name": "CHAP 3: باب نمبر 3: غذا اور خوراک کو سمجھنا",
+      "chapters": [
+        "3.1 متوازن غذا کی تعریف",
+        "3.2 بنیادی غذائی گروہ",
+        "3.3 افراد کی غذائی ضروریات"
+      ]
+    },
+    {
+      "name": "CHAP 4: باب نمبر 4: کھانوں کی تیاری",
+      "chapters": [
+        "4.1 کھانا پکانا",
+        "4.2 کھانا پیش کرنا",
+        "4.3 خوراک سٹور کرنا",
+        "4.4 باورچی خانے میں حفاظتی تد بیر اور اقدامات"
+      ]
+    },
+    {
+      "name": "CHAP 5: باب نمبر 5: بچوں کی نگہداشت اور نشونما کا تعارف",
+      "chapters": [
+        "5.1 انسانی نشونما کے معنی اور تعریف",
+        "5.2 انسانی نشونما کے مطالعہ کی اہمیت",
+        "5.3 انسانی نشونما کے اصول"
+      ]
+    },
+    {
+      "name": "CHAP 6: باب نمبر 6: نشونمائی خصوصیات",
+      "chapters": [
+        "6.1 نوزائیدگی کا دور",
+        "6.2 شیر خوارگی",
+        "6.3 ابدتائی بچپن",
+        "6.4 درمیانی بچپن",
+        "6.5 نو بلوغت"
+      ]
+    },
+    {
+      "name": "CHAP 7: باب نمبر 7: بچوں کے رویوں کے مسائل",
+      "chapters": [
+        "7.1 رویوں کے مسائل کی تعریف اور اقسام",
+        "7.2 رویوں کے مسائل کی وجوہات",
+        "7.3 رویوں کے مسائل کی روک تھام اور ان کا حل"
+      ]
+    },
+    {
+      "name": "CHAP 8: باب نمبر 8: انسانی نشونما میں خاندان اور معاشرے کا کردار",
+      "chapters": [
+        "8.1 والدین اور بچوں کے تعلقات",
+        "8.2 ہم عمروں سے تعلقات",
+        "8.3 بہن بھائیوں سے تعلقات 8.4 نگران کا کردار"
+      ]
+    }
+  ],
+  "فزیکل ایجوکیشن-9TH-PTB": [
+    {
+      "name": "باب نمبر 1: تعلیم جسمانی کی تعریف",
+      "chapters": [
+        "تعلیم جسمانی کی تعریف"
+      ]
+    },
+    {
+      "name": "باب نمبر 2: حرکات",
+      "chapters": [
+        "حرکات"
+      ]
+    },
+    {
+      "name": "باب نمبر 3: تعلیمی جمناسٹک",
+      "chapters": [
+        "تعلیمی جمناسٹک"
+      ]
+    },
+    {
+      "name": "باب نمبر 4: قامت",
+      "chapters": [
+        "قامت"
+      ]
+    },
+    {
+      "name": "باب نمبر 5: منظم کھیلیں",
+      "chapters": [
+        "منظم کھیل"
+      ]
+    },
+    {
+      "name": "باب نمبر 6: اتھلیٹکس کے قوانین اور بنیادی مہارتیں",
+      "chapters": [
+        "اتھلیٹکس کے قوانین اور بنیادی مہارتیں"
+      ]
+    },
+    {
+      "name": "باب نمبر 7: علم الصحت اور اس کی وسعت",
+      "chapters": [
+        "علم الصحت اور اس کی وسعت"
+      ]
+    },
+    {
+      "name": "باب نمبر 8: شخصی حفظان صحت",
+      "chapters": [
+        "شخصی حفظان صحت"
+      ]
+    }
+  ],
+  "مرغبانی-9TH-PTB": [
+    {
+      "name": "باب نمبر 1: مرغبانی کا تعارف و اہمیت",
+      "chapters": [
+        "مرغبانی کا تعارف و اہمیت"
+      ]
+    },
+    {
+      "name": "باب نمبر 2: مرغ کا جسم اور مختلف اعضاء",
+      "chapters": [
+        "مرغ کا جسم اور مختلف اعضاء"
+      ]
+    },
+    {
+      "name": "باب نمبر 3: مرغیوں کی نسلیں",
+      "chapters": [
+        "مرغیوں کی نسلیں"
+      ]
+    },
+    {
+      "name": "باب نمبر 4: ہیچری کے انتظامات",
+      "chapters": [
+        "ہیچری کے انتظامات"
+      ]
+    },
+    {
+      "name": "باب نمبر 5: مرغی خانے کی عمارت",
+      "chapters": [
+        "مرغی خانے کی عمارت"
+      ]
+    },
+    {
+      "name": "باب نمبر 6: مرغی خانے کا سامان",
+      "chapters": [
+        "مرغی خانے کا سامان"
+      ]
+    }
+  ],
+  "غذا اور غذائیت-9TH-PTB": [
+    {
+      "name": "باب نمبر1: غذااورغذائیت کاتعارف",
+      "chapters": [
+        "غذااورغذائیت کا تعارف"
+      ]
+    },
+    {
+      "name": "باب نمبر2: توانائی اورغذائی اجزاء",
+      "chapters": [
+        "توانائی اورغذائی اجزاء"
+      ]
+    },
+    {
+      "name": "باب نمبر3: متوازن غذا",
+      "chapters": [
+        "متوازن غذا"
+      ]
+    },
+    {
+      "name": "باب نمبر4: غذاؤں کی اجزائےترکیبی",
+      "chapters": [
+        "غذاؤں کی اجزائےترکیبی"
+      ]
+    }
+  ],
+  "پارچہ بافی اور لباس-9TH-PTB": [
+    {
+      "name": "باب نمبر1: پارچہ بافی اور لباس",
+      "chapters": [
+        "1.1 پارچہ بافی اور لباس کی تعریف",
+        "1.2 لباس کا ارتقاء",
+        "1.3 پارچہ بانی اور لباس کے مطالعہ کی اہمیت",
+        "1.4 عہد حاضر میں پارچہ بافی اور لباس کے مطالعہ کی ضرورت"
+      ]
+    },
+    {
+      "name": "باب نمبر2: پارچہ بافی کے ریشے",
+      "chapters": [
+        "2.1 پارچہ بانی کے ریشوں کی درجہ بندی",
+        "2.2 قدرتی ریشوں کی خصوصیات",
+        "2.3 انسانی خود ساختہ ریشوں کی خصوصیات"
+      ]
+    },
+    {
+      "name": "باب نمبر3: پاکستان میں پارچہ بافی کی صنعت",
+      "chapters": [
+        "3.1 قدرتی ریشوں کی پیداوار کے اہم علاقے",
+        "3.2 پارچہ بانی کی صنعت کے مراکز",
+        "3.3 بنائی اور سلائی کے صنعتی مراکز"
+      ]
+    },
+    {
+      "name": "باب نمبر4: ریشوں کی شناخت",
+      "chapters": [
+        "4.1 ریشوں کی شناخت کے طریقے"
+      ]
+    },
+    {
+      "name": "باب نمبر 5: پارچہ بافی کے بنیادی طریقے",
+      "chapters": [
+        "5.1 بُنائی اور کھڈی (Loom and Weaving)",
+        "5.2 صنعتی بُنائی (Industrial Knitting) کے مختلف طریقے"
+      ]
+    },
+    {
+      "name": "باب نمبر 6: ٹیکسٹائل ڈیزائن",
+      "chapters": [
+        "6.1 ٹیکسٹائل ڈیزائن",
+        "6.2 مختلف قسم کے بُننے والے کپڑوں کے ٹیکسٹائل ڈیزائن",
+        "6.3 رنگ اور ٹیکسٹائل"
+      ]
+    },
+    {
+      "name": "باب نمبر 7: لباس کا انتخاب",
+      "chapters": [
+        "7.1 لباس کے انتخاب میں شامل عوامل کی اہمیت",
+        "7.2 لباس کا انتخاب 7.3 خریداری کے اصول"
+      ]
+    }
+  ]
+}
