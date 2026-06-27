@@ -1,0 +1,817 @@
+->mcqs
+1.1: Structure of Earth and Types of Rocks
+Exercise	1.	Ring of fire is located in:
+1.	آتشی دائرہ ...... میں واقع ہے:
+(A)Indian Oceanبحر ہند(B)Atlantic Oceanبحر اوقیانوس(C)Arctic Oceanبحر منجمد شمالی(D)Pacific Oceanبحر الکاہل
+Exercise	2.	The distance in the earth's surface and its centre is:
+2.	زمین کی سطح اور اس کے مرکز کے درمیان فاصلہ ہے:
+(A)12757 km12757 کلو میٹر(B)6371 km6371 کلو میٹر(C)40225 km40225 کلو میٹر(D)40275 km40275 کلو میٹر
+Exercise	3.	Marble is an example of type of rock:
+3.	سنگ مر مر ...... قسم کے پتھر کی مثال ہے:
+(A)Igneousاگنیٗس(B)Metamorphicمیٹامورفک(C)Sedimentaryسیڈی مینٹری(D)Organicآرگینک
+Exercise	4.	Average temperature of inner core is:
+4.	اندرونی کور کا اوسط درجہ حرارت ہے:
+(A)2000oC(B)3000oC(C)4000oC(D)5000oC
+Exercise	5.	Rocks that have changed their properties due to pressure and temperature are called:
+5.	وہ چٹانیں جو دباؤ اور درجہ حرارت کے وجہ سے اپنی خصوصیات کو تبدیل کرتی ہیں،کہلاتی ہیں:
+(A)Sedimentary rocksتہہ دار چٹانیں(B)Metamorphic rocksتبدیل شدہ چٹانیں(C)Igneous rocksآتشی چٹانیں(D)None of theseکوئی بھی نہیں
+Additional	6.	The outermost part of the earth is called ......:
+6.	زمین کاسب سے بیرونی حصہ کہلاتاہے:
+(A)Crustقشر الارض(B)Mantleمینٹل(C)Inner coreاندرونی کور(D)Outer coreبیرونی کور
+Additional	7.	The continental crust that is composed of silicon and aliminum called ......:
+7.	براعظمی تہہ جو سلیکان اور ایلومینیم پر مشتمل ہے ...... کہلاتی ہے:
+(A)Sialسیال(B)Simaسیما(C)Crustکرسٹ(D)Mantleمینٹل
+Additional	8.	The maximum depth of continental crust is ...... km:
+8.	براعظمی تہہ کی زیادہ سے زیادہ گہرائی ......کلو میٹر ہے:
+(A)20(B)25(C)35(D)40
+Additional	9.	The internal structure of earth is composed of ...... layers:
+9.	زمین کی اندورنی ساخت ...... تہوں پر مشتمل ہے:
+(A)Twoدو(B)Threeتین(C)Fourچار(D)Fiveپانچ
+Additional	10.	The central layer of earth after earth's crust is called ......:
+10.	زمین کی کرسٹ کے بعد زمین کی مرکزی تہہ کہلاتی ہے:
+(A)Coreکور(B)Crustکرسٹ(C)Plateپلیٹ(D)Mantleمینٹل
+Additional	11.	The temperature of upper mantle is about ...... Co:
+11.	اوپری مینٹل کا درجہ حرارت ...... ڈگری سینٹی گریڈ ہے:
+(A)1000(B)1500(C)2000(D)2500
+Additional	12.	The depth of mantle is around ...... km:
+12.	مینٹل کی گہرائی تقریبا ...... کلو میٹر ہے:
+(A)2800(B)2900(C)3000(D)3100
+Additional	13.	The maximum depth of oceanic crust is ...... km:
+13.	سمندری تہہ کی زیادہ سے زیادہ گہرائی ...... کلو میٹر ہے:
+(A)2دو(B)4چار(C)8آٹھ(D)16سولہ
+Additional	14.	The cracks between the earth paltes are known as:
+14.	زمین کی پلیٹ کے درمیان شگاف کو کہاجاتا ہے:
+(A)Crustکرسٹ(B)Mantleمینٹل(C)Faultsفالٹس(D)Coreکور
+Additional	15.	...... are formed by the aggregation of minerals:
+15.	...... معدنیات کے جمع ہونے سے بنتی ہے:
+(A)Platesپلیٹس(B)Coreکور(C)Rocksچٹانیں(D)None of theseکوئی بھی نہیں
+Additional	16.	In Pakistan, How many tectonic plates collide with each other:
+16.	پاکستان میں کتنی ٹیکٹونک پلیٹس ایک دوسرے سے ٹکراتی ہیں:
+(A)2(B)3(C)4(D)5
+Additional	17.	The innermost layer of the earth is called ......:
+17.	زمین کی سب سے اندورنی تہہ ...... کہلاتی ہے:
+(A)Coreکور(B)Mantleمینٹل(C)Crustکرسٹ(D)Plateپلیٹ
+Additional	18.	If the magma solidify horizontally in cracks, it is called:
+18.	اگر میگما افقی طور پر ٹھوس ہوجائے اسے ...... کہتے ہیں:
+(A)Sialسیال(B)Simaسیما(C)Sillسل(D)Dykeڈائک
+Additional	19.	The rockes which consist of fossils of animals and plants are called ...... rocks:
+19.	وہ چٹانیں جو جانوروں اور پودوں کے فوسل پر مشتمل ہوتی ہیں ...... چٹانیں کہلاتی ہیں:
+(A)Inorganicان آرگینک(B)Chemically formedکیمیائی تشکیل(C)Organicآرگینک(D)None of theseکوئی بھی نہیں
+Additional	20.	Sedimentary rocks are classified into ...... types:
+20.	تہہ دار چٹانوں کو ...... اقسام میں تقسیم کیا گیا ہے:
+(A)2(B)3(C)4(D)5
+Additional	21.	...... rocks are formed by the solidification of the lava and magma in and outside the surface of the earth:
+21.	...... چٹانیں زمین کی سطح کے اندر اور باہر لاوا میگما کے ٹھوس ہونے سے بنتی ہیں:
+(A)Sedimentaryتہہ دار(B)Igneousآتشی(C)Metamorphicتبدیل شدہ(D)None of theseکوئی بھی نہیں
+Additional	22.	...... is use in fire extinguishers:
+22.	آگ بجھانے والے آلے کے طور پر استعمال ہوتا ہے:
+(A)Cementسیمنٹ(B)Gypsumجپسم(C)Saltنمک(D)Limestoneچونے کا پتھر
+Additional	23.	...... is the hardest and the most expensive gemstone:
+23.	...... سب سے سخت اور مہنگا قیمتی پتھر ہے:
+(A)Coalکوئلہ(B)Diamondہیرا(C)Saltنمک(D)Gypsumجپسم
+Additional	24.	The melting of ...... result in making of glass:
+24.	...... کے پگھلنے سے شیشہ بنتا ہے:
+(A)Coalکوئلہ(B)Saltنمک(C)Gypsumجپسم(D)Quartzکوارٹج
+Additional	25.	Fossil of plants and animals are not found in ...... rocks:
+25.	...... چٹانوں میں پودوں اور جانوروں کے فوسل نہیں پائے جاتے:
+(A)Organicآرگینک(B)Igneousآتشی(C)Sedimentaryتہہ دار(D)Metamorphicتبدیل شدہ
+Additional	26.	The largest coal reserves of Pakistan are in ...... province:
+26.	پاکستان میں کوئلے کے سب سے بڑے ذخائر صوبہ ...... میں موجود ہیں:
+(A)Sindhسندھ(B)Balochistanبلوچستان(C)Punjabپنجاب(D)KPKکے پی کے
+Additional	27.	The largest reserves of rocks salt in Pakistan is in ......:
+27.	پاکستان میں چٹانی نمک کے سب سے بڑے ذخائر ...... میں موجود ہیں:
+(A)Kalabaghکالا باغ(B)Lasbelaلسبیلہ(C)Wrachaوڑچھہ(D)Khewraکھیوڑا
+Additional	28.	The person who design maps is called ......:
+28.	نقشے ڈائزئن کرنے والے کو کہا جاتا ہے:
+(A)Cartographerکارٹو گرافر(B)Cartographyکارٹوگرافی(C)Geographyجیو گرافی(D)None of theseان میں سے کوئی نہیں
+2.1: Mountains, Plateaus and Valleys
+Exercise	29.	The highest mountain peak in the world is:
+29.	دنیا کی بلند ترین چوٹی ہے:
+(A)Nanga parbatنانگا پربت(B)Mountain blaneماؤنٹ بلانک(C)Mount everestماؤنٹ ایورسٹ(D)کے
+Exercise	30.	Rockies are located in:
+30.	راکیز واقع ہے:
+(A)Asiaایشیا میں(B)Europeیورپ میں(C)South Americaجنوبی امریکا میں(D)North Americaشمالی امریکا میں
+Exercise	31.	K-2 is also known as:
+31.	کے ٹو ...... کے نام سے بھی جانا جاتا ہے:
+(A)Godwin austenگوڈون آسٹن(B)Mount blaneماؤنٹ بلانک(C)Kohsarکوہ سار(D)Nanga barbatنانگاپربت
+Exercise	32.	The highest mountain range in the world is:
+32.	دنیا کا بلند ترین پہاڑی سلسلہ ہے:
+(A)Himalayasہمالیہ(B)Alpsالپس(C)Andesانڈیز(D)Rockiesراکیز
+Exercise	33.	Rift valley is formed in which type of mountains:
+33.	رفٹ وادی کس قسم کے پہاڑ سے بنتی ہے:
+(A)Residualباقیات(B)Foldedفولڈڈ(C)Volcanicآتش فشاں(D)Blockبلاک
+Exercise	34.	River forms which type of valley:
+34.	دریا کس قسم کی وادی بناتا ہے:
+(A)U-shapeU- شکل(B)W-shapeW-شکل(C)V-shapeV-شکل(D)Y-shapeY-شکل
+Additional	35.	The upper of the fold is called ......:
+35.	فولڈ کااوپری حصہ کہلاتا ہے:
+(A)Synclineسن کلائن(B)Anticlineاینٹی کلائن(C)Inclineان کلائن(D)Declineڈی کلائن
+Additional	36.	Elevation of mountain less than 900m is called ......:
+36.	900 میٹر سے کم پہاڑ کی بلندی کو کہا جاتا ہے:
+(A)Hillپہاڑی(B)Peakچوٹی(C)Mountainپہاڑ(D)Rangeسلسلہ
+Additional	37.	Rocky,uneven,sloppy and elevated surface is called:
+37.	پتھریلی،ناہموار اور بلند سطح کو کہا جاتا ہے:
+(A)Hillپہاڑی(B)Peakچوٹی(C)Mountainپہاڑ(D)Rangeسلسلہ
+Additional	38.	...... mountain are produced by convergence of plates:
+38.	پلیٹوں کے ملاپ سے پیداہونے والا پہاڑ کہلاتا ہے:
+(A)Volcanicآتش فشاں(B)Blockبلاک(C)Foldedفولڈڈ(D)None of theseکوئی بھی نہیں
+Additional	39.	The highest peak of the Hindukush moutain range is ......:
+39.	کوہ ہندو کش کے سلسلے کی سب سے اونچی چوٹی ہے ......:
+(A)K-2کے ٹو(B)Tirich mirترچ میر(C)Mount everestماؤنٹ ایورسٹ(D)Sikaramسیکارم
+Additional	40.	The average height of lesser himalayas:
+40.	لیسر ہمالیہ کی اوسط اونچائی ...... ہے:
+(A)4000m(B)6000m(C)7000m(D)8000m
+Additional	41.	Islamabad is the capital of Pakistan that is located in the piedmont of ......:
+41.	اسلام آباد پاکستان کا دارلحکومت ہے جو ...... کے پیڈ مونٹ میں واقع ہے:
+(A)Lesser himalayasلیسر ہمالیہ(B)Siwalik hillsسیوالک پہاڑیوں(C)Pir panjalپیر پنجل(D)None of theseکوئی بھی نہیں
+Additional	42.	The average height of greater himalayas ......:
+42.	گریٹر ہمالیہ کی اوسط اونچائی ...... ہے:
+(A)4000m(B)6000m(C)7000m(D)8000m
+Additional	43.	The highest peak of Takht-e-suleman is ......:
+43.	تخت سلمان کی اونچائی ...... میٹر ہے:
+(A)3400(B)3440(C)3480(D)3487
+Additional	44.	An elevated landmass with flat top and vertical slope is called:
+44.	فلیٹ ٹاپ اور عمودی ڈھلوان کے ساتھ ایک بلند زمینی رقبہ کہلاتاہے:
+(A)Hillپہاری(B)Plateauسطح مرتفع(C)Mountainپہاڑ(D)None of theseان میں سے کوئی نہیں
+Additional	45.	Internal movement of earth along mountain forms ...... plateaus:
+45.	پہاڑ کے ساتھ زمین کی اندرونی حرکت کی وجہ سے ...... سطح مرتفع بنتے ہیں:
+(A)Continentalکانٹی نینٹل(B)Siwalikسوالک(C)Piedmontپیڈ مونٹ(D)Intermontaneانٹر مونٹین
+3.1: Climatic Regions of the World
+Exercise	46.	Famous animal of polar climatic region is:
+46.	قطبی آب وہوا کے خطے کا مشہور جانورہے:
+(A)Camelاونٹ(B)Reindeerقطبی ہرن(C)Lionشیر(D)Cowگائے
+Exercise	47.	Profession of the people living in tropical area is:
+47.	منطقہ حاری کے علاقے میں رہنے والے لوگوں کا پیشہ ہے:
+(A)Agricultureزراعت(B)Wood Cuttingلکڑی کی کٹائی(C)Animal herdingجانور چرانا(D)Jobsملازمت
+Exercise	48.	Sahara desert is located in climatic region of:
+48.	صحرائے صحارا ...... کے موسمی علاقے میں واقع ہے:
+(A)Equatorialخط استوا(B)Tropicalمنطقہ حاری(C)Temperateمعتدل(D)Polarقطبی
+Exercise	49.	Monsoon winds blow in which region:
+49.	مون سون کی ہوائیں کس خطے میں چلتی ہیں:
+(A)Equatorialخط استوا(B)Tropicalمنطقہ حاری(C)Temperateمعتدل(D)Polarقطبی
+Exercise	50.	People living in Northern Canada are known as:
+50.	شمالی کینیڈا میں رہنے والے لوگوں کو کہا جاتا ہے:
+(A)Pathanپٹھان(B)Red Indiansریڈانڈین(C)Eskimosایسکیموز(D)Americanامریکی
+Exercise	51.	Land and sea breezes blow in:
+51.	زمینی اور سمندری ہوائیں چلتی ہیں:
+(A)Desertsصحراؤں میں(B)Mountainsپہاڑوں میں(C)Coastal Areasساحلی علاقوں میں(D)Plateausسطح مرتفع میں
+Additional	52.	Sunrays fall vertically on ...... areas:
+52.	سورج کی شاعیں عمودی طور پر ...... علاقوں پر پڑتی ہیں:
+(A)Polarپولر(B)Temperateمعتدل(C)Equatorialاستوائی(D)Frigidفرجڈ
+Additional	53.	Short term atmospheric conditions at a particular place is called:
+53.	کسی جگہ پر قلیل مدتی ماحولیاتی حالات کو کہا جاتا ہے:
+(A)Climateآب و ہوا(B)Weatherموسم(C)Regionعلاقہ(D)None of theseان میں سے کوئی بھی نہیں
+Additional	54.	Evergreen forests are found in ...... climatic region:
+54.	سدا بہاد جنگل ...... آب وہوا والے علاقے میں پائے جاتے ہیں:
+(A)Tropicalحاری(B)Polarقطبی(C)Equatorialاستوائی(D)Frigidسرد
+Additional	55.	Long term conditions of all seasons and weather is called:
+55.	تمام موسم اور موسموں کی طویل مدتی حالت کہلاتی ہے:
+(A)Climateآب وہوا(B)Weatherموسم(C)Regionعلاقہ(D)None of theseکوئی بھی نہیں
+Additional	56.	Average rainfall of tropical region is less than ...... inches:
+56.	حاری خطے کی اوسط بارش ...... انچ سے کم ہوتی ہے:
+(A)5(B)8(C)9(D)10
+Additional	57.	...... climatic region is the driest region in the world:
+57.	...... موسمی خطہ دنیا کا خشک ترین خطہ ہے:
+(A)Tropicalحاری(B)Temperateمعتدل(C)Equatorialاستوائی(D)Frigidسرد
+Additional	58.	The house founded in polar climatic regions are called......:
+58.	قطبی آب وہوا کے خطے میں پائے جانے والے گھر کہلاتے ہیں:
+(A)Eskimosاسکیموز(B)Iglooاگلو(C)Red Indiansریڈ انڈین(D)None of theseان میں سے کوئی بھی نہیں
+Additional	59.	The average temperature of equatorual region is ......oC:
+59.	خط استوا کا اوسط درجہ حرارت ...... ڈگری سینٹی گریڈ ہے:
+(A)25(B)27(C)29(D)31
+Additional	60.	Camel is the animal of ......:
+60.	اونٹ ...... کا جانور ہے:
+(A)Iceبرف(B)Mountainپہاڑ(C)Desertصحرا(D)Waterپانی
+Additional	61.	...... has no summer season:
+61.	...... خطے میں گرمیوں کا موسم نہیں ہے:
+(A)Tropicalحاری(B)Equatorialاستوائی(C)Polarقطبی(D)Temperateمعتدل
+Additional	62.	...... plateau is outside the reach of the summer monsoon:
+62.	...... سطح مرتفع مون سون کی پہنچ سے دور ہے:
+(A)Balochistanبلوچستان(B)Sindhسندھ(C)Punjabپنجاب(D)None of theseکوئی بھی نہیں
+Additional	63.	The average rainfall of polar region is ...... inches:
+63.	قطبی خطے میں اوسطا بارش ...... انچ ہے:
+(A)8-10(B)9-10(C)10-11(D)10-12
+Additional	64.	The average temperature of tropical coastland is ......:
+64.	حاری ساحلی علاقوں کا اوسط درجہ حرارت ہے:
+(A)30oC(B)31oC(C)32oC(D)33oC
+Additional	65.	...... plains experiencs thunder storms rain and dust stroms:
+65.	...... کے میدانی علاقوں کو گرج چمک کے ساتھ بارش اور گردغبارکے طوفان کا سامنا کرنا پڑتا ہے:
+(A)Lahoreلاہور(B)Karachiکراچی(C)Quettaکوئٹہ(D)Peshawarپشاور
+4.1: Forests of The World
+Exercise	66.	Ideally, forests must cover areas of:
+66.	مثالی چور پر جنگل کا رقبہ ہونا چاہیے:
+(A)50%(B)40%(C)25%(D)10%
+Exercise	67.	Forests above the height of 4000 meters are:
+67.	4000 میٹر سے اوپر بلندی پر جنگلات ہیں:
+(A)Coniferousکونی فیز جنگل(B)Alpineالپائن جنگل(C)Riverineریوائن جنگل(D)Rakhsرخس
+Exercise	68.	The largest rainforest in the world is:
+68.	سب سے بڑا برساتی جنگل ہے:
+(A)Indus forestانڈس جنگل(B)Changa mangaچھانگا مانگا(C)Amazon forestایمازون کا جنگل(D)Alpine forestsالپائن کا جنگل
+Exercise	69.	ZaireBasin is located in:
+69.	زائر بیسن ...... میں واقع ہے:
+(A)Pakistanپاکستان(B)Europeیورپ(C)South africaجنوبی افریقہ(D)Africaافریقہ
+Exercise	70.	Area of Pakistan is covered by forests:
+70.	پاکستان کا علاقہ جنگلات سے ڈھکا ہے:
+(A)5%(B)10%(C)25%(D)50%
+Exercise	71.	Chiltan National Park is located in:
+71.	چلٹن نیشنل پارک ...... میں واقع ہے:
+(A)Peshawarپشاور(B)Chitralچترال(C)Gwadarگوادر(D)Quettaکوئٹہ
+Exercise	72.	An example of irrigated plantation is:
+72.	لگائے جانے والے پودوں کی مثال ہے:
+(A)Alpineالپائن(B)Riverineریورائن(C)Rakhsرخس(D)Changa mangaچھانگامانگا
+Exercise	73.	The tallest trees are found in:
+73.	سب سے لمبے درخت میں پائے جاتے ہیں:
+(A)Emergent layerایمرجنٹ لیئر(B)Canopy layerکینوپی لیئر(C)Ground layerگراؤنڈ لیئر(D)Understoryانڈر سٹوری
+Additional	74.	Forests situated in equatorial and subequatorial areas between30oN to30oN are known as:
+74.	30oشمال اور 30oجنوب کے درمیان خط استوا اور ذیلی خطوں میں واقع جنگل کو کہا جاتا ہے:
+(A)Tropical forestٹراپیکل جنگل(B)Boreal forestsبوریل جنگل(C)Temperate forestsمعتدل جنگل(D)Taigaتائگا
+Additional	75.	There are main type of forests:
+75.	جنگلات کی ...... بڑی اقسام ہیں:
+(A)3تین(B)5پانچ(C)7سات(D)9نو
+Additional	76.	The growing and harvesting of crops in particular environment is called ......:
+76.	مخصوص ماحول میں فصلوں کی افزائش اور کٹائی کو کہاجاتا ہے:
+(A)Agricultureزراعت(B)Vegetationویجی ٹیشن(C)Forestجنگل(D)None of theseکوئی بھی نہیں
+Additional	77.	There are ...... main types of forest:
+77.	درختوں کی ...... بڑی اقسام ہیں:
+(A)Oneایک(B)Twoدو(C)Threeتین(D)Fourچار
+Additional	78.	Areas with more then 100cm rainfall supports ......:
+78.	100 سینٹی میٹر سے زیادہ بارش والے علاقے ...... کو سپورٹ کرتے ہیں:
+(A)Grasslandگھاس کے میدان(B)Meadowsچراگاہ(C)Desertصحرا(D)Forestجنگل
+Additional	79.	...... is the process in which plants grow without interference of human:
+79.	وہ عمل جس میں پودے انسان کی مداخلت کے بغیر اگتے ہیں:
+(A)Agricultureزراعت(B)Vegetationویجی ٹیشن(C)Forestجنگل(D)Grasslandگھاس کے میدان
+Additional	80.	...... layer of tree does not let sunlight to penetrate:
+80.	...... تہہ سورج کی روشنی کو گزرنے نہیں دیتی:
+(A)Canopyکینوپی(B)Groundگراؤنڈ(C)Understoryانڈرسٹوری(D)Emergentایمرجنٹ
+Additional	81.	The forest are almost 60% of total world's rainforests:
+81.	دنیاکے کل بارشی جنگلات کا تقریبا 60 فی صد ہیں:
+(A)Amazon forestایمازون(B)Boreal forestبوریل(C)Temperate forestکانگو(D)None of theseکوئی بھی نہیں
+Additional	82.	...... forests are also known as taiga forests:
+82.	...... جنگلات کو تائگا جنگلات بھی کہا جاتا ہے:
+(A)Tropicalٹراپیکل(B)Borealبوریل(C)Temperateمعتدل(D)None of theseکوئی بھی نہیں
+Additional	83.	The forests situated in equatorial belt are ...... forest:
+83.	خط استوا کی پٹی میں واقع جنگلات ہیں:
+(A)Temperateمعتدل(B)Borealبوریل(C)Tropicalمنطقہ حاری(D)None of theseکوئی بھی نہیں
+Additional	84.	The forest located in foothills are called ...... forest:
+84.	وہ جنگل جو دامن میں موجود ہوتے ہیں ...... جنگل کہلاتے ہیں:
+(A)Coastalساحلی(B)Coniferousمخروطی(C)Alpineالپائن(D)Piedmontپیڈ مونٹ
+Additional	85.	Trees absorb ...... from air:
+85.	درخت ہوا سے جذب کرتے ہیں:
+(A)Oxygenآکسیجن(B)Nitrogenنائٹروجن(C)Carbon dioxideکاربن ڈائی آکسائیڈ(D)Argonآرگون
+5.1: Natural Disasters
+Exercise	86.	Overflow of water from rivers is called:
+86.	گنجائش سے زیادہ دریاؤں کے پانی کے بہاؤ کو کہتے ہیں:
+(A)Rainfallبارش ہونا(B)Floodسیلاب(C)Tsunamiسونامی(D)Snowmeltبرف کا پگھلانا
+Exercise	87.	World environment day is observed on:
+87.	عالمی ماحولیاتی دن منایاجاتا ہے:
+(A)5th June5 جون(B)5th December5 دسمبر(C)5th August5 اگست(D)5th Febraury5 فروری
+Exercise	88.	Area of the country must be covered with forests:
+88.	ملک کا رقبہ جنگلات سے ڈھکا ہو چاہیے:
+(A)10%10 فیصد(B)15%15 فیصد(C)25%25 فیصد(D)50%50 فیصد
+Exercise	89.	Result of absence of rainfall for a longer period of times is known as:
+89.	لمبے عرصے تک بارشوں کے نہ ہونے کا نتیجہ ...... ہوتی ہے:
+(A)Pollutionآلودگی(B)Earthquakeزلزلہ(C)Heatwaveگرمی کی لہر(D)Droughtخشک سالی
+Exercise	90.	The most common natural disaster in Pakistan is:
+90.	پاکستان میں سے عام قدرتی آفت ہے:
+(A)Rainfallبارش(B)Floodسیلاب(C)Tsunamiسونامی(D)Snowmeltبرف کا پگھلنا
+Exercise	91.	Land sliding occurs mostly in:
+91.	لینڈ سلائیڈنگ زیادہ تر ہوتی ہے:
+(A)Mountainous areasپہاڑی علاقے(B)Plain areasمیدانی علاقے(C)Coastal areasساحلی علاقے(D)Dry areasخشک علاقے
+Exercise	92.	A city was demolished due to earthquake in Balochistan (1935):
+92.	بلوچستان میں (1935) زلزلے میں ایک شہر منہدم ہوگیا تھا:
+(A)Quettaکوئٹہ(B)Karachiکراچی(C)Balakotبالاکوٹ(D)Islamabadاسلام آباد
+Additional	93.	Eruption of magma from earth crust is known as:
+93.	زمین کی پرت سے میگما کا نکلنا کہلاتا ہے:
+(A)Floodsسیلاب(B)Pollutionآلودگی(C)Droughtخشک سالی(D)Volcanismآتش فشاں
+Additional	94.	...... is a series of extremely long waves caused by displacement of oceans:
+94.	سمندر کی نقل مکانی کی وجہ سے انتہائی لمبی لہروں کا سلسلہ ہے:
+(A)Tsunamiسونامی(B)Floodسیلاب(C)Pollutionآلودگی(D)Droughtخشک سالی
+Additional	95.	Absence of rainfall for a larger period is called:
+95.	طویل عرصے تک بارش کے نہ ہونے کو کہا جاتا ہے:
+(A)Floodسیلاب(B)Droughtخشک سالی(C)Pollutionآلودگی(D)Volcanismآتش فشاں
+Additional	96.	Sudden or slow movement of soil under gravity influence is called:
+96.	کشش ثقل کی زیر اثر مٹی کی اچانک یا سست حرکت کو کہا جاتا ہے:
+(A)Dust stormگرد کا طوفان(B)Land Slidesلینڈ سلائیڈنگ(C)Floodsسیلاب(D)Pollutionآلودگی
+Additional	97.	Famine and drought cause:
+97.	قحط اور خشک سالی کا سبب بنتی ہے:
+(A)Food crisesخوراک کا بحران(B)Economic lossمعاشی نقصان(C)Water scarcityپانی کی قلت(D)All of theseیہ تمام
+Additional	98.	...... impacts are more predictable,sudden and immediate:
+98.	...... اثرات زیادہ متوقع،اچانک اور فوری ہوتے ہیں:
+(A)Primaryپرائمری(B)Secondaryسکینڈری(C)Both a and bاے اور بی دونوں(D)None of theseکوئی بھی نہیں
+Additional	99.	Cyclones brings:
+99.	طوفان لاتی ہیں:
+(A)Droughtخشک سالی(B)Earthquakeزلزلہ(C)Heavy rainشدید بارش(D)None of theseکوئی بھی نہیں
+Additional	100.	Shaking of earth crust due to seismic waves is known as:
+100.	بھوبچال کی لہروں کی وجہ سے زمین کی پربت کے ہلنے کو کہا جاتا ہے:
+(A)Tsunamiسونامی(B)Earthquakeزلزلہ(C)Pollutionآلودگی(D)Droughtخشک سالی
+Additional	101.	The major greenhouse gas is:
+101.	اہم گرین ہاوس گیس ہے:
+(A)Carbon dioxideکاربن ڈائی آکسائیڈ(B)Oxygenآکسیجن(C)Nitrogenنائٹروجن(D)Argomآرگون
+Additional	102.	Water scarcity in any area cause ......:
+102.	کسی بھی علاقے میں پانی کی کمی کا باعث بنتی ہے:
+(A)Floodسیلاب(B)Droughtخشک سالی(C)Rainبارش(D)Stormطوفان
+Additional	103.	Death of many people every year in karachi is due to:
+103.	کراچی میں ہر سال ...... کی وجہ سے کئی لوگوں کی موت ہوجاتی ہے:
+(A)Floodسیلاب(B)Droughtخشک سالی(C)Heatwaveگرمی کی لہر(D)Fireآگ
+Additional	104.	Increase in temperature of earth os called:
+104.	زمین کی آب و ہوا کے درجہ حرارت کو بڑھنے کو کہتے ہیں:
+(A)Stormطوفان(B)Rainبارش(C)Global warmingگلوبل وارمنگ(D)Floodسیلاب
+Additional	105.	...... rivers is the largest river in Pakistan:
+105.	پاکستان کا سب سے بڑا دریا ہے:
+(A)Indusسندھ(B)Raviراوی(C)Satlujستلج(D)Biasبیاس
+Additional	106.	Disappearance of dorests is more vulnerabe to ......:
+106.	جنگلات کے ختم ہونے سے ...... کا زیادہ خطرہ ہے:
+(A)Heatwaveگرمی کی لہر(B)Fireآگ(C)Floodسیلاب(D)Droughtخشک سالی
+6.1: Changing Earth And Human Activities
+Exercise	107.	Upper part of the wave is called:
+107.	ویو کااوپری حصہ کہلاتا ہے:
+(A)Wavelengthویولینگتھ(B)Amplitudeایپلی ٹیوڈ(C)Troughٹرف(D)Crestکرسٹ
+Exercise	108.	A circular and small part of the sea is called:
+108.	سمندر کا ایک گول اور چھوٹا حصہ کہلاتا ہے:
+(A)waveلہر(B)Archesمحراب(C)Bayخلیج(D)Lagoonجھیل
+Exercise	109.	Rock Eroded from base due to aeolian work is called:
+109.	ایولین کام کی وجہ سے بنیاد سے کٹنے والی چٹان کہلاتی ہے:
+(A)Mashroom Rockمشروم چٹان(B)Metamorphic Rockمتغیر چٹان(C)Sedimentary Rockتہہ دار چٹان(D)Organic Rockنامیاتی چٹان
+Exercise	110.	Types of weathering are:
+110.	عمل فرسودگی کی اقسام ہیں:
+(A)2دو(B)3تین(C)4چار(D)5پانچ
+Exercise	111.	. The most arid province of Pakistan is:
+111.	پاکستان کا سب سے بڑا خشک صوبہ ہے:
+(A)Punjabپنجاب(B)Balochistanبلوچستان(C)Sindhسندھ(D)کے
+Exercise	112.	Weathering due to living organisms is known as:
+112.	جانداروں کے رہنے کی وجہ سے عمل فرسودگی کو کہا جاتا ہے:
+(A)Biological weatheringحیاتیاتی عمل فرسودگی(B)Chemical weatheringکیمیائی عمل فرسودگی(C)Physical weatheringطبعی عمل فرسودگی(D)ٔErosionزمینی کٹاو
+Additional	113.	. When the soft rocks are eroded completely by wind, the hard rocks remian behind are called:
+113.	جب نرم چٹانیں ہوا کے ساتھ مل کر مکمل طور پر مٹ جاتی ہیں تو پیچھے رہ جانے والی سخت چٹانیں کہلاتی ہیں:
+(A)Yardingیارڈنگ(B)ٍInselbergانسل برگ(C)Abrasionابریشن(D)None of theseکوئی بھی نہیں
+Additional	114.	Rocks expanded in season:
+114.	چٹانیں موسم میں پھیلتی ہیں:
+(A)Summerگرمی کے(B)Spiringبہار کے(C)Winterسردی کے(D)Autumnخزاں کے
+Additional	115.	The decomposition od rocks by different process is called:
+115.	مختلف عوامل کے ذریعے پتھروں کے ٹوٹنے کو کہتے ہیں:
+(A)ٔErosionکٹاو(B)Weatheringعمل فرسودگی(C)Abrasionابریشن(D)None of theseکوئی بھی نہیں
+Additional	116.	If wind carries unconsolidated sediments with it, this process is called:
+116.	اگر ہوا اپنے ساتھ غیر مستحکم سیڈی مینٹس لے جائے تو اس عمل کو کہتے ہیں:
+(A)Inselbergانسل برگ(B)Abrasionابریشن(C)Yardingیارڈینگ(D)Deflationڈی فلیشن
+Additional	117.	If spit is connected to any island, it is called:
+117.	اگر سپٹ کسی بھی جزیرے سے جڑی ہوتو اسے کہتے ہیں:
+(A)Beachساحل(B)Caveغار(C)Tomboloٹومبولو(D)Archمحراب
+Additional	118.	The lower part of the wave is called:
+118.	ویو کے نچلے حصے کو کہتے ہیں:
+(A)Crestکرسٹ(B)Amplitudeایمپلی ٹیوڈ(C)Wavelengthویولینگتھ(D)Troughٹرف
+Additional	119.	In mountain, valley of the river gets deeper and attains the shape of the:
+119.	دریا کی پہاڑی وادی گہری ہو کر شکل اختیار کرلیتی ہے:
+(A)V(B)X(C)W(D)U
+Additional	120.	Continuous erosion in sea result in creating an opening called:
+120.	سمندر میں مسلسل کٹاؤ کے نتیجے میں ایک سوراخ پیدا ہوتا ہے جسے کہتے ہیں:
+(A)Headlandہیڈ لینڈ(B)Caveغار(C)Beachساحل(D)sea archسمندری محراب
+Additional	121.	Deforestation is the cutting of:
+121.	جنگلات کی کٹائی میں کاٹا جاتا ہے:
+(A)Treesدرختوں کو(B)Buildingعمارتوں کو(C)Vegetablesسبزیوں کو(D)None of theseکوئی بھی نہیں
+Additional	122.	Acid rain due to air pollution results in:
+122.	فضائی آلودگی کی وجہ سے تیزابی بارش کا نتیجہ ہوتا ہے:
+(A)Physical weatheringطبعی عمل فرسودگی(B)Chemical weatheringکیمیائی عمل فرسودگی(C)Biological weatheringحیاتیاتی عمل فرسودگی(D)None of theseکوئی بھی نہیں
+
+-> short questions
+1.1: Structure of Earth and Types of Rocks
+1	.	Write the name of important layers of the earth.
+Exercise
+1	.	زمین کی اہم تہوں کے نام لکھیں۔
+2	.	Write a short note about global positioning system. (GPS).
+Exercise
+2	.	گلوبل پوزیشنگ کے بارے میں مختصر نوٹ لکھیں۔
+3	.	Enlist the name of the major tectonic plates in the world.
+Exercise
+3	.	دنیا کی بڑی ٹیکتوٹک پلیٹوں کے نام لکھیں۔
+4	.	Enlist the name of the commonly found rocks in Pakistan.
+Exercise
+4	.	پاکستان میں عام طور پر پائی جانے والی چٹانوں کے نام لکھیں۔
+5	.	Differentiate between extrusive igneous rocks and intrusive igneous rocks.
+Exercise
+5	.	داخلی آتشی چٹانوں اور خارجی آتشی چٹانوں کے درمیان فرق واضح کریں۔
+6	.	Write the characteristics of sedimentary rocks.
+Exercise
+6	.	تہہ دار چٹانوں کی خصوصیات لکھیں۔
+7	.	What is meant by earth’s crust?
+Additional
+7	.	قشر ارض سے کیا مراد ہے؟
+8	.	What is meant by mantle?
+Additional
+8	.	مینٹل سے کیا مراد ہے؟
+9	.	What is meant by fault & fault zone?
+Additional
+9	.	فالٹ اور فالٹ زون سے کیا مراد ہے؟
+10	.	What is transform fault?
+Additional
+10	.	ٹرانسفارم فالٹ کیا ہے؟
+11	.	What are the two important tectonic plates found in Pakistan?
+Additional
+11	.	پاکستان میں پائی جانے والی دو اہم ٹیکٹونک پلیٹس کون سی ہیں؟
+12	.	Define rock.
+Additional
+12	.	چٹان کی تعریف کریں۔
+13	.	How igneous rocks are formed?
+Additional
+13	.	آتشی چٹانیں کیسے بنتی ہیں؟
+14	.	How sedimentary rocks are formed?
+Additional
+14	.	تہہ دار چٹانیں کیسے بنتی ہیں؟
+15	.	What are metamorphic rocks?
+Additional
+15	.	میٹا مورفک پتھر کیا ہیں؟
+16	.	Define catography and catographer.
+Additional
+16	.	کارٹوگرافی اور کارٹوگرافر کی تعریف کریں۔
+17	.	How do Google maps help us?
+Additional
+17	.	گوگل میپس ہماری مدد کیسے کرتے ہیں؟
+2.1: Mountains, Plateaus and Valleys
+18	.	Define mountain.
+Exercise
+18	.	پہاڑ کی تعریف کریں۔
+19	.	What are different types of mountains in the world?
+Exercise
+19	.	دنیا میں پہاڑوں کی مختلف اقسام کون سی ہیں؟
+20	.	Enlist the names of famous mountain range in Pakistan.
+Exercise
+20	.	پاکستان کے مشہور پہاڑی سلسلوں کے نام بتائیں۔
+21	.	What is rift valley? Write its examples.
+Exercise
+21	.	رفٹ وادی کیا ہے؟ اس کی مثال لکھیں۔
+22	.	Define continental plateau.
+Exercise
+22	.	براعظمی سطح مرتفع کی تعریف کریں۔
+23	.	What is meant by V shape Valley?
+Exercise
+23	.	نما وادی سے کیا مراد ہے؟
+24	.	What is the difference between fold and fault?
+Exercise
+24	.	فولڈ اور فالٹ میں کیا فرق ہے؟
+25	.	How folded mountain are formed?
+Additional
+25	.	فولڈڈ پہاڑ کیسے بنتا ہے؟
+26	.	What is meant by anticline and syncline?
+Additional
+26	.	اینٹی کلائن اور سن کلائن سے کیا مراد ہے؟
+27	.	How block mountain are formed?
+Additional
+27	.	بلاک پہاڑ کیسے بنتے ہیں؟
+28	.	What are volcanic mountains?
+Additional
+28	.	آتش فشاں پہاڈ کیا ہیں؟
+29	.	Write name of most famous mountains of Pakistan.
+Additional
+29	.	پاکستان کے مشہور پہاڑوں کے نام لکھیں۔
+30	.	Write the names of famous valleys of Pakistan.
+Additional
+30	.	پاکستان کی مشہور وادیوں کے نام لکھیں۔
+31	.	How intermontane plateaus are formed?
+Additional
+31	.	انٹر مونٹین سطح مرتفع کیسے بنتے ہیں؟
+32	.	How piedmont plateaus are formed?
+Additional
+32	.	پیڈ مونٹ سطح مرتفع کیسے بنتے ہیں؟
+3.1: Climatic Regions of the World
+33	.	Define weather and climate.
+Exercise
+33	.	موسم اور آب وہوا کی تعریف کریں۔
+34	.	Define climate region.
+Exercise
+34	.	آب و ہوا کے خطے کی تعریف کریں۔
+35	.	Write the names of different climatic regions of the world.
+Exercise
+35	.	دنیا کے مختلف موسمیاتی علاقوں کے نام لکھیں۔
+36	.	Define equatorial climatic region.
+Exercise
+36	.	استوائی آب وہوا کے علاقے کی تعریف کریں۔
+37	.	What do you know about vegetation in polar climatic region?
+Exercise
+37	.	قطی آب و ہوا کے علاقے کے پودوں کے بارے میں آپ کیا جانتے ہیں؟
+38	.	What is frigid zone?
+Additional
+38	.	فرجڈ زون کیا ہے؟
+39	.	What would be the effect of distribution of land and water on climate?
+Additional
+39	.	زمین اور پانی کی تقسیم کا آب وہوا پر کیا اثر پڑتا ہے؟
+40	.	Define region.
+Additional
+40	.	خطہ کی تعریف کریں۔
+41	.	Write short note on vegetation of equatorial climatic region.
+Additional
+41	.	خطہ استواء کی آب و ہوا کے پودوں پر مختصر نوٹ لکھیں۔
+42	.	Name the densest rainforests in the world.
+Additional
+42	.	دنیا کے سب سے گھنے برساتی جنگلات کے نام بتائیں۔
+43	.	Which people are called red Indians.
+Additional
+43	.	کون سے لوگ ریڈ انڈین کہلاتے ہیں؟
+44	.	What is the profession of people in tropical climate region?
+Additional
+44	.	حاری آب وہوا کے خطے میں لوگوں کا پیشہ کیا ہے؟
+45	.	What cause of rainfall in temperate region?
+Additional
+45	.	معتدل علاقوں میں بارش کا سبب کیا ہے؟
+46	.	Write short note on tropical coastland?
+Additional
+46	.	حاری ساحلی علاقے پر مختصر نوٹ لکھیں۔
+47	.	1Which people are called Eskimos?
+Additional
+47	.	کون سے لوگ اسکیموز کہلاتے ہیں؟
+4.1: Forests of The World
+48	.	Name any two forests found in the world.
+Exercise
+48	.	دنیا میں پائے جانے والے کوئی سے دو جنگلوں کے نام لکھیں۔
+49	.	Where temperate forests are located?
+Exercise
+49	.	ٹمپریٹ جنگلات کہاں پائے جاتے ہیں؟
+50	.	How do the forests prevent soil erosion?
+Exercise
+50	.	جنگلات زمینی کٹاو کو کیسے روکتے ہیں؟
+51	.	Name any three forest in Pakistan?
+Exercise
+51	.	پاکستان میں موجود کوئی سے تین جنگلات کے نام لکھیں۔
+52	.	Define deforestation.
+Exercise
+52	.	ڈی فورسٹیشین کی تعریف کریں۔
+53	.	Evaluate how do the forests boosts economic activities?
+Exercise
+53	.	اس بات کا جائزہ لیں کے جنگل معاشی سرگرمیوں کو کیسے فروغ دیتے ہیں؟
+54	.	Write the difference between agriculture and vegetation.
+Exercise
+54	.	زراعت اور ویجی ٹیشن میں فرق بیان کریں۔
+55	.	What do you know about canopy layer of rainforests?
+Exercise
+55	.	برساتی جنگل کی کینوپی تہہ کے بارے میں آپ کیا جانتے ہیں؟
+56	.	Define cultivated vegetation.
+Additional
+56	.	کاشت شدہ ویجی ٹیشن کی تعریف کریں۔
+57	.	How much precipitation generally support forests?
+Additional
+57	.	کتنی بارش عام طور پر جنگلات کے ساتھ تعاون کرتی ہے؟
+58	.	Where are rainforest located?
+Additional
+58	.	برساتی جنگل کہاں واقع ہیں؟
+59	.	What are canopy trees?
+Additional
+59	.	کینوپی درخت کیا ہیں؟
+60	.	What do you know about emergent layer?
+Additional
+60	.	ایمرجنٹ تہہ کے بارے میں آپ کیا جانتے ہیں؟
+61	.	What is evapotranspiration?
+Additional
+61	.	ایوپوٹرانسپائریشن کیا ہے؟
+62	.	What are Boreal forests?
+Additional
+62	.	بوریل جنگلات کیا ہیں؟
+63	.	Name Scandinavian countries?
+Additional
+63	.	اسکینڈ نیوین ممالک کے نام لکھیں۔
+64	.	Differentiate between coniferous and Alpine trees.
+Additional
+64	.	مخروطی اور الپائن درختو ں میں فرق بیان کریں۔
+65	.	What are coastal forests?
+Additional
+65	.	کوسٹل جنگلات کیا ہے؟
+5.1: Natural Disasters
+66	.	Define natural disasters.
+Exercise
+66	.	قدرتی آفات کی تعریف کریں۔
+67	.	Write any three impacts of drought.
+Exercise
+67	.	خشک سالی کے کوئی سے تین اثرات لکھیں۔
+68	.	Write the primary impacts of natural disasters.
+Exercise
+68	.	قدرتی آفات کے بنیادی اثرات لکھیں۔
+69	.	How does global warming cause natural disasters.
+Exercise
+69	.	گلوبل وارمنگ قدرتی آفات کا سبب کیسے بنتی ہے؟
+70	.	What is meant by natural disasters?
+Exercise
+70	.	قدرتی آفات سے کیا مراد ہے؟
+71	.	What is meant by three Rs (reduce, recycle, reuse)?
+Exercise
+71	.	3Rs (ریڈیوس،ری سائیکل اور ری یوس) سے کیا مراد ہے؟
+72	.	When flood occur?
+Additional
+72	.	سیلاب کب آتا ہے؟
+73	.	Write two effects of floods?
+Additional
+73	.	سیلاب کے دو اثرات لکھیں۔
+74	.	Define landslide.
+Additional
+74	.	لینڈ سلائیڈ کی تعریف کریں۔
+75	.	What is meant by earthquake?
+Additional
+75	.	زلزلے سے کیا مراد ہے؟
+76	.	What is meant by Hurricanes and Cyclones?
+Additional
+76	.	سمندری طوفان یا سائیکلونز سے کیا مراد ہے؟
+77	.	What is meant by urbanization?
+Additional
+77	.	شہروں کی آباد کاری سے کیا مراد ہے؟
+78	.	When international day of Environment is celebrated?
+Additional
+78	.	ماحول کا بین الاقوامی دن کب منایا جاتا ہے؟
+79	.	Define pollution.
+Additional
+79	.	آلودگی کی تعریف کریں۔
+80	.	Write any three measurements of flood control.
+Additional
+80	.	سیلاب کنٹرول کرنے کے کوئی سے تین طریقہ کار بتائیں۔
+6.1: Changing Earth And Human Activities
+81	.	Define weathering and erosion.
+Exercise
+81	.	عمل فرسودگی اور کٹاؤ کی تعریف کریں۔
+82	.	Write the names of any four landforms made by coastal erosion
+Exercise
+82	.	ساحلی کٹاؤ سے بننے والی کوئی سی چار زمینی شکلوں کے نام لکھیں۔
+83	.	What do you know about chemical weathering.
+Exercise
+83	.	آپ کیمیائی عمل فرسودگی کے بارے میں کیا جانتے ہیں؟
+84	.	Differentiate arches and stack.
+Exercise
+84	.	محراب اور ڈھیر میں فرق بیان کریں۔
+85	.	Define wind erosion.
+Exercise
+85	.	ہوائی کٹاؤ کی تعریف کریں۔
+86	.	Enlist the agents of weathering.
+Exercise
+86	.	عمل فرسودگی کے ایجنٹس کے نام لکھیں۔
+87	.	What is biological weathering?
+Additional
+87	.	کیمیائی عمل فرسودگی کی تعریف کریں۔
+88	.	Differentiate between deflation and abrasion?
+Additional
+88	.	ڈی فلیکشن اور ابریشن میں فرق بیان کریں۔
+89	.	What is mushroom?
+Additional
+89	.	مشروم چٹان کیا ہے؟
+90	.	What is inselberg?
+Additional
+90	.	انسل برگ کیا ہے؟
+91	.	What are meanders?
+Additional
+91	.	مینڈرز کیا ہے؟
+92	.	What is the process of attrition?
+Additional
+92	.	فرسودگی کا عمل کیاہے؟
+93	.	What are sea cliffs?
+Additional
+93	.	سمندری چٹانیں کیا ہیں؟
+94	.	What is air pollution?
+Additional
+94	.	فضائی آلودگی کیا ہے؟
+95	.	What is mining?
+Additional
+95	.	کان کنی کیاہے؟
+96	.	What is yardang?
+Additional
+96	.	یارڈنگ کیاہے؟
+
+-> long questions
+1.1: Structure of Earth and Types of Rocks
+1.	How minerals are important for the economy of any country?
+Exercise
+1.	معدنیات کسی بھی ملک کی معیشت کےلیے کیسے اہم ہوتی ہیں؟
+2.	Which types of the rocks are located in Pakistan? Discuss their distribution.
+Exercise
+2.	پاکستان میں کس قسم کی چٹانیں پائی جاتی ہیں۔ ان کی تقسیم پر بحث کریں۔
+3.	What do you know about internal structure of the earth?
+Exercise
+3.	زمین کی اندرونی ساخت کے بارے میں آپ کیا جانتے ہیں؟
+4.	Discuss modern technique in the field of geography?
+Exercise
+4.	جغرافیہ کے میدان میں جدید تکنیکوں پر تبادلہ خیال کریں۔
+5.	Explore the importance of modern technique in geography.
+Additional
+5.	جغرافیہ میں جدید ٹیکنالوجی کے اثرات کے نشاندہی کریں۔
+6.	How rock cycle occur?
+Additional
+6.	راک سائیکل کیسے واقع ہوتا ہے؟
+7.	Why rocks are important for us?
+Additional
+7.	راک ہمارے لیے کیوں اہم ہیں؟
+8.	How we can compare the earth with egg?
+Additional
+8.	ہم زمین کا موازنہ انڈے کے ساتھ کیسے کرسکتے ہیں؟
+2.1: Mountains, Plateaus and Valleys
+9.	There are different types of mountain in the world. Discuss each of them.
+Exercise
+9.	دنیا میں پہاڑوں کی مختلف اقسام ہیں، ان میں سے ہر ایک پر بحث کریں۔
+10.	What are different types of plateaus? Elaborate.
+Exercise
+10.	سطح مرتفع کی مختلف اقسام کون سی ہیں؟ تفصیل سے بیان کریں۔
+11.	What are the impacts of mountain on human life?
+Exercise
+11.	پہاڑوں کے انسانی زندگی پر کیا اثرات ہوتے ہیں؟
+12.	Write a descriptive note on the mountains of Pakistan.
+Exercise
+12.	پاکستان کے پہاڑی علاقوں پر تفصیلی نوٹ لکھیں۔
+13.	How physical regions of Pakistan effects the life of the people.
+Additional
+13.	پاکستان کے طبعی علاقے لوگوں کی زندگی کو کیسے متاثر کرتے ہیں؟
+14.	Explore the impacts of earthquake on ecosystem.
+Additional
+14.	ماحولیاتی نظام پر زلزلے کے اثرات کو بیان کریں۔
+15.	Explore importance of valley for Pakistan.
+Additional
+15.	پاکستان میں وادیوں کی اہمیت بیان کریں۔
+3.1: Climatic Regions of the World
+16.	Explain about weather and climate. Describe the factors affecting the climate of any place.
+Exercise
+16.	موسم اورآب و ہوا کے بارے میں وضاحت کریں۔ کسی بھی جگہ کی آب و ہوا کو متاثر کرنے والے عوامل کی وضاحت کریں۔
+17.	Classify Pakistan into different climatic regions and give brief description of each?
+Exercise
+17.	پاکستان کے مختلف موسمی خطوں میں درجہ بندی کریں اور ہر ایک کی مختصر تفصیل دیں۔
+18.	Discuss tropical climatic region in detail.
+Exercise
+18.	منطقہ حاری آب وہوا کے خطے پر تفصیلی بحث کریں۔
+19.	Write the importance of climate in human life.
+Exercise
+19.	انسانی زندگی میں آب و ہوا کی اہمیت لکھیں۔
+20.	Explore the impacts of vegetation on our climate.
+Additional
+20.	ہماری آب وہوا پر نباتات کے اثرات پر تحقیق کریں۔
+21.	Why climate zones of the world are different?
+Additional
+21.	دنیا میں آب وہوا کے علاقے مختلف کیوں ہیں؟
+22.	How monsoon effect the climate of Pakistan?
+Additional
+22.	مون سون کا پاکستان کی آب و ہوا پر کیا اثر پڑتا ہے؟
+4.1: Forests of The World
+23.	Elaborate different layer of rainforests and discuss the features of each layer.
+Exercise
+23.	برساتی جنگل کی مختلف تہوں کو واضح کریں اور ہر تہہ کی خصوصیات پر تبادلہ خیال کریں۔
+24.	Name different types of forest in the world. Briefly describe the tropical forests along with characteristics to trees.
+Exercise
+24.	دنیا میں پائے جانے والے مختلف جنگلات کی اقسام کے نام لکھیں۔ٹراپیکل جنگلات کی مختصر وضاحت کریں نیز درختوں کی خصوصیات بیان کریں۔
+25.	What is the importance of Amazon rainforest?
+Exercise
+25.	ایمازون برساتی جنگل کی اہمیت بیان کریں۔
+26.	Discuss role of forests in economy of any country in detail.
+Exercise
+26.	کس ملک کی معیشت میں جنگلات کے کردار پر تفصیلی بحث کریں۔
+27.	How are the forests distributed all over Pakistan? Write a comprehensive note.
+Exercise
+27.	پورے پاکستان میں جنگلات کیسے تقسیم کیے گئے ہیں؟ ایک جامع نوٹ لکھیں۔
+28.	How forests are important for our environment?
+Additional
+28.	جنگلات ہمارے ماحول کےلیے کتنے اہم ہیں؟
+29.	Explore the impacts of northern (Pakistan) forest on the climate of those areas.
+Additional
+29.	علاقوں کی آب وہوا پر شمالی (پاکستان) کے جنگلات کے اثرات کی شناخت لکھیں۔
+30.	Why forests are different in different areas of Pakistan?
+Additional
+30.	پاکستان کے مختلف علاقوں میں جنگلات مختلف کیوں ہیں؟
+31.	How we can reduced deforestation in Pakistan?
+Additional
+31.	پاکستان میں جنگلات کے کٹاؤ کو کیسے کم کیا جاسکتا ہے؟
+5.1: Natural Disasters
+32.	What do you know about natural disasters? Write the effects of any three natural disasters in detail?
+Exercise
+32.	قدرتی آفات کے بارے میں آپ کیا جانتے ہیں؟ کوئی سے تین قدرتی آفات کے اثرات تفصیل سے بیان کریں۔
+33.	Why are natural resources to be preserved? What measures can be taken for preservation of natural resources?
+Exercise
+33.	قدرتی وسائل کوکیوں محفوظ کیا جائے؟ قدرتی وسائل کے تحفظ کےلیے کیا قدامات کیے جا سکتے ہیں؟
+34.	Which types of human activities are responsible natural disasters?
+Exercise
+34.	قدرتی آفات کےلیے کون سی انسانی سرگرمیاں ذمہ دار ہیں؟
+35.	Global warming is causing increasing in frequency and magnitude of natural disasters. How will you justify this statement?
+Exercise
+35.	گلوبل وارمنگ قدرتی آفات کی تعداد اورشدت میں اضافے کا باعث بن رہی ہے ۔ آپ اس بیان کا جواز کیسے دیں گے؟
+36.	Why developing countries are most affected by the natural disasters?
+Additional
+36.	ترقی پذیر ممالک قدرتی آفات سے سب سے زیادہ کیوں متاثر ہوتے ہیں؟
+37.	Explore the importance of rising temperature on our environment?
+Additional
+37.	ہمارے ماحول پر درجہ حرارت کے بڑھنے کے اثرات بیان کریں۔
+38.	Why floods are occurring frequently in Pakistan?
+Additional
+38.	پاکستان میں اکثر سیلاب کیوں آتے ہیں؟
+39.	How can we preserve our resources?
+Additional
+39.	ہم اپنے وسائل کو کس طرح بچا سکتے ہیں؟
+6.1: Changing Earth And Human Activities
+40.	Discuss different landforms formed by coastal erosion.
+Exercise
+40.	ساحلی کٹاؤ کےبننے والی زمینی اشکال پر تبادلہ خیال کریں۔
+41.	What are the different types of weathering? Explain each of them.
+Exercise
+41.	عمل فرسودگی کی مختلف اقسام کون سی ہیں؟ ہر ایک کی وضاحت کریں۔
+42.	Elaborate the difference between water erosion and wind erosion.
+Exercise
+42.	آب کٹاؤ اور ہوائی کٹاؤ کےفرق کو واضح کریں۔
+43.	Evaluate the role of human activities in erosion of land.
+Exercise
+43.	زمینی کٹاؤ میں انسانی سرگرمیوں کے کردار کا جائزہ لیں۔
+44.	How weathering and erosion are important in formation of soil?
+Additional
+44.	مٹی کی تشکیل میں عمل فرسودگی اور کٹاؤ کیسے اہم ہیں؟
+45.	How we stop deforestation?
+Additional
+45.	ہم جنگلات کی کٹائی کو کیسے روک سکتے ہیں؟
+46.	Why our coastal areas are polluting?
+Additional
+46.	ہمارے ساحلی علاقے کیوں آلودہ ہورہے ہیں؟
+
+

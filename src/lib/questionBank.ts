@@ -12,6 +12,7 @@ export type PaperQuestion = {
   type: string;
   text: string;
   urdu: string;
+  imageFile?: string | null;
 };
 
 export type QuestionSelectionScope = {
@@ -112,6 +113,7 @@ const QUESTION_TYPE_VALUE_MAP: Record<string, string> = {
   "question and answers": "questions_answers",
   "questions and answers": "questions_answers",
   "translate into urdu paragraph": "translate_into_urdu_paragraph",
+  "translate into urdu sentences": "translate_into_urdu_sentences",
   "fill in tha blanks": "fill_in_tha_blanks",
   "fill in the blanks": "fill_in_tha_blanks",
   "idioms sentences": "ilfaz_ko_jumlo_mein_istamal",
@@ -123,8 +125,31 @@ const QUESTION_TYPE_VALUE_MAP: Record<string, string> = {
   "explanation of verses": "ashaar_ki_tashreeh",
   "correct meaning of underlined word": "correct_meaning_underlined",
   "tick correct spelling": "tick_correct_spelling",
+  "tick correct spellings": "tick_correct_spellings",
   "tick correct grammar": "tick_correct_grammar",
   "tick correct according to grammar": "tick_correct_grammar",
+  "match columns": "match_columns",
+  essays: "essays",
+  "singular plural": "wahid_jama",
+  "wahid jama": "wahid_jama",
+  "jumlo ki darustagi": "jumlo_ki_darustagi",
+  "direct and indirect": "direct_and_indirect",
+  homophones: "homophones",
+  "true false statements": "true_false_statements",
+  "true false": "true_false_statements",
+  genders: "genders",
+  "poem stanzas": "poem_stanzas",
+  "zarb ul imsal": "zarb_ul_imsal",
+  "zarb ul misaal": "zarb_ul_misaal",
+  "words into sentences": "words_into_sentences",
+  "missing letters": "missing_letters",
+  "sabqe lahqe": "sabqe_lahqe",
+  pointing: "pointing",
+  "punctuate the paragraph": "punctuate_the_paragraph",
+  "ilfaz mutaradif": "ilfaz_mutaradif",
+  synonyms: "ilfaz_mutaradif",
+  "ilfaz mutazad": "ilfaz_mutazad",
+  antonyms: "ilfaz_mutazad",
   questionandanswers: "questions_answers",
   translateintourduparagraph: "translate_into_urdu_paragraph",
   fillintheblanks: "fill_in_tha_blanks",
@@ -165,7 +190,27 @@ export const normalizeQuestionTypeValue = (value: string): string | null => {
     "ashaar_ki_tashreeh",
     "correct_meaning_underlined",
     "tick_correct_spelling",
+    "tick_correct_spellings",
     "tick_correct_grammar",
+    "match_columns",
+    "essays",
+    "translate_into_urdu_sentences",
+    "wahid_jama",
+    "jumlo_ki_darustagi",
+    "direct_and_indirect",
+    "homophones",
+    "true_false_statements",
+    "genders",
+    "poem_stanzas",
+    "zarb_ul_imsal",
+    "zarb_ul_misaal",
+    "words_into_sentences",
+    "missing_letters",
+    "sabqe_lahqe",
+    "pointing",
+    "punctuate_the_paragraph",
+    "ilfaz_mutaradif",
+    "ilfaz_mutazad",
   ]);
   return allowedValues.has(normalized) ? normalized : null;
 };
@@ -211,11 +256,7 @@ const getAuthHeaders = (): HeadersInit => {
   return headers;
 };
 
-export const getChapterNumber = (groupName: string, index: number): number => {
-  const engMatch = groupName.match(/(?:CHAP|UNIT|CHAPTER)\s*(\d+)/i);
-  if (engMatch) return Number(engMatch[1]);
-  const urduMatch = groupName.match(/نمبر\s*(\d+)/);
-  if (urduMatch) return Number(urduMatch[1]);
+export const getChapterNumber = (_groupName: string, index: number): number => {
   return index + 1;
 };
 

@@ -1,4 +1,5 @@
 import topicData from "./topicQuestionTypes.json";
+import oneToEightTypesData from "./topicWiseTypesOneToEight.json";
 
 /**
  * Map of subject name → topic/chapter key → list of available question types.
@@ -9,6 +10,11 @@ import topicData from "./topicQuestionTypes.json";
  */
 const topicQuestionTypesMap: Record<string, Record<string, string[]>> =
   topicData as Record<string, Record<string, string[]>>;
+
+const oneToEightTypesMap: Record<string, Record<string, string[]>> =
+  oneToEightTypesData as Record<string, Record<string, string[]>>;
+
+const ONE_TO_EIGHT_CLASSES = new Set(["ONE", "TWO", "THREE", "FOUR", "5TH", "6TH", "7TH", "8TH"]);
 
 /**
  * Map from report display name → app internal value used in the question-type dropdown.
@@ -47,9 +53,28 @@ const REPORT_TYPE_TO_APP_VALUE: Record<string, string> = {
   "application writing": "darkhaastein",
   "question and answers": "questions_answers",
   "questions and answers": "questions_answers",
+  "antonyms": "ilfaz_mutazad",
+  "synonyms": "ilfaz_mutaradif",
   "translate into urdu paragraph": "translate_into_urdu_paragraph",
   "writing paragraphs": "writing_paragraphs",
   "tick correct spellings": "tick_correct_spellings",
+  "fill in the blanks": "fill_in_tha_blanks",
+  "fill in th blanks": "fill_in_tha_blanks",
+  "match columns": "match_columns",
+  "match colums": "match_columns",
+  "essay writing": "essays",
+  "letter writing": "letters",
+  "application writing": "darkhaastein",
+  "true false statements": "true_false_statements",
+  "theme": "markazi_khayal",
+  "pointing": "pointing",
+  "homophones": "homophones",
+  "genders": "genders",
+  "sabqe lahqe": "sabqe_lahqe",
+  "missing letters": "missing_letters",
+  "translate into urdu sentences": "translate_into_urdu_sentences",
+  "zarb ul imsal": "zarb_ul_imsal",
+  "zarb ul misaal": "zarb_ul_misaal",
   "correct meaning of underline word": "correct_meaning_of_underline_word",
   "tick correct form of verb": "tick_correct_form_of_verb",
   "tick correct according to grammer": "tick_correct_according_to_grammer",
@@ -157,29 +182,56 @@ export const getAvailableQuestionTypesForTopics = (
   selectedChapters: string[],
   className: string
 ): string[] | null => {
-  // Topic-wise types data currently covers 9th class only.
   const normalizedClass = (className || "").toUpperCase().replace(/\s+/g, "");
-  if (!normalizedClass.includes("9TH")) return null;
 
-  const resolvedSubject = SUBJECT_ALIASES[subject] || subject;
-  let subjectMap = topicQuestionTypesMap[resolvedSubject];
-  if (!subjectMap) {
-    const normalizedSubject = normalizeSubject(subject);
-    const matchingKey = Object.keys(topicQuestionTypesMap).find((key) => normalizeSubject(key) === normalizedSubject);
-    if (matchingKey) {
-      subjectMap = topicQuestionTypesMap[matchingKey];
+  let subjectMap: Record<string, string[]> | undefined;
+
+  if (ONE_TO_EIGHT_CLASSES.has(normalizedClass)) {
+    // PTB classes 1-8
+    const directKey = `${subject}-${normalizedClass}-PTB`;
+    subjectMap = oneToEightTypesMap[directKey];
+    if (!subjectMap) {
+      const resolvedSubject = SUBJECT_ALIASES[subject] || subject;
+      subjectMap = oneToEightTypesMap[`${resolvedSubject}-${normalizedClass}-PTB`];
     }
-  }
-  if (!subjectMap) {
-    const normalizedSubject = normalizeSubject(subject);
-    const matchingKey = Object.keys(topicQuestionTypesMap).find((key) => {
-      const normalizedKey = normalizeSubject(key);
-      return normalizedKey.includes(normalizedSubject) || normalizedSubject.includes(normalizedKey);
-    });
-    if (matchingKey) {
-      subjectMap = topicQuestionTypesMap[matchingKey];
+    if (!subjectMap) {
+      const normalizedSubject = normalizeSubject(subject);
+      const classSuffix = `-${normalizedClass}-PTB`;
+      const matchingKey = Object.keys(oneToEightTypesMap).find((k) => {
+        if (!k.endsWith(classSuffix)) return false;
+        const keySubj = k.slice(0, k.length - classSuffix.length);
+        const normKeySubj = normalizeSubject(keySubj);
+        return normKeySubj === normalizedSubject ||
+               normKeySubj.includes(normalizedSubject) ||
+               normalizedSubject.includes(normKeySubj);
+      });
+      if (matchingKey) subjectMap = oneToEightTypesMap[matchingKey];
     }
+  } else if (normalizedClass.includes("9TH") || normalizedClass.includes("1ST")) {
+    // 9th class and 1st year
+    const resolvedSubject = SUBJECT_ALIASES[subject] || subject;
+    subjectMap = topicQuestionTypesMap[resolvedSubject];
+    if (!subjectMap) {
+      const normalizedSubject = normalizeSubject(subject);
+      const matchingKey = Object.keys(topicQuestionTypesMap).find((key) => normalizeSubject(key) === normalizedSubject);
+      if (matchingKey) {
+        subjectMap = topicQuestionTypesMap[matchingKey];
+      }
+    }
+    if (!subjectMap) {
+      const normalizedSubject = normalizeSubject(subject);
+      const matchingKey = Object.keys(topicQuestionTypesMap).find((key) => {
+        const normalizedKey = normalizeSubject(key);
+        return normalizedKey.includes(normalizedSubject) || normalizedSubject.includes(normalizedKey);
+      });
+      if (matchingKey) {
+        subjectMap = topicQuestionTypesMap[matchingKey];
+      }
+    }
+  } else {
+    return null;
   }
+
   if (!subjectMap) return null;
 
   if (!selectedChapters || selectedChapters.length === 0) return null;

@@ -1,0 +1,5470 @@
+{
+  "اردو لازمی-ONE-PTB": [
+    {
+      "name": "سبق نمبر 1: حمد",
+      "chapters": [
+        "حمد"
+      ]
+    },
+    {
+      "name": "سبق نمبر 2: نعت",
+      "chapters": [
+        "نعت"
+      ]
+    },
+    {
+      "name": "سبق نمبر 3: آخِری رَسُولﷺ",
+      "chapters": [
+        "آخِری رَسُولﷺ"
+      ]
+    },
+    {
+      "name": "سبق نمبر 4: آؤ مِل کر کام کریں",
+      "chapters": [
+        "آؤ مِل کر کام کریں",
+        "جائزہ ۔ ۱"
+      ]
+    },
+    {
+      "name": "سبق نمبر 5: کِرَن کا گھرانا",
+      "chapters": [
+        "کِرَن کا گھرانا"
+      ]
+    },
+    {
+      "name": "سبق نمبر 6: میرا سکول",
+      "chapters": [
+        "میرا سکول"
+      ]
+    },
+    {
+      "name": "سبق نمبر 7: بات چِیت کے آداب",
+      "chapters": [
+        "بات چِیت کے آداب"
+      ]
+    },
+    {
+      "name": "سبق نمبر 8: نَنّھے اِقبالؒ",
+      "chapters": [
+        "نَنّھے اِقبالؒ",
+        "جائزہ ۔ ۲"
+      ]
+    },
+    {
+      "name": "سبق نمبر 9: باغ کی سَیر",
+      "chapters": [
+        "باغ کی سَیر"
+      ]
+    },
+    {
+      "name": "سبق نمبر 10: آج کیا پکائیں؟",
+      "chapters": [
+        "آج کیا پکائیں؟"
+      ]
+    },
+    {
+      "name": "سبق نمبر 11: دیس ہمارا پاکِستان",
+      "chapters": [
+        "دیس ہمارا پاکِستان"
+      ]
+    },
+    {
+      "name": "سبق نمبر 12: میں کیا پہنُوں؟",
+      "chapters": [
+        "میں کیا پہنُوں؟",
+        "جائزہ ۔ ۳"
+      ]
+    },
+    {
+      "name": "سبق نمبر 13: چَوک میں لگی بَتِّیاں",
+      "chapters": [
+        "چَوک میں لگی بَتِّیاں"
+      ]
+    },
+    {
+      "name": "سبق نمبر 14: دَھنَک",
+      "chapters": [
+        "دَھنَک"
+      ]
+    },
+    {
+      "name": "سبق نمبر 15: نیک بنو، نیکی پھیلاؤ",
+      "chapters": [
+        "نیک بنو، نیکی پھیلاؤ",
+        "جائزہ ۔ ۴",
+        "اُردو قاعدے کے مشمولات"
+      ]
+    },
+    {
+      "name": "سبق:9",
+      "chapters": [
+        "سبق:9"
+      ]
+    },
+    {
+      "name": "سبق:11",
+      "chapters": [
+        "سبق:11"
+      ]
+    },
+    {
+      "name": "سبق:13",
+      "chapters": [
+        "سبق:13"
+      ]
+    },
+    {
+      "name": "سبق:14",
+      "chapters": [
+        "سبق:14"
+      ]
+    },
+    {
+      "name": "سبق:16",
+      "chapters": [
+        "سبق:16"
+      ]
+    },
+    {
+      "name": "سبق:18",
+      "chapters": [
+        "سبق:18"
+      ]
+    },
+    {
+      "name": "سبق:19",
+      "chapters": [
+        "سبق:19"
+      ]
+    },
+    {
+      "name": "سبق:21",
+      "chapters": [
+        "سبق:21"
+      ]
+    },
+    {
+      "name": "سبق:23",
+      "chapters": [
+        "سبق:23"
+      ]
+    },
+    {
+      "name": "سبق:24",
+      "chapters": [
+        "سبق:24"
+      ]
+    },
+    {
+      "name": "سبق:25",
+      "chapters": [
+        "سبق:25"
+      ]
+    },
+    {
+      "name": "سبق:26",
+      "chapters": [
+        "سبق:26"
+      ]
+    },
+    {
+      "name": "سبق:31",
+      "chapters": [
+        "سبق:31"
+      ]
+    },
+    {
+      "name": "سبق:32",
+      "chapters": [
+        "سبق:32"
+      ]
+    },
+    {
+      "name": "سبق:33",
+      "chapters": [
+        "سبق:33"
+      ]
+    },
+    {
+      "name": "سبق:34",
+      "chapters": [
+        "سبق:34"
+      ]
+    },
+    {
+      "name": "سبق:35",
+      "chapters": [
+        "سبق:35"
+      ]
+    },
+    {
+      "name": "سبق:37",
+      "chapters": [
+        "سبق:37"
+      ]
+    },
+    {
+      "name": "سبق:38",
+      "chapters": [
+        "سبق:38"
+      ]
+    },
+    {
+      "name": "سبق:39",
+      "chapters": [
+        "سبق:39"
+      ]
+    }
+  ],
+  "General Knowledge-ONE-PTB": [
+    {
+      "name": "باب نمبر 1: میرا تعارف",
+      "chapters": [
+        ".1.1 میرا تعارف"
+      ]
+    },
+    {
+      "name": "باب نمبر 2: میرا جسم",
+      "chapters": [
+        ".2.1 میرا جسم"
+      ]
+    },
+    {
+      "name": "باب نمبر 3: صحت و صفائی",
+      "chapters": [
+        ".3.1 صحت و صفائی"
+      ]
+    },
+    {
+      "name": "باب نمبر 4: میرا خاندان اور میرے دوست",
+      "chapters": [
+        ".4.1 میرا خاندان اور میرے دوست"
+      ]
+    },
+    {
+      "name": "باب نمبر 5: کھیل اور قوانین",
+      "chapters": [
+        ".5.1 کھیل اور قوانین"
+      ]
+    },
+    {
+      "name": "باب نمبر 6: ہمارا علاقہ",
+      "chapters": [
+        ".6.1 ہمارا علاقہ"
+      ]
+    },
+    {
+      "name": "باب نمبر 7: عبادت گاہیں",
+      "chapters": [
+        ".7.1 عبادت گاہیں"
+      ]
+    },
+    {
+      "name": "باب نمبر 8: ہمارا پیارا وطن پاکستان",
+      "chapters": [
+        ".8.1 ہمارا پیارا وطن پاکستان"
+      ]
+    },
+    {
+      "name": "باب نمبر 9: میرا سکول",
+      "chapters": [
+        ".9.1 میرا سکول"
+      ]
+    },
+    {
+      "name": "باب نمبر 10: ذرائع آمدرفت",
+      "chapters": [
+        ".10.1 ذرائع آمدرفت"
+      ]
+    },
+    {
+      "name": "باب نمبر 11: ٹریفک قوانین",
+      "chapters": [
+        ".11.1 ٹریفک قوانین"
+      ]
+    },
+    {
+      "name": "باب نمبر 12: اچھے اخلاق و عادات",
+      "chapters": [
+        ".12.1 اچھے اخلاق و عادات"
+      ]
+    },
+    {
+      "name": "باب نمبر 13: پودے اور جانور",
+      "chapters": [
+        ".13.1 پودے اور جانور"
+      ]
+    },
+    {
+      "name": "باب نمبر 14: زمین اور آسمان",
+      "chapters": [
+        ".14.1 زمین اور آسمان"
+      ]
+    }
+  ],
+  "Mathematics-ONE-PTB": [
+    {
+      "name": "CHAP 1: Whole Numbers",
+      "chapters": [
+        "1.1 Whole Numbers",
+        "1.2 Review Exercise"
+      ]
+    },
+    {
+      "name": "CHAP 2: Number Operations",
+      "chapters": [
+        "2.1 Addition",
+        "2.2 Substraction",
+        "2.3 Review Exercise"
+      ]
+    },
+    {
+      "name": "CHAP 3: Measurement",
+      "chapters": [
+        "3.1 Length",
+        "3.2 Mass",
+        "3.3 Review Exercise"
+      ]
+    },
+    {
+      "name": "CHAP 4: Money",
+      "chapters": [
+        "4.1 Money",
+        "4.2 Review Exercise"
+      ]
+    },
+    {
+      "name": "CHAP 5: Time",
+      "chapters": [
+        "5.1 Time",
+        "5.2 Review Exercise"
+      ]
+    },
+    {
+      "name": "CHAP 6: Geometry",
+      "chapters": [
+        "6.1 Shapes",
+        "6.2 Position",
+        "6.3 Review Exercise"
+      ]
+    }
+  ],
+  "English-ONE-PTB": [
+    {
+      "name": "CHAP 1: Time to Recall",
+      "chapters": [
+        "1.1 Time to Recall"
+      ]
+    },
+    {
+      "name": "CHAP 2: My Family and I",
+      "chapters": [
+        "2.1 My Family and I"
+      ]
+    },
+    {
+      "name": "CHAP 3: Cobbler, Cobbler",
+      "chapters": [
+        "3.1 Cobbler, Cobbler"
+      ]
+    },
+    {
+      "name": "Review 1",
+      "chapters": [
+        "Review 1"
+      ]
+    },
+    {
+      "name": "Review 1",
+      "chapters": []
+    },
+    {
+      "name": "CHAP 4: Let's have Fun!",
+      "chapters": [
+        "4.1 Let's have Fun!"
+      ]
+    },
+    {
+      "name": "CHAP 5: Sharing is Caring",
+      "chapters": [
+        "5.1 Sharing is Caring"
+      ]
+    },
+    {
+      "name": "Review 2",
+      "chapters": [
+        "Review 2"
+      ]
+    },
+    {
+      "name": "Review 2",
+      "chapters": []
+    },
+    {
+      "name": "CHAP 6: Blessings of Allah سبحانہ و تعالیٰ",
+      "chapters": [
+        "6.1 Blessings of Allah سبحانہ و تعالیٰ"
+      ]
+    },
+    {
+      "name": "CHAP 7: Classroom Manners",
+      "chapters": [
+        "7.1 Classroom Manners"
+      ]
+    },
+    {
+      "name": "CHAP 8: Nature is Beautiful",
+      "chapters": [
+        "8.1 Nature is Beautiful"
+      ]
+    },
+    {
+      "name": "CHAP 9: A Greeting Card",
+      "chapters": [
+        "9.1 A Greeting Card"
+      ]
+    },
+    {
+      "name": "Review 3",
+      "chapters": [
+        "Review 3"
+      ]
+    },
+    {
+      "name": "Review 3",
+      "chapters": []
+    },
+    {
+      "name": "CHAP 10: The Hare and the Tortoise",
+      "chapters": [
+        "10.1 The Hare and the Tortoise"
+      ]
+    },
+    {
+      "name": "CHAP 11: Love Animals",
+      "chapters": [
+        "11.1 Love Animals"
+      ]
+    },
+    {
+      "name": "Review 4",
+      "chapters": [
+        "Review 4"
+      ]
+    },
+    {
+      "name": "Review 4",
+      "chapters": []
+    }
+  ],
+  "اسلامیات لازمی-ONE-PTB": [
+    {
+      "name": "باب نمبر 2: ایمانیات و عبادات",
+      "chapters": [
+        "ایمانیات: توحید کا تعارف",
+        "ایمانیات: نبوت و رِسالت",
+        "عبادات: مسجد",
+        "عبادات: اذان",
+        "عبادات: نماز"
+      ]
+    },
+    {
+      "name": "باب نمبر 3: سیرتِ طیبہﷺ",
+      "chapters": [
+        "باب نمبر 3: سیرتِ طیبہﷺ"
+      ]
+    },
+    {
+      "name": "ہمارے پیارے نبی حضرت محمد رسول اللہ خاتم النبیینﷺ",
+      "chapters": [
+        "حضرت محمد مصطفیٰ خاتم النبیینﷺ کے اَخلاق حسنہ"
+      ]
+    },
+    {
+      "name": "باب نمبر 4: اَخلاق و آداب",
+      "chapters": [
+        "اچھے اَخلاق",
+        "سلام کرنا"
+      ]
+    },
+    {
+      "name": "باب نمبر 5: ہدایت کے سر چشمے اور مشاہیرِ اسلام",
+      "chapters": [
+        "انبیائے کرام علیھم السّلام کا تعارف"
+      ]
+    }
+  ],
+  "اردو لازمی-TWO-PTB": [
+    {
+      "name": "سبق نمبر 1: حمد (نظم)",
+      "chapters": [
+        "حمد (نظم)"
+      ]
+    },
+    {
+      "name": "سبق نمبر 2: نعت (نظم)",
+      "chapters": [
+        "نعت (نظم)"
+      ]
+    },
+    {
+      "name": "سبق نمبر 3: پیارے رسول خاتم النبیینﷺ",
+      "chapters": [
+        "پیارے رسول خاتم النبیینﷺ"
+      ]
+    },
+    {
+      "name": "سبق نمبر 4: بانو کا طوطا",
+      "chapters": [
+        "بانو کا طوطا"
+      ]
+    },
+    {
+      "name": "سبق نمبر 5: سمجھ دار بَچَّہ (سنانے کا سبق)",
+      "chapters": [
+        "سمجھ دار بَچَّہ (سنانے کا سبق)",
+        "جائزہ ۔ ۱"
+      ]
+    },
+    {
+      "name": "سبق نمبر 6: چڑیا اور چُوہا",
+      "chapters": [
+        "چڑیا اور چُوہا"
+      ]
+    },
+    {
+      "name": "سبق نمبر 7: تارے (نظم)",
+      "chapters": [
+        "تارے"
+      ]
+    },
+    {
+      "name": "سبق نمبر 8: قائدِ اعظمؒ",
+      "chapters": [
+        "قائدِ اعظمؒ"
+      ]
+    },
+    {
+      "name": "سبق نمبر 9: سیر ایک شہر کی (سُنانے کی کہانی)",
+      "chapters": [
+        "سیر ایک شہر کی (سُنانے کی کہانی)"
+      ]
+    },
+    {
+      "name": "سبق نمبر 10: محنت کرنے والے",
+      "chapters": [
+        "محنت کرنے والے",
+        "جائزہ ۔ ۲"
+      ]
+    },
+    {
+      "name": "سبق نمبر 11: آؤ بجلی بچائیں (سُنانے کا سبق)",
+      "chapters": [
+        "آؤ بجلی بچائیں (سُنانے کا سبق)"
+      ]
+    },
+    {
+      "name": "سبق نمبر 12: میرا پیارا وطن (نظم)",
+      "chapters": [
+        "میرا پیارا وطن (نظم)"
+      ]
+    },
+    {
+      "name": "سبق نمبر 13: آؤ مل کے درخت لگائیں",
+      "chapters": [
+        "آؤ مل کے درخت لگائیں"
+      ]
+    },
+    {
+      "name": "سبق نمبر 14: صفائی کا رکھیں خیال",
+      "chapters": [
+        "صفائی کا رکھیں خیال"
+      ]
+    },
+    {
+      "name": "سبق نمبر 15: ساری دُنیا اپنا گھر ہے (نظم)",
+      "chapters": [
+        "ساری دُنیا اپنا گھر ہے (نظم)",
+        "جائزہ ۔ ۳"
+      ]
+    },
+    {
+      "name": "سبق نمبر 16: علامہ محمد اقبالؒ (سنانے کی کہانی)",
+      "chapters": [
+        "علامہ محمد اقبالؒ (سنانے کی کہانی)"
+      ]
+    },
+    {
+      "name": "سبق نمبر 17: کھیلیں آنکھ مچولی",
+      "chapters": [
+        "کھیلیں آنکھ مچولی"
+      ]
+    },
+    {
+      "name": "سبق نمبر 18: دوستی ہو تو ایسی",
+      "chapters": [
+        "دوستی ہو تو ایسی"
+      ]
+    },
+    {
+      "name": "سبق نمبر 19: صبح کی سیر (نظم)",
+      "chapters": [
+        "صبح کی سیر (نظم)"
+      ]
+    },
+    {
+      "name": "سبق نمبر 20: ایک سواری بڑی پیاری",
+      "chapters": [
+        "ایک سواری بڑی پیاری"
+      ]
+    },
+    {
+      "name": "سبق نمبر 21: چلو میلا دیکھیں (سنانے کی کہانی)",
+      "chapters": [
+        "چلو میلا دیکھیں (سنانے کی کہانی)"
+      ]
+    },
+    {
+      "name": "سبق نمبر 22: ٹوٹ بٹوٹ کی موٹر کار (نظم)",
+      "chapters": [
+        "ٹوٹ بٹوٹ کی موٹر کار (نظم)",
+        "جائزہ ۔ ۴"
+      ]
+    },
+    {
+      "name": "(اُردو(ب",
+      "chapters": [
+        "خط",
+        "درخواست",
+        "مضمون",
+        "کہانیاں"
+      ]
+    }
+  ],
+  "اسلامیات لازمی-TWO-PTB": [
+    {
+      "name": "باب نمبر 2: ایمانیات و عبادات",
+      "chapters": [
+        "ایمانیات: آسمانی کتابوں پر ایمان",
+        "ایمانیات: فرشتوں پر ایمان",
+        "ایمانیات: آخرت",
+        "عبادات: روزہ",
+        "عبادات: عیدین و اسلامی تہوار"
+      ]
+    },
+    {
+      "name": "باب نمبر 3: سیرتِ طیّبہﷺ",
+      "chapters": [
+        "نبی کریمﷺ کی محبت و اطاعت",
+        "حضرت محمد رسول اللہ خاتم النبیینﷺ کے اخلاق حسنہ"
+      ]
+    },
+    {
+      "name": "باب نمبر 4: اخلاق و آداب",
+      "chapters": [
+        "اسلامی آدابِ زندگی",
+        "بڑوں کا ادب",
+        "جانوروں سے اچھا سلوک"
+      ]
+    },
+    {
+      "name": "باب نمبر 5: ہدایت کے سر چشمے اور مشاہیرِ اسلام",
+      "chapters": [
+        "انبیائے کرام علیھم السّلام"
+      ]
+    }
+  ],
+  "واقفیت عامہ-TWO-PTB": [
+    {
+      "name": "سبق نمبر 1: ہمارا وطن پاکستان",
+      "chapters": [
+        "ہمارا وطن پاکستان"
+      ]
+    },
+    {
+      "name": "سبق نمبر 2: دیہات اور شہر",
+      "chapters": [
+        "دیہات اور شہر"
+      ]
+    },
+    {
+      "name": "سبق نمبر 3: حقوق و فرائض",
+      "chapters": [
+        "حقوق و فرائض"
+      ]
+    },
+    {
+      "name": "سبق نمبر 4: مذہبی تہوار",
+      "chapters": [
+        "مذہبی تہوار"
+      ]
+    },
+    {
+      "name": "سبق نمبر 5: قدرتی ماحول اور وسائل",
+      "chapters": [
+        "قدرتی ماحول اور وسائل"
+      ]
+    },
+    {
+      "name": "سبق نمبر 6: پانی",
+      "chapters": [
+        "پانی"
+      ]
+    },
+    {
+      "name": "سبق نمبر 7: پودے",
+      "chapters": [
+        "پودے"
+      ]
+    },
+    {
+      "name": "سبق نمبر 8: جانور",
+      "chapters": [
+        "جانور"
+      ]
+    },
+    {
+      "name": "سبق نمبر 9: زراعت اور مویشی",
+      "chapters": [
+        "زراعت اور مویشی"
+      ]
+    },
+    {
+      "name": "سبق نمبر 10: زمینی وسائل کی حفاظت",
+      "chapters": [
+        "زمینی وسائل کی حفاظت"
+      ]
+    },
+    {
+      "name": "سبق نمبر 11: حرارت اور روشنی",
+      "chapters": [
+        "حرارت اور روشنی"
+      ]
+    },
+    {
+      "name": "سبق نمبر 12: دوسروں کی مدد کرنا",
+      "chapters": [
+        "دوسروں کی مدد کرنا"
+      ]
+    },
+    {
+      "name": "سبق نمبر 13: پیشے",
+      "chapters": [
+        "پیشے"
+      ]
+    },
+    {
+      "name": "سبق نمبر 14: دوسروں کا احترام",
+      "chapters": [
+        "دوسروں کا احترام"
+      ]
+    },
+    {
+      "name": "سبق نمبر 15: عفو و درگزر",
+      "chapters": [
+        "عفو و درگزر"
+      ]
+    },
+    {
+      "name": "سبق نمبر 16: غیر جانب داری",
+      "chapters": [
+        "غیر جانب داری"
+      ]
+    }
+  ],
+  "Mathematics-TWO-PTB": [
+    {
+      "name": "Ch#1: Whole Numbers",
+      "chapters": [
+        ".1.1 Exercise 1",
+        ".1.2 Exercise 2",
+        ".1.3 Exercise 3",
+        ".1.4 Exercise 4",
+        "1 Review Exercise"
+      ]
+    },
+    {
+      "name": "Ch#2: Numbers Operation: Addition",
+      "chapters": [
+        ".2.1 Exercise 1",
+        ".2.2 Exercise 2",
+        ".2.3 Exercise 3",
+        ".1 Review Exercise"
+      ]
+    },
+    {
+      "name": "Ch#2: Numbers Operation: Subtraction",
+      "chapters": [
+        ".2.4 Exercise 1",
+        ".2.5 Exercise 2",
+        ".2.6 Exercise 3",
+        ".2.2 Review Exercise"
+      ]
+    },
+    {
+      "name": "Ch#2: Numbers Operation: Multiplication",
+      "chapters": [
+        ".2.7 Exercise 1",
+        ".2.8 Exercise 2",
+        ".2.3 Review Exercise"
+      ]
+    },
+    {
+      "name": "Ch#2: Numbers Operation : Division",
+      "chapters": [
+        ".2.9 Exercise 1",
+        ".2.4 Review Exercise"
+      ]
+    },
+    {
+      "name": "Ch#3: Fractions",
+      "chapters": [
+        "3.1 Exercise 1",
+        "3.2 Exercise 2",
+        "3 Review Exercise"
+      ]
+    },
+    {
+      "name": "Ch#4: Measurement (Length , Mass , Capacity)",
+      "chapters": [
+        "4.1 Exercise 1",
+        "4.2 Exercise 2",
+        "4.3 Exercise 3",
+        "4.4 Exercise 4",
+        "4.5 Exercise 5",
+        "4.6 Exercise 6",
+        "4 Review Exercise"
+      ]
+    },
+    {
+      "name": "Ch#5: Time",
+      "chapters": [
+        "5.1 Reading and Writing the Time",
+        "5.2 Usage of a.m and p.m in Time",
+        "5.3 Drawing Hands of the Clock",
+        "5.4 Solar Calendar",
+        "5.5 Lunar Calendar",
+        "Review Exercise"
+      ]
+    },
+    {
+      "name": "Ch#6 : Geometry",
+      "chapters": [
+        "6.1 Exercise 1",
+        "6.2 Exercise 2",
+        "6.3 Exercise 3",
+        "6.4 Exercise 4",
+        "6.5 Exercise 5",
+        "6.6 Exercise 6"
+      ]
+    }
+  ],
+  "English-TWO-PTB": [
+    {
+      "name": "CHAP 1: A Tiny Creature",
+      "chapters": [
+        "A Tiny Creature"
+      ]
+    },
+    {
+      "name": "CHAP 2: My Home and City",
+      "chapters": [
+        "My Home and City"
+      ]
+    },
+    {
+      "name": "CHAP 3: Let's Plant Trees",
+      "chapters": [
+        "Let's Plant Trees"
+      ]
+    },
+    {
+      "name": "Review 1",
+      "chapters": [
+        "Review 1"
+      ]
+    },
+    {
+      "name": "Review 1",
+      "chapters": []
+    },
+    {
+      "name": "CHAP 4: Bee on My Nose",
+      "chapters": [
+        "Bee on My Nose"
+      ]
+    },
+    {
+      "name": "CHAP 5: Attention!",
+      "chapters": [
+        "Attention"
+      ]
+    },
+    {
+      "name": "CHAP 6: Be Honest",
+      "chapters": [
+        "Be Honest"
+      ]
+    },
+    {
+      "name": "Review 2",
+      "chapters": [
+        "Review 2"
+      ]
+    },
+    {
+      "name": "Review 2",
+      "chapters": []
+    },
+    {
+      "name": "CHAP 7: Sports Day",
+      "chapters": [
+        "Sports Day"
+      ]
+    },
+    {
+      "name": "CHAP 8: My School",
+      "chapters": [
+        "My School"
+      ]
+    },
+    {
+      "name": "CHAP 9: What a Good Deed",
+      "chapters": [
+        "What a Good Deed"
+      ]
+    },
+    {
+      "name": "Review 3",
+      "chapters": [
+        "Review 3"
+      ]
+    },
+    {
+      "name": "Review 3",
+      "chapters": []
+    },
+    {
+      "name": "CHAP 10: An Ant and a Dove",
+      "chapters": [
+        "An Ant and a Dove"
+      ]
+    },
+    {
+      "name": "CHAP 11: Love for Parents",
+      "chapters": [
+        "Love for Parents"
+      ]
+    },
+    {
+      "name": "CHAP 12: Seasons",
+      "chapters": [
+        "Seasons"
+      ]
+    },
+    {
+      "name": "Review 4",
+      "chapters": [
+        "Review 4"
+      ]
+    },
+    {
+      "name": "Review 4",
+      "chapters": []
+    },
+    {
+      "name": "English B",
+      "chapters": [
+        "Letter",
+        "Essay",
+        "Story",
+        "Application"
+      ]
+    }
+  ],
+  "اردو لازمی-THREE-PTB": [
+    {
+      "name": "سبق نمبر 1: حمد (نظم)",
+      "chapters": [
+        "حمد (نظم)",
+        "نمبر 2: نعت (نظم)",
+        "نعت (نظم)"
+      ]
+    },
+    {
+      "name": "سبق نمبر 3: بے مِثل ہے ذات رسولِ کریمﷺ کی",
+      "chapters": [
+        "بے مِثل ہے ذات رسولِ کریمﷺ کی"
+      ]
+    },
+    {
+      "name": "سبق نمبر 4: اگر میں نہ ہُوں تو",
+      "chapters": [
+        "اگر میں نہ ہُوں تو",
+        "جائزہ ۔ ۱"
+      ]
+    },
+    {
+      "name": "سبق نمبر 5: سب ہیں خاص",
+      "chapters": [
+        "سب ہیں خاص"
+      ]
+    },
+    {
+      "name": "سبق نمبر 6: چالاک لُومڑی اور چِنٹُو مُرغا (سنانے کا سبق)",
+      "chapters": [
+        "چالاک لُومڑی اور چِنٹُو مُرغا (سنانے کا سبق)"
+      ]
+    },
+    {
+      "name": "سبق نمبر 7: ہم کیوں بھول جاتے ہیں؟",
+      "chapters": [
+        "ہم کیوں بھول جاتے ہیں؟"
+      ]
+    },
+    {
+      "name": "سبق نمبر 8: شام (نظم)",
+      "chapters": [
+        "شام (نظم)"
+      ]
+    },
+    {
+      "name": "سبق نمبر 9: اللہ تعالیٰ کا اِنعام",
+      "chapters": [
+        "اللہ تعالیٰ کا اِنعام",
+        "جائزہ ۔ ۲"
+      ]
+    },
+    {
+      "name": "سبق نمبر 10: جس کا خواب تھا دِل کش",
+      "chapters": [
+        "جس کا خواب تھا دِل کش"
+      ]
+    },
+    {
+      "name": "سبق نمبر 11: چار انوکھے دوست",
+      "chapters": [
+        "چار انوکھے دوست"
+      ]
+    },
+    {
+      "name": "سبق نمبر 12: ہم ایک ہیں (سُنانے کا سبق)",
+      "chapters": [
+        "ہم ایک ہیں (سُنانے کا سبق)"
+      ]
+    },
+    {
+      "name": "سبق نمبر 13: پاک وطن ہے پاکستان (نظم)",
+      "chapters": [
+        "پاک وطن ہے پاکستان (نظم)",
+        "جائزہ ۔ ۳"
+      ]
+    },
+    {
+      "name": "سبق نمبر 14: حضرت خدیجۃُ الکبریٰؓ",
+      "chapters": [
+        "حضرت خدیجۃُ الکبریٰؓ"
+      ]
+    },
+    {
+      "name": "سبق نمبر 15: وہ کون تھا؟",
+      "chapters": [
+        "وہ کون تھا؟"
+      ]
+    },
+    {
+      "name": "سبق نمبر 16: اور صِلہ مِل گیا",
+      "chapters": [
+        "اور صِلہ مِل گیا"
+      ]
+    },
+    {
+      "name": "سبق نمبر 17: ہم نے دیکھا ایک روبوٹ (نظم)",
+      "chapters": [
+        "ہم نے دیکھا ایک روبوٹ (نظم)"
+      ]
+    },
+    {
+      "name": "سبق نمبر 18: ملکۂ کوہ سار کی سیر",
+      "chapters": [
+        "ملکۂ کوہ سار کی سیر",
+        "جائزہ ۔ ۴"
+      ]
+    },
+    {
+      "name": "سبق نمبر 19: دِل دِل پاکستان",
+      "chapters": [
+        "دِل دِل پاکستان"
+      ]
+    },
+    {
+      "name": "سبق نمبر 20: قائدِ اعظمؒ (نظم)",
+      "chapters": [
+        "قائدِ اعظمؒ (نظم)"
+      ]
+    },
+    {
+      "name": "سبق نمبر 21: قُدرتی آفات (سنانے کا سبق)",
+      "chapters": [
+        "قُدرتی آفات (سنانے کا سبق)"
+      ]
+    },
+    {
+      "name": "سبق نمبر 22: بچے کی دُعا (نظم)",
+      "chapters": [
+        "بچے کی دُعا (نظم)",
+        "جائزہ ۔ ۵",
+        "حکومت پنجاب کی ڈینگی آگاہی مہم"
+      ]
+    },
+    {
+      "name": "(اُردو(ب",
+      "chapters": [
+        "خطوط نویسی",
+        "کہانیاں",
+        "مضمون نویسی",
+        "درخواستیں"
+      ]
+    }
+  ],
+  "General Knowledge-THREE-PTB": [
+    {
+      "name": "سبق نمبر 1: سورج",
+      "chapters": [
+        "سورج"
+      ]
+    },
+    {
+      "name": "سبق نمبر 2: وسائل اور ان کی اقسام",
+      "chapters": [
+        "وسائل اور ان کی اقسام"
+      ]
+    },
+    {
+      "name": "سبق نمبر 3: قدرتی وسائل کا تحفظ",
+      "chapters": [
+        "قدرتی وسائل کا تحفظ"
+      ]
+    },
+    {
+      "name": "سبق نمبر 4: قائدِاعظم محمد علی جناحؒ",
+      "chapters": [
+        "قائدِاعظم محمد علی جناحؒ"
+      ]
+    },
+    {
+      "name": "سبق نمبر 5: علامہ محمد اقبالؒ",
+      "chapters": [
+        "علامہ محمد اقبالؒ"
+      ]
+    },
+    {
+      "name": "سبق نمبر 6: جاندار اجسام میں تبدیلیاں",
+      "chapters": [
+        "جاندار اجسام میں تبدیلیاں"
+      ]
+    },
+    {
+      "name": "سبق نمبر 7: مسکن",
+      "chapters": [
+        "مسکن"
+      ]
+    },
+    {
+      "name": "سبق نمبر 8: خوراک",
+      "chapters": [
+        "خوراک"
+      ]
+    },
+    {
+      "name": "سبق نمبر 9: حکومت اور شہریوں کا کردار",
+      "chapters": [
+        "حکومت اور شہریوں کا کردار"
+      ]
+    },
+    {
+      "name": "سبق نمبر 10: اختلاف ختم کرنا",
+      "chapters": [
+        "اختلاف ختم کرنا"
+      ]
+    },
+    {
+      "name": "سبق نمبر 11: مادہ",
+      "chapters": [
+        "مادہ"
+      ]
+    },
+    {
+      "name": "سبق نمبر 12: توانائی اور اس کے ذرائع",
+      "chapters": [
+        "توانائی اور اس کے ذرائع"
+      ]
+    },
+    {
+      "name": "سبق نمبر 13: بدلتی دنیا",
+      "chapters": [
+        "بدلتی دنیا"
+      ]
+    },
+    {
+      "name": "سبق نمبر 14: ایجادات",
+      "chapters": [
+        "ایجادات"
+      ]
+    },
+    {
+      "name": "سبق نمبر 15: قوت اور مشینیں",
+      "chapters": [
+        "قوت اور مشینیں"
+      ]
+    },
+    {
+      "name": "سبق نمبر 16: حفاظت",
+      "chapters": [
+        "حفاظت"
+      ]
+    }
+  ],
+  "اسلامیات لازمی-THREE-PTB": [
+    {
+      "name": "باب نمبر 2: ایمانیات و عبادات",
+      "chapters": [
+        "ایمانیات: توحید کا تعارف",
+        "ایمانیات: نبوّت و رسالت",
+        "عبادات: کلمہ شہادت",
+        "عبادات: اذان",
+        "عبادات: وضو",
+        "عبادات: نماز",
+        "عبادات: قبلہ و مسجد"
+      ]
+    },
+    {
+      "name": "باب نمبر 3: سیرتِ طیبہﷺ",
+      "chapters": [
+        "حضرت محمد رسول اللہ خاتم النبیینﷺ کی حیات طیبہ (قبل از بعثت)",
+        "حضرت محمد رسول اللہ خاتم النبیینﷺ کی صداقت و امانت اور حسنِ معاملات",
+        "حضرت محمد رسول اللہ خاتم النبیینﷺ کی رواداری اور صبر تحمل"
+      ]
+    },
+    {
+      "name": "باب نمبر 4: اخلاق و آداب",
+      "chapters": [
+        "سچ کی اہمیت",
+        "گُفتگُو کے آداب"
+      ]
+    },
+    {
+      "name": "باب نمبر 5: حُسنِ معاملات اور معاشیات",
+      "chapters": [
+        "باہمی تعلقات"
+      ]
+    },
+    {
+      "name": "باب نمبر 6: ہدایت کے سر چشمے اور مشاہیرِ اسلام",
+      "chapters": [
+        "حضرت آدمؑ",
+        "حضرت نوحؑ",
+        "خلیفہ اوّل حضرت ابوبکر صدیقؓ"
+      ]
+    },
+    {
+      "name": "باب نمبر 7: اسلامی تعلیمات اور عصرِ حاضر کے تقاضے",
+      "chapters": [
+        "صحت و تن درستی"
+      ]
+    }
+  ],
+  "English-THREE-PTB": [
+    {
+      "name": "CHAP 1: All are Welcome",
+      "chapters": [
+        "All Are Welcome"
+      ]
+    },
+    {
+      "name": "CHAP 2: Gifts of Nature",
+      "chapters": [
+        "Gifts of Nature"
+      ]
+    },
+    {
+      "name": "CHAP 3: The People I Love",
+      "chapters": [
+        "The People I Love"
+      ]
+    },
+    {
+      "name": "CHAP 4: Kindness to Children",
+      "chapters": [
+        "Kindness to Children",
+        "Review-1"
+      ]
+    },
+    {
+      "name": "Review 1",
+      "chapters": [
+        "Review 1"
+      ]
+    },
+    {
+      "name": "CHAP 5: Road Safety",
+      "chapters": [
+        "Road Safety"
+      ]
+    },
+    {
+      "name": "CHAP 6: The Day of Silence",
+      "chapters": [
+        "The Day of Silence"
+      ]
+    },
+    {
+      "name": "CHAP 7: I Like to Play",
+      "chapters": [
+        "I Like to Play"
+      ]
+    },
+    {
+      "name": "CHAP 8: Saving Resources",
+      "chapters": [
+        "Saving Resources",
+        "Review-2"
+      ]
+    },
+    {
+      "name": "Review 2",
+      "chapters": [
+        "Review 2"
+      ]
+    },
+    {
+      "name": "CHAP 9: My Culture - My Pride",
+      "chapters": [
+        "My Culture-My Pride"
+      ]
+    },
+    {
+      "name": "CHAP 10: Our Family Picnic",
+      "chapters": [
+        "Our Family Picnic"
+      ]
+    },
+    {
+      "name": "CHAP 11: Healthy Habits",
+      "chapters": [
+        "Healthy Habits",
+        "Review-3"
+      ]
+    },
+    {
+      "name": "Review 3",
+      "chapters": [
+        "Review 3"
+      ]
+    },
+    {
+      "name": "English B",
+      "chapters": [
+        "Letter",
+        "Essay",
+        "Story",
+        "Application"
+      ]
+    }
+  ],
+  "Mathematics-THREE-PTB": [
+    {
+      "name": "UNIT 1: Whole Numbers",
+      "chapters": [
+        "1.1 Exercise 1",
+        "1.2 Exercise 2",
+        "1.3 Exercise 3",
+        "1.4 Exercise 4",
+        "1.5 Exercise 5",
+        "1.6 Exercise 6",
+        "Review Exercise"
+      ]
+    },
+    {
+      "name": "UNIT 2: Number Operations",
+      "chapters": [
+        "2.1 Exercise 1",
+        "2.2 Exercise 2",
+        "2.3 Exercise 3",
+        "2.4 Exercise 4",
+        "2.5 Exercise 5"
+      ]
+    },
+    {
+      "name": "UNIT 3: Fractions",
+      "chapters": [
+        "3.1 Exercise 1",
+        "3.2 Exercise 2",
+        "3.4 Exercise 4",
+        "3.5 Exercise 5",
+        "3.6 Exercise 6",
+        "3.3 Exercise 3"
+      ]
+    },
+    {
+      "name": "UNIT 4: Measurement (Length , Mass ,Capacity)",
+      "chapters": [
+        "4.1 Exercise 1",
+        "4.2 Exercise 2",
+        "4.3 Exercise 3",
+        "4.4 Exercise 4",
+        "4.5 Exercise 5",
+        "4.6 Exercise 6"
+      ]
+    },
+    {
+      "name": "UNIT 5: Measurement (Time)",
+      "chapters": [
+        "5.1 Exercise 1",
+        "5.2 Exercise 2",
+        "5.3 Exercise 3",
+        "5.4 Exercise 4"
+      ]
+    },
+    {
+      "name": "UNIT 6: Geometry",
+      "chapters": [
+        "6.1 Exercise 1",
+        "6.2 Exercise 2",
+        "6.3 Exercise 3",
+        "6.4 Exercise 4"
+      ]
+    },
+    {
+      "name": "UNIT 7: Data Handling",
+      "chapters": [
+        "7.1 Exercise 1",
+        "7.2 Exercise 2"
+      ]
+    }
+  ],
+  "English-FOUR-PTB": [
+    {
+      "name": "CHAP 1: Great Caliphs of Islam",
+      "chapters": [
+        "Great Caliphs of Islam"
+      ]
+    },
+    {
+      "name": "CHAP 2: Beauty of Nature",
+      "chapters": [
+        "Beauty Of Nature"
+      ]
+    },
+    {
+      "name": "CHAP 3: The Journey of Chocolate",
+      "chapters": [
+        "The Journey of Chocolate",
+        "Review-1",
+        "Review -1"
+      ]
+    },
+    {
+      "name": "CHAP 4: The Pride of Pakistan",
+      "chapters": [
+        "The Pride of Pakistan"
+      ]
+    },
+    {
+      "name": "CHAP 5: Thank you, Lord",
+      "chapters": [
+        "Thank you, Lord"
+      ]
+    },
+    {
+      "name": "CHAP 6: Valuing Others",
+      "chapters": [
+        "Valuing Others",
+        "Review-2"
+      ]
+    },
+    {
+      "name": "CHAP 7: Colours of Pakistan",
+      "chapters": [
+        "Colours of Pakistan"
+      ]
+    },
+    {
+      "name": "CHAP 8: Good Study Habits",
+      "chapters": [
+        "Good Study Habits"
+      ]
+    },
+    {
+      "name": "CHAP 9: Manners",
+      "chapters": [
+        "Manners",
+        "Review-3"
+      ]
+    },
+    {
+      "name": "CHAP 10: Be Aware, Be Safe",
+      "chapters": [
+        "Be Aware, Be Safe"
+      ]
+    },
+    {
+      "name": "CHAP 11: The Fox and the Stork",
+      "chapters": [
+        "The Fox and the Stork"
+      ]
+    },
+    {
+      "name": "CHAP 12: Time to think!",
+      "chapters": [
+        "Time to think!"
+      ]
+    },
+    {
+      "name": "CHAP 13: Little Things",
+      "chapters": [
+        "Little Things",
+        "Review-4"
+      ]
+    },
+    {
+      "name": "English B",
+      "chapters": [
+        "1 Word Synonyms",
+        "2 Word Antonyms",
+        "3 Homophones",
+        "4 Singular/Plural",
+        "5 Gender",
+        "6 Form of Verbs",
+        "7 Applications",
+        "8 Letters",
+        "9 Stories",
+        "10 Essays"
+      ]
+    }
+  ],
+  "General Science-FOUR-PTB": [
+    {
+      "name": "CHAP 1: Characteristics and Life Process of Organisms",
+      "chapters": [
+        "1.1 Characteristics and Life Process of Organisms"
+      ]
+    },
+    {
+      "name": "CHAP 2: Ecosystem",
+      "chapters": [
+        "2.1 Ecosystem"
+      ]
+    },
+    {
+      "name": "CHAP 3: Human Health",
+      "chapters": [
+        "3.1 Human Health"
+      ]
+    },
+    {
+      "name": "CHAP 4: Matter and its Characteristics",
+      "chapters": [
+        "4.1 Matter and its Characteristics"
+      ]
+    },
+    {
+      "name": "CHAP 5: Forms of Energy and Energy Transfer",
+      "chapters": [
+        "5.1 Forms of Energy and Energy Transfer"
+      ]
+    },
+    {
+      "name": "CHAP 6: Force and Motion",
+      "chapters": [
+        "6.1 Force and Motion"
+      ]
+    },
+    {
+      "name": "CHAP 7: Earth and its Resources",
+      "chapters": [
+        "7.1 Earth and its Resources"
+      ]
+    },
+    {
+      "name": "CHAP 8: Earth's Weather and its Climate",
+      "chapters": [
+        "8.1 Earth's Weather and its Climate"
+      ]
+    },
+    {
+      "name": "CHAP 9: Solar System and our Earth",
+      "chapters": [
+        "9.1 Solar System and our Earth"
+      ]
+    },
+    {
+      "name": "CHAP 10: Technology in Everyday Life",
+      "chapters": [
+        "10.1 Technology in Everyday Life"
+      ]
+    }
+  ],
+  "اسلامیات لازمی-FOUR-PTB": [
+    {
+      "name": "باب دوم: ایمانیات و عبادات",
+      "chapters": [
+        "ایمانیات: فرشتوں پر ایمان",
+        "ایمانیات: آسمانی کتابوں پر ایمان",
+        "عبادات: روزہ (صوم)",
+        "عبادات: حقوق اللہ",
+        "عبادات: تلاوتِ قرآنِ مجید"
+      ]
+    },
+    {
+      "name": "باب سوم: سیرتِ طیبہﷺ",
+      "chapters": [
+        "نزولِ وحی کا واقعہ",
+        "دعوت و تبلیغ",
+        "ہجرتِ حبشہ (اولیٰ و ثانیہ)",
+        "شعب ابی طالب",
+        "عامُ الحزن",
+        "سفرِ طائف"
+      ]
+    },
+    {
+      "name": "باب چہارم: اخلاق و آداب",
+      "chapters": [
+        "سادگی",
+        "آدابِ مجلس",
+        "وقت کی پابندی"
+      ]
+    },
+    {
+      "name": "باب پنجم: حسن معاملات و معاشرت",
+      "chapters": [
+        "دیانت داری",
+        "حقوق العباد (خدمتِ خلق)",
+        "وطن سے محبت (ذمہ دار شہری)"
+      ]
+    },
+    {
+      "name": "باب ششم: ہدایت کے سر چشمے اور مشاہیرِ اسلام",
+      "chapters": [
+        "حضرت ابراہیمؑ",
+        "حضرت موسیٰؑ",
+        "حضرت عمرِ فاروقؓ",
+        "حضرت عثمان غنیؓ"
+      ]
+    },
+    {
+      "name": "باب ہفتم: اسلامی تعلیمات اور عصرِ حاضر کے تقاضے",
+      "chapters": [
+        "صفائی کی ضرورت و اہمیت",
+        "پانی کی اہمیت"
+      ]
+    }
+  ],
+  "اردو لازمی-FOUR-PTB": [
+    {
+      "name": "سبق نمبر 1: حمد (نظم)",
+      "chapters": [
+        "حمد (نظم)"
+      ]
+    },
+    {
+      "name": "سبق نمبر 2: نَعت (نظم)",
+      "chapters": [
+        "نَعت (نظم)"
+      ]
+    },
+    {
+      "name": "سبق نمبر 3: مثالی مُعلِم",
+      "chapters": [
+        "مثالی مُعلِم"
+      ]
+    },
+    {
+      "name": "سبق نمبر 4: ہم بنیں گے اچھے شہری",
+      "chapters": [
+        "ہم بنیں گے اچھے شہری",
+        "جائزہ ۔ ۱"
+      ]
+    },
+    {
+      "name": "سبق نمبر 5: نَنھا ہاتھی (برائے مطالعہ)",
+      "chapters": [
+        "نَنھا ہاتھی (برائے مطالعہ)"
+      ]
+    },
+    {
+      "name": "سبق نمبر 6: صحت و صفائی",
+      "chapters": [
+        "صحت و صفائی"
+      ]
+    },
+    {
+      "name": "سبق نمبر 7: ہم پاکستانی بچے ہیں (نظم)",
+      "chapters": [
+        "ہم پاکستانی بچے ہیں (نظم)"
+      ]
+    },
+    {
+      "name": "سبق نمبر 8: گُل دستہ (برائے مطالعہ)",
+      "chapters": [
+        "گُل دستہ (برائے مطالعہ)"
+      ]
+    },
+    {
+      "name": "سبق نمبر 9: آتے ہیں جو کام دوسروں کے",
+      "chapters": [
+        "آتے ہیں جو کام دوسروں کے"
+      ]
+    },
+    {
+      "name": "سبق نمبر 10: پہاڑ اور گلہری (نظم)",
+      "chapters": [
+        "پہاڑ اور گلہری (نظم)",
+        "جائزہ ۔ ۲"
+      ]
+    },
+    {
+      "name": "سبق نمبر 11: نیا کمپیوٹر",
+      "chapters": [
+        "نیا کمپیوٹر"
+      ]
+    },
+    {
+      "name": "سبق نمبر 12: میں کیا بنوں گا (نظم)",
+      "chapters": [
+        "میں کیا بنوں گا (نظم)"
+      ]
+    },
+    {
+      "name": "سبق نمبر 13: زیبا کے پڑوسی",
+      "chapters": [
+        "زیبا کے پڑوسی"
+      ]
+    },
+    {
+      "name": "سبق نمبر 14: جب ہر چیز سونے کی بن گئی",
+      "chapters": [
+        "جب ہر چیز سونے کی بن گئی",
+        "جائزہ ۔ ۳"
+      ]
+    },
+    {
+      "name": "سبق نمبر 15: صبح کی آمد (نظم)",
+      "chapters": [
+        "صبح کی آمد (نظم)"
+      ]
+    },
+    {
+      "name": "سبق نمبر 16: حضرت سیدہ فاطمۃ الزھراؓ",
+      "chapters": [
+        "حضرت سیدہ فاطمۃ الزھراؓ"
+      ]
+    },
+    {
+      "name": "سبق نمبر 17: گرمی (نظم)",
+      "chapters": [
+        "گرمی (نظم)"
+      ]
+    },
+    {
+      "name": "سبق نمبر 18: باتیں دانائی کی",
+      "chapters": [
+        "باتیں دانائی کی",
+        "جائزہ ۔ ۴"
+      ]
+    },
+    {
+      "name": "سبق نمبر 19: رائے کا احترام",
+      "chapters": [
+        "رائے کا احترام"
+      ]
+    },
+    {
+      "name": "سبق نمبر 20: تصویری کہانی",
+      "chapters": [
+        "تصویری کہانی"
+      ]
+    },
+    {
+      "name": "سبق نمبر 21: یہ بات سمجھ میں آئی نہیں (مزاحیہ نظم)",
+      "chapters": [
+        "یہ بات سمجھ میں آئی نہیں (مزاحیہ نظم)"
+      ]
+    },
+    {
+      "name": "سبق نمبر 22: شان دار فیصلے (برائے مطالعہ)",
+      "chapters": [
+        "شان دار فیصلے (برائے مطالعہ)"
+      ]
+    },
+    {
+      "name": "سبق نمبر 23: تاریخی عمارتیں",
+      "chapters": [
+        "تاریخی عمارتیں",
+        "جائزہ ۔ ۵"
+      ]
+    },
+    {
+      "name": "اُردو (ب)",
+      "chapters": [
+        "مذکر مونث",
+        "واحد جمع",
+        "الفاظ متضاد",
+        "اعراب لگائیں",
+        "الفاظ مترادف",
+        "جملوں کی درستگی",
+        "درخواستیں",
+        "خطوط",
+        "کہانیاں",
+        "مضامین"
+      ]
+    }
+  ],
+  "Social Study-FOUR-PTB": [
+    {
+      "name": "باب نمبر 1: شہریت",
+      "chapters": [
+        "شہریت اور انسانی حقوق",
+        "تنوع اور رواداری"
+      ]
+    },
+    {
+      "name": "باب نمبر 2: ثقافت",
+      "chapters": [
+        "ثقافت",
+        "ذرائع ابلاغ"
+      ]
+    },
+    {
+      "name": "باب نمبر 3: ریاست اور حکومت",
+      "chapters": [
+        "ریاست اور حکومت",
+        "حکومت کے اعضا (عناصر)"
+      ]
+    },
+    {
+      "name": "باب نمبر 4: تاریخ",
+      "chapters": [
+        "انسانی تہذیب کا آغاز",
+        "قیامِ پاکستان میں صوبوں/علاقوں کا کردار اور پاکستان کی اہم تاریخی شخصیات"
+      ]
+    },
+    {
+      "name": "باب نمبر 5: جغرافیہ",
+      "chapters": [
+        "گلوب اور نقشے کی مہارتیں",
+        "پاکستان کے طبعی خدوخال",
+        "موسم اور آب و ہوا",
+        "آبادی"
+      ]
+    },
+    {
+      "name": "باب نمبر 6: معاشیات",
+      "chapters": [
+        "معاشیات"
+      ]
+    }
+  ],
+  "Mathematics-FOUR-PTB": [
+    {
+      "name": "CHAP 1: Whole Numbers",
+      "chapters": [
+        "Whole Numbers Exercise 1",
+        "Whole Numbers Exercise 2",
+        "Whole Numbers (Review Exercise)",
+        "Addition and Subtraction Exercise 1",
+        "Addition and Subtraction Exercise 2",
+        "Addition and Subtraction (Review Exercise)",
+        "Multiplication and Division Exercise 1",
+        "Multiplication and Division Exercise 2",
+        "Multiplication and Division Exercise 3",
+        "Multiplication and Division (Review Exercise)"
+      ]
+    },
+    {
+      "name": "CHAP 2: Factors and Multiples",
+      "chapters": [
+        "Exercise 1",
+        "Exercise 2",
+        "Exercise 3",
+        "Review Exercise"
+      ]
+    },
+    {
+      "name": "CHAP 3: Fractions",
+      "chapters": []
+    },
+    {
+      "name": "CHAP 4: Decimals",
+      "chapters": [
+        "Exercise 4",
+        "Exercise 5"
+      ]
+    },
+    {
+      "name": "CHAP 5: Measurements",
+      "chapters": [
+        "Measurement Exercise 1",
+        "Measurement Exercise 2",
+        "Measurement Exercise 3",
+        "Measurement Exercise 4",
+        "Measurement Exercise 5",
+        "Measurement (Review Exercise)",
+        "Time Exercise 1",
+        "Time Exercise 2",
+        "Time Exercise 3",
+        "Time Exercise 4",
+        "Time (Review Exercise)"
+      ]
+    },
+    {
+      "name": "CHAP 6: Geometry",
+      "chapters": [
+        "Exercise 6"
+      ]
+    },
+    {
+      "name": "CHAP 7: Data Handling",
+      "chapters": []
+    }
+  ],
+  "English-5TH-PTB": [
+    {
+      "name": "CHAP 1: Patience",
+      "chapters": [
+        "1.1 Patience"
+      ]
+    },
+    {
+      "name": "CHAP 2: Be Grateful",
+      "chapters": [
+        "2.1 Be Grateful"
+      ]
+    },
+    {
+      "name": "CHAP 3: Women as Role Models",
+      "chapters": [
+        "3.1 Women as Role Models",
+        "Review-1"
+      ]
+    },
+    {
+      "name": "CHAP 4: Unforgettable Moments of My Life",
+      "chapters": [
+        "4.1 Unforgettable Moments of My Life"
+      ]
+    },
+    {
+      "name": "CHAP 5: Amazing Planet",
+      "chapters": [
+        "5.1 Amazing Planet"
+      ]
+    },
+    {
+      "name": "CHAP 6: A Fit and Healthy Life",
+      "chapters": [
+        "6.1 : A Fit and Healthy Life",
+        "Review-2"
+      ]
+    },
+    {
+      "name": "CHAP 7: What Goes Around, Comes Around",
+      "chapters": [
+        "7.1 What Goes Around, Comes Around"
+      ]
+    },
+    {
+      "name": "CHAP 8: Do What's Right",
+      "chapters": [
+        "8.1 Do What's Right"
+      ]
+    },
+    {
+      "name": "CHAP 9: Patriotism",
+      "chapters": [
+        "9.1 Patriotism"
+      ]
+    },
+    {
+      "name": "CHAP 10: Eid-ul-Azha",
+      "chapters": [
+        "10.1 Eid-ul-Azha",
+        "Review-3"
+      ]
+    },
+    {
+      "name": "CHAP 11: Let's Be Helpful",
+      "chapters": [
+        "11.1 Let's Be Helpful"
+      ]
+    },
+    {
+      "name": "CHAP 12: Our National Animal",
+      "chapters": [
+        "12.1 Our National Animal"
+      ]
+    },
+    {
+      "name": "CHAP 13: When Something Went Wrong",
+      "chapters": [
+        "13.1 When Something Went Wrong"
+      ]
+    },
+    {
+      "name": "CHAP 14: Together We Live",
+      "chapters": [
+        "14.1 Together We Live",
+        "Review-4"
+      ]
+    },
+    {
+      "name": "English B",
+      "chapters": [
+        "Word Synonyms",
+        "Word Antonyms",
+        "Homophones",
+        "Singular/Plural",
+        "Gender",
+        "Form of Verbs",
+        "Applications",
+        "Letters",
+        "Stories",
+        "Essays",
+        "Tenses",
+        "Use of It and there",
+        "Use of is, am ,are , was and were",
+        "Use of has , have , had",
+        "Present Indefinite Tense",
+        "Present Continuous Tense",
+        "Present Perfect Tense",
+        "Present Perfect Continuous Tense",
+        "Past Indefinite Tense",
+        "Past Continuous Tense",
+        "Past Perfect Tense",
+        "Past Perfect Continuous Tense",
+        "Future Indefinite Tense",
+        "Future Continuous Tense",
+        "Future Perfect Tense",
+        "Future Perfect Continuous Tense"
+      ]
+    }
+  ],
+  "General Science-5TH-PTB": [
+    {
+      "name": "CHAP 1: Classification of Living Organisms",
+      "chapters": [
+        "1.1 Classification of Living Organisms"
+      ]
+    },
+    {
+      "name": "CHAP 2: Microorganisms",
+      "chapters": [
+        "2.1 Microorganisms"
+      ]
+    },
+    {
+      "name": "CHAP 3: Flowers and Seeds",
+      "chapters": [
+        "3.3 Flowers and Seeds"
+      ]
+    },
+    {
+      "name": "CHAP 4: Environmental Pollution",
+      "chapters": [
+        "4.1 Environmental Pollution"
+      ]
+    },
+    {
+      "name": "CHAP 5: Physical and Chemical Changes of Matter",
+      "chapters": [
+        "5.1 Physical and Chemical Changes of Matter"
+      ]
+    },
+    {
+      "name": "CHAP 6: Light and Sound",
+      "chapters": [
+        "6.1 Light and Sound"
+      ]
+    },
+    {
+      "name": "CHAP 7: Electricity and Magnetism",
+      "chapters": [
+        "7.1 Electricity and Magnetism"
+      ]
+    },
+    {
+      "name": "CHAP 8: Structure of the Earth",
+      "chapters": [
+        "8.1 Structure of the Earth"
+      ]
+    },
+    {
+      "name": "CHAP 9: Space and Satellites",
+      "chapters": [
+        "9.1 Space and Satellites"
+      ]
+    },
+    {
+      "name": "CHAP 10: Technology in Everyday Life",
+      "chapters": [
+        "10.1 Technology in Everyday Life"
+      ]
+    }
+  ],
+  "اردو لازمی-5TH-PTB": [
+    {
+      "name": "سبق نمبر 1: حمد (نظم)",
+      "chapters": [
+        "حمد (نظم)"
+      ]
+    },
+    {
+      "name": "سبق نمبر 2: نعت (نظم)",
+      "chapters": [
+        "نعت (نظم)"
+      ]
+    },
+    {
+      "name": "سبق نمبر 3: رحمتِ عالم ﷺ",
+      "chapters": [
+        "رحمتِ عالم ﷺ"
+      ]
+    },
+    {
+      "name": "سبق نمبر 4: اے وطن! تُو سلامت رہے",
+      "chapters": [
+        "اے وطن! تُو سلامت رہے"
+      ]
+    },
+    {
+      "name": "سبق نمبر 5: جو وعدہ کرو سو پُورا کرو",
+      "chapters": [
+        "جو وعدہ کرو سو پُورا کرو"
+      ]
+    },
+    {
+      "name": "سبق نمبر 6: قومی تہوار (برائے مطالعہ)",
+      "chapters": [
+        "قومی تہوار (برائے مطالعہ)"
+      ]
+    },
+    {
+      "name": "سبق نمبر 7: ہوا چلی (نظم)",
+      "chapters": [
+        "ہوا چلی (نظم)"
+      ]
+    },
+    {
+      "name": "سبق نمبر 8: میری پہچان ہے تُو",
+      "chapters": [
+        "میری پہچان ہے تُو"
+      ]
+    },
+    {
+      "name": "سبق نمبر 9: ہمارے پیشے",
+      "chapters": [
+        "ہمارے پیشے"
+      ]
+    },
+    {
+      "name": "سبق نمبر 10: ایک گائے اور بکری (نظم)",
+      "chapters": [
+        "ایک گائے اور بکری (نظم)"
+      ]
+    },
+    {
+      "name": "سبق نمبر 11: حضرت عثمان غنیؓ",
+      "chapters": [
+        "حضرت عثمان غنیؓ"
+      ]
+    },
+    {
+      "name": "سبق نمبر 12: دُنیا آپ کی مُٹھّی میں",
+      "chapters": [
+        "دُنیا آپ کی مُٹھّی میں"
+      ]
+    },
+    {
+      "name": "سبق نمبر 13: ہم پھُول اِک چمن کے (نظم)",
+      "chapters": [
+        "ہم پھُول اِک چمن کے (نظم)"
+      ]
+    },
+    {
+      "name": "سبق نمبر 14: آؤ بچو! سنو کہانی (برائے مطالعہ)",
+      "chapters": [
+        "آؤ بچو! سنو کہانی (برائے مطالعہ)"
+      ]
+    },
+    {
+      "name": "سبق نمبر 15: آئیں! مدد کریں",
+      "chapters": [
+        "آئیں! مدد کریں"
+      ]
+    },
+    {
+      "name": "سبق نمبر 16: رکھیں میرا خیال",
+      "chapters": [
+        "رکھیں میرا خیال"
+      ]
+    },
+    {
+      "name": "سبق نمبر 17: نیک بنو، نیکی پھیلاؤ (نظم)",
+      "chapters": [
+        "نیک بنو، نیکی پھیلاؤ (نظم)"
+      ]
+    },
+    {
+      "name": "سبق نمبر 18: ایک قدیم شہر",
+      "chapters": [
+        "ایک قدیم شہر"
+      ]
+    },
+    {
+      "name": "سبق نمبر 19: حُسنِ سُلوک",
+      "chapters": [
+        "حُسنِ سُلوک"
+      ]
+    },
+    {
+      "name": "سبق نمبر 20: کہا اقبال رحمۃ اللہ علیہ نے (نظم)",
+      "chapters": [
+        "کہا اقبال رحمۃ اللہ علیہ نے (نظم)"
+      ]
+    },
+    {
+      "name": "سبق نمبر 21: بے مِثل ہے نِظام تیرا",
+      "chapters": [
+        "بے مِثل ہے نِظام تیرا"
+      ]
+    },
+    {
+      "name": "سبق نمبر 22: اقوالِ زرّیں (برائے مطالعہ)",
+      "chapters": [
+        "اقوالِ زرّیں (برائے مطالعہ)"
+      ]
+    },
+    {
+      "name": "سبق نمبر 23: ٹوٹ بٹوٹ کے مُرغے (نظم)",
+      "chapters": [
+        "ٹوٹ بٹوٹ کے مُرغے (نظم)"
+      ]
+    },
+    {
+      "name": "اُردو (ب)",
+      "chapters": [
+        "مذکر مونث",
+        "واحد جمع",
+        "الفاظ متضاد",
+        "اعراب لگائیں",
+        "الفاظ مترادف",
+        "جملوں کی درستگی",
+        "درخواستیں",
+        "خطوط",
+        "کہانیاں",
+        "مضامین"
+      ]
+    }
+  ],
+  "اسلامیات لازمی-5TH-PTB": [
+    {
+      "name": "باب دوم : ایمانیات و عبادات",
+      "chapters": [
+        "آخرت",
+        "ختم نبوت اور اطاعتِ رسول ﷺ",
+        "زکوٰۃ",
+        "جمعۃ المبارک کی فضیلت",
+        "عیدین"
+      ]
+    },
+    {
+      "name": "باب سوم : سیرتِ طیبہ ﷺ",
+      "chapters": [
+        "معراج النبی ﷺ",
+        "بیعتِ عقبہ اُولی و ثانیہ",
+        "ہجرتِ مدینہ",
+        "مواخاتِ مدینہ",
+        "مسجدِ نبوی ﷺ",
+        "میثاقِ مدینہ",
+        "غزواتِ نبوی ﷺ"
+      ]
+    },
+    {
+      "name": "باب چہارم : اخلاق و آداب",
+      "chapters": [
+        "رواداری",
+        "عفوودرگزر اور رحم دلی",
+        "کفایت شعاری"
+      ]
+    },
+    {
+      "name": "باب پنجم : حسنِ معاملات و معاشرت",
+      "chapters": [
+        "ایفائے عہد",
+        "اسلامی اخوت",
+        "چغل خوری"
+      ]
+    },
+    {
+      "name": "باب ششم : ہدایت کے سر چشمے اور مشاہیرِ اسلام",
+      "chapters": [
+        "حضرت داؤد علیہ السلام",
+        "حضرت عیسٰی ابن مریم علیہ السلام",
+        "حضرت علی المرتضٰی رضی اللہ تعالیٰ عنہہ",
+        "صوفیہ کرام رحمتہ اللہ علیھم"
+      ]
+    },
+    {
+      "name": "باب ہفتم : اسلامی تعلیمات اور عصرِ حاضر کے تقاضے",
+      "chapters": [
+        "حادثات سے بچنے کی تدابیر",
+        "پودوں اور درختوں کی اہمیت"
+      ]
+    }
+  ],
+  "Mathematics-5TH-PTB": [
+    {
+      "name": "Unit 1: Whole Number and Operations",
+      "chapters": [
+        "Exercise 1",
+        "Exercise 2",
+        "Exercise 3",
+        "Exercise 4",
+        "Review Exercise"
+      ]
+    },
+    {
+      "name": "Unit 2: HCF and LCM",
+      "chapters": []
+    },
+    {
+      "name": "Unit 3: Fractions",
+      "chapters": []
+    },
+    {
+      "name": "Unit 4: Decimals and Percentages",
+      "chapters": [
+        "Exercise 5",
+        "Exercise 6",
+        "Exercise 7"
+      ]
+    },
+    {
+      "name": "Unit 5: Distance and Time",
+      "chapters": []
+    },
+    {
+      "name": "Unit 6: Unitary Method",
+      "chapters": []
+    },
+    {
+      "name": "Unit 7: Geometry",
+      "chapters": []
+    },
+    {
+      "name": "Unit 8: Perimeter and Area",
+      "chapters": []
+    },
+    {
+      "name": "Unit 9: Data Handling",
+      "chapters": []
+    }
+  ],
+  "Social Studies-5TH-PTB": [
+    {
+      "name": "باب نمبر 1: شہریت",
+      "chapters": [
+        "شہریت اور انسانی حقوق"
+      ]
+    },
+    {
+      "name": "باب نمبر 2: ثقافت",
+      "chapters": [
+        "ہمارا رہن سہن",
+        "ذرائع ابلاغ"
+      ]
+    },
+    {
+      "name": "باب نمبر 3: ریاست اور حکومت",
+      "chapters": [
+        "ریاست اور حکومت"
+      ]
+    },
+    {
+      "name": "باب نمبر 4: تاریخ",
+      "chapters": [
+        "تہذیبوں کا آغاز",
+        "پاکستان کی تاریخی شخصیات"
+      ]
+    },
+    {
+      "name": "باب نمبر 5: جغرافیہ",
+      "chapters": [
+        "نقشے کی مہارتیں اور گلوب",
+        "پاکستان کے طبعی خدوخال",
+        "موسم اور آب و ہوا",
+        "آبادی"
+      ]
+    },
+    {
+      "name": "باب نمبر 6: معاشیات",
+      "chapters": [
+        "معاشیات",
+        "کاروبار",
+        "زر کا اِرتقا"
+      ]
+    }
+  ],
+  "ترجمہ القرآن-6TH-PTB": [
+    {
+      "name": "ہمارے پیارے نبی حضرت محمد رسول اللہ خاتم النبین ﷺ",
+      "chapters": [
+        "ہمارے پیارے نبی حضرت محمد رسول اللہ خاتم النبین ﷺ"
+      ]
+    },
+    {
+      "name": "ہمارے پیارے نبی حضرت محمد رسول اللہ خاتم النبین ﷺ",
+      "chapters": []
+    },
+    {
+      "name": "قرآنِ مجید کے آداب",
+      "chapters": [
+        "قرآنِ مجید کے آداب"
+      ]
+    },
+    {
+      "name": "قرآنِ مجید کے آداب",
+      "chapters": [
+        "سُورَۃُ الفَاتِحَۃِ",
+        "سُورَۃُ الفِیلِ",
+        "سُورَۃُ قُرَیشٍ",
+        "سُورَۃُ المَاعُونِ",
+        "سُورَۃُ الکَوثَرِ",
+        "سُورَۃُ الکَفِرُونَ",
+        "سُورَۃُ النَّصرِ",
+        "سُورَۃُ اللَّھَبِ",
+        "سُورَۃُ الاِخلَاصِ",
+        "سُورَۃُ الفَلَقِ اور سُورَۃُ النَّاسِ",
+        "حضرت آدم علیہ السلام",
+        "حضرت نوح علیہ السلام",
+        "حضرت ھود علیہ السلام",
+        "حضرت صالح علیہ السلام",
+        "حضرت لوط علیہ السلام",
+        "حضرت شَعیب علیہ السلام"
+      ]
+    }
+  ],
+  "اسلامیات لازمی-6TH-PTB": [
+    {
+      "name": "باب دوم: ایمانیات و عبادات",
+      "chapters": [
+        "توحید کی اہمیت اور اثرات 2.1",
+        "نبوت و رسالت 2.2",
+        "اسلام میں عبادات کا جامع تصّور 2.3",
+        "طہارت و پاکیزگی 2.4",
+        "نماز کی فرضیّت واہمیت 2.5"
+      ]
+    },
+    {
+      "name": "باب سوم: سیرت طیبہ ﷺ",
+      "chapters": [
+        "نبی کریم خاتم النبین ﷺ اور مدنی معاشرے کا قیام 3.1",
+        "ریاست مدینہ کا قیام 3.2",
+        "ریاست مدینہ کا استحکام: جہاد،غزوہ بدر 3.3",
+        "غزوہ اُحد 3.4",
+        "نبی کریم خاتم النبین ﷺ سے محبّت و اطاعت 3.5",
+        "حضرت محمد رسول اللہ خاتم النبین ﷺ کا بچوں کے ساتھ حسنِ سلوک 3.6",
+        "حضرت محمد خاتم النبین ﷺ کا ایفائے عہد 3.7"
+      ]
+    },
+    {
+      "name": "باب چہارم: اخلاق و عبادات",
+      "chapters": [
+        "مشاورت کی اہمیت 4.1",
+        "صبرو تحمل 4.2",
+        "اسلامی آداب زندگی (راستے، سفر اور عوامی مقامات کے استعمال) 4.3",
+        "بری عادات سے اجتناب 4.4"
+      ]
+    },
+    {
+      "name": "باب پنجم: حسن معاملات و معاشرات",
+      "chapters": [
+        "حقوق العباد (والدین، بہن بھائی، رشتہ دار) 5.1",
+        "عدل واحسان 5.2",
+        "اسلام میں رفاہِ عامہ کی اہمیت 5.3"
+      ]
+    },
+    {
+      "name": "باب ششم: ہدایت کے سرچشمے اور مشاہیرِ اسلام",
+      "chapters": [
+        "امہات المومنین رضی اللہ تعالیٰ عنھن (حضرت خدیجہ، حضرت عائشہ، حضرت سودہ رضی اللہ تعالیٰ عنھن) 6.1",
+        "نبی کریم ختم النبین ﷺ کی اولادِ مبارکہ 6.2",
+        "خاتونِ جنت حضرت سیدہ فاطمۃ الزہرا رضی اللہ تعالیٰ عنھا 6.3",
+        "صحابہ کرام رضی اللہ تعالیٰ عنھم 6.5",
+        "صوفیہ کرام 6.5",
+        "علماءومفکرین 6.6",
+        "فاتحین 6.7",
+        "صحابہ کرام رضی اللہ تعالیٰ عنھم 6.4"
+      ]
+    },
+    {
+      "name": "باب ہفتم: اسلامی تعالیمات اور عصرِ حاضر کے تقاضے",
+      "chapters": [
+        "انسانی زندگی میں ماحول کی اہمیت 7.1",
+        "جانوروں کی اہمیت اور ان کے حقوق 7.2"
+      ]
+    }
+  ],
+  "اردو لازمی-6TH-PTB": [
+    {
+      "name": "سبق نمبر 1: حمد",
+      "chapters": [
+        "حمد"
+      ]
+    },
+    {
+      "name": "سبق نمبر 2: نعت",
+      "chapters": [
+        "نعت"
+      ]
+    },
+    {
+      "name": "سبق نمبر 3: اسوہ حسنہ اور رواداری",
+      "chapters": [
+        "اسوہ حسنہ اور رواداری"
+      ]
+    },
+    {
+      "name": "سبق نمبر 4: محنت میں عظمت",
+      "chapters": [
+        "محنت میں عظمت"
+      ]
+    },
+    {
+      "name": "سبق نمبر 5: چڑیا کی نصیحت",
+      "chapters": [
+        "چڑیا کی نصیحت"
+      ]
+    },
+    {
+      "name": "سبق نمبر 6: چاند میری زمیں، پھول میرا وطن (نظم)",
+      "chapters": [
+        "چاند میری زمیں، پھول میرا وطن (نظم)"
+      ]
+    },
+    {
+      "name": "سبق نمبر 7: علامہ محمد اقبال اور نوجوان نسل",
+      "chapters": [
+        "علامہ محمد اقبال اور نوجوان نسل"
+      ]
+    },
+    {
+      "name": "سبق نمبر 8: ذرا فون کر لوں؟",
+      "chapters": [
+        "ذرا فون کر لوں؟"
+      ]
+    },
+    {
+      "name": "سبق نمبر 9: یوم دفاع پاکستان",
+      "chapters": [
+        "یوم دفاع پاکستان"
+      ]
+    },
+    {
+      "name": "سبق نمبر 10: اتفاق اور نا اتفاقی (نظم)",
+      "chapters": [
+        "اتفاق اور نا اتفاقی (نظم)"
+      ]
+    },
+    {
+      "name": "سبق نمبر 11: ہمارا ماحول اور آلودگی",
+      "chapters": [
+        "ہمارا ماحول اور آلودگی"
+      ]
+    },
+    {
+      "name": "سبق نمبر 12: وطن کا بہادر سپوت",
+      "chapters": [
+        "وطن کا بہادر سپوت"
+      ]
+    },
+    {
+      "name": "سبق نمبر 13: بادل کا گیت (نظم)",
+      "chapters": [
+        "بادل کا گیت (نظم)"
+      ]
+    },
+    {
+      "name": "سبق نمبر 14: حفظان صحت",
+      "chapters": [
+        "حفظان صحت"
+      ]
+    },
+    {
+      "name": "سبق نمبر 15: اپنی حفاظت کریں",
+      "chapters": [
+        "اپنی حفاظت کریں"
+      ]
+    },
+    {
+      "name": "سبق نمبر 16: مادر ملت فاطمہ جناح",
+      "chapters": [
+        "مادر ملت فاطمہ جناح"
+      ]
+    },
+    {
+      "name": "سبق نمبر 17: مری کی سیر",
+      "chapters": [
+        "مری کی سیر"
+      ]
+    },
+    {
+      "name": "سبق نمبر 18: پرانی موٹر (نظم)",
+      "chapters": [
+        "پرانی موٹر (نظم)"
+      ]
+    },
+    {
+      "name": "سبق نمبر 19: زراعت و صنعت",
+      "chapters": [
+        "زراعت و صنعت"
+      ]
+    },
+    {
+      "name": "سبق نمبر 20: اچھے انسان (نظم",
+      "chapters": [
+        "اچھے انسان (نظم)"
+      ]
+    },
+    {
+      "name": "صرف ونحو",
+      "chapters": [
+        "حروف اور اسکی اقسام",
+        "اسم اور اسکی اقسام",
+        "اسمِ معرفہ کی اقسام",
+        "اسمِ نکرہ کی اقسام",
+        "فعل اور اس کی اقسام",
+        "(افعال کی اقسام (بلحاظ فاعل",
+        "رموز اوقاف"
+      ]
+    },
+    {
+      "name": "(اُردو(ب",
+      "chapters": [
+        "مذکر مونث",
+        "واحد جمع",
+        "ضرب الامثال کہاوتیں",
+        "متشابہ الفاظ",
+        "مترادف الفاظ",
+        "متضاد الفاظ",
+        "سابقے لاحقے",
+        "اعراب لگائیں",
+        "محاورات",
+        "غلط جملوں کی درستگی",
+        "درخواستیں",
+        "خطوط",
+        "کہانیاں",
+        "مضامین"
+      ]
+    }
+  ],
+  "English-6TH-PTB": [
+    {
+      "name": "UNIT 1: Seert-Un-Nabi",
+      "chapters": [
+        "Seert-Un-Nabi"
+      ]
+    },
+    {
+      "name": "UNIT 2: Eid-Ul-Fitar",
+      "chapters": [
+        "Eid-Ul-Fitar"
+      ]
+    },
+    {
+      "name": "UNIT 3: The Lake Isle of Innisfree",
+      "chapters": [
+        "The Lake Isle of Innisfree"
+      ]
+    },
+    {
+      "name": "UNIT 4: Major Shabbir Sharif Shaheed",
+      "chapters": [
+        "Major Shabbir Sharif Shaheed"
+      ]
+    },
+    {
+      "name": "UNIT 5: Harmony In Society",
+      "chapters": [
+        "Harmony In Society"
+      ]
+    },
+    {
+      "name": "UNIT 6: First Aid Saves Life",
+      "chapters": [
+        "First Aid Saves Life"
+      ]
+    },
+    {
+      "name": "UNIT 7: Corruption",
+      "chapters": [
+        "Corruption"
+      ]
+    },
+    {
+      "name": "UNIT 8: Over Population - A Dilemma",
+      "chapters": [
+        "Over Population - A Dilemma"
+      ]
+    },
+    {
+      "name": "UNIT 9: Education Is My Right",
+      "chapters": [
+        "Education Is My Right"
+      ]
+    },
+    {
+      "name": "UNIT 10: Importance of Science & Technology",
+      "chapters": [
+        "Importance of Science & Technology"
+      ]
+    },
+    {
+      "name": "UNIT 11: A Poem By a Soldier",
+      "chapters": [
+        "A Poem By a Soldier"
+      ]
+    },
+    {
+      "name": "UNIT 12: Good Citizen",
+      "chapters": [
+        "Good Citizen"
+      ]
+    },
+    {
+      "name": "English B",
+      "chapters": [
+        "Direct & Indirect",
+        "Idioms",
+        "Singular / Plural",
+        "Masculine / Feminine",
+        "Letters",
+        "Applications",
+        "Stories",
+        "Essays",
+        "Dialogues",
+        "Grammar (Objective)",
+        "Tenses",
+        "Use Of 'it' & 'there'",
+        "Use of 'is , 'am' , 'are' , 'was' and 'were'",
+        "Use of 'has' , 'have' and 'had'",
+        "Present Indefinite Tense",
+        "Present Continuous Tense",
+        "Present Perfect Tense",
+        "Present Perfect Continuous Tense",
+        "Past Indefinite Tense",
+        "Past Continuous Tense",
+        "Past Perfect Tense",
+        "Past Perfect Continuous Tense",
+        "Future Indefinite Tense",
+        "Future Continuous Tense",
+        "Future Perfect Tense",
+        "Future Perfect Continuous Tense",
+        "Proverbs",
+        "English Grammar",
+        "Sentence",
+        "Phrase and Clause",
+        "Punctuation",
+        "Articles",
+        "Noun",
+        "Pronoun",
+        "Adjective",
+        "Verb",
+        "Adverb",
+        "Preposition",
+        "Conjunction",
+        "Interjection"
+      ]
+    }
+  ],
+  "Mathematics-6TH-PTB": [
+    {
+      "name": "CHAP 1 Numbers and Operation: Factors and Multiples",
+      "chapters": [
+        "1.1 E.X 1.1",
+        "1.2 E.X 1.2",
+        "1.3 E.X 1.3",
+        "1.4 E.X 1.4",
+        "1.5 E.X 1.5",
+        "1.6 E.X 1.6",
+        "1.1 Review Exercise"
+      ]
+    },
+    {
+      "name": "CHAP 1 Number and Operations: Integers",
+      "chapters": [
+        "2.1 E.X 2.1",
+        "2.2 E.X 2.2",
+        "1.2 Review Exercise"
+      ]
+    },
+    {
+      "name": "CHAP 1 Number and Operations: Law of Integers",
+      "chapters": [
+        "3.1 E.X 3.1",
+        "3.2 E.X 3.2",
+        "3.3 E.X 3.3",
+        "1.3 Review Exercise"
+      ]
+    },
+    {
+      "name": "CHAP 1 Number and Operations: Rate, Ration and Percentage",
+      "chapters": [
+        "4.1 E.X 4.1",
+        "4.2 E.X 4.2",
+        "4.3 E.X 4.3",
+        "4.4 E.X 4.4",
+        "4.5 E.X 4.5",
+        "1.4 Review Exercise"
+      ]
+    },
+    {
+      "name": "CHAP 1 Number and Operations: Sets",
+      "chapters": [
+        "5.1 E.X 5.1",
+        "5.2 E.X 5.2",
+        "5.3 E.X 5.3",
+        "1.5 Review Exercise"
+      ]
+    },
+    {
+      "name": "CHAP 2 Algebra : Algebraic Expressions",
+      "chapters": [
+        "6.1 E.X 6.1",
+        "6.2 E.X 6.2",
+        "6.3 E.X 6.3",
+        "6.4 E.X 6.4",
+        "6.5 E.X 6.5",
+        "2.1 Review Exercise"
+      ]
+    },
+    {
+      "name": "CHAP 2 Algebra : Linear Equations",
+      "chapters": [
+        "7.1 E.X 7.1",
+        "7.2 E.X 7.2",
+        "2.2 Review Exercise"
+      ]
+    },
+    {
+      "name": "CHAP 3 Measurement: Surface Area and Volume",
+      "chapters": [
+        "8.1 E.X 8.1",
+        "8.2 E.X 8.2",
+        "8.3 E.X 8.3",
+        "3.1 Review Exercise"
+      ]
+    },
+    {
+      "name": "CHAP 4 Geometry : Symmetry",
+      "chapters": [
+        "9.1 E.X 9.1",
+        "9.2 E.X 9.2",
+        "9.3 E.X 9.3",
+        "4.1 Review Exercise"
+      ]
+    },
+    {
+      "name": "CHAP 4 Geometry : Geometrical Constructions",
+      "chapters": [
+        "10.1 E.X 10.1",
+        "10.2 E.X 10.2",
+        "10.3 E.X 10.3",
+        "4.2 Review Exercise"
+      ]
+    },
+    {
+      "name": "CHAP 5 Statistics and Probability : Data Management",
+      "chapters": [
+        "11.1 E.X 11.1",
+        "11.2 E.X 11.2",
+        "11.3 E.X 11.3",
+        "11.4 E.X 11.4",
+        "5.1 Review Exercise"
+      ]
+    },
+    {
+      "name": "CHAP 5 Statistics and Probability : Probability",
+      "chapters": [
+        "12.1 E.X 12.1",
+        "5.2 Review Exercise"
+      ]
+    }
+  ],
+  "General Science-6TH-PTB": [
+    {
+      "name": "UNIT 1: Cellular Organization",
+      "chapters": [
+        "Cellular Organization"
+      ]
+    },
+    {
+      "name": "UNIT 2: Reproduction in plants",
+      "chapters": [
+        "Reproduction in plants"
+      ]
+    },
+    {
+      "name": "UNIT 3: Balanced Diet",
+      "chapters": [
+        "Balanced Diet"
+      ]
+    },
+    {
+      "name": "UNIT 4: Human Digestive System",
+      "chapters": [
+        "Human Digestive System"
+      ]
+    },
+    {
+      "name": "UNIT 5: Matter as Particles",
+      "chapters": [
+        "Matter as Particles"
+      ]
+    },
+    {
+      "name": "UNIT 6: Elements and Compounds",
+      "chapters": [
+        "Elements and Compounds"
+      ]
+    },
+    {
+      "name": "UNIT 7: Mixtures",
+      "chapters": [
+        "Mixtures"
+      ]
+    },
+    {
+      "name": "UNIT 8: Energy",
+      "chapters": [
+        "Energy"
+      ]
+    },
+    {
+      "name": "UNIT 9: Electricity",
+      "chapters": [
+        "Electricity"
+      ]
+    },
+    {
+      "name": "UNIT 10: Magnetism",
+      "chapters": [
+        "Magnetism"
+      ]
+    },
+    {
+      "name": "UNIT 11: Technology in Everyday Life",
+      "chapters": [
+        "Technology in Everyday Life"
+      ]
+    },
+    {
+      "name": "UNIT 12: Solar System",
+      "chapters": [
+        "Solar System"
+      ]
+    },
+    {
+      "name": "UNIT 13: Dengue Fever and Corona Virus",
+      "chapters": [
+        "Dengue Fever and Corona Virus"
+      ]
+    }
+  ],
+  "History-6TH-PTB": [
+    {
+      "name": "CHAP 1: Ancient Civilizations",
+      "chapters": [
+        "Ancient Civilizations"
+      ]
+    },
+    {
+      "name": "CHAP 2: Persian, Greek and Roman civilizations",
+      "chapters": [
+        "Persian, Greek and Roman civilizations"
+      ]
+    },
+    {
+      "name": "CHAP 3: Aryans, Kushans and Guptas",
+      "chapters": [
+        "Aryans, Kushans and Guptas"
+      ]
+    },
+    {
+      "name": "CHAP 4: Rise of Islamic civilization",
+      "chapters": [
+        "Rise of Islamic civilization"
+      ]
+    }
+  ],
+  "Geography-6TH-PTB": [
+    {
+      "name": "UNIT 1: Structure of Earth and Types of Rocks",
+      "chapters": [
+        "1.1: Structure of Earth and Types of Rocks"
+      ]
+    },
+    {
+      "name": "UNIT 2: Mountains, Plateaus and Valleys",
+      "chapters": [
+        "2.1: Mountains, Plateaus and Valleys"
+      ]
+    },
+    {
+      "name": "UNIT 3: Climatic Regions of the World",
+      "chapters": [
+        "3.1: Climatic Regions of the World"
+      ]
+    },
+    {
+      "name": "UNIT 4: Forests of The World",
+      "chapters": [
+        "4.1: Forests of The World"
+      ]
+    },
+    {
+      "name": "UNIT 5: Natural Disasters",
+      "chapters": [
+        "5.1: Natural Disasters"
+      ]
+    },
+    {
+      "name": "UNIT 6: Changing Earth And Human Activities",
+      "chapters": [
+        "6.1: Changing Earth And Human Activities"
+      ]
+    }
+  ],
+  "زرعی تعلیم-6TH-PTB": [
+    {
+      "name": "باب نمبر 1: زیبائشی پودوں کی افزائش",
+      "chapters": [
+        "زیبائشی پودوں کی افزائش"
+      ]
+    },
+    {
+      "name": "باب نمبر 2: مختلف ماحول میں پودوں کی نشوونما کا مطالعہ",
+      "chapters": [
+        "مختلف ماحول میں پودوں کی نشوونما کا مطالعہ"
+      ]
+    },
+    {
+      "name": "باب نمبر 3: فصلوں اور سبزیوں سے جڑی بوٹیوں کی تلفی",
+      "chapters": [
+        "فصلوں اور سبزیوں سے جڑی بوٹیوں کی تلفی"
+      ]
+    },
+    {
+      "name": "باب نمبر 4: مٹی کا مطالعہ",
+      "chapters": [
+        "مٹی کا مطالعہ"
+      ]
+    },
+    {
+      "name": "باب نمبر 5: مفید جانوروں اور پرندوں کی پرورش",
+      "chapters": [
+        "مفید جانوروں اور پرندوں کی پرورش"
+      ]
+    }
+  ],
+  "پنجابی-6TH-PTB": [
+    {
+      "name": "سبق نمبر 1: حمد",
+      "chapters": [
+        "حمد"
+      ]
+    },
+    {
+      "name": "سبق نمبر 2: پیارے نبیﷺ",
+      "chapters": [
+        "پیارے نبیﷺ"
+      ]
+    },
+    {
+      "name": "سبق نمبر 3: نعت",
+      "chapters": [
+        "نعت"
+      ]
+    },
+    {
+      "name": "سبق نمبر 4: ایثار تے قربانی",
+      "chapters": [
+        "ایثار تے قربانی"
+      ]
+    },
+    {
+      "name": "سبق نمبر 5: قائد اعظمؒ",
+      "chapters": [
+        "قائد اعظمؒ"
+      ]
+    },
+    {
+      "name": "سبق نمبر 6: ساڈی صحت",
+      "chapters": [
+        "ساڈی صحت"
+      ]
+    },
+    {
+      "name": "سبق نمبر 7: وطن دِی حفاظت",
+      "chapters": [
+        "وطن دِی حفاظت"
+      ]
+    },
+    {
+      "name": "سبق نمبر 8: تاریاں نے اِک پنڈ وسایا",
+      "chapters": [
+        "تاریاں نے اِک پنڈ وسایا"
+      ]
+    },
+    {
+      "name": "سبق نمبر 9: مُسلمان دا اِنصاف",
+      "chapters": [
+        "مُسلمان دا اِنصاف"
+      ]
+    },
+    {
+      "name": "سبق نمبر 10: وَڈا اِنسان",
+      "chapters": [
+        "وَڈا اِنسان"
+      ]
+    },
+    {
+      "name": "سبق نمبر 11: شوکا جدوں سکُولے جاوے",
+      "chapters": [
+        "شوکا جدوں سکُولے جاوے"
+      ]
+    },
+    {
+      "name": "سبق نمبر 12: حضرت داتا گنج بخشؒ",
+      "chapters": [
+        "حضرت داتا گنج بخشؒ"
+      ]
+    },
+    {
+      "name": "سبق نمبر 13: بچیّاں دا اقبالؒ",
+      "chapters": [
+        "بچیّاں دا اقبالؒ"
+      ]
+    },
+    {
+      "name": "سبق نمبر 14: بے زبان",
+      "chapters": [
+        "بے زبان"
+      ]
+    },
+    {
+      "name": "سبق نمبر 15: اتفاق",
+      "chapters": [
+        "اتفاق"
+      ]
+    },
+    {
+      "name": "سبق نمبر 16: بابا فرید گنج شکرؒ",
+      "chapters": [
+        "سبق نمبر 16: بابا فرید گنج شکرؒ"
+      ]
+    },
+    {
+      "name": "بابا فرید گنج شکرؒ",
+      "chapters": [
+        "بابا فرید گنج شکرؒ"
+      ]
+    },
+    {
+      "name": "سبق نمبر 17: دُعا",
+      "chapters": [
+        "دُعا"
+      ]
+    },
+    {
+      "name": "سبق نمبر 18: نُور منارے",
+      "chapters": [
+        "نُور منارے"
+      ]
+    },
+    {
+      "name": "سبق نمبر 19: ساڈا دیس",
+      "chapters": [
+        "ساڈا دیس"
+      ]
+    },
+    {
+      "name": "سبق نمبر 20: بول دا پالن",
+      "chapters": [
+        "بول دا پالن"
+      ]
+    },
+    {
+      "name": "سبق نمبر 21: میلا شالامار",
+      "chapters": [
+        "میلا شالامار"
+      ]
+    },
+    {
+      "name": "سبق نمبر 22: پاکستان دی کہانی",
+      "chapters": [
+        "پاکستان دی کہانی"
+      ]
+    },
+    {
+      "name": "سبق نمبر 23: اَسیں آں پاکستانی",
+      "chapters": [
+        "اَسیں آں پاکستانی"
+      ]
+    },
+    {
+      "name": "سبق نمبر 24: سائنس دے کرشمے",
+      "chapters": [
+        "سائنس دے کرشمے"
+      ]
+    },
+    {
+      "name": "سبق نمبر 25: ربّا اپنا کرم کما",
+      "chapters": [
+        "ربّا اپنا کرم کما"
+      ]
+    },
+    {
+      "name": "سبق نمبر 26: ساڈے شیر، شہید وطن دے",
+      "chapters": [
+        "ساڈے شیر، شہید وطن دے"
+      ]
+    },
+    {
+      "name": "سبق نمبر 27: قدم وَدھائی چلیئے",
+      "chapters": [
+        "قدم وَدھائی چلیئے"
+      ]
+    },
+    {
+      "name": "سبق نمبر 28: دو کُکّڑ",
+      "chapters": [
+        "دو کُکّڑ"
+      ]
+    },
+    {
+      "name": "سبق نمبر 29: دو کنجُوس",
+      "chapters": [
+        "دو کنجُوس"
+      ]
+    },
+    {
+      "name": "سبق نمبر 30: عیدُالفطر",
+      "chapters": [
+        "عیدُالفطر"
+      ]
+    },
+    {
+      "name": "سبق نمبر 31: بات بتولی",
+      "chapters": [
+        "بات بتولی"
+      ]
+    },
+    {
+      "name": "سبق نمبر 32: میں چنگا اِنسان بناں گا",
+      "chapters": [
+        "میں چنگا اِنسان بناں گا"
+      ]
+    }
+  ],
+  "ہوم اکنامکس-6TH-PTB": [
+    {
+      "name": "باب نمبر 1: ہوم اکنامکس کا تعارف",
+      "chapters": [
+        "ہوم اکنامکس کا تعارف"
+      ]
+    },
+    {
+      "name": "باب نمبر 2: غذا اور غذائیت ۔ ایک تعارف",
+      "chapters": [
+        "غذا اور غذائیت ۔ ایک تعارف"
+      ]
+    },
+    {
+      "name": "باب نمبر 3: بنیادی غذائی اجزا",
+      "chapters": [
+        "بنیادی غذائی اجزا"
+      ]
+    },
+    {
+      "name": "باب نمبر 4: انسانی نشوونما",
+      "chapters": [
+        "انسانی نشوونما"
+      ]
+    },
+    {
+      "name": "باب نمبر 5: معاشرتی کھیل",
+      "chapters": [
+        "معاشرتی کھیل"
+      ]
+    },
+    {
+      "name": "باب نمبر 6: لباس",
+      "chapters": [
+        "لباس"
+      ]
+    },
+    {
+      "name": "باب نمبر 7: ذاتی زیبائش",
+      "chapters": [
+        "ذاتی زیبائش"
+      ]
+    },
+    {
+      "name": "باب نمبر 8: آرٹ اور ڈیزائن",
+      "chapters": [
+        "آرٹ اور ڈیزائن"
+      ]
+    },
+    {
+      "name": "باب نمبر 9: انتظام امور خانہ داری",
+      "chapters": [
+        "انتظام امور خانہ داری"
+      ]
+    },
+    {
+      "name": "باب نمبر 10: ذرائع ووسائل",
+      "chapters": [
+        "ذرائع ووسائل"
+      ]
+    }
+  ],
+  "Computer-6TH-PTB": [
+    {
+      "name": "UNIT1: ICT Fundamentals",
+      "chapters": [
+        "1.1: ICT Fundamentals"
+      ]
+    },
+    {
+      "name": "UNIT 2: Components of Computer system",
+      "chapters": [
+        "2.1:Components of Computer system"
+      ]
+    },
+    {
+      "name": "UNIT 3: Digital Skills",
+      "chapters": [
+        "3.1:Digital Skills"
+      ]
+    },
+    {
+      "name": "UNIT 4: Algorithmic Thinking",
+      "chapters": [
+        "4.1:Algorithmic Thinking"
+      ]
+    },
+    {
+      "name": "UNIT 5: Programming",
+      "chapters": [
+        "5.1: Programming"
+      ]
+    },
+    {
+      "name": "UNIT 6: Digital Citizenship",
+      "chapters": [
+        "6.1: Digital Citizenship"
+      ]
+    },
+    {
+      "name": "UNIT 7: Entrepreneurship In Digital Age",
+      "chapters": [
+        "7.1: Entrepreneurship In Digital Age"
+      ]
+    }
+  ],
+  "اخلاقیات-6TH-PTB": [
+    {
+      "name": "باب نمبر 1: مذاہب کا تعارف",
+      "chapters": [
+        "انسانیت کی تعمیر",
+        "اخلاقی کہانیاں (ادھوری خواہش، شکر گزاری)",
+        "اخلاقی کہانیاں (ہیں لوگ وہی جہاں میں اچھے، ظلم کا بدلہ، دوسروں کے لیے جینا)"
+      ]
+    },
+    {
+      "name": "نظمیں",
+      "chapters": [
+        "نظمیں"
+      ]
+    },
+    {
+      "name": "باب نمبر 2: سکھ مذہب",
+      "chapters": [
+        "سکھ مذہب کا تعارف",
+        "سکھ مذہب کیسے پھیلا",
+        "گورونانک صاحب دیوجی اور ان کی تعلیمات",
+        "سکھ مذہب کے گورو"
+      ]
+    },
+    {
+      "name": "باب نمبر3: پاکستان میں مذہبی تہوار",
+      "chapters": [
+        "پاکستان میں مذہبی تہوار"
+      ]
+    },
+    {
+      "name": "باب نمبر4: اخلاقی اقدار",
+      "chapters": [
+        "بچہ ۔۔۔۔۔۔ خاندان کی آنکھوں کا تارا",
+        "گھر کی سانجھ",
+        "برابری",
+        "احترام آدمیت",
+        "قاعدے قانون کی بات",
+        "ٹریفک قوانین"
+      ]
+    },
+    {
+      "name": "باب نمبر 5: زندگی کے آداب",
+      "chapters": [
+        "کھانے پینے کے آداب"
+      ]
+    },
+    {
+      "name": "باب نمبر 6: مشاہیر",
+      "chapters": [
+        "مشاہیر"
+      ]
+    }
+  ],
+  "English-7TH-PTB": [
+    {
+      "name": "UNIT 1: The Last Sermon of Rasoolullah (SAW)",
+      "chapters": [
+        "The Last Sermon of Rasoolullah (SAW)"
+      ]
+    },
+    {
+      "name": "UNIT 2: Martyrs of Pakistan",
+      "chapters": [
+        "Martyrs of Pakistan"
+      ]
+    },
+    {
+      "name": "UNIT 3: A Nation's Strength",
+      "chapters": [
+        "A Nation's Strength"
+      ]
+    },
+    {
+      "name": "UNIT 4: Quaid-e-Azam",
+      "chapters": [
+        "Quaid-e-Azam"
+      ]
+    },
+    {
+      "name": "UNIT 5: Smog",
+      "chapters": [
+        "Smog"
+      ]
+    },
+    {
+      "name": "UNIT 6: Pakistani Female Mountaineer",
+      "chapters": [
+        "Pakistani Female Mountaineer"
+      ]
+    },
+    {
+      "name": "UNIT 7: Eid-ul-Adha",
+      "chapters": [
+        "Eid-ul-Adha"
+      ]
+    },
+    {
+      "name": "UNIT 8: The Wise Old Woman",
+      "chapters": [
+        "The Wise Old Woman"
+      ]
+    },
+    {
+      "name": "UNIT 9: Think Not All is Over",
+      "chapters": [
+        "Think Not All is Over"
+      ]
+    },
+    {
+      "name": "UNIT 10: The Young Boy's Adventure",
+      "chapters": [
+        "The Young Boy's Adventure"
+      ]
+    },
+    {
+      "name": "UNIT 11: Pakistani Culture",
+      "chapters": [
+        "Pakistani Culture"
+      ]
+    },
+    {
+      "name": "UNIT 12: Role of the Media",
+      "chapters": [
+        "Role of Media"
+      ]
+    },
+    {
+      "name": "English B",
+      "chapters": [
+        "Director & Indirect",
+        "Idioms",
+        "Singular/Plural",
+        "Masculine/Feminine",
+        "Letters",
+        "Applications",
+        "Stories",
+        "Essays",
+        "Dialogues",
+        "Form of verbs",
+        "Proverbs",
+        "Grammar (Objective)",
+        "Tenses",
+        "Use of 'it' and 'there'",
+        "Use of 'is' , 'am' , 'are' , 'was' & 'were'",
+        "Use of 'has' , 'have' & 'had'",
+        "Present Indefinite Tense",
+        "Present Continuous Tense",
+        "Present Perfect Tense",
+        "Present Perfect Continuous Tense",
+        "Past Indefinite Tense",
+        "Past Continuous Tense",
+        "Past Perfect Tense",
+        "Past Perfect Continuous Tense",
+        "Future Indefinite Tense",
+        "Future Continuous Tense",
+        "Future Perfect Tense",
+        "Future Perfect Continuous Tense",
+        "English Grammar",
+        "Sentence",
+        "Phrase and Clause",
+        "Punctuation",
+        "Articles",
+        "Noun",
+        "Pronoun",
+        "Adjective",
+        "Verb",
+        "Adverb",
+        "Preposition",
+        "Conjunction",
+        "Interjection"
+      ]
+    }
+  ],
+  "General Science-7TH-PTB": [
+    {
+      "name": "UNIT 1: Plant System",
+      "chapters": [
+        "Plant System"
+      ]
+    },
+    {
+      "name": "UNIT 2: Human Respiratory and Circulatory system",
+      "chapters": [
+        "Human Respiratory and Circulatory system"
+      ]
+    },
+    {
+      "name": "UNIT 3: Immunity and Diseases",
+      "chapters": [
+        "Immunity and Diseases"
+      ]
+    },
+    {
+      "name": "UNIT 4: Structure of an Atom",
+      "chapters": [
+        "Structure of an Atom"
+      ]
+    },
+    {
+      "name": "UNIT 5: Physical and Chemical Changes",
+      "chapters": [
+        "Physical and Chemical Changes"
+      ]
+    },
+    {
+      "name": "UNIT 6: Chemical Bonds",
+      "chapters": [
+        "Chemical Bonds"
+      ]
+    },
+    {
+      "name": "UNIT 7: Solutions",
+      "chapters": [
+        "Solutions"
+      ]
+    },
+    {
+      "name": "UNIT 8: Force and Motion",
+      "chapters": [
+        "Force and Motion"
+      ]
+    },
+    {
+      "name": "UNIT 9: Waves and Energy",
+      "chapters": [
+        "Waves and Energy"
+      ]
+    },
+    {
+      "name": "UNIT 10: Heat and Temperature",
+      "chapters": [
+        "Heat and Temperature"
+      ]
+    },
+    {
+      "name": "UNIT 11: Technology in Everyday Life",
+      "chapters": [
+        "Technology in Everyday Life"
+      ]
+    },
+    {
+      "name": "UNIT 12: Earth and Space",
+      "chapters": [
+        "Earth and Space"
+      ]
+    }
+  ],
+  "Geography-7TH-PTB": [
+    {
+      "name": "CHAP 1: Plains and Rivers",
+      "chapters": [
+        "Plains and Rivers"
+      ]
+    },
+    {
+      "name": "CHAP 2: Water Sources and Management",
+      "chapters": [
+        "Water Sources and Management"
+      ]
+    },
+    {
+      "name": "CHAP 3: Settlements and Land use",
+      "chapters": [
+        "Settlements and Land use"
+      ]
+    },
+    {
+      "name": "CHAP 4: Agriculture",
+      "chapters": [
+        "Agriculture"
+      ]
+    },
+    {
+      "name": "CHAP 5: Climate Change",
+      "chapters": [
+        "Climate Change"
+      ]
+    },
+    {
+      "name": "CHAP 6: Minerals and Powers",
+      "chapters": [
+        "Minerals and Powers"
+      ]
+    }
+  ],
+  "ہوم اکنامکس-7TH-PTB": [
+    {
+      "name": "باب نمبر 1: ہوم اکنامکس کو سمجھنا",
+      "chapters": [
+        "ہوم اکنامکس کو سمجھنا"
+      ]
+    },
+    {
+      "name": "باب نمبر 2: غذائی انتظام و انصرام",
+      "chapters": [
+        "غذائی انتظام و انصرام"
+      ]
+    },
+    {
+      "name": "باب نمبر 3: اشیائے خوردنی کی تیاری",
+      "chapters": [
+        "اشیائے خوردنی کی تیاری"
+      ]
+    },
+    {
+      "name": "باب نمبر 4: خاندان اور بچے کی نشوونما",
+      "chapters": [
+        "خاندان اور بچے کی نشوونما"
+      ]
+    },
+    {
+      "name": "باب نمبر 5: خاندانی تعلقات",
+      "chapters": [
+        "خاندانی تعلقات"
+      ]
+    },
+    {
+      "name": "باب نمبر 6: کپڑوں کی منصوبہ بندی",
+      "chapters": [
+        "کپڑوں کی منصوبہ بندی"
+      ]
+    },
+    {
+      "name": "باب نمبر 7: کپڑوں کی دیکھ بھال اور حفاظت",
+      "chapters": [
+        "کپڑوں کی دیکھ بھال اور حفاظت"
+      ]
+    },
+    {
+      "name": "باب نمبر 8: آرٹ اور ڈیزائن",
+      "chapters": [
+        "آرٹ اور ڈیزائن"
+      ]
+    },
+    {
+      "name": "باب نمبر 9: اقدار اور مقاصد",
+      "chapters": [
+        "اقدار اور مقاصد"
+      ]
+    },
+    {
+      "name": "باب نمبر 10: فیصلہ سازی",
+      "chapters": [
+        "فیصلہ سازی"
+      ]
+    }
+  ],
+  "زرعی تعلیم-7TH-PTB": [
+    {
+      "name": "باب نمبر 1: پودوں کی نباتاتی و نسلی افزائش",
+      "chapters": [
+        "پودوں کی نباتاتی و نسلی افزائش"
+      ]
+    },
+    {
+      "name": "باب نمبر 2: سبزیوں کی کاشت",
+      "chapters": [
+        "سبزیوں کی کاشت"
+      ]
+    },
+    {
+      "name": "باب نمبر 3: ریشم کے کیڑوں کی پرورش",
+      "chapters": [
+        "ریشم کے کیڑوں کی پرورش"
+      ]
+    },
+    {
+      "name": "باب نمبر 4: شہد کی مکھیوں کی پرورش",
+      "chapters": [
+        "شہد کی مکھیوں کی پرورش"
+      ]
+    },
+    {
+      "name": "باب نمبر 5: مرغیوں اور بطخوں کی پرورش",
+      "chapters": [
+        "مرغیوں اور بطخوں کی پرورش"
+      ]
+    },
+    {
+      "name": "باب نمبر 6: خرگوش کی پرورش",
+      "chapters": [
+        "خرگوش کی پرورش"
+      ]
+    },
+    {
+      "name": "باب نمبر 7: سکوائش کی تیاری",
+      "chapters": [
+        "سکوائش کی تیاری"
+      ]
+    }
+  ],
+  "اردو لازمی-7TH-PTB": [
+    {
+      "name": "سبق نمبر 1: حمد",
+      "chapters": [
+        "حمد"
+      ]
+    },
+    {
+      "name": "سبق نمبر 2: نعت",
+      "chapters": [
+        "نعت"
+      ]
+    },
+    {
+      "name": "سبق بمبر 3: آداب معاشرت سیرت طیبہؐ کی روشنی میں",
+      "chapters": [
+        "آداب معاشرت سیرت طیبہؐ کی روشنی میں"
+      ]
+    },
+    {
+      "name": "سبق نمبر 4: ملکی ترقی میں خواتین کا کردار",
+      "chapters": [
+        "ملکی ترقی میں خواتین کا کردار"
+      ]
+    },
+    {
+      "name": "سبق نمبر 5: ٹریفک کے قوانین اور ہماری ذمہ داریاں",
+      "chapters": [
+        "ٹریفک کے قوانین اور ہمااری ذمہ داریاں"
+      ]
+    },
+    {
+      "name": "سبق نمبر 6: وطن کےلیے۔۔۔(نظم)",
+      "chapters": [
+        "وطن کےلیے ۔۔۔(نظم)"
+      ]
+    },
+    {
+      "name": "سبق نمبر 7: چچا چھکن نے تصویر ٹانگی",
+      "chapters": [
+        "چچا چھکن نے تصویر ٹانگی"
+      ]
+    },
+    {
+      "name": "سبق نمبر 8: مذہب نہیں سکھاتا آپس میں بیر رکھنا",
+      "chapters": [
+        "مذہب نہیں سکھاتا آپس میں بیر رکھنا"
+      ]
+    },
+    {
+      "name": "سبق نمبر 9: پھر اِن شاہین بچوں کو بال و پر دے",
+      "chapters": [
+        "اِن شاہین بچوں کو بال و پر دے"
+      ]
+    },
+    {
+      "name": "سبق نمبر 10: بارش کا پہلا قطرہ (نظم)",
+      "chapters": [
+        "بارش کا پہلا قطرہ"
+      ]
+    },
+    {
+      "name": "سبق نمبر 11: محسن پاکستان",
+      "chapters": [
+        "محسن پاکستان"
+      ]
+    },
+    {
+      "name": "سبق نمبر 12: دہشت گردی اور ہماری ذمہ داریاں",
+      "chapters": [
+        "دہشت گردی اور ہماری ذمہ داریاں"
+      ]
+    },
+    {
+      "name": "سبق نمبر 13: کم سن شہید",
+      "chapters": [
+        "کم سن شہید"
+      ]
+    },
+    {
+      "name": "سبق نمبر 14: زندگی ہے مختلف جذبوں کی ہمواری کا نام (نظم)",
+      "chapters": [
+        "زندگی ہے مختلف جذبوں کی ہمواریوں کا نام"
+      ]
+    },
+    {
+      "name": "سبق نمبر 15: کرپشن اور اس کا خاتمہ",
+      "chapters": [
+        "کرپشن اور اس کا خاتمہ"
+      ]
+    },
+    {
+      "name": "سبق نمبر 16: کشمیر کی وادی میں لہرا کر رہوپرچم",
+      "chapters": [
+        "کشمیر کی وادی میں لہرا کر رہو پرچم"
+      ]
+    },
+    {
+      "name": "سبق نمبر 17: اتحاد (نظم)",
+      "chapters": [
+        "اتحاد"
+      ]
+    },
+    {
+      "name": "سبق نمبر 18: شجر کاری اور ہمارے موسم",
+      "chapters": [
+        "شجرکاری اور ہمارے موسم"
+      ]
+    },
+    {
+      "name": "سبق نمبر 19: انسداد منشیات",
+      "chapters": [
+        "انسداد منشیات"
+      ]
+    },
+    {
+      "name": "سبق نمبر 20: دُعا (نظم)",
+      "chapters": [
+        "دعا"
+      ]
+    },
+    {
+      "name": "صرف ونحو",
+      "chapters": [
+        "حروف اور اسکی اقسام",
+        "اسم اور اسکی اقسام",
+        "اسمِ معرفہ کی اقسام",
+        "اسمِ نکرہ کی اقسام",
+        "فعل اور اس کی اقسام",
+        "(افعال کی اقسام (بلحاظ فاعل",
+        "رموز اوقاف"
+      ]
+    },
+    {
+      "name": "(اُردو(ب",
+      "chapters": [
+        "مذکر مونث",
+        "واحد جمع",
+        "ضرب الامثال کہاوتیں",
+        "متشابہ الفاظ",
+        "مترادف الفاظ",
+        "متضاد الفاظ",
+        "سابقے لاحقے",
+        "اعراب لگائیں",
+        "محاورات",
+        "غلط جملوں کی درستگی",
+        "درخواستیں",
+        "خطوط",
+        "کہانیاں",
+        "مضامین",
+        "رسیدیں",
+        "دعوت نامے",
+        "(گرامر (معروضی"
+      ]
+    }
+  ],
+  "Mathematics-7TH-PTB": [
+    {
+      "name": "CHAP 1: Numbers and Operations: Rational Numbers and Decimal Numbers",
+      "chapters": [
+        "1.1 E.X 1.1",
+        "1.2 E.X 1.2",
+        "1.3 E.X 1.3",
+        "1.4 E.X 1.4",
+        "1.5 E.X 1.5"
+      ]
+    },
+    {
+      "name": "CHAP 1: Numbers and Operations: Simplification",
+      "chapters": [
+        "1.6 E.X 1.6"
+      ]
+    },
+    {
+      "name": "CHAP 1: Numbers and Operations: Sets",
+      "chapters": [
+        "1.7 E.X 1.7",
+        "1.8 E.X 1.8",
+        "1.9 E.X 1.9",
+        "1.10 E.X 1.10",
+        "1.1 Review Exercise (a)"
+      ]
+    },
+    {
+      "name": "CHAP 1: Numbers and Operations: Rate, Ratio and Proportion",
+      "chapters": [
+        "1.11 E.X 1.11",
+        "1.12 E.X 1.12",
+        "1.13 E.X 1.13"
+      ]
+    },
+    {
+      "name": "CHAP 1: Numbers and Operations: Financial Arithmetic",
+      "chapters": [
+        "1.14 E.X 1.14",
+        "1.15 E.X 1.15",
+        "1.16 E.X 1.16"
+      ]
+    },
+    {
+      "name": "CHAP 1: Numbers and Operations: Squares and Square Roots",
+      "chapters": [
+        "1.17 E.X 1.17",
+        "1.18 E.X 1.18",
+        "1.19 E.X 1.19",
+        "1.2 Review Exercise (b)"
+      ]
+    },
+    {
+      "name": "CHAP 2 Algebra: Numbers Sequence and patterns",
+      "chapters": [
+        "2.1 E.X 2.1"
+      ]
+    },
+    {
+      "name": "CHAP 2 Algebra: Algebraic Expressions",
+      "chapters": [
+        "2.2 E.X 2.2",
+        "2.3 E.X 2.3",
+        "2.4 E.X 2.4",
+        "2.5 E.X 2.5",
+        "2.6 E.X 2.6",
+        "2.7 E.X 2.7",
+        "2.8 E.X 2.8"
+      ]
+    },
+    {
+      "name": "CHAP 2 Algebra: Linear Equation",
+      "chapters": [
+        "2.9 E.X 2.9",
+        "2.10 E.X 2.10",
+        "2.11 E.X 2.11",
+        "2.12 E.X 2.12",
+        "2.1 Review Exercise"
+      ]
+    },
+    {
+      "name": "CHAP 3 Measurement: Distance, Speed and Time",
+      "chapters": [
+        "3.1 E.X 3.1",
+        "3.2 E.X 3.2",
+        "3.3 E.X 3.3",
+        "3.4 E.X 3.4"
+      ]
+    },
+    {
+      "name": "CHAP 3 Measurement: Perimeter and Area",
+      "chapters": [
+        "3.5 E.X 3.5",
+        "3.6 E.X 3.6",
+        "3.7 E.X 3.7",
+        "3.1 Review Exercise"
+      ]
+    },
+    {
+      "name": "CHAP 4: Geometry: Practical Geometry",
+      "chapters": [
+        "4.1 E.X 4.1",
+        "4.2 E.X 4.2"
+      ]
+    },
+    {
+      "name": "CHAP 4: Geometry: Angle Properties of Polygons",
+      "chapters": [
+        "4.3 E.X 4.3",
+        "4.4 E.X 4.4"
+      ]
+    },
+    {
+      "name": "CHAP 4: Geometry: Transformation",
+      "chapters": [
+        "4.5 E.X 4.5",
+        "4.1 Review Exercise"
+      ]
+    },
+    {
+      "name": "CHAP 5 Data Management: Statistics",
+      "chapters": [
+        "5.1 E.X 5.1",
+        "5.2 E.X 5.2",
+        "5.3 E.X 5.3"
+      ]
+    },
+    {
+      "name": "CHAP 5 Data Management: Probability",
+      "chapters": [
+        "5.4 E.X 5.4",
+        "5.1 Review Exercise"
+      ]
+    }
+  ],
+  "Computer-7TH-PTB": [
+    {
+      "name": "UNIT 1: Emerging Technologies",
+      "chapters": [
+        "Emerging Technologies"
+      ]
+    },
+    {
+      "name": "UNIT 2: Digital Skills",
+      "chapters": [
+        "Digital Skills"
+      ]
+    },
+    {
+      "name": "UNIT 3: Computational Thinking",
+      "chapters": [
+        "Computational Thinking"
+      ]
+    },
+    {
+      "name": "UNIT 4: Programming",
+      "chapters": [
+        "Programming"
+      ]
+    },
+    {
+      "name": "UNIT 5: Digital Citizenship",
+      "chapters": [
+        "Digital Citizenship"
+      ]
+    },
+    {
+      "name": "UNIT 6: Entrepreneurship in Digital Age",
+      "chapters": [
+        "Entrepreneurship in Digital Age"
+      ]
+    }
+  ],
+  "History-7TH-PTB": [
+    {
+      "name": "CHAP 1: Middle Ages In Europe (500-1500 CE)",
+      "chapters": [
+        "Middle Ages In Europe (500-1500 CE)"
+      ]
+    },
+    {
+      "name": "CHAP 2: Spread of Islam In Europe And Asia",
+      "chapters": [
+        "Spread of Islam In Europe And Asia"
+      ]
+    },
+    {
+      "name": "CHAP 3: Muslim Dynasties and Crusades",
+      "chapters": [
+        "Muslim Dynasties and Crusades"
+      ]
+    },
+    {
+      "name": "CHAP 4: Muslims in South Asia",
+      "chapters": [
+        "Muslims in South Asia"
+      ]
+    },
+    {
+      "name": "CHAP 5: Modern Period in Europe",
+      "chapters": [
+        "Modern Period in Europe"
+      ]
+    }
+  ],
+  "ترجمہ القرآن-7TH-PTB": [
+    {
+      "name": "ہمارے پیارے نبی حضرت محمد خاتم النبین ﷺ",
+      "chapters": [
+        "ہمارے پیارے نبی حضرت محمد خاتم النبین ﷺ"
+      ]
+    },
+    {
+      "name": "ہمارے پیارے نبی حضرت محمد رسول اللہ خاتم النبین ﷺ",
+      "chapters": [
+        "ہمارے پیارے نبی حضرت محمد رسول اللہ خاتم النبین ﷺ"
+      ]
+    },
+    {
+      "name": "قرآنِ مجید کے آداب",
+      "chapters": [
+        "قرآنِ مجید کے آداب"
+      ]
+    },
+    {
+      "name": "قرآنِ مجید کے آداب",
+      "chapters": [
+        "سُورَۃُ الَّنَبَا",
+        "سُورَۃُ النّٰزِعٰتِ",
+        "سُورَۃُ عَبَسَ",
+        "سُورَۃُ التَّکوِیرِ",
+        "سُورَۃُ الاِنفِطَارِ",
+        "سُورَۃُ المُطَفِّفِینَ",
+        "سُورَۃُ الاِنشِقَاقِ",
+        "سُورَۃُ البُرُوجِ",
+        "سُورَۃُ الطّارِقِ",
+        "سُورَۃُ الطَّارِقِ",
+        "سُورَۃُ الاَعلیٰ",
+        "سُورَۃُ الغَاشِیَۃِ",
+        "سُورَۃُ الفَجرِ",
+        "سُورَۃُ البَلَدِ",
+        "سُورَۃُ الشَّمسِ",
+        "سُورَۃُ الَّیلِ",
+        "الَّیلِ",
+        "سُورَۃُ الضُّحٰی",
+        "سُورَۃُ اَلَم نَشرَح",
+        "سُورَۃُ التِّینِ",
+        "سُورَۃُ العَلَقِ",
+        "سُورَۃُ القَدرِ",
+        "سُورَۃُ البَیِّنَۃِ",
+        "سُورَۃُ البَیِّنَۃِ",
+        "سُورَۃُ الزِّلزَالِ",
+        "سُورَۃُ العٰدِیٰتِ",
+        "سُورَۃُ القَارِعَۃِ",
+        "سُورَۃُ التَّکَاثُرِ",
+        "سُورَۃُ العَصرِ",
+        "سُورَۃُ الھُمَزَۃِ",
+        "حضرت ابراہیم علیہ السلام",
+        "حضرت موسیٰ علیہ السلام",
+        "حضرت داؤد علیہ السلام",
+        "حضرت داؤد علیہ السلام"
+      ]
+    }
+  ],
+  "اسلامیات لازمی-7TH-PTB": [
+    {
+      "name": "باب دوم: ایمانیات و عبادات",
+      "chapters": [
+        "عقیدہ ختم نبوت",
+        "فرشتوں پر ایمان",
+        "آسمانی کتابوں پر ایمان",
+        "روزہ اور اس کی فضیلت",
+        "نماز جنازہ اور دیگر نمازیں",
+        "دعا کی اہمیت و فضیلت"
+      ]
+    },
+    {
+      "name": "باب سوم: سیرتِ طیبہ ﷺ",
+      "chapters": [
+        "نبی کریم خاتم النبین ﷺ اور مدنی معاشرے کا استحکام",
+        "غزوہ خندق",
+        "غزوہ بنوقُرَیظہ",
+        "صلح حدیبیہ",
+        "رسول اللہ خاتم النبین ﷺ کی تعلیمی سرگرمیاں",
+        "نبی کریم خاتم النبین ﷺ بطورِ داعی امن",
+        "حضرت محمد رسول اللہ ﷺ کا صبر و شکر",
+        "حضرت محمد رسول اللہ ﷺ کا سادہ طرز زندگی اور قناعت",
+        "حضرت محمد رسول اللہ ﷺ کا انداز گفتگو"
+      ]
+    },
+    {
+      "name": "باب چہارم: اخلاق و آداب",
+      "chapters": [
+        "میانہ روی",
+        "سخاوت وایثار",
+        "تعلیم اور تعلیم کے آداب",
+        "بُری عادات سے اجتناب"
+      ]
+    },
+    {
+      "name": "باب پنجم: حسنِ معاملات و معاشرت",
+      "chapters": [
+        "حقوق العباد"
+      ]
+    },
+    {
+      "name": "نظم و ضبط اور قانون کا احترام",
+      "chapters": [
+        "کسب حلال",
+        "قومی املاک و وسائل کے استعمال کے آداب"
+      ]
+    },
+    {
+      "name": "باب ششم: ہدایت کے سر چشمے اور مشاہیر اسلام",
+      "chapters": [
+        "امہات المومنین",
+        "حضرت امام حسن مجتبی رضی اللہ تعالیٰ عنہ",
+        "حضرت سیدہ زینب رضی اللہ تعالی عنھا",
+        "صحابہ کرام",
+        "صوفیہ کرام",
+        "علما و مفکرین",
+        "فاتحین"
+      ]
+    },
+    {
+      "name": "باب ہفتم: اسلامی تعلیمات اور عصرِ حاضر کے تقاضے",
+      "chapters": [
+        "اسلام میں علم کی اہمیت",
+        "اسلام اور امنِ عامہ"
+      ]
+    }
+  ],
+  "ترجمہ القرآن-8TH-PTB": [
+    {
+      "name": "ہمارے پیارے نبی حضرت محمد رسول اللہ خاتم النبین ﷺ",
+      "chapters": [
+        "ہمارے پیارے نبی حضرت محمد رسول اللہ خاتم النبین ﷺ"
+      ]
+    },
+    {
+      "name": "ہمارے پیارے نبی حضرت محمد رسول اللہ خاتم النبین ﷺ",
+      "chapters": []
+    },
+    {
+      "name": "قرآنِ مجید کے آداب",
+      "chapters": [
+        "قرآنِ مجید کے آداب"
+      ]
+    },
+    {
+      "name": "قرآنِ مجید کے آداب",
+      "chapters": []
+    },
+    {
+      "name": "سورۃ نمبر 1: سُورَۃُ الزُّخرُفِ",
+      "chapters": [
+        "سُورَۃُ الزُّخرُفِ"
+      ]
+    },
+    {
+      "name": "سورۃ نمبر 2: سُورَۃُ الدُّخَانِ",
+      "chapters": [
+        "سُورَۃُ الدُّ خَانِ"
+      ]
+    },
+    {
+      "name": "سورۃ نمبر 3: سُورَۃُ الجَاثِیَۃِ",
+      "chapters": [
+        "سُورَۃُ الجَاثِیَۃِ"
+      ]
+    },
+    {
+      "name": "سورۃ نمبر 4: سُورۃ قٓ",
+      "chapters": [
+        "سُورَۃُ قٓ"
+      ]
+    },
+    {
+      "name": "سورۃ نمبر 5: سُورۃُ الزّٰرِیٰتِ",
+      "chapters": [
+        "سُورَۃُ الزّٰرِیٰتِ"
+      ]
+    },
+    {
+      "name": "سورۃ نمبر 6: سُورَۃ الطُّورِ",
+      "chapters": [
+        "سُورَۃُ الطُّورِ"
+      ]
+    },
+    {
+      "name": "سورۃ نمبر 7: سُورَۃُ النَّجمِ",
+      "chapters": [
+        "سُورَۃُ النَّجمِ"
+      ]
+    },
+    {
+      "name": "سورۃ نمبر 8: سُورَۃُ القَمَرِ",
+      "chapters": [
+        "سُورَۃُ القَمُرِ"
+      ]
+    },
+    {
+      "name": "سورۃ نمبر 9: سُورَۃُ الرَّحمٰنِ",
+      "chapters": [
+        "سُورَۃُ الرَّحمٰنِ"
+      ]
+    },
+    {
+      "name": "سورۃ نمبر 10: سُورَۃُ الوَاقِعَۃِ",
+      "chapters": [
+        "سُورَۃُ الواقِعَۃِ"
+      ]
+    },
+    {
+      "name": "سورۃ نمبر 11: سُورَۃُ المُلکِ",
+      "chapters": [
+        "سُورَۃُ المُلکِ"
+      ]
+    },
+    {
+      "name": "سورۃ نمبر 12: سُورَۃُ القَلَمِ",
+      "chapters": [
+        "سُورَۃُ القَلَمِ"
+      ]
+    },
+    {
+      "name": "سورۃ نمبر 13: سُورَۃُ الحَآقَّۃِ",
+      "chapters": [
+        "سُورَۃُ الحَآقَّۃِ"
+      ]
+    },
+    {
+      "name": "سورۃ نمبر 14: سُورَۃُ المَعَارِجِ",
+      "chapters": [
+        "سُورَۃُ المَعَارِجِ"
+      ]
+    },
+    {
+      "name": "سورۃ نمبر 15: سُورَۃُ نُوحٍ",
+      "chapters": [
+        "سُورَۃُ نوحِ"
+      ]
+    },
+    {
+      "name": "سورۃ نمبر 16: سُورَۃُ الجِنِّ",
+      "chapters": [
+        "سُورَۃُ الجِنِّ"
+      ]
+    },
+    {
+      "name": "سورۃ نمبر 17: سُورِۃُ المُزَّمِّلِ",
+      "chapters": [
+        "سُورَۃُ المُزَّمِّلِ"
+      ]
+    },
+    {
+      "name": "سورۃ نمبر 18: سُورَۃُ المُدَّثِّرِ",
+      "chapters": [
+        "سُورَۃَ المُدَّثِّرِ"
+      ]
+    },
+    {
+      "name": "سورۃ نمبر 19: القِیَامَۃِ",
+      "chapters": [
+        "سُورَۃُ القِیَامَۃِ"
+      ]
+    },
+    {
+      "name": "سورۃ نمبر 20: سُورَۃُ الدَّھرِ",
+      "chapters": [
+        "سُورَۃُ الدَّھرِ"
+      ]
+    },
+    {
+      "name": "سورۃ نمبر 21: سُورَۃُ المُرسَلٰتِ",
+      "chapters": [
+        "سُورَۃُ المُرسَلٰتِ"
+      ]
+    },
+    {
+      "name": "سورۃ نمبر 22: سُورَۃُ یُوسُفَ",
+      "chapters": [
+        "سُورَۃُ یُوسُفَ"
+      ]
+    },
+    {
+      "name": "سورۃ نمبر 23: سُورۃُ مَریَمَ",
+      "chapters": [
+        "سُورَۃُ مَریَمَ",
+        "حضرت یُوسُف علیہ السّلام",
+        "حضرت یوسف علیہ السلام کی زندگی کا تکلیف دہ دَور",
+        "حضرت یوسف علیہ السلام کا عروج",
+        "حضرت عیسٰی علیہ السّلام",
+        "حضرت عیسیٰ علیہ السّلام"
+      ]
+    }
+  ],
+  "اسلامیات لازمی-8TH-PTB": [
+    {
+      "name": "باب دوم: ایمانیات وعبادات",
+      "chapters": [
+        "تقدیر پرایمان",
+        "عقیدہ آخرت",
+        "خشیت الٰہی",
+        "زکوۃ کی فضیلت و اہمیت",
+        "حج اور اس کی عالمگیریت",
+        "اسلامی عبادات کے تقاضے اوراثرات"
+      ]
+    },
+    {
+      "name": "باب سوم: سیرت طیبہ ﷺ",
+      "chapters": [
+        "نبی کریم ﷺ کی دعوت وتبلیغ کی عالمگیریت وآفاقیت",
+        "غزوہ خیبر",
+        "معرکہ مؤتہ",
+        "خصائص و شمائل",
+        "نبی کریم ﷺ کی معاشرتی تعلیمات"
+      ]
+    },
+    {
+      "name": "باب چہارم: اخلاق وآداب",
+      "chapters": [
+        "مساوات",
+        "اُخوت اسلامی اور اتحادِ ملی",
+        "بد گمانی سے پرہیز",
+        "حرص وطَمَع کی ممانعت"
+      ]
+    },
+    {
+      "name": "باب پنجم: حسن معاملات و معاشرت",
+      "chapters": [
+        "حقوق العباد",
+        "خرید و فروخت کے احکام وآداب"
+      ]
+    },
+    {
+      "name": "باب ششم: ہدایت کے سر چشمے اورمشاہیر اسلام",
+      "chapters": [
+        "امہات المومنین رضی اللہ تعالیٰ عنھن",
+        "حضرت سیدنا امام حسین رضی اللہ تعالیٰ عنہ",
+        "صحابہ کرام رضی اللہ تعالی عنھم",
+        "صوفیہ کرام رحمتہ اللہ علیھم",
+        "علما و مفکرین رحمۃ اللہ علیھم",
+        "فاتحین"
+      ]
+    },
+    {
+      "name": "باب ہفتم: اسلامی تعلیمات اور عصر حاضر کے تقاضے",
+      "chapters": [
+        "دعوت و تبلیغ",
+        "ذرائع ابلاغ کا استعمال"
+      ]
+    }
+  ],
+  "اردو لازمی-8TH-PTB": [
+    {
+      "name": "سبق نمبر 1: حمد (نظم)",
+      "chapters": [
+        "حمد (نظم)"
+      ]
+    },
+    {
+      "name": "سبق نمبر 2:نعت (نظم)",
+      "chapters": [
+        "نعت (نظم)"
+      ]
+    },
+    {
+      "name": "سبق نمبر 3: تبسم کے پھول",
+      "chapters": [
+        "تبسم کے پھول"
+      ]
+    },
+    {
+      "name": "سبق نمبر 4: عظیم سپہ سالار",
+      "chapters": [
+        "عظیم سپہ سالار"
+      ]
+    },
+    {
+      "name": "سبق نمبر 5 : چغل خور",
+      "chapters": [
+        "چغل خور"
+      ]
+    },
+    {
+      "name": "سبق نمبر 6 : قدرتی آفات",
+      "chapters": [
+        "قدرتی آفات"
+      ]
+    },
+    {
+      "name": "سبق نمبر 7 : وطن کی مٹی گواہ رہنا (نظم)",
+      "chapters": [
+        "وطن کی مٹی گواہ رہنا (نظم)"
+      ]
+    },
+    {
+      "name": "سبق نمبر 8 : مناظر پاکستان",
+      "chapters": [
+        "مناظر پاکستان"
+      ]
+    },
+    {
+      "name": "سبق نمبر 9 : میجر شبیر شریف شہید",
+      "chapters": [
+        "میجر شبیر شریف شہید"
+      ]
+    },
+    {
+      "name": "سبق نمبر 10 : پاکستان کی تہذہب و ثقافت",
+      "chapters": [
+        "پاکستان کی تہذیب و ثقافت"
+      ]
+    },
+    {
+      "name": "سبق نمبر 11 : اک ریل کے سفر کی تصویر کھنچتا ہوں (نظم)",
+      "chapters": [
+        "اک ریل کے سفر کی تصویر کھنچتا ہوں (نظم)"
+      ]
+    },
+    {
+      "name": "سبق نمبر 12 : ہاکی",
+      "chapters": [
+        "ہاکی"
+      ]
+    },
+    {
+      "name": "سبق نمبر 13 : قدرتی ماحول",
+      "chapters": [
+        "قدرتی ماحول"
+      ]
+    },
+    {
+      "name": "سبق نمبر 14 : حکیم محمد سعید شہید",
+      "chapters": [
+        "حلیم محمد سعید شہید"
+      ]
+    },
+    {
+      "name": "سبق نمبر 15 : درس عمل (نظم)",
+      "chapters": [
+        "درس عمل (نظم)"
+      ]
+    },
+    {
+      "name": "سبق نمبر 16 : خواتین کا احترام اور مقام",
+      "chapters": [
+        "خواتین کا احترام اور مقام"
+      ]
+    },
+    {
+      "name": "سبق نمبر 17 : کرپشن ایک سماجی بُرائی",
+      "chapters": [
+        "کرپشن ایک سماجی بُرائی"
+      ]
+    },
+    {
+      "name": "سبق نمبر 18 : دریا کنارے چاندنی (نظم)",
+      "chapters": [
+        "دریا کنارے چاندنی (نظم)"
+      ]
+    },
+    {
+      "name": "سبق نمبر 19 : ابتدائی طبی امداد",
+      "chapters": [
+        "ابتدائی طبی امداد"
+      ]
+    },
+    {
+      "name": "سبق نمبر 20 : بچے کی دعا (نظم)",
+      "chapters": [
+        "بچے کی دعا (نظم)"
+      ]
+    },
+    {
+      "name": "صرف ونح",
+      "chapters": [
+        "حروف اور اسکی اقسام",
+        "اسم اور اسکی اقسام",
+        "اسم معرفہ کی اقسام",
+        "اسم نکرہ کی اقسام",
+        "فعل اور اس کی اقسام",
+        "افعال کی اقسام (بلحاظ فاعل)",
+        "رموز اوقاف"
+      ]
+    },
+    {
+      "name": "(اُردو(ب",
+      "chapters": [
+        "مذکر مونث",
+        "واحد جمع",
+        "ضرب الامثال کہاوتیں",
+        "متشابہ الفاظ",
+        "مترادف الفاظ",
+        "متضاد الفاظ",
+        "سابقے لاحقے",
+        "اعراب لگائیں",
+        "محاورات",
+        "غلط جملوں کی درستگی",
+        "درخواستیں",
+        "خطوط",
+        "کہانیاں",
+        "مضامین",
+        "تفہیم عبارات",
+        "مکالمے"
+      ]
+    }
+  ],
+  "English-8TH-PTB": [
+    {
+      "name": "UNIT 1: Tolerance of The Rasoolullah (SAW)",
+      "chapters": [
+        "Tolerance of The Rasoolullah (SAW)"
+      ]
+    },
+    {
+      "name": "UNIT 2: A Great Virtue",
+      "chapters": [
+        "A Great Virtue"
+      ]
+    },
+    {
+      "name": "UNIT 3: The Twins",
+      "chapters": [
+        "The Twins"
+      ]
+    },
+    {
+      "name": "UNIT 4: Let's Make Our Roads Safer!",
+      "chapters": [
+        "Let's Make Our Roads Safer!"
+      ]
+    },
+    {
+      "name": "UNIT 5: Hazrat Umar (R.A)",
+      "chapters": [
+        "Hazrat Umar (R.A)"
+      ]
+    },
+    {
+      "name": "UNIT 6: Sports and Sportsmanship",
+      "chapters": [
+        "Sports and Sportsmanship"
+      ]
+    },
+    {
+      "name": "UNIT 7: The Earth Speaks",
+      "chapters": [
+        "The Earth Speaks"
+      ]
+    },
+    {
+      "name": "UNIT 8: Settling the Quarrel",
+      "chapters": [
+        "Stetting the Quarrel"
+      ]
+    },
+    {
+      "name": "UNIT 9: Mountaineering",
+      "chapters": [
+        "Mountaineering"
+      ]
+    },
+    {
+      "name": "UNIT 10: Dignity of Labour",
+      "chapters": [
+        "Dignity of Labour"
+      ]
+    },
+    {
+      "name": "UNIT 11: Give to Your Country",
+      "chapters": [
+        "Give to Your Country"
+      ]
+    },
+    {
+      "name": "UNIT 12: Trees Plantation",
+      "chapters": [
+        "Trees Plantation"
+      ]
+    },
+    {
+      "name": "English B",
+      "chapters": [
+        "Direct & Indirect",
+        "Idioms",
+        "Singular/Plural",
+        "Masculine/Feminine",
+        "Letters",
+        "Applications",
+        "Stories",
+        "Essays",
+        "Dialogues",
+        "Form of verbs",
+        "Grammar (Objective)",
+        "Comprehension Paragraphs",
+        "Summarize The Paragraph",
+        "Tenses",
+        "Use Of 'it' & 'there'",
+        "Use of 'has' , 'have' & 'had'",
+        "Present Indefinite Tense",
+        "Present Continuous Tense",
+        "Present Perfect Tense",
+        "Present Perfect Continuous Tense",
+        "Past Indefinite Tense",
+        "Past Continuous Tense",
+        "Past Perfect Tense",
+        "Past Perfect Continuous Tense",
+        "Future Indefinite Tense",
+        "Future Continuous Tense",
+        "Future Perfect Tense",
+        "Future Perfect Continuous Tense",
+        "Use of 'is' , 'am' , 'are' , 'was' & 'were'",
+        "English Grammar",
+        "Sentence and Phrase",
+        "Compound and Complex Sentences",
+        "Punctuation",
+        "Articles",
+        "Noun",
+        "Pronoun",
+        "Adjective",
+        "Verb",
+        "Adverb",
+        "Preposition",
+        "Conjunction",
+        "Interjection",
+        "Book Review Excercises",
+        "Review-01",
+        "Review-02",
+        "Review-03",
+        "Water is a lovely thing (Poem)",
+        "Prayer (Poem)",
+        "Taking a Tour in Hills (Poem)"
+      ]
+    }
+  ],
+  "Mathematics-8TH-PTB": [
+    {
+      "name": "CHAP 1: Numbers and Operations: Real Numbers",
+      "chapters": [
+        "1.1 E.X 1.1",
+        "1.2 E.X 1.2"
+      ]
+    },
+    {
+      "name": "CHAP 1: Numbers and Operations: Estimation and Approximation",
+      "chapters": [
+        "1.3 E.X 1.3"
+      ]
+    },
+    {
+      "name": "CHAP 1: Numbers and Operations: Square Roots and Cube Roots",
+      "chapters": [
+        "1.4 E.X 1.4",
+        "1.5 E.X 1.5",
+        "1.6 E.X 1.6",
+        "1.7 E.X 1.7",
+        "1.8 E.X 1.8",
+        "1.9 E.X 1.9",
+        "1.10 E.X 1.10",
+        "1.11 E.X 1.11",
+        "1.1 Review Exercise (a)"
+      ]
+    },
+    {
+      "name": "CHAP 1: Numbers and Operations: Sets",
+      "chapters": [
+        "1.12 E.X 1.12",
+        "1.13 E.X 1.13",
+        "1.14 E.X 1.14",
+        "1.15 E.X 1.15",
+        "1.16 E.X 1.16"
+      ]
+    },
+    {
+      "name": "CHAP 1: Numbers and Operations: Ratio, Rate and Proportion",
+      "chapters": [
+        "1.17 E.X 1.17",
+        "1.18 E.X 1.18"
+      ]
+    },
+    {
+      "name": "CHAP 1: Numbers and Operations: Percentage and Financial Arithmetic",
+      "chapters": [
+        "1.19 E.X 1.19",
+        "1.20 E.X 1.20",
+        "1.21 E.X 1.21",
+        "1.22 E.X 1.22",
+        "1.23 E.X 1.23",
+        "1.24 E.X 1.24",
+        "1.2 Review Exercise (b)"
+      ]
+    },
+    {
+      "name": "CHAP 2: Algebra: Number Sequence and Patterns",
+      "chapters": [
+        "2.1 E.X 2.1",
+        "2.2 E.X 2.2",
+        "2.3 E.X 2.3"
+      ]
+    },
+    {
+      "name": "CHAP 2: Algebra: Expansion and Factorization",
+      "chapters": [
+        "2.4 E.X 2.4",
+        "2.5 E.X 2.5",
+        "2.6 E.X 2.6",
+        "2.7 E.X 2.7",
+        "2.8 E.X 2.8",
+        "2.9 E.X 2.9",
+        "2.10 E.X 2.10",
+        "2.11 E.X 2.11",
+        "2.12 E.X 2.12",
+        "2.13 E.X 2.13",
+        "2.14 E.X 2.14",
+        "2.15 E.X 2.15",
+        "2.16 E.X 2.16"
+      ]
+    },
+    {
+      "name": "CHAP 2: Algebra: Linear Equations and Inequalities",
+      "chapters": [
+        "2.17 E.X 2.17",
+        "2.18 E.X 2.18",
+        "2.19 E.X 2.19",
+        "2.20 E.X 2.20",
+        "2.21 E.X 2.21",
+        "2.22 E.X 2.22",
+        "2.1 Review Exercise"
+      ]
+    },
+    {
+      "name": "CHAP 3: Mensuration",
+      "chapters": [
+        "3.1 E.X 3.1",
+        "3.2 E.X 3.2",
+        "3.3 E.X 3.3",
+        "3.4 E.X 3.4",
+        "3.5 E.X 3.5",
+        "3.6 E.X 3.6",
+        "3.7 E.X 3.7",
+        "3.1 Review Exercise"
+      ]
+    },
+    {
+      "name": "CHAP 4: Congruency and Similarity, Construction of Triangles and Transformation",
+      "chapters": [
+        "4.1 E.X 4.1",
+        "4.2 E.X 4.2",
+        "4.3 E.X 4.3",
+        "4.4 E.X 4.4",
+        "4.5 E.X 4.5",
+        "4.6 E.X 4.6",
+        "4.1 Review Exercise"
+      ]
+    },
+    {
+      "name": "CHAP 5: Statistics and Probability: Information Handling",
+      "chapters": [
+        "5.1 E.X 5.1",
+        "5.2 E.X 5.2",
+        "5.3 E.X 5.3",
+        "5.4 E.X 5.4"
+      ]
+    },
+    {
+      "name": "CHAP 5: Statistics and Probability: Probability",
+      "chapters": [
+        "5.5 E.X 5.5",
+        "5.1 Review Exercise"
+      ]
+    }
+  ],
+  "General Science-8TH-PTB": [
+    {
+      "name": "UNIT 1: Ecology",
+      "chapters": [
+        "Ecology"
+      ]
+    },
+    {
+      "name": "UNIT 2 : Human Nervous System",
+      "chapters": [
+        "Human Nervous System"
+      ]
+    },
+    {
+      "name": "UNIT 3: Variation, Heredity and Cell division",
+      "chapters": [
+        "Variation, Heredity and Cell division"
+      ]
+    },
+    {
+      "name": "UNIT 4: Biotechnology",
+      "chapters": [
+        "Biotechnology"
+      ]
+    },
+    {
+      "name": "UNIT 5: Periodic Table",
+      "chapters": [
+        "Periodic Table"
+      ]
+    },
+    {
+      "name": "UNIT 6: Chemical Reactions",
+      "chapters": [
+        "Chemical Reactions"
+      ]
+    },
+    {
+      "name": "UNIT 7: Acids, Bases and Salts",
+      "chapters": [
+        "Acids, Bases and Salts"
+      ]
+    },
+    {
+      "name": "UNIT 8: Force and Pressure",
+      "chapters": [
+        "Force and Pressure"
+      ]
+    },
+    {
+      "name": "UNIT 9: Reflection and Refraction",
+      "chapters": [
+        "Reflection and Refraction"
+      ]
+    },
+    {
+      "name": "UNIT 10 : Electricity and Magnetism",
+      "chapters": [
+        "Electricity and Magnetism"
+      ]
+    },
+    {
+      "name": "UNIT 11: Technology in Everyday life",
+      "chapters": [
+        "Technology in Everyday life"
+      ]
+    },
+    {
+      "name": "UNIT 12: Our Universe",
+      "chapters": [
+        "Our Universe"
+      ]
+    }
+  ],
+  "Computer-8TH-PTB": [
+    {
+      "name": "CHAP 1: Emerging Technologies",
+      "chapters": [
+        "Emerging Technologies"
+      ]
+    },
+    {
+      "name": "CHAP 2: Data Communication and Computer Networks",
+      "chapters": [
+        "Data Communication and Computer Networks"
+      ]
+    },
+    {
+      "name": "CHAP 3: Microsoft Excel",
+      "chapters": [
+        "Microsoft Excel"
+      ]
+    },
+    {
+      "name": "CHAP 4: Google Sheets",
+      "chapters": [
+        "Google Sheets"
+      ]
+    },
+    {
+      "name": "CHAP 5: Computational Thinking",
+      "chapters": [
+        "Computational Thinking"
+      ]
+    },
+    {
+      "name": "CHAP 6: Programming",
+      "chapters": [
+        "Programming"
+      ]
+    },
+    {
+      "name": "CHAP 7: Digital Citizenship",
+      "chapters": [
+        "Digital Citizenship"
+      ]
+    },
+    {
+      "name": "CHAP 8: Entrepreneurship",
+      "chapters": [
+        "Entrepreneurship"
+      ]
+    }
+  ],
+  "جغرافیہ-8TH-PTB": [
+    {
+      "name": "CHAP 1: Oceans and seas",
+      "chapters": [
+        "Oceans and seas"
+      ]
+    },
+    {
+      "name": "CHAP 2: Living with Climate",
+      "chapters": [
+        "Living with Climate"
+      ]
+    },
+    {
+      "name": "CHAP 3: Environmental Pollution",
+      "chapters": [
+        "Environmental Pollution"
+      ]
+    },
+    {
+      "name": "CHAP 4: Industrialization and International Trade",
+      "chapters": [
+        "Industrialization and International Trade"
+      ]
+    },
+    {
+      "name": "CHAP 5: Transport and Its Importance",
+      "chapters": [
+        "Transport and Its Importance"
+      ]
+    },
+    {
+      "name": "CHAP 6: Social and Economic Development",
+      "chapters": [
+        "Social and Economic Development"
+      ]
+    }
+  ],
+  "تاریخ-8TH-PTB": [
+    {
+      "name": "CHAP 1: Arrival of The British In the Subcontinent",
+      "chapters": [
+        "Arrival of The British In the Subcontinent"
+      ]
+    },
+    {
+      "name": "CHAP 2: Reform Movement In The Subcontinent",
+      "chapters": [
+        "Reform Movement In The Subcontinent"
+      ]
+    },
+    {
+      "name": "CHAP 3: world Wars I And II",
+      "chapters": [
+        "world Wars I And II"
+      ]
+    },
+    {
+      "name": "CHAP 4: Political Awakening In Subcontinent",
+      "chapters": [
+        "Political Awakening In Subcontinent"
+      ]
+    },
+    {
+      "name": "CHAP 5: Pakistan A New Country: 1947 Till Today",
+      "chapters": [
+        "Pakistan A New Country: 1947 Till Today"
+      ]
+    }
+  ],
+  "اخلاقیات-8TH-PTB": [
+    {
+      "name": "باب نمبر 1: مذاہب کا تعارف",
+      "chapters": [
+        "مذاہب کا تعارف"
+      ]
+    },
+    {
+      "name": "باب نمبر 2: دنیا کے مذاہب",
+      "chapters": [
+        "دنیا کے مذاہب",
+        "اب نمبر 3: پاکستان میں مذہبی تہوار",
+        "پاکستان میں مذہبی تہوار"
+      ]
+    },
+    {
+      "name": "باب نمبر 4: اخلاقی اقدار",
+      "chapters": [
+        "اخلاقی اقدار"
+      ]
+    },
+    {
+      "name": "باب نمبر 5: شخصیات",
+      "chapters": [
+        "شخصیات"
+      ]
+    }
+  ],
+  "زرعی تعلیم-8TH-PTB": [
+    {
+      "name": "باب نمبر 1: ربیع اور خریف کی فصلوں کی کاشت",
+      "chapters": [
+        "ربیع اور خریف کی فصلوں کی کاشت"
+      ]
+    },
+    {
+      "name": "باب نمبر 2: نباتات و حیوانات کا تحفظ",
+      "chapters": [
+        "نباتات و حیوانات کا تحفظ"
+      ]
+    },
+    {
+      "name": "باب نمبر 3: زمین کی زرخیزی بحال کرنا",
+      "chapters": [
+        "زمین کی زرخیزی بحال کرنا"
+      ]
+    },
+    {
+      "name": "باب نمبر 4: زرعی اراضی کا تحفظ",
+      "chapters": [
+        "زرعی اراضی کا تحفظ"
+      ]
+    },
+    {
+      "name": "باب نمبر :5 پانی کے وسائل کا تحفظ اور بہتر استعمال",
+      "chapters": [
+        "پانی کے وسائل کا تحفظ اور بہتر استعمال"
+      ]
+    },
+    {
+      "name": "باب نمبر 6: کھمبی کی کاشت",
+      "chapters": [
+        "کھمبی کی کاشت"
+      ]
+    },
+    {
+      "name": "باب نمبر7: زرعی اجناس کا ذخیرہ و تحفظ",
+      "chapters": [
+        "زرعی اجناس کا ذخیرہ و تحفظ"
+      ]
+    }
+  ],
+  "پنجابی-8TH-PTB": [
+    {
+      "name": "نظم نمبر 1: سچی ذات رب دی",
+      "chapters": [
+        "سچی ذات رب دی"
+      ]
+    },
+    {
+      "name": "باب نمبر 2: حضرت محمدﷺ",
+      "chapters": [
+        "حضرت محمدﷺ"
+      ]
+    },
+    {
+      "name": "نظم نمبر 3: نعت",
+      "chapters": [
+        "نعت"
+      ]
+    },
+    {
+      "name": "باب نمبر 4: حضرت عمر فاروق رضی اللہ عنہ",
+      "chapters": [
+        "حضرت عمر فاروق رضی اللہ عنہ"
+      ]
+    },
+    {
+      "name": "باب نمبر 5: ایکے دی برکت",
+      "chapters": [
+        "ایکے دی برکت"
+      ]
+    },
+    {
+      "name": "نظم نمبر 6: مہمان داری",
+      "chapters": [
+        "مہمان داری"
+      ]
+    },
+    {
+      "name": "باب نمبر 7: اچھا شہری",
+      "chapters": [
+        "اچھا شہری"
+      ]
+    },
+    {
+      "name": "باب نمبر 8: دلاں نوں دلاں دے راہ",
+      "chapters": [
+        "دلاں نوں دلاں دے راہ"
+      ]
+    },
+    {
+      "name": "غزل نمبر 9: غزل",
+      "chapters": [
+        "غزل نمبر 9: غزل"
+      ]
+    },
+    {
+      "name": "غزل",
+      "chapters": [
+        "غزل"
+      ]
+    },
+    {
+      "name": "باب نمبر 10: جنت دی خاتون",
+      "chapters": [
+        "جنت دی خاتون"
+      ]
+    },
+    {
+      "name": "باب نمبر 11: قادریار",
+      "chapters": [
+        "قادر یار"
+      ]
+    },
+    {
+      "name": "نظم نمبر 12: قائداعظم",
+      "chapters": [
+        "قائد اعظم"
+      ]
+    },
+    {
+      "name": "باب نمبر 13: انسان دی کہانی",
+      "chapters": [
+        "انسان دی کہانی"
+      ]
+    },
+    {
+      "name": "باب نمبر :14 نشے توں بچو",
+      "chapters": [
+        "نشے توں بچو"
+      ]
+    },
+    {
+      "name": "باب نمبر 15: قائداعظم رحمتہ اللہ علیہ",
+      "chapters": [
+        "قائداعظم رحمتہ اللہ علیہ"
+      ]
+    },
+    {
+      "name": "نظم نمبر 16: میلاشالا مار",
+      "chapters": [
+        "میلا شالا مار"
+      ]
+    },
+    {
+      "name": "باب نمبر 17: ڈیرہ بابے راٹھ دا",
+      "chapters": [
+        "ڈیرہ بابے راٹھ دا"
+      ]
+    },
+    {
+      "name": "باب نمبر 18: چٹھی",
+      "chapters": [
+        "چٹھی"
+      ]
+    },
+    {
+      "name": "باب نمبر 19: شہیداں نوں سلام",
+      "chapters": [
+        "شہیداں نوں سلام"
+      ]
+    },
+    {
+      "name": "نظم نمبر 20: محنت دی وڈیائی",
+      "chapters": [
+        "محنت دی وڈیائی"
+      ]
+    },
+    {
+      "name": "نظم نمبر 21: بھیناں دے ویر",
+      "chapters": [
+        "بھیناں دے ویر"
+      ]
+    },
+    {
+      "name": "باب نمبر 22: کبھ ایٹمی توانائی بارے",
+      "chapters": [
+        "کجھ ایٹمی توانائی بارے"
+      ]
+    },
+    {
+      "name": "نظم نمبر 23: دیس پیارا گیت",
+      "chapters": [
+        "دیس پیارا گیت"
+      ]
+    },
+    {
+      "name": "باب نمبر 24: فضا دی صفائی",
+      "chapters": [
+        "فضا دی صفائی"
+      ]
+    },
+    {
+      "name": "باب نمبر 25: جہاد",
+      "chapters": [
+        "جہاد"
+      ]
+    },
+    {
+      "name": "باب نمبر 26: غنی سائیں",
+      "chapters": [
+        "غںی سائیں"
+      ]
+    },
+    {
+      "name": "نظم نمبر 27: جیوے ساڈا پاکستان",
+      "chapters": [
+        "جیوے ساڈا پاکستان"
+      ]
+    },
+    {
+      "name": "باب نمبر 28: پہیے توں گڈی توڑی",
+      "chapters": [
+        "پہیے توں گڈی توڑی"
+      ]
+    },
+    {
+      "name": "باب نمبر 29: بیتے دا محرم--- ہڑپہ",
+      "chapters": [
+        "بیتے دا محرم--- ہڑپہ"
+      ]
+    },
+    {
+      "name": "نظم نمبر 30: قدرت رب دی",
+      "chapters": [
+        "قدرت رب دی"
+      ]
+    },
+    {
+      "name": "باب نمبر 31: لطیفے",
+      "chapters": [
+        "لطیفے"
+      ]
+    },
+    {
+      "name": "نظم نمبر 32: دوہڑے",
+      "chapters": [
+        "دوہڑے"
+      ]
+    },
+    {
+      "name": "باب نمبر 33:انسان تے قدرت",
+      "chapters": [
+        "انسان تے قدرت"
+      ]
+    },
+    {
+      "name": "غزل نمبر 34: غزل",
+      "chapters": [
+        "غزل نمبر 34: غزل"
+      ]
+    },
+    {
+      "name": "غزل",
+      "chapters": []
+    },
+    {
+      "name": "باب نمبر 35: زبیدہ ناں سچ",
+      "chapters": [
+        "زبیدہ ناں سچ"
+      ]
+    },
+    {
+      "name": "نظم نمبر 36: سوہنیا سائیاں",
+      "chapters": [
+        "سوہنیا سائیاں"
+      ]
+    }
+  ],
+  "ہوم اکنامکس-8TH-PTB": [
+    {
+      "name": "باب نمبر 1: ہوم اکنامکس کا تعارف",
+      "chapters": [
+        "ہوم اکنامکس کا تعارف"
+      ]
+    },
+    {
+      "name": "باب نمبر 2:غذا اور غذائیت",
+      "chapters": [
+        "غذا اور غذائیت"
+      ]
+    },
+    {
+      "name": "باب نمبر 3: کھانا پکانا اور تحفظ غذا",
+      "chapters": [
+        "کھانا پکانا اور تحفظ غذا"
+      ]
+    },
+    {
+      "name": "باب نمبر 4: تصور ذات",
+      "chapters": [
+        "تصور ذات"
+      ]
+    },
+    {
+      "name": "باب نمبر 5: شخصیت کی نشوونما اور تعمیر کرار",
+      "chapters": [
+        "شخصیت کی نشوونما اور تعمیر کرار"
+      ]
+    },
+    {
+      "name": "باب نمبر 6:پارچہ بافی اور لباس",
+      "chapters": [
+        "پارچہ بافی اور لباس"
+      ]
+    },
+    {
+      "name": "باب نمبر 7: سلائی کے طریقے",
+      "chapters": [
+        "سلائی کے طریقے"
+      ]
+    },
+    {
+      "name": "باب نمبر 8:رنگ",
+      "chapters": [
+        "رنگ"
+      ]
+    },
+    {
+      "name": "باب نمبر 9: آرٹ اینڈ کرافٹ",
+      "chapters": [
+        "آرٹ اینڈ کرافٹ"
+      ]
+    },
+    {
+      "name": "باب نمبر10: ذرائع ووسائل کا انتظام",
+      "chapters": [
+        "ذرائع ووسائل کا انتظام"
+      ]
+    },
+    {
+      "name": "باب نمبر 11:کام کو آسان بنانا",
+      "chapters": [
+        "کام کو آسان بنانا"
+      ]
+    }
+  ]
+}

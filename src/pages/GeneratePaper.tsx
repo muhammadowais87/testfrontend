@@ -6,6 +6,7 @@ import {
   boardClassMap, boardCards, boardSubjectsMap, getChaptersForSubject, type ChapterGroup,
 } from "@/data/subjectData";
 import { getNineTopicChapters } from "@/data/nineTopicChapters";
+import { getOneToEightChapters } from "@/data/oneToEightChapters";
 import { getAvailableQuestionTypesForTopics } from "@/data/topicQuestionTypes";
 import SubjectButton from "@/components/SubjectButton";
 import DualMediumQuestion from "@/components/DualMediumQuestion";
@@ -82,6 +83,18 @@ const allPossibleQuestionTypeOptions: QuestionTypeOption[] = [
   { value: "translate_into_urdu_paragraph", label: "Translate into Urdu Paragraph (اردو میں ترجمہ)" },
   // Q&A
   { value: "questions_answers", label: "Questions & Answers (سوالات و جوابات)" },
+  // Classes 1-8 specific types
+  { value: "essays", label: "Essay Writing (مضمون نویسی)" },
+  { value: "match_columns", label: "Match Columns (کالم ملائیں)" },
+  { value: "true_false_statements", label: "True / False Statements (صحیح / غلط)" },
+  { value: "pointing", label: "Pointing (اشارہ)" },
+  { value: "homophones", label: "Homophones (ہم آواز الفاظ)" },
+  { value: "genders", label: "Genders (مذکر / مونث)" },
+  { value: "sabqe_lahqe", label: "Sabqe Lahqe (سابقے لاحقے)" },
+  { value: "missing_letters", label: "Missing Letters (خالی حروف)" },
+  { value: "translate_into_urdu_sentences", label: "Translate into Urdu Sentences (جملوں کا ترجمہ)" },
+  { value: "zarb_ul_imsal", label: "Zarb ul Imsal (ضرب الامثال)" },
+  { value: "zarb_ul_misaal", label: "Zarb ul Misaal (ضرب المثال)" },
   // Islamic Studies
   { value: "ayaat", label: "Ayat (آیاتِ مبارکہ)" },
   { value: "hadith", label: "Hadith (حدیث مبارکہ)" },
@@ -169,6 +182,17 @@ const getProfessionalQuestionTypeLabel = (value: string, fallbackLabel: string):
     tafheem_ibarat: "Comprehension of Passage (تفہیم عبارت)",
     words_into_sentences: "Words into Sentences (الفاظ کا جملوں میں استعمال)",
     ayaat: "Ayat (آیاتِ مبارکہ)",
+    essays: "Essay Writing (مضمون نویسی)",
+    match_columns: "Match Columns (کالم ملائیں)",
+    true_false_statements: "True / False Statements (صحیح / غلط)",
+    pointing: "Pointing (اشارہ)",
+    homophones: "Homophones (ہم آواز الفاظ)",
+    genders: "Genders (مذکر / مونث)",
+    sabqe_lahqe: "Sabqe Lahqe (سابقے لاحقے)",
+    missing_letters: "Missing Letters (خالی حروف)",
+    translate_into_urdu_sentences: "Translate into Urdu Sentences (جملوں کا ترجمہ)",
+    zarb_ul_imsal: "Zarb ul Imsal (ضرب الامثال)",
+    zarb_ul_misaal: "Zarb ul Misaal (ضرب المثال)",
   };
 
   return labelMap[normalizedValue] || fallbackLabel;
@@ -223,6 +247,11 @@ const GeneratePaper = () => {
   const chapterGroups = useMemo(() => {
     if (!selectedSubject || !selectedLevel || !selectedBoard) {
       return [];
+    }
+
+    const fromOneToEight = getOneToEightChapters(selectedSubject, selectedLevel, selectedBoard);
+    if (fromOneToEight && fromOneToEight.length > 0) {
+      return fromOneToEight;
     }
 
     const fromTopicsFile = getNineTopicChapters(selectedSubject, selectedLevel, selectedBoard);
@@ -717,7 +746,8 @@ const GeneratePaper = () => {
     }
 
     const currentKey = `${selectedBoard}-${selectedLevel}-${selectedSubject}`;
-    const fromTopicsFile = getNineTopicChapters(selectedSubject, selectedLevel, selectedBoard);
+    const fromTopicsFile = getNineTopicChapters(selectedSubject, selectedLevel, selectedBoard)
+      ?? getOneToEightChapters(selectedSubject, selectedLevel, selectedBoard);
     const hasTopicsFile = Boolean(fromTopicsFile && fromTopicsFile.length > 0);
     const hasDb = Boolean(dbChapterGroups && dbChapterGroups.length > 0);
 
@@ -1017,6 +1047,7 @@ const GeneratePaper = () => {
                                     urdu={q.urdu}
                                     index={topicOffset + idx + 1}
                                     dualMedium={appliedDualMedium}
+                                    imageFile={q.imageFile}
                                     textClassName="text-[13px] font-medium text-gray-800"
                                     urduClassName="text-[13px] text-gray-800 font-medium"
                                   />
@@ -1049,6 +1080,7 @@ const GeneratePaper = () => {
                           urdu={q.urdu}
                           index={idx + 1}
                           dualMedium={appliedDualMedium}
+                          imageFile={q.imageFile}
                         />
                       </div>
                     ))}

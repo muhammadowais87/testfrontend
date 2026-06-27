@@ -1,0 +1,56 @@
+1st English -> 7
+1st General Knowledge -> 5
+1st اردو لازمی -> 6
+1st اسلامیات لازمی -> 3
+2nd English -> 7
+2nd اردو لازمی -> 10
+2nd اسلامیات لازمی -> 3
+2nd واقفیت عامہ -> 6
+3rd English -> 8
+3rd General Knowledge -> 4
+3rd اردو لازمی -> 9
+3rd اسلامیات لازمی -> 4
+4th English -> 15
+4th General Science -> 3
+4th Social Study -> 6
+4th اردو لازمی -> 18
+4th اسلامیات لازمی -> 5
+5th English -> 16
+5th General Science -> 3
+5th Social Studies -> 5
+5th اردو لازمی -> 17
+5th اسلامیات لازمی -> 5
+6th Computer -> 4
+6th English -> 18
+6th General Science -> 5
+6th Geography -> 3
+6th History -> 3
+6th اخلاقیات -> 6
+6th اردو لازمی -> 25
+6th اسلامیات لازمی -> 4
+6th ترجمہ القرآن -> 5
+6th زرعی تعلیم -> 5
+6th پنجابی -> 4
+6th ہوم اکنامکس -> 6
+7th Computer -> 3
+7th English -> 21
+7th General Science -> 3
+7th Geography -> 3
+7th History -> 3
+7th اردو لازمی -> 26
+7th اسلامیات لازمی -> 4
+7th ترجمہ القرآن -> 5
+7th زرعی تعلیم -> 5
+7th ہوم اکنامکس -> 6
+8th Computer -> 3
+8th English -> 24
+8th General Science -> 3
+8th اخلاقیات -> 6
+8th اردو لازمی -> 28
+8th اسلامیات لازمی -> 3
+8th تاریخ -> 3
+8th ترجمہ القرآن -> 5
+8th جغرافیہ -> 3
+8th زرعی تعلیم -> 5
+8th پنجابی -> 7
+8th ہوم اکنامکس -> 5

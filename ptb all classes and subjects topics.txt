@@ -1,0 +1,2526 @@
+-> one class urdu
+SELECT ALL CHAPTERS
+ سبق نمبر 1: حمد
+ حمد
+ سبق نمبر 2: نعت
+ نعت
+ سبق نمبر 3: آخِری رَسُولﷺ
+ آخِری رَسُولﷺ
+ سبق نمبر 4: آؤ مِل کر کام کریں
+ آؤ مِل کر کام کریں
+ جائزہ ۔ ۱
+ جائزہ ۔ ۱
+ سبق نمبر 5: کِرَن کا گھرانا
+ کِرَن کا گھرانا
+ سبق نمبر 6: میرا سکول
+ میرا سکول
+ سبق نمبر 7: بات چِیت کے آداب
+ بات چِیت کے آداب
+ سبق نمبر 8: نَنّھے اِقبالؒ
+ نَنّھے اِقبالؒ
+ جائزہ ۔ ۲
+ جائزہ ۔ ۲
+ سبق نمبر 9: باغ کی سَیر
+ باغ کی سَیر
+ سبق نمبر 10: آج کیا پکائیں؟
+ آج کیا پکائیں؟
+ سبق نمبر 11: دیس ہمارا پاکِستان
+ دیس ہمارا پاکِستان
+ سبق نمبر 12: میں کیا پہنُوں؟
+ میں کیا پہنُوں؟
+ جائزہ ۔ ۳
+ جائزہ ۔ ۳
+ سبق نمبر 13: چَوک میں لگی بَتِّیاں
+ چَوک میں لگی بَتِّیاں
+ سبق نمبر 14: دَھنَک
+ دَھنَک
+ سبق نمبر 15: نیک بنو، نیکی پھیلاؤ
+ نیک بنو، نیکی پھیلاؤ
+ جائزہ ۔ ۴
+ جائزہ ۔ ۴
+ اُردو قاعدے کے مشمولات
+ سبق:9
+ سبق:11
+ سبق:13
+ سبق:14
+ سبق:16
+ سبق:18
+ سبق:19
+ سبق:21
+ سبق:23
+ سبق:24
+ سبق:25
+ سبق:26
+ سبق:31
+ سبق:32
+ سبق:33
+ سبق:34
+ سبق:35
+ سبق:37
+ سبق:38
+ سبق:39
+
+-> one class general knowledge
+SELECT ALL CHAPTERS
+ باب نمبر 1: میرا تعارف
+ .1.1 میرا تعارف
+ باب نمبر 2: میرا جسم
+ .2.1 میرا جسم
+ باب نمبر 3: صحت و صفائی
+ .3.1 صحت و صفائی
+ باب نمبر 4: میرا خاندان اور میرے دوست
+ .4.1 میرا خاندان اور میرے دوست
+ باب نمبر 5: کھیل اور قوانین
+ .5.1 کھیل اور قوانین
+ باب نمبر 6: ہمارا علاقہ
+ .6.1 ہمارا علاقہ
+ باب نمبر 7: عبادت گاہیں
+ .7.1 عبادت گاہیں
+ باب نمبر 8: ہمارا پیارا وطن پاکستان
+ .8.1 ہمارا پیارا وطن پاکستان
+ باب نمبر 9: میرا سکول
+ .9.1 میرا سکول
+ باب نمبر 10: ذرائع آمدرفت
+ .10.1 ذرائع آمدرفت
+ باب نمبر 11: ٹریفک قوانین
+ .11.1 ٹریفک قوانین
+ باب نمبر 12: اچھے اخلاق و عادات
+ .12.1 اچھے اخلاق و عادات
+ باب نمبر 13: پودے اور جانور
+ .13.1 پودے اور جانور
+ باب نمبر 14: زمین اور آسمان
+ .14.1 زمین اور آسمان
+
+-> one class mathematics
+SELECT ALL CHAPTERS
+ CHAP 1: Whole Numbers
+ 1.1 Whole Numbers
+ 1.2 Review Exercise
+ CHAP 2: Number Operations
+ 2.1 Addition
+ 2.2 Substraction
+ 2.3 Review Exercise
+ CHAP 3: Measurement
+ 3.1 Length
+ 3.2 Mass
+ 3.3 Review Exercise
+ CHAP 4: Money
+ 4.1 Money
+ 4.2 Review Exercise
+ CHAP 5: Time
+ 5.1 Time
+ 5.2 Review Exercise
+ CHAP 6: Geometry
+ 6.1 Shapes
+ 6.2 Position
+ 6.3 Review Exercise
+
+-> english
+SELECT ALL CHAPTERS
+ CHAP 1: Time to Recall
+ 1.1 Time to Recall
+ CHAP 2: My Family and I
+ 2.1 My Family and I
+ CHAP 3: Cobbler, Cobbler
+ 3.1 Cobbler, Cobbler
+ Review 1
+ Review 1
+ CHAP 4: Let's have Fun!
+ 4.1 Let's have Fun!
+ CHAP 5: Sharing is Caring
+ 5.1 Sharing is Caring
+ Review 2
+ Review 2
+ CHAP 6: Blessings of Allah سبحانہ و تعالیٰ
+ 6.1 Blessings of Allah سبحانہ و تعالیٰ
+ CHAP 7: Classroom Manners
+ 7.1 Classroom Manners
+ CHAP 8: Nature is Beautiful
+ 8.1 Nature is Beautiful
+ CHAP 9: A Greeting Card
+ 9.1 A Greeting Card
+ Review 3
+ Review 3
+ CHAP 10: The Hare and the Tortoise
+ 10.1 The Hare and the Tortoise
+ CHAP 11: Love Animals
+ 11.1 Love Animals
+ Review 4
+ Review 4
+
+-> islamiyat
+SELECT ALL CHAPTERS
+ باب نمبر 2: ایمانیات و عبادات
+ ایمانیات: توحید کا تعارف
+ ایمانیات: نبوت و رِسالت
+ عبادات: مسجد
+ عبادات: اذان
+ عبادات: نماز
+ باب نمبر 3: سیرتِ طیبہﷺ
+ ہمارے پیارے نبی حضرت محمد رسول اللہ خاتم النبیینﷺ
+ حضرت محمد مصطفیٰ خاتم النبیینﷺ کے اَخلاق حسنہ
+ باب نمبر 4: اَخلاق و آداب
+ اچھے اَخلاق
+ سلام کرنا
+ باب نمبر 5: ہدایت کے سر چشمے اور مشاہیرِ اسلام
+ انبیائے کرام علیھم السّلام کا تعارف
+
+-> two urdu
+SELECT ALL CHAPTERS
+ سبق نمبر 1: حمد (نظم)
+ حمد (نظم)
+ سبق نمبر 2: نعت (نظم)
+ نعت (نظم)
+ سبق نمبر 3: پیارے رسول خاتم النبیینﷺ
+ پیارے رسول خاتم النبیینﷺ
+ سبق نمبر 4: بانو کا طوطا
+ بانو کا طوطا
+ سبق نمبر 5: سمجھ دار بَچَّہ (سنانے کا سبق)
+ سمجھ دار بَچَّہ (سنانے کا سبق)
+ جائزہ ۔ ۱
+ جائزہ ۔ ۱
+ سبق نمبر 6: چڑیا اور چُوہا
+ چڑیا اور چُوہا
+ سبق نمبر 7: تارے (نظم)
+ تارے
+ سبق نمبر 8: قائدِ اعظمؒ
+ قائدِ اعظمؒ
+ سبق نمبر 9: سیر ایک شہر کی (سُنانے کی کہانی)
+ سیر ایک شہر کی (سُنانے کی کہانی)
+ سبق نمبر 10: محنت کرنے والے
+ محنت کرنے والے
+ جائزہ ۔ ۲
+ جائزہ ۔ ۲
+ سبق نمبر 11: آؤ بجلی بچائیں (سُنانے کا سبق)
+ آؤ بجلی بچائیں (سُنانے کا سبق)
+ سبق نمبر 12: میرا پیارا وطن (نظم)
+ میرا پیارا وطن (نظم)
+ سبق نمبر 13: آؤ مل کے درخت لگائیں
+ آؤ مل کے درخت لگائیں
+ سبق نمبر 14: صفائی کا رکھیں خیال
+ صفائی کا رکھیں خیال
+ سبق نمبر 15: ساری دُنیا اپنا گھر ہے (نظم)
+ ساری دُنیا اپنا گھر ہے (نظم)
+ جائزہ ۔ ۳
+ جائزہ ۔ ۳
+ سبق نمبر 16: علامہ محمد اقبالؒ (سنانے کی کہانی)
+ علامہ محمد اقبالؒ (سنانے کی کہانی)
+ سبق نمبر 17: کھیلیں آنکھ مچولی
+ کھیلیں آنکھ مچولی
+ سبق نمبر 18: دوستی ہو تو ایسی
+ دوستی ہو تو ایسی
+ سبق نمبر 19: صبح کی سیر (نظم)
+ صبح کی سیر (نظم)
+ سبق نمبر 20: ایک سواری بڑی پیاری
+ ایک سواری بڑی پیاری
+ سبق نمبر 21: چلو میلا دیکھیں (سنانے کی کہانی)
+ چلو میلا دیکھیں (سنانے کی کہانی)
+ سبق نمبر 22: ٹوٹ بٹوٹ کی موٹر کار (نظم)
+ ٹوٹ بٹوٹ کی موٹر کار (نظم)
+ جائزہ ۔ ۴
+ جائزہ ۔ ۴
+ (اُردو(ب
+ خط
+ درخواست
+ مضمون
+ کہانیاں
+
+-> two islamiyat
+SELECT ALL CHAPTERS
+ باب نمبر 2: ایمانیات و عبادات
+ ایمانیات: آسمانی کتابوں پر ایمان
+ ایمانیات: فرشتوں پر ایمان
+ ایمانیات: آخرت
+ عبادات: روزہ
+ عبادات: عیدین و اسلامی تہوار
+ باب نمبر 3: سیرتِ طیّبہﷺ
+ نبی کریمﷺ کی محبت و اطاعت
+ حضرت محمد رسول اللہ خاتم النبیینﷺ کے اخلاق حسنہ
+ باب نمبر 4: اخلاق و آداب
+ اسلامی آدابِ زندگی
+ بڑوں کا ادب
+ جانوروں سے اچھا سلوک
+ باب نمبر 5: ہدایت کے سر چشمے اور مشاہیرِ اسلام
+ انبیائے کرام علیھم السّلام
+
+-> two waqfiyat aamma
+SELECT ALL CHAPTERS
+ سبق نمبر 1: ہمارا وطن پاکستان
+ ہمارا وطن پاکستان
+ سبق نمبر 2: دیہات اور شہر
+ دیہات اور شہر
+ سبق نمبر 3: حقوق و فرائض
+ حقوق و فرائض
+ سبق نمبر 4: مذہبی تہوار
+ مذہبی تہوار
+ سبق نمبر 5: قدرتی ماحول اور وسائل
+ قدرتی ماحول اور وسائل
+ سبق نمبر 6: پانی
+ پانی
+ سبق نمبر 7: پودے
+ پودے
+ سبق نمبر 8: جانور
+ جانور
+ سبق نمبر 9: زراعت اور مویشی
+ زراعت اور مویشی
+ سبق نمبر 10: زمینی وسائل کی حفاظت
+ زمینی وسائل کی حفاظت
+ سبق نمبر 11: حرارت اور روشنی
+ حرارت اور روشنی
+ سبق نمبر 12: دوسروں کی مدد کرنا
+ دوسروں کی مدد کرنا
+ سبق نمبر 13: پیشے
+ پیشے
+ سبق نمبر 14: دوسروں کا احترام
+ دوسروں کا احترام
+ سبق نمبر 15: عفو و درگزر
+ عفو و درگزر
+ سبق نمبر 16: غیر جانب داری
+ غیر جانب داری
+
+-> two mathematics
+SELECT ALL CHAPTERS
+ Ch#1: Whole Numbers
+ .1.1 Exercise 1
+ .1.2 Exercise 2
+ .1.3 Exercise 3
+ .1.4 Exercise 4
+ 1 Review Exercise
+ Ch#2: Numbers Operation: Addition
+ .2.1 Exercise 1
+ .2.2 Exercise 2
+ .2.3 Exercise 3
+ .1 Review Exercise
+ Ch#2: Numbers Operation: Subtraction
+ .2.4 Exercise 1
+ .2.5 Exercise 2
+ .2.6 Exercise 3
+ .2.2 Review Exercise
+ Ch#2: Numbers Operation: Multiplication
+ .2.7 Exercise 1
+ .2.8 Exercise 2
+ .2.3 Review Exercise
+ Ch#2: Numbers Operation : Division
+ .2.9 Exercise 1
+ .2.4 Review Exercise
+ Ch#3: Fractions
+ 3.1 Exercise 1
+ 3.2 Exercise 2
+ 3 Review Exercise
+ Ch#4: Measurement (Length , Mass , Capacity)
+ 4.1 Exercise 1
+ 4.2 Exercise 2
+ 4.3 Exercise 3
+ 4.4 Exercise 4
+ 4.5 Exercise 5
+ 4.6 Exercise 6
+ 4 Review Exercise
+ Ch#5: Time
+ 5.1 Reading and Writing the Time
+ 5.2 Usage of a.m and p.m in Time
+ 5.3 Drawing Hands of the Clock
+ 5.4 Solar Calendar
+ 5.5 Lunar Calendar
+ Review Exercise
+ Ch#6 : Geometry
+ 6.1 Exercise 1
+ 6.2 Exercise 2
+ 6.3 Exercise 3
+ 6.4 Exercise 4
+ 6.5 Exercise 5
+ 6.6 Exercise 6
+ Review Exercise
+
+-> two english
+SELECT ALL CHAPTERS
+ CHAP 1: A Tiny Creature
+ A Tiny Creature
+ CHAP 2: My Home and City
+ My Home and City
+ CHAP 3: Let's Plant Trees
+ Let's Plant Trees
+ Review 1
+ Review 1
+ CHAP 4: Bee on My Nose
+ Bee on My Nose
+ CHAP 5: Attention!
+ Attention
+ CHAP 6: Be Honest
+ Be Honest
+ Review 2
+ Review 2
+ CHAP 7: Sports Day
+ Sports Day
+ CHAP 8: My School
+ My School
+ CHAP 9: What a Good Deed
+ What a Good Deed
+ Review 3
+ Review 3
+ CHAP 10: An Ant and a Dove
+ An Ant and a Dove
+ CHAP 11: Love for Parents
+ Love for Parents
+ CHAP 12: Seasons
+ Seasons
+ Review 4
+ Review 4
+ English B
+ Letter
+ Essay
+ Story
+ Application
+
+-> three urdu
+SELECT ALL CHAPTERS
+ سبق نمبر 1: حمد (نظم)
+ حمد (نظم)
+ نمبر 2: نعت (نظم)
+ نعت (نظم)
+ سبق نمبر 3: بے مِثل ہے ذات رسولِ کریمﷺ کی
+ بے مِثل ہے ذات رسولِ کریمﷺ کی
+ سبق نمبر 4: اگر میں نہ ہُوں تو
+ اگر میں نہ ہُوں تو
+ جائزہ ۔ ۱
+ جائزہ ۔ ۱
+ سبق نمبر 5: سب ہیں خاص
+ سب ہیں خاص
+ سبق نمبر 6: چالاک لُومڑی اور چِنٹُو مُرغا (سنانے کا سبق)
+ چالاک لُومڑی اور چِنٹُو مُرغا (سنانے کا سبق)
+ سبق نمبر 7: ہم کیوں بھول جاتے ہیں؟
+ ہم کیوں بھول جاتے ہیں؟
+ سبق نمبر 8: شام (نظم)
+ شام (نظم)
+ سبق نمبر 9: اللہ تعالیٰ کا اِنعام
+ اللہ تعالیٰ کا اِنعام
+ جائزہ ۔ ۲
+ جائزہ ۔ ۲
+ سبق نمبر 10: جس کا خواب تھا دِل کش
+ جس کا خواب تھا دِل کش
+ سبق نمبر 11: چار انوکھے دوست
+ چار انوکھے دوست
+ سبق نمبر 12: ہم ایک ہیں (سُنانے کا سبق)
+ ہم ایک ہیں (سُنانے کا سبق)
+ سبق نمبر 13: پاک وطن ہے پاکستان (نظم)
+ پاک وطن ہے پاکستان (نظم)
+ جائزہ ۔ ۳
+ جائزہ ۔ ۳
+ سبق نمبر 14: حضرت خدیجۃُ الکبریٰؓ
+ حضرت خدیجۃُ الکبریٰؓ
+ سبق نمبر 15: وہ کون تھا؟
+ وہ کون تھا؟
+ سبق نمبر 16: اور صِلہ مِل گیا
+ اور صِلہ مِل گیا
+ سبق نمبر 17: ہم نے دیکھا ایک روبوٹ (نظم)
+ ہم نے دیکھا ایک روبوٹ (نظم)
+ سبق نمبر 18: ملکۂ کوہ سار کی سیر
+ ملکۂ کوہ سار کی سیر
+ جائزہ ۔ ۴
+ جائزہ ۔ ۴
+ سبق نمبر 19: دِل دِل پاکستان
+ دِل دِل پاکستان
+ سبق نمبر 20: قائدِ اعظمؒ (نظم)
+ قائدِ اعظمؒ (نظم)
+ سبق نمبر 21: قُدرتی آفات (سنانے کا سبق)
+ قُدرتی آفات (سنانے کا سبق)
+ سبق نمبر 22: بچے کی دُعا (نظم)
+ بچے کی دُعا (نظم)
+ جائزہ ۔ ۵
+ جائزہ ۔ ۵
+ حکومت پنجاب کی ڈینگی آگاہی مہم
+ حکومت پنجاب کی ڈینگی آگاہی مہم
+ (اُردو(ب
+ خطوط نویسی
+ کہانیاں
+ مضمون نویسی
+ درخواستیں
+
+-> three general knowledge
+SELECT ALL CHAPTERS
+ سبق نمبر 1: سورج
+ سورج
+ سبق نمبر 2: وسائل اور ان کی اقسام
+ وسائل اور ان کی اقسام
+ سبق نمبر 3: قدرتی وسائل کا تحفظ
+ قدرتی وسائل کا تحفظ
+ سبق نمبر 4: قائدِاعظم محمد علی جناحؒ
+ قائدِاعظم محمد علی جناحؒ
+ سبق نمبر 5: علامہ محمد اقبالؒ
+ علامہ محمد اقبالؒ
+ سبق نمبر 6: جاندار اجسام میں تبدیلیاں
+ جاندار اجسام میں تبدیلیاں
+ سبق نمبر 7: مسکن
+ مسکن
+ سبق نمبر 8: خوراک
+ خوراک
+ سبق نمبر 9: حکومت اور شہریوں کا کردار
+ حکومت اور شہریوں کا کردار
+ سبق نمبر 10: اختلاف ختم کرنا
+ اختلاف ختم کرنا
+ سبق نمبر 11: مادہ
+ مادہ
+ سبق نمبر 12: توانائی اور اس کے ذرائع
+ توانائی اور اس کے ذرائع
+ سبق نمبر 13: بدلتی دنیا
+ بدلتی دنیا
+ سبق نمبر 14: ایجادات
+ ایجادات
+ سبق نمبر 15: قوت اور مشینیں
+ قوت اور مشینیں
+ سبق نمبر 16: حفاظت
+ حفاظت
+
+-> three islamiyat lazmi
+SELECT ALL CHAPTERS
+ باب نمبر 2: ایمانیات و عبادات
+ ایمانیات: توحید کا تعارف
+ ایمانیات: نبوّت و رسالت
+ عبادات: کلمہ شہادت
+ عبادات: اذان
+ عبادات: وضو
+ عبادات: نماز
+ عبادات: قبلہ و مسجد
+ باب نمبر 3: سیرتِ طیبہﷺ
+ حضرت محمد رسول اللہ خاتم النبیینﷺ کی حیات طیبہ (قبل از بعثت)
+ حضرت محمد رسول اللہ خاتم النبیینﷺ کی صداقت و امانت اور حسنِ معاملات
+ حضرت محمد رسول اللہ خاتم النبیینﷺ کی رواداری اور صبر تحمل
+ باب نمبر 4: اخلاق و آداب
+ سچ کی اہمیت
+ گُفتگُو کے آداب
+ باب نمبر 5: حُسنِ معاملات اور معاشیات
+ باہمی تعلقات
+ باب نمبر 6: ہدایت کے سر چشمے اور مشاہیرِ اسلام
+ حضرت آدمؑ
+ حضرت نوحؑ
+ خلیفہ اوّل حضرت ابوبکر صدیقؓ
+ باب نمبر 7: اسلامی تعلیمات اور عصرِ حاضر کے تقاضے
+ صحت و تن درستی
+
+-> three english
+SELECT ALL CHAPTERS
+ CHAP 1: All are Welcome
+ All Are Welcome
+ CHAP 2: Gifts of Nature
+ Gifts of Nature
+ CHAP 3: The People I Love
+ The People I Love
+ CHAP 4: Kindness to Children
+ Kindness to Children
+ Review-1
+ Review 1
+ CHAP 5: Road Safety
+ Road Safety
+ CHAP 6: The Day of Silence
+ The Day of Silence
+ CHAP 7: I Like to Play
+ I Like to Play
+ CHAP 8: Saving Resources
+ Saving Resources
+ Review-2
+ Review 2
+ CHAP 9: My Culture - My Pride
+ My Culture-My Pride
+ CHAP 10: Our Family Picnic
+ Our Family Picnic
+ CHAP 11: Healthy Habits
+ Healthy Habits
+ Review-3
+ Review 3
+ English B
+ Letter
+ Essay
+ Story
+ Application
+
+-> three mathematics
+SELECT ALL CHAPTERS
+ UNIT 1: Whole Numbers
+ 1.1 Exercise 1
+ 1.2 Exercise 2
+ 1.3 Exercise 3
+ 1.4 Exercise 4
+ 1.5 Exercise 5
+ 1.6 Exercise 6
+ Review Exercise
+ UNIT 2: Number Operations
+ 2.1 Exercise 1
+ 2.2 Exercise 2
+ 2.3 Exercise 3
+ 2.4 Exercise 4
+ 2.5 Exercise 5
+ Review Exercise
+ UNIT 3: Fractions
+ 3.1 Exercise 1
+ 3.2 Exercise 2
+ 3.4 Exercise 4
+ 3.5 Exercise 5
+ 3.6 Exercise 6
+ Review Exercise
+ 3.3 Exercise 3
+ UNIT 4: Measurement (Length , Mass ,Capacity)
+ 4.1 Exercise 1
+ 4.2 Exercise 2
+ 4.3 Exercise 3
+ 4.4 Exercise 4
+ 4.5 Exercise 5
+ 4.6 Exercise 6
+ Review Exercise
+ UNIT 5: Measurement (Time)
+ 5.1 Exercise 1
+ 5.2 Exercise 2
+ 5.3 Exercise 3
+ 5.4 Exercise 4
+ Review Exercise
+ UNIT 6: Geometry
+ 6.1 Exercise 1
+ 6.2 Exercise 2
+ 6.3 Exercise 3
+ 6.4 Exercise 4
+ Review Exercise
+ UNIT 7: Data Handling
+ 7.1 Exercise 1
+ 7.2 Exercise 2
+ Review Exercise
+
+-> 4th english
+SELECT ALL CHAPTERS
+ CHAP 1: Great Caliphs of Islam
+ Great Caliphs of Islam
+ CHAP 2: Beauty of Nature
+ Beauty Of Nature
+ CHAP 3: The Journey of Chocolate
+ The Journey of Chocolate
+ Review-1
+ Review -1
+ CHAP 4: The Pride of Pakistan
+ The Pride of Pakistan
+ CHAP 5: Thank you, Lord
+ Thank you, Lord
+ CHAP 6: Valuing Others
+ Valuing Others
+ Review-2
+ Review-2
+ CHAP 7: Colours of Pakistan
+ Colours of Pakistan
+ CHAP 8: Good Study Habits
+ Good Study Habits
+ CHAP 9: Manners
+ Manners
+ Review-3
+ Review-3
+ CHAP 10: Be Aware, Be Safe
+ Be Aware, Be Safe
+ CHAP 11: The Fox and the Stork
+ The Fox and the Stork
+ CHAP 12: Time to think!
+ Time to think!
+ CHAP 13: Little Things
+ Little Things
+ Review-4
+ Review-4
+ English B
+ 1 Word Synonyms
+ 2 Word Antonyms
+ 3 Homophones
+ 4 Singular/Plural
+ 5 Gender
+ 6 Form of Verbs
+ 7 Applications
+ 8 Letters
+ 9 Stories
+ 10 Essays
+
+-> 4th general science
+SELECT ALL CHAPTERS
+ CHAP 1: Characteristics and Life Process of Organisms
+ 1.1 Characteristics and Life Process of Organisms
+ CHAP 2: Ecosystem
+ 2.1 Ecosystem
+ CHAP 3: Human Health
+ 3.1 Human Health
+ CHAP 4: Matter and its Characteristics
+ 4.1 Matter and its Characteristics
+ CHAP 5: Forms of Energy and Energy Transfer
+ 5.1 Forms of Energy and Energy Transfer
+ CHAP 6: Force and Motion
+ 6.1 Force and Motion
+ CHAP 7: Earth and its Resources
+ 7.1 Earth and its Resources
+ CHAP 8: Earth's Weather and its Climate
+ 8.1 Earth's Weather and its Climate
+ CHAP 9: Solar System and our Earth
+ 9.1 Solar System and our Earth
+ CHAP 10: Technology in Everyday Life
+ 10.1 Technology in Everyday Life
+
+-> 4th islamiyat lazmi
+SELECT ALL CHAPTERS
+ باب دوم: ایمانیات و عبادات
+ ایمانیات: فرشتوں پر ایمان
+ ایمانیات: آسمانی کتابوں پر ایمان
+ عبادات: روزہ (صوم)
+ عبادات: حقوق اللہ
+ عبادات: تلاوتِ قرآنِ مجید
+ باب سوم: سیرتِ طیبہﷺ
+ نزولِ وحی کا واقعہ
+ دعوت و تبلیغ
+ ہجرتِ حبشہ (اولیٰ و ثانیہ)
+ شعب ابی طالب
+ عامُ الحزن
+ سفرِ طائف
+ باب چہارم: اخلاق و آداب
+ سادگی
+ آدابِ مجلس
+ وقت کی پابندی
+ باب پنجم: حسن معاملات و معاشرت
+ دیانت داری
+ حقوق العباد (خدمتِ خلق)
+ وطن سے محبت (ذمہ دار شہری)
+ باب ششم: ہدایت کے سر چشمے اور مشاہیرِ اسلام
+ حضرت ابراہیمؑ
+ حضرت موسیٰؑ
+ حضرت عمرِ فاروقؓ
+ حضرت عثمان غنیؓ
+ باب ہفتم: اسلامی تعلیمات اور عصرِ حاضر کے تقاضے
+ صفائی کی ضرورت و اہمیت
+ پانی کی اہمیت
+
+-> 4th urdu
+SELECT ALL CHAPTERS
+ سبق نمبر 1: حمد (نظم)
+ حمد (نظم)
+ سبق نمبر 2: نَعت (نظم)
+ نَعت (نظم)
+ سبق نمبر 3: مثالی مُعلِم
+ مثالی مُعلِم
+ سبق نمبر 4: ہم بنیں گے اچھے شہری
+ ہم بنیں گے اچھے شہری
+ جائزہ ۔ ۱
+ جائزہ ۔ ۱
+ سبق نمبر 5: نَنھا ہاتھی (برائے مطالعہ)
+ نَنھا ہاتھی (برائے مطالعہ)
+ سبق نمبر 6: صحت و صفائی
+ صحت و صفائی
+ سبق نمبر 7: ہم پاکستانی بچے ہیں (نظم)
+ ہم پاکستانی بچے ہیں (نظم)
+ سبق نمبر 8: گُل دستہ (برائے مطالعہ)
+ گُل دستہ (برائے مطالعہ)
+ سبق نمبر 9: آتے ہیں جو کام دوسروں کے
+ آتے ہیں جو کام دوسروں کے
+ سبق نمبر 10: پہاڑ اور گلہری (نظم)
+ پہاڑ اور گلہری (نظم)
+ جائزہ ۔ ۲
+ جائزہ ۔ ۲
+ سبق نمبر 11: نیا کمپیوٹر
+ نیا کمپیوٹر
+ سبق نمبر 12: میں کیا بنوں گا (نظم)
+ میں کیا بنوں گا (نظم)
+ سبق نمبر 13: زیبا کے پڑوسی
+ زیبا کے پڑوسی
+ سبق نمبر 14: جب ہر چیز سونے کی بن گئی
+ جب ہر چیز سونے کی بن گئی
+ جائزہ ۔ ۳
+ جائزہ ۔ ۳
+ سبق نمبر 15: صبح کی آمد (نظم)
+ صبح کی آمد (نظم)
+ سبق نمبر 16: حضرت سیدہ فاطمۃ الزھراؓ
+ حضرت سیدہ فاطمۃ الزھراؓ
+ سبق نمبر 17: گرمی (نظم)
+ گرمی (نظم)
+ سبق نمبر 18: باتیں دانائی کی
+ باتیں دانائی کی
+ جائزہ ۔ ۴
+ جائزہ ۔ ۴
+ سبق نمبر 19: رائے کا احترام
+ رائے کا احترام
+ سبق نمبر 20: تصویری کہانی
+ تصویری کہانی
+ سبق نمبر 21: یہ بات سمجھ میں آئی نہیں (مزاحیہ نظم)
+ یہ بات سمجھ میں آئی نہیں (مزاحیہ نظم)
+ سبق نمبر 22: شان دار فیصلے (برائے مطالعہ)
+ شان دار فیصلے (برائے مطالعہ)
+ سبق نمبر 23: تاریخی عمارتیں
+ تاریخی عمارتیں
+ جائزہ ۔ ۵
+ جائزہ ۔ ۵
+ اُردو (ب)
+ مذکر مونث
+ واحد جمع
+ الفاظ متضاد
+ اعراب لگائیں
+ الفاظ مترادف
+ جملوں کی درستگی
+ درخواستیں
+ خطوط
+ کہانیاں
+ مضامین
+
+-> 4th social studies
+SELECT ALL CHAPTERS
+ باب نمبر 1: شہریت
+ شہریت اور انسانی حقوق
+ تنوع اور رواداری
+ باب نمبر 2: ثقافت
+ ثقافت
+ ذرائع ابلاغ
+ باب نمبر 3: ریاست اور حکومت
+ ریاست اور حکومت
+ حکومت کے اعضا (عناصر)
+ باب نمبر 4: تاریخ
+ انسانی تہذیب کا آغاز
+ قیامِ پاکستان میں صوبوں/علاقوں کا کردار اور پاکستان کی اہم تاریخی شخصیات
+ باب نمبر 5: جغرافیہ
+ گلوب اور نقشے کی مہارتیں
+ پاکستان کے طبعی خدوخال
+ موسم اور آب و ہوا
+ آبادی
+ باب نمبر 6: معاشیات
+ معاشیات
+
+-> 4th mathematics
+SELECT ALL CHAPTERS
+ CHAP 1: Whole Numbers
+ Whole Numbers Exercise 1
+ Whole Numbers Exercise 2
+ Whole Numbers (Review Exercise)
+ Addition and Subtraction Exercise 1
+ Addition and Subtraction Exercise 2
+ Addition and Subtraction (Review Exercise)
+ Multiplication and Division Exercise 1
+ Multiplication and Division Exercise 2
+ Multiplication and Division Exercise 3
+ Multiplication and Division (Review Exercise)
+ CHAP 2: Factors and Multiples
+ Exercise 1
+ Exercise 2
+ Exercise 3
+ Review Exercise
+ CHAP 3: Fractions
+ Exercise 1
+ Exercise 2
+ Exercise 3
+ Review Exercise
+ CHAP 4: Decimals
+ Exercise 1
+ Exercise 2
+ Exercise 3
+ Exercise 4
+ Exercise 5
+ Review Exercise
+ CHAP 5: Measurements
+ Measurement Exercise 1
+ Measurement Exercise 2
+ Measurement Exercise 3
+ Measurement Exercise 4
+ Measurement Exercise 5
+ Measurement (Review Exercise)
+ Time Exercise 1
+ Time Exercise 2
+ Time Exercise 3
+ Time Exercise 4
+ Time (Review Exercise)
+ CHAP 6: Geometry
+ Exercise 1
+ Exercise 2
+ Exercise 3
+ Exercise 4
+ Exercise 5
+ Exercise 6
+ Review Exercise
+ CHAP 7: Data Handling
+ Exercise 1
+ Exercise 2
+ Exercise 3
+ Review Exercise
+
+-> 5th english
+SELECT ALL CHAPTERS
+ CHAP 1: Patience
+ 1.1 Patience
+ CHAP 2: Be Grateful
+ 2.1 Be Grateful
+ CHAP 3: Women as Role Models
+ 3.1 Women as Role Models
+ Review-1
+ Review-1
+ CHAP 4: Unforgettable Moments of My Life
+ 4.1 Unforgettable Moments of My Life
+ CHAP 5: Amazing Planet
+ 5.1 Amazing Planet
+ CHAP 6: A Fit and Healthy Life
+ 6.1 : A Fit and Healthy Life
+ Review-2
+ Review-2
+ CHAP 7: What Goes Around, Comes Around
+ 7.1 What Goes Around, Comes Around
+ CHAP 8: Do What's Right
+ 8.1 Do What's Right
+ CHAP 9: Patriotism
+ 9.1 Patriotism
+ CHAP 10: Eid-ul-Azha
+ 10.1 Eid-ul-Azha
+ Review-3
+ Review-3
+ CHAP 11: Let's Be Helpful
+ 11.1 Let's Be Helpful
+ CHAP 12: Our National Animal
+ 12.1 Our National Animal
+ CHAP 13: When Something Went Wrong
+ 13.1 When Something Went Wrong
+ CHAP 14: Together We Live
+ 14.1 Together We Live
+ Review-4
+ Review-4
+ English B
+ Word Synonyms
+ Word Antonyms
+ Homophones
+ Singular/Plural
+ Gender
+ Form of Verbs
+ Applications
+ Letters
+ Stories
+ Essays
+ Tenses
+ Use of It and there
+ Use of is, am ,are , was and were
+ Use of has , have , had
+ Present Indefinite Tense
+ Present Continuous Tense
+ Present Perfect Tense
+ Present Perfect Continuous Tense
+ Past Indefinite Tense
+ Past Continuous Tense
+ Past Perfect Tense
+ Past Perfect Continuous Tense
+ Future Indefinite Tense
+ Future Continuous Tense
+ Future Perfect Tense
+ Future Perfect Continuous Tense
+
+-> 5th general science
+SELECT ALL CHAPTERS
+ CHAP 1: Classification of Living Organisms
+ 1.1 Classification of Living Organisms
+ CHAP 2: Microorganisms
+ 2.1 Microorganisms
+ CHAP 3: Flowers and Seeds
+ 3.3 Flowers and Seeds
+ CHAP 4: Environmental Pollution
+ 4.1 Environmental Pollution
+ CHAP 5: Physical and Chemical Changes of Matter
+ 5.1 Physical and Chemical Changes of Matter
+ CHAP 6: Light and Sound
+ 6.1 Light and Sound
+ CHAP 7: Electricity and Magnetism
+ 7.1 Electricity and Magnetism
+ CHAP 8: Structure of the Earth
+ 8.1 Structure of the Earth
+ CHAP 9: Space and Satellites
+ 9.1 Space and Satellites
+ CHAP 10: Technology in Everyday Life
+ 10.1 Technology in Everyday Life
+
+-> 5th urdu lazmi
+SELECT ALL CHAPTERS
+ سبق نمبر 1: حمد (نظم)
+ حمد (نظم)
+ سبق نمبر 2: نعت (نظم)
+ نعت (نظم)
+ سبق نمبر 3: رحمتِ عالم ﷺ
+ رحمتِ عالم ﷺ
+ سبق نمبر 4: اے وطن! تُو سلامت رہے
+ اے وطن! تُو سلامت رہے
+ سبق نمبر 5: جو وعدہ کرو سو پُورا کرو
+ جو وعدہ کرو سو پُورا کرو
+ سبق نمبر 6: قومی تہوار (برائے مطالعہ)
+ قومی تہوار (برائے مطالعہ)
+ سبق نمبر 7: ہوا چلی (نظم)
+ ہوا چلی (نظم)
+ سبق نمبر 8: میری پہچان ہے تُو
+ میری پہچان ہے تُو
+ سبق نمبر 9: ہمارے پیشے
+ ہمارے پیشے
+ سبق نمبر 10: ایک گائے اور بکری (نظم)
+ ایک گائے اور بکری (نظم)
+ سبق نمبر 11: حضرت عثمان غنیؓ
+ حضرت عثمان غنیؓ
+ سبق نمبر 12: دُنیا آپ کی مُٹھّی میں
+ دُنیا آپ کی مُٹھّی میں
+ سبق نمبر 13: ہم پھُول اِک چمن کے (نظم)
+ ہم پھُول اِک چمن کے (نظم)
+ سبق نمبر 14: آؤ بچو! سنو کہانی (برائے مطالعہ)
+ آؤ بچو! سنو کہانی (برائے مطالعہ)
+ سبق نمبر 15: آئیں! مدد کریں
+ آئیں! مدد کریں
+ سبق نمبر 16: رکھیں میرا خیال
+ رکھیں میرا خیال
+ سبق نمبر 17: نیک بنو، نیکی پھیلاؤ (نظم)
+ نیک بنو، نیکی پھیلاؤ (نظم)
+ سبق نمبر 18: ایک قدیم شہر
+ ایک قدیم شہر
+ سبق نمبر 19: حُسنِ سُلوک
+ حُسنِ سُلوک
+ سبق نمبر 20: کہا اقبال رحمۃ اللہ علیہ نے (نظم)
+ کہا اقبال رحمۃ اللہ علیہ نے (نظم)
+ سبق نمبر 21: بے مِثل ہے نِظام تیرا
+ بے مِثل ہے نِظام تیرا
+ سبق نمبر 22: اقوالِ زرّیں (برائے مطالعہ)
+ اقوالِ زرّیں (برائے مطالعہ)
+ سبق نمبر 23: ٹوٹ بٹوٹ کے مُرغے (نظم)
+ ٹوٹ بٹوٹ کے مُرغے (نظم)
+ اُردو (ب)
+ مذکر مونث
+ واحد جمع
+ الفاظ متضاد
+ اعراب لگائیں
+ الفاظ مترادف
+ جملوں کی درستگی
+ درخواستیں
+ خطوط
+ کہانیاں
+ مضامین
+
+-> 5th islamiyat lazmi
+SELECT ALL CHAPTERS
+ باب دوم : ایمانیات و عبادات
+ آخرت
+ ختم نبوت اور اطاعتِ رسول ﷺ
+ زکوٰۃ
+ جمعۃ المبارک کی فضیلت
+ عیدین
+ باب سوم : سیرتِ طیبہ ﷺ
+ معراج النبی ﷺ
+ بیعتِ عقبہ اُولی و ثانیہ
+ ہجرتِ مدینہ
+ مواخاتِ مدینہ
+ مسجدِ نبوی ﷺ
+ میثاقِ مدینہ
+ غزواتِ نبوی ﷺ
+ باب چہارم : اخلاق و آداب
+ رواداری
+ عفوودرگزر اور رحم دلی
+ کفایت شعاری
+ باب پنجم : حسنِ معاملات و معاشرت
+ ایفائے عہد
+ اسلامی اخوت
+ چغل خوری
+ باب ششم : ہدایت کے سر چشمے اور مشاہیرِ اسلام
+ حضرت داؤد علیہ السلام
+ حضرت عیسٰی ابن مریم علیہ السلام
+ حضرت علی المرتضٰی رضی اللہ تعالیٰ عنہہ
+ صوفیہ کرام رحمتہ اللہ علیھم
+ باب ہفتم : اسلامی تعلیمات اور عصرِ حاضر کے تقاضے
+ حادثات سے بچنے کی تدابیر
+ پودوں اور درختوں کی اہمیت
+
+-> 5th mathematics
+SELECT ALL CHAPTERS
+ Unit 1: Whole Number and Operations
+ Exercise 1
+ Exercise 2
+ Exercise 3
+ Exercise 4
+ Review Exercise
+ Unit 2: HCF and LCM
+ Exercise 1
+ Exercise 2
+ Review Exercise
+ Unit 3: Fractions
+ Exercise 1
+ Exercise 2
+ Review Exercise
+ Unit 4: Decimals and Percentages
+ Exercise 1
+ Exercise 2
+ Exercise 3
+ Exercise 4
+ Exercise 5
+ Exercise 6
+ Exercise 7
+ Review Exercise
+ Unit 5: Distance and Time
+ Exercise 1
+ Exercise 2
+ Exercise 3
+ Review Exercise
+ Unit 6: Unitary Method
+ Exercise 1
+ Exercise 2
+ Review Exercise
+ Unit 7: Geometry
+ Exercise 1
+ Exercise 2
+ Exercise 3
+ Exercise 4
+ Exercise 5
+ Review Exercise
+ Unit 8: Perimeter and Area
+ Exercise 1
+ Exercise 2
+ Review Exercise
+ Unit 9: Data Handling
+ Exercise 1
+ Exercise 2
+ Review Exercise
+
+-> 5th social studies
+SELECT ALL CHAPTERS
+ باب نمبر 1: شہریت
+ شہریت اور انسانی حقوق
+ باب نمبر 2: ثقافت
+ ہمارا رہن سہن
+ ذرائع ابلاغ
+ باب نمبر 3: ریاست اور حکومت
+ ریاست اور حکومت
+ باب نمبر 4: تاریخ
+ تہذیبوں کا آغاز
+ پاکستان کی تاریخی شخصیات
+ باب نمبر 5: جغرافیہ
+ نقشے کی مہارتیں اور گلوب
+ پاکستان کے طبعی خدوخال
+ موسم اور آب و ہوا
+ آبادی
+ باب نمبر 6: معاشیات
+ معاشیات
+ کاروبار
+ زر کا اِرتقا
+
+-> 6th tarjuma tul quran
+SELECT ALL CHAPTERS
+ ہمارے پیارے نبی حضرت محمد رسول اللہ خاتم النبین ﷺ
+ ہمارے پیارے نبی حضرت محمد رسول اللہ خاتم النبین ﷺ
+ قرآنِ مجید کے آداب
+ قرآنِ مجید کے آداب
+ سُورَۃُ الفَاتِحَۃِ
+ سُورَۃُ الفَاتِحَۃِ
+ سُورَۃُ الفِیلِ
+ سُورَۃُ الفِیلِ
+ سُورَۃُ قُرَیشٍ
+ سُورَۃُ قُرَیشٍ
+ سُورَۃُ المَاعُونِ
+ سُورَۃُ المَاعُونِ
+ سُورَۃُ الکَوثَرِ
+ سُورَۃُ الکَوثَرِ
+ سُورَۃُ الکَفِرُونَ
+ سُورَۃُ الکَفِرُونَ
+ سُورَۃُ النَّصرِ
+ سُورَۃُ النَّصرِ
+ سُورَۃُ اللَّھَبِ
+ سُورَۃُ اللَّھَبِ
+ سُورَۃُ الاِخلَاصِ
+ سُورَۃُ الاِخلَاصِ
+ سُورَۃُ الفَلَقِ اور سُورَۃُ النَّاسِ
+ سُورَۃُ الفَلَقِ اور سُورَۃُ النَّاسِ
+ حضرت آدم علیہ السلام
+ حضرت آدم علیہ السلام
+ حضرت نوح علیہ السلام
+ حضرت نوح علیہ السلام
+ حضرت ھود علیہ السلام
+ حضرت ھود علیہ السلام
+ حضرت صالح علیہ السلام
+ حضرت صالح علیہ السلام
+ حضرت لوط علیہ السلام
+ حضرت لوط علیہ السلام
+ حضرت شَعیب علیہ السلام
+ حضرت شَعیب علیہ السلام
+
+-> 6th islamiyat
+SELECT ALL CHAPTERS
+ باب دوم: ایمانیات و عبادات
+ توحید کی اہمیت اور اثرات 2.1
+ نبوت و رسالت 2.2
+ اسلام میں عبادات کا جامع تصّور 2.3
+ طہارت و پاکیزگی 2.4
+ نماز کی فرضیّت واہمیت 2.5
+ باب سوم: سیرت طیبہ ﷺ
+ نبی کریم خاتم النبین ﷺ اور مدنی معاشرے کا قیام 3.1
+ ریاست مدینہ کا قیام 3.2
+ ریاست مدینہ کا استحکام: جہاد،غزوہ بدر 3.3
+ غزوہ اُحد 3.4
+ نبی کریم خاتم النبین ﷺ سے محبّت و اطاعت 3.5
+ حضرت محمد رسول اللہ خاتم النبین ﷺ کا بچوں کے ساتھ حسنِ سلوک 3.6
+ حضرت محمد خاتم النبین ﷺ کا ایفائے عہد 3.7
+ باب چہارم: اخلاق و عبادات
+ مشاورت کی اہمیت 4.1
+ صبرو تحمل 4.2
+ اسلامی آداب زندگی (راستے، سفر اور عوامی مقامات کے استعمال) 4.3
+ بری عادات سے اجتناب 4.4
+ باب پنجم: حسن معاملات و معاشرات
+ حقوق العباد (والدین، بہن بھائی، رشتہ دار) 5.1
+ عدل واحسان 5.2
+ اسلام میں رفاہِ عامہ کی اہمیت 5.3
+ باب ششم: ہدایت کے سرچشمے اور مشاہیرِ اسلام
+ امہات المومنین رضی اللہ تعالیٰ عنھن (حضرت خدیجہ، حضرت عائشہ، حضرت سودہ رضی اللہ تعالیٰ عنھن) 6.1
+ نبی کریم ختم النبین ﷺ کی اولادِ مبارکہ 6.2
+ خاتونِ جنت حضرت سیدہ فاطمۃ الزہرا رضی اللہ تعالیٰ عنھا 6.3
+ صحابہ کرام رضی اللہ تعالیٰ عنھم 6.5
+ صوفیہ کرام 6.5
+ علماءومفکرین 6.6
+ فاتحین 6.7
+ صحابہ کرام رضی اللہ تعالیٰ عنھم 6.4
+ باب ہفتم: اسلامی تعالیمات اور عصرِ حاضر کے تقاضے
+ انسانی زندگی میں ماحول کی اہمیت 7.1
+ جانوروں کی اہمیت اور ان کے حقوق 7.2
+
+-> 6th urdu lazmi
+SELECT ALL CHAPTERS
+ سبق نمبر 1: حمد
+ حمد
+ سبق نمبر 2: نعت
+ نعت
+ سبق نمبر 3: اسوہ حسنہ اور رواداری
+ اسوہ حسنہ اور رواداری
+ سبق نمبر 4: محنت میں عظمت
+ محنت میں عظمت
+ سبق نمبر 5: چڑیا کی نصیحت
+ چڑیا کی نصیحت
+ سبق نمبر 6: چاند میری زمیں، پھول میرا وطن (نظم)
+ چاند میری زمیں، پھول میرا وطن (نظم)
+ سبق نمبر 7: علامہ محمد اقبال اور نوجوان نسل
+ علامہ محمد اقبال اور نوجوان نسل
+ سبق نمبر 8: ذرا فون کر لوں؟
+ ذرا فون کر لوں؟
+ سبق نمبر 9: یوم دفاع پاکستان
+ یوم دفاع پاکستان
+ سبق نمبر 10: اتفاق اور نا اتفاقی (نظم)
+ اتفاق اور نا اتفاقی (نظم)
+ سبق نمبر 11: ہمارا ماحول اور آلودگی
+ ہمارا ماحول اور آلودگی
+ سبق نمبر 12: وطن کا بہادر سپوت
+ وطن کا بہادر سپوت
+ سبق نمبر 13: بادل کا گیت (نظم)
+ بادل کا گیت (نظم)
+ سبق نمبر 14: حفظان صحت
+ حفظان صحت
+ سبق نمبر 15: اپنی حفاظت کریں
+ اپنی حفاظت کریں
+ سبق نمبر 16: مادر ملت فاطمہ جناح
+ مادر ملت فاطمہ جناح
+ سبق نمبر 17: مری کی سیر
+ مری کی سیر
+ سبق نمبر 18: پرانی موٹر (نظم)
+ پرانی موٹر (نظم)
+ سبق نمبر 19: زراعت و صنعت
+ زراعت و صنعت
+ سبق نمبر 20: اچھے انسان (نظم
+ اچھے انسان (نظم)
+ صرف ونحو
+ حروف اور اسکی اقسام
+ اسم اور اسکی اقسام
+ اسمِ معرفہ کی اقسام
+ اسمِ نکرہ کی اقسام
+ فعل اور اس کی اقسام
+ (افعال کی اقسام (بلحاظ فاعل
+ رموز اوقاف
+ (اُردو(ب
+ مذکر مونث
+ واحد جمع
+ ضرب الامثال کہاوتیں
+ متشابہ الفاظ
+ مترادف الفاظ
+ متضاد الفاظ
+ سابقے لاحقے
+ اعراب لگائیں
+ محاورات
+ غلط جملوں کی درستگی
+ درخواستیں
+ خطوط
+ کہانیاں
+ مضامین
+
+-> 6th english
+SELECT ALL CHAPTERS
+ UNIT 1: Seert-Un-Nabi
+ Seert-Un-Nabi
+ UNIT 2: Eid-Ul-Fitar
+ Eid-Ul-Fitar
+ UNIT 3: The Lake Isle of Innisfree
+ The Lake Isle of Innisfree
+ UNIT 4: Major Shabbir Sharif Shaheed
+ Major Shabbir Sharif Shaheed
+ UNIT 5: Harmony In Society
+ Harmony In Society
+ UNIT 6: First Aid Saves Life
+ First Aid Saves Life
+ UNIT 7: Corruption
+ Corruption
+ UNIT 8: Over Population - A Dilemma
+ Over Population - A Dilemma
+ UNIT 9: Education Is My Right
+ Education Is My Right
+ UNIT 10: Importance of Science & Technology
+ Importance of Science & Technology
+ UNIT 11: A Poem By a Soldier
+ A Poem By a Soldier
+ UNIT 12: Good Citizen
+ Good Citizen
+ English B
+ Direct & Indirect
+ Idioms
+ Singular / Plural
+ Masculine / Feminine
+ Letters
+ Applications
+ Stories
+ Essays
+ Dialogues
+ Grammar (Objective)
+ Tenses
+ Use Of 'it' & 'there'
+ Use of 'is , 'am' , 'are' , 'was' and 'were'
+ Use of 'has' , 'have' and 'had'
+ Present Indefinite Tense
+ Present Continuous Tense
+ Present Perfect Tense
+ Present Perfect Continuous Tense
+ Past Indefinite Tense
+ Past Continuous Tense
+ Past Perfect Tense
+ Past Perfect Continuous Tense
+ Future Indefinite Tense
+ Future Continuous Tense
+ Future Perfect Tense
+ Future Perfect Continuous Tense
+ Proverbs
+ English Grammar
+ Sentence
+ Phrase and Clause
+ Punctuation
+ Articles
+ Noun
+ Pronoun
+ Adjective
+ Verb
+ Adverb
+ Preposition
+ Conjunction
+ Interjection
+
+-> 6th mathematics
+SELECT ALL CHAPTERS
+ CHAP 1 Numbers and Operation: Factors and Multiples
+ 1.1 E.X 1.1
+ 1.2 E.X 1.2
+ 1.3 E.X 1.3
+ 1.4 E.X 1.4
+ 1.5 E.X 1.5
+ 1.6 E.X 1.6
+ 1.1 Review Exercise
+ CHAP 1 Number and Operations: Integers
+ 2.1 E.X 2.1
+ 2.2 E.X 2.2
+ 1.2 Review Exercise
+ CHAP 1 Number and Operations: Law of Integers
+ 3.1 E.X 3.1
+ 3.2 E.X 3.2
+ 3.3 E.X 3.3
+ 1.3 Review Exercise
+ CHAP 1 Number and Operations: Rate, Ration and Percentage
+ 4.1 E.X 4.1
+ 4.2 E.X 4.2
+ 4.3 E.X 4.3
+ 4.4 E.X 4.4
+ 4.5 E.X 4.5
+ 1.4 Review Exercise
+ CHAP 1 Number and Operations: Sets
+ 5.1 E.X 5.1
+ 5.2 E.X 5.2
+ 5.3 E.X 5.3
+ 1.5 Review Exercise
+ CHAP 2 Algebra : Algebraic Expressions
+ 6.1 E.X 6.1
+ 6.2 E.X 6.2
+ 6.3 E.X 6.3
+ 6.4 E.X 6.4
+ 6.5 E.X 6.5
+ 2.1 Review Exercise
+ CHAP 2 Algebra : Linear Equations
+ 7.1 E.X 7.1
+ 7.2 E.X 7.2
+ 2.2 Review Exercise
+ CHAP 3 Measurement: Surface Area and Volume
+ 8.1 E.X 8.1
+ 8.2 E.X 8.2
+ 8.3 E.X 8.3
+ 3.1 Review Exercise
+ CHAP 4 Geometry : Symmetry
+ 9.1 E.X 9.1
+ 9.2 E.X 9.2
+ 9.3 E.X 9.3
+ 4.1 Review Exercise
+ CHAP 4 Geometry : Geometrical Constructions
+ 10.1 E.X 10.1
+ 10.2 E.X 10.2
+ 10.3 E.X 10.3
+ 4.2 Review Exercise
+ CHAP 5 Statistics and Probability : Data Management
+ 11.1 E.X 11.1
+ 11.2 E.X 11.2
+ 11.3 E.X 11.3
+ 11.4 E.X 11.4
+ 5.1 Review Exercise
+ CHAP 5 Statistics and Probability : Probability
+ 12.1 E.X 12.1
+ 5.2 Review Exercise
+
+-> 6th general science
+SELECT ALL CHAPTERS
+ UNIT 1: Cellular Organization
+ Cellular Organization
+ UNIT 2: Reproduction in plants
+ Reproduction in plants
+ UNIT 3: Balanced Diet
+ Balanced Diet
+ UNIT 4: Human Digestive System
+ Human Digestive System
+ UNIT 5: Matter as Particles
+ Matter as Particles
+ UNIT 6: Elements and Compounds
+ Elements and Compounds
+ UNIT 7: Mixtures
+ Mixtures
+ UNIT 8: Energy
+ Energy
+ UNIT 9: Electricity
+ Electricity
+ UNIT 10: Magnetism
+ Magnetism
+ UNIT 11: Technology in Everyday Life
+ Technology in Everyday Life
+ UNIT 12: Solar System
+ Solar System
+ UNIT 13: Dengue Fever and Corona Virus
+ Dengue Fever and Corona Virus
+
+-> 6th history
+SELECT ALL CHAPTERS
+ CHAP 1: Ancient Civilizations
+ Ancient Civilizations
+ Persian, Greek and Roman civilizations
+ Persian, Greek and Roman civilizations
+ CHAP 3: Aryans, Kushans and Guptas
+ Aryans, Kushans and Guptas
+ CHAP 4: Rise of Islamic civilization
+ Rise of Islamic civilization
+
+-> 6th geography
+SELECT ALL CHAPTERS
+ UNIT 1: Structure of Earth and Types of Rocks
+ 1.1: Structure of Earth and Types of Rocks
+ UNIT 2: Mountains, Plateaus and Valleys
+ 2.1: Mountains, Plateaus and Valleys
+ UNIT 3: Climatic Regions of the World
+ 3.1: Climatic Regions of the World
+ UNIT 4: Forests of The World
+ 4.1: Forests of The World
+ UNIT 5: Natural Disasters
+ 5.1: Natural Disasters
+ UNIT 6: Changing Earth And Human Activities
+ 6.1: Changing Earth And Human Activities
+
+-> 6th zari taleem
+SELECT ALL CHAPTERS
+ باب نمبر 1: زیبائشی پودوں کی افزائش
+ زیبائشی پودوں کی افزائش
+ باب نمبر 2: مختلف ماحول میں پودوں کی نشوونما کا مطالعہ
+ مختلف ماحول میں پودوں کی نشوونما کا مطالعہ
+ باب نمبر 3: فصلوں اور سبزیوں سے جڑی بوٹیوں کی تلفی
+ فصلوں اور سبزیوں سے جڑی بوٹیوں کی تلفی
+ باب نمبر 4: مٹی کا مطالعہ
+ مٹی کا مطالعہ
+ باب نمبر 5: مفید جانوروں اور پرندوں کی پرورش
+ مفید جانوروں اور پرندوں کی پرورش
+
+-> 6th punjabi
+SELECT ALL CHAPTERS
+ سبق نمبر 1: حمد
+ حمد
+ سبق نمبر 2: پیارے نبیﷺ
+ پیارے نبیﷺ
+ سبق نمبر 3: نعت
+ نعت
+ سبق نمبر 4: ایثار تے قربانی
+ ایثار تے قربانی
+ سبق نمبر 5: قائد اعظمؒ
+ قائد اعظمؒ
+ سبق نمبر 6: ساڈی صحت
+ ساڈی صحت
+ سبق نمبر 7: وطن دِی حفاظت
+ وطن دِی حفاظت
+ سبق نمبر 8: تاریاں نے اِک پنڈ وسایا
+ تاریاں نے اِک پنڈ وسایا
+ سبق نمبر 9: مُسلمان دا اِنصاف
+ مُسلمان دا اِنصاف
+ سبق نمبر 10: وَڈا اِنسان
+ وَڈا اِنسان
+ سبق نمبر 11: شوکا جدوں سکُولے جاوے
+ شوکا جدوں سکُولے جاوے
+ سبق نمبر 12: حضرت داتا گنج بخشؒ
+ حضرت داتا گنج بخشؒ
+ سبق نمبر 13: بچیّاں دا اقبالؒ
+ بچیّاں دا اقبالؒ
+ سبق نمبر 14: بے زبان
+ بے زبان
+ سبق نمبر 15: اتفاق
+ اتفاق
+ سبق نمبر 16: بابا فرید گنج شکرؒ
+ بابا فرید گنج شکرؒ
+ سبق نمبر 17: دُعا
+ دُعا
+ سبق نمبر 18: نُور منارے
+ نُور منارے
+ سبق نمبر 19: ساڈا دیس
+ ساڈا دیس
+ سبق نمبر 20: بول دا پالن
+ بول دا پالن
+ سبق نمبر 21: میلا شالامار
+ میلا شالامار
+ سبق نمبر 22: پاکستان دی کہانی
+ پاکستان دی کہانی
+ سبق نمبر 23: اَسیں آں پاکستانی
+ اَسیں آں پاکستانی
+ سبق نمبر 24: سائنس دے کرشمے
+ سائنس دے کرشمے
+ سبق نمبر 25: ربّا اپنا کرم کما
+ ربّا اپنا کرم کما
+ سبق نمبر 26: ساڈے شیر، شہید وطن دے
+ ساڈے شیر، شہید وطن دے
+ سبق نمبر 27: قدم وَدھائی چلیئے
+ قدم وَدھائی چلیئے
+ سبق نمبر 28: دو کُکّڑ
+ دو کُکّڑ
+ سبق نمبر 29: دو کنجُوس
+ دو کنجُوس
+ سبق نمبر 30: عیدُالفطر
+ عیدُالفطر
+ سبق نمبر 31: بات بتولی
+ بات بتولی
+ سبق نمبر 32: میں چنگا اِنسان بناں گا
+ میں چنگا اِنسان بناں گا
+
+-> 6th homeeconomics
+SELECT ALL CHAPTERS
+ باب نمبر 1: ہوم اکنامکس کا تعارف
+ ہوم اکنامکس کا تعارف
+ باب نمبر 2: غذا اور غذائیت ۔ ایک تعارف
+ غذا اور غذائیت ۔ ایک تعارف
+ باب نمبر 3: بنیادی غذائی اجزا
+ بنیادی غذائی اجزا
+ باب نمبر 4: انسانی نشوونما
+ انسانی نشوونما
+ باب نمبر 5: معاشرتی کھیل
+ معاشرتی کھیل
+ باب نمبر 6: لباس
+ لباس
+ باب نمبر 7: ذاتی زیبائش
+ ذاتی زیبائش
+ باب نمبر 8: آرٹ اور ڈیزائن
+ آرٹ اور ڈیزائن
+ باب نمبر 9: انتظام امور خانہ داری
+ انتظام امور خانہ داری
+ باب نمبر 10: ذرائع ووسائل
+ ذرائع ووسائل
+
+-> 6th computer
+SELECT ALL CHAPTERS
+ UNIT1: ICT Fundamentals
+ 1.1: ICT Fundamentals
+ UNIT 2: Components of Computer system
+ 2.1:Components of Computer system
+ UNIT 3: Digital Skills
+ 3.1:Digital Skills
+ UNIT 4: Algorithmic Thinking
+ 4.1:Algorithmic Thinking
+ UNIT 5: Programming
+ 5.1: Programming
+ UNIT 6: Digital Citizenship
+ 6.1: Digital Citizenship
+ UNIT 7: Entrepreneurship In Digital Age
+ 7.1: Entrepreneurship In Digital Age
+
+
+-> 6th ikhlaqiat
+SELECT ALL CHAPTERS
+ باب نمبر 1: مذاہب کا تعارف
+ انسانیت کی تعمیر
+ اخلاقی کہانیاں (ادھوری خواہش، شکر گزاری)
+ اخلاقی کہانیاں (ہیں لوگ وہی جہاں میں اچھے، ظلم کا بدلہ، دوسروں کے لیے جینا)
+ نظمیں
+ باب نمبر 2: سکھ مذہب
+ سکھ مذہب کا تعارف
+ سکھ مذہب کیسے پھیلا
+ گورونانک صاحب دیوجی اور ان کی تعلیمات
+ سکھ مذہب کے گورو
+ باب نمبر3: پاکستان میں مذہبی تہوار
+ پاکستان میں مذہبی تہوار
+ باب نمبر4: اخلاقی اقدار
+ بچہ ۔۔۔۔۔۔ خاندان کی آنکھوں کا تارا
+ گھر کی سانجھ
+ برابری
+ احترام آدمیت
+ قاعدے قانون کی بات
+ ٹریفک قوانین
+ باب نمبر 5: زندگی کے آداب
+ کھانے پینے کے آداب
+ باب نمبر 6: مشاہیر
+ مشاہیر
+
+-> 7th english
+SELECT ALL CHAPTERS
+ UNIT 1: The Last Sermon of Rasoolullah (SAW)
+ The Last Sermon of Rasoolullah (SAW)
+ UNIT 2: Martyrs of Pakistan
+ Martyrs of Pakistan
+ UNIT 3: A Nation's Strength
+ A Nation's Strength
+ UNIT 4: Quaid-e-Azam
+ Quaid-e-Azam
+ UNIT 5: Smog
+ Smog
+ UNIT 6: Pakistani Female Mountaineer
+ Pakistani Female Mountaineer
+ UNIT 7: Eid-ul-Adha
+ Eid-ul-Adha
+ UNIT 8: The Wise Old Woman
+ The Wise Old Woman
+ UNIT 9: Think Not All is Over
+ Think Not All is Over
+ UNIT 10: The Young Boy's Adventure
+ The Young Boy's Adventure
+ UNIT 11: Pakistani Culture
+ Pakistani Culture
+ UNIT 12: Role of the Media
+ Role of Media
+ English B
+ Director & Indirect
+ Idioms
+ Singular/Plural
+ Masculine/Feminine
+ Letters
+ Applications
+ Stories
+ Essays
+ Dialogues
+ Form of verbs
+ Proverbs
+ Grammar (Objective)
+ Tenses
+ Use of 'it' and 'there'
+ Use of 'is' , 'am' , 'are' , 'was' & 'were'
+ Use of 'has' , 'have' & 'had'
+ Present Indefinite Tense
+ Present Continuous Tense
+ Present Perfect Tense
+ Present Perfect Continuous Tense
+ Past Indefinite Tense
+ Past Continuous Tense
+ Past Perfect Tense
+ Past Perfect Continuous Tense
+ Future Indefinite Tense
+ Future Continuous Tense
+ Future Perfect Tense
+ Future Perfect Continuous Tense
+ English Grammar
+ Sentence
+ Phrase and Clause
+ Punctuation
+ Articles
+ Noun
+ Pronoun
+ Adjective
+ Verb
+ Adverb
+ Preposition
+ Conjunction
+ Interjection
+
+-> 7th general science
+SELECT ALL CHAPTERS
+ UNIT 1: Plant System
+ Plant System
+ UNIT 2: Human Respiratory and Circulatory system
+ Human Respiratory and Circulatory system
+ UNIT 3: Immunity and Diseases
+ Immunity and Diseases
+ UNIT 4: Structure of an Atom
+ Structure of an Atom
+ UNIT 5: Physical and Chemical Changes
+ Physical and Chemical Changes
+ UNIT 6: Chemical Bonds
+ Chemical Bonds
+ UNIT 7: Solutions
+ Solutions
+ UNIT 8: Force and Motion
+ Force and Motion
+ UNIT 9: Waves and Energy
+ Waves and Energy
+ UNIT 10: Heat and Temperature
+ Heat and Temperature
+ UNIT 11: Technology in Everyday Life
+ Technology in Everyday Life
+ UNIT 12: Earth and Space
+ Earth and Space
+
+-> 7th geography
+SELECT ALL CHAPTERS
+ CHAP 1: Plains and Rivers
+ Plains and Rivers
+ CHAP 2: Water Sources and Management
+ Water Sources and Management
+ CHAP 3: Settlements and Land use
+ Settlements and Land use
+ CHAP 4: Agriculture
+ Agriculture
+ CHAP 5: Climate Change
+ Climate Change
+ CHAP 6: Minerals and Powers
+ Minerals and Powers
+
+-> 7th home economics
+SELECT ALL CHAPTERS
+ باب نمبر 1: ہوم اکنامکس کو سمجھنا
+ ہوم اکنامکس کو سمجھنا
+ باب نمبر 2: غذائی انتظام و انصرام
+ غذائی انتظام و انصرام
+ باب نمبر 3: اشیائے خوردنی کی تیاری
+ اشیائے خوردنی کی تیاری
+ باب نمبر 4: خاندان اور بچے کی نشوونما
+ خاندان اور بچے کی نشوونما
+ باب نمبر 5: خاندانی تعلقات
+ خاندانی تعلقات
+ باب نمبر 6: کپڑوں کی منصوبہ بندی
+ کپڑوں کی منصوبہ بندی
+ باب نمبر 7: کپڑوں کی دیکھ بھال اور حفاظت
+ کپڑوں کی دیکھ بھال اور حفاظت
+ باب نمبر 8: آرٹ اور ڈیزائن
+ آرٹ اور ڈیزائن
+ باب نمبر 9: اقدار اور مقاصد
+ اقدار اور مقاصد
+ باب نمبر 10: فیصلہ سازی
+ فیصلہ سازی
+
+-> 7th zari taleem
+SELECT ALL CHAPTERS
+ باب نمبر 1: پودوں کی نباتاتی و نسلی افزائش
+ پودوں کی نباتاتی و نسلی افزائش
+ باب نمبر 2: سبزیوں کی کاشت
+ سبزیوں کی کاشت
+ باب نمبر 3: ریشم کے کیڑوں کی پرورش
+ ریشم کے کیڑوں کی پرورش
+ باب نمبر 4: شہد کی مکھیوں کی پرورش
+ شہد کی مکھیوں کی پرورش
+ باب نمبر 5: مرغیوں اور بطخوں کی پرورش
+ مرغیوں اور بطخوں کی پرورش
+ باب نمبر 6: خرگوش کی پرورش
+ خرگوش کی پرورش
+ باب نمبر 7: سکوائش کی تیاری
+ سکوائش کی تیاری
+
+-> 7th urdu lazmi
+SELECT ALL CHAPTERS
+ سبق نمبر 1: حمد
+ حمد
+ سبق نمبر 2: نعت
+ نعت
+ سبق بمبر 3: آداب معاشرت سیرت طیبہؐ کی روشنی میں
+ آداب معاشرت سیرت طیبہؐ کی روشنی میں
+ سبق نمبر 4: ملکی ترقی میں خواتین کا کردار
+ ملکی ترقی میں خواتین کا کردار
+ سبق نمبر 5: ٹریفک کے قوانین اور ہماری ذمہ داریاں
+ ٹریفک کے قوانین اور ہمااری ذمہ داریاں
+ سبق نمبر 6: وطن کےلیے۔۔۔(نظم)
+ وطن کےلیے ۔۔۔(نظم)
+ سبق نمبر 7: چچا چھکن نے تصویر ٹانگی
+ چچا چھکن نے تصویر ٹانگی
+ سبق نمبر 8: مذہب نہیں سکھاتا آپس میں بیر رکھنا
+ مذہب نہیں سکھاتا آپس میں بیر رکھنا
+ سبق نمبر 9: پھر اِن شاہین بچوں کو بال و پر دے
+ اِن شاہین بچوں کو بال و پر دے
+ سبق نمبر 10: بارش کا پہلا قطرہ (نظم)
+ بارش کا پہلا قطرہ
+ سبق نمبر 11: محسن پاکستان
+ محسن پاکستان
+ سبق نمبر 12: دہشت گردی اور ہماری ذمہ داریاں
+ دہشت گردی اور ہماری ذمہ داریاں
+ سبق نمبر 13: کم سن شہید
+ کم سن شہید
+ سبق نمبر 14: زندگی ہے مختلف جذبوں کی ہمواری کا نام (نظم)
+ زندگی ہے مختلف جذبوں کی ہمواریوں کا نام
+ سبق نمبر 15: کرپشن اور اس کا خاتمہ
+ کرپشن اور اس کا خاتمہ
+ سبق نمبر 16: کشمیر کی وادی میں لہرا کر رہوپرچم
+ کشمیر کی وادی میں لہرا کر رہو پرچم
+ سبق نمبر 17: اتحاد (نظم)
+ اتحاد
+ سبق نمبر 18: شجر کاری اور ہمارے موسم
+ شجرکاری اور ہمارے موسم
+ سبق نمبر 19: انسداد منشیات
+ انسداد منشیات
+ سبق نمبر 20: دُعا (نظم)
+ دعا
+ صرف ونحو
+ حروف اور اسکی اقسام
+ اسم اور اسکی اقسام
+ اسمِ معرفہ کی اقسام
+ اسمِ نکرہ کی اقسام
+ فعل اور اس کی اقسام
+ (افعال کی اقسام (بلحاظ فاعل
+ رموز اوقاف
+ (اُردو(ب
+ مذکر مونث
+ واحد جمع
+ ضرب الامثال کہاوتیں
+ متشابہ الفاظ
+ مترادف الفاظ
+ متضاد الفاظ
+ سابقے لاحقے
+ اعراب لگائیں
+ محاورات
+ غلط جملوں کی درستگی
+ درخواستیں
+ خطوط
+ کہانیاں
+ مضامین
+ رسیدیں
+ دعوت نامے
+ (گرامر (معروضی
+
+-> 7th mathematics
+SELECT ALL CHAPTERS
+ CHAP 1: Numbers and Operations: Rational Numbers and Decimal Numbers
+ 1.1 E.X 1.1
+ 1.2 E.X 1.2
+ 1.3 E.X 1.3
+ 1.4 E.X 1.4
+ 1.5 E.X 1.5
+ CHAP 1: Numbers and Operations: Simplification
+ 1.6 E.X 1.6
+ CHAP 1: Numbers and Operations: Sets
+ 1.7 E.X 1.7
+ 1.8 E.X 1.8
+ 1.9 E.X 1.9
+ 1.10 E.X 1.10
+ 1.1 Review Exercise (a)
+ CHAP 1: Numbers and Operations: Rate, Ratio and Proportion
+ 1.11 E.X 1.11
+ 1.12 E.X 1.12
+ 1.13 E.X 1.13
+ CHAP 1: Numbers and Operations: Financial Arithmetic
+ 1.14 E.X 1.14
+ 1.15 E.X 1.15
+ 1.16 E.X 1.16
+ CHAP 1: Numbers and Operations: Squares and Square Roots
+ 1.17 E.X 1.17
+ 1.18 E.X 1.18
+ 1.19 E.X 1.19
+ 1.2 Review Exercise (b)
+ CHAP 2 Algebra: Numbers Sequence and patterns
+ 2.1 E.X 2.1
+ CHAP 2 Algebra: Algebraic Expressions
+ 2.2 E.X 2.2
+ 2.3 E.X 2.3
+ 2.4 E.X 2.4
+ 2.5 E.X 2.5
+ 2.6 E.X 2.6
+ 2.7 E.X 2.7
+ 2.8 E.X 2.8
+ CHAP 2 Algebra: Linear Equation
+ 2.9 E.X 2.9
+ 2.10 E.X 2.10
+ 2.11 E.X 2.11
+ 2.12 E.X 2.12
+ 2.1 Review Exercise
+ CHAP 3 Measurement: Distance, Speed and Time
+ 3.1 E.X 3.1
+ 3.2 E.X 3.2
+ 3.3 E.X 3.3
+ 3.4 E.X 3.4
+ CHAP 3 Measurement: Perimeter and Area
+ 3.5 E.X 3.5
+ 3.6 E.X 3.6
+ 3.7 E.X 3.7
+ 3.1 Review Exercise
+ CHAP 4: Geometry: Practical Geometry
+ 4.1 E.X 4.1
+ 4.2 E.X 4.2
+ CHAP 4: Geometry: Angle Properties of Polygons
+ 4.3 E.X 4.3
+ 4.4 E.X 4.4
+ CHAP 4: Geometry: Transformation
+ 4.5 E.X 4.5
+ 4.1 Review Exercise
+ CHAP 5 Data Management: Statistics
+ 5.1 E.X 5.1
+ 5.2 E.X 5.2
+ 5.3 E.X 5.3
+ CHAP 5 Data Management: Probability
+ 5.4 E.X 5.4
+ 5.1 Review Exercise
+
+-> 7th computer
+SELECT ALL CHAPTERS
+ UNIT 1: Emerging Technologies
+ Emerging Technologies
+ UNIT 2: Digital Skills
+ Digital Skills
+ UNIT 3: Computational Thinking
+ Computational Thinking
+ UNIT 4: Programming
+ Programming
+ UNIT 5: Digital Citizenship
+ Digital Citizenship
+ UNIT 6: Entrepreneurship in Digital Age
+ Entrepreneurship in Digital Age
+
+-> 7th history
+SELECT ALL CHAPTERS
+ CHAP 1: Middle Ages In Europe (500-1500 CE)
+ Middle Ages In Europe (500-1500 CE)
+ CHAP 2: Spread of Islam In Europe And Asia
+ Spread of Islam In Europe And Asia
+ CHAP 3: Muslim Dynasties and Crusades
+ Muslim Dynasties and Crusades
+ CHAP 4: Muslims in South Asia
+ Muslims in South Asia
+ CHAP 5: Modern Period in Europe
+ Modern Period in Europe
+
+-> 7th tarjuma tul Quran
+SELECT ALL CHAPTERS
+ ہمارے پیارے نبی حضرت محمد خاتم النبین ﷺ
+ ہمارے پیارے نبی حضرت محمد رسول اللہ خاتم النبین ﷺ
+ قرآنِ مجید کے آداب
+ قرآنِ مجید کے آداب
+ سُورَۃُ الَّنَبَا
+ سُورَۃُ الَّنَبَا
+ سُورَۃُ النّٰزِعٰتِ
+ سُورَۃُ النّٰزِعٰتِ
+ سُورَۃُ عَبَسَ
+ سُورَۃُ عَبَسَ
+ سُورَۃُ التَّکوِیرِ
+ سُورَۃُ التَّکوِیرِ
+ سُورَۃُ الاِنفِطَارِ
+ سُورَۃُ الاِنفِطَارِ
+ سُورَۃُ المُطَفِّفِینَ
+ سُورَۃُ المُطَفِّفِینَ
+ سُورَۃُ الاِنشِقَاقِ
+ سُورَۃُ الاِنشِقَاقِ
+ سُورَۃُ البُرُوجِ
+ سُورَۃُ البُرُوجِ
+ سُورَۃُ الطّارِقِ
+ سُورَۃُ الطَّارِقِ
+ سُورَۃُ الاَعلیٰ
+ سُورَۃُ الاَعلیٰ
+ سُورَۃُ الغَاشِیَۃِ
+ سُورَۃُ الغَاشِیَۃِ
+ سُورَۃُ الفَجرِ
+ سُورَۃُ الفَجرِ
+ سُورَۃُ البَلَدِ
+ سُورَۃُ البَلَدِ
+ سُورَۃُ الشَّمسِ
+ سُورَۃُ الشَّمسِ
+ سُورَۃُ الَّیلِ
+ الَّیلِ
+ سُورَۃُ الضُّحٰی
+ سُورَۃُ الضُّحٰی
+ سُورَۃُ اَلَم نَشرَح
+ سُورَۃُ اَلَم نَشرَح
+ سُورَۃُ التِّینِ
+ سُورَۃُ التِّینِ
+ سُورَۃُ العَلَقِ
+ سُورَۃُ العَلَقِ
+ سُورَۃُ القَدرِ
+ سُورَۃُ القَدرِ
+ سُورَۃُ البَیِّنَۃِ
+ سُورَۃُ البَیِّنَۃِ
+ سُورَۃُ الزِّلزَالِ
+ سُورَۃُ الزِّلزَالِ
+ سُورَۃُ العٰدِیٰتِ
+ سُورَۃُ العٰدِیٰتِ
+ سُورَۃُ القَارِعَۃِ
+ سُورَۃُ القَارِعَۃِ
+ سُورَۃُ التَّکَاثُرِ
+ سُورَۃُ التَّکَاثُرِ
+ سُورَۃُ العَصرِ
+ سُورَۃُ العَصرِ
+ سُورَۃُ الھُمَزَۃِ
+ سُورَۃُ الھُمَزَۃِ
+ حضرت ابراہیم علیہ السلام
+ حضرت ابراہیم علیہ السلام
+ حضرت موسیٰ علیہ السلام
+ حضرت موسیٰ علیہ السلام
+ حضرت داؤد علیہ السلام
+ حضرت داؤد علیہ السلام
+
+-> 7th islamiyat lazmi
+SELECT ALL CHAPTERS
+ باب دوم: ایمانیات و عبادات
+ عقیدہ ختم نبوت
+ فرشتوں پر ایمان
+ آسمانی کتابوں پر ایمان
+ روزہ اور اس کی فضیلت
+ نماز جنازہ اور دیگر نمازیں
+ دعا کی اہمیت و فضیلت
+ باب سوم: سیرتِ طیبہ ﷺ
+ نبی کریم خاتم النبین ﷺ اور مدنی معاشرے کا استحکام
+ غزوہ خندق
+ غزوہ بنوقُرَیظہ
+ صلح حدیبیہ
+ رسول اللہ خاتم النبین ﷺ کی تعلیمی سرگرمیاں
+ نبی کریم خاتم النبین ﷺ بطورِ داعی امن
+ حضرت محمد رسول اللہ ﷺ کا صبر و شکر
+ حضرت محمد رسول اللہ ﷺ کا سادہ طرز زندگی اور قناعت
+ حضرت محمد رسول اللہ ﷺ کا انداز گفتگو
+ باب چہارم: اخلاق و آداب
+ میانہ روی
+ سخاوت وایثار
+ تعلیم اور تعلیم کے آداب
+ بُری عادات سے اجتناب
+ باب پنجم: حسنِ معاملات و معاشرت
+ حقوق العباد
+ نظم و ضبط اور قانون کا احترام
+ کسب حلال
+ قومی املاک و وسائل کے استعمال کے آداب
+ باب ششم: ہدایت کے سر چشمے اور مشاہیر اسلام
+ امہات المومنین
+ حضرت امام حسن مجتبی رضی اللہ تعالیٰ عنہ
+ حضرت سیدہ زینب رضی اللہ تعالی عنھا
+ صحابہ کرام
+ صوفیہ کرام
+ علما و مفکرین
+ فاتحین
+ باب ہفتم: اسلامی تعلیمات اور عصرِ حاضر کے تقاضے
+ اسلام میں علم کی اہمیت
+ اسلام اور امنِ عامہ
+
+-> 8th tarjuma tul quran
+SELECT ALL CHAPTERS
+ ہمارے پیارے نبی حضرت محمد رسول اللہ خاتم النبین ﷺ
+ ہمارے پیارے نبی حضرت محمد رسول اللہ خاتم النبین ﷺ
+ قرآنِ مجید کے آداب
+ قرآنِ مجید کے آداب
+ سورۃ نمبر 1: سُورَۃُ الزُّخرُفِ
+ سُورَۃُ الزُّخرُفِ
+ سورۃ نمبر 2: سُورَۃُ الدُّخَانِ
+ سُورَۃُ الدُّ خَانِ
+ سورۃ نمبر 3: سُورَۃُ الجَاثِیَۃِ
+ سُورَۃُ الجَاثِیَۃِ
+ سورۃ نمبر 4: سُورۃ قٓ
+ سُورَۃُ قٓ
+ سورۃ نمبر 5: سُورۃُ الزّٰرِیٰتِ
+ سُورَۃُ الزّٰرِیٰتِ
+ سورۃ نمبر 6: سُورَۃ الطُّورِ
+ سُورَۃُ الطُّورِ
+ سورۃ نمبر 7: سُورَۃُ النَّجمِ
+ سُورَۃُ النَّجمِ
+ سورۃ نمبر 8: سُورَۃُ القَمَرِ
+ سُورَۃُ القَمُرِ
+ سورۃ نمبر 9: سُورَۃُ الرَّحمٰنِ
+ سُورَۃُ الرَّحمٰنِ
+ سورۃ نمبر 10: سُورَۃُ الوَاقِعَۃِ
+ سُورَۃُ الواقِعَۃِ
+ سورۃ نمبر 11: سُورَۃُ المُلکِ
+ سُورَۃُ المُلکِ
+ سورۃ نمبر 12: سُورَۃُ القَلَمِ
+ سُورَۃُ القَلَمِ
+ سورۃ نمبر 13: سُورَۃُ الحَآقَّۃِ
+ سُورَۃُ الحَآقَّۃِ
+ سورۃ نمبر 14: سُورَۃُ المَعَارِجِ
+ سُورَۃُ المَعَارِجِ
+ سورۃ نمبر 15: سُورَۃُ نُوحٍ
+ سُورَۃُ نوحِ
+ سورۃ نمبر 16: سُورَۃُ الجِنِّ
+ سُورَۃُ الجِنِّ
+ سورۃ نمبر 17: سُورِۃُ المُزَّمِّلِ
+ سُورَۃُ المُزَّمِّلِ
+ سورۃ نمبر 18: سُورَۃُ المُدَّثِّرِ
+ سُورَۃَ المُدَّثِّرِ
+ سورۃ نمبر 19: القِیَامَۃِ
+ سُورَۃُ القِیَامَۃِ
+ سورۃ نمبر 20: سُورَۃُ الدَّھرِ
+ سُورَۃُ الدَّھرِ
+ سورۃ نمبر 21: سُورَۃُ المُرسَلٰتِ
+ سُورَۃُ المُرسَلٰتِ
+ سورۃ نمبر 22: سُورَۃُ یُوسُفَ
+ سُورَۃُ یُوسُفَ
+ سورۃ نمبر 23: سُورۃُ مَریَمَ
+ سُورَۃُ مَریَمَ
+ حضرت یُوسُف علیہ السّلام
+ حضرت یوسف علیہ السلام کی زندگی کا تکلیف دہ دَور
+ حضرت یوسف علیہ السلام کا عروج
+ حضرت عیسٰی علیہ السّلام
+ حضرت عیسیٰ علیہ السّلام
+
+->8th islamiyat lazmi
+SELECT ALL CHAPTERS
+ باب دوم: ایمانیات وعبادات
+ تقدیر پرایمان
+ عقیدہ آخرت
+ خشیت الٰہی
+ زکوۃ کی فضیلت و اہمیت
+ حج اور اس کی عالمگیریت
+ اسلامی عبادات کے تقاضے اوراثرات
+ باب سوم: سیرت طیبہ ﷺ
+ نبی کریم ﷺ کی دعوت وتبلیغ کی عالمگیریت وآفاقیت
+ غزوہ خیبر
+ معرکہ مؤتہ
+ خصائص و شمائل
+ نبی کریم ﷺ کی معاشرتی تعلیمات
+ باب چہارم: اخلاق وآداب
+ مساوات
+ اُخوت اسلامی اور اتحادِ ملی
+ بد گمانی سے پرہیز
+ حرص وطَمَع کی ممانعت
+ باب پنجم: حسن معاملات و معاشرت
+ حقوق العباد
+ خرید و فروخت کے احکام وآداب
+ باب ششم: ہدایت کے سر چشمے اورمشاہیر اسلام
+ امہات المومنین رضی اللہ تعالیٰ عنھن
+ حضرت سیدنا امام حسین رضی اللہ تعالیٰ عنہ
+ صحابہ کرام رضی اللہ تعالی عنھم
+ صوفیہ کرام رحمتہ اللہ علیھم
+ علما و مفکرین رحمۃ اللہ علیھم
+ فاتحین
+ باب ہفتم: اسلامی تعلیمات اور عصر حاضر کے تقاضے
+ دعوت و تبلیغ
+ ذرائع ابلاغ کا استعمال
+
+-> 8th urdu lazmi
+SELECT ALL CHAPTERS
+ سبق نمبر 1: حمد (نظم)
+ حمد (نظم)
+ سبق نمبر 2:نعت (نظم)
+ نعت (نظم)
+ سبق نمبر 3: تبسم کے پھول
+ تبسم کے پھول
+ سبق نمبر 4: عظیم سپہ سالار
+ عظیم سپہ سالار
+ سبق نمبر 5 : چغل خور
+ چغل خور
+ سبق نمبر 6 : قدرتی آفات
+ قدرتی آفات
+ سبق نمبر 7 : وطن کی مٹی گواہ رہنا (نظم)
+ وطن کی مٹی گواہ رہنا (نظم)
+ سبق نمبر 8 : مناظر پاکستان
+ مناظر پاکستان
+ سبق نمبر 9 : میجر شبیر شریف شہید
+ میجر شبیر شریف شہید
+ سبق نمبر 10 : پاکستان کی تہذہب و ثقافت
+ پاکستان کی تہذیب و ثقافت
+ سبق نمبر 11 : اک ریل کے سفر کی تصویر کھنچتا ہوں (نظم)
+ اک ریل کے سفر کی تصویر کھنچتا ہوں (نظم)
+ سبق نمبر 12 : ہاکی
+ ہاکی
+ سبق نمبر 13 : قدرتی ماحول
+ قدرتی ماحول
+ سبق نمبر 14 : حکیم محمد سعید شہید
+ حلیم محمد سعید شہید
+ سبق نمبر 15 : درس عمل (نظم)
+ درس عمل (نظم)
+ سبق نمبر 16 : خواتین کا احترام اور مقام
+ خواتین کا احترام اور مقام
+ سبق نمبر 17 : کرپشن ایک سماجی بُرائی
+ کرپشن ایک سماجی بُرائی
+ سبق نمبر 18 : دریا کنارے چاندنی (نظم)
+ دریا کنارے چاندنی (نظم)
+ سبق نمبر 19 : ابتدائی طبی امداد
+ ابتدائی طبی امداد
+ سبق نمبر 20 : بچے کی دعا (نظم)
+ بچے کی دعا (نظم)
+ صرف ونح
+ حروف اور اسکی اقسام
+ اسم اور اسکی اقسام
+ اسم معرفہ کی اقسام
+ اسم نکرہ کی اقسام
+ فعل اور اس کی اقسام
+ افعال کی اقسام (بلحاظ فاعل)
+ رموز اوقاف
+ (اُردو(ب
+ مذکر مونث
+ واحد جمع
+ ضرب الامثال کہاوتیں
+ متشابہ الفاظ
+ مترادف الفاظ
+ متضاد الفاظ
+ سابقے لاحقے
+ اعراب لگائیں
+ محاورات
+ غلط جملوں کی درستگی
+ درخواستیں
+ خطوط
+ کہانیاں
+ مضامین
+ تفہیم عبارات
+ مکالمے
+
+-> 8th english
+SELECT ALL CHAPTERS
+ UNIT 1: Tolerance of The Rasoolullah (SAW)
+ Tolerance of The Rasoolullah (SAW)
+ UNIT 2: A Great Virtue
+ A Great Virtue
+ UNIT 3: The Twins
+ The Twins
+ UNIT 4: Let's Make Our Roads Safer!
+ Let's Make Our Roads Safer!
+ UNIT 5: Hazrat Umar (R.A)
+ Hazrat Umar (R.A)
+ UNIT 6: Sports and Sportsmanship
+ Sports and Sportsmanship
+ UNIT 7: The Earth Speaks
+ The Earth Speaks
+ UNIT 8: Settling the Quarrel
+ Stetting the Quarrel
+ UNIT 9: Mountaineering
+ Mountaineering
+ UNIT 10: Dignity of Labour
+ Dignity of Labour
+ UNIT 11: Give to Your Country
+ Give to Your Country
+ UNIT 12: Trees Plantation
+ Trees Plantation
+ English B
+ Direct & Indirect
+ Idioms
+ Singular/Plural
+ Masculine/Feminine
+ Letters
+ Applications
+ Stories
+ Essays
+ Dialogues
+ Form of verbs
+ Grammar (Objective)
+ Comprehension Paragraphs
+ Summarize The Paragraph
+ Tenses
+ Use Of 'it' & 'there'
+ Use Of 'it' & 'there'
+ Use of 'has' , 'have' & 'had'
+ Present Indefinite Tense
+ Present Continuous Tense
+ Present Perfect Tense
+ Present Perfect Continuous Tense
+ Past Indefinite Tense
+ Past Continuous Tense
+ Past Perfect Tense
+ Past Perfect Continuous Tense
+ Future Indefinite Tense
+ Future Continuous Tense
+ Future Perfect Tense
+ Future Perfect Continuous Tense
+ Use of 'is' , 'am' , 'are' , 'was' & 'were'
+ English Grammar
+ Sentence and Phrase
+ Compound and Complex Sentences
+ Punctuation
+ Articles
+ Noun
+ Pronoun
+ Adjective
+ Verb
+ Adverb
+ Preposition
+ Conjunction
+ Interjection
+ Book Review Excercises
+ Review-01
+ Review-02
+ Review-03
+ Water is a lovely thing (Poem)
+ Prayer (Poem)
+ Taking a Tour in Hills (Poem)
+
+-> 8th mathematics
+SELECT ALL CHAPTERS
+ CHAP 1: Numbers and Operations: Real Numbers
+ 1.1 E.X 1.1
+ 1.2 E.X 1.2
+ CHAP 1: Numbers and Operations: Estimation and Approximation
+ 1.3 E.X 1.3
+ CHAP 1: Numbers and Operations: Square Roots and Cube Roots
+ 1.4 E.X 1.4
+ 1.5 E.X 1.5
+ 1.6 E.X 1.6
+ 1.7 E.X 1.7
+ 1.8 E.X 1.8
+ 1.9 E.X 1.9
+ 1.10 E.X 1.10
+ 1.11 E.X 1.11
+ 1.1 Review Exercise (a)
+ CHAP 1: Numbers and Operations: Sets
+ 1.12 E.X 1.12
+ 1.13 E.X 1.13
+ 1.14 E.X 1.14
+ 1.15 E.X 1.15
+ 1.16 E.X 1.16
+ CHAP 1: Numbers and Operations: Ratio, Rate and Proportion
+ 1.17 E.X 1.17
+ 1.18 E.X 1.18
+ CHAP 1: Numbers and Operations: Percentage and Financial Arithmetic
+ 1.19 E.X 1.19
+ 1.20 E.X 1.20
+ 1.21 E.X 1.21
+ 1.22 E.X 1.22
+ 1.23 E.X 1.23
+ 1.24 E.X 1.24
+ 1.2 Review Exercise (b)
+ CHAP 2: Algebra: Number Sequence and Patterns
+ 2.1 E.X 2.1
+ 2.2 E.X 2.2
+ 2.3 E.X 2.3
+ CHAP 2: Algebra: Expansion and Factorization
+ 2.4 E.X 2.4
+ 2.5 E.X 2.5
+ 2.6 E.X 2.6
+ 2.7 E.X 2.7
+ 2.8 E.X 2.8
+ 2.9 E.X 2.9
+ 2.10 E.X 2.10
+ 2.11 E.X 2.11
+ 2.12 E.X 2.12
+ 2.13 E.X 2.13
+ 2.14 E.X 2.14
+ 2.15 E.X 2.15
+ 2.16 E.X 2.16
+ CHAP 2: Algebra: Linear Equations and Inequalities
+ 2.17 E.X 2.17
+ 2.18 E.X 2.18
+ 2.19 E.X 2.19
+ 2.20 E.X 2.20
+ 2.21 E.X 2.21
+ 2.22 E.X 2.22
+ 2.1 Review Exercise
+ CHAP 3: Mensuration
+ 3.1 E.X 3.1
+ 3.2 E.X 3.2
+ 3.3 E.X 3.3
+ 3.4 E.X 3.4
+ 3.5 E.X 3.5
+ 3.6 E.X 3.6
+ 3.7 E.X 3.7
+ 3.1 Review Exercise
+ CHAP 4: Congruency and Similarity, Construction of Triangles and Transformation
+ 4.1 E.X 4.1
+ 4.2 E.X 4.2
+ 4.3 E.X 4.3
+ 4.4 E.X 4.4
+ 4.5 E.X 4.5
+ 4.6 E.X 4.6
+ 4.1 Review Exercise
+ CHAP 5: Statistics and Probability: Information Handling
+ 5.1 E.X 5.1
+ 5.2 E.X 5.2
+ 5.3 E.X 5.3
+ 5.4 E.X 5.4
+ CHAP 5: Statistics and Probability: Probability
+ 5.5 E.X 5.5
+ 5.1 Review Exercise
+
+-> 8th general science
+SELECT ALL CHAPTERS
+ UNIT 1: Ecology
+ Ecology
+ UNIT 2 : Human Nervous System
+ Human Nervous System
+ UNIT 3: Variation, Heredity and Cell division
+ Variation, Heredity and Cell division
+ UNIT 4: Biotechnology
+ Biotechnology
+ UNIT 5: Periodic Table
+ Periodic Table
+ UNIT 6: Chemical Reactions
+ Chemical Reactions
+ UNIT 7: Acids, Bases and Salts
+ Acids, Bases and Salts
+ UNIT 8: Force and Pressure
+ Force and Pressure
+ UNIT 9: Reflection and Refraction
+ Reflection and Refraction
+ UNIT 10 : Electricity and Magnetism
+ Electricity and Magnetism
+ UNIT 11: Technology in Everyday life
+ Technology in Everyday life
+ UNIT 12: Our Universe
+ Our Universe
+
+-> 8th computer
+SELECT ALL CHAPTERS
+ CHAP 1: Emerging Technologies
+ Emerging Technologies
+ CHAP 2: Data Communication and Computer Networks
+ Data Communication and Computer Networks
+ CHAP 3: Microsoft Excel
+ Microsoft Excel
+ CHAP 4: Google Sheets
+ Google Sheets
+ CHAP 5: Computational Thinking
+ Computational Thinking
+ CHAP 6: Programming
+ Programming
+ CHAP 7: Digital Citizenship
+ Digital Citizenship
+ CHAP 8: Entrepreneurship
+ Entrepreneurship
+
+-> 8th geography
+SELECT ALL CHAPTERS
+ CHAP 1: Oceans and seas
+ Oceans and seas
+ CHAP 2: Living with Climate
+ Living with Climate
+ CHAP 3: Environmental Pollution
+ Environmental Pollution
+ CHAP 4: Industrialization and International Trade
+ Industrialization and International Trade
+ CHAP 5: Transport and Its Importance
+ Transport and Its Importance
+ CHAP 6: Social and Economic Development
+ Social and Economic Development
+
+-> 8th history
+SELECT ALL CHAPTERS
+ CHAP 1: Arrival of The British In the Subcontinent
+ Arrival of The British In the Subcontinent
+ CHAP 2: Reform Movement In The Subcontinent
+ Reform Movement In The Subcontinent
+ CHAP 3: world Wars I And II
+ world Wars I And II
+ CHAP 4: Political Awakening In Subcontinent
+ Political Awakening In Subcontinent
+ CHAP 5: Pakistan A New Country: 1947 Till Today
+ Pakistan A New Country: 1947 Till Today
+
+
+-> 8th ikhlaqiat
+SELECT ALL CHAPTERS
+ باب نمبر 1: مذاہب کا تعارف
+ مذاہب کا تعارف
+ باب نمبر 2: دنیا کے مذاہب
+ دنیا کے مذاہب
+ اب نمبر 3: پاکستان میں مذہبی تہوار
+ پاکستان میں مذہبی تہوار
+ باب نمبر 4: اخلاقی اقدار
+ اخلاقی اقدار
+ باب نمبر 5: شخصیات
+ شخصیات
+
+-> 8th zari taleem
+SELECT ALL CHAPTERS
+ باب نمبر 1: ربیع اور خریف کی فصلوں کی کاشت
+ ربیع اور خریف کی فصلوں کی کاشت
+ باب نمبر 2: نباتات و حیوانات کا تحفظ
+ نباتات و حیوانات کا تحفظ
+ باب نمبر 3: زمین کی زرخیزی بحال کرنا
+ زمین کی زرخیزی بحال کرنا
+ باب نمبر 4: زرعی اراضی کا تحفظ
+ زرعی اراضی کا تحفظ
+ باب نمبر :5 پانی کے وسائل کا تحفظ اور بہتر استعمال
+ پانی کے وسائل کا تحفظ اور بہتر استعمال
+ باب نمبر 6: کھمبی کی کاشت
+ کھمبی کی کاشت
+ باب نمبر7: زرعی اجناس کا ذخیرہ و تحفظ
+ زرعی اجناس کا ذخیرہ و تحفظ
+
+-> 8th punjabi
+SELECT ALL CHAPTERS
+ نظم نمبر 1: سچی ذات رب دی
+ سچی ذات رب دی
+ باب نمبر 2: حضرت محمدﷺ
+ حضرت محمدﷺ
+ نظم نمبر 3: نعت
+ نعت
+ باب نمبر 4: حضرت عمر فاروق رضی اللہ عنہ
+ حضرت عمر فاروق رضی اللہ عنہ
+ باب نمبر 5: ایکے دی برکت
+ ایکے دی برکت
+ نظم نمبر 6: مہمان داری
+ مہمان داری
+ باب نمبر 7: اچھا شہری
+ اچھا شہری
+ باب نمبر 8: دلاں نوں دلاں دے راہ
+ دلاں نوں دلاں دے راہ
+ غزل نمبر 9: غزل
+ غزل
+ باب نمبر 10: جنت دی خاتون
+ جنت دی خاتون
+ باب نمبر 11: قادریار
+ قادر یار
+ نظم نمبر 12: قائداعظم
+ قائد اعظم
+ باب نمبر 13: انسان دی کہانی
+ انسان دی کہانی
+ باب نمبر :14 نشے توں بچو
+ نشے توں بچو
+ باب نمبر 15: قائداعظم رحمتہ اللہ علیہ
+ قائداعظم رحمتہ اللہ علیہ
+ نظم نمبر 16: میلاشالا مار
+ میلا شالا مار
+ باب نمبر 17: ڈیرہ بابے راٹھ دا
+ ڈیرہ بابے راٹھ دا
+ باب نمبر 18: چٹھی
+ چٹھی
+ باب نمبر 19: شہیداں نوں سلام
+ شہیداں نوں سلام
+ نظم نمبر 20: محنت دی وڈیائی
+ محنت دی وڈیائی
+ نظم نمبر 21: بھیناں دے ویر
+ بھیناں دے ویر
+ باب نمبر 22: کبھ ایٹمی توانائی بارے
+ کجھ ایٹمی توانائی بارے
+ نظم نمبر 23: دیس پیارا گیت
+ دیس پیارا گیت
+ باب نمبر 24: فضا دی صفائی
+ فضا دی صفائی
+ باب نمبر 25: جہاد
+ جہاد
+ باب نمبر 26: غنی سائیں
+ غںی سائیں
+ نظم نمبر 27: جیوے ساڈا پاکستان
+ جیوے ساڈا پاکستان
+ باب نمبر 28: پہیے توں گڈی توڑی
+ پہیے توں گڈی توڑی
+ باب نمبر 29: بیتے دا محرم--- ہڑپہ
+ بیتے دا محرم--- ہڑپہ
+ نظم نمبر 30: قدرت رب دی
+ قدرت رب دی
+ باب نمبر 31: لطیفے
+ لطیفے
+ نظم نمبر 32: دوہڑے
+ دوہڑے
+ باب نمبر 33:انسان تے قدرت
+ انسان تے قدرت
+ غزل نمبر 34: غزل
+ غزل
+ باب نمبر 35: زبیدہ ناں سچ
+ زبیدہ ناں سچ
+ نظم نمبر 36: سوہنیا سائیاں
+ سوہنیا سائیاں
+
+-> 8th homeeconomics
+SELECT ALL CHAPTERS
+ باب نمبر 1: ہوم اکنامکس کا تعارف
+ ہوم اکنامکس کا تعارف
+ باب نمبر 2:غذا اور غذائیت
+ غذا اور غذائیت
+ باب نمبر 3: کھانا پکانا اور تحفظ غذا
+ کھانا پکانا اور تحفظ غذا
+ باب نمبر 4: تصور ذات
+ تصور ذات
+ باب نمبر 5: شخصیت کی نشوونما اور تعمیر کرار
+ شخصیت کی نشوونما اور تعمیر کرار
+ باب نمبر 6:پارچہ بافی اور لباس
+ پارچہ بافی اور لباس
+ باب نمبر 7: سلائی کے طریقے
+ سلائی کے طریقے
+ باب نمبر 8:رنگ
+ رنگ
+ باب نمبر 9: آرٹ اینڈ کرافٹ
+ آرٹ اینڈ کرافٹ
+ باب نمبر10: ذرائع ووسائل کا انتظام
+ ذرائع ووسائل کا انتظام
+ باب نمبر 11:کام کو آسان بنانا
+ کام کو آسان بنانا
+

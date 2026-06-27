@@ -1725,5 +1725,122 @@
         "7.2 لباس کا انتخاب 7.3 خریداری کے اصول"
       ]
     }
+  ],
+  "Mathematics-9TH-PTB": [
+    {
+      "name": "UNIT 1: Real Numbers",
+      "chapters": [
+        "Exercise 1.1",
+        "Exercise 1.2",
+        "Exercise 1.3",
+        "Review Exercise 1"
+      ]
+    },
+    {
+      "name": "UNIT 2: Logarithms",
+      "chapters": [
+        "Exercise 2.1",
+        "Exercise 2.2",
+        "Exercise 2.3",
+        "Exercise 2.4",
+        "Review Exercise 2"
+      ]
+    },
+    {
+      "name": "UNIT 3: Set and Functions",
+      "chapters": [
+        "Exercise 3.1",
+        "Exercise 3.2",
+        "Exercise 3.3",
+        "Review Exercise 3"
+      ]
+    },
+    {
+      "name": "UNIT 4: Factorization and Algebraic Manipulation",
+      "chapters": [
+        "Exercise 4.1",
+        "Exercise 4.2",
+        "Exercise 4.3",
+        "Exercise 4.4",
+        "Review Exercise 4"
+      ]
+    },
+    {
+      "name": "UNIT 5: Linear Equations and Inequalities",
+      "chapters": [
+        "Exercise 5.1",
+        "Exercise 5.2",
+        "Review Exercise 5"
+      ]
+    },
+    {
+      "name": "UNIT 6: Trigonometry",
+      "chapters": [
+        "Exercise 6.1",
+        "Exercise 6.2",
+        "Exercise 6.3",
+        "Exercise 6.4",
+        "Exercise 6.5",
+        "Exercise 6.6",
+        "Review Exercise 6"
+      ]
+    },
+    {
+      "name": "UNIT 7: Coordinate Geometry",
+      "chapters": [
+        "Exercise 7.1",
+        "Exercise 7.2",
+        "Exercise 7.3",
+        "Review Exercise 7"
+      ]
+    },
+    {
+      "name": "UNIT 8: Logic",
+      "chapters": [
+        "Exercise 8.1"
+      ]
+    },
+    {
+      "name": "UNIT 9: Similar Figures",
+      "chapters": [
+        "Exercise 9.1",
+        "Exercise 9.2",
+        "Exercise 9.3",
+        "Exercise 9.4",
+        "Review Exercise 9"
+      ]
+    },
+    {
+      "name": "UNIT 10: Graphs of Functions",
+      "chapters": [
+        "Exercise 10.1",
+        "Exercise 10.2",
+        "Review Exercise 10"
+      ]
+    },
+    {
+      "name": "UNIT 11: Loci and Construction",
+      "chapters": [
+        "Exercise 11.1",
+        "Exercise 11.2",
+        "Review Exercise 11"
+      ]
+    },
+    {
+      "name": "UNIT 12: Information Handling",
+      "chapters": [
+        "Exercise 12.1",
+        "Exercise 12.2",
+        "Review Exercise 12"
+      ]
+    },
+    {
+      "name": "UNIT 13: Probability",
+      "chapters": [
+        "Exercise 13.1",
+        "Exercise 13.2",
+        "Review Exercise 13"
+      ]
+    }
   ]
 }

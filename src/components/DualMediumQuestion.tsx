@@ -12,6 +12,7 @@ type DualMediumQuestionProps = {
   index: number;
   dualMedium: string;
   type?: string;
+  imageFile?: string | null;
   textClassName?: string;
   urduClassName?: string;
 };
@@ -22,6 +23,7 @@ export default function DualMediumQuestion({
   index,
   dualMedium,
   type,
+  imageFile,
   textClassName = "text-[13px] font-medium text-gray-800",
   urduClassName = "text-[13px] text-gray-700",
 }: DualMediumQuestionProps) {
@@ -64,6 +66,14 @@ export default function DualMediumQuestion({
     );
   };
 
+  const diagramImg = imageFile ? (
+    <img
+      src={`/diagrams/${imageFile}`}
+      alt="diagram"
+      className="mt-2 max-h-40 object-contain rounded"
+    />
+  ) : null;
+
   if (dualMedium === "dual") {
     return (
       <div>
@@ -76,6 +86,7 @@ export default function DualMediumQuestion({
           <div>
             <p className={textClassName}>{index}. {englishStem}</p>
             {renderOptions("english")}
+            {diagramImg}
           </div>
           <div>
             <p className={`${urduClassName} text-right ${urduFont}`} dir="rtl">
@@ -98,6 +109,7 @@ export default function DualMediumQuestion({
         )}
         <p className={textClassName}>{index}. {englishStem}</p>
         {renderOptions("english")}
+        {diagramImg}
       </div>
     );
   }
@@ -113,6 +125,7 @@ export default function DualMediumQuestion({
         {index}. {urduStem || englishStem}
       </p>
       {renderOptions("urdu")}
+      {diagramImg}
     </div>
   );
 }

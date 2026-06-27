@@ -1,0 +1,217 @@
+UNIT 1: Real Numbers
+ Exercise 1.1
+ Exercise 1.2
+ Exercise 1.3
+ Review Exercise 1
+ UNIT 2: Logarithms
+ Exercise 2.1
+ Exercise 2.2
+ Exercise 2.3
+ Exercise 2.4
+ Review Exercise 2
+ UNIT 3: Set and Functions
+ Exercise 3.1
+ Exercise 3.2
+ Exercise 3.3
+ Review Exercise 3
+ UNIT 4: Factorization and Algebraic Manipulation
+ Exercise 4.1
+ Exercise 4.2
+ Exercise 4.3
+ Exercise 4.4
+ Review Exercise 4
+ UNIT 5: Linear Equations and Inequalities
+ Exercise 5.1
+ Exercise 5.2
+ Review Exercise 5
+ UNIT 6: Trigonometry
+ Exercise 6.1
+ Exercise 6.2
+ Exercise 6.3
+ Exercise 6.4
+ Exercise 6.5
+ Exercise 6.6
+ Review Exercise 6
+ UNIT 7: Coordinate Geometry
+ Exercise 7.1
+ Exercise 7.2
+ Exercise 7.3
+ Review Exercise 7
+ UNIT 8: Logic
+ Exercise 8.1
+ UNIT 9: Similar Figures
+ Exercise 9.1
+ Exercise 9.2
+ Exercise 9.3
+ Exercise 9.4
+ Review Exercise 9
+ UNIT 10: Graphs of Functions
+ Exercise 10.1
+ Exercise 10.2
+ Review Exercise 10
+ UNIT 11: Loci and Construction
+ Exercise 11.1
+ Exercise 11.2
+ Review Exercise 11
+ UNIT 12: Information Handling
+ Exercise 12.1
+ Exercise 12.2
+ Review Exercise 12
+ UNIT 13: Probability
+ Exercise 13.1
+ Exercise 13.2
+ Review Exercise 13
+
+
+
+
+
+ ‎Mcqs
+‎Exersize 1.1 20
+‎1.2 34
+‎1.3 56
+‎2.1 63
+‎2.2 68
+‎2.3 73
+‎2.4 84
+‎review exersize 2 94
+‎3.1 112
+‎3.2 128
+‎3.3 134
+‎review ex 3 144
+‎4.1 155
+‎4.2 156
+‎4.3 159
+‎4.4 162
+‎review ex 4 172
+‎5.1 185
+‎5.2 200
+‎review ex 5 210
+‎6.1 228
+‎6.2 234
+‎6.4 245
+‎6.5 250
+‎review ex 6 260
+‎7.1 270
+‎7.2 288
+‎7.3 294
+‎review ex 7 304
+‎8.1 333
+‎9.1 342
+‎9.2 344
+‎9.4 356
+‎review ex 9 366
+‎
+‎10.1 408
+‎10.2 417
+‎review ex 10 427
+‎
+‎11.1 449
+‎11.2 451
+‎review ex 11 461
+‎
+‎
+‎12.1 476
+‎12.2 496
+‎reviww ex 12 506
+‎
+‎13.1 528
+‎13.2 533
+‎review ex 13 543
+
+Long questions
+‎
+‎1.1 1
+‎1.2 12
+‎1.3 27
+‎2.2 29
+‎2.3 34
+‎2.4 48
+‎review 2 52
+‎3.2 87
+‎3.3 92
+‎Review 3 109
+‎4.1 115
+‎4.2 133
+‎4.3 150
+‎4.4 165
+‎review 4 170
+‎5.1 181
+‎5.2 189
+‎review 5 194
+‎6.1 196
+‎6.3 206
+‎6.4 210
+‎6.5 222
+‎6.6 230
+‎review 6 235
+‎7.1 244
+‎7.2 262
+‎7.3 270
+‎review 7 272
+‎8.1 286
+‎9.1 294
+‎9.2 301
+‎9.3 310
+‎9.4 319
+‎10.1 323
+‎10.2 334
+‎revjew 10 339
+‎11.1 359
+‎11.2 377
+‎review 11 387
+‎12.1 396
+‎12.2 419
+‎review 12 426
+‎13.1 434
+‎13.2 443
+‎Review 13 448
+
+
+Short questions 
+‎1.1 53
+‎1.2 82
+‎1.3 85
+‎2.1 111
+‎2.2 140
+‎2.3 161
+‎2.4 192
+‎Review ex 2 213
+‎3.1 263
+‎3.2 275
+‎3.3 301
+‎review ex 3 328
+‎4.1 358
+‎4.2 371
+‎4.3 382
+‎4.4 386
+‎review ex 4 396
+‎5.1 418
+‎4.2 427
+‎review ex 5 430
+‎6.1 476
+‎6.3 487
+‎6.4 506
+‎6.5 517
+‎6.6 521
+‎review ex 6 527
+‎7.1 559
+‎7.2 591
+‎7.3 605
+‎review 7 617
+‎8.1 658
+‎9.1 666
+‎9.2 670
+‎9.3 678
+‎9.4 687
+‎10.1 712
+‎review 10 721
+‎11.1 738
+‎11.2 741
+‎12.1 750
+‎12.2 774
+‎review 12 784
+‎13.1 818
+‎13.2 825
+
+
