@@ -75,19 +75,19 @@ const getBookImage = (title: string): string => {
 };
 
 export const syllabusCards = [
-  { title: "ONE", board: "PTB", gradient: "from-cyan-300 to-blue-400" },
-  { title: "TWO", board: "PTB", gradient: "from-green-600 to-lime-400" },
-  { title: "THREE", board: "PTB", gradient: "from-cyan-500 to-blue-500" },
-  { title: "FOUR", board: "PTB", gradient: "from-amber-300 to-orange-300" },
-  { title: "5TH", board: "PTB", gradient: "from-orange-500 to-yellow-400" },
-  { title: "6TH", board: "PTB", gradient: "from-blue-400 to-cyan-400" },
-  { title: "7TH", board: "PTB", gradient: "from-purple-500 to-pink-400" },
-  { title: "8TH", board: "PTB", gradient: "from-emerald-400 to-blue-700" },
-  { title: "9TH", board: "PTB", gradient: "from-cyan-300 to-blue-400" },
-  { title: "10TH", board: "PTB", gradient: "from-green-600 to-lime-400" },
-  { title: "INTER-I", board: "PTB", gradient: "from-cyan-500 to-blue-500" },
-  { title: "INTER-II", board: "PTB", gradient: "from-amber-300 to-orange-300" },
-  { title: "OLD BOOKS", board: "PTB", gradient: "from-orange-500 to-yellow-400" },
+  { title: "ONE", board: "PTB", gradient: "from-cyan-300 to-blue-400", comingSoon: false },
+  { title: "TWO", board: "PTB", gradient: "from-green-600 to-lime-400", comingSoon: false },
+  { title: "THREE", board: "PTB", gradient: "from-cyan-500 to-blue-500", comingSoon: false },
+  { title: "FOUR", board: "PTB", gradient: "from-amber-300 to-orange-300", comingSoon: false },
+  { title: "5TH", board: "PTB", gradient: "from-orange-500 to-yellow-400", comingSoon: false },
+  { title: "6TH", board: "PTB", gradient: "from-blue-400 to-cyan-400", comingSoon: false },
+  { title: "7TH", board: "PTB", gradient: "from-purple-500 to-pink-400", comingSoon: false },
+  { title: "8TH", board: "PTB", gradient: "from-emerald-400 to-blue-700", comingSoon: false },
+  { title: "9TH", board: "PTB", gradient: "from-cyan-300 to-blue-400", comingSoon: false },
+  { title: "10TH", board: "PTB", gradient: "from-green-600 to-lime-400", comingSoon: true },
+  { title: "INTER-I", board: "PTB", gradient: "from-cyan-500 to-blue-500", comingSoon: false },
+  { title: "INTER-II", board: "PTB", gradient: "from-amber-300 to-orange-300", comingSoon: true },
+  { title: "OLD BOOKS", board: "PTB", gradient: "from-orange-500 to-yellow-400", comingSoon: true },
 ];
 
 export const afaqCards = [
@@ -494,11 +494,11 @@ export const boardSubjectsMap: Record<string, Record<string, SubjectCard[][]>> =
 };
 
 export const boardCards = [
-  { name: "PTB", label: "PTB", subtitle: "Syllabus", logo: "/images/PTBLogo.png", gradient: "from-cyan-300 to-blue-400" },
-  { name: "AFAQ", label: "AFAQ SNC", subtitle: "Syllabus", logo: "/images/AfaqLogo.png", gradient: "from-green-500 to-lime-400" },
-  { name: "OXFORD", label: "OXFORD SNC", subtitle: "Syllabus", logo: "/images/OxfordLogo.png", gradient: "from-cyan-400 to-blue-500" },
-  { name: "GOHAR", label: "GOHAR SNC", subtitle: "Syllabus", logo: "/images/GoharLogo.png", gradient: "from-orange-300 to-amber-400" },
-  { name: "BA", label: "B.A", subtitle: "Syllabus", logo: "/images/PULogo.png", gradient: "from-yellow-400 to-amber-500" },
+  { name: "PTB", label: "PTB", subtitle: "Syllabus", logo: "/images/PTBLogo.png", gradient: "from-cyan-300 to-blue-400", comingSoon: false },
+  { name: "AFAQ", label: "AFAQ SNC", subtitle: "Syllabus", logo: "/images/AfaqLogo.png", gradient: "from-green-500 to-lime-400", comingSoon: true },
+  { name: "OXFORD", label: "OXFORD SNC", subtitle: "Syllabus", logo: "/images/OxfordLogo.png", gradient: "from-cyan-400 to-blue-500", comingSoon: true },
+  { name: "GOHAR", label: "GOHAR SNC", subtitle: "Syllabus", logo: "/images/GoharLogo.png", gradient: "from-orange-300 to-amber-400", comingSoon: true },
+  { name: "BA", label: "B.A", subtitle: "Syllabus", logo: "/images/PULogo.png", gradient: "from-yellow-400 to-amber-500", comingSoon: true },
 ];
 
 export const allSubjectTitles: string[] = Array.from(

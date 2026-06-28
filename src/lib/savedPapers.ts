@@ -5,6 +5,7 @@ export type SavedPaperQuestion = {
   text: string;
   urdu: string;
   contentType?: "mcq" | "short" | "long";
+  chapterPart?: string | null;
 };
 
 export type SavedPaperRecord = {
@@ -19,6 +20,7 @@ export type SavedPaperRecord = {
   timeAllowed: string;
   totalMarks: string;
   questionType: string;
+  medium?: string;
   questions: SavedPaperQuestion[];
 };
 

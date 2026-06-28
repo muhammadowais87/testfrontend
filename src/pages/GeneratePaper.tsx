@@ -38,8 +38,8 @@ const allPossibleQuestionTypeOptions: QuestionTypeOption[] = [
   { value: "long", label: "Long Questions (تفصیلی سوالات)" },
   // Grammar & Language
   { value: "grammar", label: "Grammar (گرائمر)" },
-  { value: "ilfaz_ko_jumlo_mein_istamal", label: "Use Words in Sentences (الفاظ کا جملوں میں استعمال)" },
-  { value: "words_into_sentences", label: "Words into Sentences (الفاظ کا جملوں میں استعمال)" },
+  { value: "ilfaz_ko_jumlo_mein_istamal", label: "Idioms in Sentences (محاورات / الفاظ کا جملوں میں استعمال)" },
+  { value: "words_into_sentences", label: "Use Words in Sentences (الفاظ کا جملوں میں استعمال)" },
   { value: "words_meanings", label: "Words Meanings (الفاظ و معنی)" },
   { value: "ilfaz_maani", label: "Words Meanings / Ilfaz Maani (الفاظ و معنی)" },
   { value: "jumlo_ki_darustagi", label: "Correction of Sentences (جملوں کی درستگی)" },
@@ -160,7 +160,7 @@ const getProfessionalQuestionTypeLabel = (value: string, fallbackLabel: string):
     punctuate_the_paragraph: "Punctuate the Paragraph (رموزِ اوقاف)",
     writing_paragraphs: "Writing Paragraphs (پیراگراف نویسی)",
     mukalmy: "Dialogues (مکالمے)",
-    ilfaz_ko_jumlo_mein_istamal: "Use Words in Sentences (الفاظ کا جملوں میں استعمال)",
+    ilfaz_ko_jumlo_mein_istamal: "Idioms in Sentences (محاورات / الفاظ کا جملوں میں استعمال)",
     ashaar_ki_tashreeh: "Explanation of Verses (اشعار کی تشریح)",
     ashar_ki_tashreeh: "Explanation of Verses (اشعار کی تشریح)",
     jumlo_ki_darustagi: "Correction of Sentences (جملوں کی درستگی)",
@@ -180,7 +180,7 @@ const getProfessionalQuestionTypeLabel = (value: string, fallbackLabel: string):
     shakhsiyat: "Personalities (شخصیات)",
     shakhsiyaat: "Personalities (شخصیات)",
     tafheem_ibarat: "Comprehension of Passage (تفہیم عبارت)",
-    words_into_sentences: "Words into Sentences (الفاظ کا جملوں میں استعمال)",
+    words_into_sentences: "Use Words in Sentences (الفاظ کا جملوں میں استعمال)",
     ayaat: "Ayat (آیاتِ مبارکہ)",
     essays: "Essay Writing (مضمون نویسی)",
     match_columns: "Match Columns (کالم ملائیں)",
@@ -321,9 +321,15 @@ const GeneratePaper = () => {
   const activeQuestions = useMemo(() => {
     let filtered = allQuestions;
 
-    if (appliedQuestionType === "mcq") filtered = filtered.filter((q) => q.contentType === "mcq");
-    if (appliedQuestionType === "short") filtered = filtered.filter((q) => q.contentType === "short");
-    if (appliedQuestionType === "long") filtered = filtered.filter((q) => q.contentType === "long");
+    // Special-type slugs are [a-z_]+ only (English lowercase + underscores).
+    // Topic names are Urdu text or decimal IDs — never pure [a-z_]+.
+    // When user picks a basic type (mcq/short/long), exclude questions that
+    // belong to a dedicated special section (summary, essays, ashaar, etc.).
+    const isSpecialSlug = (cp: string | null) => !!cp && /^[a-z_]+$/.test(cp);
+
+    if (appliedQuestionType === "mcq") filtered = filtered.filter((q) => q.contentType === "mcq" && !isSpecialSlug(q.chapterPart));
+    if (appliedQuestionType === "short") filtered = filtered.filter((q) => q.contentType === "short" && !isSpecialSlug(q.chapterPart));
+    if (appliedQuestionType === "long") filtered = filtered.filter((q) => q.contentType === "long" && !isSpecialSlug(q.chapterPart));
     if (appliedQuestionType && !["mcq", "short", "long"].includes(appliedQuestionType)) {
       filtered = filtered.filter((q) => q.chapterPart === appliedQuestionType);
     }
@@ -341,15 +347,28 @@ const GeneratePaper = () => {
     return filtered;
   }, [allQuestions, appliedQuestionPriority, appliedQuestionType]);
 
+  const typeSlugToLabel = useMemo(() => {
+    const map: Record<string, string> = {};
+    questionTypeOptions.forEach(opt => { map[opt.value] = opt.label; });
+    return map;
+  }, [questionTypeOptions]);
+
   const groupedQuestions = useMemo(() => {
     const groups: Record<string, typeof activeQuestions> = {};
+    const isSpecialType = appliedQuestionType && !["mcq", "short", "long"].includes(appliedQuestionType);
     activeQuestions.forEach(q => {
-      const part = q.chapterPart || `Chapter ${q.chapter}`;
-      if (!groups[part]) groups[part] = [];
-      groups[part].push(q);
+      let key: string;
+      if (isSpecialType && chapterGroups.length > 0) {
+        const group = chapterGroups[q.chapter - 1];
+        key = group?.chapters?.[0] || group?.name || `Chapter ${q.chapter}`;
+      } else {
+        key = q.chapterPart || `Chapter ${q.chapter}`;
+      }
+      if (!groups[key]) groups[key] = [];
+      groups[key].push(q);
     });
     return groups;
-  }, [activeQuestions]);
+  }, [activeQuestions, appliedQuestionType, chapterGroups]);
 
   const orderQuestionIds = (ids: number[]) => {
     const uniqueIds = Array.from(new Set(ids));
@@ -380,6 +399,7 @@ const GeneratePaper = () => {
             text: editedQuestions[id]?.text ?? matched.text,
             urdu: editedQuestions[id]?.urdu ?? matched.urdu,
             contentType: matched.contentType,
+            chapterPart: matched.chapterPart,
           };
         }
 
@@ -391,13 +411,14 @@ const GeneratePaper = () => {
           text: edited.text,
           urdu: edited.urdu,
           contentType: edited.contentType || inferContentType(id, edited.text),
+          chapterPart: null,
         };
       })
-      .filter((q): q is { id: number; text: string; urdu: string; contentType: WorkspaceQuestionType } => Boolean(q)),
+      .filter((q): q is { id: number; text: string; urdu: string; contentType: WorkspaceQuestionType; chapterPart: string | null } => Boolean(q)),
     [allQuestions, editedQuestions, shuffledOrder]
   );
 
-  const sectionMeta: Record<WorkspaceQuestionType, { english: string; urdu: string }> = {
+  const standardSectionMeta: Record<WorkspaceQuestionType, { english: string; urdu: string }> = {
     mcq: {
       english: "Choose the correct option(s) for the following questions.",
       urdu: "مندرجہ ذیل سوالات کے درست جواب کا انتخاب کریں۔",
@@ -412,14 +433,32 @@ const GeneratePaper = () => {
     },
   };
 
+  const getSectionLabel = (key: string): { english: string; urdu: string } => {
+    if (key === "mcq" || key === "short" || key === "long") return standardSectionMeta[key];
+    const opt = questionTypeOptions.find((o) => o.value === key);
+    if (opt) {
+      const parenMatch = opt.label.match(/\(([^)]+)\)$/);
+      const urduPart = parenMatch ? parenMatch[1] : opt.label;
+      const englishPart = opt.label.replace(/\s*\([^)]+\)\s*$/, "").trim();
+      return { english: `${englishPart}.`, urdu: `${urduPart}۔` };
+    }
+    return { english: key, urdu: key };
+  };
+
+  const isSpecialSlugKey = (cp: string | null) => !!cp && /^[a-z_]+$/.test(cp);
+
   const workspaceSections = useMemo(() => {
-    const orderedTypes: WorkspaceQuestionType[] = ["mcq", "short", "long"];
-    return orderedTypes
-      .map((type) => ({
-        type,
-        questions: workspaceQuestions.filter((q) => q.contentType === type),
-      }))
-      .filter((section) => section.questions.length > 0);
+    const sectionMap = new Map<string, typeof workspaceQuestions>();
+    workspaceQuestions.forEach((q) => {
+      const key = isSpecialSlugKey(q.chapterPart) ? q.chapterPart! : q.contentType;
+      if (!sectionMap.has(key)) sectionMap.set(key, []);
+      sectionMap.get(key)!.push(q);
+    });
+    const standard: string[] = ["mcq", "short", "long"];
+    const sections: { key: string; questions: typeof workspaceQuestions }[] = [];
+    standard.forEach((t) => { if (sectionMap.has(t)) sections.push({ key: t, questions: sectionMap.get(t)! }); });
+    sectionMap.forEach((questions, key) => { if (!standard.includes(key)) sections.push({ key, questions }); });
+    return sections;
   }, [workspaceQuestions]);
 
   const handleSearchClick = async () => {
@@ -502,7 +541,10 @@ const GeneratePaper = () => {
       setSelectionError("Please enter a valid Required Questions value first.");
       return;
     }
-    if (selectedQuestions.length !== requiredCount) {
+    const effectiveCount = appliedQuestionType === "match_columns"
+      ? Object.values(groupedQuestions).filter(qs => qs.some(q => selectedQuestions.includes(q.id))).length
+      : selectedQuestions.length;
+    if (effectiveCount !== requiredCount) {
       setSelectionError(`Please select exactly ${requiredCount} question(s) first.`);
       return;
     }
@@ -593,9 +635,11 @@ const GeneratePaper = () => {
       timeAllowed: timeAllowed || "40",
       totalMarks: totalMarks && totalMarks !== "0" ? totalMarks : String(workspaceQuestions.length * (Number(eachQMarks) || 2)),
       questionType,
+      medium: appliedDualMedium,
       questions: workspaceQuestions.map((question) => ({
         id: question.id,
         contentType: question.contentType,
+        chapterPart: question.chapterPart ?? null,
         text: editedQuestions[question.id]?.text ?? question.text,
         urdu: editedQuestions[question.id]?.urdu ?? question.urdu,
       })),
@@ -613,6 +657,7 @@ const GeneratePaper = () => {
     const activeQuestions = workspaceQuestions.map((question) => ({
       id: question.id,
       contentType: question.contentType,
+      chapterPart: question.chapterPart ?? null,
       text: editedQuestions[question.id]?.text ?? question.text,
       urdu: editedQuestions[question.id]?.urdu ?? question.urdu,
     }));
@@ -633,6 +678,7 @@ const GeneratePaper = () => {
       timeAllowed: timeAllowed || "40",
       totalMarks: calculatedTotalMarks,
       questionType,
+      medium: appliedDualMedium,
       questions: activeQuestions,
     });
 
@@ -1015,8 +1061,51 @@ const GeneratePaper = () => {
                         globalOffset += qs.length;
                         return (
                       <div key={topic} className="border border-gray-200 rounded-lg overflow-hidden bg-white shadow-sm">
+                        {appliedQuestionType === "match_columns" ? (() => {
+                          const allSelected = qs.every(q => selectedQuestions.includes(q.id));
+                          const toggleGroup = () => {
+                            if (allSelected) {
+                              const qIds = new Set(qs.map(q => q.id));
+                              setSelectedQuestions(prev => prev.filter(id => !qIds.has(id)));
+                            } else {
+                              const newIds = qs.map(q => q.id).filter(id => !selectedQuestions.includes(id));
+                              setSelectedQuestions(prev => [...prev, ...newIds]);
+                            }
+                            setSelectionError("");
+                          };
+                          return (
+                            <>
+                              <label className="bg-[#311b92] text-white py-2 px-4 font-semibold text-sm flex items-center gap-3 cursor-pointer select-none">
+                                <input
+                                  type="checkbox"
+                                  checked={allSelected}
+                                  onChange={toggleGroup}
+                                  className="w-4 h-4 cursor-pointer flex-shrink-0"
+                                />
+                                <span dir="rtl">{typeSlugToLabel[topic] || topic}</span>
+                              </label>
+                              <table className={`w-full border-collapse text-sm transition-colors ${allSelected ? "bg-green-50" : "bg-white"}`} dir="rtl">
+                                <thead>
+                                  <tr className="bg-gray-100">
+                                    <th className="border border-gray-300 p-2 text-right font-semibold">کالم (الف)</th>
+                                    <th className="border border-gray-300 p-2 text-right font-semibold">کالم (ب)</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  {qs.map((q) => (
+                                    <tr key={q.id}>
+                                      <td className="border border-gray-300 p-2 text-right">{q.text}</td>
+                                      <td className="border border-gray-300 p-2 text-right">{q.urdu}</td>
+                                    </tr>
+                                  ))}
+                                </tbody>
+                              </table>
+                            </>
+                          );
+                        })() : (
+                        <>
                         <div className="bg-[#311b92] text-white text-center py-2 px-4 font-semibold text-sm">
-                          {topic}
+                          {typeSlugToLabel[topic] || topic}
                         </div>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-0">
                           {qs.map((q, idx) => (
@@ -1061,6 +1150,8 @@ const GeneratePaper = () => {
                             </div>
                           ))}
                         </div>
+                        </>
+                        )}
                       </div>
                         );
                       });
@@ -1072,6 +1163,24 @@ const GeneratePaper = () => {
               {/* Green Selected Questions Area */}
               <div className="bg-green-200 border-2 border-green-300 rounded-xl p-4 min-h-[200px]">
                 {selectedQuestions.length > 0 && (
+                  appliedQuestionType === "match_columns" ? (
+                    <table className="w-full border-collapse text-sm bg-white rounded" dir="rtl">
+                      <thead>
+                        <tr className="bg-gray-100">
+                          <th className="border border-gray-300 p-2 text-right font-semibold">کالم (الف)</th>
+                          <th className="border border-gray-300 p-2 text-right font-semibold">کالم (ب)</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {activeQuestions.filter(q => selectedQuestions.includes(q.id)).map((q) => (
+                          <tr key={q.id}>
+                            <td className="border border-gray-300 p-2 text-right">{q.text}</td>
+                            <td className="border border-gray-300 p-2 text-right">{q.urdu}</td>
+                          </tr>
+                        ))}
+                      </tbody>
+                    </table>
+                  ) : (
                   <div className="space-y-2">
                     {activeQuestions.filter(q => selectedQuestions.includes(q.id)).map((q, idx) => (
                       <div key={q.id} className="p-2 bg-white rounded text-sm">
@@ -1085,6 +1194,7 @@ const GeneratePaper = () => {
                       </div>
                     ))}
                   </div>
+                  )
                 )}
               </div>
 
@@ -1230,6 +1340,27 @@ const GeneratePaper = () => {
           {!selectedBoard ? (
             <div className="grid grid-cols-2 sm:grid-cols-2 xl:grid-cols-4 gap-3 sm:gap-5">
               {boardCards.map((board) => (
+                board.comingSoon ? (
+                  <div
+                    key={board.name}
+                    className="group relative overflow-hidden rounded-2xl border border-primary/10 bg-gradient-to-br from-card via-card to-secondary/40 p-4 sm:p-6 text-center min-h-[150px] sm:min-h-[200px] flex flex-col items-center justify-center opacity-70 cursor-not-allowed select-none"
+                  >
+                    <div className={`pointer-events-none absolute inset-x-0 top-0 h-1.5 bg-gradient-to-r ${board.gradient} opacity-40`} />
+                    <div className={`pointer-events-none absolute inset-x-0 bottom-0 h-1.5 bg-gradient-to-r ${board.gradient} opacity-30`} />
+                    <div className={`pointer-events-none absolute -left-8 -bottom-10 h-28 w-28 rounded-full bg-gradient-to-br ${board.gradient} opacity-10 blur-2xl`} />
+                    {/* Coming Soon Badge */}
+                    <div className="absolute top-2 right-2 z-20">
+                      <span className="inline-flex items-center rounded-full bg-amber-500/90 text-white text-[8px] font-bold px-1.5 py-0.5 shadow-sm uppercase tracking-wide">
+                        Coming Soon
+                      </span>
+                    </div>
+                    {/* Blur overlay */}
+                    <div className="absolute inset-0 bg-background/30 backdrop-blur-[1px] rounded-2xl z-10" />
+                    <img src={board.logo} alt={board.label} className="relative z-10 w-16 h-16 sm:w-24 sm:h-24 object-contain mb-3 sm:mb-4 drop-shadow-[0_6px_10px_rgba(0,0,0,0.08)] grayscale-[30%]" />
+                    <p className="relative z-10 text-lg sm:text-2xl font-extrabold text-foreground/60 tracking-wide">{board.label}</p>
+                    <p className="relative z-10 text-sm sm:text-base text-foreground/40 mt-1">{board.subtitle}</p>
+                  </div>
+                ) : (
                 <button
                   key={board.name}
                   type="button"
@@ -1249,11 +1380,29 @@ const GeneratePaper = () => {
                   <p className="relative z-10 text-lg sm:text-2xl font-extrabold text-foreground tracking-wide">{board.label}</p>
                   <p className="relative z-10 text-sm sm:text-base text-foreground/80 mt-1">{board.subtitle}</p>
                 </button>
+                )
               ))}
             </div>
           ) : selectedBoard && !selectedLevel ? (
             <div className="grid grid-cols-2 sm:grid-cols-2 xl:grid-cols-4 gap-3 sm:gap-4">
               {(boardClassMap[selectedBoard] || []).map((card) => (
+                card.comingSoon ? (
+                  <div
+                    key={card.title}
+                    className="relative overflow-hidden rounded-2xl border border-primary/10 bg-gradient-to-br from-card to-secondary/40 px-4 sm:px-5 py-5 sm:py-6 text-center min-h-[90px] sm:min-h-[108px] flex flex-col items-center justify-center opacity-65 cursor-not-allowed select-none"
+                  >
+                    <div className={`pointer-events-none absolute inset-x-0 top-0 h-1.5 bg-gradient-to-r ${card.gradient} opacity-40`} />
+                    <div className={`pointer-events-none absolute inset-x-0 bottom-0 h-1.5 bg-gradient-to-r ${card.gradient} opacity-30`} />
+                    <div className="absolute top-1.5 right-1.5 z-20">
+                      <span className="inline-flex items-center rounded-full bg-amber-500/90 text-white text-[8px] font-bold px-1.5 py-0.5 shadow-sm uppercase tracking-wide">
+                        Coming Soon
+                      </span>
+                    </div>
+                    <div className="absolute inset-0 bg-background/25 backdrop-blur-[1px] rounded-2xl z-10" />
+                    <p className="relative z-10 text-xl sm:text-2xl font-extrabold text-foreground/50 tracking-wide">{card.title}</p>
+                    <p className="relative z-10 text-base sm:text-lg font-medium text-foreground/40 mt-1">{card.board}</p>
+                  </div>
+                ) : (
                 <button
                   key={card.title}
                   type="button"
@@ -1271,6 +1420,7 @@ const GeneratePaper = () => {
                   <p className="relative z-10 text-xl sm:text-2xl font-extrabold text-foreground tracking-wide">{card.title}</p>
                   <p className="relative z-10 text-base sm:text-lg font-medium text-foreground/80 mt-1">{card.board}</p>
                 </button>
+                )
               ))}
             </div>
           ) : selectedLevel && selectedBoard && !selectedSubject && boardSubjectsMap[selectedBoard]?.[selectedLevel] ? (
@@ -1307,50 +1457,72 @@ const GeneratePaper = () => {
                   ) : workspaceSections.map((section, sectionIndex) => {
                     const marksPerQuestion = Number(eachQMarks) || 2;
                     const sectionNumber = sectionIndex + 1;
+                    const sectionLabel = getSectionLabel(section.key);
+                    const showEn = appliedDualMedium !== "urdu";
+                    const showUr = appliedDualMedium !== "english";
                     return (
-                      <div key={section.type} className="border-b border-gray-200 pb-4 last:border-b-0 last:pb-0">
+                      <div key={section.key} className="border-b border-gray-200 pb-4 last:border-b-0 last:pb-0">
                         <div className="flex items-start justify-between gap-6 mb-4">
-                          <p className="text-sm font-bold text-gray-900 flex-1">Q{sectionNumber}. {sectionMeta[section.type].english}</p>
+                          {showEn && <p className="text-sm font-bold text-gray-900 flex-1">Q{sectionNumber}. {sectionLabel.english}</p>}
                           <p className="text-sm font-bold text-gray-900 whitespace-nowrap">
                             {section.questions.length}X{marksPerQuestion}={section.questions.length * marksPerQuestion}
                           </p>
-                          <p className="text-sm font-bold text-gray-900 flex-1 text-right" dir="rtl">سوال نمبر{sectionNumber}۔ {sectionMeta[section.type].urdu}</p>
+                          {showUr && <p className="text-sm font-bold text-gray-900 flex-1 text-right" dir="rtl">سوال نمبر{sectionNumber}۔ {sectionLabel.urdu}</p>}
                         </div>
-                        <div className="space-y-1">
-                          {section.questions.map((q, idx) => (
-                            <div key={q.id} className="flex items-start justify-between gap-4">
-                              {isManualEditing ? (
-                                <>
-                                  <input
-                                    value={editedQuestions[q.id]?.text ?? q.text}
-                                    onChange={(e) => setEditedQuestions(prev => ({ ...prev, [q.id]: { ...prev[q.id] ?? { text: q.text, urdu: q.urdu }, text: e.target.value } }))}
-                                    className="flex-1 text-sm text-gray-800 border border-gray-300 rounded px-2 py-1"
-                                  />
-                                  <input
-                                    dir="rtl"
-                                    value={editedQuestions[q.id]?.urdu ?? q.urdu}
-                                    onChange={(e) => setEditedQuestions(prev => ({ ...prev, [q.id]: { ...prev[q.id] ?? { text: q.text, urdu: q.urdu }, urdu: e.target.value } }))}
-                                    className="flex-1 text-sm text-gray-800 border border-gray-300 rounded px-2 py-1 text-right"
-                                  />
-                                </>
-                              ) : (
-                                <>
-                                  {(() => {
-                                    const qText = editedQuestions[q.id]?.text ?? q.text;
-                                    const qUrdu = editedQuestions[q.id]?.urdu ?? q.urdu;
-                                    const { englishStem, urduStem } = getQuestionStems(qText, qUrdu);
-                                    return (
-                                      <>
-                                        <p className="text-sm text-gray-800">{idx + 1}. {englishStem}</p>
-                                        <p className="text-sm text-gray-800 text-right" dir="rtl">{idx + 1}۔ {urduStem}</p>
-                                      </>
-                                    );
-                                  })()}
-                                </>
-                              )}
-                            </div>
-                          ))}
-                        </div>
+                        {section.key === "match_columns" ? (
+                          <table className="border-collapse text-sm" dir="rtl" style={{ width: "auto", minWidth: "40%", maxWidth: "70%" }}>
+                            <thead>
+                              <tr>
+                                <th className="border border-gray-300 p-2 text-right bg-gray-50 font-semibold">کالم (الف)</th>
+                                <th className="border border-gray-300 p-2 text-right bg-gray-50 font-semibold">کالم (ب)</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              {section.questions.map((q) => (
+                                <tr key={q.id}>
+                                  <td className="border border-gray-300 p-2 text-right">{editedQuestions[q.id]?.text ?? q.text}</td>
+                                  <td className="border border-gray-300 p-2 text-right">{editedQuestions[q.id]?.urdu ?? q.urdu}</td>
+                                </tr>
+                              ))}
+                            </tbody>
+                          </table>
+                        ) : (
+                          <div className="space-y-1">
+                            {section.questions.map((q, idx) => (
+                              <div key={q.id} className="flex items-start justify-between gap-4">
+                                {isManualEditing ? (
+                                  <>
+                                    {showEn && <input
+                                      value={editedQuestions[q.id]?.text ?? q.text}
+                                      onChange={(e) => setEditedQuestions(prev => ({ ...prev, [q.id]: { ...prev[q.id] ?? { text: q.text, urdu: q.urdu }, text: e.target.value } }))}
+                                      className="flex-1 text-sm text-gray-800 border border-gray-300 rounded px-2 py-1"
+                                    />}
+                                    {showUr && <input
+                                      dir="rtl"
+                                      value={editedQuestions[q.id]?.urdu ?? q.urdu}
+                                      onChange={(e) => setEditedQuestions(prev => ({ ...prev, [q.id]: { ...prev[q.id] ?? { text: q.text, urdu: q.urdu }, urdu: e.target.value } }))}
+                                      className="flex-1 text-sm text-gray-800 border border-gray-300 rounded px-2 py-1 text-right"
+                                    />}
+                                  </>
+                                ) : (
+                                  <>
+                                    {(() => {
+                                      const qText = editedQuestions[q.id]?.text ?? q.text;
+                                      const qUrdu = editedQuestions[q.id]?.urdu ?? q.urdu;
+                                      const { englishStem, urduStem } = getQuestionStems(qText, qUrdu);
+                                      return (
+                                        <>
+                                          {showEn && <p className="text-sm text-gray-800">{idx + 1}. {englishStem}</p>}
+                                          {showUr && <p className="text-sm text-gray-800 text-right" dir="rtl">{idx + 1}۔ {urduStem}</p>}
+                                        </>
+                                      );
+                                    })()}
+                                  </>
+                                )}
+                              </div>
+                            ))}
+                          </div>
+                        )}
                       </div>
                     );
                   })}
@@ -1412,7 +1584,7 @@ const GeneratePaper = () => {
                       </label>
 
                       <div className="space-y-2 ml-7">
-                        {group.chapters.map((chapter, chIdx) => (
+                        {group.chapters.filter(ch => ch !== group.name).map((chapter, chIdx) => (
                           <label key={chIdx} className="flex items-center gap-2.5 cursor-pointer">
                             <input
                               type="checkbox"

@@ -176,10 +176,13 @@ export const normalizeQuestionTypeValue = (value: string): string | null => {
     "comprehension_paragraph",
     "ilfaz_ko_jumlo_mein_istamal",
     "words_meanings",
+    "ilfaz_maani",
     "farsi_tarjuma",
     "ayaat",
     "hadith",
+    "ahadees",
     "shakhsiyat",
+    "shakhsiyaat",
     "darkhaastein",
     "questions_answers",
     "translate_into_urdu_paragraph",
@@ -188,15 +191,22 @@ export const normalizeQuestionTypeValue = (value: string): string | null => {
     "markazi_khayal",
     "paragraph_ki_tashreeh",
     "ashaar_ki_tashreeh",
+    "ashar_ki_tashreeh",
     "correct_meaning_underlined",
+    "correct_meaning_of_underline_word",
     "tick_correct_spelling",
     "tick_correct_spellings",
     "tick_correct_grammar",
+    "tick_correct_form_of_verb",
+    "tick_correct_according_to_grammer",
+    "active_and_passive_voice",
     "match_columns",
     "essays",
     "translate_into_urdu_sentences",
     "wahid_jama",
+    "muzakir_monas",
     "jumlo_ki_darustagi",
+    "jumlo_ki_takmeel",
     "direct_and_indirect",
     "homophones",
     "true_false_statements",
@@ -211,8 +221,19 @@ export const normalizeQuestionTypeValue = (value: string): string | null => {
     "punctuate_the_paragraph",
     "ilfaz_mutaradif",
     "ilfaz_mutazad",
+    "araab_lagaein",
+    "khali_jaga_pur_karein",
+    "ideoms",
+    "pair_of_words",
+    "mukalmy",
+    "tafheem_ibarat",
   ]);
-  return allowedValues.has(normalized) ? normalized : null;
+  // normalizeQuestionTypeString converts underscores to spaces, so DB slugs like
+  // "ilfaz_ko_jumlo_mein_istamal" become "ilfaz ko jumlo mein istamal" — not in set.
+  // Convert back to underscores before the set lookup to handle these cases.
+  if (allowedValues.has(normalized)) return normalized;
+  const withUnderscores = normalized.replace(/ /g, "_");
+  return allowedValues.has(withUnderscores) ? withUnderscores : null;
 };
 
 const questionBankCache = new Map<string, PaperQuestion[]>();

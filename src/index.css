@@ -83,12 +83,12 @@
 
   .pts-hero-circle {
     background: var(--pts-hero-bg);
+  }
 }
 
-/* Urdu / Arabic text styling */
+/* Urdu / Arabic text styling — outside @layer so specificity always wins */
 [dir="rtl"], .font-urdu {
   font-family: 'Noto Nastaliq Urdu', 'Jameel Noori Nastaleeq', serif;
-}
 }
 
 @page {

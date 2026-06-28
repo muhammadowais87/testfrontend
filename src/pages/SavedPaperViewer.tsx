@@ -35,6 +35,7 @@ const SavedPaperViewer = () => {
   const [englishFontFamily, setEnglishFontFamily] = useState("Poppins");
   const [urduFontFamily, setUrduFontFamily] = useState("Noto Nastaliq Urdu");
   const [titleFontFamily, setTitleFontFamily] = useState("Times New Roman");
+  const [paperMedium, setPaperMedium] = useState<string | null>(null);
   const [printExamSyllabus, setPrintExamSyllabus] = useState(true);
   const [printBubbleSheet, setPrintBubbleSheet] = useState(false);
   const [printAnswerKeys, setPrintAnswerKeys] = useState(false);
@@ -67,7 +68,7 @@ const SavedPaperViewer = () => {
     phase: "",
     testDetails: "",
   });
-  const [editableQuestions, setEditableQuestions] = useState<Array<{ id: number; text: string; urdu: string; contentType?: "mcq" | "short" | "long" }>>([]);
+  const [editableQuestions, setEditableQuestions] = useState<Array<{ id: number; text: string; urdu: string; contentType?: "mcq" | "short" | "long"; chapterPart?: string | null }>>([]);
   const [mobilePreviewZoom, setMobilePreviewZoom] = useState(1);
 
   const handlePrintPaper = useCallback(() => {
@@ -175,9 +176,11 @@ const SavedPaperViewer = () => {
           id: q.id,
           text: q.text,
           urdu: q.urdu,
-          contentType: q.contentType,
+            contentType: q.contentType,
+          chapterPart: q.chapterPart ?? null,
         }))
       );
+      if (latestPaper?.medium) setPaperMedium(latestPaper.medium);
     };
 
     loadPaper();
@@ -365,29 +368,108 @@ const SavedPaperViewer = () => {
     return keys[Math.abs(questionId) % keys.length];
   };
 
+  const specialSlugLabelMap: Record<string, { title: string; urduTitle: string }> = {
+    fill_in_tha_blanks: { title: "Fill in the Blanks.", urduTitle: "خالی جگہ پر کریں۔" },
+    khali_jaga_pur_karein: { title: "Fill in the Blanks.", urduTitle: "خالی جگہ پُر کریں۔" },
+    true_false_statements: { title: "Write True or False.", urduTitle: "صحیح یا غلط لکھیں۔" },
+    match_columns: { title: "Match the Columns.", urduTitle: "کالم ملائیں۔" },
+    essays: { title: "Essay Writing.", urduTitle: "مضمون نویسی۔" },
+    summary: { title: "Write Summary.", urduTitle: "خلاصہ لکھیں۔" },
+    ashaar_ki_tashreeh: { title: "Explanation of Verses.", urduTitle: "اشعار کی تشریح۔" },
+    ashar_ki_tashreeh: { title: "Explanation of Verses.", urduTitle: "اشعار کی تشریح۔" },
+    poem_stanzas: { title: "Poem Stanzas.", urduTitle: "نظم کے بند۔" },
+    wahid_jama: { title: "Singular / Plural.", urduTitle: "واحد / جمع۔" },
+    muzakir_monas: { title: "Masculine / Feminine.", urduTitle: "مذکر / مونث۔" },
+    jumlo_ki_darustagi: { title: "Correction of Sentences.", urduTitle: "جملوں کی درستگی۔" },
+    jumlo_ki_takmeel: { title: "Completion of Sentences.", urduTitle: "جملوں کی تکمیل۔" },
+    ilfaz_mutaradif: { title: "Synonyms.", urduTitle: "الفاظ مترادف۔" },
+    ilfaz_mutazad: { title: "Antonyms.", urduTitle: "الفاظ متضاد۔" },
+    ilfaz_maani: { title: "Words Meanings.", urduTitle: "الفاظ و معنی۔" },
+    words_meanings: { title: "Words Meanings.", urduTitle: "الفاظ و معنی۔" },
+    words_into_sentences: { title: "Use Words in Sentences.", urduTitle: "الفاظ کا جملوں میں استعمال۔" },
+    ilfaz_ko_jumlo_mein_istamal: { title: "Idioms in Sentences.", urduTitle: "محاورات / الفاظ کا جملوں میں استعمال۔" },
+    direct_and_indirect: { title: "Direct & Indirect.", urduTitle: "بلاواسطہ اور بالواسطہ۔" },
+    homophones: { title: "Homophones.", urduTitle: "ہم آواز الفاظ۔" },
+    genders: { title: "Genders.", urduTitle: "مذکر / مونث۔" },
+    zarb_ul_imsal: { title: "Zarb ul Imsal.", urduTitle: "ضرب الامثال۔" },
+    zarb_ul_misaal: { title: "Zarb ul Misaal.", urduTitle: "ضرب المثال۔" },
+    missing_letters: { title: "Missing Letters.", urduTitle: "خالی حروف۔" },
+    sabqe_lahqe: { title: "Sabqe Lahqe.", urduTitle: "سابقے لاحقے۔" },
+    pointing: { title: "Pointing.", urduTitle: "اشارہ۔" },
+    punctuate_the_paragraph: { title: "Punctuate the Paragraph.", urduTitle: "رموزِ اوقاف۔" },
+    translate_into_urdu_sentences: { title: "Translate into Urdu Sentences.", urduTitle: "جملوں کا ترجمہ۔" },
+    translate_into_urdu_paragraph: { title: "Translate into Urdu.", urduTitle: "اردو میں ترجمہ۔" },
+    tick_correct_spellings: { title: "Tick Correct Spellings.", urduTitle: "درست ہجے کا انتخاب کریں۔" },
+    grammar: { title: "Grammar.", urduTitle: "گرائمر۔" },
+    ideoms: { title: "Idioms.", urduTitle: "محاورات۔" },
+    araab_lagaein: { title: "Put Araab.", urduTitle: "اعراب لگائیں۔" },
+    letters: { title: "Letters.", urduTitle: "خطوط۔" },
+    stories: { title: "Stories.", urduTitle: "کہانیاں۔" },
+    dialoges: { title: "Dialogues.", urduTitle: "مکالمے۔" },
+    mukalmy: { title: "Dialogues.", urduTitle: "مکالمے۔" },
+    darkhaastein: { title: "Applications.", urduTitle: "درخواستیں۔" },
+    writing_paragraphs: { title: "Writing Paragraphs.", urduTitle: "پیراگراف نویسی۔" },
+    comprehension_paragraph: { title: "Comprehension Paragraph.", urduTitle: "تفہیمی پیرا گراف۔" },
+    tafheem_ibarat: { title: "Comprehension of Passage.", urduTitle: "تفہیم عبارت۔" },
+    paragraph_ki_tashreeh: { title: "Explanation of Paragraph.", urduTitle: "پیراگراف کی تشریح۔" },
+    markazi_khayal: { title: "Central Idea.", urduTitle: "مرکزی خیال۔" },
+    farsi_tarjuma: { title: "Translation.", urduTitle: "ترجمہ۔" },
+    questions_answers: { title: "Questions & Answers.", urduTitle: "سوالات و جوابات۔" },
+    shakhsiyat: { title: "Personalities.", urduTitle: "شخصیات۔" },
+    shakhsiyaat: { title: "Personalities.", urduTitle: "شخصیات۔" },
+    ayaat: { title: "Ayat.", urduTitle: "آیاتِ مبارکہ۔" },
+    hadith: { title: "Hadith.", urduTitle: "حدیث مبارکہ۔" },
+    ahadees: { title: "Ahadees.", urduTitle: "احادیث مبارکہ۔" },
+  };
+
+  const isSpecialSlugKey = (cp: string | null | undefined) => !!cp && /^[a-z_]+$/.test(cp);
+
+  const getSpecialSectionLabel = (key: string) => specialSlugLabelMap[key] ?? { title: key, urduTitle: key };
+
   const sectionedQuestions = useMemo(() => {
     const all = editableQuestions;
-    const mcq = all.filter((q) => classifyQuestionType(q.id, q.text, q.contentType) === "mcq");
-    const short = all.filter((q) => classifyQuestionType(q.id, q.text, q.contentType) === "short");
-    const long = all.filter((q) => classifyQuestionType(q.id, q.text, q.contentType) === "long");
-
     const total = Number(paperFields.totalMarks || paper?.totalMarks || 0);
     const totalCount = all.length;
     const marksPerQuestion = total > 0 && totalCount > 0 ? Math.max(1, Math.round(total / totalCount)) : 2;
 
-    const sections = [
-      { key: "mcq", title: "Choose the correct answer.", urduTitle: "درست جواب منتخب کریں۔", questions: mcq },
-      { key: "short", title: "Write short answers of the following questions.", urduTitle: "مندرجہ ذیل سوالات کے مختصر جوابات تحریر کریں۔", questions: short },
-      { key: "long", title: "Write the answers of following questions.", urduTitle: "مندرجہ ذیل سوالات کے جوابات تحریر کریں۔", questions: long },
-    ].filter((section) => section.questions.length > 0);
+    const sectionMap = new Map<string, typeof all>();
+    all.forEach((q) => {
+      const key = isSpecialSlugKey(q.chapterPart) ? q.chapterPart! : classifyQuestionType(q.id, q.text, q.contentType);
+      if (!sectionMap.has(key)) sectionMap.set(key, []);
+      sectionMap.get(key)!.push(q);
+    });
 
-    return { sections, marksPerQuestion };
+    const standardMeta: Record<string, { title: string; urduTitle: string }> = {
+      mcq: { title: "Choose the correct answer.", urduTitle: "درست جواب منتخب کریں۔" },
+      short: { title: "Write short answers of the following questions.", urduTitle: "مندرجہ ذیل سوالات کے مختصر جوابات تحریر کریں۔" },
+      long: { title: "Write the answers of following questions.", urduTitle: "مندرجہ ذیل سوالات کے جوابات تحریر کریں۔" },
+    };
+
+    const standardOrder = ["mcq", "short", "long"];
+    const sections: { key: string; title: string; urduTitle: string; questions: typeof all }[] = [];
+    standardOrder.forEach((t) => {
+      if (sectionMap.has(t)) {
+        sections.push({ key: t, ...standardMeta[t], questions: sectionMap.get(t)! });
+      }
+    });
+    sectionMap.forEach((questions, key) => {
+      if (!standardOrder.includes(key)) {
+        const label = getSpecialSectionLabel(key);
+        sections.push({ key, ...label, questions });
+      }
+    });
+
+    return { sections: sections.filter((s) => s.questions.length > 0), marksPerQuestion };
   }, [editableQuestions, paper?.totalMarks, paperFields.totalMarks]);
 
   const totalQuestionCount = useMemo(
     () => sectionedQuestions.sections.reduce((sum, section) => sum + section.questions.length, 0),
     [sectionedQuestions.sections]
   );
+
+  const effectiveMedium = paperMedium ?? paper?.medium ?? "dual";
+  const showEn = effectiveMedium !== "urdu";
+  const showUr = effectiveMedium !== "english";
 
   const resolvedLineHeight = Number(lineHeight) > 0 ? Number(lineHeight) : 1.28;
   const resolvedUrduFontSize = Number(urduFontSize) > 0 ? Number(urduFontSize) : 12;
@@ -513,6 +595,15 @@ const SavedPaperViewer = () => {
             <input type="checkbox" checked={tickAnswers} onChange={(e) => setTickAnswers(e.target.checked)} className="h-4 w-4 rounded-sm border border-slate-300 accent-blue-600" />
             Tick Answers
           </label>
+          <select
+            value={effectiveMedium}
+            onChange={(e) => setPaperMedium(e.target.value)}
+            className="inline-flex h-7 min-w-[90px] items-center rounded-sm border border-slate-300 bg-white px-2 text-[10px] text-slate-900"
+          >
+            <option value="dual">Dual</option>
+            <option value="english">English</option>
+            <option value="urdu">Urdu</option>
+          </select>
           <button type="button" onClick={() => setShowFontStylesMenu((prev) => !prev)} className="inline-flex h-7 min-w-[114px] items-center justify-center gap-1 rounded-sm border border-slate-300 bg-white px-2 text-[10px] font-medium text-slate-900">
             FONT STYLES <ChevronDown className="h-4 w-4" />
           </button>
@@ -1324,10 +1415,12 @@ const SavedPaperViewer = () => {
               <div className="saved-paper-sections mt-5 print:mt-3 space-y-6 print:space-y-3" style={{ lineHeight: resolvedLineHeight }}>
                 {sectionedQuestions.sections.map((section, sectionIndex) => (
                   <section key={section.key} className="saved-paper-section" style={{ breakInside: "avoid" }}>
-                    <div className="mb-1 print:mb-1 grid grid-cols-[1fr_auto_1fr] items-start gap-3">
-                      <h2 className="font-bold text-left text-slate-900" style={{ fontSize: `${resolvedEnglishFontSize + 1}px`, fontFamily: englishFontFamily }}>
-                        {`Q${sectionIndex + 1}. ${section.title}`}
-                      </h2>
+                    <div className="mb-1 print:mb-1 grid items-start gap-3" style={{ gridTemplateColumns: showEn && showUr ? "1fr auto 1fr" : showEn ? "1fr auto" : "auto 1fr" }}>
+                      {showEn && (
+                        <h2 className="font-bold text-left text-slate-900" style={{ fontSize: `${resolvedEnglishFontSize + 1}px`, fontFamily: englishFontFamily }}>
+                          {`Q${sectionIndex + 1}. ${section.title}`}
+                        </h2>
+                      )}
                       {manualEditing ? (
                         <input
                           type="text"
@@ -1341,11 +1434,61 @@ const SavedPaperViewer = () => {
                           {sectionMarksOverrides[section.key] || `${section.questions.length}X${sectionedQuestions.marksPerQuestion}=${section.questions.length * sectionedQuestions.marksPerQuestion}`}
                         </span>
                       )}
-                      <p className="text-right font-bold text-slate-900" dir="rtl" style={{ fontSize: `${resolvedUrduFontSize}px`, fontFamily: urduFontFamily }}>
-                        {`سوال نمبر${sectionIndex + 1}۔ ${section.urduTitle}`}
-                      </p>
+                      {showUr && (
+                        <p className="text-right font-bold text-slate-900" dir="rtl" style={{ fontSize: `${resolvedUrduFontSize}px`, fontFamily: urduFontFamily }}>
+                          {`سوال نمبر${sectionIndex + 1}۔ ${section.urduTitle}`}
+                        </p>
+                      )}
                     </div>
 
+                    {section.key === "match_columns" ? (
+                      <table className="border-collapse" dir="rtl" style={{ breakInside: "avoid", width: "auto", minWidth: "40%", maxWidth: "70%" }}>
+                        <thead>
+                          <tr>
+                            <th className="border border-slate-400 p-2 text-right font-bold"
+                                style={{ fontSize: `${resolvedUrduFontSize}px`, color: resolvedTextColor, fontWeight: resolvedFontWeight, fontFamily: urduFontFamily }}>
+                              کالم (الف)
+                            </th>
+                            <th className="border border-slate-400 p-2 text-right font-bold"
+                                style={{ fontSize: `${resolvedUrduFontSize}px`, color: resolvedTextColor, fontWeight: resolvedFontWeight, fontFamily: urduFontFamily }}>
+                              کالم (ب)
+                            </th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          {section.questions.map((question) => (
+                            <tr key={question.id}>
+                              <td className="border border-slate-300 p-2 text-right"
+                                  style={{ fontSize: `${resolvedUrduFontSize}px`, color: resolvedTextColor, fontFamily: urduFontFamily }}>
+                                {manualEditing ? (
+                                  <textarea
+                                    value={question.text}
+                                    onChange={(e) => { const value = e.target.value; setEditableQuestions((prev) => prev.map((q) => (q.id === question.id ? { ...q, text: value } : q))); }}
+                                    className="w-full resize-y rounded border border-slate-300 px-2 py-1 text-right"
+                                    rows={1}
+                                    dir="rtl"
+                                    style={{ fontSize: `${resolvedUrduFontSize}px`, color: resolvedTextColor, fontFamily: urduFontFamily }}
+                                  />
+                                ) : question.text}
+                              </td>
+                              <td className="border border-slate-300 p-2 text-right"
+                                  style={{ fontSize: `${resolvedUrduFontSize}px`, color: resolvedTextColor, fontFamily: urduFontFamily }}>
+                                {manualEditing ? (
+                                  <textarea
+                                    value={question.urdu}
+                                    onChange={(e) => { const value = e.target.value; setEditableQuestions((prev) => prev.map((q) => (q.id === question.id ? { ...q, urdu: value } : q))); }}
+                                    className="w-full resize-y rounded border border-slate-300 px-2 py-1 text-right"
+                                    rows={1}
+                                    dir="rtl"
+                                    style={{ fontSize: `${resolvedUrduFontSize}px`, color: resolvedTextColor, fontFamily: urduFontFamily }}
+                                  />
+                                ) : question.urdu}
+                              </td>
+                            </tr>
+                          ))}
+                        </tbody>
+                      </table>
+                    ) : (
                     <div className="space-y-2 print:space-y-1.5">
                       {section.questions.map((question, index) => {
                         const { englishStem, urduStem, parsedText, parsedUrdu } = getQuestionStems(question.text, question.urdu || "");
@@ -1357,8 +1500,8 @@ const SavedPaperViewer = () => {
 
                         return (
                           <div key={question.id} className={`saved-paper-question pb-2 print:pb-1.5 ${questionBorderClass} ${questionBorderClass ? "px-2 py-1" : ""}`} style={{ breakInside: "avoid" }}>
-                            <div className="grid grid-cols-2 gap-4 items-start">
-                              {manualEditing ? (
+                            <div className={`grid gap-4 items-start ${showEn && showUr ? "grid-cols-2" : "grid-cols-1"}`}>
+                              {showEn && (manualEditing ? (
                                 <textarea
                                   value={question.text}
                                   onChange={(e) => {
@@ -1373,9 +1516,9 @@ const SavedPaperViewer = () => {
                                 <div className="text-slate-900" style={{ fontSize: `${resolvedEnglishFontSize}px`, color: resolvedTextColor, fontWeight: resolvedFontWeight, fontFamily: englishFontFamily }}>
                                   {`${index + 1}. ${englishStem}`}
                                 </div>
-                              )}
+                              ))}
 
-                              {manualEditing ? (
+                              {showUr && (manualEditing ? (
                                 <textarea
                                   value={question.urdu}
                                   onChange={(e) => {
@@ -1387,13 +1530,19 @@ const SavedPaperViewer = () => {
                                   dir="rtl"
                                   style={{ fontSize: `${resolvedUrduFontSize}px`, color: resolvedTextColor, fontWeight: resolvedFontWeight, fontFamily: urduFontFamily }}
                                 />
-                              ) : question.urdu && showUrduQuestion ? (
-                                <div className="text-right text-slate-900" dir="rtl" style={{ fontSize: `${resolvedUrduFontSize}px`, color: resolvedTextColor, fontWeight: resolvedFontWeight, fontFamily: urduFontFamily }}>
-                                  {`${index + 1}۔ ${cleanUrduStem(urduStem)}`}
-                                </div>
+                              ) : showEn ? (
+                                // Dual mode: only show urdu side when content differs from english
+                                question.urdu && showUrduQuestion ? (
+                                  <div className="text-right text-slate-900" dir="rtl" style={{ fontSize: `${resolvedUrduFontSize}px`, color: resolvedTextColor, fontWeight: resolvedFontWeight, fontFamily: urduFontFamily }}>
+                                    {`${index + 1}۔ ${cleanUrduStem(urduStem)}`}
+                                  </div>
+                                ) : <div />
                               ) : (
-                                <div />
-                              )}
+                                // Urdu-only mode: always show content, fallback to englishStem if no urdu
+                                <div className="text-right text-slate-900" dir="rtl" style={{ fontSize: `${resolvedUrduFontSize}px`, color: resolvedTextColor, fontWeight: resolvedFontWeight, fontFamily: urduFontFamily }}>
+                                  {`${index + 1}۔ ${cleanUrduStem(urduStem || englishStem)}`}
+                                </div>
+                              ))}
                             </div>
 
                             {isMcq && optionKeys.length > 0 && (
@@ -1403,6 +1552,13 @@ const SavedPaperViewer = () => {
                                   const enOption = merged?.english || merged?.urdu || "";
                                   const urOption = merged?.urdu || merged?.english || "";
                                   const showUrduOption = urOption.trim() !== enOption.trim();
+                                  if (!showEn && showUr) {
+                                    return (
+                                      <div key={`${question.id}-opt-${key}`} className="flex items-baseline justify-end gap-1 text-slate-900" dir="rtl" style={{ fontSize: `${resolvedUrduFontSize}px`, color: resolvedTextColor, fontWeight: resolvedFontWeight, fontFamily: urduFontFamily }}>
+                                        <span>{tickAnswers && answerKey === key ? "✓ " : ""}({key}) {urOption}</span>
+                                      </div>
+                                    );
+                                  }
                                   return (
                                     <div key={`${question.id}-opt-${key}`} className="flex items-baseline gap-1 text-slate-900" style={{ fontSize: `${resolvedEnglishFontSize}px`, color: resolvedTextColor, fontWeight: resolvedFontWeight, fontFamily: englishFontFamily }}>
                                       <span dir="ltr">
@@ -1424,6 +1580,7 @@ const SavedPaperViewer = () => {
                         );
                       })}
                     </div>
+                    )}
                   </section>
                 ))}
 
