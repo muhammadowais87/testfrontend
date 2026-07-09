@@ -3,13 +3,14 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Menu, X, Home, Key, Settings, LogOut, CreditCard, ChevronLeft, List, PencilLine, Save, Printer, Shuffle, Trash2 } from "lucide-react";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
 import {
-  boardClassMap, boardCards, boardSubjectsMap, getChaptersForSubject, type ChapterGroup,
+  afaqCards, boardClassMap, boardCards, boardSubjectsMap, getChaptersForSubject, type ChapterGroup,
 } from "@/data/subjectData";
 import { getNineTopicChapters } from "@/data/nineTopicChapters";
 import { getOneToEightChapters } from "@/data/oneToEightChapters";
 import { getAvailableQuestionTypesForTopics } from "@/data/topicQuestionTypes";
 import SubjectButton from "@/components/SubjectButton";
 import DualMediumQuestion from "@/components/DualMediumQuestion";
+import MathText, { getEnglishOnlyTokens } from "@/components/MathText";
 import { getQuestionStems } from "@/lib/questionDisplay";
 import { useIsMobile } from "@/hooks/use-mobile";
 import { addSavedPaper, getSavedPaperById, type SavedPaperRecord } from "@/lib/savedPapers";
@@ -81,6 +82,7 @@ const allPossibleQuestionTypeOptions: QuestionTypeOption[] = [
   // Translation
   { value: "farsi_tarjuma", label: "Translation (ترجمہ)" },
   { value: "translate_into_urdu_paragraph", label: "Translate into Urdu Paragraph (اردو میں ترجمہ)" },
+  { value: "translate_into_english_paragraphs", label: "Translate into English Paragraphs (انگریزی میں ترجمہ)" },
   // Q&A
   { value: "questions_answers", label: "Questions & Answers (سوالات و جوابات)" },
   // Classes 1-8 specific types
@@ -101,6 +103,13 @@ const allPossibleQuestionTypeOptions: QuestionTypeOption[] = [
   { value: "ahadees", label: "Ahadees (احادیث مبارکہ)" },
   { value: "shakhsiyat", label: "Personalities (شخصیات)" },
   { value: "shakhsiyaat", label: "Personalities / Shakhsiyaat (شخصیات)" },
+  // 1st year Urdu specific types
+  { value: "takhlees_ibarat", label: "Takhlees Ibarat / Summary of Passage (تلخیص عبارت)" },
+  { value: "history", label: "Reports / Essays (رداد و مضامین)" },
+  { value: "receipt", label: "Receipts (رسیدیں)" },
+  { value: "newsletters", label: "Newsletters / Diaries (روزنامچے)" },
+  // 1st year English specific types
+  { value: "tick_correct_synonyms", label: "Tick Correct Synonyms (درست مترادف کا انتخاب)" },
 ];
 
 const defaultQuestionTypeOptions: QuestionTypeOption[] = [
@@ -116,7 +125,7 @@ const english10thQuestionTypeOptions: QuestionTypeOption[] = [
   { value: "translate_urdu_paragraph", label: "translate into urdu paragraph" },
 ];
 type WorkspaceQuestionType = "mcq" | "short" | "long";
-type EditedQuestion = { text: string; urdu: string; contentType?: WorkspaceQuestionType };
+type EditedQuestion = { text: string; urdu: string; contentType?: WorkspaceQuestionType; chapterPart?: string | null };
 const inferContentType = (id: number, text: string): WorkspaceQuestionType => {
   const normalized = Math.abs(id) % 100000;
   if (normalized >= 10000 && normalized < 20000) return "mcq";
@@ -150,6 +159,7 @@ const getProfessionalQuestionTypeLabel = (value: string, fallbackLabel: string):
     dialoges: "Dialogues (مکالمے)",
     translate_into_urdu_paragraph: "Translate into Urdu Paragraph (اردو میں ترجمہ)",
     translate_urdu_paragraph: "Translate into Urdu Paragraph (اردو میں ترجمہ)",
+    translate_into_english_paragraphs: "Translate into English Paragraphs (انگریزی میں ترجمہ)",
     comprehension_paragraph: "Comprehension Paragraph (تفہیمی پیرا گراف)",
     poem_stanzas: "Poem Stanzas (نظم کے بند)",
     ideoms: "Idioms (محاورات)",
@@ -193,6 +203,10 @@ const getProfessionalQuestionTypeLabel = (value: string, fallbackLabel: string):
     translate_into_urdu_sentences: "Translate into Urdu Sentences (جملوں کا ترجمہ)",
     zarb_ul_imsal: "Zarb ul Imsal (ضرب الامثال)",
     zarb_ul_misaal: "Zarb ul Misaal (ضرب المثال)",
+    takhlees_ibarat: "Takhlees Ibarat / Summary of Passage (تلخیص عبارت)",
+    history: "Reports / Essays (رداد و مضامین)",
+    receipt: "Receipts (رسیدیں)",
+    newsletters: "Newsletters / Diaries (روزنامچے)",
   };
 
   return labelMap[normalizedValue] || fallbackLabel;
@@ -259,12 +273,27 @@ const GeneratePaper = () => {
       return fromTopicsFile;
     }
 
-    return dbChapterGroups ?? getChaptersForSubject(selectedSubject, selectedLevel, selectedBoard);
+    const staticFallback = getChaptersForSubject(selectedSubject, selectedLevel, selectedBoard);
+    if (dbChapterGroups && staticFallback && dbChapterGroups.length < staticFallback.length) {
+      const dbNames = new Set(dbChapterGroups.map(g => g.name));
+      const missing = staticFallback.filter(g => !dbNames.has(g.name));
+      if (missing.length > 0) {
+        return [...dbChapterGroups, ...missing];
+      }
+    }
+    return dbChapterGroups ?? staticFallback;
   }, [dbChapterGroups, selectedBoard, selectedLevel, selectedSubject]);
 
   const questionTypeOptions = useMemo(() => {
     const groupNameSet = new Set(chapterGroups.map((g) => g.name));
-    const chapterNamesOnly = selectedChapters.filter((ch) => !groupNameSet.has(ch));
+    const chapterNamesOnly = [...new Set(selectedChapters)].filter((ch) => {
+      if (!groupNameSet.has(ch)) return true;
+      const group = chapterGroups.find((g) => g.name === ch);
+      // Keep groups with 0 chapters (standalone topic like "Comprehension & Precis")
+      // or groups where the single chapter equals the group name
+      return group && (group.chapters.length === 0 ||
+        (group.chapters.length === 1 && group.chapters[0] === ch));
+    });
     const topicTypes = getAvailableQuestionTypesForTopics(
       selectedSubject ?? "",
       chapterNamesOnly,
@@ -282,10 +311,10 @@ const GeneratePaper = () => {
 
     // Determine allowed types with priority: report topic types > DB available types > none.
     let allowedSet: Set<string> | null = null;
-    if (topicTypes && topicTypes.length > 0) {
-      allowedSet = new Set(topicTypes);
-    } else if (availableDbTypes && availableDbTypes.length > 0) {
+    if (availableDbTypes && availableDbTypes.length > 0) {
       allowedSet = new Set(availableDbTypes);
+    } else if (topicTypes && topicTypes.length > 0) {
+      allowedSet = new Set(topicTypes);
     }
 
     if (allowedSet) {
@@ -321,15 +350,24 @@ const GeneratePaper = () => {
   const activeQuestions = useMemo(() => {
     let filtered = allQuestions;
 
-    // Special-type slugs are [a-z_]+ only (English lowercase + underscores).
-    // Topic names are Urdu text or decimal IDs — never pure [a-z_]+.
     // When user picks a basic type (mcq/short/long), exclude questions that
-    // belong to a dedicated special section (summary, essays, ashaar, etc.).
-    const isSpecialSlug = (cp: string | null) => !!cp && /^[a-z_]+$/.test(cp);
+    // belong to a dedicated composition section (summary, essays, ashaar, etc.)
+    // so they don't appear in both the basic view and their dedicated type view.
+    const COMPOSITION_TYPES = new Set([
+      "summary", "essays", "letters", "stories", "dialoges", "mukalmy",
+      "darkhaastein", "applications", "appliations", "writing_paragraphs",
+      "comprehension_paragraph", "tafheem_ibarat",
+      "ashaar_ki_tashreeh", "ashar_ki_tashreeh", "paragraph_ki_tashreeh",
+      "poem_stanzas", "markazi_khayal", "takhlees_ibarat",
+      "history", "receipt", "newsletters", "farsi_tarjuma",
+      "translate_into_urdu_paragraph", "translate_into_urdu_sentences",
+      "ayaat", "hadith", "ahadees", "shakhsiyat", "shakhsiyaat",
+    ]);
+    const isCompositionType = (cp: string | null) => !!cp && COMPOSITION_TYPES.has(cp);
 
-    if (appliedQuestionType === "mcq") filtered = filtered.filter((q) => q.contentType === "mcq" && !isSpecialSlug(q.chapterPart));
-    if (appliedQuestionType === "short") filtered = filtered.filter((q) => q.contentType === "short" && !isSpecialSlug(q.chapterPart));
-    if (appliedQuestionType === "long") filtered = filtered.filter((q) => q.contentType === "long" && !isSpecialSlug(q.chapterPart));
+    if (appliedQuestionType === "mcq") filtered = filtered.filter((q) => q.contentType === "mcq" && !isCompositionType(q.chapterPart));
+    if (appliedQuestionType === "short") filtered = filtered.filter((q) => q.contentType === "short" && !isCompositionType(q.chapterPart));
+    if (appliedQuestionType === "long") filtered = filtered.filter((q) => q.contentType === "long" && !isCompositionType(q.chapterPart));
     if (appliedQuestionType && !["mcq", "short", "long"].includes(appliedQuestionType)) {
       filtered = filtered.filter((q) => q.chapterPart === appliedQuestionType);
     }
@@ -359,10 +397,16 @@ const GeneratePaper = () => {
     activeQuestions.forEach(q => {
       let key: string;
       if (isSpecialType && chapterGroups.length > 0) {
-        const group = chapterGroups[q.chapter - 1];
-        key = group?.chapters?.[0] || group?.name || `Chapter ${q.chapter}`;
+        if (q.topicName) {
+          key = q.topicName;
+        } else if (appliedQuestionType) {
+          key = typeSlugToLabel[appliedQuestionType] || q.chapterPart || `Chapter ${q.chapter}`;
+        } else {
+          const group = chapterGroups[q.chapter - 1];
+          key = group?.chapters?.[0] || group?.name || `Chapter ${q.chapter}`;
+        }
       } else {
-        key = q.chapterPart || `Chapter ${q.chapter}`;
+        key = q.topicName || q.chapterPart || `Chapter ${q.chapter}`;
       }
       if (!groups[key]) groups[key] = [];
       groups[key].push(q);
@@ -411,7 +455,7 @@ const GeneratePaper = () => {
           text: edited.text,
           urdu: edited.urdu,
           contentType: edited.contentType || inferContentType(id, edited.text),
-          chapterPart: null,
+          chapterPart: edited.chapterPart ?? null,
         };
       })
       .filter((q): q is { id: number; text: string; urdu: string; contentType: WorkspaceQuestionType; chapterPart: string | null } => Boolean(q)),
@@ -512,14 +556,15 @@ const GeneratePaper = () => {
         : null;
       const questions = await fetchQuestionsForSelection(
         selectedChapters,
-        selectedSubject,
+        selectedSubject?.split("||")[0] ?? "",
         selectedLevel,
         selectedBoard,
         chapterGroups,
         contentTypeFilter,
         sectionTypeFilter,
       );
-      const uniqueQuestions = questions.map((q, idx) => ({ ...q, id: idx + 1 }));
+      const maxExistingId = shuffledOrder.length > 0 ? Math.max(...shuffledOrder) : 0;
+      const uniqueQuestions = questions.map((q, idx) => ({ ...q, id: maxExistingId + idx + 1 }));
       setAllQuestions(uniqueQuestions);
       if (uniqueQuestions.length === 0) {
         setSelectionError("No questions found for the selected filters.");
@@ -556,7 +601,7 @@ const GeneratePaper = () => {
       const next = { ...prev };
       activeQuestions.filter((q) => ids.includes(q.id)).forEach((q) => {
         if (!next[q.id]) {
-          next[q.id] = { text: q.text, urdu: q.urdu, contentType: q.contentType };
+          next[q.id] = { text: q.text, urdu: q.urdu, contentType: q.contentType, chapterPart: q.chapterPart };
         }
       });
       return next;
@@ -625,13 +670,13 @@ const GeneratePaper = () => {
 
     const previewPaper: SavedPaperRecord = {
       id: Date.now(),
-      title: paperName || `${selectedSubject || "Paper"} Test`,
-      subject: selectedSubject || "",
+      title: paperName || `${selectedSubject?.split("||")[0] || "Paper"} Test`,
+      subject: selectedSubject?.split("||")[0] || "",
       className: selectedLevel || "",
       board: selectedBoard || "",
       teacherName: session?.name || "Institute",
       date: paperDate || new Date().toLocaleDateString("en-GB"),
-      paperCategory: paperCategory || `${selectedSubject || "Paper"} - ${questionType}`,
+      paperCategory: paperCategory || `${selectedSubject?.split("||")[0] || "Paper"} - ${questionType}`,
       timeAllowed: timeAllowed || "40",
       totalMarks: totalMarks && totalMarks !== "0" ? totalMarks : String(workspaceQuestions.length * (Number(eachQMarks) || 2)),
       questionType,
@@ -668,13 +713,13 @@ const GeneratePaper = () => {
 
     await addSavedPaper({
       id: Date.now(),
-      title: paperName || `${selectedSubject || "Paper"} Test`,
-      subject: selectedSubject || "",
+      title: paperName || `${selectedSubject?.split("||")[0] || "Paper"} Test`,
+      subject: selectedSubject?.split("||")[0] || "",
       className: selectedLevel || "",
       board: selectedBoard || "",
       teacherName: session?.name || "Institute",
       date: dateForStorage,
-      paperCategory: paperCategory || `${selectedSubject || "Paper"} - ${questionType}`,
+      paperCategory: paperCategory || `${selectedSubject?.split("||")[0] || "Paper"} - ${questionType}`,
       timeAllowed: timeAllowed || "40",
       totalMarks: calculatedTotalMarks,
       questionType,
@@ -722,7 +767,7 @@ const GeneratePaper = () => {
       setShuffledOrder(orderedIds);
       setEditedQuestions(
         Object.fromEntries(
-          savedPaper.questions.map((q) => [q.id, { text: q.text, urdu: q.urdu, contentType: q.contentType }])
+          savedPaper.questions.map((q) => [q.id, { text: q.text, urdu: q.urdu, contentType: q.contentType, chapterPart: q.chapterPart }])
         )
       );
       setPaperName(savedPaper.title || "");
@@ -757,13 +802,13 @@ const GeneratePaper = () => {
     const loadChapterGroups = async () => {
       try {
         const { groups, questionTypes } = await fetchChapterGroupsForSelection(
-          selectedSubject,
+          selectedSubject?.split("||")[0] ?? "",
           selectedLevel,
           selectedBoard,
         );
         try {
           // eslint-disable-next-line no-console
-          console.debug(`[subjectData] fetched groups count=${groups.length} for key=${selectedSubject}-${selectedLevel}-${selectedBoard}`);
+          console.debug(`[subjectData] fetched groups count=${groups.length} for key=${selectedSubject?.split("||")[0] ?? ""}-${selectedLevel}-${selectedBoard}`);
         } catch (e) { }
         if (isMounted) {
           setDbChapterGroups(groups.length > 0 ? groups : null);
@@ -805,9 +850,18 @@ const GeneratePaper = () => {
       return;
     }
 
-    const groups = fromTopicsFile?.length
+    const staticGroups = getChaptersForSubject(selectedSubject, selectedLevel, selectedBoard);
+    let groups = fromTopicsFile?.length
       ? fromTopicsFile
-      : (dbChapterGroups ?? getChaptersForSubject(selectedSubject, selectedLevel, selectedBoard));
+      : (dbChapterGroups ?? staticGroups);
+    // If DB has groups but static data has MORE, merge missing groups from static data
+    if (dbChapterGroups && staticGroups && dbChapterGroups.length < staticGroups.length) {
+      const dbNames = new Set(dbChapterGroups.map(g => g.name));
+      const missing = staticGroups.filter(g => !dbNames.has(g.name));
+      if (missing.length > 0) {
+        groups = [...dbChapterGroups, ...missing];
+      }
+    }
     if (groups && groups.length > 0) {
       if (selectedLevel === "9TH" || selectedLevel === "11TH" || selectedLevel === "INTER-I") {
         setSelectedChapters([]);
@@ -843,7 +897,7 @@ const GeneratePaper = () => {
     if (showQuestionSelection && selectedChapters.length > 0) {
       fetchAvailableQuestionTypes(
         selectedChapters,
-        selectedSubject,
+        selectedSubject?.split("||")[0] ?? "",
         selectedLevel,
         selectedBoard,
         chapterGroups,
@@ -961,7 +1015,7 @@ const GeneratePaper = () => {
             <div className="space-y-4">
               {/* Header */}
               <div className="flex items-center justify-between pb-4 border-b border-gray-200">
-                <h2 className="text-base font-semibold text-gray-900">Select Your Questions Here ... {selectedLevel} - {selectedSubject}</h2>
+                <h2 className="text-base font-semibold text-gray-900">Select Your Questions Here ... {selectedLevel} - {selectedSubject?.split("||")[0]}</h2>
               </div>
 
               {/* First Row: Question Type and Dual Medium */}
@@ -1399,6 +1453,9 @@ const GeneratePaper = () => {
                       </span>
                     </div>
                     <div className="absolute inset-0 bg-background/25 backdrop-blur-[1px] rounded-2xl z-10" />
+                    {card.image && (
+                      <img src={card.image} alt={card.title} className="relative z-10 w-14 h-14 sm:w-20 sm:h-20 object-contain mb-2 grayscale-[50%]" />
+                    )}
                     <p className="relative z-10 text-xl sm:text-2xl font-extrabold text-foreground/50 tracking-wide">{card.title}</p>
                     <p className="relative z-10 text-base sm:text-lg font-medium text-foreground/40 mt-1">{card.board}</p>
                   </div>
@@ -1417,6 +1474,9 @@ const GeneratePaper = () => {
                   <div className={`pointer-events-none absolute inset-x-0 bottom-0 h-1.5 bg-gradient-to-r ${card.gradient} opacity-60`} />
                   <div className={`pointer-events-none absolute -left-8 -bottom-10 h-24 w-24 rounded-full bg-gradient-to-br ${card.gradient} opacity-20 blur-2xl transition-opacity duration-300 group-hover:opacity-30`} />
                   <div className="pointer-events-none absolute -right-8 -top-8 h-20 w-20 rounded-full bg-primary/10 blur-xl" />
+                  {card.image && (
+                    <img src={card.image} alt={card.title} className="relative z-10 w-14 h-14 sm:w-20 sm:h-20 object-contain mb-2 drop-shadow-[0_4px_8px_rgba(0,0,0,0.1)]" />
+                  )}
                   <p className="relative z-10 text-xl sm:text-2xl font-extrabold text-foreground tracking-wide">{card.title}</p>
                   <p className="relative z-10 text-base sm:text-lg font-medium text-foreground/80 mt-1">{card.board}</p>
                 </button>
@@ -1427,24 +1487,29 @@ const GeneratePaper = () => {
             <div className="space-y-5">
               <h3 className="text-center text-xl sm:text-2xl font-bold text-foreground">{selectedBoard} › {selectedLevel}</h3>
               {boardSubjectsMap[selectedBoard][selectedLevel].map((group, gi) => (
-                <div key={gi} className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-4">
-                  {group.map((s) => (
-                    <button
-                      key={s.title}
-                      type="button"
-                      onClick={() => {
-                        setSelectedSubject(s.title);
-                        setSelectedChapters([]);
-                      }}
-                      className="flex items-center gap-4 rounded-xl bg-card border border-border p-4 hover:shadow-md hover:bg-secondary/50 transition-all"
-                    >
-                      <img src={s.image} alt={s.title} className="w-16 h-16 object-contain shrink-0" />
-                      <div className={`text-left ${isUrdu(s.title) ? "font-urdu" : ""}`} dir={isUrdu(s.title) ? "rtl" : "ltr"}>
-                        <h4 className="font-bold text-sm text-foreground">{s.title}</h4>
-                        <p className="text-xs text-muted-foreground">{s.subtitle}</p>
-                      </div>
-                    </button>
-                  ))}
+                <div key={gi}>
+                  {group.length > 0 && group[0].subtitle && (
+                    <h4 className="text-sm font-semibold text-muted-foreground mb-2">{group[0].subtitle}</h4>
+                  )}
+                  <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-4">
+                    {group.map((s) => (
+                      <button
+                        key={s.title}
+                        type="button"
+                          onClick={() => {
+                          setSelectedSubject(selectedBoard === "AFAQ" && s.subtitle ? `${s.title}||${s.subtitle}` : s.title);
+                          setSelectedChapters([]);
+                        }}
+                        className="flex items-center gap-4 rounded-xl bg-card border border-border p-4 hover:shadow-md hover:bg-secondary/50 transition-all"
+                      >
+                        <img src={s.image} alt={s.title} className="w-16 h-16 object-contain shrink-0" />
+                        <div className={`text-left ${isUrdu(s.title) ? "font-urdu" : ""}`} dir={isUrdu(s.title) ? "rtl" : "ltr"}>
+                          <h4 className="font-bold text-sm text-foreground">{s.title}</h4>
+                          <p className="text-xs text-muted-foreground">{s.subtitle}</p>
+                        </div>
+                      </button>
+                    ))}
+                  </div>
                 </div>
               ))}
             </div>
@@ -1512,8 +1577,13 @@ const GeneratePaper = () => {
                                       const { englishStem, urduStem } = getQuestionStems(qText, qUrdu);
                                       return (
                                         <>
-                                          {showEn && <p className="text-sm text-gray-800">{idx + 1}. {englishStem}</p>}
-                                          {showUr && <p className="text-sm text-gray-800 text-right" dir="rtl">{idx + 1}۔ {urduStem}</p>}
+                                          {showEn && <p className="text-sm text-gray-800">{idx + 1}. <MathText text={englishStem} /></p>}
+                                          {showUr && (
+                                            <p className="text-sm text-gray-800 text-right" dir="rtl">
+                                              {idx + 1}۔ <MathText text={urduStem} />
+                                              {(() => { const sup = getEnglishOnlyTokens(englishStem, urduStem); return sup.length > 0 ? <span dir="ltr" className="ml-1">{sup.join(" ")}</span> : null; })()}
+                                            </p>
+                                          )}
                                         </>
                                       );
                                     })()}
@@ -1543,7 +1613,7 @@ const GeneratePaper = () => {
           ) : showQuestionSelection ? null : selectedSubject && selectedBoard && selectedLevel ? (
             <div className="space-y-6">
               <div className="bg-card border border-border rounded-xl p-4 sm:p-5">
-                <h3 className="text-base sm:text-lg font-bold text-foreground mb-3">{selectedSubject} - {selectedLevel}</h3>
+                <h3 className="text-base sm:text-lg font-bold text-foreground mb-3">{selectedSubject?.split("||")[0]} - {selectedLevel}</h3>
                 <p className="text-[11px] sm:text-xs text-muted-foreground mb-5">Select Chapter(s)</p>
 
                 <div className="mb-5">

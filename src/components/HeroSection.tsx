@@ -44,7 +44,7 @@ const HeroSection = () => {
             <div className="grid grid-cols-2 gap-4">
               <div className="col-span-2 bg-secondary/70 rounded-2xl p-5 border border-primary/10">
                 <p className="text-xs uppercase tracking-wide text-muted-foreground">Live Activity</p>
-                <p className="text-2xl font-bold text-foreground mt-1">5000+ Teachers Visit Daily</p>
+                <p className="text-2xl font-bold text-foreground mt-1">500+ Teachers Visit Daily</p>
               </div>
 
               <div className="bg-card rounded-2xl p-4 border border-primary/15 shadow-sm">

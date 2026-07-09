@@ -3,8 +3,9 @@ import {
   mergeMcqOptions,
   stripLeadingNumber,
 } from "@/lib/questionDisplay";
+import MathText, { getEnglishOnlyTokens } from "@/components/MathText";
 
-const isUrdu = (text: string) => /[\u0600-\u06FF]/.test(text);
+const isUrdu = (text: string) => /[؀-ۿ]/.test(text);
 
 type DualMediumQuestionProps = {
   text: string;
@@ -31,6 +32,8 @@ export default function DualMediumQuestion({
   const mergedOptions = mergeMcqOptions(parsedText, parsedUrdu);
   const hasOptions = mergedOptions.some((o) => o.english || o.urdu);
   const urduFont = isUrdu(urduStem) ? "font-urdu" : "";
+  // Math tokens removed from English as PDF artifacts that are missing from Urdu
+  const urduSupplement = urduStem ? getEnglishOnlyTokens(englishStem, urduStem) : [];
 
   const renderOptions = (lang: "english" | "urdu" | "dual") => {
     if (!hasOptions) return null;
@@ -42,22 +45,22 @@ export default function DualMediumQuestion({
           if (lang === "english") {
             return (
               <p key={opt.key} className="text-[12px] text-gray-700">
-                ({opt.key}) {enVal}
+                ({opt.key}) <MathText text={enVal} />
               </p>
             );
           }
           if (lang === "urdu") {
             return (
               <p key={opt.key} className={`text-[12px] text-gray-700 text-right ${urduFont}`} dir="rtl">
-                ({opt.key}) {urVal}
+                ({opt.key}) <MathText text={urVal} />
               </p>
             );
           }
           return (
             <div key={opt.key} className="col-span-2 grid grid-cols-2 gap-2">
-              <p className="text-[12px] text-gray-700">({opt.key}) {enVal}</p>
+              <p className="text-[12px] text-gray-700">({opt.key}) <MathText text={enVal} /></p>
               <p className={`text-[12px] text-gray-700 text-right ${urduFont}`} dir="rtl">
-                ({opt.key}) {urVal}
+                ({opt.key}) <MathText text={urVal} />
               </p>
             </div>
           );
@@ -75,6 +78,7 @@ export default function DualMediumQuestion({
   ) : null;
 
   if (dualMedium === "dual") {
+    const hasUrdu = !!stripLeadingNumber(urduStem);
     return (
       <div>
         {type && (
@@ -82,19 +86,22 @@ export default function DualMediumQuestion({
             {type}
           </span>
         )}
-        <div className="grid grid-cols-2 gap-3 items-start">
-          <div>
-            <p className={textClassName}>{index}. {englishStem}</p>
-            {renderOptions("english")}
-            {diagramImg}
-          </div>
-          <div>
-            <p className={`${urduClassName} text-right ${urduFont}`} dir="rtl">
-              {stripLeadingNumber(urduStem) ? `${index}. ${urduStem}` : ""}
-            </p>
-            {renderOptions("urdu")}
-          </div>
-        </div>
+        {/* English — full width */}
+        <p className={textClassName}>
+          {index}. <MathText text={englishStem} />
+        </p>
+        {renderOptions("english")}
+        {diagramImg}
+        {/* Urdu — full width below, separated by a hairline */}
+        {hasUrdu && (
+          <p className={`${urduClassName} text-right ${urduFont} mt-0.5 pt-0.5 border-t border-gray-200`} dir="rtl">
+            {index}۔ <MathText text={urduStem} />
+            {urduSupplement.length > 0 && (
+              <span dir="ltr" className="ml-1">{urduSupplement.join(" ")}</span>
+            )}
+          </p>
+        )}
+        {hasUrdu && renderOptions("urdu")}
       </div>
     );
   }
@@ -107,7 +114,9 @@ export default function DualMediumQuestion({
             {type}
           </span>
         )}
-        <p className={textClassName}>{index}. {englishStem}</p>
+        <p className={textClassName}>
+          {index}. <MathText text={englishStem} />
+        </p>
         {renderOptions("english")}
         {diagramImg}
       </div>
@@ -122,7 +131,10 @@ export default function DualMediumQuestion({
         </span>
       )}
       <p className={`${urduClassName} ${urduFont}`} dir={isUrdu(urduStem) ? "rtl" : "ltr"}>
-        {index}. {urduStem || englishStem}
+        {index}. <MathText text={urduStem || englishStem} />
+        {urduSupplement.length > 0 && (
+          <span dir="ltr" className="ml-1">{urduSupplement.join(" ")}</span>
+        )}
       </p>
       {renderOptions("urdu")}
       {diagramImg}

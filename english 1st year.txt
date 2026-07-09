@@ -1,4 +1,4 @@
-english mcqs
+-> english mcqs
 1.1 Khatam-un-Nabiyeen Hazrat Muhammad خاتم النبین ﷺ
 Exercise	1.	The fabric of society was torn by idolatry, tribal arrogance, and widespread Injustice:
 (A)Material(B)Structure(C)Clothing(D)Decoration
@@ -20,7 +20,7 @@ Exercise	9.	The migration to Madinah marked a turning point in Islamic history:
 (A)Relocation(B)Trade route(C)Inactivity(D)Map change
 Exercise	10.	The Charter of Madinah united diverse communities under a model of peaceful coxistence:
 (A)Rebellion(B)Shared living(C)Opposition(D)Authority
-Additional	11.	What was the condition of Makkah’s society at the time of Rasoolullah’s (خَاتَمُ النَّبِییّنَ ﷺ) birth:
+Additional	11.	What was the condition of Makkah's society at the time of Rasoolullah's (خَاتَمُ النَّبِییّنَ ﷺ) birth:
 (A)Peaceful and united(B)Rich and advanced(C)Marked by idolatry and injustice(D)Governed by democracy
 Additional	12.	Who raised Rasoolullah (خَاتَمُ النَّبِییّنَ ﷺ) after the death of his parents:
 (A)His uncle Abu Talib(B)His grandfather Abdul Muttalib(C)A close friend(D)A teacher
@@ -32,7 +32,7 @@ Additional	15.	How did Rasoolullah (خَاتَمُ النَّبِییّنَ ﷺ)
 (A)Strict and unfriendly(B)Dishonest and unfair(C)Fair and kind(D)Silent and distant
 Additional	16.	Which family member supported Rasoolullah (خَاتَمُ النَّبِییّنَ ﷺ) in his trade journey to Syria:
 (A)Abu Talib(B)Hazrat Amina رضی اللہ تعالیٰ عنہا(C)Hazrat Khadijah رضی اللہ تعالیٰ عنہا(D)Hazrat Fatimah رضی اللہ تعالیٰ عنہا
-Additional	17.	What impressed Hazrat Khadijah (رضی اللہ تعالیٰ عنہا) about Rasoolullah’s (خَاتَمُ النَّبِییّنَ ﷺ) trade conduct:
+Additional	17.	What impressed Hazrat Khadijah (رضی اللہ تعالیٰ عنہا) about Rasoolullah's (خَاتَمُ النَّبِییّنَ ﷺ) trade conduct:
 (A)His military skills(B)His writing ability(C)His honesty and good behavior(D)His large business deals
 Additional	18.	Why did Rasoolullah (خَاتَمُ النَّبِییّنَ ﷺ) often go to the Cave of Hira:
 (A)To hide from enemies(B)To pray and reflect in solitude(C)To trade secretly(D)To meet friends
@@ -48,7 +48,7 @@ Additional	23.	What did the first revelation emphasize:
 (A)Learning and knowledge(B)Earning money(C)Migration(D)Fighting the enemies
 Additional	24.	Which angel brought the first revelation to Rasoolullah (خَاتَمُ النَّبِییّنَ ﷺ):
 (A)Mikaeel(B)Israfeel(C)Jibraeel(D)Izraeel
-Additional	25.	What was the reaction of most Quraish leaders to Rasoolullah’s (خَاتَمُ النَّبِییّنَ ﷺ) message:
+Additional	25.	What was the reaction of most Quraish leaders to Rasoolullah's (خَاتَمُ النَّبِییّنَ ﷺ) message:
 (A)Full support(B)Immediate acceptance(C)Hostility and rejection(D)Silent approval
 Additional	26.	What kind of hardships did Muslims face in Makkah:
 (A)Wealth loss(B)Praise and gifts(C)Boycotts and persecution(D)Promotion and fame
@@ -56,9 +56,9 @@ Additional	27.	What value did Rasoolullah (خَاتَمُ النَّبِییّن
 (A)Fear(B)Anger(C)Revenge(D)Patience and resilience
 Additional	28.	How did Hazrat Khadijah (رضی اللہ تعالیٰ عنہا) support Rasoolullah (خَاتَمُ النَّبِییّنَ ﷺ):
 (A)Emotionally only(B)Financially only(C)Politically(D)Emotionally and financially
-Additional	29.	Why was Hazrat Khadijah’s (رضی اللہ تعالیٰ عنہا) support important:
-(A)She was from a royal family(B)She was a trader(C)She had many friends(D)She helped strengthen Rasoolullah’s خَاتَمُ النَّبِییّنَ ﷺ mission
-Additional	30.	Who confirmed the truth of Rasoolullah’s (خَاتَمُ النَّبِییّنَ ﷺ) prophethood to Hazrat Khadijah (رضی اللہ تعالیٰ عنہا):
+Additional	29.	Why was Hazrat Khadijah's (رضی اللہ تعالیٰ عنہا) support important:
+(A)She was from a royal family(B)She was a trader(C)She had many friends(D)She helped strengthen Rasoolullah's خَاتَمُ النَّبِییّنَ ﷺ mission
+Additional	30.	Who confirmed the truth of Rasoolullah's (خَاتَمُ النَّبِییّنَ ﷺ) prophethood to Hazrat Khadijah (رضی اللہ تعالیٰ عنہا):
 (A)A king(B)Her cousin Waraqah bin Nawfal(C)A merchant(D)Her servant
 Additional	31.	What does the word "Hijrah" mean:
 (A)Fight(B)Travel(C)Migration(D)War
@@ -88,13 +88,13 @@ Additional	43.	What message did the final sermon give about racism and tribalism
 (A)Encouraged it(B)Ignored it(C)Strongly rejected it(D)Supported superiority
 Additional	44.	Which of the following values was emphasized in the final sermon:
 (A)Hatred(B)Mercy and unity(C)Tribal pride(D)Silence
-Additional	45.	What does Rasoolullah’s (خَاتَمُ النَّبِییّنَ ﷺ) legacy continue to teach people today:
+Additional	45.	What does Rasoolullah's (خَاتَمُ النَّبِییّنَ ﷺ) legacy continue to teach people today:
 (A)Universal values of kindness and justice(B)Trade tricks(C)Political power(D)Language and poetry
 Additional	46.	How is Rasoolullah (خَاتَمُ النَّبِییّنَ ﷺ) remembered across different cultures today:
 (A)As a prophet of mercy and guidance(B)As a poet(C)As a military ruler(D)As a trader only
-Additional	47.	What does Rasoolullah’s (خَاتَمُ النَّبِییّنَ ﷺ) life inspire in Muslims today:
+Additional	47.	What does Rasoolullah's (خَاتَمُ النَّبِییّنَ ﷺ) life inspire in Muslims today:
 (A)To live with honesty, patience, and justice(B)To learn business(C)To gain power(D)To avoid preaching
-Additional	48.	What was Rasoolullah’s (خَاتَمُ النَّبِییّنَ ﷺ) reaction after the conquest of Makkah:
+Additional	48.	What was Rasoolullah's (خَاتَمُ النَّبِییّنَ ﷺ) reaction after the conquest of Makkah:
 (A)He punished everyone(B)He left Makkah(C)He declared general amnesty(D)He divided the city
 Additional	49.	What quality did Rasoolullah (خَاتَمُ النَّبِییّنَ ﷺ) show any forgiving the people of Makkah:
 (A)Weakness(B)Magnanimity and mercy(C)Anger(D)Hatred
@@ -108,35 +108,35 @@ Additional	53.	In which year was Rasoolullah (خَاتَمُ النَّبِیی�
 (A)610 A.D(B)580 A.D.(C)622 A.D.(D)571 A.D.
 Additional	54.	To which clan did Rasoolullah (خَاتَمُ النَّبِییّنَ ﷺ) belong:
 (A)Banu Hashim(B)Benu Umayyah(C)Quraish(D)Aws
-Additional	55.	What was the condition of the world at the time of Rasoolullah’s (خَاتَمُ النَّبِییّنَ ﷺ) bith:
+Additional	55.	What was the condition of the world at the time of Rasoolullah's (خَاتَمُ النَّبِییّنَ ﷺ) bith:
 (A)Spiritually enlightened(B)Politically stable(C)Morally uplifted(D)Engulfed in Ignorance
 Additional	56.	Which practices had torn the social fabric of pre-Islamic Arabic:
 (A)Simplicity and literacy(B)Idolatry and tribal arrogance(C)Law and order(D)Commerce and peace
 Additional	57.	What happened to Hazrat Abdullah before the birth of Rasoolullah (خَاتَمُ النَّبِییّنَ ﷺ):
-(A)Went on a trade journey(B)Passed away(C)Moved to Madinah(D)Built the Ka’bah
+(A)Went on a trade journey(B)Passed away(C)Moved to Madinah(D)Built the Ka'bah
 Additional	58.	At what age did Rasoolullah (خَاتَمُ النَّبِییّنَ ﷺ) lose Hazrat Amina:
 (A)Four years(B)Five years(C)Six years(D)Seven years
-Additional	59.	Who took care of Rasoolullah (خَاتَمُ النَّبِییّنَ ﷺ) after Hazrat Abdul Muttalib’s death:
+Additional	59.	Who took care of Rasoolullah (خَاتَمُ النَّبِییّنَ ﷺ) after Hazrat Abdul Muttalib's death:
 (A)Hazrat Abu Bakr(B)Hazrat Abbas(C)Hazrat Hamzah(D)Hazrat Abu Talib
 Additional	60.	Which quality did Rasoolullah (خَاتَمُ النَّبِییّنَ ﷺ) show in his trade practices:
 (A)Arrogance(B)Carelessness(C)Greed(D)Honesty
 Additional	61.	Which title was given to Rasoolullah (خَاتَمُ النَّبِییّنَ ﷺ) for being trustworthy:
 (A)Al-Hakeem(B)Al-Ameen(C)Al-Farooq(D)Al-Mutawakkkil
 Additional	62.	What other title was Rasoolullah (خَاتَمُ النَّبِییّنَ ﷺ) given for his truthfulness:
-(A)Al-Mu’min(B)Al-Muallim(C)Al-Sadiq(D)Al-Mutawakkil
+(A)Al-Mu'min(B)Al-Muallim(C)Al-Sadiq(D)Al-Mutawakkil
 Additional	63.	What was the purpose of Hilf al-Fudul in Makkah:
 (A)Defend the oppressed(B)Encourage trade(C)Promote Idol worship(D)Organize warfare
 Additional	64.	How did Rasoolullah (خَاتَمُ النَّبِییّنَ ﷺ) feel about Hilf al-Fudul after the advent of Islam:
 (A)Admired it(B)Regretted it(C)Rejected it(D)Denied it
-Additional	65.	What dispute arose during the reconstruction of the Ka’bah:
+Additional	65.	What dispute arose during the reconstruction of the Ka'bah:
 (A)Over funding(B)Over location(C)Over placing the Hajr-e-Aswad(D)Over trade routes
-Additional	66.	What quality did Rasoolullah (خَاتَمُ النَّبِییّنَ ﷺ) demonstrate during the Ka’bah dispute:
+Additional	66.	What quality did Rasoolullah (خَاتَمُ النَّبِییّنَ ﷺ) demonstrate during the Ka'bah dispute:
 (A)Delay(B)Anger(C)Partiality(D)Impartiality
 Additional	67.	What was the profession of Hazrat Khadijah (رَضِیَ اللہُ تَعَالٰی عَنْہُھا):
 (A)Farmer(B)Trader(C)Teacher(D)Politician
-Additional	68.	How did Hazrat Khadijah (رَضِیَ اللہُ تَعَالٰی عَنْہُھا) responsed to Rasoolullah’s (خَاتَمُ النَّبِییّنَ ﷺ) honesty in trade:
+Additional	68.	How did Hazrat Khadijah (رَضِیَ اللہُ تَعَالٰی عَنْہُھا) responsed to Rasoolullah's (خَاتَمُ النَّبِییّنَ ﷺ) honesty in trade:
 (A)Ignored him(B)Complained to her father(C)Proposed marriage(D)Avoided business with him
-Additional	69.	What kind of support did Hazrat Khadijah (رَضِیَ اللہُ تَعَالٰی عَنْہُھا) offer during Rasoolullah’s (خَاتَمُ النَّبِییّنَ ﷺ) early mission:
+Additional	69.	What kind of support did Hazrat Khadijah (رَضِیَ اللہُ تَعَالٰی عَنْہُھا) offer during Rasoolullah's (خَاتَمُ النَّبِییّنَ ﷺ) early mission:
 (A)Social and legal(B)Military and spiritual(C)Economic and political(D)Emotional and financial
 Additional	70.	Where did Rasoolullah (خَاتَمُ النَّبِییّنَ ﷺ) go for solitude and reflection:
 (A)Cave of Saur(B)Mount Uhud(C)Plain of Arafat(D)Cave of Hira
@@ -144,11 +144,11 @@ Additional	71.	In which month did the first revelation occur:
 (A)Rajab(B)Muharram(C)Dhul-Hijjah(D)Ramadan
 Additional	72.	Who delivered the first revelation to Rasoolullah (خَاتَمُ النَّبِییّنَ ﷺ):
 (A)Hazrat Azreal(B)Hazrat Israfeel(C)Hazrat Jibraeel(D)Hazrat Mikaeel
-Additional	73.	What does the Qur’an say about the creation of man in Surah Al-Alaq:
+Additional	73.	What does the Qur'an say about the creation of man in Surah Al-Alaq:
 (A)From soil(B)From water(C)From clay(D)From a clinging clot
 Additional	74.	What did the message of Tauhid challenge in Makkah:
 (A)Honesty(B)Idolatry(C)Brotherhood(D)Trade
-Additional	75.	How did the Quraish react to Rasoolullah’s (خَاتَمُ النَّبِییّنَ ﷺ) message of Islam:
+Additional	75.	How did the Quraish react to Rasoolullah's (خَاتَمُ النَّبِییّنَ ﷺ) message of Islam:
 (A)Welcomed it(B)Supported it(C)Opposed it(D)Ignored it
 Additional	76.	What form of hardship did Muslims face in Makkah:
 (A)Diplomatic pressure(B)Economic boycott(C)Financial freedom(D)Political support
@@ -168,13 +168,13 @@ Additional	83.	What action did Rasoolullah (خَاتَمُ النَّبِییّ�
 (A)Imprisoned enemies(B)Destroyed homes(C)Declared general amnesty(D)Abandoned Makkah
 Additional	84.	What effect did the general amnesty have on the people of Makkah:
 (A)Transformed their hearts(B)Confused them(C)Hardened their hearts(D)Made them flee
-Additional	85.	What Qur’anic verse describes Rasoolullah (خَاتَمُ النَّبِییّنَ ﷺ) as a mercy:
+Additional	85.	What Qur'anic verse describes Rasoolullah (خَاتَمُ النَّبِییّنَ ﷺ) as a mercy:
 (A)Surah Al-Nas(B)Surah Al-Baqarah(C)Surah Al-Anbiya 21:107(D)Surah Al-Fil
 Additional	86.	In which year did Rasoolullah (خَاتَمُ النَّبِییّنَ ﷺ) perform Hajjat-ul-Wida:
 (A)8 AH(B)10 AH(C)9 AH(D)11 AH
 Additional	87.	What did Rasoolullah (خَاتَمُ النَّبِییّنَ ﷺ) emphasize in his final sermon:
 (A)Wealth and success(B)Arab superiority(C)Battle a strategies(D)Human equality
-Additional	88.	According to the find sermon, what determines a person’s superiority:
+Additional	88.	According to the find sermon, what determines a person's superiority:
 (A)Piety(B)Language(C)Ethnicity(D)Wealth
 Additional	89.	What did Rasoolullah (خَاتَمُ النَّبِییّنَ ﷺ) achieve by the end of his mission:
 (A)Fulfilment of divine message(B)Tribal dominance(C)Political rule(D)Social fame
@@ -187,7 +187,7 @@ Exercise	92.	What does Quaid-e-Azam give about the misuse of freedom:
 (A)It can lead to wealth without effort(B)It might cause laziness among students(C)It should not be mistaken for lawlessness(D)It guarantees success
 Exercise	93.	How does Quaid-e-Azam describe the early days of Pakistan:
 (A)Smooth and full of promise(B)Peaceful and organised(C)Challenging but full of hope(D)Prosperous from the start
-Exercise	94.	Which historical event does Quaid-e-Azam reference to highlight Pakistan’s struggle:
+Exercise	94.	Which historical event does Quaid-e-Azam reference to highlight Pakistan's struggle:
 (A)The Quit India Movement(B)The Punjab and Delhi riots(C)The Bengal famine(D)The Kashmir conflict
 Exercise	95.	Why does Quaid-e-Azam stress the importance of students focusing on their studies:
 (A)to avoid political activism(B)to build a strong and self-reliant nation(C)to keep universities functioning(D)to meet international academic standards
@@ -196,8 +196,8 @@ Exercise	96.	What mentality does Quaid-e-Azam criticise in student seeking only 
 Exercise	97.	What alternative paths does Quaid-e-Azam encourage students of consider:
 (A)travel and tourism(B)political campaigning(C)manual work, trade, industry, and technical fields(D)teaching and social work only
 Exercise	98.	What example does Quaid-e-Azam share to support his message:
-(A)his own educational background(B)a student who joined the military(C)a young man who left government service and succeeded in banking(D)his friend’s success in farming
-Exercise	99.	What is the overall tone of Quaid-e-Azam’s message to the students:
+(A)his own educational background(B)a student who joined the military(C)a young man who left government service and succeeded in banking(D)his friend's success in farming
+Exercise	99.	What is the overall tone of Quaid-e-Azam's message to the students:
 (A)humorous and casual(B)stern and authoritarian(C)encouraging and visionary(D)dismissive and critical
 Additional	100.	According to Quaid-e-Azam, what was the old system of education designed to produce:
 (A)Farmers(B)Scientists(C)Clerks(D)Artists
@@ -217,9 +217,9 @@ Additional	107.	According to Quaid-e-Azam, how should freedom be exercised:
 (A)Without rules(B)With violence(C)With responsibility(D)By pleasing the public
 Additional	108.	What field did the young man succeed in after leaving government service:
 (A)Teaching(B)Banking(C)Law(D)Engineering
-Additional	109.	What does Quaid-e-Azam say should be the youth’s new goal:
+Additional	109.	What does Quaid-e-Azam say should be the youth's new goal:
 (A)Migration(B)Luxury(C)Self-reliance(D)Fame
-Additional	110.	What does the term "license" refer to in Quaid’s speech:
+Additional	110.	What does the term "license" refer to in Quaid's speech:
 (A)Driving permission(B)Irresponsible freedom(C)Job training(D)Cultural liberty
 Additional	111.	What does Quaid-e-Azam suggest is more important than seeking comfort:
 (A)Moving abroad(B)Serving the nation(C)Building palaces(D)Avoiding work
@@ -236,7 +236,7 @@ Additional	116.	What can be a negative outcome of job frustration in youth:
 Additional	117.	What will increase with time, according to Quaid:
 (A)Corruption(B)Opportunities in new fields(C)Government jobs(D)Political parties
 Additional	118.	What does Quaid-e-Azam believe about developing self-worth:
-(A)It’s based on status(B)It’s built through hard work(C)It comes from political favor(D)It depends on wealth
+(A)It's based on status(B)It's built through hard work(C)It comes from political favor(D)It depends on wealth
 Additional	119.	Freedom does not mean ............... to do anything:
 (A)Permission(B)Advice(C)License(D)Respect
 Additional	120.	Quaid-e-Azam used the phrase "............... conditions" to describe government offices:
@@ -263,7 +263,7 @@ Additional	130.	Quaid considered ............... as having immense scope:
 (A)Law(B)Literature(C)Singing(D)Technical education
 Additional	131.	Youth should think in terms of ............. instead of government jobs:
 (A)Sports(B)Industry(C)Music(D)Teaching
-Additional	132.	Quaid-e-Azam’s speech promotes the dignity of ..............:
+Additional	132.	Quaid-e-Azam's speech promotes the dignity of ..............:
 (A)Wealth(B)Religion(C)Labor(D)Fame
 Additional	133.	Who did Quaid-e-Azam thank in the beginning of his speech:
 (A)The students(B)The teachers(C)The Vice-Chancellor(D)The audience
@@ -279,7 +279,7 @@ Additional	138.	What action did India take against Pakistan:
 (A)Opened borders(B)Sent refugees(C)Withheld cash balances(D)Promoted trade
 Additional	139.	What must students focus, on according to Quaid:
 (A)Joining politics(B)Their studies(C)Arranging protests(D)Making money
-Additional	140.	Who are the "fifth columnists" in Quaid’s speech:
+Additional	140.	Who are the "fifth columnists" in Quaid's speech:
 (A)Freedom fighters(B)Political leader(C)Student grouped(D)Hidden enemies
 Additional	141.	What must students do about selfish people:
 (A)Avoid them(B)Support them(C)Join them(D)Work under them
@@ -305,7 +305,7 @@ Grammar	151.	Quaid-e-Azam ............. students to seek careers beyond governme
 (A)encouraged(B)encourages(C)encouraging(D)had encouraged
 Grammar	152.	Many young people ............. in technical education now:
 (A)are enrolling(B)enrolled(C)will enroll(D)has enrolled
-Grammar	153.	Pakistan’s leaders ............. for the betterment of the people:
+Grammar	153.	Pakistan's leaders ............. for the betterment of the people:
 (A)work(B)worked(C)had worked(D)are working
 Grammar	154.	In his speech, Quaid-e-Azam ............. the importance of national unity:
 (A)is stressing(B)has stressed(C)stressed(D)had stressing
@@ -402,19 +402,19 @@ Additional	198.	How many SDGs were established by the United Nations:
 (A)10(B)13(C)17(D)21
 Additional	199.	Which SDG specifically focuses on Climate Action:
 (A)SDG 12(B)SDG 13(C)SDG 14(D)SDG 15
-Additional	200.	Pakistan’s geography makes it vulnerable to all of the following except:
+Additional	200.	Pakistan's geography makes it vulnerable to all of the following except:
 (A)Glacial melt(B)Sea-level rise(C)Extreme heat(D)Volcanic eruptions
 Additional	201.	Which sector in Pakistan is highly dependent on climate conditions:
 (A)Tourism(B)Agriculture(C)Manufacturing(D)Mining
 Additional	202.	Which cities are mentioned as rapidly urbanizing in Pakistan:
 (A)Karachi and Lahore(B)Peshawar and Multan(C)Islamabad and Quetta(D)Rawalpindi and Sukkur
-Additional	203.	Which city recorded one of the world’s highest temperatures in 2022:
+Additional	203.	Which city recorded one of the world's highest temperatures in 2022:
 (A)Jacobabad(B)Multan(C)Lahore(D)Hyderabad
-Additional	204.	What was Jacobabad’s recorded temperature in 2022:
+Additional	204.	What was Jacobabad's recorded temperature in 2022:
 (A)45°C(B)48°C(C)54°C(D)51°C
 Additional	205.	The 2015 Karachi heatwave caused how many deaths:
 (A)500(B)800(C)1,200(D)1,800
-Additional	206.	What river is fed by Pakistan’s glaciers:
+Additional	206.	What river is fed by Pakistan's glaciers:
 (A)Indus(B)Chenab(C)Ravi(D)Jhelum
 Additional	207.	What is the long-term consequence of glacier melt:
 (A)Increased rainfall(B)Reduced water availability(C)Earthquakes(D)More snowfall
@@ -432,7 +432,7 @@ Additional	213.	By how much are wheat yields expected to decline by 2050:
 (A)2–4%(B)6–8%(C)10–12%(D)15%
 Additional	214.	What caused crop losses worth $2.2 billion in 2020:
 (A)Heavy rains(B)Locust attacks(C)Fire(D)Smog
-Additional	215.	What drives Pakistan’s climate-smart agriculture practices:
+Additional	215.	What drives Pakistan's climate-smart agriculture practices:
 (A)SDG 13(B)Market prices(C)Food export goals(D)Fertilizer industry
 Additional	216.	What is the projected sea level rise by 2100:
 (A)0.3 meters(B)0.5 meters(C)0.6 meters(D)1.0 meters
@@ -474,21 +474,21 @@ Additional	233.	In “The Echoing Green”, when do the sports come to an end:
 Additional	234.	In “The Echoing Green”, what happens when the little ones become weary:
 (A)They start crying(B)They return to their mothers(C)They go to school(D)They fall asleep on the field
 Additional	235.	In “The Echoing Green”, where do the children rest after playing:
-(A)On the grass(B)In their beds(C)In their mothers’ laps(D)Under the oak tree
-Additional	236.	In “The Echoing Green”, what are the mothers’ laps compared to:
+(A)On the grass(B)In their beds(C)In their mothers' laps(D)Under the oak tree
+Additional	236.	In “The Echoing Green”, what are the mothers' laps compared to:
 (A)Bird nests(B)Cushions(C)Warm blankets(D)Cradles
 Additional	237.	In “The Echoing Green”, what time of day is described at the end of the poem:
 (A)Morning(B)Afternoon(C)Evening(D)Midnight
 7.1 What You Do is What You Are
 Additional	238.	What is Larry still called until he gets work again:
 (A)Bosss(B)Idle man(C)Laid-off worker(D)Mechanic
-Additional	239.	What does the laid-off auto worker do at his cousin’s place:
+Additional	239.	What does the laid-off auto worker do at his cousin's place:
 (A)Sells gas(B)Repairs cars(C)Drives trucks(D)Washes cares
 Additional	240.	What does the retired teacher do voluntarily:
 (A)Write books(B)Travel(C)Help children(D)Teach adults
-Additional	241.	What does a person’s job show in this society:
+Additional	241.	What does a person's job show in this society:
 (A)Wealth(B)Value(C)Hobby(D)Health
-Additional	242.	What was Sally’s past profession:
+Additional	242.	What was Sally's past profession:
 (A)Singer(B)Showgirl and dealer(C)Waitress(D)Dancer only
 Additional	243.	How does the writer describe this system of judging people:
 (A)Normal(B)Strange(C)True(D)Fair
@@ -498,13 +498,13 @@ Additional	245.	How do we judge people, according to the text:
 (A)By their looks(B)By their work(C)By their clothes(D)By their talk
 Additional	246.	Where does Mary Ellen work:
 (A)In a hospital(B)In an ad agency(C)In a school(D)In a shop
-Additional	247.	What is Larry’s job status:
+Additional	247.	What is Larry's job status:
 (A)Promoted(B)On leave(C)Retired(D)Laid-off
-Additional	248.	What factor mainly defines people’s worth according to the passage:
+Additional	248.	What factor mainly defines people's worth according to the passage:
 (A)Their hobbies(B)Their job or occupation(C)Their family background(D)Their education level
 Additional	249.	What happens when someone no longer earns money from a job:
 (A)They are admired more(B)They are assigned to limbo(C)They are praised for retiring(D)They are given new roles
-Additional	250.	How does the passage describe society’s treatment of "just a housewife":
+Additional	250.	How does the passage describe society's treatment of "just a housewife":
 (A)Highly respected(B)Ignored and undervalued(C)Praised for sacrifice(D)Celebrated in the media
 Additional	251.	What does "just" before a title suggest:
 (A)Respect(B)Importance(C)Devaluation(D)Celebration
@@ -512,9 +512,9 @@ Additional	252.	How does society label a laid-off auto worker:
 (A)As a former hero(B)As currently worthless(C)As an inspiring figure(D)As a future leader
 Additional	253.	According to the passage, what is a sign of being "valued":
 (A)Having a steady income(B)Being famous(C)Holding a prestigious job(D)Earning a lot of money
-Additional	254.	What is society’s view of someone who volunteers after retirement:
+Additional	254.	What is society's view of someone who volunteers after retirement:
 (A)Highly valuable(B)Unimportant(C)A role model(D)A wealthy individual
-Additional	255.	What is the author’s attitude toward job-based identity:
+Additional	255.	What is the author's attitude toward job-based identity:
 (A)Enthusiastic(B)Proud(C)Critical(D)Unconcerned
 Additional	256.	Why should children be taught about job hierarchies, according to the author:
 (A)To choose hobbies wisely(B)To understand social values(C)To becomes rich(D)To impress others
@@ -539,7 +539,7 @@ Additional	265.	Why does the phrase "cast is bronze" metaphorically mean:
 Additional	266.	How do people view unpaid caregivers:
 (A)As national heroes(B)As highly respected individuals(C)As irrelevant or valueless(D)As economic contributors
 Additional	267.	What surprising truth about society is revealed:
-(A)Society judges purely on kindness(B)Money doesn’t matter(C)Prestige matters more than wealth(D)Hard work always guarantees respect
+(A)Society judges purely on kindness(B)Money doesn't matter(C)Prestige matters more than wealth(D)Hard work always guarantees respect
 Additional	268.	Which example shows a low-prestige occupation:
 (A)Doctor(B)Contractor(C)Janitor(D)Vice-president
 Additional	269.	Why are people who used to work still identified by past jobs:
@@ -547,7 +547,7 @@ Additional	269.	Why are people who used to work still identified by past jobs:
 Additional	270.	How does society view an entrepreneur differently from a contractor:
 (A)Both are respected equally(B)Entrepreneur is more admired(C)Contractor is more admired(D)Society ignores both
 Additional	271.	Why is it silly to base respect on jobs, according to the author:
-(A)Jobs change frequently(B)It ignores real human worth(C)It’s economically harmful(D)It builds unity
+(A)Jobs change frequently(B)It ignores real human worth(C)It's economically harmful(D)It builds unity
 Additional	272.	What lesson should readers take about valuing others:
 (A)Value based on income(B)Value based on appearance(C)Value beyond occupations(D)Value only volunteers
 Additional	273.	What label do people use to undervalue others:
@@ -564,7 +564,7 @@ Additional	278.	What example is given of "just" job:
 (A)Pilot(B)Janitor(C)Lawyer(D)Actor
 Additional	279.	What kind of society are we supposed to be:
 (A)Free(B)Classless(C)Rich(D)Honest
-Additional	280.	What don’t we recognize, according to the writer:
+Additional	280.	What don't we recognize, according to the writer:
 (A)Jobs(B)Money(C)Titles(D)Nobility
 Additional	281.	What do we still do in society:
 (A)Treat all equally(B)Unite everyone(C)Separate valued and valueless(D)Praise all jobs
@@ -607,7 +607,7 @@ Exercise	299.	In the sentence "The availability of clean water also has signific
 (A)solutions(B)consequences(C)benefits(D)misunderstandings
 Exercise	300.	What does the word "vulnerable" most likely mean in the sentence "Children are particularly vulnerable to these diseases":
 (A)Resistant(B)Unaffected(C)Susceptible(D)protected
-Additional	301.	Only about ........ of the Earth’s water is freshwater:
+Additional	301.	Only about ........ of the Earth's water is freshwater:
 (A)5%(B)2.5%(C)10%(D)25%
 Additional	302.	Less than ....... of freshwater is readily accessible for human use:
 (A)5%(B)3%(C)1%(D)10%
@@ -651,7 +651,7 @@ Additional	321.	Inadequate infrastructure leads to:
 (A)Water security(B)Better quality of life(C)Global peace(D)Difficult water access
 Additional	322.	What percentage of the human body is compound of water:
 (A)50%(B)60%(C)70%(D)80%
-Additional	323.	What portion of the Earth’s water is freshwater:
+Additional	323.	What portion of the Earth's water is freshwater:
 (A)1%(B)3%(C)5%(D)10%
 Additional	324.	What fraction of freshwater is readily accessible for use:
 (A)Half(B)One-third(C)One-fourth(D)One-fifth
@@ -726,10 +726,10 @@ Exercise	357.	What was the reaction of the people when they saw Khipil being pun
 Exercise	358.	Khipil was hesitant to step forward because:
 (A)He was afraid of heights.(B)He could not swim.(C)He was angry at the king.(D)He did not want to complete the palace.
 Exercise	359.	What was Shahpesh's final punishment for Khipil:
-(A)Execution in front of the court.(B)Being thrown into a deep well.(C)Daily humiliation with the ‘bath of surprise’.(D)Forced exile from the kingdom.
+(A)Execution in front of the court.(B)Being thrown into a deep well.(C)Daily humiliation with the 'bath of surprise'.(D)Forced exile from the kingdom.
 Additional	360.	Who commanded the building of the palace:
 (A)Khipil(B)Shahpesh(C)Ebn Busrac(D)A shepherd
-Additional	361.	Who was the builder of Shahpesh’s palace:
+Additional	361.	Who was the builder of Shahpesh's palace:
 (A)Shahpesh(B)The masons(C)Khipil(D)The slaves
 Additional	362.	For how many years did the palace construction linger:
 (A)Two years(B)Three years(C)Four years(D)Five years
@@ -784,7 +784,7 @@ Additional	385.	Which industry uses AI for content recommendations and digital c
 Additional	386.	AI-powered diagnostic tools can identify diseases such as:
 (A)Malaria(B)Cancer(C)Typhoid(D)Flu
 Additional	387.	Intelligent tutoring systems in education adapt lessons according to:
-(A)Teacher’s salary(B)Library books(C)Government policies(D)Each student’s learning pace
+(A)Teacher's salary(B)Library books(C)Government policies(D)Each student's learning pace
 Additional	388.	One of the biggest challenges of AI is:
 (A)Global warming(B)Job displacement(C)Space travel(D)Traffic jams
 Additional	389.	Which of the following jobs can be replaced by AI:
@@ -817,7 +817,7 @@ Additional	402.	AI can create fake or misleading content called:
 (A)Real videos(B)Documentaries(C)Deepfake videos(D)Educational material
 Additional	403.	To maximize AI benefits and minimize risks, it is essential to promote:
 (A)Ignorance(B)Responsible use(C)Automation only(D)Random development
-13.1 Ruba’iyat
+13.1 Ruba'iyat
 Exercise	404.	What does the metaphor "Abraham at the stake" primarily represent in thepoem:
 (A)physical suffering(B)political resistance(C)unwavering faith in God [Allah (سُبْحَانَهُ وَتَعَالَى)](D)historical events
 Exercise	405.	The phrase "God-drunk" in the poem suggests:
@@ -835,22 +835,22 @@ Exercise	410.	What is the primary theme explored in the play:
 (A)love and romance(B)gender roles and stereotypes in domestic life(C)the importance of career success(D)political issues in society
 Exercise	411.	How does Darry feel about doing the housework before he attempts it:
 (A)nervous(B)confident(C)indifferent(D)reluctant
-Exercise	412.	Which literary technique is primarily used in the play to highlight the absurdity of Darry’s attempts:
+Exercise	412.	Which literary technique is primarily used in the play to highlight the absurdity of Darry's attempts:
 (A)irony(B)farce(C)allegory(D)symbolism
 Exercise	413.	What lesson does Darry learn by the end of the play:
 (A)to be more independent(B)to respect the work Lizzie does(C)to avoid doing my housework(D)to never boast about his abilities again
 Additional	414.	Who is the playwright of The End of the Beginning:
-(A)William Shakespeare(B)J.M. Synge(C)Sean O’ Casey(D)George Bernard Shaw
+(A)William Shakespeare(B)J.M. Synge(C)Sean O' Casey(D)George Bernard Shaw
 Additional	415.	What is the setting of the play:
 (A)A city apartment(B)A village street(C)A rural Irish kitchen(D)A farm field
 Additional	416.	Who is Darry in the play:
-(A)A neighbor(B)A school teacher(C)Lizzie’s husband(D)A visiting relative
-Additional	417.	What is Lizzie’s relationship with Darry:
+(A)A neighbor(B)A school teacher(C)Lizzie's husband(D)A visiting relative
+Additional	417.	What is Lizzie's relationship with Darry:
 (A)Sister(B)Mother(C)Housemaid(D)Wife
 Additional	418.	What causes the argument between Darry and Lizzie:
 (A)Farm animals(B)Their chores(C)Visitors(D)Money issues
-Additional	419.	What does Darry claim about Lizzie’s work:
-(A)It’s more important(B)It’s creative(C)It’s easier(D)It’s unnecessary
+Additional	419.	What does Darry claim about Lizzie's work:
+(A)It's more important(B)It's creative(C)It's easier(D)It's unnecessary
 Additional	420.	What does the couple agree to do:
 (A)Get a servant(B)Sell their house(C)Switch roles for a day(D)Visit neighbors
 Additional	421.	What is a major theme of the play:
@@ -861,15 +861,15 @@ Additional	423.	What tone does the play carry throughout:
 (A)Humorous(B)Sarcastic(C)Serious(D)Melancholy
 Additional	424.	How many acts are in the play:
 (A)One(B)Two(C)Three(D)Four
-Additional	425.	What is Darry’s opinion of housework at the start:
+Additional	425.	What is Darry's opinion of housework at the start:
 (A)It is necessary(B)It is joyful(C)It is boring(D)It is easy
 Additional	426.	How does the play end:
 (A)With a divorce(B)With a realization(C)With a party(D)With an apology
 Additional	427.	What does Lizzie use to teach Darry a lesson:
 (A)A scolding(B)Physical punishment(C)Silence(D)Experience
-Additional	428.	What was Darry’s attitude after failing at housework:
+Additional	428.	What was Darry's attitude after failing at housework:
 (A)Boastful(B)Proud(C)Humbled(D)Angrier
-Additional	429.	What do Lizzie and Darry’s roles represent:
+Additional	429.	What do Lizzie and Darry's roles represent:
 (A)Friendship and enmity(B)Urban vs. rural life(C)Traditional gender roles(D)Education and ignorance
 Additional	430.	What is emphasized in the character of Darry:
 (A)Strength(B)Clumsiness(C)Heroism(D)Magic
@@ -881,37 +881,37 @@ Additional	433.	What quality of Lizzie wins in the end:
 (A)Her silence(B)Her cleverness(C)Her beauty(D)Her anger
 Additional	434.	What literary device is most used in the play:
 (A)Foreshadowing(B)Hyperbole(C)Allegory(D)Paradox
-Additional	435.	What object symbolizes Darry’s failure:
+Additional	435.	What object symbolizes Darry's failure:
 (A)Broom(B)Firewood(C)Broken plates(D)His chair
 Additional	436.	What does the firewood incident reflect:
-(A)Darry’s skill(B)Gender strength(C)Punishment(D)Comic exaggeration
+(A)Darry's skill(B)Gender strength(C)Punishment(D)Comic exaggeration
 Additional	437.	What is the genre of the play:
 (A)Satirical comedy(B)Fantasy drama(C)Historical fiction(D)Action thriller
 Additional	438.	What happens when roles are reversed in the play:
 (A)Everything improves(B)Darry is praised(C)Lizzie gets hurt(D)Chaos occurs
-Additional	439.	Who is more successful in handling the other’s role:
+Additional	439.	Who is more successful in handling the other's role:
 (A)Both equally(B)Lizzie(C)Darry(D)Neither
-Additional	440.	How does Darry view Lizzie’s work by the end:
+Additional	440.	How does Darry view Lizzie's work by the end:
 (A)As a joke(B)As simple(C)As respectful(D)As irrelevant
 Additional	441.	What lesson about pride is depicted:
 (A)Pride brings wisdom(B)Pride can blind us(C)Pride earns respect(D)Pride solves problems
-Additional	442.	Darry’s initial attitude towards housework can best be described as .............:
+Additional	442.	Darry's initial attitude towards housework can best be described as .............:
 (A)Enthusiastic(B)Dismissive(C)Encouraging(D)Cooperative
 Additional	443.	The play primarily revolves around the ............... between Darry and Lizzie:
 (A)Friendship(B)Romantic tension(C)Division of labor(D)Rivalry
-Additional	444.	Throughout the play, O’Casey uses .............. to highlight the absurdity of the gender roles:
+Additional	444.	Throughout the play, O'Casey uses .............. to highlight the absurdity of the gender roles:
 (A)Drama(B)Action(C)Humor(D)Suspense
-Additional	445.	The play’s comedic elements are used to address ................:
+Additional	445.	The play's comedic elements are used to address ................:
 (A)Political injustice(B)Family dynamic(C)Economic inequality(D)Gender equality
-Additional	446.	O’Casey uses ............. as a tool to create humor throughout the play:
+Additional	446.	O'Casey uses ............. as a tool to create humor throughout the play:
 (A)Irony(B)Suspense(C)Tragedy(D)Symbolism
-Additional	447.	Lizzie’s reaction to Darry’s failure in housework can best be described us ...............:
+Additional	447.	Lizzie's reaction to Darry's failure in housework can best be described us ...............:
 (A)Disappointed(B)Amused(C)Indifferent(D)Angry
-Additional	448.	Darry’s assumption that he could do the housework as well as Lizzie is an example of .........:
+Additional	448.	Darry's assumption that he could do the housework as well as Lizzie is an example of .........:
 (A)Humility(B)Pride(C)Cooperation(D)Realism
-Additional	449.	Darry’s struggle with housework is an example of ...............:
+Additional	449.	Darry's struggle with housework is an example of ...............:
 (A)A comedy of errors(B)A tragic misunderstanding(C)A heroic act(D)A moral dilemma
-Additional	450.	The theme of ............... is central to the play’s message about relationships:
+Additional	450.	The theme of ............... is central to the play's message about relationships:
 (A)Revenge(B)Equality(C)Independence(D)Sacrifice
 Additional	451.	What was Darry doing at the beginning of the scene:
 (A)Cooking(B)Sleeping(C)Shaving(D)Cleaning
@@ -959,7 +959,7 @@ Additional	472.	What setting did Barry change the gramophone to:
 (A)Off(B)Fast(C)Medium(D)Slow
 Additional	473.	What clothing did Darry suggest for proper exercise:
 (A)Vest(B)Shorts(C)Robe(D)Overalls
-Additional	474.	What was Darry’s main complaint during fast-pace exercise:
+Additional	474.	What was Darry's main complaint during fast-pace exercise:
 (A)It was boring(B)It was painful(C)It was too slow(D)It was too quick
 Additional	475.	Who kept rhythm better, according to the play:
 (A)Darry(B)Barry(C)Neither(D)Both A and B
@@ -980,7 +980,7 @@ Additional	482.	What does Darry do right after the song ends:
 Additional	483.	What time does the Town Hall clock strike:
 (A)Eight(B)Nine(C)Ten(D)Elven
 Additional	484.	Why does Darry suddenly rush to work:
-(A)He’s late for dinner(B)Lizzie dared him(C)The house is dirty(D)Barry reminded him
+(A)He's late for dinner(B)Lizzie dared him(C)The house is dirty(D)Barry reminded him
 Additional	485.	What does Barry advise Darry to do:
 (A)Skip the work(B)Take it quietly(C)Ask for help(D)Clean faster
 Additional	486.	What item fails to work properly again:
@@ -989,7 +989,7 @@ Additional	487.	What task does Darry start after wearing the overall:
 (A)Cooking(B)Dusting(C)Washing delf(D)Sewing
 Additional	488.	What happens when Darry opens the clock:
 (A)It ticks(B)Spring flies out(C)It lights up(D)Water spills
-Additional	489.	What insult does Darry use for Barry’s clumsiness:
+Additional	489.	What insult does Darry use for Barry's clumsiness:
 (A)Cow-handed(B)Monkey-eyed(C)Gorilla hands(D)Cat-footed
 Additional	490.	What does Darry ask Barry to do while he washes:
 (A)Clean the floor(B)Dry the dishes(C)Dust the shelves(D)Boil water
@@ -1009,7 +1009,7 @@ Additional	497.	What crashed while Barry was upstairs:
 (A)A chair(B)A clock(C)A washstand(D)A lamp
 Additional	498.	Why did Darry cell Barry after the crash:
 (A)A saint(B)A danger(C)A genius(D)A monkey
-Additional	499.	What hurt Barry’s hand:
+Additional	499.	What hurt Barry's hand:
 (A)Nails(B)A broken jug(C)Razor blades(D)Fireplace
 Additional	500.	What was Barry searching for after getting hurt:
 (A)Bandages(B)Razor(C)Old rag(D)A glove
@@ -1031,7 +1031,7 @@ Additional	508.	What did Barry suddenly run toward:
 (A)The fireplace(B)The shed(C)The oil drum(D)The rope
 
 
-question and ans
+-> question and answers
 1.1 Khatam-un-Nabiyeen Hazrat Muhammad خاتم النبین ﷺ
 1.	Reflect on the lasting legacy of Rasoolullah ( خاتم النبین ﷺ) as mentioned in the text. How does his ( خاتم النبین ﷺ) life and mission continue to inspire people across different cultures and societies today?
 Exercise
@@ -1060,13 +1060,13 @@ Additional
 Exercise
 13.	Discuss the contrast he draws between the militant spirit of pre-independence days and the constructive spirit required in a sovereign state. Why is the latter more challenging?
 Exercise
-14.	Discuss how two of the speaker's main ideas youth’s responsibility and economic self-reliance—interact with one another. How does this interaction help reinforce the overall message of the text? Use at least two textual references.
+14.	Discuss how two of the speaker's main ideas youth's responsibility and economic self-reliance—interact with one another. How does this interaction help reinforce the overall message of the text? Use at least two textual references.
 Exercise
 15.	Explain the significance of the speaker's criticism of the colonial education system. What mindset did it create among students?
 Exercise
 16.	Why does Quaid-e-Azam discourage the pursuit of government service as the sole ambition of graduates? What problems does he foresee with this trend?
 Exercise
-17.	What does Quaid-e-Azam mean when he says that freedom does not mean license’? Explain in your own words.
+17.	What does Quaid-e-Azam mean when he says that freedom does not mean license'? Explain in your own words.
  
 
 Exercise
@@ -1124,7 +1124,7 @@ Exercise
 Exercise
 43.	What impact do the words like “tension,” “critical,” and “overloaded” (Section 4) have on the tone of the narrative? How does the author's choice of language enhance the urgency and drama of the events?
 Exercise
-44.	What would be the impact if "Team Moon" had focused solely on the astronauts’ perspectives instead of highlighting the contributions of all 400,000 people involved? How would this change the narrative's message?
+44.	What would be the impact if "Team Moon" had focused solely on the astronauts' perspectives instead of highlighting the contributions of all 400,000 people involved? How would this change the narrative's message?
 Exercise
 45.	What is the author's purpose in highlighting the lesser-known contributors to Apollo 11 (Section 6)? How does this focus challenge the traditional narrative of space missions that often centres solely on astronauts?
 Exercise
@@ -1243,19 +1243,19 @@ Additional
 100.	Why is education and awareness important for improving water access and quality?
 Additional
 9.1 Freedom
-101.	Whose perspective is the poem written from? How does this perspective influence the poem’s message?
+101.	Whose perspective is the poem written from? How does this perspective influence the poem's message?
 Exercise
 102.	How does Langston Hughes criticise those who believe in gradual change for freedom?
 Exercise
-103.	Why does the poet reject the idea of “tomorrow’s bread”?
+103.	Why does the poet reject the idea of “tomorrow's bread”?
 Exercise
-104.	Do you agree with the poet’s view that freedom should not be postponed? Why or why not? Support your answer with examples.
+104.	Do you agree with the poet's view that freedom should not be postponed? Why or why not? Support your answer with examples.
 Exercise
-105.	If you were in the poet’s position, how would you express your demand for freedom? Write a short paragraph.
+105.	If you were in the poet's position, how would you express your demand for freedom? Write a short paragraph.
 Exercise
 106.	In the first stanza, Hughes states that freedom will not come through “compromise and fear.” Why do you think the poet uses these words specifically? What might this say about his opinion on the current political or social climate at the time the poem was written?
 Exercise
-107.	The poem includes several contrasts between the speaker’s view on freedom and the more passive stance of others (e.g., “Let things take their course.”). How does this contrast add to the power of the speaker’s argument for immediate action?
+107.	The poem includes several contrasts between the speaker's view on freedom and the more passive stance of others (e.g., “Let things take their course.”). How does this contrast add to the power of the speaker's argument for immediate action?
 Exercise
 108.	Find an example of repetition, enjambment, and a metaphor in the poem. Explain how each of these literary devices contributes to the overall meaning and impact of the poem.
 Exercise
@@ -1266,7 +1266,7 @@ Exercise
 Exercise
 111.	How does Khipil's character evolve from the start of the story to the end? Does he become more fearful, defiant, or resigned? Provide examples.
 Exercise
-112.	How does the setting of an unfinished palace function symbolically to reflect Khipil’s incompetence and the consequences of idle talk?
+112.	How does the setting of an unfinished palace function symbolically to reflect Khipil's incompetence and the consequences of idle talk?
 Exercise
 113.	Shahpesh uses a metaphor about the farm servant who failed to sow seeds.What does this metaphor reveal about his perspective on Khipil's work?
 Exercise
@@ -1288,7 +1288,7 @@ Additional
 Additional
 122.	Describe the state of the palace building site when Shahpesh first visited.
 Additional
-123.	How long did the construction of Shahpesh’s palace linger?
+123.	How long did the construction of Shahpesh's palace linger?
 Additional
 124.	What was Khipil doing when Shahpesh came to inspect the site?
 Additional
@@ -1301,9 +1301,9 @@ Additional
 128.	What did Shahpesh do to punish Khipil under the pretence of honour?
 Additional
 11.1 Those Winter Sundays
-129.	What do you think is Robert Hayden’s attitude towards the father’s sacrifices in the poem?
+129.	What do you think is Robert Hayden's attitude towards the father's sacrifices in the poem?
 Exercise
-130.	How does the speaker’s viewpoint change from childhood to adulthood? Support your answer with evidence from the text.
+130.	How does the speaker's viewpoint change from childhood to adulthood? Support your answer with evidence from the text.
 Exercise
 131.	Do you think the poet is critical of his younger self? Why or why not?
 Exercise
@@ -1340,14 +1340,14 @@ Additional
 Additional
 147.	How do Al-powered communication tools help people stay connected?
 Additional
-13.1 Ruba’iyat
+13.1 Ruba'iyat
 148.	What does Allama Muhammad Iqbal mean by describing faith as being “God-drunk”?
 Exercise
 149.	Why does the poet claim that having no faith “is worse than slavery”?
 Exercise
-150.	How does Allama Muhammad Iqbal contrast “music of strange lands” with Islam’s fire?
+150.	How does Allama Muhammad Iqbal contrast “music of strange lands” with Islam's fire?
 Exercise
-151.	What phrases show Allama Muhammad Iqbal’s view of European civilization as spiritually empty?
+151.	What phrases show Allama Muhammad Iqbal's view of European civilization as spiritually empty?
 Exercise
 152.	How does the poet portray the spiritual condition of contemporary Muslims?
 Exercise
@@ -1368,17 +1368,17 @@ Additional
 Exercise
 160.	Do you think the play suggests that certain skills are gender-specific, or does it emphasize the importance of experience over gender? Explain your answer.
 Exercise
-161.	How does Darry’s overconfidence serve as tension for the audience? What might the playwright be trying to teach about pride and humility?
+161.	How does Darry's overconfidence serve as tension for the audience? What might the playwright be trying to teach about pride and humility?
 Exercise
 162.	Do you think the farcical elements of the play are effective in conveying a deeper message? Why or why not?
 Exercise
 163.	The play uses humour to explore serious themes. Do you believe that comedy is an effective medium for addressing social issues? Why or why not?
 Exercise
-164.	How might the play’s themes be relevant to contemporary audiences? Are the issues raised still present in today’s society?
+164.	How might the play's themes be relevant to contemporary audiences? Are the issues raised still present in today's society?
 Exercise
 165.	What role does the humour play in the plot? How does it contribute to the plot and character development?
 Exercise
-166.	What is the significance of Darry’s mistakes and failures in the play?
+166.	What is the significance of Darry's mistakes and failures in the play?
 Exercise
 167.	Have you ever thought something was easy until you tried it?
 Additional
@@ -1390,7 +1390,7 @@ Additional
 Additional
 171.	Who are the two main characters in the play?
 Additional
-172.	What argument starts the play’s conflict?
+172.	What argument starts the play's conflict?
 Additional
 173.	What does Darry try to do first when Lizzie leaves?
 Additional
@@ -1400,7 +1400,7 @@ Additional
 Additional
 176.	How does Darry injure himself?
 Additional
-177.	What is Lizzie’s reaction when she returns home?
+177.	What is Lizzie's reaction when she returns home?
 Additional
 178.	What kind of play is The End of the Beginning?
 Additional
@@ -1408,13 +1408,13 @@ Additional
 Additional
 180.	What dose Darry learn by the end of the play?
 Additional
-181.	What is the play’s tone?
+181.	What is the play's tone?
 Additional
 182.	What is the irony in the title The End of the Beginning?
 Additional
 183.	How does the play end?
 Additional
-184.	What is Lizzie’s attitude throughout the play?
+184.	What is Lizzie's attitude throughout the play?
 Additional
 185.	Why is the play considered a comedy?
 Additional
@@ -1430,13 +1430,13 @@ Additional
 Additional
 191.	What physical mishaps does Darry face during the play?
 Additional
-192.	What is Lizzie’s response when she sees the mess Darry has made?
+192.	What is Lizzie's response when she sees the mess Darry has made?
 Additional
 193.	What is the tone of the play?
 Additional
 194.	What type of play is The End of the Beginning?
 Additional
-195.	How does O’Casey use stage directions in the play?
+195.	How does O'Casey use stage directions in the play?
 Additional
 196.	When was The End of the Beginning written?
 Additional
@@ -1444,7 +1444,7 @@ Additional
 Additional
 198.	What are the key features of the kitchen described in the passage?
 Additional
-199.	What items are placed near the dresser and what does it show about the room’s usage?
+199.	What items are placed near the dresser and what does it show about the room's usage?
 Additional
 200.	What type of lighting and setting is described in the room?
 Additional
@@ -1460,13 +1460,13 @@ Additional
 Additional
 206.	What complaint does Darry make while shaving?
 Additional
-207.	How does Lizzie respond to Darry’s complaint about cold water?
+207.	How does Lizzie respond to Darry's complaint about cold water?
 Additional
 208.	What does Darry claim about his ability to manage housework?
 Additional
 209.	What does Lizzie say would happen if Darry did Half her work?
 Additional
-210.	How does Darry react to Lizzie’s idea of switching roles?
+210.	How does Darry react to Lizzie's idea of switching roles?
 Additional
 211.	What task does Lizzie suggest Darry should finish?
 Additional
@@ -1474,7 +1474,7 @@ Additional
 Additional
 213.	What daily tasks does Lizzie list to prove her workload?
 Additional
-214.	What does Darry say to mock Lizzie’s duties?
+214.	What does Darry say to mock Lizzie's duties?
 Additional
 215.	How does Lizzie threaten to prove her point?
 Additional
@@ -1486,7 +1486,7 @@ Additional
 Additional
 219.	What does Lizzie accuses Darry of doing secretly?
 Additional
-220.	What shocking fact does Lizzie reveal about Alice’s life?
+220.	What shocking fact does Lizzie reveal about Alice's life?
 Additional
 221.	What parting warning does Lizzie give Darry about Alice?
 Additional
@@ -1502,13 +1502,13 @@ Additional
 Additional
 227.	What difficulty does Darry face with the slowed-down music?
 Additional
-228.	Who enters the room during Darry’s awkward exercise session?
+228.	Who enters the room during Darry's awkward exercise session?
 Additional
 229.	How does Barry react upon entering and seeing Darry?
 Additional
 230.	What explanation does Darry give Barry for his behaviour?
 Additional
-231.	What critique does Barry give about Darry’s exercise rhythm?
+231.	What critique does Barry give about Darry's exercise rhythm?
 Additional
 232.	What does Darry ask Barry to do with the gramophone?
 Additional
@@ -1524,7 +1524,7 @@ Additional
 Additional
 238.	What does Darry Barry of doing during the workout?
 Additional
-239.	How does Barry respond to Darry’s accusation of being off-beat?
+239.	How does Barry respond to Darry's accusation of being off-beat?
 Additional
 240.	What excuse does Darry give for missing the beat?
 Additional
@@ -1542,9 +1542,9 @@ Additional
 Additional
 247.	What does Darry accuse Barry of doing instead of helping?
 Additional
-248.	How does Barry defend himself against Darry’s accusations?
+248.	How does Barry defend himself against Darry's accusations?
 Additional
-249.	What is Darry’s reaction to Barry’s defense about the mandolin?
+249.	What is Darry's reaction to Barry's defense about the mandolin?
 Additional
 250.	What activity was Darry doing when Barry entered the room?
 Additional
@@ -1562,9 +1562,9 @@ Additional
 Additional
 257.	What happens as Barry tries to wind the clock?
 Additional
-258.	How does Darry react to Barry’s handing of the clock?
+258.	How does Darry react to Barry's handing of the clock?
 Additional
-259.	What does Darry say about Barry’s clumsiness?
+259.	What does Darry say about Barry's clumsiness?
 Additional
 260.	Why does Darry criticize Barry while drying dishes?
 Additional
@@ -1576,7 +1576,7 @@ Additional
 Additional
 264.	What accident happens to Darry outside the house?
 Additional
-265.	How does Barry react to Darry’s injury?
+265.	How does Barry react to Darry's injury?
 Additional
 266.	What does Darry say about waiting for ice?
 Additional
@@ -1588,7 +1588,7 @@ Additional
 Additional
 270.	How does Barry downplay the noise he caused upstairs?
 Additional
-271.	What does Darry say about Barry’s tendency to case damage?
+271.	What does Darry say about Barry's tendency to case damage?
 Additional
 272.	What does Barry say about his improved vision in the dark?
 Additional
@@ -1596,17 +1596,17 @@ Additional
 Additional
 274.	How does Barry express his anger after getting hurt?
 Additional
-275.	How does Darry react to Barry’s injury?
+275.	How does Darry react to Barry's injury?
 Additional
 276.	What complaint does Barry make about the injury?
 Additional
-277.	What insulting comment doe Darry makes about Barry’s music?
+277.	What insulting comment doe Darry makes about Barry's music?
 Additional
 278.	How does Barry ask Darry to help with the injury?
 Additional
 279.	What task does Darry give Barry after tying the bandage?
 Additional
-280.	What does Barry report about the heifer’s condition?
+280.	What does Barry report about the heifer's condition?
 Additional
 281.	What does Barry point out about the scattered potatoes?
 Additional
@@ -1634,7 +1634,7 @@ Additional
 Additional
 293.	What is the result of Darry fixing the new bulb?
 Additional
-294.	How does Darry respond to Barry’s I told you so attitude?
+294.	How does Darry respond to Barry's I told you so attitude?
 Additional
 295.	What problem does Barry face while lighting the lamp?
 Additional
@@ -1644,21 +1644,21 @@ Additional
 Additional
 298.	What accident happens in the shed Barry looks for a lamp?
 Additional
-299.	How does Darry react to Barry’s accident din the shed?
+299.	How does Darry react to Barry's accident din the shed?
 Additional
 300.	Why does Barry say he climbed the shelves despite the risk?
 Additional
 301.	What problem does Barry mention after the shelves fall?
 Additional
-302.	What new disaster strikes while they’re dealing with the lamp issue?
+302.	What new disaster strikes while they're dealing with the lamp issue?
 Additional
 303.	What causes Darry to lose control of the oil drum?
 Additional
-304.	What chaos follows Darry’s oil crisis?
+304.	What chaos follows Darry's oil crisis?
 Additional
 
 
-tick correct form of verb
+-> tick correct form of verb
 Present Indefinite
 Past Papers	1.	The sun _____ in the east:
 (A)Rise(B)Rises(C)Has rise(D)Is rise
@@ -1709,7 +1709,7 @@ Past Papers	23.	So you _____ to school every day:
 Past Papers	24.	Salma _____ interest in studies:
 (A)Take(B)Takes(C)Taking(D)Has taken
 Past Papers	25.	Charity _____ at home:
-(A)Begging’s(B)Bagan(C)Would begin(D)Begin
+(A)Begging's(B)Bagan(C)Would begin(D)Begin
 Past Papers	26.	He _____ us English daily:
 (A)Teach(B)Teaches(C)Had taught(D)Will teach
 Past Papers	27.	They _____ to sleep at ten:
@@ -1812,14 +1812,15 @@ Past Papers	75.	I _____ here for two hours:
 (A)Wait(B)Have been waiting(C)Waits(D)Waiting
 Past Papers	76.	She _____ in this office for seven years:
 (A)Is working(B)Has not seen(C)Have not seen(D)Will not seen
-Present Perfect Tense
+Present Continuous Tense
 Past Papers	77.	I _____ you since Monday:
 (A)Did not use(B)Has not seen(C)Have not seen(D)Will not seen
-Present Perfect Continuous Tense
+Present Perfect Tense
 Past Papers	78.	I am tired, because I have been _____:
 (A)Running(B)Run(C)Runs(D)Ran
 Past Papers	79.	I have been _____ for two years:
 (A)Read(B)Reads(C)Readied(D)ReadingMultiple Choice Correct Answers
+Present Perfect Continuous Tense
 Past Indefinite Tense
 Past Papers	80.	He _____ twenty minutes ago:
 (A)Leave(B)Left(C)Leaves(D)Leaving
@@ -1951,7 +1952,7 @@ Past Papers	141.	I will _____ you next week:
 (A)Visit(B)Visited(C)Have visited(D)Has visited
 Past Papers	142.	I shall _____ him next Monday:
 (A)Sees(B)See(C)Saw(D)Seen
-Past Papers	143.	I _____ this exercise in an hour’s time:
+Past Papers	143.	I _____ this exercise in an hour's time:
 (A)Finish(B)Shall finish(C)Have finished(D)Had finished
 Past Papers	144.	They _____ their work by tomorrow:
 (A)Will complete(B)Completed(C)Had completed(D)Will have completed
@@ -2003,8 +2004,9 @@ Past Papers	166.	If she had seen me, she _____ greeted me:
 (A)Will have(B)Would have(C)Would(D)Would has
 Past Papers	167.	I _____ writing this letter by June next year:
 (A)Finish(B)Finishing(C)Finished(D)Shall have finished
+Future Perfect Continuous Tense
 
-Letters 
+-> Letters 
 
 Letters
 1.	Write a letter to your younger brother advising him to give up smoking and pay heed to studies.
@@ -2068,7 +2070,7 @@ Additional
 30.	Write a letter to your friend condoling him on the death of his father.
 Additional
 
-stories
+-> stories
 Stories
 1.	Do good have good
 2.	A rolling stone gathers no moss
@@ -2100,17 +2102,17 @@ Stories
 28.	God helps those who help themselves
 
 
-summary
+-> summary
 3.1 A Bird Came Down the Walk
 1.	A Bird Came Down the Walk
 9.1 Freedom
 2.	Freedom
 11.1 Those Winter Sundays
 3.	Those Winter Sundays
-13.1 Ruba’iyat
-4.	Ruba’iyat
+13.1 Ruba'iyat
+4.	Ruba'iyat
 
-words into sentences
+-> words into sentences
 
 1.1 Khatam-un-Nabiyeen Hazrat Muhammad خاتم النبین ﷺ
 1.	acumen
@@ -2179,7 +2181,7 @@ words into sentences
 59.	Transform
 
 
-translate into urdu para
+-> translate into urdu para
 1.1 Khatam-un-Nabiyeen Hazrat Muhammad خاتم النبین ﷺ
 1.	In the south-western region of Hijaz, surrounded by arid hills, lies the sacred city of Makkah  the birthplace of Hazrat Muhammad ( خاتم النبین ﷺ), the last Rasool of Allah . Born in 571 A.D. into the noble and highly esteemed clan of Quraish, Rasoolullah ( خاتم النبین ﷺ), Known as the benefactor of humanity, appeared at a time when the world was engulfed in ignorance and moral decay. The social fabric of society was torn by idolatry, tribal arrogance, and widespread injustice. Humanity appeared to be silently yearning for the dawn of enlightenment and divine guidance.
 2.	The early years of Rasoolullah ( خاتم النبین ﷺ) were marked by profound personal loss.His ( خاتم النبین ﷺ) father, Hazrat Abdullah, passed away before his birth, and his mother, Hazrat Amina, died when he ( خاتم النبین ﷺ) was only six years old. Orphaned at such a tender age, he ( خاتم النبین ﷺ) was taken in by his grandfather, Hazrat Abdul Muttalib, who lovingly cared for him until his own passing away two years later. Thereafter, Hazrat Abu Talib, his paternal uncle, took responsibility for his upbringing and remained a steadfast guardian throughout his youth.
@@ -2230,7 +2232,7 @@ triumph was not just NASA's, but belonged to everyengineer, scientist, seamstres
 40.	In the end, Apollo 11 wasn't just about one small step on the Moon.It was about the giant leaps made by a team of 400,000 people who proved that through teamwork,dedication, and a shared vision, we can achieve the impossibles.
 5.1 Impact of Global Warming on Pakistan
 41.	The Sustainable Development Goals (SDGs), established by the United Nations in 2015, include 17 global objectives aimed at fostering a better and more sustainable future. Among these, SDG 13: Climate Action is particularly relevant for Pakistan, a country that is highly susceptible to the impacts of global warming. Pakistan's vulnerability, is largely due to its diverse geography, which includes high mountain ranges, vast plainsand an exténsive coastline. 
-42.	This a geographic diversity makes the, country,particularly prone to a wide range of climate-related risks, including glacial melt, extreme heat, and sea-level rise. Moreover, Pakistan's heavy dependence’ on agriculture, a sector highly sensitive to changes in temperature and precipitation, exacerbates the country's vulnerability to climate change.
+42.	This a geographic diversity makes the, country,particularly prone to a wide range of climate-related risks, including glacial melt, extreme heat, and sea-level rise. Moreover, Pakistan's heavy dependence' on agriculture, a sector highly sensitive to changes in temperature and precipitation, exacerbates the country's vulnerability to climate change.
 43.	The rapid urbanization of cities like Karachi and Lahore, coupled with inadequate infrastructure, further increases the risk of climate-induced disasters such as heatwaves and flooding. Compounding these challenges is the country's limited financial and technical resources, which hinder its ability to effectively mitigate and adapt to climate change. Finally, with a population exceeding 220 million, Pakistan faces immense pressure on its resources and infrastructure, particularly in the face of ongoing climate changes.
 44.	Given Pakistan's geographical diversity and rapid urbanization, the country has seen a significant rise in average temperatures over the past few decades. This trend is primarily due to increased global greenhouse gas emissions, which trap heat in the Earth's atmosphere. As a result, Pakistan is experiencing more frequent and intense heatwaves, particularly in urban areas like Karachi, where rapid growth has outpaced infrastructure development. These rising temperatures are not just a product of global patterns but are exacerbated by local factors such as urban heat islands, where densely built-up areas retain more heat.
 45.	In 2022, Jacobabad recorded a temperature of 51o C (124o F), among the highest in the world (Dawn,2022). Such extreme heat poses severe health risks, as evidenced by the heatwave in Karachi in 2015, which resulted in over 1,200 death (BBC News, 2015). The primary cause of these heatwaves is the enhanced greenhouse effect due to increased concentrations of greenhouse gases. To combat these challenges, Pakistan has introduced the Heatwave Management Plan, including early warning systems and public awareness campaigns, as part of its efforts to align with SDG 13.
@@ -2311,16 +2313,16 @@ shortages and food insecurity. The increased frequency of these extreme weather 
 114.	By following these principles, society can harness the power of Al for good while avoiding its potential harms. As technology continues to advance, a commitment to ethical Al development is essential for ensuring that it serves humanity responsibly.
 14.1 The End of the Beginning
 115.	A big, comfortable kitchen. Steep stairs, almost like a ladder, leading to upper room, top right. Fireplace right. Some chairs, one heavy, with rubber castors. Small settee, and table. Chest of drawers, left, on top of which stands a gramophone. Door back, and to left of door a window. To right of door, a dresser, on which is, as well as delf, a large clock of the alarm type.
-116.	Lizzie: [freely.] I’m always challenging you to change places for a few hours, but you won’t. I’d show you what a sieve of a job you have here, while I’m sweating out in the fields.
-Darry: I won’t finish me mowing of the meadow. I’ll take you only half an hour or so, there’s plenty of light in the sky still.
-117.	Lizzie: In a temper]. What Alice Lanigan! The Alice Lanigan I caught you chattering to yesterday, when you should have been mowing the meadow. The Alice Lanigan, that’s who’s goading you n’ riling you about the little time I do the house. The Alice Lanigan that’s goading you n’ the idea that if you were a little slimmer round the belly, you’d be the man all right, able to do display more ad defectively. The Alice Lanigan that’s after marrying off her assembly for self together as if she was a girl in her teens, deliberately moulding her body.
-118.	Lizzie: [while she is putting a broad-brimmed hat on her head, pulling a pair of old gloves on to her hands, and taking down a whip hanging from a nail in the wall]. I’m telling you it’s a dangerous thing to associate with Alice Lanigan, even with a priest giving introductions.
+116.	Lizzie: [freely.] I'm always challenging you to change places for a few hours, but you won't. I'd show you what a sieve of a job you have here, while I'm sweating out in the fields.
+Darry: I won't finish me mowing of the meadow. I'll take you only half an hour or so, there's plenty of light in the sky still.
+117.	Lizzie: In a temper]. What Alice Lanigan! The Alice Lanigan I caught you chattering to yesterday, when you should have been mowing the meadow. The Alice Lanigan, that's who's goading you n' riling you about the little time I do the house. The Alice Lanigan that's goading you n' the idea that if you were a little slimmer round the belly, you'd be the man all right, able to do display more ad defectively. The Alice Lanigan that's after marrying off her assembly for self together as if she was a girl in her teens, deliberately moulding her body.
+118.	Lizzie: [while she is putting a broad-brimmed hat on her head, pulling a pair of old gloves on to her hands, and taking down a whip hanging from a nail in the wall]. I'm telling you it's a dangerous thing to associate with Alice Lanigan, even with a priest giving introductions.
 119.	Darry: Lizzie again!
 [He catches sight of the gramophone, looks at it, thinks for a second, goes over to the chest of drawers, takes some records from behind and lays one on the disc of the gramophone. He takes off his waistcoat, loosens his braces, stands stiff, strokes his thighs, pats his belly, and tries to push it back a little. He starts the gramophone going, runs to the centre of the room, and lies down on the broad of his back.
 120.	Gramophone: “Ready back, hands behind the head, feet together - are you ready? Bend the right knee, draw it into the abdomen, towards the chest - commence!”
-[Darry is too slow, or the gramophone is too quick, for he can’t keep up with the time of the music. When he finds that he is behind the time of the music, Darry increases his speed by partial performance of the movements, and so goes into touch with the time, but presently, being out of wind, he is out of time again by a beat or two. He climbs stiffly to his feet, goes over to the gramophone, and puts the indicator to “Slow”.]
+[Darry is too slow, or the gramophone is too quick, for he can't keep up with the time of the music. When he finds that he is behind the time of the music, Darry increases his speed by partial performance of the movements, and so goes into touch with the time, but presently, being out of wind, he is out of time again by a beat or two. He climbs stiffly to his feet, goes over to the gramophone, and puts the indicator to “Slow”.]
 
-poem stanzas
+-> poem stanzas
 3.1 A Bird Came Down the Walk
 1.	A Bird came down the Walk
 He did not know I  saw
@@ -2376,7 +2378,7 @@ The birds of the bush,
 
 Sing louder around,
 
-To the bells’ cheerful sound.
+To the bells' cheerful sound.
 
 While our sports shall be seen
 
@@ -2394,7 +2396,7 @@ They laugh at our play,
 
 And soon they all say.
 
-‘Such, such were the joys.
+'Such, such were the joys.
 
 When we all girls & boys,
 
@@ -2438,8 +2440,8 @@ Additional
 11.	I tire so of hearing people say,
 let things take their course.
 Tomorrow is another day.
-I do not need my freedom when I’m dead.
-I cannot live on tomorrow’s bread.
+I do not need my freedom when I'm dead.
+I cannot live on tomorrow's bread.
 Additional
 12.	Freedom
 Is a strong seed
@@ -2470,9 +2472,9 @@ made
 banked fires blaze. No one ever
 thanked him.
 Additional
-16.	I’d wake and hear the cold
+16.	I'd wake and hear the cold
 splintering, breaking.
-When the rooms were warm, he’d call,
+When the rooms were warm, he'd call,
 Additional
 17.	and slowly I would rise and dress,
 fearing the chronic angers of that
@@ -2482,26 +2484,26 @@ Additional
 who had driven out the cold
 and polished my good shoes as well.
 What did I know, what did I know
-of love’s austere and lonely offices?
+of love's austere and lonely offices?
 Additional
-13.1 Ruba’iyat
+13.1 Ruba'iyat
 19.	Faith is like Abraham at the stake; to be
 Self-honoring and God-drunk, is faith. Hear me.
-You whom this age’s way so captivate!
+You whom this age's way so captivate!
 To have no faith is worse than slavery.
 Additional
-20.	Music of strange lands with Islam’s fire blends,
-On which the nation’s harmony depends;
+20.	Music of strange lands with Islam's fire blends,
+On which the nation's harmony depends;
 Empty of concord is the soul of Europe,
 Whose civilization to no Makkah bends.
 Additional
-21.	Love’s madness has departed: in
-The Muslim’s veins the blood runs thin;
+21.	Love's madness has departed: in
+The Muslim's veins the blood runs thin;
 Ranks broken, hearts perplexed, prayers cold,
 No feeling deeper than the skin.
 Additional
 
-Applications
+-> Applications
 Applications
 1.	Write an application to the head of the institute to be the chief guest on the “Sport Day”.
 Past Papers
@@ -2539,7 +2541,7 @@ Past Papers
 Past Papers
 
 
-words meanings
+-> words meanings
 1.1 Khatam-un-Nabiyeen Hazrat Muhammad خاتم النبین ﷺ
 1.	acumen
 2.	alliance
@@ -2588,18 +2590,7 @@ words meanings
 42.	testament
 43.	trajectory
 
-pair of words
-8.1 Clean Water
-1.	stationery,stationary
-2.	than,then
-3.	moral,morale
-4.	naval,navel
-5.	elicit,illicit
-6.	wander,wonder
-7.	latest,last
-8.	now,know
-9.	patience,patient
-10.	adopt,adapt
+-> Pair of words
 Pair of words
 11.	Able; Capable
 12.	Ability; Capacity
@@ -2968,7 +2959,7 @@ Pair of words
 375.	Yarn; Yearn
 376.	Zealous; Devotee
 
-punctuate the para
+-> punctuate the paragraphs
 1.1 Khatam-un-Nabiyeen Hazrat Muhammad خاتم النبین ﷺ
 1.	in the southwestern region of hijaz surrounded by arid hills lies the sacred city of makkah the birthplace of hazrat muhammad (خَاتَمُ النَّبِییّنَ ﷺ) the last rasool of allah (سُبْحانَهُ وتَعَالَى) born in 571 ad into the noble and highly esteemed clan of quraish rasoolullah (خَاتَمُ النَّبِییّنَ ﷺ) known as the benefactor of humanity appeared at a time when the world was engulfed in ignorance and moral decay
 2.	the social fabric of society was torn by idolatry tribal arrogance and widespread injustice humanity appeared to be silently yearning for the dawn of enlightenment and divine guidance
@@ -2977,18 +2968,18 @@ punctuate the para
 5.	despite the challenges of orphanhood rasoolullah (خَاتَمُ النَّبِییّنَ ﷺ) grew into a young man of exceptional character he (خَاتَمُ النَّبِییّنَ ﷺ) was known for his truthfulness humility generosity and sense of justice
 6.	his (خَاتَمُ النَّبِییّنَ ﷺ) interactions reflected integrity and gentleness and he engaged in trade with honesty and fairness these qualities earned him universal respect among the people of makkah who bestowed upon him the titles al sadiq the truthful and al amin the trustworthy
 7.	several events from his (خَاتَمُ النَّبِییّنَ ﷺ) early adulthood illustrate his (خَاتَمُ النَّبِییّنَ ﷺ) noble character and concern for justice one such incident was his (خَاتَمُ النَّبِییّنَ ﷺ) participation in hiff al fudul a pact formed by the tribes of makkah to defend the oppressed and uphold justice
-8.	years later rasoolullah would speak fondly of this alliance declaring that even after the advent of islam he (خَاتَمُ النَّبِییّنَ ﷺ) would still honour such a cause another notable moment was his (خَاتَمُ النَّبِییّنَ ﷺ) wise arbitration during the reconstruction of the ka’bah
+8.	years later rasoolullah would speak fondly of this alliance declaring that even after the advent of islam he (خَاتَمُ النَّبِییّنَ ﷺ) would still honour such a cause another notable moment was his (خَاتَمُ النَّبِییّنَ ﷺ) wise arbitration during the reconstruction of the ka'bah
 9.	a significant chapter in the personal life of rasoolullah (خَاتَمُ النَّبِییّنَ ﷺ) began with his (خَاتَمُ النَّبِییّنَ ﷺ) marriage to hazrat khadijah (رضی اللہ تعالیٰ عنہا) a woman of outstanding virtue intellect and business acumen she (رضی اللہ تعالیٰ عنہا) had inherited her fathers prosperous trade and managed it with great success
 10.	upon hearing of the integrity of rasoolullah (خَاتَمُ النَّبِییّنَ ﷺ) in business dealings she (رضی اللہ تعالیٰ عنہا) entrusted him (خَاتَمُ النَّبِییّنَ ﷺ) with a trade expedition to syria deeply impressed by his honesty graceful conduct and upright character she (رضی اللہ تعالیٰ عنہا) later proposed marriage
 11.	as rasoolullah (خَاتَمُ النَّبِییّنَ ﷺ) approached the age of forty he (خَاتَمُ النَّبِییّنَ ﷺ) became deeply saddened and concerned by the moral decay and injustice that prevailed in makkan society he (خَاتَمُ النَّبِییّنَ ﷺ) would frequently retreat to the cave of hira seeking solitude and reflection
 12.	it was during one of these meditative retreats in the month of ramadan that hazrat jibraeel (علیہ السلام) appeared before him (خَاتَمُ النَّبِییّنَ ﷺ) with the first revelation the angel said read the rasoolullah (خَاتَمُ النَّبِییّنَ ﷺ) responded i cannot read
-13.	this moment marked the beginning of rasoolullah’s (خَاتَمُ النَّبِییّنَ ﷺ) mission as the last rasool of allah (سُبْحانَهُ وتَعَالَى) the revelation of the qur’an not only brought spiritual awakening but also initiated a radical transformation in arabia
+13.	this moment marked the beginning of rasoolullah's (خَاتَمُ النَّبِییّنَ ﷺ) mission as the last rasool of allah (سُبْحانَهُ وتَعَالَى) the revelation of the qur'an not only brought spiritual awakening but also initiated a radical transformation in arabia
 14.	the call to tauhid belief in the oneness of allah (سُبْحانَهُ وتَعَالَى) challenged deep rooted practices of idolatry class privilege and social injustice it laid the foundations for a society based on truth equality accountability and compassion
 15.	the life of rasoolullah (خَاتَمُ النَّبِییّنَ ﷺ) was never the same again the same quraish who once admired him now became his (خَاتَمُ النَّبِییّنَ ﷺ) staunch opponents they viewed his (خَاتَمُ النَّبِییّنَ ﷺ) message as a threat to their traditions and authority
 16.	the muslims faced relentless persecution economic boycotts and social ostracism despite this rasoolullah (خَاتَمُ النَّبِییّنَ ﷺ) remained unwavered and preached the message of islam with patience wisdom and resilience
 17.	as oppression grew unbearable rasoolullah (خَاتَمُ النَّبِییّنَ ﷺ) was divinely commanded to migrate to madinah this migration known as the hijrah was a decisive turning point in islamic history
 18.	in madinah the first islamic society was established the charter of madinah crafted under the guidance of rasoolullah (خَاتَمُ النَّبِییّنَ ﷺ) introduced principles of governance rooted in civic equality religious freedom and the rule of law
-19.	the growing strength of the muslim community led to several military encounters with the quraish the first major battle badr resulted in a remarkable muslim victory and reinforced the legitimacy of rasoolullah’s (خَاتَمُ النَّبِییّنَ ﷺ) mission
+19.	the growing strength of the muslim community led to several military encounters with the quraish the first major battle badr resulted in a remarkable muslim victory and reinforced the legitimacy of rasoolullah's (خَاتَمُ النَّبِییّنَ ﷺ) mission
 20.	over time further victories followed culminating in the conquest of makkah in 8 ah this event astonishingly bloodless was marked by the exemplary mercy of rasoolullah (خَاتَمُ النَّبِییّنَ ﷺ) who declared general amnesty
 21.	despite enduring years of hostility and persecution he (خَاتَمُ النَّبِییّنَ ﷺ) declared a general amnesty forgiving even his most ardent enemies this unmatched act of compassion transformed the hearts of the people
 22.	it was a moment that truly reflected the quranic description of rasoolullah (خَاتَمُ النَّبِییّنَ ﷺ) and we have not sent you o muhammad (خَاتَمُ النَّبِییّنَ ﷺ) except as a mercy to the worlds surah al anbiya 21107
@@ -3185,7 +3176,7 @@ punctuate the para
 203.	lizzie returned and cried out in horror at the scene while darry indignantly asked why she hadnt held the rope
 
 
-tick correct synonyms
+-> tick correct synonyms
 1.1 Khatam-un-Nabiyeen Hazrat Muhammad خاتم النبین ﷺ
 Exercise	1.	The fabric of society was torn by idolatry, tribal arrogance, and widespread
 injustice?
@@ -3331,7 +3322,7 @@ Additional	70.	Hilf al-Fudual was a noble alliance :
 (A)Union(B)Mission(C)Oath(D)Treaty
 Additional	71.	The Holy Prophet admired Hilf al-Fudul even after the advent of Islam:
 (A)Start(B)Rise(C)Coming(D)Emergence
-Additional	72.	The Holy Prophet gave wise arbitration during the rebuilding of the Ka’bah:
+Additional	72.	The Holy Prophet gave wise arbitration during the rebuilding of the Ka'bah:
 (A)Judgement(B)Suggestion(C)Decision(D)Advice
 Additional	73.	A dispute arose over placing the Hajr-e-Aswad:
 (A)Disagreement(B)Fight(C)Question(D)Argument
@@ -3591,7 +3582,7 @@ Additional	199.	You will fell demoralized if rejected:
 3.1 A Bird Came Down the Walk
 Additional	200.	The bird bit an angleworm :
 (A)Leaf(B)Earthworm(C)Beetle(D)Ant
-Additional	201.	The bird’s eyes looked like frightened beads :
+Additional	201.	The bird's eyes looked like frightened beads :
 (A)Pearls(B)Dust(C)Dots(D)Stones
 Additional	202.	"Like one in danger, Cautious" :
 (A)Careful(B)Clever(C)Fearless(D)Quiet
@@ -3619,7 +3610,7 @@ Additional	213.	The bird hopped sidewise to the wall:
 (A)Walked(B)Ran(C)Jumped(D)Sat
 Additional	214.	The bird glanced with rapid eyes:
 (A)Lazy(B)Bright(C)Wide(D)Fast
-Additional	215.	The bird’s eyes looked like frightened beads:
+Additional	215.	The bird's eyes looked like frightened beads:
 (A)Excited(B)Sleepy(C)Shining(D)Scared
 4.1 Team Moon
 Exercise	216.	"It was the result of years of collaboration, countless late nights...":
@@ -3628,9 +3619,9 @@ Exercise	217.	"For the 400,000 people who had poured their hearts into the missi
 (A)Gave(B)Spilled(C)Stored(D)Defeat
 Exercise	218.	"The world watched in awe" :
 (A)Amazement(B)Boredom(C)Indifference(D)Disgust
-Exercise	219.	"Apollo 11 wasn’t just about one small step on the Moon...":
+Exercise	219.	"Apollo 11 wasn't just about one small step on the Moon...":
 (A)Huge(B)Tiny(C)Large(D)Ordinary
-Exercise	220.	"The triumph was not just NASA’s but belonged to every engineer...":
+Exercise	220.	"The triumph was not just NASA's but belonged to every engineer...":
 (A)Owned(B)Confiscated(C)Borrowed(D)Gave
 Exercise	221.	"Their contribution would forever be etched in history.":
 (A)Written(B)Forgiven(C)Forgotten(D)Erased
@@ -3648,13 +3639,13 @@ Exercise	227.	It highlighted the importance of teamwork:
 (A)Neglected(B)Underrated(C)Emphasized(D)Ignored
 Exercise	228.	The engineers were instrumental in solving the problems:
 (A)Crucial(B)Unimportant(C)Insignificant(D)Delayed
-Exercise	229.	Everyone’s contribution to the mission was equally vital :
+Exercise	229.	Everyone's contribution to the mission was equally vital :
 (A)Unnecessary(B)Critical(C)Passive(D)Optional
 Exercise	230.	Everyone played an essential role in Apollo 11:
 (A)Unnecessary(B)Important(C)Insignificant(D)Unimportant
 Exercise	231.	The challenge was daunting, but the team persisted:
 (A)Inspiring(B)Difficult(C)Simple(D)Easy
-Exercise	232.	Their efforts were a symbol of humanity’s progress:
+Exercise	232.	Their efforts were a symbol of humanity's progress:
 (A)Representation(B)Challenge(C)Problem(D)Idea
 Exercise	233.	Apollo 11s success would not have been possible without the teamwork:
 (A)Likely(B)Uncertain(C)Impossible(D)Achievable
@@ -3702,15 +3693,15 @@ Exercise	254.	As Eagle neared the Moon, alarms suddenly blared :
 (A)Glowed(B)Rang(C)Buzzed(D)Exploded
 Exercise	255.	The flight controllers quickly conferred during the alarm :
 (A)Paused(B)Debated(C)Consulted(D)Waited
-Exercise	256.	Armstrong’s voice crackled through the radio:
+Exercise	256.	Armstrong's voice crackled through the radio:
 (A)Whispered(B)Buzzed(C)Broke(D)Echoed
 Exercise	257.	The mission control room erupted in celebration:
 (A)Quieted(B)Exploded(C)Cheered(D)Shook
 Exercise	258.	Margaret Hamilton was one of the unsung heroes:
 (A)Unknown(B)Missing(C)Forgotten(D)Hidden
-Exercise	259.	Hamilton’s code helped prioritise important tasks:
+Exercise	259.	Hamilton's code helped prioritise important tasks:
 (A)Highlight(B)Rearrange(C)Sort(D)Rank
-Exercise	260.	Hamilton’s foresight saved the mission:
+Exercise	260.	Hamilton's foresight saved the mission:
 (A)Judgment(B)Wisdom(C)Prediction(D)Vision
 Exercise	261.	The code was invaluable during the overload:
 (A)Useful(B)Vital(C)Large(D)Present
@@ -3761,19 +3752,19 @@ Additional	283.	Pakistan has launched various initiatives :
 (A)Problems(B)Failures(C)Mistakes(D)Programs
 Additional	284.	Mangroves act as natural barriers :
 (A)Openings(B)Obstacles(C)Conduits(D)Leaks
-Additional	285.	Pakistan’s natural resources are under threat:
+Additional	285.	Pakistan's natural resources are under threat:
 (A)Challenges(B)Assets(C)Difficulties(D)Failures
 Additional	286.	Pakistan aims for a sustainable future:
 (A)Temporary(B)Strong(C)Short-lived(D)Endurable
-Additional	287.	SDG 13 is relevant to Pakistan’s climate conditions:
+Additional	287.	SDG 13 is relevant to Pakistan's climate conditions:
 (A)Connected(B)Useless(C)Ordinary(D)Distant
-Additional	288.	Climate change increases Pakistan’s vulnerability :
+Additional	288.	Climate change increases Pakistan's vulnerability :
 (A)Weakness(B)Power(C)Security(D)Strength
-Additional	289.	Pakistan’s geography shows great diversity :
+Additional	289.	Pakistan's geography shows great diversity :
 (A)Uniformity(B)Variety(C)Simplicity(D)Sameness
 Additional	290.	Agriculture depends on rainfall and precipitation :
 (A)Wind(B)Fog(C)Moisture(D)Sunlight
-Additional	291.	Climate change exacerbates the country’s risks:
+Additional	291.	Climate change exacerbates the country's risks:
 (A)Reduces(B)Worsens(C)Ends(D)Heals
 Additional	292.	Rapid urbanization affects major cities:
 (A)City growth(B)Desertion(C)Farming(D)Migration
@@ -3831,7 +3822,7 @@ Additional	318.	Climate change has disrupted weather patterns:
 (A)Fixed(B)Interrupted(C)Strengthened(D)Arranged
 Additional	319.	The 2010 floods caused estimated losses of $10 billion:
 (A)Counted(B)Imagined(C)Approximated(D)Denied
-Additional	320.	Pakistan’s actions reflects its commitment to SDG 13:
+Additional	320.	Pakistan's actions reflects its commitment to SDG 13:
 (A)Dedication(B)Carelessness(C)Disinterest(D)Denied
 Additional	321.	The response mechanism has been improved:
 (A)Delay(B)Problem(C)Reaction(D)System
@@ -3873,7 +3864,7 @@ Additional	339.	Pakistan has launched a mangrove project:
 (A)Ended(B)Planned(C)Started(D)Avoid
 Additional	340.	The goal is rehabilitation of mangrove forests:
 (A)Destruction(B)Relocation(C)Isolation(D)Restoration
-Additional	341.	Pakistan’s biodiversity is under serious threat:
+Additional	341.	Pakistan's biodiversity is under serious threat:
 (A)Population(B)Biological diversity(C)Temperature(D)Deforestation
 Additional	342.	Climate change is harming the ecosystem :
 (A)Structure(B)Economy(C)Environment(D)Ecological system
@@ -3923,7 +3914,7 @@ Additional	363.	Round the laps of their mothers :
 7.1 What You Do is What You Are
 Additional	364.	"It is no use arguing whether any of this is correct or proper.":
 (A)Wrong(B)Useful(C)Appropriate(D)Fast
-Additional	365.	"That apparently doesn’t count." :
+Additional	365.	"That apparently doesn't count." :
 (A)Clearly(B)Seemingly(C)Loudly(D)Quickly
 Additional	366.	"It is painfully clear." :
 (A)Sadly(B)Happily(C)Loudly(D)Always
@@ -3961,9 +3952,9 @@ Additional	382.	A retired teacher may spend a lot of volunteer time with handica
 (A)Paid(B)Timed(C)Unpaid(D)Private
 Additional	383.	A retired teacher may work with handicapped children:
 (A)Rich(B)Talented(C)Disabled(D)Tired
-Additional	384.	That apparently doesn’t count:
+Additional	384.	That apparently doesn't count:
 (A)Decrease(B)Matter(C)Explain(D)Add
-Additional	385.	We don’t recognize a titled nobility:
+Additional	385.	We don't recognize a titled nobility:
 (A)Disapprove(B)Identify(C)Forgive(D)Deny
 Additional	386.	To be "just" anything is to be totally discounted :
 (A)Believed(B)Ignored(C)Noted(D)Embraced
@@ -3981,13 +3972,13 @@ Additional	392.	A person can be "just" a janitor :
 (A)Manager(B)Teacher(C)Custodian(D)Engineer
 Additional	393.	We are supposed to be a classless society:
 (A)Divided(B)Equal(C)Wealthy(D)Famous
-Additional	394.	We don’t recognize a titled nobility :
+Additional	394.	We don't recognize a titled nobility :
 (A)Aristocracy(B)Government(C)Population(D)Committee
 Additional	395.	We refuse to acknowledge dynastic privilege:
 (A)Admit(B)Blame(C)Hide(D)Judge
 Additional	396.	We refuse to acknowledge dynastic privilege:
 (A)Hereditary(B)Individual(C)False(D)Paid
-Additional	397.	The job’s prestige has a lot to do with privilege :
+Additional	397.	The job's prestige has a lot to do with privilege :
 (A)Salary(B)Honour(C)Task(D)Effort
 Additional	398.	Rationally it is silly:
 (A)Emotionally(B)Funnily(C)Logically(D)Suddenly
@@ -4017,7 +4008,7 @@ Additional	410.	We are tempted to fawn over a stranger who is a judge:
 (A)Attack(B)Avoid(C)Ignore(D)Praise
 Additional	411.	We catch ourselves discounting the worth of the garbage collector:
 (A)Measuring(B)Undervaluing(C)Praising(D)Selling
-Additional	412.	We validate or reject a person’s existence on the basis of his income:
+Additional	412.	We validate or reject a person's existence on the basis of his income:
 (A)Knowledge(B)Being(C)Future(D)Progress
 Additional	413.	We evaluate the worth of the life attached to the job title:
 (A)Value(B)Space(C)Status(D)Wealth
@@ -4172,7 +4163,7 @@ Additional	486.	I desire to gratify my sight with its fairness:
 (A)Please(B)Disturb(C)Question(D)Limit
 Additional	487.	Khipil abased himself before Shahpesh:
 (A)Hid in fear(B)Raised in pride(C)Lowered in humility(D)Spoke in anger
-Additional	488.	The builder’s first and chief requisition for a noble palace:
+Additional	488.	The builder's first and chief requisition for a noble palace:
 (A)Request(B)Decoration(C)Rule(D)Possession
 Additional	489.	He displayed the abundance of weeds that coloured the land everywhere:
 (A)Rare presence(B)Large quantity(C)Hidden growth(D)Small portion
@@ -4223,7 +4214,7 @@ Additional	511.	It is well that a man be transfixed when he hath spoken vainglor
 11.1 Those Winter Sundays
 Exercise	512.	With cracked hands that ached from labor in the weekday weather:
 (A)Pain(B)Joy(C)Comfort(D)Rest
-Additional	513.	What did I know of love’s austere and lonely offices:
+Additional	513.	What did I know of love's austere and lonely offices:
 (A)Strict(B)Cheerful(C)Simple and plain(D)Relaxed
 Additional	514.	From labor in the weekday weather made banked fires blaze:
 (A)To pile coal(B)Borrow(C)Scatter(D)Diminish
@@ -4235,9 +4226,9 @@ Additional	517.	then with cracked hands that ached from labor:
 (A)Broken(B)Smooth(C)Polished(D)Shiny
 Additional	518.	Speaking indifferently to him, who had driven out the cold:
 (A)Kindly(B)Without concern(C)Warmly(D)Respectfully
-Additional	519.	love’s austere and lonely offices:
+Additional	519.	love's austere and lonely offices:
 (A)Solitary(B)Crowded(C)Joyful(D)Pleasant
-Additional	520.	I’d wake and hear the cold splintering, breaking:
+Additional	520.	I'd wake and hear the cold splintering, breaking:
 (A)Unite(B)Mend(C)To break(D)Soften
 12.1 The Impact of AI on Society...
 Additional	521.	Artificial Intelligence (Al) is a transformative force:
@@ -4278,18 +4269,18 @@ Additional	538.	Al can be used to create fake or misleading content, such as dee
 (A)Deceptive(B)True(C)Accurate(D)Clear
 Additional	539.	Al systems should be regularly tested and updated to ensure they operate ethically and efficiently:
 (A)Abandoned(B)Ignored(C)Checked(D)Destroyed
-13.1 Ruba’iyat
+13.1 Ruba'iyat
 Additional	540.	"Faith is like Abraham at the stake; to be self-honoring and God-drunk, is faith":
 (A)Pillar(B)Bonfire(C)A post for execution(D)Rope
-Additional	541.	"You whom this age’s way so captivate!":
+Additional	541.	"You whom this age's way so captivate!":
 (A)To charm(B)Bore(C)Ignore(D)Confuse
-Additional	542.	"Music of strange lands with Islam’s fire blends":
+Additional	542.	"Music of strange lands with Islam's fire blends":
 (A)Divides(B)Separates(C)Mixes(D)Cancels
 Additional	543.	"Empty of concord is the soul of Europe":
 (A)Power(B)Chaos(C)Noise(D)Harmony
-Additional	544.	"Love’s madness has departed.":
+Additional	544.	"Love's madness has departed.":
 (A)Gone(B)Arrived(C)Intensified(D)Stayed
-Additional	545.	"In the Muslim’s veins the blood runs thin ":
+Additional	545.	"In the Muslim's veins the blood runs thin ":
 (A)Dark(B)Thick(C)Weak(D)Hot
 Additional	546.	"Ranks broken, hearts perplexed, prayers cold":
 (A)United(B)Disorganized(C)Strengthened(D)Aligned
@@ -4299,7 +4290,7 @@ Additional	548.	"Empty of concord is the soul of Europe, Whose civilization to n
 (A)Shifts(B)Resists(C)Turns(D)Bows
 Additional	549.	"Faith is like Abraham at the stake; to be God-drunk, is faith":
 (A)Devout(B)Intoxicated with divinity(C)Prideful(D)Careless
-Additional	550.	"Love’s madness has departed":
+Additional	550.	"Love's madness has departed":
 (A)Zeal(B)Passion(C)Calmness(D)Sorrow
 Additional	551.	"Ranks broken, hearts perplexed, prayers cold":
 (A)Confused(B)Angry(C)Joyful(D)United
@@ -4310,7 +4301,7 @@ Additional	553.	"To be self-honoring … is faith":
 14.1 The End of the Beginning
 Exercise	554.	Darry says it is agony to look at Lizzie:
 (A)Calm(B)Peace(C)Pain(D)Silence
-Exercise	555.	Darry said they couldn’t brood over the spectacles yet:
+Exercise	555.	Darry said they couldn't brood over the spectacles yet:
 (A)Think deeply(B)Clean up(C)Talk loudly about(D)Throw away
 Exercise	556.	Darry says he was doing callisthenics when Barry came in:
 (A)Singing(B)Dancing(C)Exercises(D)Acting
@@ -4322,11 +4313,11 @@ Exercise	559.	Barry sits dejectedly in the corner after the jug breaks:
 (A)Silently(B)Happily(C)Sadly(D)Angrily
 Additional	560.	Darry says emphatically that he knows what he is doing:
 (A)Quickly(B)Repeatedly(C)Forcefully(D)Thoughtfully
-Additional	561.	Barry says Darry won’t expedite matters by rushing:
+Additional	561.	Barry says Darry won't expedite matters by rushing:
 (A)Delay(B)Forget(C)Speed up(D)Avoid
 Additional	562.	Darry says the time is galloping by:
 (A)Stopping(B)Slowing(C)Flying(D)Crawling
-Additional	563.	Don’t let your arms and legs go limber, tense your muscles:
+Additional	563.	Don't let your arms and legs go limber, tense your muscles:
 (A)Flexible(B)Tight(C)Lazy(D)Flexible
 Additional	564.	Barry spoke like a magnanimous person:
 (A)Noble(B)Angry(C)Clever(D)Kind

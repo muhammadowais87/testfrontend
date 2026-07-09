@@ -1,0 +1,219 @@
+AFAQ 4 COMPUTER SCIENCE IQBAL SERIES
+
+-> Multiple option
+Computer Hardware
+Exercise	1.	Which of the following is an internal connection point on the motherboard to connect devices:
+(A)Port(B)Slot(C)Connector(D)Pinhole
+Exercise	2.	Which of the following ports is used for the digital output of a computer:
+(A)PS/2(B)VGA(C)DVI(D)Audio
+Exercise	3.	Which of the following ports connects computers to a network and the Internet:
+(A)USB(B)VGA(C)DVI(D)LAN
+Exercise	4.	Computer’s main memory (RAM) is installed in a .............. :
+(A)Port(B)Slot(C)Connector(D)Expansion Slot
+Exercise	5.	SATA is the abbreviation of ............. :
+(A)Serial Advanced Technology Available(B)Serial Available Technology Advanced(C)Serial Advanced Technology Attachment(D)Serial Attachment Technology Advanced
+Word Processing
+Exercise	6.	Which of the following represents bullets in a document:
+(A)Text(B)List(C)Tabs(D)Symbol or Icons
+Exercise	7.	What is the default line spacing in Word 2013:
+(A)1(B)1.15(C)1.5(D)1.08
+Exercise	8.	Which of the following group offers Page Number options:
+(A)Font(B)Paragraph(C)Header & Footer(D)Pages
+Exercise	9.	Bulleted list is appropriate to be used for items up to ............ :
+(A)4(B)5(C)8(D)10
+Exercise	10.	Numbered list is appropriate to be used for items ............... :
+(A)Less than 5(B)Up to 5(C)More than 5(D)Only 10
+Presentation
+Exercise	11.	Which of the following is a default Theme in PowerPoint:
+(A)Office Theme(B)Facet(C)Integral(D)Ion icons
+Exercise	12.	What is the first important concept that an audience see in a presentation:
+(A)Design(B)Animation(C)Transition(D)Video
+Exercise	13.	Which of the following tab has Themes:
+(A)HOME(B)INSERT(C)DESIGN(D)TRANSITION
+Exercise	14.	Which of the following tab has Sound and Duration options:
+(A)DESIGN(B)TRANSITION(C)ANIMATION(D)SLIDESHOW
+Exercise	15.	The sound transition plays a sound during the transition from ............. :
+(A)Left to right(B)Right to left(C)First to the last slide(D)Previous slide to the next slide
+Spreadsheet
+Exercise	16.	Which of the following is a spreadsheet programme:
+(A)Microsoft Office(B)Microsoft Word(C)Microsoft PowerPoint(D)Microsoft Excel
+Exercise	17.	What is a range of cells that go horizontal:
+(A)Cell(B)Row(C)Column(D)Active Cell
+Exercise	18.	Which of the following represents a column label:
+(A)$(B)(C)A1(D)A
+Exercise	19.	Which of the following is the formula to add two numbers:
+(A)SUM [A1 + A2](B)[A1 + A2](C)=SUM[A1 + A2](D)=SUM[A1 plus A2]
+Exercise	20.	Which of the following key is pressed to cancel data entry:
+(A)Enter(B)Escape(C)Delete(D)Tab
+The Internet
+Exercise	21.	Which of the following describes the Internet:
+(A)Global Communication System(B)ARPANet(C)WWW(D)Web pages
+Exercise	22.	Which of the following is an example of a web browser:
+(A)Facebook(B)LinkedIn(C)Chrome(D)Whatsapp
+Exercise	23.	Which of the following connection allows access to the Internet when you are physically present at the location:
+(A)ASDL(B)3G(C)4G(D)5G
+Exercise	24.	Which of the following is the abbreviation of URL:
+(A)Uniform Resource Location(B)Unified Reform Level(C)Uniform Relative Locator(D)Uniform Resource Locator
+Exercise	25.	Which of the following is the largest video sharing site:
+(A)LinkedIn(B)Facebook(C)Twitter(D)YouTube
+Problem-solving
+Exercise	26.	A question requires a solution by means of one or more ............. :
+(A)Operations(B)Problems(C)Tasks(D)Questions
+Exercise	27.	The process of thinking about something to form a conclusion is called ............. :
+(A)Selecting(B)Creating(C)Reasoning(D)Identify
+Exercise	28.	What is "take what we know to discover what we do not know":
+(A)Problem(B)Task(C)Problem-solving(D)Creativity
+Exercise	29.	What is the skill to understand and solve problems by making sensible decisions called:
+(A)Reasoning(B)Analytical(C)Creativity(D)Define
+Exercise	30.	What step of problem-solving takes feedback:
+(A)Define(B)Follow up(C)Implement(D)Identify
+
+-> Short questions
+Computer Hardware
+1	.	Define the following: Motherboard
+Exercise
+2	.	Define the following: Ports
+Exercise
+3	.	Define the following: Slots
+Exercise
+4	.	Define the following: Connectors
+Exercise
+5	.	Define the following: Power Supply
+Exercise
+6	.	Define the following: SATA Cable
+Exercise
+Word Processing
+7	.	Define the following: Bullets
+Exercise
+8	.	Define the following: Numbering
+Exercise
+9	.	Define the following: Line Spacing
+Exercise
+Presentation
+10	.	Define the following: Theme
+Exercise
+11	.	Define the following: Transition
+Exercise
+12	.	Define the following: Animation
+Exercise
+Spreadsheet
+13	.	Define the following: Workbook
+Exercise
+14	.	Define the following: Worksheet
+Exercise
+15	.	Define the following: Row
+Exercise
+16	.	Define the following: Column
+Exercise
+The Internet
+17	.	Define the following: Internet
+Exercise
+18	.	Define the following: Web Page
+Exercise
+19	.	Define the following: Website
+Exercise
+20	.	Define the following: Email
+Exercise
+Problem-solving
+21	.	Define the following: Problem
+Exercise
+22	.	Define the following: Problem-solving skills
+Exercise
+23	.	Define the following: Programming
+Exercise
+
+-> Long questions
+Computer Hardware
+1.	Label the following.
+
+Exercise
+2.	Label the following.
+
+Exercise
+Word Processing
+3.	Why bullets and numbering are used in a Word document?
+Exercise
+4.	Describe line spacing.
+Exercise
+5.	What are the locations to insert page numbers in Word?
+Exercise
+Presentation
+6.	What are the steps of applying themes in a presentation?
+Exercise
+7.	What is the difference between themes and transitions?
+Exercise
+8.	Explain animation and how is it applied to a presentation?
+Exercise
+Spreadsheet
+9.	Explain spreadsheet programmes.
+Exercise
+10.	Write down the steps to start Excel?
+Exercise
+11.	What are data types in Excel?
+Exercise
+12.	How is data entered in an Excel worksheet?
+Exercise
+The Internet
+13.	What is the difference between the Internet and World Wide Web?
+Exercise
+14.	What are advantages of E-mail?
+Exercise
+15.	What is social media?
+Exercise
+16.	Explain some websites and applications of social media.
+Exercise
+17.	Explain the difference between fixed Internet and Mobile Internet.
+Exercise
+Problem-solving
+18.	Compare logical reasoning and analytical thinking.
+Exercise
+19.	What is problem-solving?
+Exercise
+20.	What is problem-solving?
+Exercise
+21.	Describe the steps of problem-solving.
+Exercise
+22.	Abdullah, Ali, Khadija, and Hafsa each bought a book. The books cost 30, 50, 60, and 80 rupees. Ali spent 60 rupees. Abdullah spent less than Khadija did. Hafsa spent the most. How much did each of them spend?
+Exercise
+
+
+-> Match columns
+Problem-solving
+Column A	Column B
+Problem-solving	Solution
+Creativity	Decision-making
+Problem	Ongoing activity
+Logical reasoning	LOGO
+Programming language	Connecting things
+
+-> True false statements
+Computer Hardware
+1.	RAM allows communcation between many of the components.
+2.	SATA cable is used to connect a computer to a network.
+3.	A connector physically links two things together.
+4.	A PS/2 port allows you to connect many devices at a time.
+5.	A power supply provides electrical power to the components of a computer.
+Word Processing
+6.	Bullet options are available in the Paragraph group.
+7.	Spacebar key is pressed to insert more bullets after the first one.
+8.	Line and Paragraph spacing icon is available on the Font group.
+9.	Line spacing is the space between each line.
+10.	The INSERT tab is clicked to insert page numbers in Word.
+Presentation
+11.	Transitions are the effects that occur when you move from one slide to the next.
+12.	Animations make presentations dynamic.
+13.	Theme layouts are available in the ANIMATIONS tab.
+14.	A PowerPoint presentation opens with the Office Theme by default.
+15.	Sound can be applied using the DESIGN tab.
+Spreadsheet
+16.	A worksheet can contain one or more workbooks.
+17.	The Name Box represents the cell that is selected.
+18.	An active cell is bound by a border around it.
+19.	An Excel file is bound to contain one worksheet.
+20.	Sheet I is the ’by default’ name of the first worksheet.
+The Internet
+21.	Web pages are linked to other pages to make the Internet.
+22.	WWW is the abbreviation of World Wide Web.
+23.	People can make videos on the Twitter.
+24.	4G is faster than 3G.
+25.	Cable broadband can be accessed using the telephone lines.

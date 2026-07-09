@@ -7,6 +7,7 @@ import { useInstituteSessionStore } from "@/stores/instituteSessionStore";
 import { useTeacherSessionStore } from "@/stores/teacherSessionStore";
 import { useIsMobile } from "@/hooks/use-mobile";
 import { getQuestionStems, mergeMcqOptions, parseQuestionOptions } from "@/lib/questionDisplay";
+import MathText from "@/components/MathText";
 
 const SavedPaperViewer = () => {
   const DESKTOP_PREVIEW_WIDTH = 1100;
@@ -1514,7 +1515,7 @@ const SavedPaperViewer = () => {
                                 />
                               ) : (
                                 <div className="text-slate-900" style={{ fontSize: `${resolvedEnglishFontSize}px`, color: resolvedTextColor, fontWeight: resolvedFontWeight, fontFamily: englishFontFamily }}>
-                                  {`${index + 1}. ${englishStem}`}
+                                  {index + 1}. <MathText text={englishStem} />
                                 </div>
                               ))}
 
@@ -1534,13 +1535,13 @@ const SavedPaperViewer = () => {
                                 // Dual mode: only show urdu side when content differs from english
                                 question.urdu && showUrduQuestion ? (
                                   <div className="text-right text-slate-900" dir="rtl" style={{ fontSize: `${resolvedUrduFontSize}px`, color: resolvedTextColor, fontWeight: resolvedFontWeight, fontFamily: urduFontFamily }}>
-                                    {`${index + 1}۔ ${cleanUrduStem(urduStem)}`}
+                                    {index + 1}۔ <MathText text={cleanUrduStem(urduStem)} />
                                   </div>
                                 ) : <div />
                               ) : (
                                 // Urdu-only mode: always show content, fallback to englishStem if no urdu
                                 <div className="text-right text-slate-900" dir="rtl" style={{ fontSize: `${resolvedUrduFontSize}px`, color: resolvedTextColor, fontWeight: resolvedFontWeight, fontFamily: urduFontFamily }}>
-                                  {`${index + 1}۔ ${cleanUrduStem(urduStem || englishStem)}`}
+                                  {index + 1}۔ <MathText text={cleanUrduStem(urduStem || englishStem)} />
                                 </div>
                               ))}
                             </div>
@@ -1555,7 +1556,7 @@ const SavedPaperViewer = () => {
                                   if (!showEn && showUr) {
                                     return (
                                       <div key={`${question.id}-opt-${key}`} className="flex items-baseline justify-end gap-1 text-slate-900" dir="rtl" style={{ fontSize: `${resolvedUrduFontSize}px`, color: resolvedTextColor, fontWeight: resolvedFontWeight, fontFamily: urduFontFamily }}>
-                                        <span>{tickAnswers && answerKey === key ? "✓ " : ""}({key}) {urOption}</span>
+                                        <span>{tickAnswers && answerKey === key ? "✓ " : ""}({key}) <MathText text={urOption} /></span>
                                       </div>
                                     );
                                   }
@@ -1563,11 +1564,11 @@ const SavedPaperViewer = () => {
                                     <div key={`${question.id}-opt-${key}`} className="flex items-baseline gap-1 text-slate-900" style={{ fontSize: `${resolvedEnglishFontSize}px`, color: resolvedTextColor, fontWeight: resolvedFontWeight, fontFamily: englishFontFamily }}>
                                       <span dir="ltr">
                                         {tickAnswers && answerKey === key ? "✓ " : ""}
-                                        ({key}) {enOption}
+                                        ({key}) <MathText text={enOption} />
                                       </span>
                                       {urOption && showUrduOption && (
                                         <span dir="rtl" style={{ fontSize: `${resolvedUrduFontSize}px`, fontFamily: urduFontFamily }}>
-                                          {urOption}
+                                          <MathText text={urOption} />
                                         </span>
                                       )}
                                     </div>

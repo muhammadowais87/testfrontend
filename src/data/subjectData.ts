@@ -1,4 +1,6 @@
 import { getNineTopicChapters } from "./nineTopicChapters";
+import afaqTopicChapters from "./afaqTopicChapters.json";
+import baTopicChapters from "./baTopicChapters.json";
 
 export type SubjectCard = {
   title: string;
@@ -68,6 +70,14 @@ const bookImages: Record<string, string> = {
   "Social Study": "/images/books/social-studies-book.png",
   "ترجمہ القرآن": "/images/books/quran-book.png",
   "زرعی تعلیم": "/images/books/general-science-book.png",
+  "Science": "/images/books/general-science-book.png",
+  "Math": "/images/books/mathematics-book.png",
+  "Computer Science": "/images/books/computer-book.png",
+  "English (IS)": "/images/books/english-book.png",
+  "اردو (Iqbal)": "/images/books/urdu-book.png",
+  "مطالعہ اسلام": "/images/books/islamiat-book.png",
+  "معلومات عامہ": "/images/books/general-science-book.png",
+  "واقعیت عامہ": "/images/books/general-science-book.png",
 };
 
 const getBookImage = (title: string): string => {
@@ -97,17 +107,14 @@ export const afaqCards = [
   { title: "FOUR", board: "AFAQ", gradient: "from-purple-500 to-pink-400" },
   { title: "5TH", board: "AFAQ", gradient: "from-blue-400 to-cyan-400" },
   { title: "6TH", board: "AFAQ", gradient: "from-emerald-400 to-blue-700" },
-  { title: "7TH", board: "AFAQ", gradient: "from-amber-300 to-orange-300" },
 ];
 
 export const oxfordCards = [
-  { title: "ONE", board: "OXFORD", gradient: "from-cyan-400 to-blue-500" },
-  { title: "TWO", board: "OXFORD", gradient: "from-green-600 to-lime-400" },
+  { title: "ONE",   board: "OXFORD", gradient: "from-cyan-400 to-blue-500" },
+  { title: "TWO",   board: "OXFORD", gradient: "from-green-600 to-lime-400" },
   { title: "THREE", board: "OXFORD", gradient: "from-orange-500 to-yellow-400" },
-  { title: "FOUR", board: "OXFORD", gradient: "from-purple-500 to-pink-400" },
-  { title: "5TH", board: "OXFORD", gradient: "from-cyan-300 to-blue-400" },
-  { title: "6TH", board: "OXFORD", gradient: "from-emerald-400 to-blue-700" },
-  { title: "7TH", board: "OXFORD", gradient: "from-amber-300 to-orange-300" },
+  { title: "FOUR",  board: "OXFORD", gradient: "from-purple-500 to-pink-400" },
+  { title: "5TH",   board: "OXFORD", gradient: "from-cyan-300 to-blue-400" },
 ];
 
 export const goharCards = [
@@ -125,7 +132,7 @@ export const baCards = [
   { title: "B.A Part-II", board: "PU", gradient: "from-cyan-400 to-blue-500" },
 ];
 
-export const boardClassMap: Record<string, { title: string; board: string; gradient: string }[]> = {
+export const boardClassMap: Record<string, { title: string; board: string; gradient: string; image?: string; comingSoon?: boolean }[]> = {
   PTB: syllabusCards,
   AFAQ: afaqCards,
   OXFORD: oxfordCards,
@@ -369,97 +376,55 @@ export const oldBooksSubjects: SubjectCard[] = [
 ];
 
 // ---- SNC Boards (AFAQ, OXFORD, GOHAR) subjects ----
-const sncClassOne: SubjectCard[] = [
-  { title: "English", subtitle: "SNC", image: getBookImage("English") },
-  { title: "اردو", subtitle: "SNC", image: getBookImage("اردو") },
-  { title: "Mathematics", subtitle: "SNC", image: getBookImage("Mathematics") },
-  { title: "ناظرہ قرآن مجید", subtitle: "SNC", image: getBookImage("ناظرہ قرآن مجید") },
-  { title: "General Science", subtitle: "SNC", image: getBookImage("General Science") },
-];
-const sncClassTwo: SubjectCard[] = [
-  { title: "English", subtitle: "SNC", image: getBookImage("English") },
-  { title: "اردو", subtitle: "SNC", image: getBookImage("اردو") },
-  { title: "Mathematics", subtitle: "SNC", image: getBookImage("Mathematics") },
-  { title: "ناظرہ قرآن مجید", subtitle: "SNC", image: getBookImage("ناظرہ قرآن مجید") },
-  { title: "General Science", subtitle: "SNC", image: getBookImage("General Science") },
-];
-const sncClassThree: SubjectCard[] = [
-  { title: "English", subtitle: "SNC", image: getBookImage("English") },
-  { title: "اردو", subtitle: "SNC", image: getBookImage("اردو") },
-  { title: "Mathematics", subtitle: "SNC", image: getBookImage("Mathematics") },
-  { title: "General Science", subtitle: "SNC", image: getBookImage("General Science") },
-  { title: "اسلامیات", subtitle: "SNC", image: getBookImage("اسلامیات") },
-  { title: "ناظرہ قرآن مجید", subtitle: "SNC", image: getBookImage("ناظرہ قرآن مجید") },
-];
-const sncClassFour: SubjectCard[] = [
-  { title: "English", subtitle: "SNC", image: getBookImage("English") },
-  { title: "اردو", subtitle: "SNC", image: getBookImage("اردو") },
-  { title: "Mathematics", subtitle: "SNC", image: getBookImage("Mathematics") },
-  { title: "General Science", subtitle: "SNC", image: getBookImage("General Science") },
-  { title: "اسلامیات", subtitle: "SNC", image: getBookImage("اسلامیات") },
-  { title: "معاشرتی علوم", subtitle: "SNC", image: getBookImage("معاشرتی علوم") },
-  { title: "ناظرہ قرآن مجید", subtitle: "SNC", image: getBookImage("ناظرہ قرآن مجید") },
-];
-const sncClassFifth: SubjectCard[] = [
-  { title: "English", subtitle: "SNC", image: getBookImage("English") },
-  { title: "اردو", subtitle: "SNC", image: getBookImage("اردو") },
-  { title: "Mathematics", subtitle: "SNC", image: getBookImage("Mathematics") },
-  { title: "General Science", subtitle: "SNC", image: getBookImage("General Science") },
-  { title: "اسلامیات", subtitle: "SNC", image: getBookImage("اسلامیات") },
-  { title: "معاشرتی علوم", subtitle: "SNC", image: getBookImage("معاشرتی علوم") },
-  { title: "Computer", subtitle: "SNC", image: getBookImage("Computer") },
-  { title: "ناظرہ قرآن مجید", subtitle: "SNC", image: getBookImage("ناظرہ قرآن مجید") },
-];
-const sncClassSixth: SubjectCard[] = [
-  { title: "English", subtitle: "SNC", image: getBookImage("English") },
-  { title: "اردو", subtitle: "SNC", image: getBookImage("اردو") },
-  { title: "Mathematics", subtitle: "SNC", image: getBookImage("Mathematics") },
-  { title: "General Science", subtitle: "SNC", image: getBookImage("General Science") },
-  { title: "اسلامیات", subtitle: "SNC", image: getBookImage("اسلامیات") },
-  { title: "معاشرتی علوم", subtitle: "SNC", image: getBookImage("معاشرتی علوم") },
-  { title: "Computer", subtitle: "SNC", image: getBookImage("Computer") },
-  { title: "ناظرہ قرآن مجید", subtitle: "SNC", image: getBookImage("ناظرہ قرآن مجید") },
-];
-const sncClassSeventh: SubjectCard[] = [
-  { title: "English", subtitle: "SNC", image: getBookImage("English") },
-  { title: "اردو", subtitle: "SNC", image: getBookImage("اردو") },
-  { title: "Mathematics", subtitle: "SNC", image: getBookImage("Mathematics") },
-  { title: "General Science", subtitle: "SNC", image: getBookImage("General Science") },
-  { title: "اسلامیات", subtitle: "SNC", image: getBookImage("اسلامیات") },
-  { title: "معاشرتی علوم", subtitle: "SNC", image: getBookImage("معاشرتی علوم") },
-  { title: "Computer", subtitle: "SNC", image: getBookImage("Computer") },
-  { title: "ناظرہ قرآن مجید", subtitle: "SNC", image: getBookImage("ناظرہ قرآن مجید") },
-];
+// Load AFAQ-specific subject lists (generated from AFAQ images)
+// Prefer generated OCR output when present; fall back to manual `afaqSubjects.ts`.
+import manualAfaq, { AfaqSubject } from "./afaqSubjects";
+import generatedAfaq from "./afaqSubjects.generated.json";
+import { oxfordClassSubjects } from "./oxfordSubjects";
 
-const sncClassMap: Record<string, SubjectCard[][]> = {
-  "ONE": [sncClassOne],
-  "TWO": [sncClassTwo],
-  "THREE": [sncClassThree],
-  "FOUR": [sncClassFour],
-  "5TH": [sncClassFifth],
-  "6TH": [sncClassSixth],
-  "7TH": [sncClassSeventh],
+const afaqClassSubjects: Record<string, AfaqSubject[]> = (generatedAfaq && Object.keys(generatedAfaq).length > 0)
+  ? generatedAfaq as Record<string, AfaqSubject[]>
+  : manualAfaq as Record<string, AfaqSubject[]>;
+
+const makeSNCGroups = (items: AfaqSubject[]): SubjectCard[][] => {
+  const groups = new Map<string, SubjectCard[]>();
+  for (const it of items) {
+    const series = it.series || "SNC";
+    if (!groups.has(series)) groups.set(series, []);
+    groups.get(series)!.push({ title: it.title, subtitle: series, image: getBookImage(it.title) });
+  }
+  return Array.from(groups.values());
 };
+
+const sncClassMap: Record<string, SubjectCard[][]> = Object.fromEntries(
+  Object.entries(afaqClassSubjects).map(([className, items]) => [className, makeSNCGroups(items)]),
+) as Record<string, SubjectCard[][]>;
+
+const oxfordClassMap: Record<string, SubjectCard[][]> = Object.fromEntries(
+  Object.entries(oxfordClassSubjects).map(([className, items]) => [className, makeSNCGroups(items)]),
+) as Record<string, SubjectCard[][]>;
 
 // ---- B.A subjects ----
 const baPartOneSubjects: SubjectCard[] = [
-  { title: "English", subtitle: "B.A", image: getBookImage("English") },
-  { title: "اردو", subtitle: "B.A", image: getBookImage("اردو") },
-  { title: "اسلامیات", subtitle: "B.A", image: getBookImage("اسلامیات") },
-  { title: "Pakistan Studies", subtitle: "B.A", image: getBookImage("Pakistan Studies") },
-  { title: "Economics", subtitle: "B.A", image: getBookImage("Economics") },
-  { title: "ایجوکیشن", subtitle: "B.A", image: getBookImage("ایجوکیشن") },
-  { title: "سوشیالوجی", subtitle: "B.A", image: getBookImage("سوشیالوجی") },
-  { title: "پنجابی", subtitle: "B.A", image: getBookImage("پنجابی") },
+  { title: "English", subtitle: "3RD YEAR", image: getBookImage("English") },
+  { title: "اسلامیات لازمی", subtitle: "3RD YEAR", image: getBookImage("اسلامیات لازمی") },
+  { title: "مطالعہ پاکستان", subtitle: "3RD YEAR", image: getBookImage("مطالعہ پاکستان") },
+  { title: "اسلامیات اختیاری", subtitle: "3RD YEAR", image: getBookImage("اسلامیات اختیاری") },
+  { title: "علم التعلیم", subtitle: "3RD YEAR", image: getBookImage("علم التعلیم") },
+  { title: "امور صحافت", subtitle: "3RD YEAR", image: getBookImage("امور صحافت") },
+  { title: "کشمیرات", subtitle: "3RD YEAR", image: getBookImage("کشمیرات") },
+  { title: "عمرانیات", subtitle: "3RD YEAR", image: getBookImage("عمرانیات") },
+  { title: "پنجابی", subtitle: "3RD YEAR", image: getBookImage("پنجابی") },
+  { title: "عربی", subtitle: "3RD YEAR", image: getBookImage("عربی") },
+  { title: "سیاسیات", subtitle: "3RD YEAR", image: getBookImage("سیاسیات") },
 ];
 const baPartTwoSubjects: SubjectCard[] = [
   { title: "English", subtitle: "B.A", image: getBookImage("English") },
-  { title: "اردو", subtitle: "B.A", image: getBookImage("اردو") },
-  { title: "Economics", subtitle: "B.A", image: getBookImage("Economics") },
-  { title: "ایجوکیشن", subtitle: "B.A", image: getBookImage("ایجوکیشن") },
-  { title: "سوشیالوجی", subtitle: "B.A", image: getBookImage("سوشیالوجی") },
+  { title: "گلشن فارسی", subtitle: "B.A", image: getBookImage("گلشن فارسی") },
+  { title: "امور صحافت", subtitle: "B.A", image: getBookImage("امور صحافت") },
+  { title: "اسلامیات اختیاری", subtitle: "B.A", image: getBookImage("اسلامیات اختیاری") },
+  { title: "سیاسیات", subtitle: "B.A", image: getBookImage("سیاسیات") },
   { title: "پنجابی", subtitle: "B.A", image: getBookImage("پنجابی") },
-  { title: "Pakistan Studies", subtitle: "B.A", image: getBookImage("Pakistan Studies") },
 ];
 
 const baClassMap: Record<string, SubjectCard[][]> = {
@@ -488,17 +453,17 @@ export const ptbClassSubjectsMap: Record<string, SubjectCard[][]> = {
 export const boardSubjectsMap: Record<string, Record<string, SubjectCard[][]>> = {
   PTB: ptbClassSubjectsMap,
   AFAQ: sncClassMap,
-  OXFORD: sncClassMap,
+  OXFORD: oxfordClassMap,
   GOHAR: sncClassMap,
   BA: baClassMap,
 };
 
 export const boardCards = [
   { name: "PTB", label: "PTB", subtitle: "Syllabus", logo: "/images/PTBLogo.png", gradient: "from-cyan-300 to-blue-400", comingSoon: false },
-  { name: "AFAQ", label: "AFAQ SNC", subtitle: "Syllabus", logo: "/images/AfaqLogo.png", gradient: "from-green-500 to-lime-400", comingSoon: true },
-  { name: "OXFORD", label: "OXFORD SNC", subtitle: "Syllabus", logo: "/images/OxfordLogo.png", gradient: "from-cyan-400 to-blue-500", comingSoon: true },
-  { name: "GOHAR", label: "GOHAR SNC", subtitle: "Syllabus", logo: "/images/GoharLogo.png", gradient: "from-orange-300 to-amber-400", comingSoon: true },
-  { name: "BA", label: "B.A", subtitle: "Syllabus", logo: "/images/PULogo.png", gradient: "from-yellow-400 to-amber-500", comingSoon: true },
+  { name: "AFAQ", label: "AFAQ SNC", subtitle: "Syllabus", logo: "/images/AfaqLogo.png", gradient: "from-green-500 to-lime-400", comingSoon: false },
+  { name: "OXFORD", label: "OXFORD SNC", subtitle: "Syllabus", logo: "/images/OxfordLogo.png", gradient: "from-cyan-400 to-blue-500", comingSoon: false },
+
+  { name: "BA", label: "B.A", subtitle: "Syllabus", logo: "/images/PULogo.png", gradient: "from-yellow-400 to-amber-500", comingSoon: false },
 ];
 
 export const allSubjectTitles: string[] = Array.from(
@@ -937,7 +902,7 @@ const englishInterOneChapters: ChapterGroup[] = [
   { name: "UNIT 10: The Punishment of Shahpesh, the Persian, on Khipil, the Builder", chapters: ["10.1 The Punishment of Khipil"] },
   { name: "UNIT 11: Those Winter Sundays (Poem)", chapters: ["11.1 Those Winter Sundays"] },
   { name: "UNIT 12: The Impact of AI on Society, Human Relationships, and Ethics", chapters: ["12.1 The Impact of AI on Society..."] },
-  { name: "UNIT 13: Ruba’iyat (Poem)", chapters: ["13.1 Ruba’iyat"] },
+  { name: "UNIT 13: Ruba'iyat (Poem)", chapters: ["13.1 Ruba'iyat"] },
   { name: "UNIT 14: The End of the Beginning", chapters: ["14.1 The End of the Beginning"] },
   { name: "English (B)", chapters: ["Letters", "Applications", "Stories", "Pair of words"] },
   { name: "Correct Form Of Verb", chapters: [
@@ -2091,7 +2056,7 @@ const englishPreChapters: ChapterGroup[] = [
   { name: "UNIT 10: The Punishment of Shahpesh, the Persian, on Khipil, the Builder", chapters: ["10.1 The Punishment of Khipil"] },
   { name: "UNIT 11: Those Winter Sundays (Poem)", chapters: ["11.1 Those Winter Sundays"] },
   { name: "UNIT 12: The Impact of AI on Society, Human Relationships, and Ethics", chapters: ["12.1 The Impact of AI on Society..."] },
-  { name: "UNIT 13: Ruba’iyat (Poem)", chapters: ["13.1 Ruba’iyat"] },
+  { name: "UNIT 13: Ruba'iyat (Poem)", chapters: ["13.1 Ruba'iyat"] },
   { name: "UNIT 14: The End of the Beginning", chapters: ["14.1 The End of the Beginning"] },
   {
     name: "English (B)",
@@ -2508,13 +2473,66 @@ subjectChaptersMap["علم شہریت-INTER-II-PTB"] = civicsChapters;
 subjectChaptersMap["Civics-INTER-I-PTB"] = civicsChapters;
 subjectChaptersMap["Civics-INTER-II-PTB"] = civicsChapters;
 
+// Register AFAQ topic chapters into the map
+console.log(`[AFAQ init] registering ${Object.keys(afaqTopicChapters).length} AFAQ subject entries`);
+let regCount = 0;
+Object.entries(afaqTopicChapters).forEach(([key, chapters]) => {
+  subjectChaptersMap[key] = chapters as ChapterGroup[];
+  regCount++;
+});
+console.log(`[AFAQ init] registered ${regCount} entries. Total map size: ${Object.keys(subjectChaptersMap).length}`);
+
+// Default single-chapter entry for subjects without specific topic data
+const defaultBaChapter: ChapterGroup[] = [{ name: "Syllabus", chapters: ["Full Syllabus"] }];
+
+// Register BA topic chapters into the map
+console.log(`[BA init] registering BA subject entries`);
+Object.entries(baTopicChapters as Record<string, ChapterGroup[]>).forEach(([key, chapters]) => {
+  subjectChaptersMap[key] = chapters;
+  regCount++;
+});
+
+// BA subjects without TXT data - add default entries
+const baSubjectsNoData: Record<string, string[]> = {
+  "B.A Part-I": ["پنجابی", "عربی", "کشمیرات", "عمرانیات"],
+  "B.A Part-II": ["پنجابی"],
+};
+Object.entries(baSubjectsNoData).forEach(([cls, subjects]) => {
+  subjects.forEach(subj => {
+    const key = `${subj}-${cls}-BA`;
+    if (!subjectChaptersMap[key]) {
+      subjectChaptersMap[key] = defaultBaChapter;
+      regCount++;
+    }
+  });
+});
+console.log(`[BA init] registered BA entries. Total map size: ${Object.keys(subjectChaptersMap).length}`);
+
 export const getChaptersForSubject = (subject: string, className: string, board: string): ChapterGroup[] => {
-  const fromTopicsFile = getNineTopicChapters(subject, className, board);
+  // If subject contains a series separator, extract actual subject and series
+  let actualSubject = subject;
+  let series = "";
+  if (subject.includes("||")) {
+    const parts = subject.split("||");
+    actualSubject = parts[0];
+    series = parts[1];
+  }
+
+  // For AFAQ with series info, do a direct lookup with series in the key
+  if (series && board === "AFAQ") {
+    const seriesKey = `${actualSubject}-${series}-${className}-${board}`;
+    try {
+      console.log(`[AFAQ lookup] subject="${actualSubject}" series="${series}" class="${className}" board="${board}" key="${seriesKey}" exists=${!!subjectChaptersMap[seriesKey]} mapKeys=${Object.keys(subjectChaptersMap).filter(k=>k.includes(actualSubject)).join(", ")}`);
+    } catch(e) {}
+    if (subjectChaptersMap[seriesKey]) return subjectChaptersMap[seriesKey];
+  }
+
+  const fromTopicsFile = getNineTopicChapters(actualSubject, className, board);
   if (fromTopicsFile && fromTopicsFile.length > 0) {
     return fromTopicsFile;
   }
 
-  const key = `${subject}-${className}-${board}`;
+  const key = `${actualSubject}-${className}-${board}`;
   // Debug logging to help trace why some subjects don't return chapters
   try {
     // eslint-disable-next-line no-console
@@ -2548,13 +2566,13 @@ export const getChaptersForSubject = (subject: string, className: string, board:
   }
 
   // Try matching by subject+class (ignore board) as a last resort
-  const targetSubjectClass = normalize(`${subject}-${className}`);
+  const targetSubjectClass = normalize(`${actualSubject}-${className}`);
   for (const k of Object.keys(subjectChaptersMap)) {
     if (normalize(k).startsWith(targetSubjectClass)) return subjectChaptersMap[k];
   }
 
   // Final fallback: subject + class must both appear in the map key (avoid INTER-I chapters for 9TH)
-  const targetSubjectOnly = normalize(subject);
+  const targetSubjectOnly = normalize(actualSubject);
   const targetClassOnly = normalize(className);
   for (const k of Object.keys(subjectChaptersMap)) {
     const nk = normalize(k);

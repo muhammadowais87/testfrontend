@@ -1,11 +1,35 @@
 {
   "علم شہریت": {
-    "علم شہریت کا تعارف": ["MCQs", "Short Questions", "Long Questions"],
-    "افراد کے روابط": ["MCQs", "Short Questions", "Long Questions"],
-    "ریاست": ["MCQs", "Short Questions", "Long Questions"],
-    "حکومت": ["MCQs", "Short Questions", "Long Questions"],
-    "شہری اور ریاست": ["MCQs", "Short Questions", "Long Questions"],
-    "(Before any topic)": ["MCQs", "Short Questions", "Long Questions"]
+    "علم شہریت کا تعارف": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "افراد کے روابط": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "ریاست": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "حکومت": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "شہری اور ریاست": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ],
+    "(Before any topic)": [
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
+    ]
   },
   "Biology": {
     "1.1": [
@@ -1003,7 +1027,9 @@
       "Short Questions"
     ],
     "(Before any topic)": [
-      "MCQs", "Short Questions", "Long Questions"
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
     ]
   },
   "Education": {
@@ -1078,82 +1104,239 @@
   },
   "English": {
     "The Saviour of Mankind": [
-      "MCQs", "Grammar", "Idioms/Sentences", "Words into Sentences",
-      "Question And Answers", "Translate Into Urdu Paragraph", "Word Meanings", "Summary",
-      "Tick Correct Spellings", "Correct Meaning of Underline Word",
-      "Tick Correct Form of Verb", "Tick Correct According to Grammer"
+      "MCQs",
+      "Grammar",
+      "Idioms/Sentences",
+      "Words into Sentences",
+      "Question And Answers",
+      "Translate Into Urdu Paragraph",
+      "Word Meanings",
+      "Summary",
+      "Tick Correct Spellings",
+      "Correct Meaning of Underline Word",
+      "Tick Correct Form of Verb",
+      "Tick Correct According to Grammer",
+      "Active and Passive Voice",
+      "Fill In The Blanks",
+      "Direct and Indirect",
+      "Pair of Words"
     ],
     "Patriotism": [
-      "MCQs", "Grammar", "Idioms/Sentences", "Words into Sentences",
-      "Question And Answers", "Translate Into Urdu Paragraph", "Word Meanings", "Summary",
-      "Tick Correct Spellings", "Correct Meaning of Underline Word",
-      "Tick Correct Form of Verb", "Tick Correct According to Grammer"
+      "MCQs",
+      "Grammar",
+      "Idioms/Sentences",
+      "Words into Sentences",
+      "Question And Answers",
+      "Translate Into Urdu Paragraph",
+      "Word Meanings",
+      "Summary",
+      "Tick Correct Spellings",
+      "Correct Meaning of Underline Word",
+      "Tick Correct Form of Verb",
+      "Tick Correct According to Grammer",
+      "Active and Passive Voice",
+      "Fill In The Blanks",
+      "Direct and Indirect",
+      "Pair of Words"
     ],
     "Daffodils": [
-      "MCQs", "Grammar", "Question And Answers", "Summary",
-      "Tick Correct Spellings", "Correct Meaning of Underline Word",
-      "Tick Correct Form of Verb", "Tick Correct According to Grammer"
+      "MCQs",
+      "Grammar",
+      "Question And Answers",
+      "Summary",
+      "Poem Stanzas",
+      "Tick Correct Spellings",
+      "Correct Meaning of Underline Word",
+      "Tick Correct Form of Verb",
+      "Tick Correct According to Grammer",
+      "Active and Passive Voice",
+      "Fill In The Blanks",
+      "Direct and Indirect",
+      "Pair of Words"
     ],
     "Hazrat Asma (رضي الله عنها)": [
-      "MCQs", "Grammar", "Idioms/Sentences", "Words into Sentences",
-      "Question And Answers", "Translate Into Urdu Paragraph", "Word Meanings", "Summary",
-      "Tick Correct Spellings", "Correct Meaning of Underline Word",
-      "Tick Correct Form of Verb", "Tick Correct According to Grammer"
+      "MCQs",
+      "Grammar",
+      "Idioms/Sentences",
+      "Words into Sentences",
+      "Question And Answers",
+      "Translate Into Urdu Paragraph",
+      "Word Meanings",
+      "Summary",
+      "Tick Correct Spellings",
+      "Correct Meaning of Underline Word",
+      "Tick Correct Form of Verb",
+      "Tick Correct According to Grammer",
+      "Active and Passive Voice",
+      "Fill In The Blanks",
+      "Direct and Indirect",
+      "Pair of Words"
     ],
     "Women Empowerment through Entrepreneurship": [
-      "MCQs", "Grammar", "Idioms/Sentences", "Words into Sentences",
-      "Question And Answers", "Translate Into Urdu Paragraph", "Word Meanings", "Summary",
-      "Tick Correct Spellings", "Correct Meaning of Underline Word",
-      "Tick Correct Form of Verb", "Tick Correct According to Grammer"
+      "MCQs",
+      "Grammar",
+      "Idioms/Sentences",
+      "Words into Sentences",
+      "Question And Answers",
+      "Translate Into Urdu Paragraph",
+      "Word Meanings",
+      "Summary",
+      "Tick Correct Spellings",
+      "Correct Meaning of Underline Word",
+      "Tick Correct Form of Verb",
+      "Tick Correct According to Grammer",
+      "Active and Passive Voice",
+      "Fill In The Blanks",
+      "Direct and Indirect",
+      "Pair of Words"
     ],
     "The Value of Time": [
-      "MCQs", "Grammar", "Idioms/Sentences", "Words into Sentences",
-      "Question And Answers", "Translate Into Urdu Paragraph", "Word Meanings", "Summary",
-      "Tick Correct Spellings", "Correct Meaning of Underline Word",
-      "Tick Correct Form of Verb", "Tick Correct According to Grammer"
+      "MCQs",
+      "Grammar",
+      "Idioms/Sentences",
+      "Words into Sentences",
+      "Question And Answers",
+      "Translate Into Urdu Paragraph",
+      "Word Meanings",
+      "Summary",
+      "Tick Correct Spellings",
+      "Correct Meaning of Underline Word",
+      "Tick Correct Form of Verb",
+      "Tick Correct According to Grammer",
+      "Active and Passive Voice",
+      "Fill In The Blanks",
+      "Direct and Indirect",
+      "Pair of Words"
     ],
     "If": [
-      "MCQs", "Grammar", "Question And Answers", "Summary", "Translate Into Urdu Paragraph",
-      "Tick Correct Spellings", "Correct Meaning of Underline Word",
-      "Tick Correct Form of Verb", "Tick Correct According to Grammer"
+      "MCQs",
+      "Grammar",
+      "Question And Answers",
+      "Summary",
+      "Translate Into Urdu Paragraph",
+      "Poem Stanzas",
+      "Tick Correct Spellings",
+      "Correct Meaning of Underline Word",
+      "Tick Correct Form of Verb",
+      "Tick Correct According to Grammer",
+      "Active and Passive Voice",
+      "Fill In The Blanks",
+      "Direct and Indirect",
+      "Pair of Words"
     ],
     "Globalisation's Impact on Culture and Economy": [
-      "MCQs", "Grammar", "Idioms/Sentences", "Words into Sentences",
-      "Question And Answers", "Translate Into Urdu Paragraph", "Word Meanings", "Summary",
-      "Tick Correct Spellings", "Correct Meaning of Underline Word",
-      "Tick Correct Form of Verb", "Tick Correct According to Grammer"
+      "MCQs",
+      "Grammar",
+      "Idioms/Sentences",
+      "Words into Sentences",
+      "Question And Answers",
+      "Translate Into Urdu Paragraph",
+      "Word Meanings",
+      "Summary",
+      "Tick Correct Spellings",
+      "Correct Meaning of Underline Word",
+      "Tick Correct Form of Verb",
+      "Tick Correct According to Grammer",
+      "Active and Passive Voice",
+      "Fill In The Blanks",
+      "Direct and Indirect",
+      "Pair of Words"
     ],
     "Quality Education A Key to Success": [
-      "MCQs", "Grammar", "Idioms/Sentences", "Words into Sentences",
-      "Question And Answers", "Translate Into Urdu Paragraph", "Word Meanings", "Summary",
-      "Tick Correct Spellings", "Correct Meaning of Underline Word",
-      "Tick Correct Form of Verb", "Tick Correct According to Grammer"
+      "MCQs",
+      "Grammar",
+      "Idioms/Sentences",
+      "Words into Sentences",
+      "Question And Answers",
+      "Translate Into Urdu Paragraph",
+      "Word Meanings",
+      "Summary",
+      "Tick Correct Spellings",
+      "Correct Meaning of Underline Word",
+      "Tick Correct Form of Verb",
+      "Tick Correct According to Grammer",
+      "Active and Passive Voice",
+      "Fill In The Blanks",
+      "Direct and Indirect",
+      "Pair of Words"
     ],
     "Wildlife Vignettes Fascinating Nature": [
-      "MCQs", "Grammar", "Idioms/Sentences", "Words into Sentences",
-      "Question And Answers", "Translate Into Urdu Paragraph", "Word Meanings", "Summary",
-      "Tick Correct Spellings", "Correct Meaning of Underline Word",
-      "Tick Correct Form of Verb", "Tick Correct According to Grammer"
+      "MCQs",
+      "Grammar",
+      "Idioms/Sentences",
+      "Words into Sentences",
+      "Question And Answers",
+      "Translate Into Urdu Paragraph",
+      "Word Meanings",
+      "Summary",
+      "Tick Correct Spellings",
+      "Correct Meaning of Underline Word",
+      "Tick Correct Form of Verb",
+      "Tick Correct According to Grammer",
+      "Active and Passive Voice",
+      "Fill In The Blanks",
+      "Direct and Indirect",
+      "Pair of Words"
     ],
     "The Dear Departed (One-Act Play) Stanley Houghton": [
-      "MCQs", "Grammar", "Idioms/Sentences", "Words into Sentences",
-      "Question And Answers", "Translate Into Urdu Paragraph", "Word Meanings", "Summary",
-      "Tick Correct Spellings", "Correct Meaning of Underline Word",
-      "Tick Correct Form of Verb", "Tick Correct According to Grammer"
+      "MCQs",
+      "Grammar",
+      "Idioms/Sentences",
+      "Words into Sentences",
+      "Question And Answers",
+      "Translate Into Urdu Paragraph",
+      "Word Meanings",
+      "Summary",
+      "Tick Correct Spellings",
+      "Correct Meaning of Underline Word",
+      "Tick Correct Form of Verb",
+      "Tick Correct According to Grammer",
+      "Active and Passive Voice",
+      "Fill In The Blanks",
+      "Direct and Indirect",
+      "Pair of Words"
     ],
-    "1 Letters": ["Letter Writing"],
-    "2 Stories": ["Story"],
-    "3 Dialogues": ["Dialogue Writing"],
-    "4 Comprehension Paragraphs": ["Comprehension"],
-    "5 Idioms": ["Ideoms", "Words Meanings"],
+    "1 Letters": [
+      "Letter Writing"
+    ],
+    "2 Stories": [
+      "Story"
+    ],
+    "3 Dialogues": [
+      "Dialogue Writing"
+    ],
+    "4 Comprehension Paragraphs": [
+      "Comprehension"
+    ],
+    "5 Idioms": [
+      "Ideoms",
+      "Words Meanings"
+    ],
     "(Before any topic)": [
-      "MCQs", "Grammar", "Idioms/Sentences", "Words into Sentences",
-      "Question And Answers", "Translate Into Urdu Paragraph", "Word Meanings", "Summary",
-      "Tick Correct Spellings", "Correct Meaning of Underline Word",
-      "Tick Correct Form of Verb", "Tick Correct According to Grammer",
-      "Letter Writing", "Active and Passive Voice", "Stories", "Dialogue Writing",
-      "Comprehension", "Poem Stanzas", "Ideoms", "Fill In Tha Blanks",
-      "Direct and Indirect", "Pair of Words", "Punctuate the Paragraph", "Writing Paragraphs"
+      "MCQs",
+      "Grammar",
+      "Idioms/Sentences",
+      "Words into Sentences",
+      "Question And Answers",
+      "Translate Into Urdu Paragraph",
+      "Word Meanings",
+      "Summary",
+      "Tick Correct Spellings",
+      "Correct Meaning of Underline Word",
+      "Tick Correct Form of Verb",
+      "Tick Correct According to Grammer",
+      "Letter Writing",
+      "Active and Passive Voice",
+      "Stories",
+      "Dialogue Writing",
+      "Comprehension",
+      "Poem Stanzas",
+      "Ideoms",
+      "Fill In Tha Blanks",
+      "Direct and Indirect",
+      "Pair of Words",
+      "Punctuate the Paragraph",
+      "Writing Paragraphs"
     ]
   },
   "Farsi": {
@@ -2186,8 +2369,13 @@
       "Long Questions"
     ],
     "(Before any topic)": [
-      "MCQs", "Short Questions", "Long Questions",
-      "Hadith", "Ahadees", "Shakhsiyaat", "Shakhsiyat"
+      "MCQs",
+      "Short Questions",
+      "Long Questions",
+      "Hadith",
+      "Ahadees",
+      "Shakhsiyaat",
+      "Shakhsiyat"
     ]
   },
   "Maashiyat": {
@@ -2960,7 +3148,9 @@
       "Long Questions"
     ],
     "(Before any topic)": [
-      "MCQs", "Short Questions", "Long Questions"
+      "MCQs",
+      "Short Questions",
+      "Long Questions"
     ]
   },
   "Punjabi": {
@@ -3075,9 +3265,15 @@
       "Muzakir Monas"
     ],
     "(Before any topic)": [
-      "MCQs", "Short Questions",
-      "Ashar Ki Tashreeh", "Letter Writing", "Muzakir Monas",
-      "Paragraph Ki Tashreeh", "Story", "Wahid Jama", "Words into Sentences"
+      "MCQs",
+      "Short Questions",
+      "Ashar Ki Tashreeh",
+      "Letter Writing",
+      "Muzakir Monas",
+      "Paragraph Ki Tashreeh",
+      "Story",
+      "Wahid Jama",
+      "Words into Sentences"
     ]
   },
   "Tarjuma tul Quran": {
@@ -3194,128 +3390,152 @@
       "Word Meanings"
     ],
     "(Before any topic)": [
-      "MCQs", "Short Questions", "Long Questions",
-      "Ayat", "Word Meanings"
+      "MCQs",
+      "Short Questions",
+      "Long Questions",
+      "Ayat",
+      "Word Meanings"
     ]
   },
   "Urdu": {
     "اخلاق حسنہ": [
       "MCQs",
       "Short Questions",
-      "Tafheem Ibarat",
-      "Ilfaz Ko Jumlo Mein Istamal",
       "Summary",
-      "Ilfaz Maani"
+      "Paragraph Ki Tashreeh",
+      "Ilfaz Ko Jumlo Mein Istamal",
+      "Ilfaz Maani",
+      "Letter Writing",
+      "Wahid Jama"
     ],
     "اپنی مدد آپ": [
       "MCQs",
       "Short Questions",
-      "Tafheem Ibarat",
-      "Ilfaz Ko Jumlo Mein Istamal",
       "Summary",
-      "Ilfaz Maani"
+      "Paragraph Ki Tashreeh",
+      "Ilfaz Ko Jumlo Mein Istamal",
+      "Ilfaz Maani",
+      "Khali Jaga Pur Karein"
     ],
     "کلیم اور مرزا ظاہر دار بیگ": [
       "MCQs",
       "Short Questions",
-      "Tafheem Ibarat",
-      "Ilfaz Ko Jumlo Mein Istamal",
       "Summary",
-      "Ilfaz Maani"
+      "Paragraph Ki Tashreeh",
+      "Ilfaz Ko Jumlo Mein Istamal",
+      "Ilfaz Maani",
+      "Araab Lagaein"
     ],
     "نام دیو-مالی": [
       "MCQs",
       "Short Questions",
-      "Tafheem Ibarat",
-      "Summary"
+      "Summary",
+      "Paragraph Ki Tashreeh",
+      "Khali Jaga Pur Karein",
+      "Muzakir Monas",
+      "Tafheem Ibarat"
     ],
     "آرام و سکون": [
       "MCQs",
       "Short Questions",
-      "Tafheem Ibarat",
-      "Summary"
+      "Summary",
+      "Paragraph Ki Tashreeh",
+      "Khali Jaga Pur Karein"
     ],
     "کتبہ": [
       "MCQs",
       "Short Questions",
-      "Tafheem Ibarat",
-      "Ilfaz Ko Jumlo Mein Istamal",
       "Summary",
-      "Ilfaz Maani"
+      "Paragraph Ki Tashreeh",
+      "Ilfaz Ko Jumlo Mein Istamal",
+      "Ilfaz Maani",
+      "Araab Lagaein",
+      "Tafheem Ibarat"
     ],
     "ابتدائی حساب": [
       "MCQs",
       "Short Questions",
-      "Tafheem Ibarat",
-      "Summary"
+      "Summary",
+      "Araab Lagaein",
+      "Khali Jaga Pur Karein",
+      "Tafheem Ibarat"
     ],
     "لڑی میں پروے ہوئے منظر": [
       "MCQs",
       "Short Questions",
-      "Tafheem Ibarat",
-      "Summary"
+      "Summary",
+      "Paragraph Ki Tashreeh",
+      "Ilfaz Mutaradif",
+      "Ilfaz Mutazad",
+      "Muzakir Monas",
+      "Tafheem Ibarat"
     ],
     "بھیڑیا": [
       "MCQs",
       "Short Questions",
-      "Tafheem Ibarat",
-      "Summary"
+      "Summary",
+      "Paragraph Ki Tashreeh",
+      "Araab Lagaein",
+      "Ilfaz Mutaradif",
+      "Ilfaz Mutazad"
     ],
     "حوصلہ نہ ہارو آگے بڑھو منزل اب کے دور نہیں": [
       "MCQs",
       "Short Questions",
-      "Tafheem Ibarat",
-      "Summary"
+      "Summary",
+      "Paragraph Ki Tashreeh"
     ],
     "حمد": [
       "MCQs",
       "Short Questions",
-      "Poetry"
+      "Ashaar Ki Tashreeh",
+      "Markazi Khayal"
     ],
     "نعت": [
       "MCQs",
       "Short Questions",
-      "Poetry"
+      "Araab Lagaein",
+      "Markazi Khayal"
     ],
     "محنت کی برکت": [
       "MCQs",
       "Short Questions",
-      "Poetry"
+      "Araab Lagaein",
+      "Ilfaz Ko Jumlo Mein Istamal",
+      "Markazi Khayal"
     ],
     "جاوید کے نام": [
       "MCQs",
       "Short Questions",
-      "Poetry"
+      "Markazi Khayal"
     ],
     "پیام لطیف": [
       "MCQs",
       "Short Questions",
-      "Poetry"
+      "Markazi Khayal"
     ],
     "کرکٹ اور مشاعرہ": [
       "MCQs",
       "Short Questions",
-      "Poetry"
+      "Markazi Khayal"
     ],
     "فقیرا نہ آئے صدا کر چلے": [
       "MCQs",
-      "Short Questions",
-      "Poetry"
+      "Short Questions"
     ],
     "سن تو سہی جہاں میں ہے تیرا افسانہ کیا": [
       "MCQs",
-      "Short Questions",
-      "Poetry"
+      "Short Questions"
     ],
     "غم ہے یا خوشی ہے تو": [
       "MCQs",
-      "Short Questions",
-      "Poetry"
+      "Short Questions"
     ],
     "کاش طوفاں میں سفینے کو اتارا ہو": [
       "MCQs",
       "Short Questions",
-      "Poetry"
+      "Jumlo Ki Darustagi",
+      "Jumlo Ki Takmeel"
     ],
     "واحد / جمع": [
       "MCQs"
@@ -3331,8 +3551,7 @@
     ],
     "اُردو (ب)": [
       "MCQs",
-      "Short Questions",
-      "Ashaar Ki Tashreeh"
+      "Short Questions"
     ],
     "غلط محاورات / جملوں کی درستگی": [
       "Jumlo Ki Darustagi"
@@ -3353,12 +3572,105 @@
       "Application Writing"
     ],
     "(Before any topic)": [
-      "MCQs", "Short Questions",
-      "Araab Lagaein", "Ashaar Ki Tashreeh", "Application Writing",
-      "Ilfaz Ko Jumlo Mein Istamal", "Ilfaz Maani", "Ilfaz Mutaradif", "Ilfaz Mutazad",
-      "Jumlo Ki Darustagi", "Jumlo Ki Takmeel", "Khali Jaga Pur Karein",
-      "Letter Writing", "Markazi Khayal", "Mukalmy", "Muzakir Monas",
-      "Paragraph Ki Tashreeh", "Story", "Summary", "Tafheem Ibarat", "Wahid Jama"
+      "MCQs",
+      "Short Questions",
+      "Araab Lagaein",
+      "Ashaar Ki Tashreeh",
+      "Application Writing",
+      "Ilfaz Ko Jumlo Mein Istamal",
+      "Ilfaz Maani",
+      "Ilfaz Mutaradif",
+      "Ilfaz Mutazad",
+      "Jumlo Ki Darustagi",
+      "Jumlo Ki Takmeel",
+      "Khali Jaga Pur Karein",
+      "Letter Writing",
+      "Markazi Khayal",
+      "Mukalmy",
+      "Muzakir Monas",
+      "Paragraph Ki Tashreeh",
+      "Story",
+      "Summary",
+      "Tafheem Ibarat",
+      "Wahid Jama"
     ]
+  },
+  "English-INTER-I": {
+    "1.1 Khatam-un-Nabiyeen Hazrat Muhammad خاتم النبین ﷺ": ["MCQs", "Punctuate the Paragraph", "Tick Correct Synonyms", "Translate into Urdu Paragraph", "Words Meanings"],
+    "2.1 Responsibility of the Youth in Nation-Building": ["MCQs", "Question and Answers", "Tick Correct Synonyms", "Translate into Urdu Paragraph", "Words Meanings"],
+    "3.1 A Bird Came Down the Walk": ["MCQs", "Poem Stanzas", "Question and Answers", "Tick Correct Synonyms", "Words Meanings"],
+    "4.1 Team Moon": ["MCQs", "Question and Answers", "Tick Correct Synonyms", "Translate into Urdu Paragraph", "Words into Sentences", "Words Meanings"],
+    "5.1 Impact of Global Warming on Pakistan": ["MCQs", "Question and Answers", "Tick Correct Synonyms", "Translate into Urdu Paragraph"],
+    "6.1 The Echoing Green (Poem)": ["MCQs", "Poem Stanzas", "Question and Answers", "Tick Correct Synonyms"],
+    "7.1 What You Do is What You Are": ["MCQs", "Question and Answers", "Tick Correct Synonyms", "Translate into Urdu Paragraph"],
+    "8.1 Clean Water": ["MCQs", "Pair of Words", "Question and Answers", "Tick Correct Synonyms", "Translate into Urdu Paragraph"],
+    "9.1 Freedom": ["MCQs", "Poem Stanzas", "Question and Answers", "Summary", "Tick Correct Synonyms", "Words into Sentences"],
+    "10.1 The Punishment of Khipil": ["MCQs", "Question and Answers", "Tick Correct Synonyms", "Translate into Urdu Paragraph"],
+    "11.1 Those Winter Sundays": ["MCQs", "Applications", "Poem Stanzas", "Question and Answers", "Tick Correct Synonyms", "Words into Sentences"],
+    "12.1 The Impact of AI on Society...": ["MCQs", "Question and Answers", "Tick Correct Synonyms", "Translate into Urdu Paragraph", "Words into Sentences"],
+    "13.1 Ruba'iyat": ["MCQs", "Poem Stanzas", "Question and Answers", "Tick Correct Synonyms", "Words Meanings"],
+    "14.1 The End of the Beginning": ["MCQs", "Letters", "Question and Answers", "Stories", "Tick Correct Form of Verb", "Tick Correct Synonyms", "Translate into Urdu Paragraph"],
+    "Letters": ["Letters"],
+    "Applications": ["Applications"],
+    "Stories": ["Stories"],
+    "Pair of words": ["Pair of Words"],
+    "Present Indefinite": ["Tick Correct Form of Verb"],
+    "Present Continuous": ["Tick Correct Form of Verb"],
+    "Present Perfect Tense": ["Tick Correct Form of Verb"],
+    "Present Perfect Continuous Tense": ["Tick Correct Form of Verb"],
+    "Past Indefinite Tense": ["Tick Correct Form of Verb"],
+    "Past Continuous Tense": ["Tick Correct Form of Verb"],
+    "Past Perfect Tense": ["Tick Correct Form of Verb"],
+    "Past Perfect Continuous Tense": ["Tick Correct Form of Verb"],
+    "Future Indefinite Tense": ["Tick Correct Form of Verb"],
+    "Future Continuous Tense": ["Tick Correct Form of Verb"],
+    "Future Perfect Tense": ["Tick Correct Form of Verb"],
+    "Future Perfect Continuous Tense": ["Tick Correct Form of Verb"]
+  },
+  "Urdu-INTER-I": {
+    "اخلاق نبوی خاتم النبین ﷺ": ["MCQs", "Question and Answers", "Paragraph ki Tashreeh"],
+    "فاقہ میں روزہ": ["MCQs", "Question and Answers", "Paragraph ki Tashreeh", "Comprehension Paragraph", "Words into Sentences"],
+    "مکاتیب غالب": ["MCQs", "Question and Answers", "Paragraph ki Tashreeh", "Comprehension Paragraph", "Words into Sentences", "Words Meanings"],
+    "ایک اُستاد عدالت کے کٹہرے میں": ["MCQs", "Question and Answers", "Paragraph ki Tashreeh", "Comprehension Paragraph", "Jumlo ki Darustagi", "Summary", "Words into Sentences"],
+    "چار پائی": ["MCQs", "Question and Answers", "Paragraph ki Tashreeh", "Summary", "Zarb ul Misaal"],
+    "اور پاکستان بن گیا": ["MCQs", "Question and Answers", "Paragraph ki Tashreeh", "Comprehension Paragraph", "Applications", "Pointing", "Words into Sentences"],
+    "نیا قانون": ["MCQs", "Question and Answers", "Paragraph ki Tashreeh", "Comprehension Paragraph", "Jumlo ki Darustagi", "Fill in the Blanks", "Pointing"],
+    "دهلیز": ["MCQs", "Question and Answers", "Paragraph ki Tashreeh", "Comprehension Paragraph", "Fill in the Blanks", "Pointing"],
+    "تاریخ کا کفن": ["MCQs", "Question and Answers", "Paragraph ki Tashreeh", "Comprehension Paragraph", "Fill in the Blanks", "Pointing", "Words into Sentences"],
+    "پاکستانی زبانیں اور ان کا باہمی رشتہ": ["MCQs", "Question and Answers", "Paragraph ki Tashreeh", "Comprehension Paragraph"],
+    "حمد": ["MCQs", "Ashaar ki Tashreeh", "Question and Answers", "Words into Sentences", "Words Meanings"],
+    "نعت": ["MCQs", "Markazi Khayal", "Question and Answers", "Summary"],
+    "اے وادیِ لولاب": ["MCQs", "Markazi Khayal", "Question and Answers", "Summary", "Words into Sentences"],
+    "اے وادی ِ لولاب!": ["MCQs", "Markazi Khayal", "Question and Answers", "Summary", "Words into Sentences"],
+    "اوردیس سے آنے والے بتا": ["MCQs", "Markazi Khayal", "Question and Answers", "Summary"],
+    "او دیس سے آنے والے بتا": ["MCQs", "Markazi Khayal", "Question and Answers", "Summary"],
+    "آزادی": ["MCQs", "Question and Answers", "Summary", "Words into Sentences"],
+    "اِخلاص": ["MCQs", "Markazi Khayal", "Question and Answers", "Summary"],
+    "اخلاص": ["MCQs", "Markazi Khayal", "Question and Answers", "Summary"],
+    "کھڑا ڈنر": ["MCQs", "Markazi Khayal", "Question and Answers", "Summary", "Words into Sentences"],
+    "پتا پتا بُو ٹا بُوٹا حال ہمارا جانے ہے": ["MCQs", "Question and Answers"],
+    "سر میں سودا بھی نہیں ، دل میں تمنا بھی نہیں": ["MCQs", "Question and Answers"],
+    "بے چین بہت پھرنا ، گھرائے ہوئے رہنا": ["MCQs", "Question and Answers"],
+    "سلسلے توڑ گیا وہ سبھی جاتے جاتے": ["MCQs", "Question and Answers"],
+    "بادباں کھلنے سے پہلے کا اشارہ دیکھنا": ["MCQs", "Question and Answers"],
+    "مکالمے": ["Dialogues"],
+    "رداد/مضامین": ["History"],
+    "درخواستیں": ["Applications"],
+    "رسیدیں": ["Receipt"],
+    "تلخیص پیراگراف": ["Takhlees Ibarat"],
+    "روزنامچے": ["Newsletters"],
+    "مطلع": ["MCQs"],
+    "مقطع": ["MCQs"],
+    "قافیہ": ["MCQs"],
+    "ردیف": ["MCQs"],
+    "تلمیح": ["MCQs"],
+    "تشبیہہ": ["MCQs"],
+    "استعارہ": ["MCQs"],
+    "جملوں کی درستگی": ["MCQs"],
+    "علم بیان": ["MCQs"],
+    "مجاز مرسل": ["MCQs"],
+    "کنایہ": ["MCQs"],
+    "مراعات النظیر": ["MCQs"],
+    "صنعت تضاد": ["MCQs"]
   }
 }

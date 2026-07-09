@@ -2,7 +2,6 @@ const courses = [
   { name: "PTB", range: "1st - 12th", logo: "/images/PTBLogo.png" },
   { name: "AFAQ", range: "1st - 7th", logo: "/images/AfaqLogo.png" },
   { name: "OXFORD", range: "1st - 5th", logo: "/images/OxfordLogo.png" },
-  { name: "GOHAR", range: "1st - 5th", logo: "/images/GoharLogo.png" },
   { name: "FEDERAL", range: "comming soon", logo: "/images/FederalLogo.png" },
   { name: "B.A", range: "PU", logo: "/images/PULogo.png" },
 ];

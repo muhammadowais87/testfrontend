@@ -1,0 +1,197 @@
+AFAQ 4 COMPUTER SUN SERIES
+
+-> Multiple option
+Computer Hardware
+Exercise	1.	Which of the following is the main circuit board of a computer:
+(A)Graphics card(B)Modem(C)Network card(D)Motherboard
+Exercise	2.	Which of the following hardware devices is plugged into the motherboard internally:
+(A)Mouse(B)Keyboard(C)RAM(D)Printer
+Exercise	3.	...... is memory, Which means data and instructions are stored temporarily:
+(A)DVD(B)ROM(C)RAM(D)Hard drive
+Exercise	4.	...... is memory, Which means data and instructions are stored temporarily:
+(A)DVD(B)ROM(C)RAM(D)Hard drive
+Exercise	5.	Which of the following is not secondary memory:
+(A)CD(B)DVD(C)USB drive(D)ROM
+Exercise	6.	The smallest unit of memory is called a ......:
+(A)Nibble(B)KB(C)Bit(D)Byte
+Operating system Windows
+Exercise	7.	What is required to run programs and applications on a computer:
+(A)Browser(B)Desktop(C)Operating system(D)Nerwork
+Exercise	8.	Which of the following is a directory where deleted files and folders are temporarily stored:
+(A)Local drive(B)This PC(C)Desktop(D)Recycle Bin
+Exercise	9.	Which of the following open the lists of programs and apps:
+(A)Windows Button(B)Task view(C)Taskbar(D)Search Box
+Exercise	10.	Which of the following assists in switching back or forth to the desired desktop:
+(A)Network(B)Desktop(C)Task view(D)Taskbar
+Exercise	11.	A speaker is a/an ...... device:
+(A)Civil(B)Electrical(C)Mechanical(D)Auto
+Exercise	12.	A folder is also known as a ......:
+(A)Driver(B)Partition(C)Directory(D)Domain
+Word Processing
+Exercise	13.	Which of the following types of documents are created using Microsoft word:
+(A)Graphics(B)Web(C)Text(D)Animation
+Exercise	14.	Which of the following the command button is used ti insert a line under the text:
+(A)Italic(B)Bold(C)Save(D)Underline
+Exercise	15.	Which of the following command is used when you want to reuse any text in the document:
+(A)Copy(B)Bold(C)Delete(D)Underline
+Exercise	16.	Which of the following command is used to change the text to Italics:
+(A)Ctrl+A(B)Ctrl+B(C)Ctrl+S(D)Ctrl+I
+Exercise	17.	Which of the following options converts the first character of every word to uppercase:
+(A)Sentence case(B)Lowercase(C)Capatalise each word(D)Uppercase
+
+-> Question & answers
+Computer Hardware
+1.	What is the name of at least three slots on the motherboard?
+Exercise
+2.	Can a computer work without memory?
+Exercise
+3.	Why does a computer's data storage capacity need to be increaed rapidly?
+Exercise
+4.	What are the instructions stored to start-up a computer?
+Exercise
+5.	What is the importance of the motherboard in a computer?
+Exercise
+6.	How many types of computer memory are there? Explain with examples.
+Exercise
+7.	Label the following devices of a computer.
+
+
+Exercise
+Operating system Windows
+8.	What are the functions of the Windows Button, task view and seacrch box?
+Exercise
+9.	What is the process of connecting to the internet?
+Exercise
+10.	How to find a file or folder in your computer?
+Exercise
+11.	How to search for a topic on the internet?
+Exercise
+Computer in Everyday Life
+12.	How are Computers helpful in public places?
+Exercise
+13.	What are computer controlled cameras?
+Exercise
+14.	What are three uses of Computers in newspaper production?
+Exercise
+Word Processing
+15.	What is change case? write the names of options availables in change case?
+Exercise
+16.	What are the steps to select text using a keyboard?
+Exercise
+Spreadsheet
+17.	What is the process of entering data into rows and columns?
+Exercise
+18.	What are the steps to create a pie chart?
+Exercise
+Presentation
+19.	How many mutlimedia components are there? Write their names.
+Exercise
+20.	What are mutlimedia compenents?
+Exercise
+21.	Which is the most common tool for creating animations?
+Exercise
+22.	What are the steps involved in creating a sound clip?
+Exercise
+23.	How do we insert sopund clips into MS PowerPoint presentations?
+Exercise
+
+-> Short questions
+Word Processing
+1	.	Define paste command.
+Exercise
+2	.	Define Bold command
+Exercise
+3	.	Define save command.
+Exercise
+Spreadsheet
+4	.	Define Row
+Exercise
+5	.	Define Column.
+Exercise
+6	.	Define Cell.
+Exercise
+Presentation
+7	.	Define mutlimedia.
+Exercise
+8	.	Define a mutlimedia presentation.
+Exercise
+
+-> Match columns
+Computer Hardware
+Column A	Column B
+Motherboard	
+Processor	
+Hard disk	
+RM	
+DVD drive	
+Operating system Windows
+Column A	Column B
+Taskbar	Start Menu
+Speaker	My Stuff and Web
+Search Box options	Access programs and apps quickly
+Windows Button	Output device
+Computer in Everyday Life
+Column A	Column B
+Railway reservations	Camera
+Word processing	Newspaper production
+Digital video	E-ticket system
+Word Processing
+Column A	Column B
+Ctrl+S	Italic
+Ctrl+U	Bold
+Ctrl+I	Save
+Ctrl+C	Underline
+Ctrl+B	Copy
+Spreadsheet
+Column A	Column B
+Address box	Active cell
+Highlighted cell	Horizontal
+Row	Cell address name
+Rectangular-shaped box	Vertical
+Column	Cell
+Presentation
+Column A	Column B
+Term	Description
+Multimedia	Runs a slide show
+Text	Creates animations
+Adobe Flash	Insert a vedio clip
+Video on my PC option	Five major compounds
+F5 key	Most common media type
+
+
+-> Fill in the blanks
+Computer Hardware
+1.	The motherboard is the main .................. of a computer.
+2.	There are many connection points called .................. on the motherboard to plug in internal devices.
+3.	The motherboard has many connection points or openings called .................. to connect external devices of a computer.
+4.	A computer has a huge storage capacity called ..................
+5.	A digital computer represents data in a .................. numeral system.
+Computer in Everyday Life
+6.	Computers are used in supermarkets for receiving ...................
+7.	Computers help produce quality .................. for videos and pictures.
+8.	Through a Computer system, people can book railway or airline ..................
+Word Processing
+9.	Text editor .................. allows you to select text cut, copy and paste it.
+10.	The .................. command is used when you want to reuse any text in a document.
+11.	The .................. makes the text style bold.
+12.	Word offers two ways to save a file .................. and ..................
+13.	The .................. command is used when you want to remove some text from a document.
+Spreadsheet
+14.	Microsoft Excel is a .................. program.
+15.	Rows are numbered from top to bottom along the left edge as .................. and so on.
+16.	Spreadsheet applications analyse and organise data into ..................
+17.	The .................. is a combination of a column and a row number.
+18.	Graphs or charts in a worksheet are used to present .................. data in visual form.
+Presentation
+19.	The two most common extensions for images are JPEG and ..................
+20.	The most common tool for creating animations is ..................
+21.	A multimedia presentation contains some form of ..................
+22.	The audio icon is clicked on the .................. group to insert an audio ..................
+23.	You can change the .................. of slides in a presentation.
+
+-> True flase statements
+Computer in Everyday Life
+1.	Doctors used tiny camera called endoscopy cameras to look inside the human body and diagnose diseases.
+2.	Traffic can also be checked or obseved through Computer-controlled cameras.
+3.	Television station also use Computers to keep track of broadcasts.
+4.	Computer technology in today;s world helps reader read news online.

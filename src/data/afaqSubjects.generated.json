@@ -1,0 +1,78 @@
+{
+  "ONE": [
+    { "title": "English", "series": "Sun Series" },
+    { "title": "Computer", "series": "Sun Series" },
+    { "title": "Mathematics", "series": "Sun Series" },
+    { "title": "اردو", "series": "Sun Series" },
+    { "title": "معلومات عامہ", "series": "Sun Series" },
+    { "title": "مطالعہ اسلام", "series": "Sun Series" },
+    { "title": "English", "series": "Iqbal Series" },
+    { "title": "Mathematics", "series": "Iqbal Series" },
+    { "title": "اردو (Iqbal)", "series": "Iqbal Series" },
+    { "title": "Computer", "series": "Iqbal Series" },
+    { "title": "Science", "series": "Iqbal Series" },
+    { "title": "اسلامیات", "series": "Iqbal Series" }
+  ],
+  "TWO": [
+    { "title": "English", "series": "Sun Series" },
+    { "title": "Computer", "series": "Sun Series" },
+    { "title": "Mathematics", "series": "Sun Series" },
+    { "title": "معلومات عامہ", "series": "Sun Series" },
+    { "title": "مطالعہ اسلام", "series": "Sun Series" },
+    { "title": "اردو", "series": "Sun Series" },
+    { "title": "English", "series": "Iqbal Series" },
+    { "title": "اسلامیات", "series": "Iqbal Series" },
+    { "title": "اردو", "series": "Iqbal Series" },
+    { "title": "واقعیت عامہ", "series": "Iqbal Series" }
+  ],
+  "THREE": [
+    { "title": "Computer", "series": "Sun Series" },
+    { "title": "English", "series": "Sun Series" },
+    { "title": "معلومات عامہ", "series": "Sun Series" },
+    { "title": "اردو", "series": "Sun Series" },
+    { "title": "مطالعہ اسلام", "series": "Sun Series" },
+    { "title": "اسلامیات", "series": "Iqbal Series" },
+    { "title": "English", "series": "Iqbal Series" },
+    { "title": "اردو", "series": "Iqbal Series" },
+    { "title": "Computer", "series": "Iqbal Series" },
+    { "title": "General Science", "series": "Iqbal Series" }
+  ],
+  "FOUR": [
+    { "title": "English", "series": "Sun Series" },
+    { "title": "Computer", "series": "Sun Series" },
+    { "title": "اردو", "series": "Sun Series" },
+    { "title": "Social Studies", "series": "Sun Series" },
+    { "title": "General Science", "series": "Sun Series" },
+    { "title": "مطالعہ اسلام", "series": "Sun Series" },
+    { "title": "General Science", "series": "Iqbal Series" },
+    { "title": "Social Studies", "series": "Iqbal Series" },
+    { "title": "اسلامیات", "series": "Iqbal Series" },
+    { "title": "English", "series": "Iqbal Series" },
+    { "title": "اردو", "series": "Iqbal Series" },
+    { "title": "Computer Science", "series": "Iqbal Series" },
+    { "title": "Mutalya Pakistan", "series": "Sun Series" }
+  ],
+  "5TH": [
+    { "title": "English", "series": "Sun Series" },
+    { "title": "Computer", "series": "Sun Series" },
+    { "title": "اردو", "series": "Sun Series" },
+    { "title": "General Science", "series": "Sun Series" },
+    { "title": "Social Studies", "series": "Sun Series" },
+    { "title": "مطالعہ اسلام", "series": "Sun Series" },
+    { "title": "Social Studies", "series": "Iqbal Series" },
+    { "title": "General Science", "series": "Iqbal Series" },
+    { "title": "اردو", "series": "Iqbal Series" },
+    { "title": "اسلامیات", "series": "Iqbal Series" },
+    { "title": "English (IS)", "series": "Iqbal Series" },
+    { "title": "Computer Science", "series": "Iqbal Series" }
+  ],
+  "6TH": [
+    { "title": "اسلامیات", "series": "Sun Series" },
+    { "title": "اردو", "series": "Sun Series" },
+    { "title": "English", "series": "Sun Series" },
+    { "title": "Computer", "series": "Sun Series" },
+    { "title": "General Science", "series": "Sun Series" },
+    { "title": "Geography", "series": "Sun Series" },
+    { "title": "History", "series": "Sun Series" }
+  ]
+}

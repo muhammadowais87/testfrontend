@@ -13,6 +13,7 @@ export type PaperQuestion = {
   text: string;
   urdu: string;
   imageFile?: string | null;
+  topicName?: string | null;
 };
 
 export type QuestionSelectionScope = {

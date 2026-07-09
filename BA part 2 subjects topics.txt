@@ -1,0 +1,155 @@
+-> english
+ SELECT ALL CHAPTERS
+ Modern Essay 1: Pakistan and the modern world
+ Pakistan and the modern world
+ Modern Essay 2: The Eclipse
+ The Eclipse
+ Modern Essay 3: Whistling of Birds
+ Whistling of Birds
+ Modern Essay 4: Take the Plungs
+ Take the Plungs
+ Modern Essay 5: Naga Saki, August 9, 1945
+ Naga saki, August 9,1945
+ Modern Essay 6: Walking on the Moon
+ Walking on the Moon
+ Modern Essay 7: My Grand Father
+ My Grand Father
+ Modern Essay 8: My Tailor
+ My Tailor
+ Modern Essay 9: The Beauty Industry
+ The Beauty Industry
+ Modern Essay 10: Are Doctor Men of Science
+ Are Doctor Men of Science
+ Modern Essay 11: Hosts and Guests
+ Hosts and Guests
+ Modern Essay 12: The Bachelor's Dilemma
+ The Bachelor's Dilemma
+ Modern Essay 13: Tolerence
+ Tolerence
+ Modern Essay 14: On saying Please
+ On saying Please
+ Modern Essay 15: To Err is Human
+ To Err is Human
+ Modern Essay 16: Gossip
+ Gossip
+ Modern Essay 17: Science and Values
+ Science and values
+ Modern Essay 18: Super
+ Super
+ Modern Essay 19: From some Policemen and a Moral
+ From some Policemen and a Moral
+ Modern Essay 20: The Vitamin's
+ The Vitamin's
+ The Old Man and the Sea (Novel)
+ 2.1 Life and works of Hemingway
+ 2.2 As an extraordinary fisherman
+ 2.3 As The great fighter
+ 2.4 As a tragic hero
+ 2.5 As a moral person
+ 2.6 Question based on the ending of the novel
+ 2.7 Characters other than Santiago
+ 2.8 Design and structure of the novel
+ Grammar & Composition
+ Applications
+ Essay
+ Idioms
+ Correction
+ Letters to the Editor
+
+-> gulshan e farsi
+SELECT ALL CHAPTERS
+ گلستانِ سعدیؒ
+ شیخ سعدی کے حالات زندگی
+ گلستانِ سعدی کی خصوصیات
+ حکایات کا ترجمہ و تشریح
+ حکایت نمبر:1
+ حکایت نمبر:2
+ حکایت نمبر:3
+ حکایت نمبر:4
+ حکایت نمبر:5
+ حکایت نمبر:6
+ حکایت نمبر:7
+ حکایت نمبر:8
+ حکایت نمبر:9
+ حکایت نمبر:10
+ حکایت نمبر:12
+ حکایت نمبر:13
+ حکایت نمبر:14
+ حکایت نمبر:15
+ حکایت نمبر:16
+ حکایت نمبر:17
+ حکایت نمبر:18
+ حکایت نمبر:19
+ حکایت نمبر:20
+ حکایت نمبر:11
+ پیامِ مشرق
+ علامہ اقبالؒ کے حالاتِ زندگی
+ پیامِ مشرق کی اہمیت
+ علامہ اقبالؒ کے کلام کی خصوصیات
+ نظموں کا ترجمہ و تشریح
+ نظم نمبر 1: فصل بہار
+ نظم نمبر 2: زندگی
+ نظم نمبر 3: سرودِ انجم
+ نظم نمبر 4: نسیم صبح
+ نظم نمبر 5: کرم کتابی
+ نظم نمبر 6: حکمت و شعر
+ نظم نمبر 7: کرمک شب تاب
+ نظم نمبر 8: حدی
+ نظم نمبر 9: محاورہ مابین خداوانسان
+ نظم نمبر 10: اگر خواہی حیات اندر خطرزی
+ نظم نمبر 11: زندگی و عمل
+ نظم نمبر 12: الملک للہ
+ نظم نمبر 13: کشمیر
+ نظم نمبر 14: طیارہ
+
+
+-> amoor e sahafat
+ELECT ALL CHAPTERS
+ باب نمبر 1:طباعت و اشاعت
+ طباعت و اشاعت
+ باب نمبر 2: برصغیر کی صحافت (آزادی سے قبل)
+ برصغیر کی صحافت (آزادی سے قبل)
+ باب نمبر 3: صحافت پاکستان میں
+ صحآفت پاکستان میں
+ باب نمبر 4: آزادی صحافت (قوانین اور حکومتی رویہ)
+ آزادی صحافت (قوانین اور حکومتی رویہ)
+ باب نمبر 5: صحافت کےلیے ضابطہ اخلاق کی ضرورت
+ صحافت کےلیے ضابطہ اخلاق کی ضرورت
+ باب نمبر 6: مطبوعہ صحافت اور الیکٹرانک صحافت کا موازنہ
+ مطبوعہ صحافت اور الیکٹرانک صحافت کا موازنہ
+
+-> islamiyat ikhtayari
+SELECT ALL CHAPTERS
+ باب نمبر 1: حدیث
+ تعارف حدیث
+ مطالعہ متن حدیث
+ باب نمبر 2: اصول فقہ تعارف علم فقہ
+ اصول فقہ و تعارف علم فقہ
+ کِتَابُ الصَّلٰوۃِ (لِلقَدُورِی)
+ باب نمبر 3: سیرۃ النبی ﷺ
+ مطالعہ سیرت النبی ﷺ کی اہمیت
+ نبی کریم ﷺ کےخصائص و امتیازات
+ دعوت دین میں نبی کریمﷺ کا طریق کار اور مساعی جمیہ
+ امن عالم سیرت طیبہ کی روشنی میں
+ باب نمبر 4: تاریخ اسلام
+ علوم و فنون میں مسلمانوں کی خدمات
+ مسلمانوں کے دور کے رفاہی کارنامے
+ مسلمانوں کے عروج کے اسباب و اثرات
+ مسلمانوں کی علمی خدمات کا اعتراف
+ موجودہ یورپ کی ترقی میں مسلمانوں کا کردار
+ ملت اسلامیہ کے زوال کے اسباب و اثرات
+ عالم اسلام کا مستقبل
+
+
+-> syaasiyat
+SELECT ALL CHAPTERS
+ باب نمبر 1: برطانیہ کا آئین
+ برطانیہ کا آئین
+ باب نمبر 2: امریکہ کا آئین
+ امریکہ کا آئین
+ باب نمبر 3: سوئٹزر لینڈ کا دستور
+ سوئٹزر لینڈ کا دستور
+ باب نمبر 4: اسلامی جمہوریہ پاکستان
+ اسلامی جمہوریہ پاکستان
+
+

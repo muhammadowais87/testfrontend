@@ -1,0 +1,223 @@
+AFAQ 5 COMPUTER SUN SERIES
+
+-> Multiple option
+Word Processing
+Exercise	1.	Superscript:
+(A)X2(B)X2(C)X(D)XI
+Exercise	2.	Subscript:
+(A)X2(B)X2(C)X(D)X I
+Exercise	3.	To Align left you can press:
+(A)Ctrl+L(B)Ctrl+R(C)Ctrl+J(D)Ctrl+S
+Exercise	4.	To Center align, you can press:
+(A)Ctrl+R(B)Ctrl+E(C)Ctrl+L(D)Ctrl+S
+Exercise	5.	To justify alignment, you can press:
+(A)Ctrl+J(B)Ctrl+L(C)Ctrl+E(D)Ctrl+R
+Email
+Exercise	6.	The main recipient(s) of an email message is/are added to ......:
+(A)CC(B)DCC(C)BCC(D)To
+Exercise	7.	...... is used when you want to share the list of recipients with other recipents:
+(A)To(B)CC(C)BCC(D)DCC
+Exercise	8.	...... is used when you don'n want to share the list of recipents with other recipents:
+(A)DCC(B)CC(C)BCC(D)To
+Exercise	9.	Which options sends a received email to other users:
+(A)Send(B)Receive(C)Forward(D)Reply
+Exercise	10.	Which option is used to respond to an email:
+(A)Send(B)Receive(C)Forward(D)Reply
+Exercise	11.	Outlook is a web-based email service provided by ......:
+(A)Google(B)Yahoo(C)IBM(D)Microsoft
+Exercise	12.	The folder which holds all junk, emails is called ......:
+(A)Inbox(B)Spam(C)Trash(D)Draft
+Exercise	13.	The folder that keeps all the received emails is known as ......:
+(A)Spam(B)Sent(C)Inbox(D)Draft
+Exercise	14.	The file sent while an email message is called a/an ......:
+(A)File(B)Emaile file(C)Attachment(D)Folder
+Exercise	15.	What was the internet first used for:
+(A)Chatting(B)Emailing(C)Browsing(D)Watchingmovies
+Start programming
+Exercise	16.	Which of the following areas of the MSWLogo window is used to keep a record of instructions:
+(A)Main screen(B)Input box(C)Recall list box(D)Control buttons
+Exercise	17.	Which of the following button is pressed on the commander window to execute command:
+(A)Halt(B)Trace(C)Pause(D)Execute
+Exercise	18.	Which of the following key is pressed on the keyboard to execute the commands in Logo:
+(A)Shift(B)Ctrl(C)Spacebar(D)Enter
+Exercise	19.	The term Logo stands for ......:
+(A)Language of graphics oriented(B)Logical orientation of graphics(C)Logic oriented graphic oriented(D)Language of graphical orientation
+Exercise	20.	Which command is used to change the direction of the logo turtle to the left:
+(A)Lft 90(B)LT90(C)LFT 90(D)LT_ 90
+Exercise	21.	Which command is used to change the direction of the logo turtle to the left:
+(A)Lft 90(B)LT90(C)LFT 90(D)LT_ 90
+Exercise	22.	How many buttons are there on the right side of the commander window:
+(A)3(B)4(C)5(D)6
+Exercise	23.	Which of the following command is correct for changing the direction of the turtle to the right:
+(A)rite 90(B)RITE 90(C)RIGHT 90(D)RT 90
+Exercise	24.	Which of the following groups of commands draws a square:
+(A)Fd 150 RT 90, FD 150 RT 90, FD 150 Rt 90, FD 90(B)FD 150 RT 90, FD 150 RT 90, FD 150 Rt 90(C)FD 150 LT 90, FD 150 RT 90, FD 150 Lt 90, FD 150(D)FD 90 RT 150
+Computer Network
+Exercise	25.	All computers in a network are called ......:
+(A)Clients(B)Nodes(C)Servers(D)Channels
+Exercise	26.	The main computer that control a network is called a ......:
+(A)Server(B)Client(C)Hub(D)Terminal
+Exercise	27.	Computers on a networks other than the main computer are called ......:
+(A)Servers(B)Clients(C)Hub(D)Channels
+Exercise	28.	A network designed for personal used is called ......:
+(A)LAN(B)MAN(C)WAN(D)PAN
+Exercise	29.	A network that connects computers and other devices in a large area or region is called a ......:
+(A)LAN(B)MAN(C)WAN(D)PAN
+Exercise	30.	A network that connects computers and other devices in a small area is called ......:
+(A)LAN(B)MAN(C)WAN(D)PAN
+Exercise	31.	A network that connects computers and other devices in a city or campus is called a ......:
+(A)LAN(B)MAN(C)WAN(D)PAN
+Exercise	32.	The centralised connection point that receives the request and transmits dara to the entire netwrok is called a ......:
+(A)Router(B)Switch(C)Hub(D)Bridge
+Exercise	33.	Darkness is actually the ...... of light:
+(A)Presence(B)Absence(C)Reflaction(D)Refraction
+
+-> Question & answers
+Word Processing
+1.	What is text alignment? Write down its different types?
+Exercise
+2.	What is subscript? Writw down steps to apply subcript.
+Exercise
+Start programming
+3.	What does logo programming language do?
+Exercise
+4.	How would you draw and label the logo turtle in your notebook?
+Exercise
+5.	How many sections are there in the commander window? Describe briefly.
+Exercise
+6.	How many control buttons are there on the commander window? Explain the 'Execute' button?
+Exercise
+7.	What does a debugging program do?
+Exercise
+
+-> Short questions
+Computer hardware
+1	.	Arithmetic operations.
+Exercise
+2	.	SD card.
+Exercise
+3	.	USB drive.
+Exercise
+Spreadsheet
+4	.	Define Workbook.
+Exercise
+5	.	Define Text.
+Exercise
+6	.	Define Formula.
+Exercise
+Email
+7	.	Differentiate between (a) Google mail, (b) Microsoft (c) Yahoo Mail
+Exercise
+Computer Network
+8	.	Define Modem
+Exercise
+9	.	Define switch.
+Exercise
+10	.	Define Router.
+Exercise
+11	.	Define Hub.
+Exercise
+
+-> Long questions
+Computer hardware
+1.	What are the three main components of the CPU?
+Exercise
+2.	What is the difference between RAM and ROM?
+Exercise
+Spreadsheet
+3.	What are the steps to create a basic function in Excel using Autosum?
+Exercise
+4.	What are the steps to arrange data in alphabetical order?
+Exercise
+Email
+5.	What are the benefits of email communications?
+Exercise
+6.	What are the features of an email service?
+Exercise
+7.	What are the process of creating and sending an email mesage?
+Exercise
+Computer Network
+8.	What are some uses and abuses of a computer network?
+Exercise
+9.	What are networks used in everyday life?
+Exercise
+10.	What are the different types of networks by size?
+Exercise
+
+-> Match columns
+Computer hardware
+Column A	Column B
+RAM	Compact Disc Read-Only Memory
+CD-ROM	Read-Only Memory
+DVD-ROM	Random Access Memory
+ROM	Secure Digital Card
+SD Card	Digital Versatile Disc Read-Only Memory
+Spreadsheet
+Column A	Column B
+Worksheet	Basic Function
+Data types	One or more worksheets
+Formulas	Single Spreadsheet
+Workbook	Equations
+AutoSum	Text, numbers, Formulas
+Email
+Column A	Column B
+Email	Email, contacts, tasks and calender
+SMTP	Gmail, Outlook, Yahoo Mail, etc.
+POP3	Encoded ASCII text
+Email service providers	Protocol for receiving email
+Outlook	Protocol for sending email.
+Computer Network
+Column A	Column B
+Computer peripherals	Local Area Network (LAN)
+Social Network	Hub, router & switch
+Network devices	Wide Area Network (WAN)
+Home network	Facebook, Twitter & Instagram
+City or campus network	Keyboard, scanner & speaker
+Global network	Metropolitan Area Network (MAN)
+
+-> Fill in the blanks
+Computer hardware
+1.	There are .................. types of memory in a computer.
+2.	A CD-ROM is a/an .................. disc capable of storing large amount of data.
+3.	The Control Unit (CU) controls data between .................. device and the computer.
+4.	AND, OR and NOT are .................. operators.
+5.	A USB device is a .................. storage device.
+Word Processing
+6.	You can move your paragraph farther away from the margine using the increase .................. option.
+7.	In .................. alignment, text is aligned centrally.
+8.	Line spacing is the .................. between the lines of text in a paragraph.
+9.	To enhance the appearance of ................... you can apply borders and shading effect.
+10.	There are .................. types of alignment.
+Spreadsheet
+11.	A work sheet begin with column .................. and row ..................
+12.	Three types of .................. can be entered into on MS Excel worksheet.
+13.	Text is .................. data that is not used for calculation purpose.
+14.	Excel has a complete library of .................. of formulae.
+15.	The .................. command allow you to automatically return the sum of the desired range of cell reference.
+Start programming
+16.	The turtle is a small .................. that has two parts.
+17.	The .................. main screen is the area where the Logo turtle draws shapes and writes text.
+18.	The .................. is the area where commands are typed.
+19.	The ................. is the area which exists below the main screen.
+20.	The input box is the area where all the .................. are typed.
+
+-> True false statements
+Computer hardware
+1.	Physical parts of a computer that you can see and touch are called hardware.
+2.	Secondary memory has low capacity and faster performance.
+3.	A USB drive, known as a flash drive, is a plug.and-play portable storage device.
+4.	Arithmetic operations are less than < and greater than>.
+5.	MU stand for memory Unit.
+Word Processing
+6.	In "justify" alignment, text is aligned only to the right.
+7.	You can replace the found text with new text by using the replace option.
+8.	You can move your paragraph closer to the margin using 'increase indent'.
+9.	In " Aligh Left", text is aligned from left to right.
+10.	Superscript reduce text size and raise it slightly above the current line.
+Spreadsheet
+11.	Each cell can contain a number, text or formula
+12.	Numbers are generally numeric data.
+13.	A formula is an equation that perform operations.
+14.	Text is numeric data.
+15.	Argument must be enclosed in parenthese.
+

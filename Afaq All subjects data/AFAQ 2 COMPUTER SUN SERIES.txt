@@ -1,0 +1,173 @@
+AFAQ 2 COMPUTER SUN SERIES
+
+-> Multiple option
+Computer Hardware
+Exercise	1.	In how many steps does a computer perform a task:
+(A)One(B)Two(C)Three(D)Four
+Exercise	2.	Which device is used to move the pointer on the monitor screen:
+(A)Keyboard(B)Mouse(C)Scanner(D)Digital camera
+Exercise	3.	Which device is used to make photographs or movies:
+(A)Scanner(B)Digital camera(C)Microphone(D)Speakers
+Exercise	4.	Which output device is like a television:
+(A)Monitor(B)Printer(C)Speaker(D)Projector
+Exercise	5.	Which device is used to get an enlarged view of an image or data:
+(A)Digital camera(B)Monitor(C)Printer(D)Projector
+Exercise	6.	How many types of personal computers are there:
+(A)Two(B)Three(C)Four(D)Five
+Exercise	7.	Desktop computers are available in how many types of casing:
+(A)Two(B)Three(C)Four(D)Five
+Exercise	8.	Which one of the following is true about portable computers:
+(A)Have tower casing(B)Have desktop casing(C)Large in size(D)Can be moved easily
+Mouse and Keyboard
+Exercise	9.	Which of the following actions is performed after a right-click on a selected item:
+(A)Programme opens(B)Item is selected(C)A menu appears(D)Drag and drop
+Exercise	10.	Which of the following menus appears if you press the Window key:
+(A)Properties menu(B)Help menu(C)System menu(D)Start menu
+Exercise	11.	Which of the following keys moves the cursor several spaces to the right:
+(A)ALT(B)Num Lock(C)Tab(D)ESC
+Exercise	12.	What happens when the ESC is pressed:
+(A)An item is selected(B)A menu appears(C)It cancel an operation(D)The cursor moves
+Exercise	13.	Which of the following are Home keys of a keyboard:
+(A)QWERTY(B)ASDF(C)JKL(D)ASDF JKL
+Software
+Exercise	14.	Which of the following is used to control hardware as well as application software:
+(A)Word(B)Excel(C)Paint(D)Windows
+Exercise	15.	Which of the following is used to create letters and documents:
+(A)System software(B)Windows(C)Word(D)Excel
+Exercise	16.	Which of the following is present on the left of the Taskbar:
+(A)Search box(B)Start button(C)Taskbar buttons(D)Notification area
+Exercise	17.	Which of the following provides as easy way to find programmes:
+(A)Start button(B)Start menu(C)Search box(D)Notification area
+Exercise	18.	Which of the following icons is present in the notification area:
+(A)Windows(B)Task view(C)Sound(D)Internet explorer
+
+-> Question & answers
+Computer Hardware
+1.	List some output devices of a computer.
+Exercise
+2.	Explain three basic operations of a computer.
+Exercise
+Mouse and Keyboard
+3.	Write the steps to drag and drop an item.
+Exercise
+4.	What are special keys? Give three examples.
+Exercise
+Software
+5.	Label the following.
+ 
+
+Exercise
+6.	Label the following.
+ 
+
+Exercise
+7.	What is software?
+Exercise
+8.	What is the difference between system software and application software? Give examples.
+Exercise
+Drawing with paint
+9.	Which tool is used to draw free-form lines or curves?
+Exercise
+10.	Which tool is used to draw straight lines?
+Exercise
+11.	Which tool is used to draw curves?
+Exercise
+12.	Where can you choose the colour of your choice from?
+Exercise
+13.	Which tool should you select if you want to draw a star?
+Exercise
+14.	What are the advantages of drawing in MS paint?
+Exercise
+15.	How do you save a pain file?
+Exercise
+16.	Label the tools on the Ribbon. 
+Exercise
+
+-> match columns
+Mouse and Keyboard
+Column A	Column B
+	It cancels on operation
+	Works with other keys to start various actions
+	Opens the help menu of an opened programme
+	It moves the cursor left, right, up and down
+	It opens the start menu
+	Allows the use of the numeric keypad
+	Moves the cursor several spaces to the right
+Software
+Column A	Column B
+	Minimises the window
+	Restores the window
+	Closes a programme
+	Used for making text documents
+	Draws shapes and colours
+	Network icon
+Drawing with paint
+Tool name	Icon
+Pencil	
+Eraser	
+Line	
+Curve	
+Oval	
+Rectangle	
+Fill with color	
+
+
+-> fill in the blanks
+Computer Hardware
+1.	A system unit consist of a casing and many ..................
+2.	CPU stands for ..................
+3.	A computer carries out work in .................. basic steps.
+4.	A personal computer is generally called a ..................
+5.	Desktop computers are available in tower casing and .................. casing.
+Mouse and Keyboard
+6.	When an item is moved from one area to another on the desktop, it is called ..................
+7.	The keys that are used to perform special tasks are called ..................
+8.	ALT + Enter key display the selected item ..................
+9.	Arrow keys are also called ..................
+10.	To type quickly, you should know your letter to .................. position.
+Software
+11.	Software is divided into two main types system software and ..................
+12.	Windows runs and controls computer hardware as well as ...................
+13.	Application software is used to perform .................. tasks.
+14.	The start buttons opens the ..................
+15.	The notification area is present on the right of the ..................
+Drawing with paint
+16.	The paint window opens with the .................. selected.
+17.	The Ribbon contains the .................. required for drawing and painting in paint .
+18.	The line tool is used to draw a ..................
+19.	The Eraser tool is used to ................... mistakes or unwanted drawing.
+20.	The oval is used to make ..................
+
+-> Missing letters
+Computer Hardware
+1.	S......s......e......
+2.	U......it
+3.	I......f......r......at......o......
+4.	L......p......o......
+5.	O......t......u......
+6.	P......o......e......s......ng
+7.	D......s......t......p
+8.	P......r......a......le
+Mouse and Keyboard
+9.	R......g.....t C......i......k
+10.	D......ag and d......op
+11.	W......n......o......s
+12.	N......m......r......c
+13.	E......c......p......
+14.	C......r......o......
+15.	T......p......ng
+Software
+16.	S......f......w......r......
+17.	W......n......o......s
+18.	W......rd
+19.	N......t......o......k
+20.	T......sk......ar
+21.	St......r...... B......t......on
+22.	N......ti......ica......i......ns
+Drawing with paint
+23.	F......l......e......
+24.	Ac......e......s......ri......s
+25.	R......b......o......
+26.	C......r......le
+27.	P......l......tt......
+
