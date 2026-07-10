@@ -1,0 +1,176 @@
+-> mcqs
+Algorithms and Flowcharts
+Exercise	1.	Set of instructions given in natural language is called:
+(A)Software(B)Algorithm(C)Flowchart(D)None
+Exercise	2.	Pictorial representation of a solution is called:
+(A)Software(B)Algorithm(C)Flowchart(D)None
+Exercise	3.	Oval sign in flowchart is used for:
+(A)Start(B)End(C)Both a and b(D)None
+Exercise	4.	In flowchart different steps are connected by:
+(A)Oval(B)FlowLine(C)Diamond(D)None
+Exercise	5.	Diamond symbol represents ...... in flowcharts:
+(A)Database(B)Input(C)Output(D)None
+Artificial Intelligence and Robotics
+Exercise	6.	AI stands for:
+(A)Advance Intelligence(B)Advance Industries(C)Artificial Interlligence(D)None
+Exercise	7.	Which of the following is example of AI:
+(A)Driverless cars(B)Voice Assistants(C)Robots(D)All
+Exercise	8.	Robots get power by:
+(A)Batteries(B)Solar power(C)Both a and b(D)None
+Exercise	9.	Robots are used in industries for:
+(A)Handling material(B)Color coating(C)Polishing(D)All
+Exercise	10.	Robots can be used in military for:
+(A)Carrying heavy equipment(B)Color Coating(C)Polishing(D)All
+Microsoft Powerpoint
+Exercise	11.	The single page of presentation is called:
+(A)Theme(B)Clip Art(C)Slide(D)None
+Exercise	12.	We can insert new slide in our presentation from:
+(A)Font group(B)Slide group(C)Illustration group(D)None
+Exercise	13.	Short cut command used to insert new slide:
+(A)Alt+m(B)Ctrl+m(C)Ctrl+n(D)None
+Exercise	14.	Short cut command used to save a presentation:
+(A)Alt+s(B)Ctrl+s(C)Ctrl+n(D)None
+Exercise	15.	We can print our presentation:
+(A)Always(B)Never(C)Sometimes(D)None
+Microsoft Excel
+Exercise	16.	The single page of Excel is called:
+(A)Theme(B)SpreadSheet(C)Workbook(D)None
+Exercise	17.	If we want to perform calculations the cell data will be started from:
+(A)=(B)#(C)$(D)None
+Exercise	18.	If we want to show percentage of quantity of items we will use .................. chart.
+(A)Column(B)Pie(C)Combo(D)None
+Exercise	19.	If we want to compare values of few categories, we will use .................. chart.
+(A)Bar(B)Pie(C)Combo(D)None
+Exercise	20.	If we want highlight different, we will use .................. chart.
+(A)Bar(B)Pie(C)Combo(D)None
+Electronic Mail
+Exercise	21.	.................. is a short title that gives a brief description of the email.
+(A)Subject(B)Inbox(C)Outbox(D)None
+Exercise	22.	In .................. field address of participants is not available to others.
+(A)Bcc(B)Cc(C)Bb(D)None
+Exercise	23.	The .................. displays a list of received emails.
+(A)Outbox(B)Inbox(C)Subject(D)None
+Exercise	24.	Address of the person to whom you want to send the email is written in .................. field.
+(A)To(B)For(C)Both(D)None
+Exercise	25.	In order to use the email service, we need to have .................. account.
+(A)Email(B)Mobile(C)Bank(D)None
+More about Scratch
+Exercise	26.	We can create .................. in scratch.
+(A)Stories(B)Games(C)Animations(D)None
+Exercise	27.	.................. contains the name of the file in scratch.
+(A)Toolbar(B)Titlebar(C)Sprite(D)None
+Exercise	28.	.................. command moves the sprite in forward direction.
+(A)Turn(B)Forward(C)Move(D)None
+Exercise	29.	.................. is the area where sprite can move.
+(A)Stage(B)Menu bar(C)Black palette(D)None
+Exercise	30.	.................. is points the direction where it will turn.
+(A)Tail(B)Face(C)Head(D)None
+
+-> question and answers
+Algorithms and Flowcharts
+1.	Algorithm to wear shoes.
+Exercise
+2.	Algorithm to calculate the sum of three numbers.
+Exercise
+3.	Algorithm to solve the question of you math.
+Exercise
+4.	Algorithm to make a tea.
+Exercise
+5.	To wear shoes.
+Exercise
+6.	To calculate the sum of three numbers.
+Exercise
+7.	To solve the question of you math.
+Exercise
+8.	To make a tea.
+Exercise
+9.	What is an algorithms?
+Exercise
+10.	Difference between algorithms and flowcharts.
+Exercise
+11.	Why do we use connectors in flowcharts?
+Exercise
+12.	Why do we use arrows in flowcharts?
+Exercise
+13.	What is the use of diamond symbol in flowchart?
+Exercise
+Artificial Intelligence and Robotics
+14.	What is artificial intelligence? How is it helpful?
+Exercise
+15.	Which branch of Al deals with robotics?
+Exercise
+16.	Enlist the movement types of robots.
+Exercise
+17.	Briefly discuss the components of a robot.
+Exercise
+18.	How the robots are useful in medicine?
+Exercise
+19.	How the robots are useful in defense?
+Exercise
+20.	What is the use of robots in industry.
+Exercise
+21.	How the robots can be used in Entertainment?
+Exercise
+Microsoft Powerpoint
+22.	What is a presentation?
+Exercise
+23.	What is a slide?
+Exercise
+24.	Write down the steps to insert new slid in presentation.
+Exercise
+25.	Write down the steps to add picture in presentation.
+Exercise
+26.	Can we insert sound in our presentation? if yes then how?
+Exercise
+Microsoft Excel
+27.	What is a Spreadsheet?
+Exercise
+28.	What is Graph?
+Exercise
+29.	Write down the steps to insert chart in your spreadsheet.
+Exercise
+30.	Write down the steps to add two numbers in spreadsheet.
+Exercise
+31.	How can we select printable area in Excel?
+Exercise
+32.	What is Pie chart? For which purpose do we use it?
+Exercise
+33.	What is Bar Chart? For which purpose do we use it?
+Exercise
+34.	What is Column Chart? For which purpose do we use it?
+Exercise
+35.	What is Line Chart? For which purpose do we use it?
+Exercise
+36.	What is Combo Chart? For which purpose do we use it?
+Exercise
+Electronic Mail
+37.	Enlist the advantages of Email.
+Exercise
+38.	What is forwarding? Write down steps to forward an email.
+Exercise
+39.	Differentiate Cc and Bcc in email.
+Exercise
+40.	What is purpose of subject in email?
+Exercise
+41.	Write down the steps to compose an email.
+Exercise
+More about Scratch
+42.	What is menu bar in scratch?
+Exercise
+43.	For which purpose do we use Go button?
+Exercise
+44.	What is Sprite in Scratch?
+Exercise
+45.	What is sprite pane in Scratch?
+Exercise
+46.	Write down the steps to move cat un upper right corner.
+Exercise
+
+
+-> match columns
+Microsoft Powerpoint
+Save presentation	Ctrl + r
+Insert new slide	Ctrl + s
+Spell checker	Ctrl + m
+New file	Ctrl + o
+Open file	F7

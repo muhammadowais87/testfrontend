@@ -58,4 +58,9 @@ export function mergeMcqOptions(
   }));
 }
 
+export function splitVerseText(text: string): string[] {
+  if (!text || !text.includes("\t")) return [text];
+  return text.split("\t").map((s) => s.trim()).filter(Boolean);
+}
+
 export { stripLeadingNumber };

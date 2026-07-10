@@ -1,5 +1,6 @@
 import { getNineTopicChapters } from "./nineTopicChapters";
 import afaqTopicChapters from "./afaqTopicChapters.json";
+import oxfordTopicChapters from "./oxfordTopicChapters.json";
 import baTopicChapters from "./baTopicChapters.json";
 
 export type SubjectCard = {
@@ -2482,6 +2483,14 @@ Object.entries(afaqTopicChapters).forEach(([key, chapters]) => {
 });
 console.log(`[AFAQ init] registered ${regCount} entries. Total map size: ${Object.keys(subjectChaptersMap).length}`);
 
+// Register Oxford topic chapters
+let oxfordRegCount = 0;
+Object.entries(oxfordTopicChapters).forEach(([key, chapters]) => {
+  subjectChaptersMap[key] = chapters as ChapterGroup[];
+  oxfordRegCount++;
+});
+console.log(`[Oxford init] registered ${oxfordRegCount} entries. Total map size: ${Object.keys(subjectChaptersMap).length}`);
+
 // Default single-chapter entry for subjects without specific topic data
 const defaultBaChapter: ChapterGroup[] = [{ name: "Syllabus", chapters: ["Full Syllabus"] }];
 
@@ -2571,12 +2580,13 @@ export const getChaptersForSubject = (subject: string, className: string, board:
     if (normalize(k).startsWith(targetSubjectClass)) return subjectChaptersMap[k];
   }
 
-  // Final fallback: subject + class must both appear in the map key (avoid INTER-I chapters for 9TH)
+  // Final fallback: subject + class + board must all appear in the map key
   const targetSubjectOnly = normalize(actualSubject);
   const targetClassOnly = normalize(className);
+  const targetBoardOnly = normalize(board);
   for (const k of Object.keys(subjectChaptersMap)) {
     const nk = normalize(k);
-    if (nk.startsWith(targetSubjectOnly) && nk.includes(targetClassOnly)) {
+    if (nk.startsWith(targetSubjectOnly) && nk.includes(targetClassOnly) && nk.includes(targetBoardOnly)) {
       return subjectChaptersMap[k];
     }
   }

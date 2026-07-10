@@ -2,6 +2,7 @@ import topicData from "./topicQuestionTypes.json";
 import oneToEightTypesData from "./topicWiseTypesOneToEight.json";
 import afaqTopicWiseTypesData from "./afaqTopicWiseTypes.json";
 import baTopicWiseTypesData from "./baTopicWiseTypes.json";
+import oxfordTopicWiseTypesData from "./oxfordTopicWiseTypes.json";
 
 /**
  * Map of subject name → topic/chapter key → list of available question types.
@@ -21,6 +22,9 @@ const afaqTopicWiseTypesMap: Record<string, Record<string, string[]>> =
 
 const baTopicWiseTypesMap: Record<string, Record<string, string[]>> =
   baTopicWiseTypesData as Record<string, Record<string, string[]>>;
+
+const oxfordTopicWiseTypesMap: Record<string, Record<string, string[]>> =
+  oxfordTopicWiseTypesData as Record<string, Record<string, string[]>>;
 
 const ONE_TO_EIGHT_CLASSES = new Set(["ONE", "TWO", "THREE", "FOUR", "5TH", "6TH", "7TH", "8TH"]);
 
@@ -67,17 +71,23 @@ const REPORT_TYPE_TO_APP_VALUE: Record<string, string> = {
   "question and answers": "questions_answers",
   "questions and answers": "questions_answers",
   "antonyms": "ilfaz_mutazad",
+  "antonymns": "ilfaz_mutazad",
   "synonyms": "ilfaz_mutaradif",
   "translate into urdu paragraph": "translate_into_urdu_paragraph",
+  "translate into urdu paragraphs": "translate_into_urdu_paragraph",
   "writing paragraphs": "writing_paragraphs",
   "tick correct spellings": "tick_correct_spellings",
+  "tick correct spelling": "tick_correct_spellings",
   "fill in the blanks": "fill_in_tha_blanks",
   "fill in th blanks": "fill_in_tha_blanks",
   "match columns": "match_columns",
   "match colums": "match_columns",
+  "match comlumn": "match_columns",
   "multiple choice questions": "mcq",
+  "mcqs": "mcq",
   "writing paragraph": "writing_paragraphs",
   "singular plural": "wahid_jama",
+  "singular plurals": "wahid_jama",
   "paragraph explanation": "paragraph_ki_tashreeh",
   "essay writing": "essays",
   "letter writing": "letters",
@@ -108,6 +118,7 @@ const REPORT_TYPE_TO_APP_VALUE: Record<string, string> = {
   "tafheem ibarat": "tafheem_ibarat",
   "jumlo ki darustagi": "jumlo_ki_darustagi",
   "jumlo ki takmeel": "jumlo_ki_takmeel",
+  "jumlon ki takmeel": "jumlo_ki_takmeel",
   "paragraph ki tashreeh": "paragraph_ki_tashreeh",
   "ilfaz maani": "ilfaz_maani",
   "khali jaga pur karein": "khali_jaga_pur_karein",
@@ -154,6 +165,7 @@ const REPORT_TYPE_TO_APP_VALUE: Record<string, string> = {
   // 1st year Urdu specific types
   "question answers": "questions_answers",
   "comprehension paragraphs": "comprehension_paragraph",
+  "comprehenion paragraph": "comprehension_paragraph",
   "dialogues": "dialoges",
   "appliations": "darkhaastein",
   "receipt": "receipt",
@@ -279,9 +291,15 @@ export const getAvailableQuestionTypesForTopics = (
       subjectMap = baTopicWiseTypesMap[aliasKey];
     }
   } else if (ONE_TO_EIGHT_CLASSES.has(normalizedClass)) {
-    // PTB classes 1-8
-    const directKey = `${subject}-${normalizedClass}-PTB`;
-    subjectMap = oneToEightTypesMap[directKey];
+    // Try OXFORD data first (subjects have unique names)
+    // Uppercase for case-insensitive match (typography like "Computer" vs "COMPUTER")
+    const oxfordKey = `${subject.toUpperCase()}-${normalizedClass}-OXFORD`;
+    subjectMap = oxfordTopicWiseTypesMap[oxfordKey];
+    // PTB classes 1-8 fallback
+    if (!subjectMap) {
+      const directKey = `${subject}-${normalizedClass}-PTB`;
+      subjectMap = oneToEightTypesMap[directKey];
+    }
     if (!subjectMap) {
       const resolvedSubject = SUBJECT_ALIASES[subject] || subject;
       subjectMap = oneToEightTypesMap[`${resolvedSubject}-${normalizedClass}-PTB`];

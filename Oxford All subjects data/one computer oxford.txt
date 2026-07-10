@@ -1,0 +1,185 @@
+-> mcqs
+Computer Peripherals
+Exercise	1.	:
+(A)Printer(B)CD(C)Scanner(D)Headphone
+Exercise	2.	...... is a pointing device:
+(A)Mouse(B)Keyboard(C)CD(D)Monitor
+Exercise	3.	 :
+(A)USB flash drive(B)Printer(C)Headphone(D)Scanner
+Exercise	4.	...... prints on paper:
+(A)Scanner(B)Printer(C)Mouse(D)CD
+Exercise	5.	 :
+(A)Microphone(B)Printer(C)Headphone(D)CD
+Exercise	6.	...... is used to type letter and words:
+(A)Mouse(B)Keyboard(C)Monitor(D)Printer
+Exercise	7.	...... is most commonly used portable storage device:
+(A)USB(B)Scanner(C)Monitor(D)Printer
+Keyboard
+Exercise	8.	...... key is the longest key on keyboard:
+(A)Enter(B)Space(C)Ctrl(D)Shift
+Exercise	9.	...... key is used to shift cursor to new line:
+(A)Enter(B)Space(C)Ctrl(D)Shift
+Exercise	10.	...... key is always used with combination of other key:
+(A)Alt(B)Ctrl(C)Both a and b(D)None of these
+Exercise	11.	...... keys are situated on the top of keyboard:
+(A)Special(B)Function(C)Enter(D)Arrow
+Exercise	12.	...... keys are also called cursor control keys:
+(A)Special(B)Function(C)Enter(D)Arrow
+Exercise	13.	 :
+(A)Arrow keys(B)Control key(C)Enter key(D)Space key
+Exercise	14.	 :
+(A)Space key(B)Arrow keys(C)Alternate key(D)Shift key
+Exercise	15.	 :
+(A)Spacebar(B)Arrow keys(C)Shift key(D)Control key
+Uses of Computer
+Exercise	16.	...... computer helps us to watch:
+(A)Movie(B)Cartoon(C)Both a and b(D)None of these
+Exercise	17.	Graphical processing unit is used to:
+(A)Listen Music(B)Play games(C)Draw painting(D)Shift
+Exercise	18.	...... helps us to draw painting in computer:
+(A)Paint(B)Printer(C)Joystick(D)None of these
+Exercise	19.	Print on paper is also called:
+(A)Soft copy(B)Hardcopy(C)Both a and b(D)None of these
+Exercise	20.	...... is used to search data from internet:
+(A)Printer(B)Scanner(C)Search engine(D)None of these
+
+
+-> question and answers
+Machines
+1.	What is machine?
+Exercise
+2.	How do the machines help us?
+Exercise
+3.	What is an automatic machine?
+Exercise
+4.	What is a manual machine?
+Exercise
+5.	Write the names of any two machines that need electricity to work.
+Exercise
+6.	Write the names of any two machines that need fuel to work.
+Exercise
+7.	Write the names of any two machines that need human power to work.
+Exercise
+Introduction to Computer System
+8.	What can you watch on the monitor?
+Exercise
+9.	Which part of a computer is used to type letters and numbers?
+Exercise
+10.	Which part of a computer is known as the brain of the computer?
+Exercise
+11.	Which part of a computer is used to control movement of cursor on monitor?
+Exercise
+12.	Which part of the computer looks like a television?
+Exercise
+13.	Join dots to make a mouse and colour it.
+Exercise
+Features of Computer
+14.	How can a computer help us?
+Exercise
+15.	What do you mean by input?
+Exercise
+16.	What do you mean by processing?
+Exercise
+17.	What do you mean by output?
+Exercise
+18.	List the works that a computer can do.
+Exercise
+19.	Join dots to make keyboard and colour it.
+Exercise
+Computer Peripherals
+20.	What is USB?
+Exercise
+21.	For what purpose do we use Speakers?
+Exercise
+22.	Which part of computer helps us in recording sound?
+Exercise
+23.	Which part of computer helps us in pointing?
+Exercise
+Keyboard
+24.	What is keyboard?
+Exercise
+25.	What are keys?
+Exercise
+26.	What are function keys?
+Exercise
+27.	What is Caps Lock key used for?
+Exercise
+Computer Mouse
+28.	Colour the shape of mouse pointer.
+Exercise
+29.	Label the Mouse buttons.
+Exercise
+30.	Draw the lines between points.
+Exercise
+Uses of Computer
+31.	Write down four uses of computer.
+Exercise
+32.	How can we search data on computer?
+Exercise
+33.	How can we get hardcopy from computer?
+Exercise
+34.	Which software is used for painting?
+Exercise
+Computers in Our Daily Life
+35.	Why do we use computer at home?
+Exercise
+36.	What is the use of computer at hospitals?
+Exercise
+37.	What is the use of computer at airports?
+Exercise
+38.	Why do we use computer at banks?
+Exercise
+39.	What is the use of computer in defense?
+Exercise
+How to Use Computers
+40.	Write down steps to use eraser tool.
+Exercise
+41.	Write down steps to use fill with colour tool.
+Exercise
+42.	Write down steps to draw ovalin MS.Paint.
+Exercise
+
+-> match columns
+Introduction to Computer System
+ 	Monitor
+ 	Mouse
+ 	Laptop
+ 	Tablet
+ 	Keyboard
+ 	System unit
+Keyboard
+Caps lock on	Main part of computer
+Keyboard	Small letters
+Buttons	Capital letters
+Caps lock off	Keys
+Uses of Computer
+Get print	 
+Internet searching	 
+Draw paintings	 
+Playing games	 
+Computers in Our Daily Life
+In bank	 
+At home	 
+At school	 
+At railway station	 
+At airport	 
+How to Use Computers
+Pencil tool	 
+Fill with colour	 
+Eraser	 
+
+
+-> true false statements
+Computer Peripherals
+1.	We can watch movies with printer.
+2.	Scanner is digital optical disk.
+3.	Flash Drive is portable device.
+4.	Microphone is used to record videos.
+
+-> missing letters
+Machines
+1.	__achine
+2.	Compu___er
+3.	Ma___u__l
+4.	Auto___at___c
+

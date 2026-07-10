@@ -1,0 +1,128 @@
+-> question and answers
+Computer at a Glance
+1.	Define a computer.
+Exercise
+2.	Name three basic functions that computer can perform.
+Exercise
+3.	What is CPU? Write its function on the computer.
+Exercise
+4.	What is memory unit? Write down its role in the computer.
+Exercise
+5.	Differentiate between arithmetic and logical operations.
+Exercise
+6.	Enumerate output devices.
+Exercise
+7.	Write down any four uses of computer in daily life.
+Exercise
+History of Computer
+8.	What is Abacus?
+Exercise
+9.	Who invented Abacus?
+Exercise
+10.	Who is known as the father of computer?
+Exercise
+11.	What was the use of Napier's Bone?
+Exercise
+12.	Describe the structure of Pascaline.
+Exercise
+13.	Write difference between ENIAC and UNIVAC.
+Exercise
+14.	How IBM PC was different from UNIVAC?
+Exercise
+15.	Look at the Pictures, Name each Device and also write its properties along inventor name.
+Exercise
+16.	Look at the Pictures, Name each Device and also write its properties along inventor name.
+Exercise
+17.	Look at the Pictures, Name each Device and also write its properties along inventor name.
+Exercise
+18.	Look at the Pictures, Name each Device and also write its properties along inventor name.
+Exercise
+19.	Write down the full form of following. IBM PC
+Exercise
+20.	Write down the full form of following. ENIAC
+Exercise
+21.	Write down the full form of following. UNIVAC
+Exercise
+System Unit
+22.	Name any three components of system unit.
+Exercise
+23.	What is RAM?
+Exercise
+24.	What is ROM?
+Exercise
+25.	What is CPU?
+Exercise
+26.	What are different parts of CPU?
+Exercise
+27.	What is the function of VGA card?
+Exercise
+28.	Label the following pictures by using correct name.
+Exercise
+29.	Label the following pictures by using correct name.
+Exercise
+30.	Label the following pictures by using correct name.
+Exercise
+31.	Label the following pictures by using correct name.
+Exercise
+32.	Label the following pictures by using correct name.
+Exercise
+33.	Label the following pictures by using correct name.
+Exercise
+Hardware and Software
+34.	What is hardware?
+Exercise
+35.	List three hardware components of computer.
+Exercise
+36.	What is software?
+Exercise
+37.	Name two types of software?
+Exercise
+38.	How the software are useful?
+Exercise
+39.	What are uses of educational software?
+Exercise
+Computer Languages
+40.	What is a language used for?
+Exercise
+41.	What are commands?
+Exercise
+42.	What is a program?
+Exercise
+43.	Differentiate between high level and low level languages.
+Exercise
+44.	Discuss and two computer languages.
+Exercise
+45.	Write the full form of the following: BASIC
+Exercise
+46.	Write the full form of the following: COBOL
+Exercise
+47.	Write the full form of the following: LOGO
+Exercise
+48.	Write the full form of the following: HTML
+Exercise
+Working with MS. Word
+49.	Write down steps to open a document in MS. Word.
+Exercise
+50.	What are shortcut keys of copy and paste?
+Exercise
+51.	How can you save a document in MS. Word?
+Exercise
+52.	How can you print a document in MS. Word?
+Exercise
+
+-> match columns
+System Unit
+ 	It is also called volatile memory
+ 	Use to supply correct amount of electricity
+ 	Use to display information on screen
+ 	Use to store data permanently
+ 	Use to read CD
+
+
+-> fill in the blanks
+Hardware and Software
+1.	RAM stands for ..................
+2.	ROM stands for ..................
+3.	CD stands for ..................
+4.	DVD stands for ..................
+

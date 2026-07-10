@@ -26,10 +26,10 @@ export const oxfordClassSubjects: Record<string, OxfordSubject[]> = {
     { title: "سدا بہار (اردو)", series: "SNC" },
   ],
   FOUR: [
-    { title: "Computer", series: "SNC" },
+    { title: "COMPUTER", series: "SNC" },
     { title: "MODERN ENGLISH", series: "SNC" },
     { title: "PRIMARY SCIENCE", series: "SNC" },
-    { title: "COUTDOWN", series: "SNC" },
+    { title: "COUNTDOWN", series: "SNC" },
     { title: "SOCIAL STUDIES", series: "SNC" },
     { title: "نرگس (اردو)", series: "SNC" },
     { title: "اسلامیات", series: "SNC" },

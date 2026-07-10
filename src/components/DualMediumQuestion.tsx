@@ -2,6 +2,7 @@ import {
   getQuestionStems,
   mergeMcqOptions,
   stripLeadingNumber,
+  splitVerseText,
 } from "@/lib/questionDisplay";
 import MathText, { getEnglishOnlyTokens } from "@/components/MathText";
 
@@ -34,6 +35,10 @@ export default function DualMediumQuestion({
   const urduFont = isUrdu(urduStem) ? "font-urdu" : "";
   // Math tokens removed from English as PDF artifacts that are missing from Urdu
   const urduSupplement = urduStem ? getEnglishOnlyTokens(englishStem, urduStem) : [];
+
+  const englishMisras = splitVerseText(englishStem);
+  const urduMisras = splitVerseText(urduStem);
+  const isVerse = englishMisras.length > 1 || urduMisras.length > 1;
 
   const renderOptions = (lang: "english" | "urdu" | "dual") => {
     if (!hasOptions) return null;
@@ -77,6 +82,30 @@ export default function DualMediumQuestion({
     />
   ) : null;
 
+  const renderVerseMisras = (misras: string[], idx: number, prefix: string) => {
+    const parts: React.ReactNode[] = [];
+    parts.push(<span key="idx">{idx}{prefix}</span>);
+    misras.forEach((m, i) => {
+      if (i > 0) parts.push(<span key={`sep-${i}`} className="text-gray-400 mx-1">|</span>);
+      parts.push(<span key={`m-${i}`} className="whitespace-nowrap">{m}</span>);
+    });
+    return <span className="inline-flex items-center gap-1 flex-wrap">{parts}</span>;
+  };
+
+  const renderEnglishStem = () => {
+    if (isVerse) {
+      return renderVerseMisras(englishMisras, index, ".");
+    }
+    return <>{index}. <MathText text={englishStem} /></>;
+  };
+
+  const renderUrduStem = () => {
+    if (isVerse) {
+      return renderVerseMisras(urduMisras.length > 1 ? urduMisras : englishMisras, index, "۔");
+    }
+    return <>{index}۔ <MathText text={urduStem} /></>;
+  };
+
   if (dualMedium === "dual") {
     const hasUrdu = !!stripLeadingNumber(urduStem);
     return (
@@ -88,14 +117,14 @@ export default function DualMediumQuestion({
         )}
         {/* English — full width */}
         <p className={textClassName}>
-          {index}. <MathText text={englishStem} />
+          {renderEnglishStem()}
         </p>
         {renderOptions("english")}
         {diagramImg}
         {/* Urdu — full width below, separated by a hairline */}
         {hasUrdu && (
           <p className={`${urduClassName} text-right ${urduFont} mt-0.5 pt-0.5 border-t border-gray-200`} dir="rtl">
-            {index}۔ <MathText text={urduStem} />
+            {renderUrduStem()}
             {urduSupplement.length > 0 && (
               <span dir="ltr" className="ml-1">{urduSupplement.join(" ")}</span>
             )}
@@ -115,7 +144,7 @@ export default function DualMediumQuestion({
           </span>
         )}
         <p className={textClassName}>
-          {index}. <MathText text={englishStem} />
+          {renderEnglishStem()}
         </p>
         {renderOptions("english")}
         {diagramImg}
@@ -131,7 +160,7 @@ export default function DualMediumQuestion({
         </span>
       )}
       <p className={`${urduClassName} ${urduFont}`} dir={isUrdu(urduStem) ? "rtl" : "ltr"}>
-        {index}. <MathText text={urduStem || englishStem} />
+        {isVerse ? renderUrduStem() : <>{index}. <MathText text={urduStem || englishStem} /></>}
         {urduSupplement.length > 0 && (
           <span dir="ltr" className="ml-1">{urduSupplement.join(" ")}</span>
         )}

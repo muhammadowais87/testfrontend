@@ -6,7 +6,7 @@ import { API_BASE_URL } from "@/lib/api";
 import { useInstituteSessionStore } from "@/stores/instituteSessionStore";
 import { useTeacherSessionStore } from "@/stores/teacherSessionStore";
 import { useIsMobile } from "@/hooks/use-mobile";
-import { getQuestionStems, mergeMcqOptions, parseQuestionOptions } from "@/lib/questionDisplay";
+import { getQuestionStems, mergeMcqOptions, parseQuestionOptions, splitVerseText } from "@/lib/questionDisplay";
 import MathText from "@/components/MathText";
 
 const SavedPaperViewer = () => {
@@ -1499,6 +1499,20 @@ const SavedPaperViewer = () => {
                         const mergedOptions = mergeMcqOptions(parsedText, parsedUrdu);
                         const optionKeys = mergedOptions.map((o) => o.key);
 
+                        const renderQuestionStem = (num: number, stem: string, prefix: string) => {
+                          const misras = splitVerseText(stem);
+                          if (misras.length <= 1) {
+                            return <MathText text={`${num}${prefix} ${stem}`} />;
+                          }
+                          const parts: React.ReactNode[] = [];
+                          parts.push(<span key="idx">{num}{prefix}</span>);
+                          misras.forEach((m, i) => {
+                            if (i > 0) parts.push(<span key={`sep-${i}`} className="text-gray-400 mx-1">|</span>);
+                            parts.push(<span key={`m-${i}`} className="whitespace-nowrap">{m}</span>);
+                          });
+                          return <span className="inline-flex items-center gap-1 flex-wrap">{parts}</span>;
+                        };
+
                         return (
                           <div key={question.id} className={`saved-paper-question pb-2 print:pb-1.5 ${questionBorderClass} ${questionBorderClass ? "px-2 py-1" : ""}`} style={{ breakInside: "avoid" }}>
                             <div className={`grid gap-4 items-start ${showEn && showUr ? "grid-cols-2" : "grid-cols-1"}`}>
@@ -1515,10 +1529,9 @@ const SavedPaperViewer = () => {
                                 />
                               ) : (
                                 <div className="text-slate-900" style={{ fontSize: `${resolvedEnglishFontSize}px`, color: resolvedTextColor, fontWeight: resolvedFontWeight, fontFamily: englishFontFamily }}>
-                                  {index + 1}. <MathText text={englishStem} />
+                                  {renderQuestionStem(index + 1, englishStem, ".")}
                                 </div>
-                              ))}
-
+                              ))}{"\n"}
                               {showUr && (manualEditing ? (
                                 <textarea
                                   value={question.urdu}
@@ -1535,13 +1548,13 @@ const SavedPaperViewer = () => {
                                 // Dual mode: only show urdu side when content differs from english
                                 question.urdu && showUrduQuestion ? (
                                   <div className="text-right text-slate-900" dir="rtl" style={{ fontSize: `${resolvedUrduFontSize}px`, color: resolvedTextColor, fontWeight: resolvedFontWeight, fontFamily: urduFontFamily }}>
-                                    {index + 1}۔ <MathText text={cleanUrduStem(urduStem)} />
+                                    {renderQuestionStem(index + 1, cleanUrduStem(urduStem), "۔")}
                                   </div>
                                 ) : <div />
                               ) : (
                                 // Urdu-only mode: always show content, fallback to englishStem if no urdu
                                 <div className="text-right text-slate-900" dir="rtl" style={{ fontSize: `${resolvedUrduFontSize}px`, color: resolvedTextColor, fontWeight: resolvedFontWeight, fontFamily: urduFontFamily }}>
-                                  {index + 1}۔ <MathText text={cleanUrduStem(urduStem || englishStem)} />
+                                  {renderQuestionStem(index + 1, cleanUrduStem(urduStem || englishStem), "۔")}
                                 </div>
                               ))}
                             </div>

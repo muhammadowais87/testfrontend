@@ -358,6 +358,9 @@ const TeacherGeneratePaper = () => {
       "history", "receipt", "newsletters", "farsi_tarjuma",
       "translate_into_urdu_paragraph", "translate_into_urdu_sentences",
       "ayaat", "hadith", "ahadees", "shakhsiyat", "shakhsiyaat",
+      "words_into_sentences", "words_meanings",
+      "ilfaz_mutazad", "ilfaz_mutaradif",
+      "genders", "wahid_jama", "missing_letters", "tick_correct_spellings",
     ]);
     const isCompositionType = (cp: string | null) => !!cp && COMPOSITION_TYPES.has(cp);
 
