@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { getAdminRoute } from "@/lib/adminRoute";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -27,7 +28,7 @@ const AdminQueries = () => {
 
   useEffect(() => {
     if (localStorage.getItem("admin_logged_in") !== "true") {
-      navigate("/portal-x9k7m/login");
+      navigate(`/${getAdminRoute()}/login`);
       return;
     }
 

@@ -1,16 +1,17 @@
 import { useEffect, useState } from "react";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
+import { Check, Sparkles } from "lucide-react";
 
 const packages = [
-  { name: "Package-1", price: "Rs:6000", validity: "3 months" },
-  { name: "Package-2", price: "Rs:10000", validity: "6 months" },
-  { name: "Package-3", price: "Rs:12000", validity: "1 year" },
+  { name: "Package-1", price: "Rs:1,000", validity: "1 month", popular: false },
+  { name: "Package-2", price: "Rs:2,000", validity: "3 months", popular: false },
+  { name: "Package-3", price: "Rs:3,000", validity: "6 months", popular: true },
+  { name: "Package-4", price: "Rs:7,000", validity: "1 year", popular: false },
 ];
 
 const features = [
   "Generate Unlimited Papers",
   "Save Unlimited Papers",
-  // "Download PastPapers",
   "All Subjects Access",
   "Unlimited Sub Accounts",
   "Download Unlimited Papers",
@@ -32,41 +33,45 @@ const PricingSection = () => {
 
   return (
     <>
-      <section id="pricing" className="py-14 md:py-16 bg-secondary/35">
-        <div className="container mx-auto max-w-6xl grid grid-cols-1 xl:grid-cols-4 gap-6">
-          <div className="xl:col-span-1 rounded-2xl bg-card border border-primary/15 p-6 shadow-sm h-fit">
-            <h2 className="text-2xl font-bold text-foreground">Pricing Plans</h2>
-            <p className="text-sm text-muted-foreground mt-2">Choose the duration that fits your school workflow.</p>
-            <ul className="mt-5 space-y-2">
-              {features.slice(0, 5).map((f) => (
-                <li key={f} className="text-sm text-foreground flex items-start gap-2">
-                  <span className="text-primary font-bold">•</span>
-                  <span>{f}</span>
-                </li>
-              ))}
-            </ul>
+      <section id="pricing" className="py-6 md:py-8 bg-secondary/35">
+        <div className="container mx-auto max-w-6xl">
+          <div className="text-center mb-6">
+            <h2 className="pts-section-title">Simple, Transparent Pricing</h2>
+            <p className="pts-section-subtitle">Choose the duration that fits your school workflow.</p>
           </div>
 
-          <div className="xl:col-span-3 grid grid-cols-1 md:grid-cols-3 gap-5 items-stretch">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch">
             {packages.map((pkg, i) => (
               <div
                 key={pkg.name}
-                className={`rounded-2xl p-6 transition-all duration-300 flex flex-col ${
-                  i === 1
-                    ? "bg-primary text-primary-foreground shadow-xl"
-                    : "bg-card text-foreground shadow-sm border border-primary/15"
+                className={`rounded-2xl p-6 transition-all duration-300 flex flex-col relative ${
+                  pkg.popular
+                    ? "bg-primary text-primary-foreground shadow-xl scale-[1.02] md:scale-105 z-10"
+                    : "bg-card text-foreground shadow-sm border border-primary/15 hover:shadow-lg"
                 }`}
               >
-                <p className={`text-xs uppercase tracking-wide mb-2 ${i === 1 ? "text-primary-foreground/80" : "text-muted-foreground"}`}>Plan</p>
-                <h3 className="text-xl font-bold">{pkg.name}</h3>
-                <p className="text-3xl font-extrabold mt-3">{pkg.price}</p>
-                <p className={`text-sm mt-1 ${i === 1 ? "text-primary-foreground/80" : "text-muted-foreground"}`}>{pkg.validity} validity</p>
+                {pkg.popular && (
+                  <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-amber-400 text-amber-900 text-[11px] font-bold px-3 py-1 rounded-full flex items-center gap-1 shadow-lg">
+                    <Sparkles className="w-3 h-3" /> MOST POPULAR
+                  </div>
+                )}
 
-                <ul className="space-y-2 my-6 text-left flex-1">
-                  {features.slice(0, 6).map((f) => (
-                    <li key={f} className="flex items-center gap-2 text-sm">
-                      <span>✓</span>
-                      <span>{f}</span>
+                <p className={`text-xs uppercase tracking-wide mb-1 ${pkg.popular ? "text-primary-foreground/80" : "text-muted-foreground"}`}>Plan</p>
+                <h3 className={`text-xl font-bold ${pkg.popular ? "text-white" : "text-foreground"}`}>{pkg.name}</h3>
+                <div className="mt-3 flex items-baseline gap-1">
+                  <span className={`text-3xl font-extrabold ${pkg.popular ? "text-white" : "text-foreground"}`}>{pkg.price}</span>
+                  <span className={`text-lg font-medium ${pkg.popular ? "text-primary-foreground/80" : "text-muted-foreground"}`}>/{pkg.validity}</span>
+                </div>
+
+                <ul className="space-y-2.5 my-6 text-left flex-1">
+                  {features.map((f) => (
+                    <li key={f} className="flex items-center gap-2.5 text-sm">
+                      <div className={`w-5 h-5 rounded-full flex items-center justify-center shrink-0 ${
+                        pkg.popular ? "bg-white/20" : "bg-primary/10"
+                      }`}>
+                        <Check className={`w-3 h-3 ${pkg.popular ? "text-white" : "text-primary"}`} />
+                      </div>
+                      <span className={pkg.popular ? "text-primary-foreground/90" : "text-foreground"}>{f}</span>
                     </li>
                   ))}
                 </ul>
@@ -74,9 +79,9 @@ const PricingSection = () => {
                 <button
                   type="button"
                   onClick={() => setRegistrationOpen(true)}
-                  className={`inline-block px-5 py-2.5 rounded-lg font-semibold text-sm text-center transition-colors ${
-                    i === 1
-                      ? "bg-primary-foreground text-primary hover:opacity-90"
+                  className={`w-full px-5 py-2.5 rounded-lg font-semibold text-sm text-center transition-all ${
+                    pkg.popular
+                      ? "bg-white text-primary hover:bg-white/90 shadow-md"
                       : "bg-primary text-primary-foreground hover:opacity-90"
                   }`}
                 >
@@ -90,7 +95,7 @@ const PricingSection = () => {
 
       <Dialog open={registrationOpen} onOpenChange={setRegistrationOpen}>
          <DialogContent className="max-w-4xl w-[95vw] sm:w-[92vw] p-0 gap-0 overflow-hidden bg-card border border-border rounded-2xl max-h-[90vh]">
-          <DialogHeader className="bg-primary px-4 sm:px-5 py-3 sm:py-4">
+          <DialogHeader className="bg-gradient-to-r from-primary to-emerald-600 px-4 sm:px-5 py-3 sm:py-4">
             <DialogTitle className="text-primary-foreground text-lg sm:text-2xl font-semibold">Registration Procedure</DialogTitle>
           </DialogHeader>
 
@@ -117,16 +122,16 @@ const PricingSection = () => {
               <h3 className="text-primary text-base sm:text-xl font-semibold text-center mb-3">Payment Methods</h3>
 
               <div className="space-y-1 text-sm sm:text-base text-foreground">
-                <p className="font-bold">Easypaisa</p>
+                <p className="font-bold">Jazzcash</p>
                 <p>Account Number: 03264917496</p>
-                <p>Account Title: Muhammad Owais</p>
+                <p>Account Title: Muhammad Awais</p>
               </div>
 
               <div className="h-px bg-border my-3" />
 
               <div className="space-y-1 text-sm sm:text-base text-foreground">
-                <p className="font-bold">Jazzcash</p>
-                <p>Account Number: 03127049445</p>
+                <p className="font-bold">Nayapay</p>
+                <p>Account Number: 03264917496</p>
                 <p>Account Title: Muhammad Owais</p>
               </div>
 

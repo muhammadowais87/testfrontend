@@ -24,4 +24,31 @@ export default defineConfig(() => ({
       "@": path.resolve(__dirname, "./src"),
     },
   },
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          "vendor-react": ["react", "react-dom"],
+          "vendor-router": ["react-router-dom"],
+          "vendor-query": ["@tanstack/react-query"],
+          "vendor-ui": [
+            "@radix-ui/react-tooltip",
+            "@radix-ui/react-toast",
+            "@radix-ui/react-dialog",
+            "@radix-ui/react-dropdown-menu",
+            "@radix-ui/react-popover",
+            "@radix-ui/react-select",
+            "@radix-ui/react-tabs",
+          ],
+          "vendor-form": ["react-hook-form", "@hookform/resolvers", "zod"],
+          "vendor-date": ["date-fns", "react-day-picker"],
+          "vendor-chart": ["recharts"],
+          "vendor-utils": ["clsx", "tailwind-merge", "class-variance-authority", "lucide-react", "zustand"],
+        },
+      },
+    },
+    chunkSizeWarningLimit: 1000,
+    minify: "esbuild",
+    cssCodeSplit: true,
+  },
 }));

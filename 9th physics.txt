@@ -1,4 +1,4 @@
---physics mcqs
+-> mcqs
 1.1 Physical and Non-Physical Quantities
 Additional	1.	Which quantity can be measured directly:
 1.	کون سی مقدار کو براہ راست ناپا جا سکتا ہے:
@@ -3571,7 +3571,7 @@ Exercise	1161.	Which of the following are methods of investigation:
 1161.	مندریل میں سے کون سا جانچ پڑتال کے طریقوں سے متعلق ہے:
 (A)Observationمشاہدہ(B)Experimentationتجربہ(C)Researchریسرچ(D)All of theseیہ تمام
 
---short
+->short questions
 1.1 Physical and Non-Physical Quantities
 1	.	What are physical quantities?
 Additional
@@ -7243,7 +7243,7 @@ Constructed Response
 Constructed Response
 1182	.	تین ایسےکام بیان کریں جن میں سائنس کا استعمال ہوتا ہو۔
 
---long
+->long questions
 
 1.1 Physical and Non-Physical Quantities
 1.	Explain the difference between physical and non-physical quantities. Give examples.

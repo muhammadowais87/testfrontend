@@ -1,6 +1,7 @@
 import {
   getQuestionStems,
   mergeMcqOptions,
+  sanitizeOptionValue,
   stripLeadingNumber,
   splitVerseText,
 } from "@/lib/questionDisplay";
@@ -50,14 +51,14 @@ export default function DualMediumQuestion({
           if (lang === "english") {
             return (
               <p key={opt.key} className="text-[12px] text-gray-700">
-                ({opt.key}) <MathText text={enVal} />
+                ({opt.key}) <MathText text={sanitizeOptionValue(enVal, "english")} />
               </p>
             );
           }
           if (lang === "urdu") {
             return (
               <p key={opt.key} className={`text-[12px] text-gray-700 text-right ${urduFont}`} dir="rtl">
-                ({opt.key}) <MathText text={urVal} />
+                ({opt.key}) <MathText text={sanitizeOptionValue(urVal, "urdu")} />
               </p>
             );
           }

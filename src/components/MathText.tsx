@@ -1,6 +1,4 @@
-import { useMemo } from "react";
-import katex from "katex";
-import "katex/dist/katex.min.css";
+import { useMemo, useState, useEffect } from "react";
 
 // ─────────────────────────────────────────────────────────────────────────────
 // Superscript digit map  (used for scientific exponents)
@@ -335,9 +333,19 @@ function parseSegments(text: string): Segment[] {
   return segments.length > 0 ? segments : [{ type: "text", content: text }];
 }
 
-function renderLatex(latex: string, displayMode: boolean): string {
+let _katex: typeof import("katex").default | null = null;
+let _katexCssLoaded = false;
+
+async function renderLatex(latex: string, displayMode: boolean): Promise<string> {
   try {
-    return katex.renderToString(latex, {
+    if (!_katex) {
+      _katex = (await import("katex")).default;
+    }
+    if (!_katexCssLoaded) {
+      await import("katex/dist/katex.min.css");
+      _katexCssLoaded = true;
+    }
+    return _katex.renderToString(latex, {
       displayMode,
       throwOnError: false,
       strict: false,
@@ -375,6 +383,8 @@ type MathTextProps = {
 const URDU_RE = /[؀-ۿﭐ-﷿ﹰ-﻿]/;
 
 export default function MathText({ text, className }: MathTextProps) {
+  const [rendered, setRendered] = useState<Record<string, string>>({});
+
   const { segments, hasMath, cleaned } = useMemo(() => {
     const cleaned = preprocessMathText(text || "");
     const segs = parseSegments(cleaned);
@@ -387,6 +397,23 @@ export default function MathText({ text, className }: MathTextProps) {
   // math expressions are mixed in.
   const dir = URDU_RE.test(cleaned) ? ("rtl" as const) : undefined;
 
+  useEffect(() => {
+    if (!hasMath) return;
+    let cancelled = false;
+    (async () => {
+      const out: Record<string, string> = {};
+      for (const seg of segments) {
+        if (seg.type !== "text") {
+          out[seg.content] = await renderLatex(seg.content, seg.type === "block");
+        }
+      }
+      if (!cancelled) setRendered(out);
+    })();
+    return () => {
+      cancelled = true;
+    };
+  }, [hasMath, segments]);
+
   if (!hasMath) {
     return <span className={className} dir={dir}>{cleaned}</span>;
   }
@@ -395,22 +422,24 @@ export default function MathText({ text, className }: MathTextProps) {
     <span className={className} dir={dir}>
       {segments.map((seg, i) => {
         if (seg.type === "inline") {
+          const html = rendered[seg.content];
           return (
             // dir="ltr" keeps KaTeX math left-to-right inside an RTL parent
             <span
               key={i}
               dir="ltr"
-              dangerouslySetInnerHTML={{ __html: renderLatex(seg.content, false) }}
+              dangerouslySetInnerHTML={{ __html: html ?? seg.content }}
             />
           );
         }
         if (seg.type === "block") {
+          const html = rendered[seg.content];
           return (
             <span
               key={i}
               dir="ltr"
               className="block my-1"
-              dangerouslySetInnerHTML={{ __html: renderLatex(seg.content, true) }}
+              dangerouslySetInnerHTML={{ __html: html ?? seg.content }}
             />
           );
         }

@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import { getAdminRoute } from "@/lib/adminRoute";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -25,7 +26,7 @@ const AdminDashboard = () => {
 
   useEffect(() => {
     if (localStorage.getItem("admin_logged_in") !== "true") {
-      navigate("/portal-x9k7m/login");
+      navigate(`/${getAdminRoute()}/login`);
       return;
     }
 
@@ -86,7 +87,7 @@ const AdminDashboard = () => {
                   className="pl-9 h-9 text-sm"
                 />
               </div>
-              <Button size="sm" className="gap-1.5 h-9 shrink-0" onClick={() => navigate("/portal-x9k7m/school/add")}>
+              <Button size="sm" className="gap-1.5 h-9 shrink-0" onClick={() => navigate(`/${getAdminRoute()}/school/add`)}>
                 <Plus className="w-4 h-4" /> Add
               </Button>
             </div>
@@ -111,7 +112,7 @@ const AdminDashboard = () => {
                     <TableRow
                       key={school.id}
                       className="cursor-pointer group hover:bg-muted/30 transition-colors"
-                      onClick={() => navigate(`/portal-x9k7m/school/${school.id}`)}
+                      onClick={() => navigate(`/${getAdminRoute()}/school/${school.id}`)}
                     >
                       <TableCell className="font-medium text-muted-foreground text-xs">{i + 1}</TableCell>
                       <TableCell>

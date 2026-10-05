@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { useNavigate, useParams, useLocation } from "react-router-dom";
-import { Barcode, BookOpen, Calculator, CalendarDays, ChevronDown, ChevronLeft, Clock3, GraduationCap, Hash, PenLine, Printer, User } from "lucide-react";
+import { ChevronDown, ChevronLeft, Printer } from "lucide-react";
 import { getSavedPaperById, type SavedPaperRecord } from "@/lib/savedPapers";
 import { API_BASE_URL } from "@/lib/api";
 import { useInstituteSessionStore } from "@/stores/instituteSessionStore";
@@ -42,16 +42,31 @@ const SavedPaperViewer = () => {
   const [printAnswerKeys, setPrintAnswerKeys] = useState(false);
   const [tickAnswers, setTickAnswers] = useState(false);
   const [wordFontSize, setWordFontSize] = useState(14);
+  const [twoQuestionsPerLine, setTwoQuestionsPerLine] = useState(false);
   const [logoScale, setLogoScale] = useState("100");
   const [monogramScale, setMonogramScale] = useState("100");
   const [selectedLineHeight, setSelectedLineHeight] = useState("1.28");
   const [hasTextSelection, setHasTextSelection] = useState(false);
   const [sectionMarksOverrides, setSectionMarksOverrides] = useState<Record<string, string>>({});
   const [headerInfo, setHeaderInfo] = useState({
-    schoolName: "The Hope Science Academy",
+    schoolName: "The Apex Science Academy",
     slogan: "Excellence is our standard not goal",
-    addressLine: "247-E-1, (Opposite LDA School) Johar Town, Lahore. PH: 0300-8194789, 0322-4157001",
+    addressLine: "247-E-9, (Opposite Shining School) Johor Town, Lahore. PH: 03127049445, 03127049445",
     logoUrl: "",
+    schoolNameColor: "#000000",
+    footerColor: "#000000",
+    fontStyle: "Times New Roman",
+    schoolNameSize: "20",
+    schoolNameStretch: "1.4",
+    footerSize: "10",
+    footerStretch: "1",
+    monogramHeight: "50",
+    monogramWidth: "50",
+    watermarkMode: "image",
+    watermarkHeight: "200",
+    watermarkWidth: "200",
+    watermarkOpacity: "0.3",
+    watermarkText: "THE HOPE SCIENCE ACADEMY",
   });
   const [paperFields, setPaperFields] = useState({
     studentName: "",
@@ -182,6 +197,7 @@ const SavedPaperViewer = () => {
         }))
       );
       if (latestPaper?.medium) setPaperMedium(latestPaper.medium);
+      setTwoQuestionsPerLine(latestPaper?.twoQuestionsPerLine ?? false);
     };
 
     loadPaper();
@@ -263,6 +279,20 @@ const SavedPaperViewer = () => {
             schoolName: subUserSettings.schoolName || data.subUser.schoolName || teacherSession?.schoolName || prev.schoolName,
             addressLine: subUserSettings.schoolAddress || prev.addressLine,
             logoUrl: subUserSettings.logoUrl || prev.logoUrl,
+            schoolNameColor: subUserSettings.schoolNameColor || prev.schoolNameColor,
+            footerColor: subUserSettings.footerColor || prev.footerColor,
+            fontStyle: subUserSettings.fontStyle || prev.fontStyle,
+            schoolNameSize: subUserSettings.schoolNameSize || prev.schoolNameSize,
+            schoolNameStretch: subUserSettings.schoolNameStretch || prev.schoolNameStretch,
+            footerSize: subUserSettings.footerSize || prev.footerSize,
+            footerStretch: subUserSettings.footerStretch || prev.footerStretch,
+            monogramHeight: subUserSettings.monogramHeight || prev.monogramHeight,
+            monogramWidth: subUserSettings.monogramWidth || prev.monogramWidth,
+            watermarkMode: subUserSettings.watermarkMode || prev.watermarkMode,
+            watermarkHeight: subUserSettings.watermarkHeight || prev.watermarkHeight,
+            watermarkWidth: subUserSettings.watermarkWidth || prev.watermarkWidth,
+            watermarkOpacity: subUserSettings.watermarkOpacity || prev.watermarkOpacity,
+            watermarkText: subUserSettings.watermarkText || prev.watermarkText,
           }));
           return;
         }
@@ -275,6 +305,20 @@ const SavedPaperViewer = () => {
             schoolName: teacherSettings.schoolName || teacher.schoolName || teacherSession?.schoolName || prev.schoolName,
             addressLine: teacherSettings.schoolAddress || prev.addressLine,
             logoUrl: teacherSettings.logoUrl || prev.logoUrl,
+            schoolNameColor: teacherSettings.schoolNameColor || prev.schoolNameColor,
+            footerColor: teacherSettings.footerColor || prev.footerColor,
+            fontStyle: teacherSettings.fontStyle || prev.fontStyle,
+            schoolNameSize: teacherSettings.schoolNameSize || prev.schoolNameSize,
+            schoolNameStretch: teacherSettings.schoolNameStretch || prev.schoolNameStretch,
+            footerSize: teacherSettings.footerSize || prev.footerSize,
+            footerStretch: teacherSettings.footerStretch || prev.footerStretch,
+            monogramHeight: teacherSettings.monogramHeight || prev.monogramHeight,
+            monogramWidth: teacherSettings.monogramWidth || prev.monogramWidth,
+            watermarkMode: teacherSettings.watermarkMode || prev.watermarkMode,
+            watermarkHeight: teacherSettings.watermarkHeight || prev.watermarkHeight,
+            watermarkWidth: teacherSettings.watermarkWidth || prev.watermarkWidth,
+            watermarkOpacity: teacherSettings.watermarkOpacity || prev.watermarkOpacity,
+            watermarkText: teacherSettings.watermarkText || prev.watermarkText,
           }));
           return;
         }
@@ -289,12 +333,59 @@ const SavedPaperViewer = () => {
             .filter(Boolean)
             .join(". ");
 
+          const ps = institute.portalSettings || {};
           setHeaderInfo((prev) => ({
             ...prev,
             schoolName: institute.name || prev.schoolName,
             addressLine: addressLine || prev.addressLine,
-            logoUrl: institute.portalSettings?.logoUrl || prev.logoUrl,
+            logoUrl: ps.logoUrl || prev.logoUrl,
+            schoolNameColor: ps.schoolNameColor || prev.schoolNameColor,
+            footerColor: ps.footerColor || prev.footerColor,
+            fontStyle: ps.fontStyle || prev.fontStyle,
+            schoolNameSize: ps.schoolNameSize || prev.schoolNameSize,
+            schoolNameStretch: ps.schoolNameStretch || prev.schoolNameStretch,
+            footerSize: ps.footerSize || prev.footerSize,
+            footerStretch: ps.footerStretch || prev.footerStretch,
+            monogramHeight: ps.monogramHeight || prev.monogramHeight,
+            monogramWidth: ps.monogramWidth || prev.monogramWidth,
+            watermarkMode: ps.watermarkMode || prev.watermarkMode,
+            watermarkHeight: ps.watermarkHeight || prev.watermarkHeight,
+            watermarkWidth: ps.watermarkWidth || prev.watermarkWidth,
+            watermarkOpacity: ps.watermarkOpacity || prev.watermarkOpacity,
+            watermarkText: ps.watermarkText || prev.watermarkText,
           }));
+        }
+
+        if (token?.startsWith("trial_")) {
+          try {
+            const saved = localStorage.getItem("trial_portal_settings");
+            if (saved) {
+              const trialSettings = JSON.parse(saved);
+              const phones = [trialSettings.phonePrimary, trialSettings.phoneSecondary].filter(Boolean).join(", ");
+              setHeaderInfo((prev) => ({
+                ...prev,
+                schoolName: trialSettings.schoolName || prev.schoolName,
+                addressLine: [trialSettings.schoolAddress, phones ? `PH: ${phones}` : ""].filter(Boolean).join(". "),
+                logoUrl: trialSettings.logoUrl || prev.logoUrl,
+                schoolNameColor: trialSettings.schoolNameColor || prev.schoolNameColor,
+                footerColor: trialSettings.footerColor || prev.footerColor,
+                fontStyle: trialSettings.fontStyle || prev.fontStyle,
+                schoolNameSize: trialSettings.schoolNameSize || prev.schoolNameSize,
+                schoolNameStretch: trialSettings.schoolNameStretch || prev.schoolNameStretch,
+                footerSize: trialSettings.footerSize || prev.footerSize,
+                footerStretch: trialSettings.footerStretch || prev.footerStretch,
+                monogramHeight: trialSettings.monogramHeight || prev.monogramHeight,
+                monogramWidth: trialSettings.monogramWidth || prev.monogramWidth,
+                watermarkMode: trialSettings.watermarkMode || prev.watermarkMode,
+                watermarkHeight: trialSettings.watermarkHeight || prev.watermarkHeight,
+                watermarkWidth: trialSettings.watermarkWidth || prev.watermarkWidth,
+                watermarkOpacity: trialSettings.watermarkOpacity || prev.watermarkOpacity,
+                watermarkText: trialSettings.watermarkText || prev.watermarkText,
+              }));
+            }
+          } catch {
+            // Ignore parse errors.
+          }
         }
       } catch {
         // Keep defaults silently.
@@ -478,18 +569,18 @@ const SavedPaperViewer = () => {
   const resolvedTitleFontSize = Number(titleFontSize) > 0 ? Number(titleFontSize) : 35;
   const resolvedTextColor = fontColor === "Blue" ? "#1d4ed8" : fontColor === "Gray" ? "#475569" : "#000000";
   const resolvedFontWeight = fontWeight === "Bold" ? 700 : 400;
-  const questionBorderClass = borderStyle === "Solid" ? "border border-slate-300" : borderStyle === "Dashed" ? "border border-dashed border-slate-300" : "";
+  const questionBorderClass = borderStyle === "Solid" ? "border border-black" : borderStyle === "Dashed" ? "border border-dashed border-black" : "";
   const pageBorderClass =
     pageBorder === "Solid Border"
-      ? "border-2 border-slate-700"
+      ? "border-2 border-black"
       : pageBorder === "Dashed Border"
-        ? "border-2 border-dashed border-slate-600"
+        ? "border-2 border-dashed border-black"
         : pageBorder === "Double Border"
-          ? "border-4 border-double border-slate-700"
+          ? "border-4 border-double border-black"
           : pageBorder === "Thick Border"
-            ? "border-[6px] border-slate-800"
+            ? "border-[6px] border-black"
             : pageBorder === "Rounded Border"
-              ? "border-2 border-slate-700 rounded-xl"
+              ? "border-2 border-black rounded-xl"
               : "";
   const watermarkTextValue = (paper?.title || headerInfo.schoolName || "THE HOPE").toUpperCase();
   const watermarkMonogramFallback = (headerInfo.schoolName || "THE HOPE")
@@ -528,7 +619,7 @@ const SavedPaperViewer = () => {
         type="text"
         value={paperFields[key]}
         onChange={(e) => updateField(key, e.target.value)}
-        className="w-full border-0 bg-transparent p-0 text-center font-semibold text-slate-900 outline-none"
+        className="w-full border-0 bg-transparent p-0 text-center font-semibold text-black outline-none"
       />
     ) : (
       <div className={className}>{paperFields[key]}</div>
@@ -554,7 +645,7 @@ const SavedPaperViewer = () => {
   }
 
   return (
-    <div className={`saved-paper-print min-h-screen bg-slate-200 print:bg-white mode-${printMode} ${compactPrintMode ? "compact-print" : ""}`}>
+    <div className={`saved-paper-print min-h-screen bg-slate-100 print:bg-white mode-${printMode} ${compactPrintMode ? "compact-print" : ""}`}>
       <div className="sticky top-0 z-20 select-none bg-[#24364a] text-white shadow-sm print:hidden">
         <div className="grid grid-cols-2 gap-1 border-b border-black/30 px-2 pb-1 pt-1 md:grid-cols-6 xl:grid-cols-12">
           <ToolbarField label="Line Height" value={lineHeight} onChange={setLineHeight} />
@@ -580,37 +671,37 @@ const SavedPaperViewer = () => {
         </div>
 
         <div className="relative flex flex-wrap items-center gap-1 px-2 pb-1 pt-1">
-          <label className="inline-flex h-7 min-w-[132px] items-center gap-1 rounded-sm border border-slate-300 bg-white px-1.5 text-[10px] text-[#2d2d2d]">
-            <input type="checkbox" checked={printExamSyllabus} onChange={(e) => setPrintExamSyllabus(e.target.checked)} className="h-4 w-4 rounded-sm border border-slate-300 accent-blue-600" />
+          <label className="inline-flex h-7 min-w-[132px] items-center gap-1 rounded-sm border border-black bg-white px-1.5 text-[10px] text-[#2d2d2d]">
+            <input type="checkbox" checked={printExamSyllabus} onChange={(e) => setPrintExamSyllabus(e.target.checked)} className="h-4 w-4 rounded-sm border border-black accent-blue-600" />
             Print Exam Syllabus
           </label>
-          <label className="inline-flex h-7 min-w-[132px] items-center gap-1 rounded-sm border border-slate-300 bg-white px-1.5 text-[10px] text-[#2d2d2d]">
-            <input type="checkbox" checked={printBubbleSheet} onChange={(e) => setPrintBubbleSheet(e.target.checked)} className="h-4 w-4 rounded-sm border border-slate-300 accent-blue-600" />
+          <label className="inline-flex h-7 min-w-[132px] items-center gap-1 rounded-sm border border-black bg-white px-1.5 text-[10px] text-[#2d2d2d]">
+            <input type="checkbox" checked={printBubbleSheet} onChange={(e) => setPrintBubbleSheet(e.target.checked)} className="h-4 w-4 rounded-sm border border-black accent-blue-600" />
             Print Bubble Sheet
           </label>
-          <label className="inline-flex h-7 min-w-[132px] items-center gap-1 rounded-sm border border-slate-300 bg-white px-1.5 text-[10px] text-[#2d2d2d]">
-            <input type="checkbox" checked={printAnswerKeys} onChange={(e) => setPrintAnswerKeys(e.target.checked)} className="h-4 w-4 rounded-sm border border-slate-300 accent-blue-600" />
+          <label className="inline-flex h-7 min-w-[132px] items-center gap-1 rounded-sm border border-black bg-white px-1.5 text-[10px] text-[#2d2d2d]">
+            <input type="checkbox" checked={printAnswerKeys} onChange={(e) => setPrintAnswerKeys(e.target.checked)} className="h-4 w-4 rounded-sm border border-black accent-blue-600" />
             Print Answer Keys
           </label>
-          <label className="inline-flex h-7 min-w-[132px] items-center gap-1 rounded-sm border border-slate-300 bg-white px-1.5 text-[10px] text-[#2d2d2d]">
-            <input type="checkbox" checked={tickAnswers} onChange={(e) => setTickAnswers(e.target.checked)} className="h-4 w-4 rounded-sm border border-slate-300 accent-blue-600" />
+          <label className="inline-flex h-7 min-w-[132px] items-center gap-1 rounded-sm border border-black bg-white px-1.5 text-[10px] text-[#2d2d2d]">
+            <input type="checkbox" checked={tickAnswers} onChange={(e) => setTickAnswers(e.target.checked)} className="h-4 w-4 rounded-sm border border-black accent-blue-600" />
             Tick Answers
           </label>
           <select
             value={effectiveMedium}
             onChange={(e) => setPaperMedium(e.target.value)}
-            className="inline-flex h-7 min-w-[90px] items-center rounded-sm border border-slate-300 bg-white px-2 text-[10px] text-slate-900"
+            className="inline-flex h-7 min-w-[90px] items-center rounded-sm border border-black bg-white px-2 text-[10px] text-black"
           >
             <option value="dual">Dual</option>
             <option value="english">English</option>
             <option value="urdu">Urdu</option>
           </select>
-          <button type="button" onClick={() => setShowFontStylesMenu((prev) => !prev)} className="inline-flex h-7 min-w-[114px] items-center justify-center gap-1 rounded-sm border border-slate-300 bg-white px-2 text-[10px] font-medium text-slate-900">
+          <button type="button" onClick={() => setShowFontStylesMenu((prev) => !prev)} className="inline-flex h-7 min-w-[114px] items-center justify-center gap-1 rounded-sm border border-black bg-white px-2 text-[10px] font-medium text-black">
             FONT STYLES <ChevronDown className="h-4 w-4" />
           </button>
 
           {showFontStylesMenu && (
-            <div className="absolute right-3 top-14 z-50 w-80 rounded-md border border-slate-300 bg-white p-3 text-slate-900 shadow-lg">
+            <div className="absolute right-3 top-14 z-50 w-80 rounded-md border border-black bg-white p-3 text-black shadow-lg">
               <p className="mb-2 text-xs font-bold uppercase tracking-wide text-slate-500">Font Settings</p>
               <div className="space-y-2">
                 <label className="block text-xs font-semibold">
@@ -618,7 +709,7 @@ const SavedPaperViewer = () => {
                   <select
                     value={titleFontFamily}
                     onChange={(e) => setTitleFontFamily(e.target.value)}
-                    className="mt-1 h-8 w-full rounded border border-slate-300 px-2 text-xs"
+                    className="mt-1 h-8 w-full rounded border border-black px-2 text-xs"
                   >
                     <option value="Times New Roman">Times New Roman</option>
                     <option value="Georgia">Georgia</option>
@@ -639,7 +730,7 @@ const SavedPaperViewer = () => {
                   <select
                     value={englishFontFamily}
                     onChange={(e) => setEnglishFontFamily(e.target.value)}
-                    className="mt-1 h-8 w-full rounded border border-slate-300 px-2 text-xs"
+                    className="mt-1 h-8 w-full rounded border border-black px-2 text-xs"
                   >
                     <option value="Poppins">Poppins</option>
                     <option value="Inter">Inter</option>
@@ -661,7 +752,7 @@ const SavedPaperViewer = () => {
                   <select
                     value={urduFontFamily}
                     onChange={(e) => setUrduFontFamily(e.target.value)}
-                    className="mt-1 h-8 w-full rounded border border-slate-300 px-2 text-xs"
+                    className="mt-1 h-8 w-full rounded border border-black px-2 text-xs"
                   >
                     <option value="Noto Nastaliq Urdu">Noto Nastaliq Urdu</option>
                     <option value="Jameel Noori Nastaleeq">Jameel Noori Nastaleeq</option>
@@ -682,7 +773,7 @@ const SavedPaperViewer = () => {
                 <button
                   type="button"
                   onClick={handleResetFontStyles}
-                  className="rounded border border-slate-300 px-2 py-1 text-xs font-semibold"
+                  className="rounded border border-black px-2 py-1 text-xs font-semibold"
                 >
                   Reset
                 </button>
@@ -699,13 +790,13 @@ const SavedPaperViewer = () => {
           <button
             type="button"
             onClick={() => setManualEditing((prev) => !prev)}
-            className={`inline-flex h-7 min-w-[114px] items-center justify-center rounded-sm border border-slate-300 px-2 text-[10px] font-medium ${manualEditing ? "bg-amber-400 text-slate-900" : "bg-white text-slate-900"}`}
+            className={`inline-flex h-7 min-w-[114px] items-center justify-center rounded-sm border border-black px-2 text-[10px] font-medium ${manualEditing ? "bg-amber-400 text-black" : "bg-white text-black"}`}
           >
             Manual Editing
           </button>
 
           {/* Selected Text Controls */}
-          <div className="inline-flex h-7 max-w-full items-center gap-1 overflow-x-auto rounded-sm border border-slate-300 bg-white px-1.5 text-[10px] text-[#2d2d2d]">
+          <div className="inline-flex h-7 max-w-full items-center gap-1 overflow-x-auto rounded-sm border border-black bg-white px-1.5 text-[10px] text-[#2d2d2d]">
             <span className="whitespace-nowrap font-medium text-slate-600">Selected Text:</span>
             <span className={`rounded px-1.5 py-0.5 text-[10px] font-semibold ${hasTextSelection ? "bg-emerald-100 text-emerald-700" : "bg-amber-100 text-amber-700"}`}>
               {hasTextSelection ? "Text selected" : "Select text first"}
@@ -797,7 +888,7 @@ const SavedPaperViewer = () => {
               className="h-5 w-6 rounded border border-slate-200 bg-slate-50 text-[10px] font-semibold hover:bg-slate-100 select-none"
             >+</button>
           </div>
-          <div className="rounded-sm border border-slate-300 bg-white px-2 py-1 text-[10px] font-medium text-slate-600">
+          <div className="rounded-sm border border-black bg-white px-2 py-1 text-[10px] font-medium text-slate-600">
             Step: Select text in paper, then use A+/A-/B/U/L+/L- to apply changes instantly
           </div>
 
@@ -837,43 +928,44 @@ const SavedPaperViewer = () => {
             <div className="relative">
               <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
                 {watermark === "Text Watermark" ? (
-                  <div className="text-[110px] font-black tracking-[0.22em] text-rose-200/30 select-none" style={{ transform: `scale(${resolvedMonogramScale / 100})`, transformOrigin: "center" }}>
-                    {watermarkTextValue}
+                  <div className="text-[110px] font-black tracking-[0.22em] select-none" style={{ transform: `scale(${resolvedMonogramScale / 100})`, transformOrigin: "center", color: `rgba(254, 202, 202, ${Number(headerInfo.watermarkOpacity)})` }}>
+                    {headerInfo.watermarkText || watermarkTextValue}
                   </div>
                 ) : headerInfo.logoUrl ? (
                   <img
                     src={headerInfo.logoUrl}
                     alt="Watermark"
-                    className="h-[280px] w-[280px] object-contain opacity-10 select-none"
-                    style={{ transform: `scale(${resolvedMonogramScale / 100})`, transformOrigin: "center" }}
+                    className="object-contain select-none"
+                    style={{ height: `${headerInfo.watermarkHeight}px`, width: `${headerInfo.watermarkWidth}px`, opacity: Number(headerInfo.watermarkOpacity), transform: `scale(${resolvedMonogramScale / 100})`, transformOrigin: "center" }}
                   />
                 ) : (
-                  <div className="text-[140px] font-black tracking-[0.16em] text-rose-200/30 select-none" style={{ transform: `scale(${resolvedMonogramScale / 100})`, transformOrigin: "center" }}>
+                  <div className="text-[140px] font-black tracking-[0.16em] select-none" style={{ transform: `scale(${resolvedMonogramScale / 100})`, transformOrigin: "center", color: `rgba(254, 202, 202, ${Number(headerInfo.watermarkOpacity)})` }}>
                     {watermarkMonogramFallback}
                   </div>
                 )}
               </div>
 
-              <div className="saved-paper-header relative border-b border-slate-300 pb-3 text-center print:pb-2">
+              <div className="saved-paper-header relative border-b border-black pb-3 text-center print:pb-2">
                 <h1
-                  className="font-extrabold text-slate-900"
+                  className="font-extrabold"
                   style={{
                     fontSize: `${resolvedTitleFontSize}px`,
                     fontWeight: fontWeight === "Bold" ? 800 : 600,
-                    color: resolvedTextColor,
-                    fontFamily: titleFontFamily,
+                    color: headerInfo.schoolNameColor || resolvedTextColor,
+                    fontFamily: headerInfo.fontStyle || titleFontFamily,
+                    transform: `scaleX(${headerInfo.schoolNameStretch})`,
                   }}
                 >
                   {headerInfo.schoolName}
                 </h1>
-                <p className="mt-1 text-sm text-slate-700 print:text-[11px]">{headerInfo.slogan}</p>
-                <p className="text-sm text-slate-700 print:text-[11px]">{headerInfo.addressLine}</p>
+                <p className="mt-1 print:text-[11px]" style={{ color: headerInfo.footerColor, fontFamily: headerInfo.fontStyle, fontSize: `${headerInfo.footerSize}px`, transform: `scaleX(${headerInfo.footerStretch})` }}>{headerInfo.slogan}</p>
+                <p className="print:text-[11px]" style={{ color: headerInfo.footerColor, fontFamily: headerInfo.fontStyle, fontSize: `${headerInfo.footerSize}px`, transform: `scaleX(${headerInfo.footerStretch})` }}>{headerInfo.addressLine}</p>
               </div>
 
               {selectedLayout === "Layout 1" && (
                 <div className="mt-3 grid grid-cols-[76px_1fr] gap-3 items-start text-sm">
                   <div className="flex justify-center pt-2">
-                    <LogoBox src={headerInfo.logoUrl} className="h-12 w-12 border border-slate-300 bg-slate-50 grid place-items-center text-[9px]" />
+                    <LogoBox src={headerInfo.logoUrl} monogramHeight={headerInfo.monogramHeight} monogramWidth={headerInfo.monogramWidth} className="h-12 w-12 border border-black bg-slate-50 grid place-items-center text-[9px]" />
                   </div>
                   <div className="space-y-1.5">
                     <div className="grid grid-cols-4 gap-1">
@@ -895,7 +987,7 @@ const SavedPaperViewer = () => {
               {selectedLayout === "Layout 2" && (
                 <div className="mt-3 space-y-1.5 text-sm">
                   <div className="flex justify-start pl-5">
-                    <LogoBox src={headerInfo.logoUrl} className="h-12 w-12 border border-slate-300 bg-slate-50 grid place-items-center text-[9px]" />
+                    <LogoBox src={headerInfo.logoUrl} monogramHeight={headerInfo.monogramHeight} monogramWidth={headerInfo.monogramWidth} className="h-12 w-12 border border-black bg-slate-50 grid place-items-center text-[9px]" />
                   </div>
                   <div className="grid grid-cols-4 gap-1">
                     <PaperMetaField compact label="Student Name" value={paperFields.studentName} manualEditing={manualEditing} onChange={(value) => updateField("studentName", value)} />
@@ -921,7 +1013,7 @@ const SavedPaperViewer = () => {
                     <SplitFieldRow compact label="Time Allowed">{renderFieldValue("timeAllowed")}</SplitFieldRow>
                   </div>
                   <div className="flex items-center justify-center">
-                    <LogoBox src={headerInfo.logoUrl} className="h-12 w-12 border border-slate-300 bg-slate-50 grid place-items-center text-[9px]" />
+                    <LogoBox src={headerInfo.logoUrl} monogramHeight={headerInfo.monogramHeight} monogramWidth={headerInfo.monogramWidth} className="h-12 w-12 border border-black bg-slate-50 grid place-items-center text-[9px]" />
                   </div>
                   <div className="space-y-1">
                     <SplitFieldRow compact label="Class">{renderFieldValue("className")}</SplitFieldRow>
@@ -941,7 +1033,7 @@ const SavedPaperViewer = () => {
                     <LineFieldRow label="Time Allowed">{renderFieldValue("timeAllowed", "text-left font-semibold")}</LineFieldRow>
                   </div>
                   <div className="flex items-center justify-center">
-                    <LogoBox src={headerInfo.logoUrl} className="h-16 w-16 border border-slate-300 bg-slate-50 grid place-items-center text-[10px]" />
+                    <LogoBox src={headerInfo.logoUrl} monogramHeight={headerInfo.monogramHeight} monogramWidth={headerInfo.monogramWidth} className="h-16 w-16 border border-black bg-slate-50 grid place-items-center text-[10px]" />
                   </div>
                   <div className="space-y-1.5">
                     <LineFieldRow label="Class">{renderFieldValue("className", "text-left font-semibold")}</LineFieldRow>
@@ -956,24 +1048,23 @@ const SavedPaperViewer = () => {
                 <div className="mt-4 space-y-2 text-sm">
                   <div className="grid grid-cols-3 gap-3 items-center">
                     <div className="space-y-1.5">
-                      <LineFieldRow label="Student Name"><div className="flex items-center gap-2"><User className="h-4 w-4" />{renderFieldValue("studentName", "text-left font-semibold")}</div></LineFieldRow>
-                      <LineFieldRow label="Roll Num"><div className="flex items-center gap-2"><Hash className="h-4 w-4" />{renderFieldValue("rollNum", "text-left font-semibold")}</div></LineFieldRow>
-                      <LineFieldRow label="Paper Code"><div className="flex items-center gap-2"><Barcode className="h-4 w-4" />{renderFieldValue("paperCode", "text-left font-semibold")}</div></LineFieldRow>
-                      <LineFieldRow label="Time Allowed"><div className="flex items-center gap-2"><Clock3 className="h-4 w-4" />{renderFieldValue("timeAllowed", "text-left font-semibold")}</div></LineFieldRow>
+                      <LineFieldRow label="Student Name">{renderFieldValue("studentName", "text-left font-semibold")}</LineFieldRow>
+                      <LineFieldRow label="Roll Num">{renderFieldValue("rollNum", "text-left font-semibold")}</LineFieldRow>
+                      <LineFieldRow label="Paper Code">{renderFieldValue("paperCode", "text-left font-semibold")}</LineFieldRow>
+                      <LineFieldRow label="Time Allowed">{renderFieldValue("timeAllowed", "text-left font-semibold")}</LineFieldRow>
                     </div>
                     <div className="flex items-center justify-center">
-                      <LogoBox src={headerInfo.logoUrl} className="h-16 w-16 border border-slate-300 bg-slate-50 grid place-items-center text-[10px]" />
+                      <LogoBox src={headerInfo.logoUrl} monogramHeight={headerInfo.monogramHeight} monogramWidth={headerInfo.monogramWidth} className="h-16 w-16 border border-black bg-slate-50 grid place-items-center text-[10px]" />
                     </div>
                     <div className="space-y-1.5">
-                      <LineFieldRow label="Class"><div className="flex items-center gap-2"><GraduationCap className="h-4 w-4" />{renderFieldValue("className", "text-left font-semibold")}</div></LineFieldRow>
-                      <LineFieldRow label="Subject"><div className="flex items-center gap-2"><BookOpen className="h-4 w-4" />{renderFieldValue("subjectName", "text-left font-semibold")}</div></LineFieldRow>
-                      <LineFieldRow label="Total Marks"><div className="flex items-center gap-2"><Calculator className="h-4 w-4" />{renderFieldValue("totalMarks", "text-left font-semibold")}</div></LineFieldRow>
-                      <LineFieldRow label="Exam Date"><div className="flex items-center gap-2"><CalendarDays className="h-4 w-4" />{renderFieldValue("examDate", "text-left font-semibold")}</div></LineFieldRow>
+                      <LineFieldRow label="Class">{renderFieldValue("className", "text-left font-semibold")}</LineFieldRow>
+                      <LineFieldRow label="Subject">{renderFieldValue("subjectName", "text-left font-semibold")}</LineFieldRow>
+                      <LineFieldRow label="Total Marks">{renderFieldValue("totalMarks", "text-left font-semibold")}</LineFieldRow>
+                      <LineFieldRow label="Exam Date">{renderFieldValue("examDate", "text-left font-semibold")}</LineFieldRow>
                     </div>
                   </div>
                   {printExamSyllabus && (
-                    <div className="border-b border-slate-500 px-2 py-1.5 flex items-center gap-2">
-                      <PenLine className="h-4 w-4" />
+                    <div className="border-b border-black px-2 py-1.5 flex items-center gap-2">
                       <span className="font-semibold">Exam Syllabus:</span>
                       <span>{paper.paperCategory || `${paperFields.subjectName} (${paper.board})`}</span>
                     </div>
@@ -984,17 +1075,17 @@ const SavedPaperViewer = () => {
               {selectedLayout === "Layout 6" && (
                 <div className="mt-4 space-y-2 text-sm">
                   <div className="flex items-center justify-center gap-3">
-                    <LogoBox src={headerInfo.logoUrl} className="h-20 w-20 border border-slate-300 bg-slate-50 grid place-items-center text-[10px]" />
+                    <LogoBox src={headerInfo.logoUrl} monogramHeight={headerInfo.monogramHeight} monogramWidth={headerInfo.monogramWidth} className="h-20 w-20 border border-black bg-slate-50 grid place-items-center text-[10px]" />
                     <div className="flex-1 max-w-[760px] space-y-1">
-                      <div className="h-8 border-b border-slate-700 flex items-center justify-center">{renderFieldValue("subjectName")}</div>
+                      <div className="h-8 border-b border-black flex items-center justify-center">{renderFieldValue("subjectName")}</div>
                     </div>
                   </div>
                   <div className="grid grid-cols-3 gap-0">
-                    <div className="bg-[#2f5757] text-white text-center py-1.5 rounded-l-full font-semibold">CLASS: {paperFields.className}</div>
-                    <div className="text-center py-1.5 border-y border-slate-700">Paper Date: {paperFields.examDate}</div>
-                    <div className="bg-[#2f5757] text-white text-center py-1.5 rounded-r-full font-semibold">TOTAL MARKS: {paperFields.totalMarks}</div>
+                    <div className="bg-[#1d9a5a] text-white text-center py-1.5 rounded-l-full font-semibold">CLASS: {paperFields.className}</div>
+                    <div className="text-center py-1.5 border-y border-black font-semibold">Paper Date: {paperFields.examDate}</div>
+                    <div className="bg-[#1d9a5a] text-white text-center py-1.5 rounded-r-full font-semibold">TOTAL MARKS: {paperFields.totalMarks}</div>
                   </div>
-                  <div className="grid grid-cols-3 gap-2 border-b border-slate-500 pb-1">
+                  <div className="grid grid-cols-3 gap-2 border-b border-black pb-1">
                     <div>STUDENT NAME: {renderFieldValue("studentName", "inline font-semibold")}</div>
                     <div className="text-center">Paper Date: {renderFieldValue("examDate", "inline font-semibold")}</div>
                     <div className="text-right">TIME: {renderFieldValue("timeAllowed", "inline font-semibold")}</div>
@@ -1003,59 +1094,59 @@ const SavedPaperViewer = () => {
               )}
 
               {selectedLayout === "Layout 7" && (
-                <div className="mt-4 border border-slate-500 text-sm">
+                <div className="mt-4 border border-black text-sm">
                   <table className="w-full border-collapse">
                     <tbody>
                       <tr>
-                        <td className="border border-slate-500 p-2 text-center" colSpan={3}>Test OR Examination</td>
-                        <td className="border border-slate-500 p-2 text-center">Subject</td>
-                        <td className="border border-slate-500 p-2 text-center font-semibold">{paperFields.subjectName}</td>
-                        <td className="border border-slate-500 p-2 text-center">Class</td>
-                        <td className="border border-slate-500 p-2 text-center font-semibold">{paperFields.className}</td>
+                        <td className="border border-black p-2 text-center" colSpan={3}>Test OR Examination</td>
+                        <td className="border border-black p-2 text-center">Subject</td>
+                        <td className="border border-black p-2 text-center font-semibold">{paperFields.subjectName}</td>
+                        <td className="border border-black p-2 text-center">Class</td>
+                        <td className="border border-black p-2 text-center font-semibold">{paperFields.className}</td>
                       </tr>
                       <tr>
-                        <td className="border border-slate-500 p-2 text-center">Roll #</td>
-                        <td className="border border-slate-500 p-2 text-center">{renderFieldValue("rollNum")}</td>
-                        <td className="border border-slate-500 p-2 text-center">Time Allowed</td>
-                        <td className="border border-slate-500 p-2 text-center font-semibold">{paperFields.timeAllowed}</td>
-                        <td className="border border-slate-500 p-2 text-center">Group(if any)</td>
-                        <td className="border border-slate-500 p-2 text-center">Date</td>
-                        <td className="border border-slate-500 p-2 text-center font-semibold">{paperFields.examDate}</td>
+                        <td className="border border-black p-2 text-center">Roll #</td>
+                        <td className="border border-black p-2 text-center">{renderFieldValue("rollNum")}</td>
+                        <td className="border border-black p-2 text-center">Time Allowed</td>
+                        <td className="border border-black p-2 text-center font-semibold">{paperFields.timeAllowed}</td>
+                        <td className="border border-black p-2 text-center">Group(if any)</td>
+                        <td className="border border-black p-2 text-center">Date</td>
+                        <td className="border border-black p-2 text-center font-semibold">{paperFields.examDate}</td>
                       </tr>
-                      <tr><td className="border border-slate-500 p-2 text-center font-semibold" colSpan={7}>Detail of objective &amp; subjective marks of the paper</td></tr>
+                      <tr><td className="border border-black p-2 text-center font-semibold" colSpan={7}>Detail of objective &amp; subjective marks of the paper</td></tr>
                       <tr>
-                        <td className="border border-slate-500 p-2 text-center font-semibold">Objective Part</td>
-                        <td className="border border-slate-500 p-2 text-center font-semibold">Total Marks</td>
-                        <td className="border border-slate-500 p-2 text-center font-semibold">Obt. Marks</td>
-                        <td className="border border-slate-500 p-2 text-center font-semibold">Subjective Part</td>
-                        <td className="border border-slate-500 p-2 text-center font-semibold">Total Marks</td>
-                        <td className="border border-slate-500 p-2 text-center font-semibold">Obt. Marks</td>
-                        <td className="border border-slate-500 p-2 text-center font-semibold">Signatures of concerned Teacher</td>
+                        <td className="border border-black p-2 text-center font-semibold">Objective Part</td>
+                        <td className="border border-black p-2 text-center font-semibold">Total Marks</td>
+                        <td className="border border-black p-2 text-center font-semibold">Obt. Marks</td>
+                        <td className="border border-black p-2 text-center font-semibold">Subjective Part</td>
+                        <td className="border border-black p-2 text-center font-semibold">Total Marks</td>
+                        <td className="border border-black p-2 text-center font-semibold">Obt. Marks</td>
+                        <td className="border border-black p-2 text-center font-semibold">Signatures of concerned Teacher</td>
                       </tr>
-                      <tr><td className="border border-slate-500 p-2 text-center" colSpan={7}>Note: No marks will be awarded in case of over-writing, cutting or using ink-remover, lead pencil or any kind of coloured ink.</td></tr>
+                      <tr><td className="border border-black p-2 text-center" colSpan={7}>Note: No marks will be awarded in case of over-writing, cutting or using ink-remover, lead pencil or any kind of coloured ink.</td></tr>
                     </tbody>
                   </table>
                 </div>
               )}
 
               {selectedLayout === "Layout 8" && (
-                <div className="mt-4 border border-slate-500 text-sm">
+                <div className="mt-4 border border-black text-sm">
                   <table className="w-full border-collapse">
                     <tbody>
                       <tr>
-                        <td className="border border-slate-500 p-2 text-center" colSpan={2}>Test OR Examination</td>
-                        <td className="border border-slate-500 p-2 text-center">Subject</td>
-                        <td className="border border-slate-500 p-2 text-center font-semibold">{paperFields.subjectName}</td>
-                        <td className="border border-slate-500 p-2 text-center">Class</td>
-                        <td className="border border-slate-500 p-2 text-center font-semibold">{paperFields.className}</td>
+                        <td className="border border-black p-2 text-center" colSpan={2}>Test OR Examination</td>
+                        <td className="border border-black p-2 text-center">Subject</td>
+                        <td className="border border-black p-2 text-center font-semibold">{paperFields.subjectName}</td>
+                        <td className="border border-black p-2 text-center">Class</td>
+                        <td className="border border-black p-2 text-center font-semibold">{paperFields.className}</td>
                       </tr>
                       <tr>
-                        <td className="border border-slate-500 p-2 text-center font-semibold">Roll #</td>
-                        <td className="border border-slate-500 p-2 text-center">{renderFieldValue("rollNum")}</td>
-                        <td className="border border-slate-500 p-2 text-center font-semibold">Time Allowed</td>
-                        <td className="border border-slate-500 p-2 text-center font-semibold">{paperFields.timeAllowed}</td>
-                        <td className="border border-slate-500 p-2 text-center font-semibold">Date</td>
-                        <td className="border border-slate-500 p-2 text-center font-semibold">{paperFields.examDate}</td>
+                        <td className="border border-black p-2 text-center font-semibold">Roll #</td>
+                        <td className="border border-black p-2 text-center">{renderFieldValue("rollNum")}</td>
+                        <td className="border border-black p-2 text-center font-semibold">Time Allowed</td>
+                        <td className="border border-black p-2 text-center font-semibold">{paperFields.timeAllowed}</td>
+                        <td className="border border-black p-2 text-center font-semibold">Date</td>
+                        <td className="border border-black p-2 text-center font-semibold">{paperFields.examDate}</td>
                       </tr>
                     </tbody>
                   </table>
@@ -1063,16 +1154,16 @@ const SavedPaperViewer = () => {
               )}
 
               {selectedLayout === "Layout 9" && (
-                <div className="mt-4 border border-slate-500 grid grid-cols-[120px_1fr] text-sm">
-                  <div className="border-r border-slate-500 grid place-items-center p-2">
-                    <LogoBox src={headerInfo.logoUrl} className="h-16 w-16 border border-slate-300 bg-slate-50 grid place-items-center text-[10px]" />
+                <div className="mt-4 border border-black grid grid-cols-[120px_1fr] text-sm">
+                  <div className="border-r border-black grid place-items-center p-2">
+                    <LogoBox src={headerInfo.logoUrl} monogramHeight={headerInfo.monogramHeight} monogramWidth={headerInfo.monogramWidth} className="h-16 w-16 border border-black bg-slate-50 grid place-items-center text-[10px]" />
                   </div>
                   <div className="grid grid-rows-[auto_auto_auto]">
-                    <div className="grid grid-cols-2 border-b border-slate-500">
+                    <div className="grid grid-cols-2 border-b border-black">
                       <div className="px-3 py-1.5">Class: <span className="font-semibold">{paperFields.className}</span></div>
                       <div className="px-3 py-1.5">Subject: <span className="font-semibold">{paperFields.subjectName}</span></div>
                     </div>
-                    <div className="grid grid-cols-2 border-b border-slate-500">
+                    <div className="grid grid-cols-2 border-b border-black">
                       <div className="px-3 py-1.5">Marks: <span className="font-semibold">{paperFields.totalMarks}</span></div>
                       <div className="px-3 py-1.5">Roll#: <span className="font-semibold">{paperFields.rollNum}</span></div>
                     </div>
@@ -1084,17 +1175,17 @@ const SavedPaperViewer = () => {
               {selectedLayout === "Layout 10" && (
                 <div className="mt-3 space-y-2 text-sm">
                   <div className="grid grid-cols-[1fr_390px] gap-2">
-                    <div className="border border-slate-500">
-                      <div className="px-2 py-1 border-b border-slate-500 font-semibold">Student's Name: {renderFieldValue("studentName", "inline font-semibold")}</div>
+                    <div className="border border-black">
+                      <div className="px-2 py-1 border-b border-black font-semibold">Student's Name: {renderFieldValue("studentName", "inline font-semibold")}</div>
                       <table className="w-full border-collapse">
                         <tbody>
                           <tr>
-                            <td className="border border-slate-500 p-1.5 font-semibold text-center">Q No.</td>
-                            {Array.from({ length: 12 }, (_, i) => <td key={i} className="border border-slate-500 p-1.5 text-center">{i + 1}</td>)}
+                            <td className="border border-black p-1.5 font-semibold text-center">Q No.</td>
+                            {Array.from({ length: 12 }, (_, i) => <td key={i} className="border border-black p-1.5 text-center">{i + 1}</td>)}
                           </tr>
                           <tr>
-                            <td className="border border-slate-500 p-1.5 font-semibold text-center">Marks</td>
-                            {Array.from({ length: 12 }, (_, i) => <td key={i} className="border border-slate-500 p-1.5 text-center">&nbsp;</td>)}
+                            <td className="border border-black p-1.5 font-semibold text-center">Marks</td>
+                            {Array.from({ length: 12 }, (_, i) => <td key={i} className="border border-black p-1.5 text-center">&nbsp;</td>)}
                           </tr>
                         </tbody>
                       </table>
@@ -1115,30 +1206,30 @@ const SavedPaperViewer = () => {
               )}
 
               {selectedLayout === "Layout 11" && (
-                <div className="mt-4 border border-slate-500 text-sm">
+                <div className="mt-4 border border-black text-sm">
                   <table className="w-full border-collapse">
                     <tbody>
                       <tr>
-                        <td className="border border-slate-500 p-2 font-semibold">Name:</td>
-                        <td className="border border-slate-500 p-2">{renderFieldValue("studentName", "inline font-semibold")}</td>
-                        <td className="border border-slate-500 p-2 font-semibold">Roll#:</td>
-                        <td className="border border-slate-500 p-2">{renderFieldValue("rollNum", "inline font-semibold")}</td>
-                        <td className="border border-slate-500 p-2 font-semibold">Subject:</td>
-                        <td className="border border-slate-500 p-2 font-semibold">{paperFields.subjectName}</td>
-                        <td className="border border-slate-500 p-2 font-semibold">Marks:</td>
-                        <td className="border border-slate-500 p-2 font-semibold">{paperFields.totalMarks}</td>
+                        <td className="border border-black p-2 font-semibold">Name:</td>
+                        <td className="border border-black p-2">{renderFieldValue("studentName", "inline font-semibold")}</td>
+                        <td className="border border-black p-2 font-semibold">Roll#:</td>
+                        <td className="border border-black p-2">{renderFieldValue("rollNum", "inline font-semibold")}</td>
+                        <td className="border border-black p-2 font-semibold">Subject:</td>
+                        <td className="border border-black p-2 font-semibold">{paperFields.subjectName}</td>
+                        <td className="border border-black p-2 font-semibold">Marks:</td>
+                        <td className="border border-black p-2 font-semibold">{paperFields.totalMarks}</td>
                       </tr>
                       <tr>
-                        <td className="border border-slate-500 p-2 font-semibold">Test Details:</td>
-                        <td className="border border-slate-500 p-2" colSpan={5}>{renderFieldValue("testDetails", "inline font-semibold")}</td>
-                        <td className="border border-slate-500 p-2 font-semibold">Time:</td>
-                        <td className="border border-slate-500 p-2 font-semibold">{paperFields.timeAllowed}</td>
+                        <td className="border border-black p-2 font-semibold">Test Details:</td>
+                        <td className="border border-black p-2" colSpan={5}>{renderFieldValue("testDetails", "inline font-semibold")}</td>
+                        <td className="border border-black p-2 font-semibold">Time:</td>
+                        <td className="border border-black p-2 font-semibold">{paperFields.timeAllowed}</td>
                       </tr>
                       <tr>
-                        <td className="border border-slate-500 p-2 font-semibold">Syllabus:</td>
-                        <td className="border border-slate-500 p-2 font-semibold" colSpan={5}>{paper.paperCategory || `${paperFields.subjectName} (${paper.board})`}</td>
-                        <td className="border border-slate-500 p-2 font-semibold">Date:</td>
-                        <td className="border border-slate-500 p-2 font-semibold">{paperFields.examDate}</td>
+                        <td className="border border-black p-2 font-semibold">Syllabus:</td>
+                        <td className="border border-black p-2 font-semibold" colSpan={5}>{paper.paperCategory || `${paperFields.subjectName} (${paper.board})`}</td>
+                        <td className="border border-black p-2 font-semibold">Date:</td>
+                        <td className="border border-black p-2 font-semibold">{paperFields.examDate}</td>
                       </tr>
                     </tbody>
                   </table>
@@ -1148,7 +1239,7 @@ const SavedPaperViewer = () => {
               {selectedLayout === "Layout 12" && (
                 <div className="mt-4 text-sm border-b-2 border-black pb-2">
                   <div className="grid grid-cols-[90px_1fr] gap-3 items-start">
-                    <div className="pt-2 flex justify-center"><LogoBox src={headerInfo.logoUrl} className="h-16 w-16 border border-slate-400 bg-slate-50 grid place-items-center text-[10px]" /></div>
+                    <div className="pt-2 flex justify-center"><LogoBox src={headerInfo.logoUrl} monogramHeight={headerInfo.monogramHeight} monogramWidth={headerInfo.monogramWidth} className="h-16 w-16 border border-black bg-slate-50 grid place-items-center text-[10px]" /></div>
                     <div className="space-y-2">
                       <div className="grid grid-cols-3 gap-0 text-center font-semibold text-white">
                         <div className="bg-black py-1 rounded-l-sm">Class: {paperFields.className}</div>
@@ -1174,7 +1265,7 @@ const SavedPaperViewer = () => {
                 <div className="mt-4 border-2 border-dashed border-black text-sm">
                   <div className="grid grid-cols-3 border-b border-black">
                     <SplitFieldRow label="Student Name">{renderFieldValue("studentName")}</SplitFieldRow>
-                    <div className="border-x border-black grid place-items-center py-3"><LogoBox src={headerInfo.logoUrl} className="h-16 w-16 border border-slate-400 bg-slate-50 grid place-items-center text-[10px]" /></div>
+                    <div className="border-x border-black grid place-items-center py-3"><LogoBox src={headerInfo.logoUrl} monogramHeight={headerInfo.monogramHeight} monogramWidth={headerInfo.monogramWidth} className="h-16 w-16 border border-black bg-slate-50 grid place-items-center text-[10px]" /></div>
                     <SplitFieldRow label="Class">{renderFieldValue("className")}</SplitFieldRow>
                   </div>
                   <div className="grid grid-cols-3">
@@ -1186,32 +1277,32 @@ const SavedPaperViewer = () => {
               )}
 
               {selectedLayout === "Layout 14" && (
-                <div className="mt-4 border border-slate-500 text-sm">
+                <div className="mt-4 border border-black text-sm">
                   <table className="w-full border-collapse">
                     <tbody>
                       <tr>
-                        <td className="bg-black text-white border border-slate-500 p-1.5 font-semibold">Name:</td>
-                        <td className="border border-slate-500 p-1.5" colSpan={2}>{renderFieldValue("studentName", "inline")}</td>
-                        <td className="bg-black text-white border border-slate-500 p-1.5 font-semibold">Roll No.</td>
-                        <td className="border border-slate-500 p-1.5" colSpan={2}>{renderFieldValue("rollNum", "inline")}</td>
-                        <td className="bg-black text-white border border-slate-500 p-1.5 font-semibold">Class:</td>
-                        <td className="border border-slate-500 p-1.5 font-semibold">{paperFields.className}</td>
+                        <td className="bg-black text-white border border-black p-1.5 font-semibold">Name:</td>
+                        <td className="border border-black p-1.5" colSpan={2}>{renderFieldValue("studentName", "inline")}</td>
+                        <td className="bg-black text-white border border-black p-1.5 font-semibold">Roll No.</td>
+                        <td className="border border-black p-1.5" colSpan={2}>{renderFieldValue("rollNum", "inline")}</td>
+                        <td className="bg-black text-white border border-black p-1.5 font-semibold">Class:</td>
+                        <td className="border border-black p-1.5 font-semibold">{paperFields.className}</td>
                       </tr>
                       <tr>
-                        <td className="bg-black text-white border border-slate-500 p-1.5 font-semibold">Subject:</td>
-                        <td className="border border-slate-500 p-1.5" colSpan={2}>{paperFields.subjectName}</td>
-                        <td className="bg-black text-white border border-slate-500 p-1.5 font-semibold">Date:</td>
-                        <td className="border border-slate-500 p-1.5" colSpan={2}>{paperFields.examDate}</td>
-                        <td className="bg-black text-white border border-slate-500 p-1.5 font-semibold">T.Marks:</td>
-                        <td className="border border-slate-500 p-1.5 font-semibold">{paperFields.totalMarks}</td>
+                        <td className="bg-black text-white border border-black p-1.5 font-semibold">Subject:</td>
+                        <td className="border border-black p-1.5" colSpan={2}>{paperFields.subjectName}</td>
+                        <td className="bg-black text-white border border-black p-1.5 font-semibold">Date:</td>
+                        <td className="border border-black p-1.5" colSpan={2}>{paperFields.examDate}</td>
+                        <td className="bg-black text-white border border-black p-1.5 font-semibold">T.Marks:</td>
+                        <td className="border border-black p-1.5 font-semibold">{paperFields.totalMarks}</td>
                       </tr>
                       <tr>
-                        <td className="bg-black text-white border border-slate-500 p-1.5 font-semibold">Syllabus:</td>
-                        <td className="border border-slate-500 p-1.5" colSpan={2}>{paper.paperCategory || `${paperFields.subjectName} (${paper.board})`}</td>
-                        <td className="bg-black text-white border border-slate-500 p-1.5 font-semibold">Round:</td>
-                        <td className="border border-slate-500 p-1.5" colSpan={2}>{renderFieldValue("round", "inline")}</td>
-                        <td className="bg-black text-white border border-slate-500 p-1.5 font-semibold">Phase:</td>
-                        <td className="border border-slate-500 p-1.5">{renderFieldValue("phase", "inline")}</td>
+                        <td className="bg-black text-white border border-black p-1.5 font-semibold">Syllabus:</td>
+                        <td className="border border-black p-1.5" colSpan={2}>{paper.paperCategory || `${paperFields.subjectName} (${paper.board})`}</td>
+                        <td className="bg-black text-white border border-black p-1.5 font-semibold">Round:</td>
+                        <td className="border border-black p-1.5" colSpan={2}>{renderFieldValue("round", "inline")}</td>
+                        <td className="bg-black text-white border border-black p-1.5 font-semibold">Phase:</td>
+                        <td className="border border-black p-1.5">{renderFieldValue("phase", "inline")}</td>
                       </tr>
                     </tbody>
                   </table>
@@ -1220,7 +1311,7 @@ const SavedPaperViewer = () => {
 
               {selectedLayout === "Layout 15" && (
                 <div className="mt-4 space-y-2 text-sm border-b-2 border-black pb-2">
-                  <div className="flex justify-center"><LogoBox src={headerInfo.logoUrl} className="h-20 w-20 border border-slate-400 bg-slate-50 grid place-items-center text-[10px]" /></div>
+                  <div className="flex justify-center"><LogoBox src={headerInfo.logoUrl} monogramHeight={headerInfo.monogramHeight} monogramWidth={headerInfo.monogramWidth} className="h-20 w-20 border border-black bg-slate-50 grid place-items-center text-[10px]" /></div>
                   <div className="grid grid-cols-3 gap-0">
                     <div className="bg-black text-white text-center py-1.5 rounded-l-full font-semibold">Subject: {paperFields.subjectName}</div>
                     <div className="border-y border-black text-center py-1.5 font-semibold">Class: {paperFields.className}</div>
@@ -1242,7 +1333,7 @@ const SavedPaperViewer = () => {
               {selectedLayout === "Layout 16" && (
                 <div className="mt-4 text-sm border-b-2 border-black pb-2">
                   <div className="grid grid-cols-[90px_1fr] gap-3 items-start">
-                    <div className="pt-2 flex justify-center"><LogoBox src={headerInfo.logoUrl} className="h-16 w-16 border border-slate-400 bg-slate-50 grid place-items-center text-[10px]" /></div>
+                    <div className="pt-2 flex justify-center"><LogoBox src={headerInfo.logoUrl} monogramHeight={headerInfo.monogramHeight} monogramWidth={headerInfo.monogramWidth} className="h-16 w-16 border border-black bg-slate-50 grid place-items-center text-[10px]" /></div>
                     <div className="grid grid-cols-3 gap-6">
                       <div className="space-y-2">
                         <LineFieldRow label="Student Name">{renderFieldValue("studentName", "text-left")}</LineFieldRow>
@@ -1266,8 +1357,8 @@ const SavedPaperViewer = () => {
 
               {selectedLayout === "Layout 17" && (
                 <div className="mt-4 space-y-2 text-sm">
-                  <div className="border border-slate-500 grid grid-cols-[180px_1fr]">
-                    <div className="border-r border-slate-500 grid place-items-center p-2"><LogoBox src={headerInfo.logoUrl} className="h-20 w-20 border border-slate-400 bg-slate-50 grid place-items-center text-[10px]" /></div>
+                  <div className="border border-black grid grid-cols-[180px_1fr]">
+                    <div className="border-r border-black grid place-items-center p-2"><LogoBox src={headerInfo.logoUrl} monogramHeight={headerInfo.monogramHeight} monogramWidth={headerInfo.monogramWidth} className="h-20 w-20 border border-black bg-slate-50 grid place-items-center text-[10px]" /></div>
                     <div className="p-3 text-right">
                       <div className="grid grid-cols-3 gap-4" dir="rtl">
                         <LineFieldRow label="کلاس">{renderFieldValue("className", "text-right")}</LineFieldRow>
@@ -1285,27 +1376,27 @@ const SavedPaperViewer = () => {
               )}
 
               {selectedLayout === "Layout 18" && (
-                <div className="mt-4 border-2 border-slate-500 text-sm">
-                  <div className="grid grid-cols-[110px_1fr_110px] border-b-2 border-slate-500">
-                    <div className="grid place-items-center p-2"><LogoBox src={headerInfo.logoUrl} className="h-16 w-16 border border-slate-400 bg-slate-50 grid place-items-center text-[10px]" /></div>
+                <div className="mt-4 border-2 border-black text-sm shadow-sm">
+                  <div className="grid grid-cols-[110px_1fr_110px] border-b-2 border-slate-400">
+                    <div className="grid place-items-center p-2"><LogoBox src={headerInfo.logoUrl} monogramHeight={headerInfo.monogramHeight} monogramWidth={headerInfo.monogramWidth} className="h-16 w-16 border border-black bg-slate-50 grid place-items-center text-[10px]" /></div>
                     <div className="text-center py-2"></div>
-                    <div className="grid place-items-center p-2"><LogoBox src={headerInfo.logoUrl} className="h-16 w-16 border border-slate-400 bg-slate-50 grid place-items-center text-[10px]" /></div>
+                    <div className="grid place-items-center p-2"><LogoBox src={headerInfo.logoUrl} monogramHeight={headerInfo.monogramHeight} monogramWidth={headerInfo.monogramWidth} className="h-16 w-16 border border-black bg-slate-50 grid place-items-center text-[10px]" /></div>
                   </div>
                   <table className="w-full border-collapse">
                     <tbody>
                       <tr>
-                        <td className="border-2 border-slate-500 p-2">Class</td><td className="border-2 border-slate-500 p-2 font-semibold text-center">{paperFields.className}</td>
-                        <td className="border-2 border-slate-500 p-2">Subject</td><td className="border-2 border-slate-500 p-2 font-semibold text-center">{paperFields.subjectName}</td>
-                        <td className="border-2 border-slate-500 p-2">Date</td><td className="border-2 border-slate-500 p-2 font-semibold text-center">{paperFields.examDate}</td>
-                        <td className="border-2 border-slate-500 p-2">T.Marks</td><td className="border-2 border-slate-500 p-2 font-semibold text-center">{paperFields.totalMarks}</td>
+                        <td className="border-2 border-black p-2 font-semibold">Class</td><td className="border-2 border-black p-2 text-center">{paperFields.className}</td>
+                        <td className="border-2 border-black p-2 font-semibold">Subject</td><td className="border-2 border-black p-2 text-center">{paperFields.subjectName}</td>
+                        <td className="border-2 border-black p-2 font-semibold">Date</td><td className="border-2 border-black p-2 text-center">{paperFields.examDate}</td>
+                        <td className="border-2 border-black p-2 font-semibold">T.Marks</td><td className="border-2 border-black p-2 text-center">{paperFields.totalMarks}</td>
                       </tr>
                       <tr>
-                        <td className="border-2 border-slate-500 p-2">Roll No.</td><td className="border-2 border-slate-500 p-2">{renderFieldValue("rollNum")}</td>
-                        <td className="border-2 border-slate-500 p-2">Name</td><td className="border-2 border-slate-500 p-2" colSpan={3}>{renderFieldValue("studentName", "text-left")}</td>
-                        <td className="border-2 border-slate-500 p-2">Time</td><td className="border-2 border-slate-500 p-2 font-semibold text-center">{paperFields.timeAllowed}</td>
+                        <td className="border-2 border-black p-2 font-semibold">Roll No.</td><td className="border-2 border-black p-2">{renderFieldValue("rollNum")}</td>
+                        <td className="border-2 border-black p-2 font-semibold">Name</td><td className="border-2 border-black p-2" colSpan={3}>{renderFieldValue("studentName", "text-left")}</td>
+                        <td className="border-2 border-black p-2 font-semibold">Time</td><td className="border-2 border-black p-2 text-center">{paperFields.timeAllowed}</td>
                       </tr>
                       <tr>
-                        <td className="border-2 border-slate-500 p-2">Syllabus</td><td className="border-2 border-slate-500 p-2 font-semibold" colSpan={7}>{paper.paperCategory || `${paperFields.subjectName} (${paper.board})`}</td>
+                        <td className="border-2 border-black p-2 font-semibold">Syllabus</td><td className="border-2 border-black p-2" colSpan={7}>{paper.paperCategory || `${paperFields.subjectName} (${paper.board})`}</td>
                       </tr>
                     </tbody>
                   </table>
@@ -1313,26 +1404,26 @@ const SavedPaperViewer = () => {
               )}
 
               {selectedLayout === "Layout 19" && (
-                <div className="mt-4 border border-slate-500 text-sm">
+                <div className="mt-4 border border-black text-sm">
                   <table className="w-full border-collapse">
                     <tbody>
                       <tr>
-                        <td className="border border-slate-500 p-2" rowSpan={2} style={{ width: "100px" }}><LogoBox src={headerInfo.logoUrl} className="h-14 w-14 border border-slate-400 bg-slate-50 grid place-items-center text-[10px] mx-auto" /></td>
-                        <td className="border border-slate-500 p-2">Name</td>
-                        <td className="border border-slate-500 p-2" colSpan={3}>{renderFieldValue("studentName", "text-left")}</td>
-                        <td className="border border-slate-500 p-2 bg-[#145f6b] text-white font-semibold text-center" rowSpan={2}>English.</td>
-                        <td className="border border-slate-500 p-2">Class</td>
-                        <td className="border border-slate-500 p-2 font-semibold">{paperFields.className}</td>
-                        <td className="border border-slate-500 p-2">T.MARKS</td>
-                        <td className="border border-slate-500 p-2 font-semibold">{paperFields.totalMarks}</td>
+                        <td className="border border-black p-2" rowSpan={2} style={{ width: "100px" }}><LogoBox src={headerInfo.logoUrl} monogramHeight={headerInfo.monogramHeight} monogramWidth={headerInfo.monogramWidth} className="h-14 w-14 border border-black bg-slate-50 grid place-items-center text-[10px] mx-auto" /></td>
+                        <td className="border border-black p-2">Name</td>
+                        <td className="border border-black p-2" colSpan={3}>{renderFieldValue("studentName", "text-left")}</td>
+                        <td className="border border-black p-2 bg-[#145f6b] text-white font-semibold text-center" rowSpan={2}>English.</td>
+                        <td className="border border-black p-2">Class</td>
+                        <td className="border border-black p-2 font-semibold">{paperFields.className}</td>
+                        <td className="border border-black p-2">T.MARKS</td>
+                        <td className="border border-black p-2 font-semibold">{paperFields.totalMarks}</td>
                       </tr>
                       <tr>
-                        <td className="border border-slate-500 p-2">Roll#</td>
-                        <td className="border border-slate-500 p-2" colSpan={2}>{renderFieldValue("rollNum", "text-left")}</td>
-                        <td className="border border-slate-500 p-2">Section</td>
-                        <td className="border border-slate-500 p-2">{renderFieldValue("section", "text-left")}</td>
-                        <td className="border border-slate-500 p-2">Date</td>
-                        <td className="border border-slate-500 p-2 font-semibold" colSpan={3}>{paperFields.examDate}</td>
+                        <td className="border border-black p-2">Roll#</td>
+                        <td className="border border-black p-2" colSpan={2}>{renderFieldValue("rollNum", "text-left")}</td>
+                        <td className="border border-black p-2">Section</td>
+                        <td className="border border-black p-2">{renderFieldValue("section", "text-left")}</td>
+                        <td className="border border-black p-2">Date</td>
+                        <td className="border border-black p-2 font-semibold" colSpan={3}>{paperFields.examDate}</td>
                       </tr>
                     </tbody>
                   </table>
@@ -1348,7 +1439,7 @@ const SavedPaperViewer = () => {
                       <LineFieldRow label="Paper Time">{renderFieldValue("timeAllowed", "text-left")}</LineFieldRow>
                     </div>
                     <div className="grid place-items-center">
-                      <LogoBox src={headerInfo.logoUrl} className="h-20 w-20 border border-slate-400 bg-slate-50 grid place-items-center text-[10px]" />
+                      <LogoBox src={headerInfo.logoUrl} monogramHeight={headerInfo.monogramHeight} monogramWidth={headerInfo.monogramWidth} className="h-20 w-20 border border-black bg-slate-50 grid place-items-center text-[10px]" />
                     </div>
                     <div className="space-y-2">
                       <LineFieldRow label="Paper Date">{renderFieldValue("examDate", "text-left")}</LineFieldRow>
@@ -1357,17 +1448,17 @@ const SavedPaperViewer = () => {
                       <LineFieldRow label="Total Marks">{renderFieldValue("totalMarks", "text-left")}</LineFieldRow>
                     </div>
                   </div>
-                  <table className="w-full border border-slate-500 border-collapse text-center">
+                  <table className="w-full border border-black border-collapse text-center">
                     <tbody>
                       <tr>
-                        <td className="border border-slate-500 p-2 font-semibold">Question No.</td>
-                        {Array.from({ length: 10 }, (_, i) => <td key={i} className="border border-slate-500 p-2">{i + 1}</td>)}
-                        <td className="border border-slate-500 p-2 font-semibold">Total Marks</td>
+                        <td className="border border-black p-2 font-semibold">Question No.</td>
+                        {Array.from({ length: 10 }, (_, i) => <td key={i} className="border border-black p-2">{i + 1}</td>)}
+                        <td className="border border-black p-2 font-semibold">Total Marks</td>
                       </tr>
                       <tr>
-                        <td className="border border-slate-500 p-2 font-semibold">Marks Obtained</td>
-                        {Array.from({ length: 10 }, (_, i) => <td key={i} className="border border-slate-500 p-2">&nbsp;</td>)}
-                        <td className="border border-slate-500 p-2">&nbsp;</td>
+                        <td className="border border-black p-2 font-semibold">Marks Obtained</td>
+                        {Array.from({ length: 10 }, (_, i) => <td key={i} className="border border-black p-2">&nbsp;</td>)}
+                        <td className="border border-black p-2">&nbsp;</td>
                       </tr>
                     </tbody>
                   </table>
@@ -1379,30 +1470,30 @@ const SavedPaperViewer = () => {
               )}
 
               {printExamSyllabus && ["Layout 1", "Layout 2", "Layout 3", "Layout 4"].includes(selectedLayout) && (
-                <div className="saved-paper-syllabus mt-3 border border-slate-400 px-4 py-2 print:px-3 print:py-1.5 text-sm print:text-[11px] text-slate-900">
-                  <span className="font-semibold text-slate-500">Exam Syllabus</span>
-                  <div className="mt-1 font-medium">{paper.paperCategory || `${paperFields.subjectName} (${paper.board})`}</div>
+                <div className="saved-paper-syllabus mt-3 border border-black bg-slate-50 px-4 py-2 print:px-3 print:py-1.5 text-sm print:text-[11px] text-black rounded-sm">
+                  <span className="font-semibold text-black uppercase tracking-wide text-[11px]">Exam Syllabus</span>
+                  <div className="mt-1 font-semibold">{paper.paperCategory || `${paperFields.subjectName} (${paper.board})`}</div>
                 </div>
               )}
 
               {printBubbleSheet && (
-                <div className="saved-paper-bubble mt-2 rounded-lg border border-slate-300 bg-gradient-to-br from-slate-50 via-white to-sky-50 px-3 py-2 text-slate-700 shadow-sm">
+                <div className="saved-paper-bubble mt-2 rounded-lg border border-black bg-gradient-to-br from-slate-50 via-white to-sky-50 px-3 py-2 text-black shadow-sm">
                   <div className="mb-1.5 inline-flex rounded-full border border-sky-200 bg-white px-2 py-0.5 text-[11px] font-semibold text-sky-700">Bubble Sheet</div>
                   <div className="grid grid-cols-1 gap-1.5 text-[11px] sm:grid-cols-2 lg:grid-cols-3">
                     {(sectionedQuestions.sections.find((s) => s.key === "mcq")?.questions || []).map((q, idx) => {
                       const answerKey = getAnswerKey(q.id);
                       return (
                         <div key={`bubble-${q.id}`} className="rounded-md border border-slate-200 bg-white px-2 py-1 shadow-[0_1px_0_rgba(15,23,42,0.03)]">
-                          <div className="mb-0.5 text-[11px] font-semibold text-slate-700">Q{idx + 1}</div>
+                          <div className="mb-0.5 text-[11px] font-semibold text-black">Q{idx + 1}</div>
                           <div className="flex items-center gap-1.5">
                             {(["A", "B", "C", "D"] as const).map((option) => (
                               <div key={`${q.id}-${option}`} className="inline-flex items-center gap-1 rounded px-0.5 py-0.5 hover:bg-slate-50">
                                 <span
-                                  className={`inline-flex h-3.5 w-3.5 items-center justify-center rounded-full border border-slate-400 text-[9px] ${tickAnswers && answerKey === option ? "border-emerald-600 bg-emerald-600 text-white" : "bg-white"}`}
+                                  className={`inline-flex h-3.5 w-3.5 items-center justify-center rounded-full border border-black text-[9px] ${tickAnswers && answerKey === option ? "border-emerald-600 bg-emerald-600 text-white" : "bg-white"}`}
                                 >
                                   {tickAnswers && answerKey === option ? "✓" : ""}
                                 </span>
-                                <span className="text-[10px] font-medium text-slate-700">{option}</span>
+                                <span className="text-[10px] font-medium text-black">{option}</span>
                               </div>
                             ))}
                           </div>
@@ -1413,12 +1504,12 @@ const SavedPaperViewer = () => {
                 </div>
               )}
 
-              <div className="saved-paper-sections mt-5 print:mt-3 space-y-6 print:space-y-3" style={{ lineHeight: resolvedLineHeight }}>
+              <div className="saved-paper-sections mt-5 print:mt-3 space-y-8 print:space-y-6" style={{ lineHeight: resolvedLineHeight }}>
                 {sectionedQuestions.sections.map((section, sectionIndex) => (
-                  <section key={section.key} className="saved-paper-section" style={{ breakInside: "avoid" }}>
+                  <section key={section.key} className={`saved-paper-section ${sectionIndex > 0 ? "pt-4 border-t border-black" : ""}`} style={{ breakInside: "avoid" }}>
                     <div className="mb-1 print:mb-1 grid items-start gap-3" style={{ gridTemplateColumns: showEn && showUr ? "1fr auto 1fr" : showEn ? "1fr auto" : "auto 1fr" }}>
                       {showEn && (
-                        <h2 className="font-bold text-left text-slate-900" style={{ fontSize: `${resolvedEnglishFontSize + 1}px`, fontFamily: englishFontFamily }}>
+                        <h2 className="font-bold text-left text-black" style={{ fontSize: `${resolvedEnglishFontSize + 1}px`, fontFamily: englishFontFamily }}>
                           {`Q${sectionIndex + 1}. ${section.title}`}
                         </h2>
                       )}
@@ -1427,16 +1518,16 @@ const SavedPaperViewer = () => {
                           type="text"
                           value={sectionMarksOverrides[section.key] || `${section.questions.length}X${sectionedQuestions.marksPerQuestion}=${section.questions.length * sectionedQuestions.marksPerQuestion}`}
                           onChange={(e) => setSectionMarksOverrides((prev) => ({ ...prev, [section.key]: e.target.value }))}
-                          className="h-6 min-w-[170px] rounded border border-slate-300 px-2 text-center text-slate-900 outline-none"
+                          className="h-6 min-w-[170px] rounded border border-black px-2 text-center text-black outline-none"
                           style={{ fontSize: `${resolvedEnglishFontSize}px`, fontFamily: englishFontFamily }}
                         />
                       ) : (
-                        <span className="font-bold text-center text-slate-900" style={{ fontSize: `${resolvedEnglishFontSize}px`, fontFamily: englishFontFamily }}>
+                        <span className="font-bold text-center text-black" style={{ fontSize: `${resolvedEnglishFontSize}px`, fontFamily: englishFontFamily }}>
                           {sectionMarksOverrides[section.key] || `${section.questions.length}X${sectionedQuestions.marksPerQuestion}=${section.questions.length * sectionedQuestions.marksPerQuestion}`}
                         </span>
                       )}
                       {showUr && (
-                        <p className="text-right font-bold text-slate-900" dir="rtl" style={{ fontSize: `${resolvedUrduFontSize}px`, fontFamily: urduFontFamily }}>
+                        <p className="text-right font-bold text-black" dir="rtl" style={{ fontSize: `${resolvedUrduFontSize}px`, fontFamily: urduFontFamily }}>
                           {`سوال نمبر${sectionIndex + 1}۔ ${section.urduTitle}`}
                         </p>
                       )}
@@ -1446,11 +1537,11 @@ const SavedPaperViewer = () => {
                       <table className="border-collapse" dir="rtl" style={{ breakInside: "avoid", width: "auto", minWidth: "40%", maxWidth: "70%" }}>
                         <thead>
                           <tr>
-                            <th className="border border-slate-400 p-2 text-right font-bold"
+                            <th className="border border-black p-2 text-right font-bold"
                                 style={{ fontSize: `${resolvedUrduFontSize}px`, color: resolvedTextColor, fontWeight: resolvedFontWeight, fontFamily: urduFontFamily }}>
                               کالم (الف)
                             </th>
-                            <th className="border border-slate-400 p-2 text-right font-bold"
+                            <th className="border border-black p-2 text-right font-bold"
                                 style={{ fontSize: `${resolvedUrduFontSize}px`, color: resolvedTextColor, fontWeight: resolvedFontWeight, fontFamily: urduFontFamily }}>
                               کالم (ب)
                             </th>
@@ -1459,26 +1550,26 @@ const SavedPaperViewer = () => {
                         <tbody>
                           {section.questions.map((question) => (
                             <tr key={question.id}>
-                              <td className="border border-slate-300 p-2 text-right"
+                              <td className="border border-black p-2 text-right"
                                   style={{ fontSize: `${resolvedUrduFontSize}px`, color: resolvedTextColor, fontFamily: urduFontFamily }}>
                                 {manualEditing ? (
                                   <textarea
                                     value={question.text}
                                     onChange={(e) => { const value = e.target.value; setEditableQuestions((prev) => prev.map((q) => (q.id === question.id ? { ...q, text: value } : q))); }}
-                                    className="w-full resize-y rounded border border-slate-300 px-2 py-1 text-right"
+                                    className="w-full resize-y rounded border border-black px-2 py-1 text-right"
                                     rows={1}
                                     dir="rtl"
                                     style={{ fontSize: `${resolvedUrduFontSize}px`, color: resolvedTextColor, fontFamily: urduFontFamily }}
                                   />
                                 ) : question.text}
                               </td>
-                              <td className="border border-slate-300 p-2 text-right"
+                              <td className="border border-black p-2 text-right"
                                   style={{ fontSize: `${resolvedUrduFontSize}px`, color: resolvedTextColor, fontFamily: urduFontFamily }}>
                                 {manualEditing ? (
                                   <textarea
                                     value={question.urdu}
                                     onChange={(e) => { const value = e.target.value; setEditableQuestions((prev) => prev.map((q) => (q.id === question.id ? { ...q, urdu: value } : q))); }}
-                                    className="w-full resize-y rounded border border-slate-300 px-2 py-1 text-right"
+                                    className="w-full resize-y rounded border border-black px-2 py-1 text-right"
                                     rows={1}
                                     dir="rtl"
                                     style={{ fontSize: `${resolvedUrduFontSize}px`, color: resolvedTextColor, fontFamily: urduFontFamily }}
@@ -1490,7 +1581,7 @@ const SavedPaperViewer = () => {
                         </tbody>
                       </table>
                     ) : (
-                    <div className="space-y-2 print:space-y-1.5">
+                    <div className={twoQuestionsPerLine ? "grid grid-cols-1 md:grid-cols-2 gap-4 print:gap-3" : "space-y-2 print:space-y-1.5"}>
                       {section.questions.map((question, index) => {
                         const { englishStem, urduStem, parsedText, parsedUrdu } = getQuestionStems(question.text, question.urdu || "");
                         const showUrduQuestion = urduStem.trim() !== englishStem.trim();
@@ -1523,12 +1614,12 @@ const SavedPaperViewer = () => {
                                     const value = e.target.value;
                                     setEditableQuestions((prev) => prev.map((q) => (q.id === question.id ? { ...q, text: value } : q)));
                                   }}
-                                  className="w-full resize-y rounded border border-slate-300 px-2 py-1 text-slate-900"
+                                  className="w-full resize-y rounded border border-black px-2 py-1 text-black"
                                   rows={2}
                                   style={{ fontSize: `${resolvedEnglishFontSize}px`, color: resolvedTextColor, fontWeight: resolvedFontWeight, fontFamily: englishFontFamily }}
                                 />
                               ) : (
-                                <div className="text-slate-900" style={{ fontSize: `${resolvedEnglishFontSize}px`, color: resolvedTextColor, fontWeight: resolvedFontWeight, fontFamily: englishFontFamily }}>
+                                <div className="text-black" style={{ fontSize: `${resolvedEnglishFontSize}px`, color: resolvedTextColor, fontWeight: resolvedFontWeight, fontFamily: englishFontFamily }}>
                                   {renderQuestionStem(index + 1, englishStem, ".")}
                                 </div>
                               ))}{"\n"}
@@ -1539,7 +1630,7 @@ const SavedPaperViewer = () => {
                                     const value = e.target.value;
                                     setEditableQuestions((prev) => prev.map((q) => (q.id === question.id ? { ...q, urdu: value } : q)));
                                   }}
-                                  className="w-full resize-y rounded border border-slate-300 px-2 py-1 text-right text-slate-900"
+                                  className="w-full resize-y rounded border border-black px-2 py-1 text-right text-black"
                                   rows={2}
                                   dir="rtl"
                                   style={{ fontSize: `${resolvedUrduFontSize}px`, color: resolvedTextColor, fontWeight: resolvedFontWeight, fontFamily: urduFontFamily }}
@@ -1547,13 +1638,13 @@ const SavedPaperViewer = () => {
                               ) : showEn ? (
                                 // Dual mode: only show urdu side when content differs from english
                                 question.urdu && showUrduQuestion ? (
-                                  <div className="text-right text-slate-900" dir="rtl" style={{ fontSize: `${resolvedUrduFontSize}px`, color: resolvedTextColor, fontWeight: resolvedFontWeight, fontFamily: urduFontFamily }}>
+                                  <div className="text-right text-black" dir="rtl" style={{ fontSize: `${resolvedUrduFontSize}px`, color: resolvedTextColor, fontWeight: resolvedFontWeight, fontFamily: urduFontFamily }}>
                                     {renderQuestionStem(index + 1, cleanUrduStem(urduStem), "۔")}
                                   </div>
                                 ) : <div />
                               ) : (
                                 // Urdu-only mode: always show content, fallback to englishStem if no urdu
-                                <div className="text-right text-slate-900" dir="rtl" style={{ fontSize: `${resolvedUrduFontSize}px`, color: resolvedTextColor, fontWeight: resolvedFontWeight, fontFamily: urduFontFamily }}>
+                                <div className="text-right text-black" dir="rtl" style={{ fontSize: `${resolvedUrduFontSize}px`, color: resolvedTextColor, fontWeight: resolvedFontWeight, fontFamily: urduFontFamily }}>
                                   {renderQuestionStem(index + 1, cleanUrduStem(urduStem || englishStem), "۔")}
                                 </div>
                               ))}
@@ -1568,18 +1659,18 @@ const SavedPaperViewer = () => {
                                   const showUrduOption = urOption.trim() !== enOption.trim();
                                   if (!showEn && showUr) {
                                     return (
-                                      <div key={`${question.id}-opt-${key}`} className="flex items-baseline justify-end gap-1 text-slate-900" dir="rtl" style={{ fontSize: `${resolvedUrduFontSize}px`, color: resolvedTextColor, fontWeight: resolvedFontWeight, fontFamily: urduFontFamily }}>
+                                      <div key={`${question.id}-opt-${key}`} className="flex items-baseline justify-end gap-1 text-black" dir="rtl" style={{ fontSize: `${resolvedUrduFontSize}px`, color: resolvedTextColor, fontWeight: resolvedFontWeight, fontFamily: urduFontFamily }}>
                                         <span>{tickAnswers && answerKey === key ? "✓ " : ""}({key}) <MathText text={urOption} /></span>
                                       </div>
                                     );
                                   }
                                   return (
-                                    <div key={`${question.id}-opt-${key}`} className="flex items-baseline gap-1 text-slate-900" style={{ fontSize: `${resolvedEnglishFontSize}px`, color: resolvedTextColor, fontWeight: resolvedFontWeight, fontFamily: englishFontFamily }}>
+                                    <div key={`${question.id}-opt-${key}`} className="flex items-baseline gap-1 text-black" style={{ fontSize: `${resolvedEnglishFontSize}px`, color: resolvedTextColor, fontWeight: resolvedFontWeight, fontFamily: englishFontFamily }}>
                                       <span dir="ltr">
                                         {tickAnswers && answerKey === key ? "✓ " : ""}
                                         ({key}) <MathText text={enOption} />
                                       </span>
-                                      {urOption && showUrduOption && (
+                                      {showUr && urOption && showUrduOption && (
                                         <span dir="rtl" style={{ fontSize: `${resolvedUrduFontSize}px`, fontFamily: urduFontFamily }}>
                                           <MathText text={urOption} />
                                         </span>
@@ -1601,11 +1692,11 @@ const SavedPaperViewer = () => {
                 {printAnswerKeys && (
                   <section style={{ breakInside: "avoid" }}>
                     <div className="mb-2 flex items-start justify-between gap-3">
-                      <h2 className="font-bold text-slate-900" style={{ fontSize: `${resolvedEnglishFontSize}px`, fontFamily: englishFontFamily }}>
+                      <h2 className="font-bold text-black" style={{ fontSize: `${resolvedEnglishFontSize}px`, fontFamily: englishFontFamily }}>
                         Answer Keys
                       </h2>
                     </div>
-                    <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 text-slate-900" style={{ fontSize: `${resolvedEnglishFontSize}px`, fontFamily: englishFontFamily }}>
+                    <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 text-black" style={{ fontSize: `${resolvedEnglishFontSize}px`, fontFamily: englishFontFamily }}>
                       {(sectionedQuestions.sections.find((s) => s.key === "mcq")?.questions || []).map((q, i) => {
                         return <div key={`answer-${q.id}`}>{`Q${i + 1}: ${getAnswerKey(q.id)}`}</div>;
                       })}
@@ -1634,10 +1725,12 @@ type ToolbarFieldProps = {
 type LogoBoxProps = {
   src?: string;
   className: string;
+  monogramHeight?: string;
+  monogramWidth?: string;
 };
 
-const LogoBox = ({ src = "", className }: LogoBoxProps) => (
-  <div className={`${className} overflow-visible`}>
+const LogoBox = ({ src = "", className, monogramHeight, monogramWidth }: LogoBoxProps) => (
+  <div className={`${className} overflow-visible`} style={monogramHeight ? { height: `${monogramHeight}px`, width: `${monogramWidth}px` } : undefined}>
     {src ? (
       <img
         src={src}
@@ -1646,7 +1739,7 @@ const LogoBox = ({ src = "", className }: LogoBoxProps) => (
         style={{ transform: "scale(var(--logo-scale, 1))", transformOrigin: "center" }}
       />
     ) : (
-      <span className="font-bold text-slate-500" style={{ transform: "scale(var(--logo-scale, 1))", transformOrigin: "center" }}>LOGO</span>
+      <span className="font-bold text-black" style={{ transform: "scale(var(--logo-scale, 1))", transformOrigin: "center" }}>LOGO</span>
     )}
   </div>
 );
@@ -1658,7 +1751,7 @@ const ToolbarField = ({ label, value, onChange }: ToolbarFieldProps) => (
       type="text"
       value={value}
       onChange={(e) => onChange(e.target.value)}
-      className="h-8 w-full rounded-sm border border-slate-300 bg-white px-2 text-center text-xs font-medium text-slate-900"
+      className="h-8 w-full rounded-sm border border-black bg-white px-2 text-center text-xs font-medium text-black"
     />
   </label>
 );
@@ -1676,7 +1769,7 @@ const ToolbarSelect = ({ label, value, onChange, options }: ToolbarSelectProps) 
     <select
       value={value}
       onChange={(e) => onChange(e.target.value)}
-      className="h-8 w-full rounded-sm border border-slate-300 bg-white px-2 text-center text-[11px] font-medium text-slate-900"
+      className="h-8 w-full rounded-sm border border-black bg-white px-2 text-center text-[11px] font-medium text-black"
     >
       {options.map((option) => (
         <option key={option} value={option}>{option}</option>
@@ -1695,17 +1788,17 @@ type PaperMetaFieldProps = {
 };
 
 const PaperMetaField = ({ className = "", compact = false, label, value, manualEditing, onChange }: PaperMetaFieldProps) => (
-  <div className={`border border-slate-500 ${compact ? "px-2 py-1 min-h-[34px]" : "px-3 py-2 min-h-[42px]"} print:px-2 print:py-1 print:min-h-[34px] ${className}`}>
-    <div className={`${compact ? "-mt-3 text-[11px]" : "-mt-4 text-xs"} inline-block bg-white px-2 text-slate-500`}>{label}</div>
+  <div className={`border border-black ${compact ? "px-2 py-1 min-h-[34px]" : "px-3 py-2 min-h-[42px]"} print:px-2 print:py-1 print:min-h-[34px] ${className}`}>
+    <div className={`${compact ? "-mt-3 text-[11px]" : "-mt-4 text-xs"} inline-block bg-white px-2 text-black`}>{label}</div>
     {manualEditing ? (
       <input
         type="text"
         value={value}
         onChange={(e) => onChange(e.target.value)}
-        className="w-full border-0 bg-transparent p-0 text-center font-semibold text-slate-900 outline-none"
+        className="w-full border-0 bg-transparent p-0 text-center font-semibold text-black outline-none"
       />
     ) : (
-      <div className="text-center font-semibold text-slate-900">{value}</div>
+      <div className="text-center font-semibold text-black">{value}</div>
     )}
   </div>
 );
@@ -1717,15 +1810,15 @@ type RowProps = {
 };
 
 const SplitFieldRow = ({ label, children, compact = false }: RowProps) => (
-  <div className={`grid grid-cols-[42%_58%] border border-slate-500 ${compact ? "min-h-[34px]" : "min-h-[42px]"}`}>
-    <div className={`bg-slate-200 ${compact ? "px-2 py-1" : "px-3 py-2"} font-semibold text-slate-900 flex items-center`}>{label}</div>
+  <div className={`grid grid-cols-[42%_58%] border border-black ${compact ? "min-h-[34px]" : "min-h-[42px]"}`}>
+    <div className={`bg-slate-100 ${compact ? "px-2 py-1" : "px-3 py-2"} font-semibold text-black flex items-center`}>{label}</div>
     <div className={`${compact ? "px-2 py-1" : "px-3 py-2"} flex items-center justify-center`}>{children}</div>
   </div>
 );
 
 const LineFieldRow = ({ label, children, compact = false }: RowProps) => (
-  <div className={`border-b border-slate-500 flex items-center justify-between gap-3 ${compact ? "min-h-[28px] px-2 py-1" : "min-h-[34px] px-3 py-1.5"}`}>
-    <span className="font-semibold text-slate-900">{label}:</span>
+  <div className={`border-b border-black flex items-center justify-between gap-3 ${compact ? "min-h-[28px] px-2 py-1" : "min-h-[34px] px-3 py-1.5"}`}>
+    <span className="font-semibold text-black">{label}:</span>
     <div className={`${compact ? "min-w-[140px]" : "min-w-[180px]"} text-right`}>{children}</div>
   </div>
 );

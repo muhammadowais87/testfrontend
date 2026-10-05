@@ -25,11 +25,17 @@ import {
   Edit,
   ArrowUp,
   ArrowRight,
+  ChevronRight,
   RotateCcw,
+  Wallet,
+  CalendarCheck,
+  Building2,
+  DollarSign,
 } from "lucide-react";
+import { Dialog, DialogContent } from "@/components/ui/dialog";
 import { Switch } from "@/components/ui/switch";
 import { useIsMobile } from "@/hooks/use-mobile";
-import { allBoardSubjectOptions, boardSubjectsMap } from "@/data/subjectData";
+import { allBoardSubjectOptions } from "@/data/subjectData";
 import { deleteSavedPaper, getSavedPapers, migrateLegacySavedPapersToDb, type SavedPaperRecord } from "@/lib/savedPapers";
 import { useInstituteSessionStore } from "@/stores/instituteSessionStore";
 import { API_BASE_URL } from "@/lib/api";
@@ -141,17 +147,17 @@ const Dashboard = () => {
   };
 
   const quickStats = [
-    { label: "Generated Papers", value: String(savedPapersCount), icon: <ClipboardList className="w-5 h-5" /> },
-    { label: "Saved Papers", value: String(savedPapersCount), icon: <FileText className="w-5 h-5" /> },
-    { label: "Teachers", value: String(profile?.teachers ?? 0), icon: <Users className="w-5 h-5" /> },
-    { label: "Since", value: profile?.subscriptionDate || "-", icon: <CalendarDays className="w-5 h-5" /> },
+    { label: "Generated Papers", value: String(savedPapersCount), icon: <ClipboardList className="w-5 h-5" />, color: "text-violet-600", lightBg: "bg-purple-50" },
+    { label: "Saved Papers", value: String(savedPapersCount), icon: <FileText className="w-5 h-5" />, color: "text-blue-600", lightBg: "bg-blue-50" },
+    { label: "Teachers", value: String(profile?.teachers ?? 0), icon: <Users className="w-5 h-5" />, color: "text-emerald-600", lightBg: "bg-emerald-50" },
+    { label: "Since", value: profile?.subscriptionDate || "-", icon: <CalendarDays className="w-5 h-5" />, color: "text-amber-600", lightBg: "bg-amber-50" },
   ];
 
   const actionCards = [
-    { title: "Generate Paper", subtitle: "Create a new exam paper", icon: <ClipboardList className="w-7 h-7" />, onClick: () => navigate("/dashboard/generate-paper") },
-    { title: "Saved Papers", subtitle: "View and print saved papers", icon: <FileText className="w-7 h-7" />, onClick: () => handleNav("savedpapers") },
-    { title: "Sub Users", subtitle: "Manage sub user accounts", icon: <Users className="w-7 h-7" />, onClick: () => handleNav("subusers") },
-    { title: "Settings", subtitle: "Account and app settings", icon: <Settings className="w-7 h-7" />, onClick: () => handleNav("settings") },
+    { title: "Generate Paper", subtitle: "Create a new exam paper", icon: <ClipboardList className="w-7 h-7" />, onClick: () => navigate(session?.token?.startsWith("trial_") ? "/dashboard/generate-paper?trial=true" : "/dashboard/generate-paper"), color: "text-indigo-600" },
+    { title: "Saved Papers", subtitle: "View and print saved papers", icon: <FileText className="w-7 h-7" />, onClick: () => handleNav("savedpapers"), color: "text-sky-600" },
+    { title: "Sub Users", subtitle: "Manage sub user accounts", icon: <Users className="w-7 h-7" />, onClick: () => handleNav("subusers"), color: "text-teal-600" },
+    { title: "Settings", subtitle: "Account and app settings", icon: <Settings className="w-7 h-7" />, onClick: () => handleNav("settings"), color: "text-rose-600" },
   ];
 
   useEffect(() => {
@@ -210,6 +216,7 @@ const Dashboard = () => {
           icon={<LogOut className="w-4 h-4" />}
           label="Logout"
           onClick={() => {
+            localStorage.removeItem(TRIAL_SETTINGS_KEY);
             logout();
             navigate("/institute/login");
           }}
@@ -233,12 +240,12 @@ const Dashboard = () => {
             </button>
             <div>
               <h1 className="text-base font-bold tracking-wide text-primary-foreground">APEXTESTSOLUTION</h1>
-              <p className="text-xs text-primary-foreground/50">Version 10.0</p>
+              
             </div>
           </div>
           <div className="text-right min-w-0">
-            <p className="text-sm font-semibold text-primary-foreground truncate">{profile?.name || session?.name || "Institute Dashboard"}</p>
-            <p className="text-xs text-primary-foreground/50 truncate hidden sm:block">{profile?.email || session?.email || ""}</p>
+            <p className="text-sm font-semibold text-primary-foreground truncate">{profile?.name || session?.name || "Institute"}</p>
+            <p className="text-xs text-primary-foreground/50 truncate hidden sm:block">{profile?.address || session?.address || ""}</p>
           </div>
         </div>
       </header>
@@ -282,12 +289,12 @@ const Dashboard = () => {
             <>
               <section className="grid grid-cols-2 xl:grid-cols-4 gap-3">
                 {quickStats.map((item) => (
-                  <div key={item.label} className="rounded-xl bg-card border border-border p-3 sm:p-4">
+                  <div key={item.label} className={`rounded-xl ${item.lightBg} border border-gray-300 p-3 sm:p-4 shadow-sm`}>
                     <div className="flex items-center justify-between mb-2">
-                      <p className="text-[10px] sm:text-[11px] uppercase tracking-wide text-muted-foreground">{item.label}</p>
-                      <span className="text-primary">{item.icon}</span>
+                      <p className="text-[10px] sm:text-[11px] uppercase tracking-wide text-muted-foreground font-bold">{item.label}</p>
+                      <span className={item.color}>{item.icon}</span>
                     </div>
-                    <p className="text-xl sm:text-2xl font-bold text-foreground">{item.value}</p>
+                    <p className="text-xl sm:text-2xl font-extrabold text-foreground">{item.value}</p>
                   </div>
                 ))}
               </section>
@@ -296,35 +303,38 @@ const Dashboard = () => {
                 {actionCards.map((card) => {
                   const content = (
                     <>
-                      <div className="w-12 h-12 rounded-xl flex items-center justify-center mb-3 bg-secondary">
+                      <div className={card.color + " mb-3"}>
                         {card.icon}
                       </div>
-                      <h3 className="text-base font-bold">{card.title}</h3>
-                      <p className="text-xs opacity-75 mt-1">{card.subtitle}</p>
+                      <h3 className="text-base font-bold text-foreground">{card.title}</h3>
+                      <p className="text-xs text-muted-foreground mt-1">{card.subtitle}</p>
                     </>
                   );
-                  const cls = "rounded-xl p-5 text-left transition-all hover:shadow-md hover:-translate-y-0.5 block bg-card text-foreground border border-border";
+                  const cls = "rounded-xl p-5 text-left transition-all hover:shadow-lg hover:-translate-y-1 block bg-card text-foreground border border-border";
 
                   return <button key={card.title} type="button" className={cls} onClick={card.onClick}>{content}</button>;
                 })}
               </section>
 
-              <section className="rounded-xl bg-card border border-border p-4 sm:p-5">
+              <section className="rounded-xl bg-gradient-to-br from-white to-slate-50 border border-border p-4 sm:p-5 shadow-sm">
                 <div>
                   <div className="flex items-center justify-between mb-4">
-                    <h3 className="text-sm font-bold uppercase tracking-wide text-foreground">Recent Activity</h3>
+                    <h3 className="text-sm font-bold uppercase tracking-wide text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-purple-600">Recent Activity</h3>
+                    <span className="text-[10px] text-muted-foreground bg-secondary/50 px-2 py-1 rounded-full">{recentActivity.length} papers</span>
                   </div>
                   <div className="space-y-2.5">
                     {recentActivity.length === 0 ? (
                       <p className="text-sm text-muted-foreground py-4 text-center">No recent activity yet. Generate a paper to get started.</p>
                     ) : recentActivity.map((item) => (
-                      <div key={item.title} className="rounded-lg border border-border bg-secondary/30 px-3.5 py-3 flex items-start gap-3">
-                        <CheckCircle2 className="w-4 h-4 mt-0.5 text-primary shrink-0" />
+                      <div key={item.title} className="rounded-lg border border-border bg-white px-3.5 py-3 flex items-start gap-3 hover:shadow-sm transition-shadow">
+                        <div className="w-6 h-6 rounded-full bg-gradient-to-br from-indigo-500 to-purple-500 flex items-center justify-center shrink-0 mt-0.5">
+                          <CheckCircle2 className="w-3.5 h-3.5 text-white" />
+                        </div>
                         <div className="min-w-0 flex-1">
                           <p className="text-sm font-semibold text-foreground truncate">{item.title}</p>
                           <p className="text-xs text-muted-foreground mt-0.5">{item.meta}</p>
                         </div>
-                        <span className="text-[11px] text-muted-foreground whitespace-nowrap">{item.time}</span>
+                        <span className="text-[11px] text-muted-foreground whitespace-nowrap bg-secondary/30 px-2 py-0.5 rounded-full">{item.time}</span>
                       </div>
                     ))}
                   </div>
@@ -427,61 +437,79 @@ const BillingView = ({ profile, token }: { profile: InstituteProfile | null; tok
       <div className="rounded-xl bg-card border border-border p-4 sm:p-6 space-y-4">
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div className="rounded-lg bg-secondary/50 p-4">
-            <p className="text-xs uppercase tracking-wide text-muted-foreground">Current Plan</p>
-            <p className="text-xl font-bold text-foreground mt-1">{profile?.plan || "Basic"}</p>
+            <div className="flex items-center gap-2 text-xs uppercase tracking-wide text-muted-foreground font-semibold mb-1">
+              <Wallet className="w-4 h-4" />
+              Current Plan
+            </div>
+            <p className="text-xl font-bold text-foreground">{profile?.plan || "Basic"}</p>
           </div>
           <div className="rounded-lg bg-secondary/50 p-4">
-            <p className="text-xs uppercase tracking-wide text-muted-foreground">Valid Till</p>
-            <p className="text-xl font-bold text-foreground mt-1">{profile?.subscriptionDate || "-"}</p>
+            <div className="flex items-center gap-2 text-xs uppercase tracking-wide text-muted-foreground font-semibold mb-1">
+              <CalendarCheck className="w-4 h-4" />
+              Valid Till
+            </div>
+            <p className="text-xl font-bold text-foreground">{profile?.subscriptionDate || "-"}</p>
           </div>
           <div className="rounded-lg bg-secondary/50 p-4">
-            <p className="text-xs uppercase tracking-wide text-muted-foreground">Payment Method</p>
-            <p className="text-xl font-bold text-foreground mt-1">Bank Transfer</p>
+            <div className="flex items-center gap-2 text-xs uppercase tracking-wide text-muted-foreground font-semibold mb-1">
+              <Building2 className="w-4 h-4" />
+              Payment Method
+            </div>
+            <p className="text-xl font-bold text-foreground">Bank Transfer</p>
           </div>
           <div className="rounded-lg bg-secondary/50 p-4">
-            <p className="text-xs uppercase tracking-wide text-muted-foreground">Amount Paid</p>
-            <p className="text-xl font-bold text-foreground mt-1">Rs. {totalPaid.toLocaleString()}</p>
+            <div className="flex items-center gap-2 text-xs uppercase tracking-wide text-muted-foreground font-semibold mb-1">
+              <DollarSign className="w-4 h-4" />
+              Amount Paid
+            </div>
+            <p className="text-xl font-bold text-foreground">Rs. {totalPaid.toLocaleString()}</p>
           </div>
         </div>
 
-        <h3 className="text-lg font-bold text-foreground pt-2">Payment History</h3>
-        <div className="overflow-x-auto">
-          <table className="w-full text-sm">
-            <thead>
-              <tr className="border-b border-border">
-                <th className="text-left py-2 text-muted-foreground font-medium">Date</th>
-                <th className="text-left py-2 text-muted-foreground font-medium">Amount</th>
-                <th className="text-left py-2 text-muted-foreground font-medium">Status</th>
-                <th className="text-left py-2 text-muted-foreground font-medium">Action</th>
-              </tr>
-            </thead>
-            <tbody>
-              {history.length === 0 ? (
-                <tr>
-                  <td colSpan={4} className="py-6 text-center text-muted-foreground">No payments found</td>
+        <div className="pt-2">
+          <h3 className="text-base font-bold text-foreground mb-3">Payment History</h3>
+          <div className="overflow-x-auto rounded-lg border border-border">
+            <table className="w-full text-sm">
+              <thead>
+                <tr className="bg-secondary/50 border-b border-border">
+                  <th className="text-left py-3 px-3 text-muted-foreground font-semibold text-xs uppercase tracking-wide">Date</th>
+                  <th className="text-left py-3 px-3 text-muted-foreground font-semibold text-xs uppercase tracking-wide">Amount</th>
+                  <th className="text-left py-3 px-3 text-muted-foreground font-semibold text-xs uppercase tracking-wide">Status</th>
+                  <th className="text-left py-3 px-3 text-muted-foreground font-semibold text-xs uppercase tracking-wide">Action</th>
                 </tr>
-              ) : (
-                history.map((item) => (
-                  <tr key={item.id} className="border-b border-border">
-                    <td className="py-2 text-foreground">{item.date}</td>
-                    <td className="py-2 text-foreground">Rs. {item.amount.toLocaleString()}</td>
-                    <td className="py-2"><span className="text-xs font-semibold px-2 py-1 rounded-full bg-primary/10 text-primary">{item.status}</span></td>
-                    <td className="py-2">
-                      <button
-                        disabled={isDeleting === item.id}
-                        type="button"
-                        onClick={() => handleDeletePayment(item)}
-                        className="inline-flex items-center gap-1 text-xs font-semibold px-2.5 py-1 rounded-lg bg-destructive/10 text-destructive hover:bg-destructive/20 transition-colors disabled:opacity-60 disabled:cursor-not-allowed"
-                      >
-                        <Trash2 className="w-3.5 h-3.5" />
-                        {isDeleting === item.id ? "Deleting..." : "Delete"}
-                      </button>
-                    </td>
+              </thead>
+              <tbody>
+                {history.length === 0 ? (
+                  <tr>
+                    <td colSpan={4} className="py-8 text-center text-muted-foreground text-sm">No payments found</td>
                   </tr>
-                ))
-              )}
-            </tbody>
-          </table>
+                ) : (
+                  history.map((item) => (
+                    <tr key={item.id} className="border-b border-border hover:bg-secondary/30 transition-colors">
+                      <td className="py-3 px-3 text-foreground">{item.date}</td>
+                      <td className="py-3 px-3 text-foreground font-medium">Rs. {item.amount.toLocaleString()}</td>
+                      <td className="py-3 px-3">
+                        <span className="inline-flex items-center gap-1 text-xs font-semibold px-2.5 py-1 rounded-full bg-primary/10 text-primary">
+                          {item.status}
+                        </span>
+                      </td>
+                      <td className="py-3 px-3">
+                        <button
+                          disabled={isDeleting === item.id}
+                          type="button"
+                          onClick={() => handleDeletePayment(item)}
+                          className="inline-flex items-center gap-1 text-xs font-semibold px-2.5 py-1.5 rounded-lg bg-destructive/10 text-destructive hover:bg-destructive/20 border border-border transition-all disabled:opacity-60 disabled:cursor-not-allowed"
+                        >
+                          <Trash2 className="w-3.5 h-3.5" />
+                          {isDeleting === item.id ? "Deleting..." : "Delete"}
+                        </button>
+                      </td>
+                    </tr>
+                  ))
+                )}
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
     </div>
@@ -499,6 +527,8 @@ const ChangePasswordView = ({ token }: { token: string }) => {
   const [showNew, setShowNew] = useState(false);
   const [showConfirm, setShowConfirm] = useState(false);
 
+  const isTrial = token?.startsWith("trial_");
+
   const handleSubmit = async () => {
     if (!currentPassword || !newPassword || !confirmPassword) {
       toast({ title: "Missing Fields", description: "Please fill all password fields.", variant: "destructive" });
@@ -507,6 +537,14 @@ const ChangePasswordView = ({ token }: { token: string }) => {
 
     if (newPassword !== confirmPassword) {
       toast({ title: "Mismatch", description: "New password and confirm password must match.", variant: "destructive" });
+      return;
+    }
+
+    if (isTrial) {
+      toast({ title: "Password Updated", description: "Your password has been updated successfully." });
+      setCurrentPassword("");
+      setNewPassword("");
+      setConfirmPassword("");
       return;
     }
 
@@ -579,9 +617,21 @@ const ChangePasswordView = ({ token }: { token: string }) => {
   );
 };
 
+const TRIAL_SETTINGS_KEY = "trial_portal_settings";
+
+const loadTrialSettings = () => {
+  try {
+    const saved = localStorage.getItem(TRIAL_SETTINGS_KEY);
+    return saved ? JSON.parse(saved) : null;
+  } catch {
+    return null;
+  }
+};
+
 /* ── Settings View ── */
 const SettingsView = ({ profile, token }: { profile: InstituteProfile | null; token: string }) => {
   const { toast } = useToast();
+  const isTrial = token?.startsWith("trial_");
   const [isSaving, setIsSaving] = useState(false);
   const logoFileInputRef = useRef<HTMLInputElement>(null);
   const handleLogoFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -592,14 +642,37 @@ const SettingsView = ({ profile, token }: { profile: InstituteProfile | null; to
     reader.readAsDataURL(file);
     e.target.value = "";
   };
-  const [settings, setSettings] = useState({
-    schoolName: "The Hope Science Academy",
-    schoolAddress: "247-E-1, (Opposite LDA School) Johar Town, Lahore",
+  const [settings, setSettings] = useState(
+    isTrial ? loadTrialSettings() || {
+      schoolName: "The Apex Science Academy",
+      schoolAddress: "247-E-9, (Opposite Shining School) Johar Town, Lahore",
+      logoUrl: "",
+      principalName: "Muhammad Owais",
+      email: "admin@school.com",
+      phonePrimary: "03127049445",
+      phoneSecondary: "03127049445",
+      monogramHeight: "50",
+      monogramWidth: "50",
+      schoolNameColor: "#000000",
+      footerColor: "#000000",
+      fontStyle: "Times New Roman",
+      schoolNameSize: "20",
+      schoolNameStretch: "1.4",
+      footerSize: "10",
+      footerStretch: "1",
+      watermarkMode: "image",
+      watermarkHeight: "200",
+      watermarkWidth: "200",
+      watermarkOpacity: "0.3",
+      watermarkText: "THE APEX SCIENCE ACADEMY",
+    } : {
+    schoolName: "The Apex Science Academy",
+    schoolAddress: "247-E-9, (Opposite Shining School) Johar Town, Lahore",
     logoUrl: "",
-    principalName: "Muhammad Ahmad",
+    principalName: "Muhammad Owais",
     email: "admin@school.com",
-    phonePrimary: "0300-8194789",
-    phoneSecondary: "0322-4157001",
+    phonePrimary: "03127049445",
+    phoneSecondary: "03127049445",
     monogramHeight: "50",
     monogramWidth: "50",
     schoolNameColor: "#000000",
@@ -613,7 +686,7 @@ const SettingsView = ({ profile, token }: { profile: InstituteProfile | null; to
     watermarkHeight: "200",
     watermarkWidth: "200",
     watermarkOpacity: "0.3",
-    watermarkText: "THE HOPE SCIENCE ACADEMY",
+    watermarkText: "THE APEX SCIENCE ACADEMY",
   });
 
   const updateSetting = (key: keyof typeof settings, value: string) => {
@@ -621,7 +694,7 @@ const SettingsView = ({ profile, token }: { profile: InstituteProfile | null; to
   };
 
   useEffect(() => {
-    if (profile) {
+    if (profile && !isTrial) {
       setSettings((prev) => ({
         ...prev,
         schoolName: profile.name || prev.schoolName,
@@ -660,61 +733,81 @@ const SettingsView = ({ profile, token }: { profile: InstituteProfile | null; to
     ? `Principal: ${settings.principalName}`
     : "";
 
-  const handleSaveSettings = async () => {
-    if (!token) {
-      toast({ title: "Session Expired", description: "Please login again.", variant: "destructive" });
-      return;
-    }
+  const saveToLocalStorage = () => {
+    localStorage.setItem(TRIAL_SETTINGS_KEY, JSON.stringify(settings));
+  };
 
+  const callApi = async (body: Record<string, unknown>) => {
+    if (isTrial) {
+      saveToLocalStorage();
+      return true;
+    }
     setIsSaving(true);
     try {
       const response = await fetch(`${API_BASE_URL}/institute-auth/settings`, {
         method: "PATCH",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${token}`,
-        },
-        body: JSON.stringify({
-          schoolName: settings.schoolName,
-          schoolAddress: settings.schoolAddress,
-          principalName: settings.principalName,
-          email: settings.email,
-          phonePrimary: settings.phonePrimary,
-          phoneSecondary: settings.phoneSecondary,
-          portalSettings: {
-            logoUrl: settings.logoUrl,
-            monogramHeight: settings.monogramHeight,
-            monogramWidth: settings.monogramWidth,
-            schoolNameColor: settings.schoolNameColor,
-            footerColor: settings.footerColor,
-            fontStyle: settings.fontStyle,
-            schoolNameSize: settings.schoolNameSize,
-            schoolNameStretch: settings.schoolNameStretch,
-            footerSize: settings.footerSize,
-            footerStretch: settings.footerStretch,
-            watermarkMode: settings.watermarkMode,
-            watermarkHeight: settings.watermarkHeight,
-            watermarkWidth: settings.watermarkWidth,
-            watermarkOpacity: settings.watermarkOpacity,
-            watermarkText: settings.watermarkText,
-          },
-        }),
+        headers: { "Content-Type": "application/json", Authorization: `Bearer ${token}` },
+        body: JSON.stringify(body),
       });
       const data = await response.json();
-      if (!response.ok) {
-        throw new Error(data?.message || "Failed to save settings");
-      }
-
-      toast({ title: "Settings Updated", description: "Institute settings saved successfully." });
+      if (!response.ok) throw new Error(data?.message || "Failed to save settings");
+      return true;
     } catch (error) {
       toast({
         title: "Update Failed",
         description: error instanceof Error ? error.message : "Could not save settings",
         variant: "destructive",
       });
+      return false;
     } finally {
       setIsSaving(false);
     }
+  };
+
+  const handleSaveAppearance = async () => {
+    if (!token) { toast({ title: "Session Expired", description: "Please login again.", variant: "destructive" }); return; }
+    const ok = await callApi({
+      portalSettings: {
+        monogramHeight: settings.monogramHeight,
+        monogramWidth: settings.monogramWidth,
+        schoolNameColor: settings.schoolNameColor,
+        footerColor: settings.footerColor,
+        fontStyle: settings.fontStyle,
+        schoolNameSize: settings.schoolNameSize,
+        schoolNameStretch: settings.schoolNameStretch,
+        footerSize: settings.footerSize,
+        footerStretch: settings.footerStretch,
+      },
+    });
+    if (ok) toast({ title: "Appearance Updated" });
+  };
+
+  const handleSaveInformation = async () => {
+    if (!token) { toast({ title: "Session Expired", description: "Please login again.", variant: "destructive" }); return; }
+    const ok = await callApi({
+      schoolName: settings.schoolName,
+      schoolAddress: settings.schoolAddress,
+      principalName: settings.principalName,
+      email: settings.email,
+      phonePrimary: settings.phonePrimary,
+      phoneSecondary: settings.phoneSecondary,
+      portalSettings: { logoUrl: settings.logoUrl },
+    });
+    if (ok) toast({ title: "Information Updated" });
+  };
+
+  const handleSaveWatermark = async () => {
+    if (!token) { toast({ title: "Session Expired", description: "Please login again.", variant: "destructive" }); return; }
+    const ok = await callApi({
+      portalSettings: {
+        watermarkMode: settings.watermarkMode,
+        watermarkHeight: settings.watermarkHeight,
+        watermarkWidth: settings.watermarkWidth,
+        watermarkOpacity: settings.watermarkOpacity,
+        watermarkText: settings.watermarkText,
+      },
+    });
+    if (ok) toast({ title: "Watermark Updated" });
   };
 
   const inputClassName = "w-full rounded-lg border border-border bg-background px-3 py-2.5 text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary";
@@ -860,7 +953,17 @@ const SettingsView = ({ profile, token }: { profile: InstituteProfile | null; to
           </div>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 pt-2 border-t border-border">
+
+        <div className="flex justify-end">
+          <button disabled={isSaving} type="button" onClick={handleSaveAppearance} className="inline-flex items-center gap-2 rounded-lg bg-slate-900 px-5 py-2.5 text-sm font-semibold text-white hover:bg-slate-800 transition-colors disabled:opacity-60 disabled:cursor-not-allowed">
+            <Save className="w-4 h-4" />
+            {isSaving ? "Updating..." : "Update Appearance"}
+          </button>
+        </div>
+      </div>
+
+      <div className="rounded-2xl border border-border bg-card p-4 sm:p-5 space-y-5">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
           <div className="space-y-4">
             <div className="flex items-center gap-2">
               <Settings className="w-5 h-5 text-primary" />
@@ -909,11 +1012,10 @@ const SettingsView = ({ profile, token }: { profile: InstituteProfile | null; to
             </div>
           </div>
         </div>
-
         <div className="flex justify-end">
-          <button disabled={isSaving} type="button" onClick={handleSaveSettings} className="inline-flex items-center gap-2 rounded-lg bg-slate-900 px-5 py-2.5 text-sm font-semibold text-white hover:bg-slate-800 transition-colors disabled:opacity-60 disabled:cursor-not-allowed">
+          <button disabled={isSaving} type="button" onClick={handleSaveInformation} className="inline-flex items-center gap-2 rounded-lg bg-slate-900 px-5 py-2.5 text-sm font-semibold text-white hover:bg-slate-800 transition-colors disabled:opacity-60 disabled:cursor-not-allowed">
             <Save className="w-4 h-4" />
-            {isSaving ? "Updating..." : "Update Setting"}
+            {isSaving ? "Updating..." : "Update Information"}
           </button>
         </div>
       </div>
@@ -1006,9 +1108,9 @@ const SettingsView = ({ profile, token }: { profile: InstituteProfile | null; to
                 </div>
               )}
               <div className="flex justify-end pt-2">
-                <button disabled={isSaving} type="button" onClick={handleSaveSettings} className="inline-flex items-center gap-2 rounded-lg bg-slate-900 px-5 py-2.5 text-sm font-semibold text-white hover:bg-slate-800 transition-colors disabled:opacity-60 disabled:cursor-not-allowed">
+                <button disabled={isSaving} type="button" onClick={handleSaveWatermark} className="inline-flex items-center gap-2 rounded-lg bg-slate-900 px-5 py-2.5 text-sm font-semibold text-white hover:bg-slate-800 transition-colors disabled:opacity-60 disabled:cursor-not-allowed">
                   <Save className="w-4 h-4" />
-                  {isSaving ? "Updating..." : "Update Setting"}
+                  {isSaving ? "Updating..." : "Update Watermark"}
                 </button>
               </div>
             </div>
@@ -1198,7 +1300,7 @@ const SavedPapersView = () => {
                               type="button"
                               onClick={() => {
                                 navigate(`/dashboard/saved-paper/${p.id}/view`, {
-                                  state: { autoPrint: true, printMode: "single" },
+                                  state: { printMode: "single" },
                                 });
                                 setOpenMenuPaperId(null);
                               }}
@@ -1310,12 +1412,15 @@ type SubUser = {
   email: string;
   phone: string;
   subject: string;
+  password: string;
   assignedSubjects: string[];
   isActive: boolean;
 };
 
 const SubUsersView = ({ token }: { token: string }) => {
   const { toast } = useToast();
+  const isTrial = token?.startsWith("trial_");
+  const [trialLockPopup, setTrialLockPopup] = useState(false);
   const [search, setSearch] = useState("");
   const [subUsers, setSubUsers] = useState<SubUser[]>([]);
   const [isLoading, setIsLoading] = useState(true);
@@ -1323,18 +1428,23 @@ const SubUsersView = ({ token }: { token: string }) => {
   const [entriesPerPage, setEntriesPerPage] = useState(5);
   const [currentPage, setCurrentPage] = useState(1);
   const [modalOpen, setModalOpen] = useState(false);
-  const [openMenuSubUserId, setOpenMenuSubUserId] = useState<number | null>(null);
-  const [subUserMenuBtnPos, setSubUserMenuBtnPos] = useState<{ top: number; right: number } | null>(null);
   const [assignSubUserId, setAssignSubUserId] = useState<number | null>(null);
   const [subjectSearch, setSubjectSearch] = useState("");
   const [modalSubjectSearch, setModalSubjectSearch] = useState("");
+  const [showPassword, setShowPassword] = useState(false);
   const [editingSubUserId, setEditingSubUserId] = useState<number | null>(null);
   const [form, setForm] = useState({ name: "", email: "", phone: "", subject: "", password: "" });
   const [formAssignedSubjects, setFormAssignedSubjects] = useState<string[]>([]);
   const [errors, setErrors] = useState<Record<string, string>>({});
+  const [actionModalUser, setActionModalUser] = useState<SubUser | null>(null);
 
   const loadSubUsers = async () => {
     if (!token) {
+      setIsLoading(false);
+      return;
+    }
+
+    if (isTrial) {
       setIsLoading(false);
       return;
     }
@@ -1371,13 +1481,6 @@ const SubUsersView = ({ token }: { token: string }) => {
     [search, subUsers]
   );
 
-  useEffect(() => {
-    if (!openMenuSubUserId) return;
-    const close = () => { setOpenMenuSubUserId(null); setSubUserMenuBtnPos(null); };
-    document.addEventListener("mousedown", close);
-    return () => document.removeEventListener("mousedown", close);
-  }, [openMenuSubUserId]);
-
   const totalPages = Math.max(1, Math.ceil(filtered.length / entriesPerPage));
   const startIndex = (currentPage - 1) * entriesPerPage;
   const paginatedSubUsers = filtered.slice(startIndex, startIndex + entriesPerPage);
@@ -1398,12 +1501,20 @@ const SubUsersView = ({ token }: { token: string }) => {
   );
 
   const classSubjectGroups = useMemo(
-    () => Object.entries(boardSubjectsMap).flatMap(([board, classMap]) =>
-      Object.entries(classMap).map(([className, groups]) => {
-        const subjects = Array.from(new Set(groups.flatMap((group) => group.map((item) => item.title))));
-        return { board, className, subjects };
-      })
-    ),
+    () => {
+      const map = new Map<string, { board: string; className: string; subjects: string[] }>();
+      for (const opt of allBoardSubjectOptions) {
+        const key = `${opt.board}||${opt.className}`;
+        if (!map.has(key)) {
+          map.set(key, { board: opt.board, className: opt.className, subjects: [] });
+        }
+        const entry = map.get(key)!;
+        if (!entry.subjects.includes(opt.label)) {
+          entry.subjects.push(opt.label);
+        }
+      }
+      return Array.from(map.values());
+    },
     []
   );
 
@@ -1423,9 +1534,12 @@ const SubUsersView = ({ token }: { token: string }) => {
   const validate = () => {
     const errs: Record<string, string> = {};
     if (!form.name.trim()) errs.name = "Name is required";
+    else if (/\d/.test(form.name)) errs.name = "Name cannot contain digits";
     if (!form.email.trim()) errs.email = "Email is required";
     else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email)) errs.email = "Invalid email";
     else if (subUsers.some((t) => t.email.toLowerCase() === form.email.trim().toLowerCase() && t.id !== editingSubUserId)) errs.email = "Email already exists";
+    if (!form.phone.trim()) errs.phone = "Phone is required";
+    else if (!/^\d+$/.test(form.phone)) errs.phone = "Only digits allowed";
     if (!form.subject.trim() && formAssignedSubjects.length === 0) errs.subject = "Subject is required";
     if (editingSubUserId === null && !form.password.trim()) errs.password = "Password is required";
     else if (form.password.trim() && form.password.length < 6) errs.password = "Min 6 characters";
@@ -1443,6 +1557,10 @@ const SubUsersView = ({ token }: { token: string }) => {
   };
 
   const handleOpenAdd = () => {
+    if (isTrial) {
+      setTrialLockPopup(true);
+      return;
+    }
     setEditingSubUserId(null);
     setForm({ name: "", email: "", phone: "", subject: "", password: "" });
     setFormAssignedSubjects([]);
@@ -1458,9 +1576,16 @@ const SubUsersView = ({ token }: { token: string }) => {
       email: subUser.email,
       phone: subUser.phone,
       subject: subUser.subject,
-      password: "",
+      password: subUser.password || "",
     });
-    setFormAssignedSubjects(subUser.assignedSubjects?.length ? subUser.assignedSubjects : (subUser.subject ? [subUser.subject] : []));
+    // Normalize old-format titles to new-format full labels
+    const raw = subUser.assignedSubjects?.length ? subUser.assignedSubjects : (subUser.subject ? [subUser.subject] : []);
+    const normalized = raw.map((s: string) => {
+      if (s.includes(" - ")) return s;
+      const match = allBoardSubjectOptions.find((opt) => opt.title === s);
+      return match ? match.value : s;
+    });
+    setFormAssignedSubjects(normalized);
     setModalSubjectSearch("");
     setErrors({});
     setModalOpen(true);
@@ -1528,6 +1653,7 @@ const SubUsersView = ({ token }: { token: string }) => {
 
       if (data?.subUser) {
         setSubUsers((prev) => prev.map((item) => (item.id === subUser.id ? data.subUser : item)));
+        setActionModalUser((prev) => prev?.id === subUser.id ? data.subUser : prev);
       }
     } catch (error) {
       toast({
@@ -1649,6 +1775,7 @@ const SubUsersView = ({ token }: { token: string }) => {
                 <ul className="space-y-1.5">
                   {group.subjects.map((subject) => {
                     const checked = assignSubUser.assignedSubjects.includes(subject);
+                    const displayName = subject.split(" - ").slice(2).join(" - ");
                     return (
                       <li key={subject} className="text-sm text-foreground flex items-center gap-2">
                         <span className="text-muted-foreground">•</span>
@@ -1658,7 +1785,7 @@ const SubUsersView = ({ token }: { token: string }) => {
                           onChange={() => toggleSubUserSubject(assignSubUser.id, subject)}
                           className="h-4 w-4 accent-primary"
                         />
-                        <span>{subject}</span>
+                        <span>{displayName}</span>
                       </li>
                     );
                   })}
@@ -1711,128 +1838,27 @@ const SubUsersView = ({ token }: { token: string }) => {
         </div>
       </div>
 
-      <div className="rounded-xl bg-card border border-border overflow-hidden">
-        <div className="overflow-x-auto">
-          <table className="w-full text-sm">
-            <thead>
-              <tr className="border-b border-border bg-secondary/40">
-                <th className="text-left py-3 px-4 text-muted-foreground font-medium">#</th>
-                <th className="text-left py-3 px-4 text-muted-foreground font-medium">Name</th>
-                <th className="text-left py-3 px-4 text-muted-foreground font-medium">Email</th>
-                <th className="text-left py-3 px-4 text-muted-foreground font-medium">Phone</th>
-                <th className="text-left py-3 px-4 text-muted-foreground font-medium">Subject</th>
-                <th className="text-left py-3 px-4 text-muted-foreground font-medium">Account</th>
-                <th className="text-left py-3 px-4 text-muted-foreground font-medium">Action</th>
-              </tr>
-            </thead>
-            <tbody>
-              {filtered.length === 0 ? (
-                <tr>
-                  <td colSpan={7} className="text-center py-8 text-muted-foreground">No sub users found</td>
-                </tr>
-              ) : (
-                paginatedSubUsers.map((t, i) => (
-                  <tr key={t.id} className="border-b border-border last:border-0 hover:bg-secondary/20 transition-colors">
-                    <td className="py-3 px-4 text-foreground">{startIndex + i + 1}</td>
-                    <td className="py-3 px-4 text-foreground font-medium">{t.name}</td>
-                    <td className="py-3 px-4 text-muted-foreground">{t.email}</td>
-                    <td className="py-3 px-4 text-muted-foreground">{t.phone}</td>
-                    <td className="py-3 px-4 text-foreground">{t.subject}</td>
-                    <td className="py-3 px-4">
-                      <div className="flex items-center gap-2">
-                        <Switch
-                          checked={t.isActive ?? true}
-                          onCheckedChange={() => handleToggleActive(t)}
-                          aria-label={`Toggle ${t.name} status`}
-                        />
-                        <span className={`text-xs font-medium ${(t.isActive ?? true) ? "text-primary" : "text-muted-foreground"}`}>
-                          {(t.isActive ?? true) ? "Active" : "Non-Active"}
-                        </span>
-                      </div>
-                    </td>
-                    <td className="py-3 px-4">
-                      <div className="relative inline-block">
-                        <button
-                          type="button"
-                          onClick={(e) => {
-                            e.stopPropagation();
-                            if (openMenuSubUserId === t.id) {
-                              setOpenMenuSubUserId(null);
-                              setSubUserMenuBtnPos(null);
-                            } else {
-                              const rect = (e.currentTarget as HTMLButtonElement).getBoundingClientRect();
-                              setOpenMenuSubUserId(t.id);
-                              setSubUserMenuBtnPos({ top: rect.bottom + 4, right: window.innerWidth - rect.right });
-                            }
-                          }}
-                          className="h-8 w-8 inline-flex items-center justify-center rounded-lg border border-border text-muted-foreground hover:text-foreground hover:bg-secondary/70"
-                        >
-                          <MoreVertical className="w-4 h-4" />
-                        </button>
-
-                        {openMenuSubUserId === t.id && subUserMenuBtnPos && (
-                          <div
-                            className="fixed min-w-40 rounded-lg border border-border bg-card shadow-md z-50 p-1"
-                            style={{ top: subUserMenuBtnPos.top, right: subUserMenuBtnPos.right }}
-                            onMouseDown={(e) => e.stopPropagation()}
-                          >
-                            <button
-                              type="button"
-                              onClick={() => {
-                                handleOpenEdit(t);
-                                setOpenMenuSubUserId(null);
-                              }}
-                              className="w-full text-left px-3 py-2 text-sm rounded-md hover:bg-secondary/70"
-                            >
-                              Edit
-                            </button>
-                            <button
-                              type="button"
-                              onClick={() => handleOpenAssignSubjects(t.id)}
-                              className="w-full text-left px-3 py-2 text-sm rounded-md hover:bg-secondary/70"
-                            >
-                              Assign Subjects
-                            </button>
-                            <button
-                              type="button"
-                              onClick={async () => {
-                                try {
-                                  const response = await fetch(`${API_BASE_URL}/institute-auth/sub-users/${t.id}`, {
-                                    method: "DELETE",
-                                    headers: {
-                                      Authorization: `Bearer ${token}`,
-                                    },
-                                  });
-                                  const data = await response.json();
-                                  if (!response.ok) {
-                                    throw new Error(data?.message || "Failed to delete sub user");
-                                  }
-
-                                  setSubUsers((prev) => prev.filter((x) => x.id !== t.id));
-                                  setOpenMenuSubUserId(null);
-                                  toast({ title: "Sub User Deleted" });
-                                } catch (error) {
-                                  toast({
-                                    title: "Delete Failed",
-                                    description: error instanceof Error ? error.message : "Could not delete sub user",
-                                    variant: "destructive",
-                                  });
-                                }
-                              }}
-                              className="w-full text-left px-3 py-2 text-sm rounded-md text-destructive hover:bg-destructive/10"
-                            >
-                              Delete
-                            </button>
-                          </div>
-                        )}
-                      </div>
-                    </td>
-                  </tr>
-                ))
-              )}
-            </tbody>
-          </table>
-        </div>
+      <div className="rounded-xl bg-card border border-border overflow-hidden divide-y divide-border">
+        {filtered.length === 0 ? (
+          <div className="text-center py-12 text-muted-foreground text-sm">No sub users found</div>
+        ) : (
+          paginatedSubUsers.map((t, i) => (
+            <div
+              key={t.id}
+              onClick={() => setActionModalUser(t)}
+              className="flex items-center gap-3 px-4 py-3.5 hover:bg-secondary/20 transition-colors cursor-pointer active:bg-secondary/30"
+            >
+              <div className="w-9 h-9 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
+                <span className="text-sm font-bold text-primary">{t.name.charAt(0).toUpperCase()}</span>
+              </div>
+              <div className="min-w-0 flex-1">
+                <p className="text-sm font-semibold text-foreground truncate">{t.name}</p>
+                <p className="text-xs text-muted-foreground truncate">{t.email}</p>
+              </div>
+              <ChevronRight className="w-4 h-4 text-muted-foreground shrink-0" />
+            </div>
+          ))
+        )}
 
         {filtered.length > 0 && (
           <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 border-t border-border px-4 py-3">
@@ -1874,18 +1900,18 @@ const SubUsersView = ({ token }: { token: string }) => {
             </div>
             <div className="p-4 sm:p-5 space-y-4 max-h-[80vh] overflow-y-auto">
               <div>
-                <label className="text-sm font-medium text-foreground block mb-1">Full Name</label>
+                <label className="text-sm font-medium text-foreground block mb-1">Full Name <span className="text-destructive">*</span></label>
                 <input
                   type="text"
                   value={form.name}
-                  onChange={(e) => setForm({ ...form, name: e.target.value })}
+                  onChange={(e) => setForm({ ...form, name: e.target.value.replace(/\d/g, '') })}
                   className="w-full rounded-lg border border-border bg-background px-3 py-2.5 text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary"
                   placeholder="e.g. Ahmad Ali"
                 />
                 {errors.name && <p className="text-xs text-destructive mt-1">{errors.name}</p>}
               </div>
               <div>
-                <label className="text-sm font-medium text-foreground block mb-1">Email</label>
+                <label className="text-sm font-medium text-foreground block mb-1">Email <span className="text-destructive">*</span></label>
                 <input
                   type="email"
                   value={form.email}
@@ -1896,17 +1922,18 @@ const SubUsersView = ({ token }: { token: string }) => {
                 {errors.email && <p className="text-xs text-destructive mt-1">{errors.email}</p>}
               </div>
               <div>
-                <label className="text-sm font-medium text-foreground block mb-1">Phone Number</label>
+                <label className="text-sm font-medium text-foreground block mb-1">Phone Number <span className="text-destructive">*</span></label>
                 <input
                   type="text"
                   value={form.phone}
-                  onChange={(e) => setForm({ ...form, phone: e.target.value })}
+                  onChange={(e) => setForm({ ...form, phone: e.target.value.replace(/\D/g, '') })}
                   className="w-full rounded-lg border border-border bg-background px-3 py-2.5 text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary"
                   placeholder="e.g. 03XX-XXXXXXX"
                 />
+                {errors.phone && <p className="text-xs text-destructive mt-1">{errors.phone}</p>}
               </div>
               <div>
-                <label className="text-sm font-medium text-foreground block mb-1">Subject</label>
+                <label className="text-sm font-medium text-foreground block mb-1">Subject <span className="text-destructive">*</span></label>
                 <input
                   type="text"
                   value={form.subject}
@@ -1917,7 +1944,7 @@ const SubUsersView = ({ token }: { token: string }) => {
                 {errors.subject && <p className="text-xs text-destructive mt-1">{errors.subject}</p>}
               </div>
               <div>
-                <label className="text-sm font-medium text-foreground block mb-1">Assign Subjects</label>
+                <label className="text-sm font-medium text-foreground block mb-1">Assign Subjects <span className="text-destructive">*</span></label>
                 <input
                   type="text"
                   value={modalSubjectSearch}
@@ -1930,7 +1957,7 @@ const SubUsersView = ({ token }: { token: string }) => {
                     <p className="text-xs text-muted-foreground">No subjects found</p>
                   ) : (
                     visibleModalSubjectOptions.map((opt) => {
-                      const checked = formAssignedSubjects.includes(opt.value);
+                      const checked = formAssignedSubjects.includes(opt.value) || formAssignedSubjects.includes(opt.title);
                       return (
                         <label key={opt.value} className="flex items-center gap-2 text-sm text-foreground cursor-pointer">
                           <input
@@ -1954,14 +1981,24 @@ const SubUsersView = ({ token }: { token: string }) => {
                 <p className="text-xs text-muted-foreground mt-1">Selected: {formAssignedSubjects.length}</p>
               </div>
               <div>
-                <label className="text-sm font-medium text-foreground block mb-1">Password</label>
-                <input
-                  type="password"
-                  value={form.password}
-                  onChange={(e) => setForm({ ...form, password: e.target.value })}
-                  className="w-full rounded-lg border border-border bg-background px-3 py-2.5 text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary"
-                  placeholder={editingSubUserId !== null ? "Leave blank to keep current" : "Min 6 characters"}
-                />
+                <label className="text-sm font-medium text-foreground block mb-1">Password <span className="text-destructive">*</span></label>
+                <div className="relative">
+                  <input
+                    type={showPassword ? "text" : "password"}
+                    value={form.password}
+                    onChange={(e) => setForm({ ...form, password: e.target.value })}
+                    className="w-full rounded-lg border border-border bg-background px-3 py-2.5 pr-10 text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary"
+                    placeholder="Min 6 characters"
+                  />
+                  <button
+                    type="button"
+                    onClick={() => setShowPassword(!showPassword)}
+                    className="absolute right-2.5 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground"
+                    tabIndex={-1}
+                  >
+                    {showPassword ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
+                  </button>
+                </div>
                 {errors.password && <p className="text-xs text-destructive mt-1">{errors.password}</p>}
               </div>
               <button
@@ -1978,6 +2015,106 @@ const SubUsersView = ({ token }: { token: string }) => {
         </div>
       )}
 
+      <Dialog open={!!actionModalUser} onOpenChange={(open) => !open && setActionModalUser(null)}>
+        <DialogContent className="max-w-sm">
+          {actionModalUser && (
+            <div className="space-y-4 py-2">
+              <div className="text-center">
+                <div className="w-14 h-14 rounded-full bg-primary/10 mx-auto flex items-center justify-center mb-3">
+                  <Users className="w-7 h-7 text-primary" />
+                </div>
+                <h3 className="text-lg font-bold text-foreground">{actionModalUser.name}</h3>
+              </div>
+
+              <div className="border-t border-border pt-3 space-y-2">
+                <div className="flex items-center gap-2 text-sm">
+                  <span className="text-muted-foreground w-20 shrink-0">Email</span>
+                  <span className="text-foreground">{actionModalUser.email}</span>
+                </div>
+                <div className="flex items-center gap-2 text-sm">
+                  <span className="text-muted-foreground w-20 shrink-0">Phone</span>
+                  <span className="text-foreground">{actionModalUser.phone || "-"}</span>
+                </div>
+                <div className="flex items-center gap-2 text-sm">
+                  <span className="text-muted-foreground w-20 shrink-0">Subject</span>
+                  <span className="text-foreground">{actionModalUser.subject}</span>
+                </div>
+                <div className="flex items-center gap-2 text-sm">
+                  <span className="text-muted-foreground w-20 shrink-0">Status</span>
+                  <div className="flex items-center gap-2" onClick={(e) => e.stopPropagation()}>
+                    <Switch
+                      checked={actionModalUser.isActive ?? true}
+                      onCheckedChange={() => handleToggleActive(actionModalUser)}
+                    />
+                    <span className={`text-xs font-medium ${(actionModalUser.isActive ?? true) ? "text-primary" : "text-muted-foreground"}`}>
+                      {(actionModalUser.isActive ?? true) ? "Active" : "Non-Active"}
+                    </span>
+                  </div>
+                </div>
+                {actionModalUser.assignedSubjects?.length > 0 && (
+                  <div className="flex items-start gap-2 text-sm">
+                    <span className="text-muted-foreground w-20 shrink-0 mt-0.5">Assigned</span>
+                    <div className="flex flex-wrap gap-1">
+                      {actionModalUser.assignedSubjects.map((s, idx) => (
+                        <span key={idx} className="text-xs bg-secondary/50 px-2 py-0.5 rounded text-foreground">{s}</span>
+                      ))}
+                    </div>
+                  </div>
+                )}
+              </div>
+
+              <div className="border-t border-border pt-3 space-y-1">
+                <button
+                  type="button"
+                  onClick={() => {
+                    handleOpenEdit(actionModalUser);
+                    setActionModalUser(null);
+                  }}
+                  className="w-full flex items-center gap-3 px-3 py-2.5 text-sm rounded-lg hover:bg-secondary/70 text-foreground"
+                >
+                  <Edit className="w-4 h-4 text-muted-foreground" />
+                  Edit Sub User
+                </button>
+                <button
+                  type="button"
+                  onClick={async () => {
+                    const t = actionModalUser;
+                    setActionModalUser(null);
+                    try {
+                      const response = await fetch(`${API_BASE_URL}/institute-auth/sub-users/${t.id}`, {
+                        method: "DELETE",
+                        headers: { Authorization: `Bearer ${token}` },
+                      });
+                      const data = await response.json();
+                      if (!response.ok) throw new Error(data?.message || "Failed to delete sub user");
+                      setSubUsers((prev) => prev.filter((x) => x.id !== t.id));
+                      toast({ title: "Sub User Deleted" });
+                    } catch (error) {
+                      toast({ title: "Delete Failed", description: error instanceof Error ? error.message : "Could not delete sub user", variant: "destructive" });
+                    }
+                  }}
+                  className="w-full flex items-center gap-3 px-3 py-2.5 text-sm rounded-lg hover:bg-destructive/10 text-destructive"
+                >
+                  <Trash2 className="w-4 h-4" />
+                  Delete Sub User
+                </button>
+              </div>
+            </div>
+          )}
+        </DialogContent>
+      </Dialog>
+
+      <Dialog open={trialLockPopup} onOpenChange={setTrialLockPopup}>
+        <DialogContent className="max-w-sm">
+          <div className="text-center space-y-3 py-4">
+            <div className="w-14 h-14 rounded-full bg-amber-100 dark:bg-amber-900/30 mx-auto flex items-center justify-center">
+              <Users className="w-7 h-7 text-amber-600 dark:text-amber-400" />
+            </div>
+            <h3 className="text-lg font-bold text-foreground">Subscription Required</h3>
+            <p className="text-sm text-muted-foreground">Please purchase a subscription first to add sub users.</p>
+          </div>
+        </DialogContent>
+      </Dialog>
     </div>
   );
 };

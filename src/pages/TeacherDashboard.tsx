@@ -14,7 +14,7 @@ import { useIsMobile } from "@/hooks/use-mobile";
 import { API_BASE_URL } from "@/lib/api";
 import { useToast } from "@/hooks/use-toast";
 
-type ActiveView = "dashboard" | "savedpapers" | "billing" | "settings" | "password";
+type ActiveView = "dashboard" | "savedpapers" | "billing" | "settings" | "password" | "assigned";
 
 type TeacherPortalProfile = {
   teacherId?: number;
@@ -161,6 +161,9 @@ const TeacherDashboard = () => {
 
       <nav className="mt-4 space-y-0.5">
         <SidebarLink icon={<Home className="w-4 h-4" />} label="Dashboard" active={activeView === "dashboard"} onClick={() => handleNav("dashboard")} />
+        {session?.assignedSubjects && session.assignedSubjects.length > 0 && (
+          <SidebarLink icon={<BookOpen className="w-4 h-4" />} label="Assigned Subjects" active={activeView === "assigned"} onClick={() => handleNav("assigned")} />
+        )}
         <SidebarLink icon={<FileText className="w-4 h-4" />} label="Saved Papers" active={activeView === "savedpapers"} onClick={() => handleNav("savedpapers")} />
         {!session?.schoolName && !isSubUserPortal && (
           <>
@@ -198,12 +201,17 @@ const TeacherDashboard = () => {
               <p className="text-xs text-primary-foreground/50">{isSubUserPortal ? "Sub User Portal" : "Teacher Portal"}</p>
             </div>
           </div>
-          {session?.schoolName && (
+          {isSubUserPortal ? (
+            <div className="text-right min-w-0">
+              <p className="text-sm font-semibold text-primary-foreground truncate">{profile?.schoolName || session?.schoolName || "Institute"}</p>
+              <p className="text-xs text-primary-foreground/50 truncate hidden sm:block">{profile?.portalSettings?.schoolAddress || session?.schoolAddress || ""}</p>
+            </div>
+          ) : session?.schoolName ? (
             <div className="flex items-center gap-2 text-primary-foreground min-w-0">
               <Building2 className="w-5 h-5 shrink-0" />
               <span className="text-sm font-semibold truncate">{session.schoolName}</span>
             </div>
-          )}
+          ) : null}
         </div>
       </header>
 
@@ -244,6 +252,7 @@ const TeacherDashboard = () => {
           {activeView === "billing" && <TeacherBillingView profile={profile} token={session?.token || ""} />}
           {activeView === "settings" && <TeacherSettingsView profile={profile} token={session?.token || ""} />}
           {activeView === "password" && <TeacherChangePasswordView token={session?.token || ""} isSubUserPortal={isSubUserPortal} />}
+          {activeView === "assigned" && <AssignedSubjectsView assignedSubjects={session?.assignedSubjects || []} />}
         </main>
       </div>
     </div>
@@ -776,12 +785,12 @@ const TeacherSettingsView = ({ profile, token }: { profile: TeacherPortalProfile
     e.target.value = "";
   };
   const [settings, setSettings] = useState({
-    schoolName: "The Hope Science Academy",
-    schoolAddress: "247-E-1, (Opposite LDA School) Johar Town, Lahore. 0300-8194789, 0322-4157001",
+    schoolName: "The Apex Science Academy",
+    schoolAddress: "247-E-9, (Opposite Shining School) Johar Town, Lahore",
     logoUrl: "",
-    principalName: "Muhammad Ahmad",
+    principalName: "Muhammad Owais",
     email: "admin@school.com",
-    phone: "0300-8194789",
+    phone: "03127049445",
     monogramHeight: "50",
     monogramWidth: "50",
     schoolNameColor: "#000000",
@@ -795,7 +804,7 @@ const TeacherSettingsView = ({ profile, token }: { profile: TeacherPortalProfile
     watermarkHeight: "200",
     watermarkWidth: "200",
     watermarkOpacity: "0.3",
-    watermarkText: "THE HOPE SCIENCE ACADEMY",
+    watermarkText: "THE APEX SCIENCE ACADEMY",
   });
 
   const updateSetting = (key: keyof typeof settings, value: string) => {
@@ -1240,6 +1249,32 @@ const TeacherChangePasswordView = ({ token, isSubUserPortal }: { token: string; 
     </div>
   );
 };
+
+const AssignedSubjectsView = ({ assignedSubjects }: { assignedSubjects: string[] }) => (
+  <div className="rounded-xl bg-card border border-border overflow-hidden">
+    <div className="px-5 py-4 border-b border-border bg-secondary/20">
+      <h3 className="text-lg font-bold text-foreground flex items-center gap-2">
+        <BookOpen className="w-5 h-5 text-primary" />
+        Assigned Subjects
+      </h3>
+      <p className="text-xs text-muted-foreground mt-0.5">Subjects you have access to</p>
+    </div>
+    {assignedSubjects.length > 0 ? (
+      <div className="divide-y divide-border">
+        {assignedSubjects.map((s, i) => (
+          <div key={i} className="flex items-center gap-3 px-5 py-3.5 hover:bg-secondary/20 transition-colors">
+            <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
+              <span className="text-xs font-bold text-primary">{i + 1}</span>
+            </div>
+            <span className="text-sm text-foreground">{s}</span>
+          </div>
+        ))}
+      </div>
+    ) : (
+      <div className="text-center py-12 text-muted-foreground text-sm">No subjects assigned yet.</div>
+    )}
+  </div>
+);
 
 const SidebarLink = ({ icon, label, active, onClick }: { icon: React.ReactNode; label: string; active?: boolean; onClick?: () => void }) => (
   <button

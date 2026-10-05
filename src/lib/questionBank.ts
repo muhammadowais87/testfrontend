@@ -16,6 +16,27 @@ export type PaperQuestion = {
   topicName?: string | null;
 };
 
+const parseNumericParts = (chapterPart: string | null): number[] => {
+  if (!chapterPart) return [Infinity];
+  const match = chapterPart.match(/^([\d.]+)/);
+  if (!match) return [Infinity];
+  return match[1].split(".").map(Number);
+};
+
+const sortByChapterAndTopic = (a: PaperQuestion, b: PaperQuestion): number => {
+  if (a.chapter !== b.chapter) return a.chapter - b.chapter;
+
+  const partsA = parseNumericParts(a.chapterPart);
+  const partsB = parseNumericParts(b.chapterPart);
+
+  const len = Math.min(partsA.length, partsB.length);
+  for (let i = 0; i < len; i++) {
+    if (partsA[i] !== partsB[i]) return partsA[i] - partsB[i];
+  }
+
+  return partsA.length - partsB.length;
+};
+
 export type QuestionSelectionScope = {
   chapterNumbers: number[];
   fullChapters: number[];
@@ -26,19 +47,14 @@ const parseChapterNumbers = (selectedChapters: string[]): number[] => {
   const chapterNumbers = new Set<number>();
 
   selectedChapters.forEach((value) => {
-    const engMatch = value.match(/(?:CHAP|UNIT)\s*(\d+)/i);
+    const name = value.includes("::") ? value.split("::")[1] : value;
+    const engMatch = name.match(/(?:CHAP|UNIT)\s*(\d+)/i);
     if (engMatch) {
       chapterNumbers.add(Number(engMatch[1]));
       return;
     }
 
-    const urduMatch = value.match(/نمبر\s*(\d+)/);
-    if (urduMatch) {
-      chapterNumbers.add(Number(urduMatch[1]));
-      return;
-    }
-
-    const sectionMatch = value.match(/^(\d+)\./);
+    const sectionMatch = name.match(/^(\d+)\./);
     if (sectionMatch) {
       chapterNumbers.add(Number(sectionMatch[1]));
     }
@@ -57,12 +73,13 @@ export const getSelectedSubChapters = (selectedChapters: string[]): string[] | n
   const subChapters: string[] = [];
 
   selectedChapters.forEach((value) => {
-    if (/^(?:CHAP|UNIT)\s*\d+/i.test(value)) return;
-    if (/نمبر\s*\d+/.test(value)) return;
-    if (/^سورۃ/.test(value)) return;
-    if (/^باب\s/.test(value)) return;
-    if (/^\d+\.\d+/.test(value)) {
-      subChapters.push(value);
+    const name = value.includes("::") ? value.split("::")[1] : value;
+    if (/^(?:CHAP|UNIT)\s*\d+/i.test(name)) return;
+    if (/نمبر\s*\d+/.test(name)) return;
+    if (/^سورۃ/.test(name)) return;
+    if (/^باب\s/.test(name)) return;
+    if (/^\d+\.\d+/.test(name)) {
+      subChapters.push(name);
     }
   });
 
@@ -108,6 +125,7 @@ const QUESTION_TYPE_VALUE_MAP: Record<string, string> = {
   meanings: "words_meanings",
   translation: "farsi_tarjuma",
   ayat: "ayaat",
+  verses: "ayaat",
   hadith: "hadith",
   shakhsiyaat: "shakhsiyat",
   "application writing": "darkhaastein",
@@ -125,8 +143,8 @@ const QUESTION_TYPE_VALUE_MAP: Record<string, string> = {
   "central idea": "markazi_khayal",
   "explanation of verses": "ashaar_ki_tashreeh",
   "correct meaning of underlined word": "correct_meaning_underlined",
-  "tick correct spelling": "tick_correct_spelling",
   "tick correct spellings": "tick_correct_spellings",
+  "tick correct spelling": "tick_correct_spellings",
   "tick correct grammar": "tick_correct_grammar",
   "tick correct according to grammar": "tick_correct_grammar",
   "match columns": "match_columns",
@@ -155,6 +173,7 @@ const QUESTION_TYPE_VALUE_MAP: Record<string, string> = {
   translateintourduparagraph: "translate_into_urdu_paragraph",
   fillintheblanks: "fill_in_tha_blanks",
   idiomssentences: "ilfaz_ko_jumlo_mein_istamal",
+  vitals: "vitals",
 };
 
 export const normalizeQuestionTypeValue = (value: string): string | null => {
@@ -228,6 +247,11 @@ export const normalizeQuestionTypeValue = (value: string): string | null => {
     "pair_of_words",
     "mukalmy",
     "tafheem_ibarat",
+    "correct_meaning_of_underlined_words",
+    "tick_correct_spellings",
+    "comprehension_paragraphs",
+    "takhlees_ibarat",
+    "vitals",
   ]);
   // normalizeQuestionTypeString converts underscores to spaces, so DB slugs like
   // "ilfaz_ko_jumlo_mein_istamal" become "ilfaz ko jumlo mein istamal" — not in set.
@@ -278,7 +302,12 @@ const getAuthHeaders = (): HeadersInit => {
   return headers;
 };
 
-export const getChapterNumber = (_groupName: string, index: number): number => {
+export const getChapterNumber = (groupName: string, index: number): number => {
+  const match = groupName.match(/(?:CHAP|UNIT|باب)\s*(\d+)/i);
+  if (match) return parseInt(match[1], 10);
+  // Use sequential index for all other cases (e.g., "نثر نمبر1", "نظم نمبر 1")
+  // The نمبر(\d+) pattern is unreliable because categories restart numbering
+  // (e.g., "نظم نمبر 1" would return 1 but DB stores it at index 11).
   return index + 1;
 };
 
@@ -290,11 +319,20 @@ export const resolveQuestionSelectionScope = (
   const fullySelectedChapters = new Set<number>();
   const explicitSubChapters = new Set<string>();
 
+  // Helper to extract chapter name from composite key (groupName::chapter)
+  const extractChapterName = (key: string): string => {
+    const idx = key.indexOf("::");
+    return idx >= 0 ? key.slice(idx + 2) : key;
+  };
+
   if (allGroups.length > 0) {
     allGroups.forEach((group, index) => {
       const chNum = getChapterNumber(group.name, index);
       const isGroupSelected = selectedChapters.includes(group.name);
-      const selectedSubs = group.chapters.filter((ch) => selectedChapters.includes(ch));
+      // Match using composite key: group.name::chapter
+      const selectedSubs = group.chapters.filter((ch) =>
+        selectedChapters.includes(`${group.name}::${ch}`)
+      );
 
       if (isGroupSelected) {
         chapterNumbersToFetch.add(chNum);
@@ -305,23 +343,24 @@ export const resolveQuestionSelectionScope = (
       }
     });
   } else {
-    const parsedNums = parseChapterNumbers(selectedChapters);
+    const parsedNums = parseChapterNumbers(selectedChapters.map(extractChapterName));
     parsedNums.forEach((num) => chapterNumbersToFetch.add(num));
 
     const selectedGroupHeaders = selectedChapters.filter((value) => {
-      if (/^(?:CHAP|UNIT)\s*\d+/i.test(value)) return true;
-      if (/نمبر\s*\d+/.test(value)) return true;
-      if (/^سورۃ/.test(value)) return true;
-      if (/^باب\s/.test(value)) return true;
+      const name = extractChapterName(value);
+      if (/^(?:CHAP|UNIT)\s*\d+/i.test(name)) return true;
+      if (/نمبر\s*\d+/.test(name)) return true;
+      if (/^سورۃ/.test(name)) return true;
+      if (/^باب\s/.test(name)) return true;
       return false;
     });
 
     selectedGroupHeaders.forEach((header) => {
-      const chNums = parseChapterNumbers([header]);
+      const chNums = parseChapterNumbers([extractChapterName(header)]);
       chNums.forEach((num) => fullySelectedChapters.add(num));
     });
 
-    const parsedSubs = getSelectedSubChapters(selectedChapters);
+    const parsedSubs = getSelectedSubChapters(selectedChapters.map(extractChapterName));
     if (parsedSubs) {
       parsedSubs.forEach((sub) => explicitSubChapters.add(sub));
     }
@@ -411,10 +450,10 @@ export const fetchQuestionsForSelection = async (
     let page = 1;
     let hasMore = true;
 
-    while (hasMore && page <= 25) {
+    while (hasMore) {
       const params = new URLSearchParams(baseParams);
       params.set("page", String(page));
-      params.set("limit", "2000");
+      params.set("limit", "500");
 
       const response = await fetch(`${API_BASE_URL}/question-bank/questions?${params.toString()}`, {
         signal: controller.signal,
@@ -436,6 +475,8 @@ export const fetchQuestionsForSelection = async (
       page += 1;
       if (batch.length === 0) break;
     }
+
+    aggregated.sort(sortByChapterAndTopic);
 
     questionBankCache.set(cacheKey, aggregated);
     return aggregated;

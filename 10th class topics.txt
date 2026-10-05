@@ -1,0 +1,954 @@
+-> English
+SELECT ALL CHAPTERS
+ UNIT 1: Hazrat Muhammad's (خَاتَمُ النَّبِییّنَ ﷺ)Social Reforms for the Rights of Women, Orphans and Slaves
+ 1.1 Hazrat Muhammad's (خَاتَمُ النَّبِییّنَ ﷺ)...
+ UNIT 2: My Beloved Pakistan (Poem)
+ 2.1 My Beloved Pakistan (Poem)
+ UNIT 3: Digital Globalisation Transforming the English Language
+ 3.1 Digital Globalisation Transforming the English Language
+ UNIT 4: The Earth:Act Now for Tomorrow
+ 4.1 The Earth:Act Now for Tomorrow
+ UNIT 5: The Happy Prince
+ 5.1 The Happy Prince
+ UNIT 6: Drug Abuse
+ 6.1 Drug Abuse
+ UNIT 7: Time (Poem)
+ 7.1 Time (Poem)
+ UNIT 8: Pollution-Free Pakistan with Greenery All Around
+ 8.1 Pollution-Free Pakistan with Greenery All Around
+ UNIT 9: The Road Not Taken(Poem)
+ 9.1 The Road Not Taken(Poem)
+ UNIT 10: The Three Questions
+ 10.1 The Three Questions
+ Review 1
+ 1.1 Review 1
+ Review 2
+ 2.1 Review 2
+ English B
+ Pair of Words
+ Essays
+ Writing Paragraphs
+ Translate into English Paragraphs
+ Direct & Indirect
+ 1. Assertive Sentences
+ 2. Interrogative Sentences
+ 3. Imperative Sentences
+ 4. Exclamatory / Optative Sentences
+ Correct Froms of Verb
+ 1. Present Indefinite Tense
+ 2. Present Continuous Tense
+ 3. Present Perfect Tense
+ 4. Present Perfect Continuous Tense
+ 5. Past Indefinite Tense
+ 6. Past Continuous Tense
+ 7. Past Perfect Tense
+ 8. Past Perfect Continuous Tense
+ 9. Future Indefinite Tense
+ 10. Future Continuous Tense
+ 11. Future Perfect Tense
+ 12. Future Perfect Continuous Tense
+
+->Physics
+SELECT ALL CHAPTERS
+ CHAP 10: Thermal Physics
+ 10.1 Thermal Expansion
+ 10.2 Specific Heat Capacity
+ 10.3 Change in State
+ 10.4 Evaporation
+ 10.5 Latent Heat
+ 10.6 Superconductivity
+ CHAP 11: Transfer of Thermal Energy
+ 11.1 Conduction
+ 11.2 Convection in liquids and Gases
+ 11.3 Heat Transfer through Radiation
+ 11.4 Greenhouse Effect
+ CHAP 12: Waves
+ 12.1 Waves and Nature of Waves
+ 12.2 Types of waves
+ 12.3 Terms and Parameters of Waves
+ 12.4 Properties of Waves
+ 12.5 Seismic and Tsunami Waves
+ CHAP 13: Sound
+ 13.1 Production and Propagation of sound
+ 13.2 Speed of Sound
+ 13.3 Characteristics of Sound
+ 13.4 Reflection of Sound (Echo)
+ 13.5 Refraction and Diffraction of Sound
+ 13.6 Audible Frequency
+ 13.7 Acoustic protection of Buildings
+ CHAP 14: Light
+ 14.1 Reflection of Light
+ 14.2 Refraction of Light
+ 14.3 Optical Fibre
+ 14.4 Thin lenses
+ 14.5 Optical devices
+ 14.6 Image Formation in a Normal Eye
+ 14.7 Gravitational Lens and Acoustic Lens
+ 14.8 Dispersion of Light by Prism
+ CHAP 15: Electrostatics
+ 15.1 Electric Charge
+ 15.2 Electrostatic induction
+ 15.3 Applications of Electrostatics
+ 15.4 Coulomb's Law
+ 15.5 Electric Field
+ 15.6 Conduction of Electric Charges
+ 15.7 Accumulation of Charges
+ CHAP 16: Electricity
+ 16.1 Electric Current
+ 16.2 Electromotive Force and Potential Difference
+ 16.3 Ohm's Law
+ 16.4 Combination of Resistances
+ 16.5 Electrical Resistivity
+ 16.6 Potential Divider Circuit
+ 16.7 Resistor Colour Codes
+ 16.8 Common Use of Electricity
+ 16.9 Electric Power
+ 16.10 Household Circuits and Safety Measures
+ CHAP 17: Electromagnetism
+ 17.1 Magnetic Effects of Steady Current
+ 17.2 Force on a Current-Carrying Conductor in a Magnetic Field
+ 17.3 Turning Effect on a Current-Carrying Coil in Magnetic Field
+ 17.4 Electric Motor
+ 17.5 Use of Magnetic Effects of Current
+ 17.6 Earth's Magnetic Field
+ CHAP 18: Electromagnetic Induction and Electromagnetic Waves
+ 18.1 Electromagnetic Induction
+ 18.2 A.C. Generator
+ 18.3 Transformer
+ 18.4 Deflection of Electron Beam in Electric and Magnetic Fields
+ 18.5 Waveform on Oscilloscope
+ 18.6 Scattering of Light in the Atmosphere
+ 18.7 Particle Nature of Light
+ CHAP 19: Electronics
+ 19.1 Semiconductors
+ 19.2 Analog and Digital Electronics
+ 19.3 Boolean Logic
+ 19.4 Logic Gates
+ 19.5 Applications of Logic Gates
+ CHAP 20: Atomic and Nuclear Physics
+ 20.1 Atomic Structure
+ 20.2 Atomic Nucleus
+ 20.3 Isotopes
+ 20.4 Radioactivity
+ 20.5 Radioactive Decay
+ 20.6 Nuclear Reactions
+ 20.7 Interconversion of Matter and Energy
+ 20.8 Half-Life
+ 20.9 Effects and Uses of Nuclear Radiation
+ CHAP 21: Space and Environment
+ 21.1 Sunand Planetary Data
+ 21.2 Global Warming and Geothermal Activity
+ 21.3 Radiation Exposure
+
+-> Mathematics
+SELECT ALL CHAPTERS
+ UNIT 1: COMPLEX NUMBERS
+ 1.1 E.X: 1.1
+ 1.2 E.X: 1.2
+ 1.3 E.X: 1.3
+ 1.4 E.X: 1.4
+ 1. REVIEW EXERCISE 1
+ UNIT 2: QUADRATIC EQUATIONS AND INEQUALITIES
+ 2.1 E.X: 2.1
+ 2.2 E.X: 2.2
+ 2.3 E.X: 2.3
+ 2.4 E.X: 2.4
+ 2.5 E.X: 2.5
+ 2.6 E.X: 2.6
+ 2.7 E.X: 2.7
+ 2. REVIEW EXERCISE 2
+ UNIT 3: MATRICES AND DETERMINANTS
+ 3.1 E.X: 3.1
+ 3.2 E.X: 3.2
+ 3.3 E.X: 3.3
+ 3.4 E.X: 3.4
+ 3.5 E.X: 3.5
+ 3.6 E.X: 3.6
+ 3. REVIEW EXERCISE 3
+ UNIT 4: FUNCTIONS AND GRAPHS
+ 4.1 E.X: 4.1
+ 4.2 E.X: 4.2
+ 4.3 E.X: 4.3
+ 4. REVIEW EXERCISE 4
+ UNIT 5: ALGEBRAIC FRACTIONS
+ 5.1 E.X: 5.1
+ 5.2 E.X: 5.2
+ 5.3 E.X: 5.3
+ 5.4 E.X: 5.4
+ 5.5 E.X: 5.5
+ 5. REVIEW EXERCISE 5
+ UNIT 6: VECTORS IN PLANE
+ 6.1 E.X: 6.1
+ 6.2 E.X: 6.2
+ 6.3 E.X: 6.3
+ 6. REVIEW EXERCISE 6
+ UNIT 7: TRIGONOMETRY
+ 7.1 E.X: 7.1
+ 7.2 E.X: 7.2
+ 7.3 E.X: 7.3
+ 7.4 EX 7.4
+ 7. REVIEW EXERCISE 7
+ UNIT 8: CHORDS AND ARCS OF A CIRCLE
+ 8.1 E.X: 8.1
+ 8.2 E.X: 8.2
+ 8 . REVIEW EXERCISE 8
+ UNIT 9: TANGENT AND ANGLES OF A CIRCLE
+ 9.1 E.X: 9.1
+ 9.2 E.X: 9.2
+ 9. REVIEW EXERCISE 9
+ UNIT 10: PRACTICAL GEOMETRY OF CIRCLES
+ 10.1 E.X: 10.1
+ 10.2 E.X: 10.2
+ 10 . REVIEW EXERCISE 10
+ UNIT 11: INFORMATION HANDLING
+ 11.1 E.X: 11.1
+ 11.2 E.X: 11.2
+ 11. REVIEW EXERCISE 11
+ UNIT 12: PROBABILITY
+ 12.1 E.X: 12.1
+ 12.2 E.X: 12.2
+ 12.3 E.X: 12.3
+ 12 . REVIEW EXERCISE 12
+
+-> chemistry
+SELECT ALL CHAPTERS
+ CHAP 14:States of Matter and Phase Changes
+ 14.1 Internal Energy
+ 14.2 Interconversion of Physical States
+ 14.3 Heating and Cooling Curves
+ 14.4 Evaporation and Boiling
+ 14.5 Sublimation
+ 14.6 Applications of Sublimation
+ 14.7 Kinetic Theory and The Gas Laws
+ 14.8 Diffusion
+ 14.9 Importance of Rates of diffusion of Medicines in Human Body
+ CHAP 15: Stoichiometry
+ 15.1 Molar Volume
+ 15.2 Concentration of a Solution
+ 15.3 Calculate the Concentration of a Solution in Titration using Empirical Data
+ 15.4 Percentage Composition by Mass, Empirical Formula and Molecular Formula
+ 15.5 Empirical Formula
+ 15.6 Limiting Reactant
+ 15.7 Yield
+ CHAP 16: Electrochemistry
+ 16.1 Oxidation Number of Atoms in compounds and Ions
+ 16.2 Writing Chemical Formulas of lonic Compounds by applying Oxidation Numbers
+ 16.3 Writing Chemical Formulas of lonic Compounds using lonic Charges
+ 16.4 Oxidation and Reduction
+ 16.5 Oxidation-Reduction Reactions
+ 16.6 Electrolysis
+ 16.7 Electrolysis of a Concentrated Aqueous Solution of Sodium Chloride (Brine) using inert electrodes (Graphite /Pt)
+ 16.8 Electrolysis of Dilute and Concentrated Aqueous solutions of Metal Halides
+ 16.9 Electrolysis of Concentrated Aqueous Solutions of Metal Halides
+ 16.10 Electrolysis of Molten Lead (II) Chloride
+ 16.11 Electrolysis of Dilute solution of Sulphuric Acid using inert electrodes (Carbon or Pt)
+ 16.12 Electrolysis of Dilute Aqueous solution of Copper Sulphate using Inert electrodes or Copper electrodes
+ 16.13 Fuel cells
+ 16.14 Corrosion
+ 16.15 Electroplating
+ 16.16 Galvanic Cells
+ 16.17 Order of Reactivity of Metals using Voltage Data
+ CHAP 17: Reaction Kinetics
+ 17.1 Collision Theory of Reaction Rate
+ 17.2 Change in Mass during a Chemical Reaction
+ 17.3 Change in Temperature during a Chemical Reaction
+ 17.4 Factors Affecting the Rates of Reactions
+ 17.5 Importance of Chemical Kinetics in Food Industry
+ CHAP 18: Salts
+ 18.1 Arrangement of lons in Salts
+ 18.2 Melting Points of lonic Compounds
+ 18.3 Conduction of Electricity by lonic Compounds
+ 18.4 Soluble and Insoluble Salts
+ 18.5 Preparation of Soluble Salts
+ CHAP 19: Nitrogen and Sulphur
+ 19.1 Ammonia
+ 19.2 Sulphuric Acid
+ 19.3 Oxides
+ 19.4 Metals
+ 19.5 Reactivity Series of metals
+ 19.6 Role of oxides of nitrogen in spreading air pollution
+ CHAP 20: Water
+ 20.1 Water
+ 20.2 Purity of Water
+ 20.3 Difference between distilled water and tap water
+ 20.4 Substances present in water obtained from natural sources
+ 20.5 Treatment of Domestic Water Supply
+ 20.6 Effects of pollutants present in water
+ 20.7 Water Scarcity in Pakistan
+ 20.8 Elements Essential for Plant Growth
+ 20.9 Fertilizers
+ 20.10 Classification of Fertilizers
+ CHAP 21: Organic Chemistry
+ 21.1 Classifications of Organic Compounds
+ 21.2 Structural Formula
+ 21.3 Homologous Series
+ 21.4 Isomerism
+ 2.5 Functional Group
+ 21.6 Naming Organic Compounds
+ CHAP 22: Hydrocarbons
+ 22.1 Alkenes
+ 22.2 Important Reactions of Alkenes
+ 22.3 Alkynes
+ 22.4 Sources of organic compounds
+ 22.5 Refining of Petroleum
+ CHAP 23: Monohydroxy Alkanes or Alcohols
+ 23.1 Manufacture of Ethyl Alcohol (CH₃–CH₂–OH)
+ 23.2 Combustion of Alcohols
+ 23.3 Applications of Alcohols as Fuels
+ 23.4 Role of Ethanol in Industries
+ 23.5 Impact of Alcohols on Daily life
+ CHAP 24: Carboxylic Acids
+ 24.1 Preparation of Acetic Acid or Ethanoic Acid
+ 24.2 Reactions of Carboxylic Acids as Acids
+ 24.3 Reaction of Carboxylic Acids with Alcohols
+ 24.4 Industrial Applications of Carboxylic Acids and Esters
+ 24.5 Carboxylic Acids and Esters in Daily Life
+ CHAP 25: Biochemistry
+ 25.1 The Importance of Nutrition
+ 25.2 Carbohydrates
+ 25.3 Proteins
+ 25.4 Lipids
+ 25.5 Vitamins
+ 25.6 Nucleic Acids
+ 25.7 Applications of Biochemistry
+ CHAP 26: Polymers
+ 26.1 Types of Polymers
+ 26.2 Structure of Monomer from Polymer
+ 26.3 Plastics
+ 26.4 Importance of Polymers in Textile Industry
+ 26.5 Adverse Effects of Plastics
+
+-> Biology
+SELECT ALL CHAPTERS
+ CHAP-1 Human Digestive System
+ 1.1- Nutrition and its Importance
+ 1.2- Human Digestive System
+ 1.3- Disorders of the Digestive System
+ CHAP-2: Human Respiratory System
+ 2.1- Human Respiratory System
+ 2.2- The Mechanism of Breathing
+ 2.3- Respiratory Disorders
+ CHAP-3: Human Blood Circulatory System
+ 3.1- Blood and its Components
+ 3.2- Human Heart
+ 3.3- Blood Vessels
+ 3.4- Arterial & Venous Systems
+ 3.5- Cardiovascular Disorders
+ CHAP-4: Human Urinary System
+ 4.1- Human Urinary System
+ 4.2- Functioning of the Kidney
+ 4.3- Disorders of Kidney
+ CHAP-5: Coordination
+ 5.1- Neurons — The Units of Nervous System
+ 5.2- Divisions of the Nervous System
+ 5.3- Endocrine System
+ CHAP-6: Reproduction
+ 6.1- Formation of Gametes and Fertilization
+ 6.2- Role of Hormones in Sexual Development
+ 6.3- Reproductive Systems
+ 6.4- Sexually Transmitted Diseases
+ CHAP-7: Inheritance
+ 7.1- Structure of Chromosome
+ 7.2- DNA and RNA
+ 7.3- Mendel's Laws of Inheritance
+ CHAP-8: Biotechnology
+ 8.1- Introduction of Biotechnology
+ 8.2- Genetic Engineering
+ 8.3- Applications of Biotechnology
+ 8.4- Potential Risks of Biotechnology
+ CHAP-9: Diseases and Immunity
+ 9.1- Disease
+ 9.2- Pathogens
+ 9.3- Immunity
+ CHAP-10: Evolution
+ 10.1- Darwin's Observations
+ 10.2- Theory of Evolution by Natural Selection
+ 10.3- Species and Speciation
+ 10.4- Sources of Variation
+ 10.5- Evidences of Evolution
+
+-> computer
+SELECT ALL CHAPTERS
+ UNIT 1: Operating Systems:Structure and Services
+ 1.1 Introduction to Operating System (OS)
+ 1.2 Architecture of an Operating System
+ 1.3 Process Management in Operating System (OS)
+ 1.4 Memory
+ 1.5 Processes vs Threads
+ 1.6 System Calls
+ 1.7 File System Structure and Management
+ 1.8 Types of Operating Systems
+ UNIT 2: System Recovery and Advanced Maintenance
+ 2.1 Introduction to Post-Troubleshooting
+ 2.2 Using Built-in Diagnostic Tools
+ 2.3 System Recovery Options
+ 2.4 BIOS/UEFI and Boot Process Awareness
+ 2.5 Data Recovery Techniques
+ 2.6 Best Practices for Preventive Maintenance
+ 2.7 System Documentation and Logs
+ UNIT 3: Introduction to Python Programming
+ 3.1 Introduction to Python Programming
+ 3.2 Basic Python Syntax and Structure
+ 3.3 Operators and Expressions
+ UNIT 4: Control Structures In Python
+ 4.1 Decision Making
+ 4.2 Looping Constructs
+ 4.3 Libraries in Python
+ 4.4 Lists in Python
+ 4.5 Testing and Debugging in Python
+ UNIT 5: Introduction to Data Science
+ 5.1. Introduction to Data Science
+ 5.2 Overview of the Data Science Life Cycle
+ 5.3 Tools for Visualization
+ 5.4 Databases and Storing Data
+ UNIT 6: Introduction Artificial Intelligence (Al), and Machine Learning (ML)
+ 6.1 Al, ML and Overview
+ 6.2 Machine Learning Types
+ 6.3 Practical Applications of AI/ML
+ 6.4 Supervised and Unsupervised Algorithms
+ 6.5 Evaluating Model Performance
+ UNIT 7: Applications of Al
+ 7.1 Introduction to Artificial Intelligence (Al)
+ 7.2 Data and Al
+ 7:3 Real-World Applications of Al
+ 7.4 Benefits and Challenges of Al Applications
+ 7.5 Ethics, Fairness, and Social Impact of Al
+ 7.6 Responsibility of Al Designers
+ UNIT 8: Digital Entrepreneurship
+ 8.1. From Basics to Advanced Entrepreneurship
+ 8.2 Problem-Solving & Adaptability
+ 8.3 Ethical Business Practices & Digital Ethics
+ 8.4 Legal Framework & Compliance
+ 8.5 Strategic Marketing & Branding
+
+->Urdu
+SELECT ALL CHAPTERS
+ نظم نمبر 1: حمد
+ حمد
+ نظم نمبر 2: نعت
+ نعت
+ نثر نمبر 3: اخلاق نبوی خاتم النبین ﷺ
+ اخلاق نبوی خاتم النبین ﷺ
+ نثر نمبر 4: سر سید کا بچپن
+ سر سید کا بچپن
+ نثر نمبر 5: محسن کا محلہ
+ محسن کا محلہ
+ نثر نمبر 6: کفارہ
+ کفارہ
+ نثر نمبر 7: سویرے جو کل آنکھ میری کھلی
+ سویرے جو کل آنکھ میری کھلی
+ نثر نمبر 8: دوستی کا پھل
+ دوستی کا پھل
+ نثر نمبر 9: میرا گاؤں
+ میرا گاؤں
+ نثر نمبر 10: بابل کے کھنڈر
+ بابل کے کھنڈر
+ نثر نمبر 11: اولڈ ایج ہوم
+ اولڈ ایج ہوم
+ نثر نمبر 12: کچھ ذریعہ تعلیم کے باب میں
+ کچھ ذریعہ تعلیم کے باب میں
+ نظم نمبر 13: آدمی نامہ
+ آدمی نامہ
+ نظم نمبر 14: نمودِ صُبح
+ نمودِ صُبح
+ نظم نمبر 15: خِطاب بہ جوانانِ اسلام
+ خِطاب بہ جوانانِ اسلام
+ نظم نمبر 16: وغیرہ
+ وغیرہ
+ غزل نمبر 17: بازیچہ اطفال ہے دنیا مِرے آگے
+ بازیچہ اطفال ہے دنیا مِرے آگے
+ غزل نمبر 18: اثر اس کو ذرا نہیں ہوتا
+ اثر اس کو ذرا نہیں ہوتا
+ غزل نمبر 19: ہے مشقِ سخن جاری،چکی کی مشقت بھی
+ ہے مشقِ سخن جاری،چکی کی مشقت بھی
+ غزل نمبر 20: یوں کہنے کو پیرا یہ اظہار بہت ہے
+ یوں کہنے کو پیرا یہ اظہار بہت ہے
+ اُردو (ب)
+ مضامین
+ تفہیم عبارات
+ گرائمر معروضی
+ اعراب لگائیں
+
+-> pak studies
+SELECT ALL CHAPTERS
+ CHAP 1:Ideological Basis of Pakistan
+ 1.1 Definition, Sources and Significance of Ideology
+ 1.2 Meaning of Ideology of Pakistan
+ 1.3 Elements of Ideology of Pakistan
+ 1.4 Two-Nation Theory: Origin and Evolution
+ 1.5 Allama Iqbal, Quaid-e-Azam and Ideology of Pakistan
+ CHAP 2: The Pakistan Movement & Emergence of Pakistan
+ 2.1 Background of Pakistan Movement
+ 2.2 Consolidation of the State and making of Constitution, 1947-56)
+ 2.3 Quaid-e-Azam & Liaqat Ali Khan Role and Achievements
+ 2.4 Objectives Resolution
+ 2.5 Constitutional Stages in Pakistan
+ 2.6 Accession of States and Tribal Areas to Pakistan
+ 2.7 Ayub Khan Era, 1958-1969
+ 2.8 Economic Development
+ 2.9 Five Year Development Plans of Ayub Khan's Era
+ 2.10 Yahya Khan Regime, 1969-71
+ 2.11 Seperation of East Pakistan and Emergence of Bangladesh
+ CHAP 3: History of Pakistan-II (1971 Till Todate)
+ 5.1 Zulfiqar Ali Bhutto Era 1971-1977
+ 3.2 General Muhammad Zia-ul-Haq Era 1977-88
+ 3.3 Benazir Bhutto's First & Second Term 1988-96
+ 3.4 Muhammad Nawaz Sharif's First, Second & Third Term 1988-2017
+ 3.5 General Pervez Musharraf's Era 1999-2008
+ 3.6 Syed Yousaf Raza Gillani's Era 2008-12
+ 3.7 General Elections of Pakistan 2018
+ 3.8 Constitution of Pakistan 1973
+ CHAP 4: Pakistan and World Affairs
+ 4.1 Geo-Political Significance of Pakistan
+ 4.2 Objectives of Pakistan's Foreign Policy
+ 4.3 Pakistan's Relations with Neighbouring States
+ 4.4 Kashmir Issue
+ 4.5 Pakistan's Relations with Central Asian Countries
+ 4.6 Pakistan's Relations with SAARC Countries
+ 4.7 Pakistan's Relations with major world powers
+ 4.8 China Pakistan Economic Corridor-CPEC - till end
+ CHAP 5: Land and Environment
+ 5.1 Location of Pakistan
+ 6.2 Physical Features of Pakistan
+ 5.3 Climate of Pakistan
+ 5.4 Major Glaciers and Rivers of Pakistan
+ 5.5 Forests and Wildlife in Pakistan
+ 5.6 Natural Regions of Pakistan
+ 5.7 Major Environmental Hazards and their Remedies
+ CHAP 6: Population, Society and Culture of Pakistan
+ 6.1 Growth and Distribution of Population in Pakistan
+ 6.2 Salient Features of Pakistani Society and Culture
+ 6.3 Educational Condition in Pakistan
+ 6.4 Health Conditions in Pakistan
+ 6.5 Importance of Tourism and Natural and Cultural attraction for Tourism in Pakistan
+ 6.6 Need and Importance of Inter-faith Harmony, Tolerance and Resillience against Terrorism
+ 6.7 Origin and Evolution of National and Regional Languages
+ 6.8 Causes, Consequences and Remedies for Poverty Alleviation in Pakistan - till end
+ CHAP 7: Economic Development of Pakistan
+ 7.1 Economic Development of Pakistan
+ 7.2 Major Metallic and Non-metallic Mineral Resources, their Economic Importance and Distribution in Pakistan
+ 7.3 Importance of Agriculture, Problems and Efforts to Modernize Agriculture
+ 7.4 Water Resources of Pakistan and Existing Irrigation System
+ 7.5 Production, Distribution of Major Crops, Livestock and Fisheries in Pakistan
+ 7.6 Importance of Industries, their Location and Production of Cottage, Small and Large-scale Industries
+ 7.7 Importance, Production and Consumption of different Sources of Energy in Pakistan
+ 7.8 International Trade of Pakistan (Imports and Exports) and its Impact on the Economy
+ 7.9 Importance of Sea Ports and Dry Ports of Pakistan
+ 7.10 Excercise Questions
+ CHAP 8: Women's Empowerment
+ 8.1 Women's Rights in Islam in the Light of Quran and Sunnah
+ 8.2 Women's Role in Pakistan Movement
+ 8.3 Women's Contribution in National Development from 1947 Till Now
+ 8.4 Definition of Violence and Violence Against Women
+ 8.5 Violence Impacts upon Pakistan's Society with Reference to Constitutional Provisions
+ 8.6 Government's efforts to Address the Issue of Violence Against Women in Pakistan
+ 8.7 Government's Efforts to Address Regarding Women's Protection and Women's Empowerment
+ 8.9 Exercise Questions
+
+-> General science
+SELECT ALL CHAPTERS
+ باب نمبر 7: انرجی
+ .7.1 ورک اور انرجی
+ .7.2 انرجی کی مختلف اقسام
+ .7.3 انرجی کا باہم تبادلہ
+ .7.4 انرجی کی طلب
+ الیکٹریکل انرجی کا حصول
+ انرجی کا ماحول
+ ماحول کی ابتری
+ نیو کلئیر فیول سے لاحق خطرات
+ انرجی کا تحفظ
+ باب نمبر 8: کرنٹ الیکٹریسٹی
+ الیکٹرک کرنٹ
+ کنوینشنل کرنٹ
+ پوٹینشل ڈفرینس
+ اوہم کا قانون
+ رزسٹنس
+ سرکٹ کے اجزا
+ ڈائریکٹ اور آلٹرنینٹگ کرنٹ
+ ڈی۔سی اور اے۔سی کا استعمال
+ گھر یلو الیکٹرک سپلائی
+ الیکٹریسٹی سپلائی کی پیمائش
+ الیکٹریسٹی کے خطرات اور احتیاطی تدابیر
+ آلات پیمائش
+ اینا لوگ اور ڈیجیٹل میٹرز
+ باب نمبر 9: بنیادی الیکٹرونکس
+ سیمی کنڈکٹرز
+ سیمی کنڈکٹر ڈائیوڈ کے استعمال
+ ریڈیو ویوز
+ کمپیوٹر
+ اینالوگ/ڈیجیٹل کنورٹرز
+ انفارمیشن ٹیکنالوجی
+ باب نمبر 10: سائنس اور ٹیکنالوجی
+ سائنس اور ٹیکنالوجی کا کردار
+ لیزر
+ فائبر آپٹکس
+ سٹیلائیٹس اور راڈار
+ ریڈیو ایکٹیویٹی
+ ایکس ریز
+ الٹرا ساؤنڈ
+ ای۔سی۔جی
+ ای۔ای۔جی
+ ایم۔آر۔آئی
+ سی۔ٹی سکین
+ انجیوگرافی
+ پاکستان کی اہم انڈسٹریز
+ باب نمبر 11: پاکستان کا سپیس اور نیو کلئیر پروگرام
+ سپیس پروگرام کی اہمیت
+ پاکستان کاسپیس پروگرام
+ پاکستان کا نیوکلئیر پاور پروگرام
+
+-> Islamiyat Ikhtiyari
+SELECT ALL CHAPTERS
+ آیات کریمہ
+ آیت نمبر :11
+ آیت نمبر :12
+ آیت نمبر :13
+ آیت نمبر :14
+ آیت نمبر :15
+ آیت نمبر :16
+ آیت نمبر :17
+ آیت نمبر :18
+ آیت نمبر :19
+ احادیث مبارکہ
+ حدیث نمبر :13
+ حدیث نمبر :14
+ حدیث نمبر :15
+ حدیث نمبر :16
+ حدیث نمبر :17
+ حدیث نمبر :18
+ حدیث نمبر :19
+ حدیث نمبر :20
+ حدیث نمبر :21
+ حدیث نمبر :22
+ حدیث نمبر :23
+ حدیث نمبر :24
+ حدیث نمبر :25
+ باب سوم ۔ تعلیماتِ اسلام
+ توحید
+ اطاعت رسول کریمﷺ
+ طہارت و پاکیزگی
+ علم کی ترغیب
+ عدل
+ جہاد
+ اکل حلال
+ عفت و حیا
+ سماجی انصاف
+ فرض شناسی
+ اسلامی عبادات کی امتیازی خصوصیات
+ عربی زبان کی گرامر
+ اسم ضمیر اور اسم کی اقسام
+ فعل کی قسمیں
+ مرکب (مرکب ناقص)
+ مرکب (مرکب نام)
+ فعل لازم تا فعل مجہول
+ حروف
+
+-> islamiyat lazmi
+SELECT ALL CHAPTERS
+ باب اوّل: قرآن مجید و حدیثِ نبویﷺ
+ ( دورِاوّل) حفاظت و تدوینِ حدیث
+ احادیثِ نبویہﷺ
+ باب دوم : ایمانیات و عبادات
+ ملائکہ
+ کتب سماویہ (آسمانی کتابیں)
+ عقیدۂ آخرت
+ زکوۃ
+ حج اور قربانی
+ باب سوم : سیرت نبوی خاتم النبین ﷺ
+ غزوۂ تبوک
+ حجۃ الوداع
+ وصال نبوی (خاتم النبین)
+ صلہ رحمی
+ خواتین کے ساتھ حسن سلوک
+ اندازِ تربیت
+ باب چہارم: اخلاق و آداب
+ اخلاص و تقویٰ
+ پردہ پوشی
+ جھوٹ
+ غیبت اور بہتان
+ جادو،فال اور توہم پرستی
+ پاب پنجم: حسن معاشرت و معاملات
+ سود کی حرمت
+ اسلامی ریاست
+ جہاد فی سبیل اللہ
+ باب ششم : ہدایت کے سر چشمے اور مشاہیر اسلام
+ حضرت امام زید بن علیؒ
+ حضرت عمروبن العاصؓ
+ حضرت جابربن عبداللہؓ
+ حضرت انس بن مالکؓ
+ صحابیاتؓ
+ صوفیہ کرام
+ علماومفکرین
+ باب ہفتم: اسلامی تعلیمات اور عصر حاضر کے تقاضے
+ اسلام میں مستقبل کی منصوبہ بندی
+ اسلامی تہذیب کی امتیازات
+
+-> tarjuma tul Quran
+ SELECT ALL CHAPTERS
+ سورۃ نمبر 1: سُورَۃُ الاَنعَامِ
+ سُورَۃُ الاَنعَامِ
+ سورۃ نمبر 2: سُورَۃُ الاَعرَافِ
+ سُورَۃُ الاَعرَافِ
+ سورۃ نمبر 3: سُورَۃُ یُونُسَ
+ سُورَۃُ یُونُسَ
+ سورۃ نمبر 4: سُورَۃُ ھُودِِ
+ سُورَۃُ ھُودِِ
+ سورۃ نمبر 5: سُورَۃُ الرَّعدِ
+ سُورَۃُ الرَّعدِ
+ سورۃ نمبر 6: سُورَۃُ اِبرٰھِیمَ
+ سُورَۃُ اِبرٰھِیمَ
+ سورۃ نمبر 7: سُورَۃُ الحِجرِ
+ سُورَۃُ الحِجرِ
+ سورۃ نمبر 8: سُورَۃُ النَّحلِ
+ سُورَۃُ النَّحلِ
+ سورۃ نمبر 9: سُورَۃُ بَنِیٓ اِسرَءِیلَ
+ سُورَۃُ بَنِیٓ اِسرَءِیلَ
+ سورۃ نمبر 10: سُورَۃُ الکَھفِ
+ سُورَۃُ الکَھفِ
+ سورۃ نمبر 11: سُورَۃُ المُومِنُونَ
+ سُورَۃُ المُومِنُونَ
+ سورۃ نمبر 12: سُورَۃُ الزُّمَرِ
+ سُورَۃُ الزُّمَرِ
+ سورۃ نمبر 13: سُورَۃُ المُومِنِ (اَلغَافِر)
+ سُورَۃُ المُومِنِ (اَلغَافِر)
+ سورۃ نمبر 14: سُورَۃُ حٰمٓ اَلسَّجدَۃِ
+ سُورَۃُ حٰمٓ اَلسَّجدَۃِ
+ سورۃ نمبر 15: سُورَۃُ الشُّورٰی
+ سُورَۃُ الشُّورٰی
+
+-> education
+SELECT ALL CHAPTERS
+ باب نمبر 6: پاکستان میں تعلیم
+ پاکستان میں مقاصدتعلیم
+ تعلیم کی اقسام
+ تعلیم کےمدارج
+ باب نمبر 7: نصاب
+ نصاب کی تعریف
+ اجزاکاارتباط
+ پاکستان میں نصاب کی تیاری
+ باب نمبر 8: مدرسہ کی سرگرمیوں کی تنظیم
+ مدرسہ میں ہم نصابی سرگرمیوں کی اہمیت
+ ہم نصابی سرگرمیوں کاطلبہ کی نشوونمامیں کردار
+ ماحول اورہم نصابی سرگرمیاں
+ باب نمبر 9: رہنمائی اور مشاورت
+ رہنمائی اورمشاورت کےمعانی اوتعریف
+ طلبہ کوپیش آنےوالےمسائل
+ مدرسہ میں رہنمائی اورمشاورت کا کردار
+
+-> punjabi
+SELECT ALL CHAPTERS
+ نثر نمبر 7: غازی علم الدین شہید
+ غازی علم الدین شہید
+ نثر نمبر 8: واپسی
+ واپسی
+ نثر نمبر 9: ساڈا وسیب ۔۔ ساڈا ورثہ
+ ساڈا وسیب ۔۔ ساڈا ورثہ
+ نثر نمبر 10: قصہ اک طوطے دا
+ قصہ اک طوطے دا
+ نثر نمبر 11: ٹھیڈا
+ ٹھیڈا
+ نثر نمبر 12: ساڈا ماحول
+ ساڈا ماحول
+ نثر نمبر 13: ہمت کرے انسان تے
+ ہمت کرے انسان تے
+ نظم نمبر 1: امن
+ امن
+ نظم نمبر 2: میں خیراں منگاں دیس دیاں
+ میں خیراں منگاں دیس دیاں
+ نظم نمبر 3: شہید دی ماں
+ شہید دی ماں
+ نظم نمبر 4: دیس پیار
+ دیس پیار
+ نظم نمبر 5: اک طالب علم دی دعا
+ اک طالب علم دی دعا
+ نظم نمبر 6: وطن آہلنا رہے سلامت
+ وطن آہلنا رہے سلامت
+ نظم نمبر 7: کیہڑے پاسے جاواں
+ کیہڑے پاسے جاواں
+ نظم نمبر 8: سکھ سنہیڑا
+ سکھ سنہیڑا
+ نظم نمبر 9: زراعتی گیت
+ زراعتی گیت
+ نظم نمبر 10: بکرا منڈی
+ بکرا منڈی
+ غزل نمبر 1: عارف عبد المتین
+ ( غزل) عارف عبد المتین
+ غزل نمبر 2: منیر نیازی
+ ( غزل) منیر نیازی
+ غزل نمبر 3: اقبال سوکڑی
+ ( غزل) اقبال سوکڑی
+ غزل نمبر 4: اکرام مجید
+ ( غزل) اکرام مجید
+ غزل نمبر 5: ڈاکٹر محمد یونس احقر
+ ( غزل) ڈاکٹر محمد یونس احقر
+ گرائمر
+  مضامین
+  مذکر مونث
+  واحد جمع
+
+-> maashiyat
+SELECT ALL CHAPTERS
+ باب نمبر 8: قومی آمدنی کے بنیادی تصورات
+ قومی آمدنی کے بنیادی تصورات
+ باب نمبر 9: زر
+ زر
+ باب نمبر 10: بنک
+ بنک
+ باب نمبر 11: تجارت
+ تجارت
+ باب نمبر 12: سرکاری مالیات
+ سرکاری مالیات
+ باب نمبر 13: معاشی ترقی
+ معاشی ترقی
+ باب نمبر 14: اسلام کا معاشی نظام
+ اسلام کا معاشی نظام
+
+-> ikhlaqiat
+SELECT ALL CHAPTERS
+ باب اول: مذاہب کا تعارف
+ مشکلات کے حل میں مذاہب کی رہنمائی
+ گناہ اور جرم کا تصور
+ باب دوم: عالمی مذاہب
+ مہاویر- تعارف اور بنیادی تعلیمات
+ باب سوم: اخلاق و اقدار
+ (مذاہب عالمی کی روشنی میں)عبادت کے انسانی زندگی پر اثرات
+ عالمی مذاہب میں اخلاقی اقدار
+ انسانی کردار سازی پر احتساب کے اثرات
+ مذہبی تعلیمات میں پابندی وقت
+ باب چہارم: آداب
+ ریلوے اسٹیشن، بس اسٹینڈ، ہوائی اڈا، بازار
+ باب پنجم: مشاہیر
+ ارسطو
+ کانٹ
+ سری اربندو
+
+
+-> civics
+ SELECT ALL CHAPTERS
+ باب نمبر 6 : حقوق و فرائض
+ قوق و فرائض
+ باب نمبر 7 : نظریہ پاکستان اور تحریک پاکستان
+ نظریہ پاکستان اور تحریک پاکستان
+ باب نمبر 8 : پاکستان میں آئینی ارتقاء
+ پاکستان میں آئینی ارتقاء
+ باب نمبر 9 : پاکستان میں مقامی حکومتیں
+ پاکستان میں مقامی حکومتیں
+ باب نمبر 10 : پاکستان اور اس کے ہمسایہ ممالک
+ پاکستان اور اس کے ہمسایہ ممالک
+
+-> home economics
+SELECT ALL CHAPTERS
+ باب نمبر1: پارچہ بافی اور لباس کا تعارف
+ پارچہ بافی اور لباس کی تعریف اور اہمیت
+ ریشے
+ پارچہ بافی کے ر یشوں کی اقسام اور خصوصیات
+ مارکیٹ میں دستیاب اصلی اور امتزاجی کپڑوں کا مطالعہ
+ باب نمبر2: لباس بنانا
+ سلائی کا سامان
+ لباس کی سلائی کےاصول
+ کپڑے اور ڈیزائن کے انتخاب کا طریقہ کار
+ باب نمبر3: عمر کے مختلف گروپوں کی لباس کی ضروریات
+ لباس کےانتخاب پر اثرانداز ہونےوالے عوامل
+ عمر کے مختلف گروہوں کے لئے کپڑوں کی موزونیت
+ کپڑوں میں ردوبدل کر کے انہیں نیا بنانا
+ باب نمبر4: انتظام کا تعارف
+ انتظام کا تصور
+ اقدار, مقاصد اور معیار
+ زرائع کا انتظام,وقت,آمدنی،اور توانائی
+ باب نمبر5: ماحول اور انتظام
+ صحت مند ماحول
+ صفائی اورفاضل مواد ٹھکانے لگانے کا انتظام
+ گھر میں تحفظ
+ باب نمبر6: آرٹ اور ڈیزائن
+ ڈیزائن کو سمجھنا
+ ڈیزائن کے عناصر اور اصولوں کو سمجھنا
+ آرٹ کا گھر اور ماحول کے ساتھ تعلق
+ باب نمبر7: روزمرہ زندگی میں آرٹ
+ لباس میں ڈیزائن کا استعمال
+ گھر اور ماحول میں ڈیزائن کا استعمال
+ کھانا پیش کرنے میں ڈیزائن کا استعمال
+
+-> physical education
+SELECT ALL CHAPTERS
+ باب نمبر 1: فزیکل فٹنس
+ فزیکل فٹنس
+ باب نمبر 2: تفریحی اور چھوٹے رقبے کے کھیل
+ تفریحی اور چھوٹے رقبے کے کھیل
+ باب نمبر 3: قامتی نقائص کی اصلاحی ورزشیں
+ قامتی نقائص کی اصلاحی ورزشیں
+ باب نمبر 4: کھیلیں
+ کھیلیں
+ باب نمبر 5: اتھلیٹکس
+ اتھلیٹکس
+ باب نمبر 6: تفریحی مشاغل
+ تفریحی کے مشاغل
+ باب نمبر 7: معاشرے کی صحت
+ معاشرے کی صحت
+ باب نمبر 8: غذائیت
+ غذائیت
+
+-> gaza aur gazaiyat
+SELECT ALL CHAPTERS
+ باب نمبر6: غذاؤں کی تیاری اورپکانےکےطریقے
+ غذاؤں کی تیاری اورپکانےکےطریقے
+ باب نمبر7: خاندان اورمعاشرےکی غذائیت
+ خاندان اورمعاشرےکی غذائیت
+ باب نمبر8: انتظام طعام
+ انتظام طعام
+ باب نمبر9: میزلگانااورکھاناپیش کرنا
+ میزلگانااورکھاناپیش کرنا
+ باب نمبر10: غذاؤں کومحفوظ رکھنا
+ غذاؤں کومحفوظ رکھنا
+
+
+-> murgbani
+SELECT ALL CHAPTERS
+ باب نمبر 7: مرغیوں کی خوراک
+ مرغیوں کی خوراک
+ باب نمبر 8: برائلر پرندوں کی پرورش
+ برائلر پرندوں کی پرورش
+ باب نمبر 9: لیئر مرغیوں کی پرورش
+ لیئر مرغیوں کی پرورش
+ باب نمبر 10: مرغیوں کے امراض
+ مرغیوں کے امراض
+ باب نمبر 11: مرغیوں میں بیماریوں کی روک تھام
+ مرغیوں میں بیماریوں کی روک تھام
+ باب نمبر 12: پولٹری فارم کا حساب کتاب
+ پولٹری فارم کا حساب کتاب
+
+
+-> electrical wiring
+SELECT ALL CHAPTERS
+ باب نمبر1: وائرنگ کےقوانین وضوابط
+ وائرنگ کےقوانین وضوابط
+ باب نمبر2: اے۔سی کا تعارف
+ اے۔سی کاتعارف
+ باب نمبر3: کپیسٹراورانڈکٹرز
+ کپیسٹراورانڈکٹرز
+ باب نمبر4: جنریٹراورموٹر
+ جنریٹراورموٹر
+
+-> textile and clothing
+SELECT ALL CHAPTERS
+ باب نمبر 8: فیشن اور بننا سنورنا
+ 8.1 فیشن / رواج
+ 8.2 فیشن اور زیبائش / بننا سنورنا
+ 8.3 فیشن میں جدت
+ 8.4: عملی کام
+ باب نمبر 9: کپڑوں کی منصوبہ بندی کے اُصول
+ 9.1 کپڑوں کی منصوبہ بندی کے اُصول
+ 9.2 خاندان کے مختلف افراد کے لیے کپڑوں کی منصوبہ بندی
+ عملی کام 9.2
+ باب نمبر 10:کپڑوں کی حفاظت و دیکھ بھال اور ان کو سٹور کرنا
+ 10.1 کپڑوں کی روزانہ، ہفتہ وار اور موسمی حفاظت و دیکھ بھال
+ 10.2 کپڑوں کو سٹور کرنے کے اُصول
+ باب نمبر 11:داغ دھبے دور کرنا
+ 11.1 داغ دھبے دور کرنے کے اُصول
+ 11.2 داغ دھبے دور کرنے کے طریقے
+ 11.3 داغ دھبے دور کرنے کے دوران حفاظتی اقدامات
+ باب نمبر 12: پارچہ بافی اور لباس میں کاروبار کے مواقع اور پیشے
+ 12.1 چھوٹے اور درمیانہ درجے کے کاروبار
+ 12.2 گھر یلو بنیادوں پر کاروبار
+ 12.3 مقامی مارکیٹ
+ 12.4 بین الاقوامی مارکیٹ
+

@@ -21,6 +21,7 @@ export type SavedPaperRecord = {
   totalMarks: string;
   questionType: string;
   medium?: string;
+  twoQuestionsPerLine?: boolean;
   questions: SavedPaperQuestion[];
 };
 

@@ -1,4 +1,4 @@
---physics all chapters mcqs
+->physics all chapters mcqs
 
 1.1 Physical Quantities And Their Units
 Exercise	1.	The purpose of study and discoveries in Physics is:
@@ -3419,7 +3419,7 @@ Additional	1647.	Smallest observed particles and their interactions is describe 
 
 
 
-physics 1st year
+-> physics 1st year short questions
 1.1 Physical Quantities And Their Units
 1	.	Name any three physical quantities.
 Additional
@@ -5517,7 +5517,7 @@ Additional
 979	.	List and explain the limitations of the Standard Model in explaining the universe.
 Additional
 
-physics long questions
+-> physics long questions
 1.2 International System Of Units
 1.	Write the points for conventions using SI units.
 Additional

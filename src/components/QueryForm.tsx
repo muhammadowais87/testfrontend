@@ -85,7 +85,7 @@ const QueryForm = () => {
         </div>
 
         {/* Form Card */}
-        <Card className="border-border/50 shadow-lg">
+        <Card className="border-border/50 shadow-lg rounded-2xl">
           <CardContent className="p-6 sm:p-8">
             <form onSubmit={handleSubmit} className="space-y-5">
               {/* Row 1: Name + Email */}

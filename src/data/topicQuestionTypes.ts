@@ -1,30 +1,20 @@
-import topicData from "./topicQuestionTypes.json";
-import oneToEightTypesData from "./topicWiseTypesOneToEight.json";
-import afaqTopicWiseTypesData from "./afaqTopicWiseTypes.json";
-import baTopicWiseTypesData from "./baTopicWiseTypes.json";
-import oxfordTopicWiseTypesData from "./oxfordTopicWiseTypes.json";
-
 /**
  * Map of subject name → topic/chapter key → list of available question types.
- * Built from the "topic wise types.txt" analysis report.
- *
- * Subject names match report display names (e.g. "Biology", "Chemistry", "English", etc.)
- * Topic keys are either decimal IDs (e.g. "1.1") or full topic names.
  */
-const topicQuestionTypesMap: Record<string, Record<string, string[]>> =
-  topicData as Record<string, Record<string, string[]>>;
 
-const oneToEightTypesMap: Record<string, Record<string, string[]>> =
-  oneToEightTypesData as Record<string, Record<string, string[]>>;
+import topicQuestionTypesJson from "./topicQuestionTypes.json";
+import oneToEightTypesJson from "./topicWiseTypesOneToEight.json";
+import afaqTopicWiseTypesJson from "./afaqTopicWiseTypes.json";
+import baTopicWiseTypesJson from "./baTopicWiseTypes.json";
+import oxfordTopicWiseTypesJson from "./oxfordTopicWiseTypes.json";
+import tenTopicWiseTypesJson from "./tenTopicWiseTypes.json";
 
-const afaqTopicWiseTypesMap: Record<string, Record<string, string[]>> =
-  afaqTopicWiseTypesData as Record<string, Record<string, string[]>>;
-
-const baTopicWiseTypesMap: Record<string, Record<string, string[]>> =
-  baTopicWiseTypesData as Record<string, Record<string, string[]>>;
-
-const oxfordTopicWiseTypesMap: Record<string, Record<string, string[]>> =
-  oxfordTopicWiseTypesData as Record<string, Record<string, string[]>>;
+const topicQuestionTypesMap: Record<string, Record<string, string[]>> | null = topicQuestionTypesJson as unknown as Record<string, Record<string, string[]>>;
+const oneToEightTypesMap: Record<string, Record<string, string[]>> | null = oneToEightTypesJson as unknown as Record<string, Record<string, string[]>>;
+const afaqTopicWiseTypesMap: Record<string, Record<string, string[]>> | null = afaqTopicWiseTypesJson as unknown as Record<string, Record<string, string[]>>;
+const baTopicWiseTypesMap: Record<string, Record<string, string[]>> | null = baTopicWiseTypesJson as unknown as Record<string, Record<string, string[]>>;
+const oxfordTopicWiseTypesMap: Record<string, Record<string, string[]>> | null = oxfordTopicWiseTypesJson as unknown as Record<string, Record<string, string[]>>;
+const tenTopicWiseTypesMap: Record<string, Record<string, string[]>> | null = tenTopicWiseTypesJson as unknown as Record<string, Record<string, string[]>>;
 
 const ONE_TO_EIGHT_CLASSES = new Set(["ONE", "TWO", "THREE", "FOUR", "5TH", "6TH", "7TH", "8TH"]);
 
@@ -61,6 +51,8 @@ const REPORT_TYPE_TO_APP_VALUE: Record<string, string> = {
   "word meanings": "words_meanings",
   "words meanings": "words_meanings",
   translation: "farsi_tarjuma",
+  "farsi tarjuma": "farsi_tarjuma",
+  "farsi translation": "farsi_tarjuma",
   ayat: "ayaat",
   ayaat: "ayaat",
   hadith: "hadith",
@@ -103,11 +95,15 @@ const REPORT_TYPE_TO_APP_VALUE: Record<string, string> = {
   "zarb ul imsal": "zarb_ul_imsal",
   "zarb ul misaal": "zarb_ul_misaal",
   "correct meaning of underline word": "correct_meaning_of_underline_word",
+  "correct meaning of underlined word": "correct_meaning_of_underline_word",
   "tick correct form of verb": "tick_correct_form_of_verb",
+  "correct forms of verb": "tick_correct_form_of_verb",
   "tick correct according to grammer": "tick_correct_according_to_grammer",
+  "tick correct according to grammar": "tick_correct_according_to_grammer",
   "active and passive voice": "active_and_passive_voice",
   "poem stanzas": "poem_stanzas",
   "direct and indirect": "direct_and_indirect",
+  "direct indirect": "direct_and_indirect",
   "pair of words": "pair_of_words",
   "punctuate the paragraph": "punctuate_the_paragraph",
   "punctuation": "punctuate_the_paragraph",
@@ -281,33 +277,33 @@ export const getAvailableQuestionTypesForTopics = (
     const actualSubject = subject.substring(0, seriesSeparatorIndex).trim();
     const series = subject.substring(seriesSeparatorIndex + 2).trim();
     const afaqKey = `${actualSubject}-${series}-${normalizedClass}-AFAQ`;
-    subjectMap = afaqTopicWiseTypesMap[afaqKey];
+    subjectMap = afaqTopicWiseTypesMap?.[afaqKey];
   } else if (BA_CLASSES.has(normalizedClass)) {
     const key = `${subject}-${className}-BA`;
-    subjectMap = baTopicWiseTypesMap[key];
+    subjectMap = baTopicWiseTypesMap?.[key];
     if (!subjectMap) {
       const resolvedSubject = SUBJECT_ALIASES[subject] || subject;
       const aliasKey = `${resolvedSubject}-${className}-BA`;
-      subjectMap = baTopicWiseTypesMap[aliasKey];
+      subjectMap = baTopicWiseTypesMap?.[aliasKey];
     }
   } else if (ONE_TO_EIGHT_CLASSES.has(normalizedClass)) {
     // Try OXFORD data first (subjects have unique names)
     // Uppercase for case-insensitive match (typography like "Computer" vs "COMPUTER")
     const oxfordKey = `${subject.toUpperCase()}-${normalizedClass}-OXFORD`;
-    subjectMap = oxfordTopicWiseTypesMap[oxfordKey];
+    subjectMap = oxfordTopicWiseTypesMap?.[oxfordKey];
     // PTB classes 1-8 fallback
     if (!subjectMap) {
       const directKey = `${subject}-${normalizedClass}-PTB`;
-      subjectMap = oneToEightTypesMap[directKey];
+      subjectMap = oneToEightTypesMap?.[directKey];
     }
     if (!subjectMap) {
       const resolvedSubject = SUBJECT_ALIASES[subject] || subject;
-      subjectMap = oneToEightTypesMap[`${resolvedSubject}-${normalizedClass}-PTB`];
+      subjectMap = oneToEightTypesMap?.[`${resolvedSubject}-${normalizedClass}-PTB`];
     }
     if (!subjectMap) {
       const normalizedSubject = normalizeSubject(subject);
       const classSuffix = `-${normalizedClass}-PTB`;
-      const matchingKey = Object.keys(oneToEightTypesMap).find((k) => {
+      const matchingKey = Object.keys(oneToEightTypesMap ?? {}).find((k) => {
         if (!k.endsWith(classSuffix)) return false;
         const keySubj = k.slice(0, k.length - classSuffix.length);
         const normKeySubj = normalizeSubject(keySubj);
@@ -315,7 +311,25 @@ export const getAvailableQuestionTypesForTopics = (
                normKeySubj.includes(normalizedSubject) ||
                normalizedSubject.includes(normKeySubj);
       });
-      if (matchingKey) subjectMap = oneToEightTypesMap[matchingKey];
+      if (matchingKey) subjectMap = oneToEightTypesMap?.[matchingKey];
+    }
+  } else if (normalizedClass.includes("10TH")) {
+    // 10th class — use tenTopicWiseTypes.json with subject-10TH-PTB key
+    const classSuffix = "-10TH-PTB";
+    const resolvedSubject = SUBJECT_ALIASES[subject] || subject;
+    const directKey = resolvedSubject + classSuffix;
+    subjectMap = tenTopicWiseTypesMap?.[directKey];
+    if (!subjectMap) {
+      const normalizedSubject = normalizeSubject(subject);
+      const matchingKey = Object.keys(tenTopicWiseTypesMap ?? {}).find((key) => {
+        if (!key.endsWith(classSuffix)) return false;
+        const keySubj = key.slice(0, key.length - classSuffix.length);
+        const normKeySubj = normalizeSubject(keySubj);
+        return normKeySubj === normalizedSubject ||
+               normKeySubj.includes(normalizedSubject) ||
+               normalizedSubject.includes(normKeySubj);
+      });
+      if (matchingKey) subjectMap = tenTopicWiseTypesMap?.[matchingKey];
     }
   } else if (normalizedClass.includes("9TH") || normalizedClass.includes("1ST") || normalizedClass.includes("INTER")) {
     // 9th class and 1st year — try class-specific key first to avoid chapter name conflicts
@@ -323,33 +337,33 @@ export const getAvailableQuestionTypesForTopics = (
     const resolvedSubject = SUBJECT_ALIASES[subject] || subject;
     const directKey = resolvedSubject + classSuffix;
     // eslint-disable-next-line no-console
-    console.debug('getAvailableQuestionTypesForTopics: directKey ->', JSON.stringify(directKey), 'classSuffix ->', classSuffix, 'subjectMap exists?', !!topicQuestionTypesMap[directKey], 'all keys:', Object.keys(topicQuestionTypesMap).filter(k => k.includes(resolvedSubject)));
-    subjectMap = topicQuestionTypesMap[directKey] || topicQuestionTypesMap[resolvedSubject];
+    console.debug('getAvailableQuestionTypesForTopics: directKey ->', JSON.stringify(directKey), 'classSuffix ->', classSuffix, 'subjectMap exists?', !!topicQuestionTypesMap?.[directKey], 'all keys:', Object.keys(topicQuestionTypesMap ?? {}).filter(k => k.includes(resolvedSubject)));
+    subjectMap = topicQuestionTypesMap?.[directKey] || topicQuestionTypesMap?.[resolvedSubject];
     if (!subjectMap) {
       const normalizedSubject = normalizeSubject(subject);
       // Try matching any key that starts with the subject name + "-"
-      const prefixedKey = Object.keys(topicQuestionTypesMap).find(
+      const prefixedKey = Object.keys(topicQuestionTypesMap ?? {}).find(
         (key) => key.startsWith(resolvedSubject + "-") && normalizeSubject(key) === normalizedSubject
       );
       if (prefixedKey) {
-        subjectMap = topicQuestionTypesMap[prefixedKey];
+        subjectMap = topicQuestionTypesMap?.[prefixedKey];
       }
     }
     if (!subjectMap) {
       const normalizedSubject = normalizeSubject(subject);
-      const matchingKey = Object.keys(topicQuestionTypesMap).find((key) => normalizeSubject(key) === normalizedSubject);
+      const matchingKey = Object.keys(topicQuestionTypesMap ?? {}).find((key) => normalizeSubject(key) === normalizedSubject);
       if (matchingKey) {
-        subjectMap = topicQuestionTypesMap[matchingKey];
+        subjectMap = topicQuestionTypesMap?.[matchingKey];
       }
     }
     if (!subjectMap) {
       const normalizedSubject = normalizeSubject(subject);
-      const matchingKey = Object.keys(topicQuestionTypesMap).find((key) => {
+      const matchingKey = Object.keys(topicQuestionTypesMap ?? {}).find((key) => {
         const normalizedKey = normalizeSubject(key);
         return normalizedKey.includes(normalizedSubject) || normalizedSubject.includes(normalizedKey);
       });
       if (matchingKey) {
-        subjectMap = topicQuestionTypesMap[matchingKey];
+        subjectMap = topicQuestionTypesMap?.[matchingKey];
       }
     }
   } else {
@@ -476,4 +490,4 @@ export const getAvailableQuestionTypesForTopics = (
   return appValues.length > 0 ? appValues : null;
 };
 
-export default topicQuestionTypesMap;
+

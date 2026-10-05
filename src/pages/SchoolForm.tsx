@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
+import { getAdminRoute } from "@/lib/adminRoute";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -82,11 +83,11 @@ const SchoolForm = ({ mode, schoolId }: SchoolFormProps) => {
       if (mode === "edit" && schoolId) {
         await updateSchool(schoolId, data);
         toast({ title: "School Updated", description: `${data.name} has been updated.` });
-        navigate(`/portal-x9k7m/school/${schoolId}`);
+        navigate(`/${getAdminRoute()}/school/${schoolId}`);
       } else {
         await addSchool(data);
         toast({ title: "School Added", description: `${data.name} has been added.` });
-        navigate("/portal-x9k7m/dashboard");
+        navigate("/${getAdminRoute()}/dashboard");
       }
     } catch (error) {
       toast({
@@ -113,7 +114,7 @@ const SchoolForm = ({ mode, schoolId }: SchoolFormProps) => {
         <div className="flex items-center justify-center py-20">
           <div className="text-center space-y-4">
             <p className="text-muted-foreground">School not found</p>
-            <Button onClick={() => navigate("/portal-x9k7m/dashboard")}>
+            <Button onClick={() => navigate("/${getAdminRoute()}/dashboard")}>
               <ArrowLeft className="w-4 h-4 mr-2" /> Back
             </Button>
           </div>
@@ -128,7 +129,7 @@ const SchoolForm = ({ mode, schoolId }: SchoolFormProps) => {
         <div className="flex items-center gap-3">
           <Button
             variant="ghost" size="icon"
-            onClick={() => navigate(mode === "edit" && schoolId ? `/portal-x9k7m/school/${schoolId}` : "/portal-x9k7m/dashboard")}
+            onClick={() => navigate(mode === "edit" && schoolId ? `/${getAdminRoute()}/school/${schoolId}` : "/${getAdminRoute()}/dashboard")}
             className="h-9 w-9"
           >
             <ArrowLeft className="w-5 h-5" />

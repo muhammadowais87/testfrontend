@@ -1,7 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;700&display=swap');
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -77,13 +73,59 @@
     @apply text-2xl md:text-3xl font-bold text-foreground;
   }
 
+  .pts-section-subtitle {
+    @apply text-muted-foreground text-sm md:text-base max-w-2xl mx-auto;
+  }
+
   .pts-card {
     @apply bg-card rounded-xl shadow-sm border border-border p-6 text-center transition-all duration-300 hover:shadow-lg hover:-translate-y-1 hover:border-primary/25;
+  }
+
+  .pts-card-hover {
+    @apply transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5;
+  }
+
+  .pts-gradient-primary {
+    @apply bg-gradient-to-br from-primary to-emerald-600;
+  }
+
+  .pts-gradient-light {
+    background: linear-gradient(135deg, hsl(145 36% 92%), hsl(138 38% 97%));
   }
 
   .pts-hero-circle {
     background: var(--pts-hero-bg);
   }
+
+  .pts-badge {
+    @apply inline-flex items-center gap-1.5 bg-primary/10 text-primary px-3 py-1 rounded-full text-xs font-medium;
+  }
+
+  .pts-divider {
+    @apply h-px bg-gradient-to-r from-transparent via-border to-transparent;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(var(--background));
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--muted-foreground) / 0.3);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--muted-foreground) / 0.5);
 }
 
 /* Urdu / Arabic text styling — outside @layer so specificity always wins */

@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useRef, useState } from "react";
-import { Link, useLocation, useNavigate } from "react-router-dom";
-import { Menu, X, Home, Key, Settings, LogOut, CreditCard, ChevronLeft, List, PencilLine, Save, Printer, Shuffle, Trash2 } from "lucide-react";
+import { Link, useLocation, useNavigate, useSearchParams } from "react-router-dom";
+import { Menu, X, Home, Key, Settings, LogOut, CreditCard, ChevronLeft, List, PencilLine, Save, Printer, Shuffle, Trash2, Lock } from "lucide-react";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
 import {
   afaqCards, boardClassMap, boardCards, boardSubjectsMap, getChaptersForSubject, type ChapterGroup,
@@ -11,12 +11,11 @@ import { getAvailableQuestionTypesForTopics } from "@/data/topicQuestionTypes";
 import SubjectButton from "@/components/SubjectButton";
 import DualMediumQuestion from "@/components/DualMediumQuestion";
 import MathText, { getEnglishOnlyTokens } from "@/components/MathText";
-import { getQuestionStems } from "@/lib/questionDisplay";
+import { getQuestionStems, mergeMcqOptions, sanitizeOptionValue } from "@/lib/questionDisplay";
 import { useIsMobile } from "@/hooks/use-mobile";
 import { addSavedPaper, getSavedPaperById, type SavedPaperRecord } from "@/lib/savedPapers";
 import {
   buildPriorityOptions,
-  clearQuestionBankCache,
   fetchChapterGroupsForSelection,
   fetchQuestionsForSelection,
   fetchAvailableQuestionTypes,
@@ -110,6 +109,7 @@ const allPossibleQuestionTypeOptions: QuestionTypeOption[] = [
   { value: "newsletters", label: "Newsletters / Diaries (روزنامچے)" },
   // 1st year English specific types
   { value: "tick_correct_synonyms", label: "Tick Correct Synonyms (درست مترادف کا انتخاب)" },
+  { value: "vitals", label: "Vitals / Poet-Chapter Pairs (شخصیات)" },
 ];
 
 const defaultQuestionTypeOptions: QuestionTypeOption[] = [
@@ -212,6 +212,8 @@ const getProfessionalQuestionTypeLabel = (value: string, fallbackLabel: string):
   return labelMap[normalizedValue] || fallbackLabel;
 };
 
+const makeChapterKey = (groupName: string, chapter: string) => `${groupName}::${chapter}`;
+
 
 const GeneratePaper = () => {
   const isMobile = useIsMobile();
@@ -219,17 +221,19 @@ const GeneratePaper = () => {
   const location = useLocation();
   const session = useInstituteSessionStore((s) => s.session);
   const logout = useInstituteSessionStore((s) => s.logout);
-  const [sidebarOpen, setSidebarOpen] = useState(false);
   const [selectedBoard, setSelectedBoard] = useState<string | null>(null);
   const [selectedLevel, setSelectedLevel] = useState<string | null>(null);
   const [selectedSubject, setSelectedSubject] = useState<string | null>(null);
+  const [searchParams] = useSearchParams();
+  const isTrial = searchParams.get("trial") === "true";
   const [selectedChapters, setSelectedChapters] = useState<string[]>([]);
   const lastInitializedRef = useRef<{ key: string; isDb: boolean; isTopicsFile?: boolean } | null>(null);
+  const [sidebarOpen, setSidebarOpen] = useState(true);
   const [showQuestionSelection, setShowQuestionSelection] = useState(false);
   const [showPaperWorkspace, setShowPaperWorkspace] = useState(false);
   const [questionType, setQuestionType] = useState("");
   const [appliedQuestionType, setAppliedQuestionType] = useState("");
-  const [dualMedium, setDualMedium] = useState("dual");
+  const [dualMedium, setDualMedium] = useState("");
   const [appliedDualMedium, setAppliedDualMedium] = useState("dual");
   const [requiredQuestions, setRequiredQuestions] = useState("");
   const [eachQMarks, setEachQMarks] = useState("");
@@ -238,6 +242,8 @@ const GeneratePaper = () => {
   const [blankLineType, setBlankLineType] = useState("1 LINE");
   const [questionPriority, setQuestionPriority] = useState("all");
   const [appliedQuestionPriority, setAppliedQuestionPriority] = useState("all");
+  const [twoQuestionsPerLine, setTwoQuestionsPerLine] = useState(false);
+  const [appliedTwoQuestionsPerLine, setAppliedTwoQuestionsPerLine] = useState(false);
   const [showSearchResults, setShowSearchResults] = useState(false);
   const [selectedQuestions, setSelectedQuestions] = useState<number[]>([]);
   const [selectionError, setSelectionError] = useState("");
@@ -251,6 +257,7 @@ const GeneratePaper = () => {
   const [timeAllowed, setTimeAllowed] = useState("");
   const [paperDate, setPaperDate] = useState("");
   const [totalMarks, setTotalMarks] = useState("0");
+  const [showTrialLimitDialog, setShowTrialLimitDialog] = useState(false);
   const [showValidationDialog, setShowValidationDialog] = useState(false);
   const [validationMessage, setValidationMessage] = useState("");
   const [allQuestions, setAllQuestions] = useState<PaperQuestion[]>([]);
@@ -274,11 +281,28 @@ const GeneratePaper = () => {
     }
 
     const staticFallback = getChaptersForSubject(selectedSubject, selectedLevel, selectedBoard);
-    if (dbChapterGroups && staticFallback && dbChapterGroups.length < staticFallback.length) {
+    if (dbChapterGroups && staticFallback) {
       const dbNames = new Set(dbChapterGroups.map(g => g.name));
-      const missing = staticFallback.filter(g => !dbNames.has(g.name));
-      if (missing.length > 0) {
-        return [...dbChapterGroups, ...missing];
+      // If the static fallback introduces groups the backend doesn't have,
+      // the static structure is more complete (e.g. Ayat/Hadith split) -> use it.
+      const staticHasExtraGroups = staticFallback.some(g => !dbNames.has(g.name));
+      if (staticHasExtraGroups) {
+        return staticFallback;
+      }
+      if (dbChapterGroups.length <= staticFallback.length) {
+        // Merge: for matching groups, use static version if it has more chapters
+        const staticByName = new Map(staticFallback.map(g => [g.name, g]));
+        const merged = dbChapterGroups.map(dbGroup => {
+          const staticGroup = staticByName.get(dbGroup.name);
+          if (staticGroup && staticGroup.chapters && staticGroup.chapters.length > dbGroup.chapters.length) {
+            return staticGroup;
+          }
+          return dbGroup;
+        });
+        const missing = staticFallback.filter(g => !dbNames.has(g.name));
+        if (missing.length > 0 || merged.some((g, i) => g !== dbChapterGroups[i])) {
+          return [...merged, ...missing];
+        }
       }
     }
     return dbChapterGroups ?? staticFallback;
@@ -303,22 +327,98 @@ const GeneratePaper = () => {
     let rawOptions: QuestionTypeOption[] = [];
     if (topicTypes !== null) {
       rawOptions = allPossibleQuestionTypeOptions;
+    } else if (availableDbTypes && availableDbTypes.length > 0) {
+      rawOptions = allPossibleQuestionTypeOptions;
     } else if (dbQuestionTypes && dbQuestionTypes.length > 0) {
       rawOptions = dbQuestionTypes;
     } else {
       rawOptions = defaultQuestionTypeOptions;
     }
 
+    const subjectName = selectedSubject?.split("||")[0] || "";
+
     // Determine allowed types with priority: report topic types > DB available types > none.
+    // Merge static topic types with DB types so DB data (e.g. idioms, essays, genders)
+    // is never hidden by stale static topic maps.
     let allowedSet: Set<string> | null = null;
-    if (availableDbTypes && availableDbTypes.length > 0) {
+    const dbTypeValues = dbQuestionTypes?.map((t) => t.value) ?? [];
+    if (topicTypes && topicTypes.length > 0) {
+      allowedSet = new Set([...topicTypes, ...(availableDbTypes ?? []), ...dbTypeValues]);
+    } else if (availableDbTypes && availableDbTypes.length > 0) {
       allowedSet = new Set(availableDbTypes);
-    } else if (topicTypes && topicTypes.length > 0) {
-      allowedSet = new Set(topicTypes);
+    } else if (dbTypeValues.length > 0) {
+      allowedSet = new Set(dbTypeValues);
     }
 
     if (allowedSet) {
       rawOptions = rawOptions.filter((opt) => allowedSet!.has(opt.value));
+    }
+
+    // Remove question types that have no DB data for specific INTER-I subjects
+    if (selectedLevel === "INTER-I" && selectedSubject) {
+      const INTER_I_REMOVED_TYPES: Record<string, string[]> = {
+        "اسلامیات لازمی": ["shakhsiyat", "shakhsiyaat"],
+        "Islamiyat Lazmi": ["shakhsiyat", "shakhsiyaat"],
+        "پنجابی": ["words_into_sentences", "wahid_jama", "muzakir_monas", "letters", "stories"],
+        "Punjabi": ["words_into_sentences", "wahid_jama", "muzakir_monas", "letters", "stories"],
+        "اسلامیات اختیاری": ["ayaat", "hadith", "ahadees"],
+        "Islamiyat Ikhtayari": ["ayaat", "hadith", "ahadees"],
+        "فارسی": ["long"],
+        "Farsi": ["long"],
+        "تاریخ اسلام": ["mcq"],
+        "Tareekh Islam": ["mcq"],
+        "لائبریری سائنس": ["mcq"],
+        "Library Science": ["mcq"],
+      };
+      const removed = INTER_I_REMOVED_TYPES[subjectName];
+      if (removed) {
+        rawOptions = rawOptions.filter((opt) => !removed.includes(opt.value));
+      }
+    }
+
+    // For 9TH, 10TH, INTER-I Urdu and English (PTB): remove Long Questions
+    // and keep only one of Short Questions OR Question and Answers
+    const isUrduEnglishPTB = selectedSubject &&
+      selectedBoard === "PTB" &&
+      ["9TH", "10TH", "INTER-I"].includes(selectedLevel || "") &&
+      ["Urdu", "English", "اردو", "اردو لازمی"].some(s => subjectName === s || subjectName.includes(s));
+    if (isUrduEnglishPTB) {
+      // Remove Long Questions
+      rawOptions = rawOptions.filter((opt) => opt.value !== "long");
+      // If both Short Questions and Question and Answers exist, keep only Question and Answers for English, Short Questions for Urdu
+      const hasShort = rawOptions.some((opt) => opt.value === "short");
+      const hasQA = rawOptions.some((opt) => opt.value === "questions_answers");
+      if (hasShort && hasQA) {
+        if (subjectName === "English" || subjectName.includes("English")) {
+          rawOptions = rawOptions.filter((opt) => opt.value !== "short");
+        } else {
+          rawOptions = rawOptions.filter((opt) => opt.value !== "questions_answers");
+        }
+      }
+    }
+
+    // For 9TH Punjabi (PTB): remove Long Questions and deduplicate "Explanation of Verses" label
+    // (both ashaar_ki_tashreeh and ashar_ki_tashreeh map to same label)
+    const isPunjabi9thPTB = selectedSubject &&
+      selectedBoard === "PTB" &&
+      selectedLevel === "9TH" &&
+      ["Punjabi", "پنجابی"].some(s => subjectName === s || subjectName.includes(s));
+    if (isPunjabi9thPTB) {
+      // Remove Long Questions
+      rawOptions = rawOptions.filter((opt) => opt.value !== "long");
+      // Deduplicate by label (keep first occurrence of "Explanation of Verses")
+      const seenLabels = new Set();
+      rawOptions = rawOptions.filter((opt) => {
+        const label = getProfessionalQuestionTypeLabel(opt.value, opt.label);
+        if (label.includes("Explanation of Verses")) {
+          if (seenLabels.has(label)) {
+            return false;
+          }
+          seenLabels.add(label);
+          return true;
+        }
+        return true;
+      });
     }
 
     // Debug logs for runtime inspection — remove after verification
@@ -371,10 +471,6 @@ const GeneratePaper = () => {
     if (appliedQuestionType === "mcq") filtered = filtered.filter((q) => q.contentType === "mcq" && !isCompositionType(q.chapterPart));
     if (appliedQuestionType === "short") filtered = filtered.filter((q) => q.contentType === "short" && !isCompositionType(q.chapterPart));
     if (appliedQuestionType === "long") filtered = filtered.filter((q) => q.contentType === "long" && !isCompositionType(q.chapterPart));
-    if (appliedQuestionType && !["mcq", "short", "long"].includes(appliedQuestionType)) {
-      filtered = filtered.filter((q) => q.chapterPart === appliedQuestionType);
-    }
-
     if (appliedQuestionPriority && appliedQuestionPriority !== "all") {
       if (appliedQuestionPriority.startsWith("cat:")) {
         const categoryValue = appliedQuestionPriority.replace("cat:", "");
@@ -541,6 +637,14 @@ const GeneratePaper = () => {
       return;
     }
 
+    if (!dualMedium) {
+      setSelectionError("Please select a medium mode.");
+      setShowSearchResults(false);
+      setValidationMessage("Select a medium mode!");
+      setShowValidationDialog(true);
+      return;
+    }
+
     setSelectionError("");
     setShowSearchResults(true);
     setIsSearchingQuestions(true);
@@ -549,6 +653,7 @@ const GeneratePaper = () => {
     setAppliedQuestionType(questionType);
     setAppliedQuestionPriority(questionPriority);
     setAppliedDualMedium(dualMedium);
+    setAppliedTwoQuestionsPerLine(twoQuestionsPerLine);
 
     try {
       const contentTypeFilter = ["mcq", "short", "long"].includes(questionType)
@@ -586,14 +691,16 @@ const GeneratePaper = () => {
   const handleAddQuestions = () => {
     const requiredCount = getRequiredCount();
     if (!requiredCount) {
-      setSelectionError("Please enter a valid Required Questions value first.");
+      setValidationMessage("Please enter a valid Required Questions value first.");
+      setShowValidationDialog(true);
       return;
     }
     const effectiveCount = appliedQuestionType === "match_columns"
       ? Object.values(groupedQuestions).filter(qs => qs.some(q => selectedQuestions.includes(q.id))).length
       : selectedQuestions.length;
     if (effectiveCount !== requiredCount) {
-      setSelectionError(`Please select exactly ${requiredCount} question(s) first.`);
+      setValidationMessage(`Please select exactly ${requiredCount} question(s) first.`);
+      setShowValidationDialog(true);
       return;
     }
 
@@ -684,6 +791,7 @@ const GeneratePaper = () => {
       totalMarks: totalMarks && totalMarks !== "0" ? totalMarks : String(workspaceQuestions.length * (Number(eachQMarks) || 2)),
       questionType,
       medium: appliedDualMedium,
+      twoQuestionsPerLine,
       questions: workspaceQuestions.map((question) => ({
         id: question.id,
         contentType: question.contentType,
@@ -714,25 +822,34 @@ const GeneratePaper = () => {
     const marksPerQuestion = Number(eachQMarks) || 2;
     const calculatedTotalMarks = totalMarks || String(activeQuestions.length * marksPerQuestion);
 
-    await addSavedPaper({
-      id: Date.now(),
-      title: paperName || `${selectedSubject?.split("||")[0] || "Paper"} Test`,
-      subject: selectedSubject?.split("||")[0] || "",
-      className: selectedLevel || "",
-      board: selectedBoard || "",
-      teacherName: session?.name || "Institute",
-      date: dateForStorage,
-      paperCategory: paperCategory || `${selectedSubject?.split("||")[0] || "Paper"} - ${questionType}`,
-      timeAllowed: timeAllowed || "40",
-      totalMarks: calculatedTotalMarks,
-      questionType,
-      medium: appliedDualMedium,
-      questions: activeQuestions,
-    });
+    try {
+      await addSavedPaper({
+        id: Date.now(),
+        title: paperName || `${selectedSubject?.split("||")[0] || "Paper"} Test`,
+        subject: selectedSubject?.split("||")[0] || "",
+        className: selectedLevel || "",
+        board: selectedBoard || "",
+        teacherName: session?.name || "Institute",
+        date: dateForStorage,
+        paperCategory: paperCategory || `${selectedSubject?.split("||")[0] || "Paper"} - ${questionType}`,
+        timeAllowed: timeAllowed || "40",
+        totalMarks: calculatedTotalMarks,
+        questionType,
+        medium: appliedDualMedium,
+        twoQuestionsPerLine,
+        questions: activeQuestions,
+      });
 
-    window.alert("Paper saved successfully.");
-    setShowSavePaperDialog(false);
-    navigate("/dashboard", { state: { activeView: "savedpapers" } });
+      window.alert("Paper saved successfully.");
+      setShowSavePaperDialog(false);
+      navigate("/dashboard", { state: { activeView: "savedpapers" } });
+    } catch (err) {
+      if (err.message === "TRIAL_LIMIT_REACHED") {
+        setShowTrialLimitDialog(true);
+      } else {
+        window.alert("Failed to save paper: " + err.message);
+      }
+    }
   };
 
   useEffect(() => {
@@ -764,7 +881,9 @@ const GeneratePaper = () => {
       setQuestionType(savedPaper.questionType || "");
       setAppliedQuestionType(savedPaper.questionType || "");
       setAppliedQuestionPriority("all");
-      setAppliedDualMedium("dual");
+      const paperMedium = savedPaper.medium || "dual";
+      setDualMedium(paperMedium);
+      setAppliedDualMedium(paperMedium);
       setRequiredQuestions(String(savedPaper.questions.length || 0));
       setEachQMarks(String(marksPerQuestion));
       setShuffledOrder(orderedIds);
@@ -866,21 +985,23 @@ const GeneratePaper = () => {
       }
     }
     if (groups && groups.length > 0) {
-      if (selectedLevel === "9TH" || selectedLevel === "11TH" || selectedLevel === "INTER-I") {
+      if (isTrial) {
+        const firstGroup = groups[0];
+        setSelectedChapters(firstGroup ? [firstGroup.name, ...firstGroup.chapters] : []);
+      } else if (selectedLevel === "9TH" || selectedLevel === "11TH" || selectedLevel === "INTER-I") {
         setSelectedChapters([]);
       } else {
         setSelectedChapters(groups.flatMap((g) => [g.name, ...g.chapters]));
       }
       lastInitializedRef.current = { key: currentKey, isDb: hasDb, isTopicsFile: hasTopicsFile };
     }
-  }, [dbChapterGroups, selectedSubject, selectedLevel, selectedBoard]);
+  }, [dbChapterGroups, selectedSubject, selectedLevel, selectedBoard, isTrial]);
 
   useEffect(() => {
     setAllQuestions([]);
     setSelectedQuestions([]);
     setShowSearchResults(false);
     setSelectionError("");
-    clearQuestionBankCache();
     setAppliedQuestionType("");
     setAppliedQuestionPriority("all");
     setAppliedDualMedium("dual");
@@ -964,7 +1085,7 @@ const GeneratePaper = () => {
       </div>
 
       <div className="mt-3 rounded-xl bg-primary text-primary-foreground p-3">
-        <p className="text-[11px] uppercase tracking-wide opacity-70">Plan Status</p>
+        <p className="text-[12px] uppercase tracking-wide opacity-70">Plan Status</p>
         <p className="text-lg font-extrabold">Active</p>
         <p className="text-xs opacity-80">Valid till 30 Dec 2026</p>
       </div>
@@ -974,24 +1095,25 @@ const GeneratePaper = () => {
           <Home className="w-4 h-4" />
           Overview
         </button>
-        <button type="button" className="w-full flex items-center gap-2.5 px-3 py-2 rounded-lg text-sm font-medium text-foreground hover:text-primary hover:bg-secondary text-left">
+        <button type="button" onClick={() => navigate("/dashboard", { state: { activeView: "billing" } })} className="w-full flex items-center gap-2.5 px-3 py-2 rounded-lg text-sm font-medium text-foreground hover:text-primary hover:bg-secondary text-left">
           <CreditCard className="w-4 h-4" />
           Billing
         </button>
-        <button type="button" className="w-full flex items-center gap-2.5 px-3 py-2 rounded-lg text-sm font-medium text-foreground hover:text-primary hover:bg-secondary text-left">
+        <button type="button" onClick={() => navigate("/dashboard", { state: { activeView: "password" } })} className="w-full flex items-center gap-2.5 px-3 py-2 rounded-lg text-sm font-medium text-foreground hover:text-primary hover:bg-secondary text-left">
           <Key className="w-4 h-4" />
           Change Password
         </button>
       </nav>
 
       <div className="mt-4 pt-3 border-t border-border space-y-0.5">
-        <button type="button" className="w-full flex items-center gap-2.5 px-3 py-2 rounded-lg text-sm font-medium text-foreground hover:text-primary hover:bg-secondary text-left">
+        <button type="button" onClick={() => navigate("/dashboard", { state: { activeView: "settings" } })} className="w-full flex items-center gap-2.5 px-3 py-2 rounded-lg text-sm font-medium text-foreground hover:text-primary hover:bg-secondary text-left">
           <Settings className="w-4 h-4" />
           Settings
         </button>
         <button
           type="button"
           onClick={() => {
+            localStorage.removeItem("trial_portal_settings");
             logout();
             navigate("/institute/login");
           }}
@@ -1024,8 +1146,8 @@ const GeneratePaper = () => {
               {/* First Row: Question Type and Dual Medium */}
               <div className="grid grid-cols-2 gap-6">
                 <div>
-                  <label className="block text-[11px] font-semibold text-gray-700 mb-2">SELECT QUESTION TYPE</label>
-                  <select value={questionType} onChange={(e) => setQuestionType(e.target.value)} className="w-full border border-gray-300 rounded px-3 py-2 text-sm text-gray-700 bg-white">
+                  <label className="block text-[12px] font-semibold text-gray-700 mb-2">SELECT QUESTION TYPE</label>
+                  <select value={questionType} onChange={(e) => setQuestionType(e.target.value)} className="w-full border border-gray-300 rounded px-2 py-1.5 text-xs text-gray-700 bg-white">
                     <option value="">Select question type</option>
                     {questionTypeOptions.map((option) => (
                       <option key={option.value} value={option.value}>{option.label}</option>
@@ -1033,8 +1155,9 @@ const GeneratePaper = () => {
                   </select>
                 </div>
                 <div>
-                  <label className="block text-[11px] font-semibold text-gray-700 mb-2">DUAL MEDIUM</label>
-                  <select value={dualMedium} onChange={(e) => setDualMedium(e.target.value)} className="w-full border border-gray-300 rounded px-3 py-2 text-sm text-gray-700 bg-white">
+                  <label className="block text-[12px] font-semibold text-gray-700 mb-2">DUAL MEDIUM <span className="text-red-500">*</span></label>
+                  <select value={dualMedium} onChange={(e) => setDualMedium(e.target.value)} className="w-full border border-gray-300 rounded px-2 py-1.5 text-xs text-gray-700 bg-white">
+                    <option value="" disabled>Select Mode</option>
                     <option value="dual">Dual</option>
                     <option value="english">English</option>
                     <option value="urdu">Urdu</option>
@@ -1043,47 +1166,28 @@ const GeneratePaper = () => {
               </div>
 
               {/* Second Row: Input Fields */}
-              <div className="grid grid-cols-5 gap-3">
+              <div className="grid grid-cols-2 gap-3">
                 <div>
-                  <label className="block text-[11px] font-semibold text-gray-700 mb-2">Required Questions *</label>
-                  <input type="text" value={requiredQuestions} onChange={(e) => setRequiredQuestions(e.target.value)} className="w-full border border-gray-300 rounded px-3 py-2 text-sm text-gray-700" placeholder="0" />
+                  <label className="block text-[12px] font-semibold text-gray-700 mb-2">Required Questions <span className="text-red-500">*</span></label>
+                  <input type="text" value={requiredQuestions} onChange={(e) => setRequiredQuestions(e.target.value.replace(/\D/g, ''))} className="w-full border border-gray-300 rounded px-2 py-1.5 text-xs text-gray-700" placeholder="0" />
                 </div>
                 <div>
-                  <label className="block text-[11px] font-semibold text-gray-700 mb-2">Each Q Marks *</label>
-                  <input type="text" value={eachQMarks} onChange={(e) => setEachQMarks(e.target.value)} className="w-full border border-gray-300 rounded px-3 py-2 text-sm text-gray-700" placeholder="0" />
-                </div>
-                <div>
-                  <label className="block text-[11px] font-semibold text-gray-700 mb-2">Question Priority</label>
-                  <select value={questionPriority} onChange={(e) => setQuestionPriority(e.target.value)} className="w-full border border-gray-300 rounded px-3 py-2 text-sm text-gray-700 bg-white">
-                    {priorityOptions.map((option) => (
-                      <option key={option.value} value={option.value}>{option.label}</option>
-                    ))}
-                  </select>
-                </div>
-                <div>
-                  <label className="block text-[11px] font-semibold text-gray-700 mb-2">Ignore Questions</label>
-                  <input type="text" value={ignoreQuestions} onChange={(e) => setIgnoreQuestions(e.target.value)} className="w-full border border-gray-300 rounded px-3 py-2 text-sm text-gray-700" placeholder="0" />
-                </div>
-                <div>
-                  <label className="block text-[11px] font-semibold text-gray-700 mb-2">Blank Lines</label>
-                  <input type="text" value={blankLines} onChange={(e) => setBlankLines(e.target.value)} className="w-full border border-gray-300 rounded px-3 py-2 text-sm text-gray-700" placeholder="0" />
-                </div>
-              </div>
-
-              {/* Third Row: Blank Line Type */}
-              <div className="grid grid-cols-1 gap-4">
-                <div>
-                  <label className="block text-[11px] font-semibold text-gray-700 mb-2">Blank Line Type</label>
-                  <select value={blankLineType} onChange={(e) => setBlankLineType(e.target.value)} className="w-full border border-gray-300 rounded px-3 py-2 text-sm text-gray-700 bg-white">
-                    <option>1 LINE</option>
-                    <option>2 LINES</option>
-                    <option>3 LINES</option>
-                  </select>
+                  <label className="block text-[12px] font-semibold text-gray-700 mb-2">Each Q Marks <span className="text-red-500">*</span></label>
+                  <input type="text" value={eachQMarks} onChange={(e) => setEachQMarks(e.target.value.replace(/\D/g, ''))} className="w-full border border-gray-300 rounded px-2 py-1.5 text-xs text-gray-700" placeholder="0" />
                 </div>
               </div>
 
               {/* Search Button */}
-              <div className="flex gap-3">
+              <div className="flex items-center gap-3">
+                <label className="flex items-center gap-2 cursor-pointer">
+                  <input
+                    type="checkbox"
+                    checked={twoQuestionsPerLine}
+                    onChange={(e) => setTwoQuestionsPerLine(e.target.checked)}
+                    className="w-4 h-4 rounded border-gray-300 text-green-600 focus:ring-green-500"
+                  />
+                  <span className="text-xs font-medium text-gray-700">2 Questions Per Line</span>
+                </label>
                 <button
                   type="button"
                   disabled={isSearchingQuestions}
@@ -1164,7 +1268,7 @@ const GeneratePaper = () => {
                         <div className="bg-[#311b92] text-white text-center py-2 px-4 font-semibold text-sm">
                           {typeSlugToLabel[topic] || topic}
                         </div>
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-0">
+                        <div className={`grid grid-cols-1 ${appliedTwoQuestionsPerLine ? 'md:grid-cols-2' : ''} gap-0`}>
                           {qs.map((q, idx) => (
                             <div key={q.id} className="p-4 border-b border-r border-gray-100 flex flex-col justify-between hover:bg-slate-50 transition-colors">
                               <div className="flex gap-3 items-start mb-3">
@@ -1217,6 +1321,16 @@ const GeneratePaper = () => {
                 </div>
               )}
 
+              {/* Action Buttons */}
+              <div className="grid grid-cols-2 gap-4 py-4">
+                <button type="button" onClick={handleRandomSelect} className="bg-cyan-500 text-white text-sm font-semibold py-2 rounded hover:bg-cyan-600">
+                  ↻ RANDOM SELECT ›
+                </button>
+                <button type="button" onClick={handleAddQuestions} className="bg-green-600 text-white text-sm font-semibold py-2 rounded hover:bg-green-700">
+                  ADD QUESTIONS ›
+                </button>
+              </div>
+
               {/* Green Selected Questions Area */}
               <div className="bg-green-200 border-2 border-green-300 rounded-xl p-4 min-h-[200px]">
                 {selectedQuestions.length > 0 && (
@@ -1254,16 +1368,6 @@ const GeneratePaper = () => {
                   )
                 )}
               </div>
-
-              {/* Action Buttons */}
-              <div className="grid grid-cols-2 gap-4 py-4">
-                <button type="button" onClick={handleRandomSelect} className="bg-cyan-500 text-white text-sm font-semibold py-2 rounded hover:bg-cyan-600">
-                  ↻ RANDOM SELECT ›
-                </button>
-                <button type="button" onClick={handleAddQuestions} className="bg-green-600 text-white text-sm font-semibold py-2 rounded hover:bg-green-700">
-                  ADD QUESTIONS ›
-                </button>
-              </div>
             </div>
           </DialogContent>
         </Dialog>
@@ -1276,6 +1380,21 @@ const GeneratePaper = () => {
             <button
               type="button"
               onClick={() => setShowValidationDialog(false)}
+              className="px-6 py-2 rounded-lg text-white text-lg font-semibold bg-indigo-500 hover:bg-indigo-600"
+            >
+              OK
+            </button>
+          </DialogContent>
+        </Dialog>
+        <Dialog open={showTrialLimitDialog} onOpenChange={setShowTrialLimitDialog}>
+          <DialogContent className="max-w-[380px] p-5 text-center">
+            <div className="mx-auto mb-4 w-20 h-20 rounded-full border-4 border-red-400 flex items-center justify-center">
+              <X className="w-10 h-10 text-red-400" />
+            </div>
+            <h3 className="text-2xl font-bold text-gray-600 mb-5">Your limit reached. You cannot save more than 2 papers on a trial account.</h3>
+            <button
+              type="button"
+              onClick={() => setShowTrialLimitDialog(false)}
               className="px-6 py-2 rounded-lg text-white text-lg font-semibold bg-indigo-500 hover:bg-indigo-600"
             >
               OK
@@ -1328,13 +1447,13 @@ const GeneratePaper = () => {
             </button>
             <div>
               <h1 className="text-base font-bold tracking-wide text-primary-foreground">APEXTESTSOLUTION</h1>
-              <p className="text-xs text-primary-foreground/50">Version 10.0</p>
+              
             </div>
           </div>
 
           <div className="text-right min-w-0">
-            <p className="text-sm font-semibold text-primary-foreground truncate">YOUR SCHOOL NAME HERE</p>
-            <p className="text-xs text-primary-foreground/50 truncate hidden sm:block">YOUR SCHOOL ADDRESS HERE</p>
+            <p className="text-sm font-semibold text-primary-foreground truncate">{session?.name || "Institute"}</p>
+            <p className="text-xs text-primary-foreground/50 truncate hidden sm:block">{session?.address || ""}</p>
           </div>
         </div>
       </header>
@@ -1395,9 +1514,11 @@ const GeneratePaper = () => {
           </div>
 
           {!selectedBoard ? (
-            <div className="grid grid-cols-2 sm:grid-cols-2 xl:grid-cols-4 gap-3 sm:gap-5">
-              {boardCards.map((board) => (
-                board.comingSoon ? (
+            <>
+              {/* Syllabus Cards */}
+              <div className="grid grid-cols-2 sm:grid-cols-2 xl:grid-cols-4 gap-3 sm:gap-5">
+                {boardCards.map((board) => (
+                  board.comingSoon ? (
                   <div
                     key={board.name}
                     className="group relative overflow-hidden rounded-2xl border border-primary/10 bg-gradient-to-br from-card via-card to-secondary/40 p-4 sm:p-6 text-center min-h-[150px] sm:min-h-[200px] flex flex-col items-center justify-center opacity-70 cursor-not-allowed select-none"
@@ -1440,6 +1561,7 @@ const GeneratePaper = () => {
                 )
               ))}
             </div>
+            </>
           ) : selectedBoard && !selectedLevel ? (
             <div className="grid grid-cols-2 sm:grid-cols-2 xl:grid-cols-4 gap-3 sm:gap-4">
               {(boardClassMap[selectedBoard] || []).map((card) => (
@@ -1486,7 +1608,7 @@ const GeneratePaper = () => {
                 )
               ))}
             </div>
-          ) : selectedLevel && selectedBoard && !selectedSubject && boardSubjectsMap[selectedBoard]?.[selectedLevel] ? (
+) : selectedLevel && selectedBoard && !selectedSubject && boardSubjectsMap[selectedBoard]?.[selectedLevel] ? (
             <div className="space-y-5">
               <h3 className="text-center text-xl sm:text-2xl font-bold text-foreground">{selectedBoard} › {selectedLevel}</h3>
               {boardSubjectsMap[selectedBoard][selectedLevel].map((group, gi) => (
@@ -1499,7 +1621,7 @@ const GeneratePaper = () => {
                       <button
                         key={s.title}
                         type="button"
-                          onClick={() => {
+                        onClick={() => {
                           setSelectedSubject(selectedBoard === "AFAQ" && s.subtitle ? `${s.title}||${s.subtitle}` : s.title);
                           setSelectedChapters([]);
                         }}
@@ -1555,9 +1677,9 @@ const GeneratePaper = () => {
                             </tbody>
                           </table>
                         ) : (
-                          <div className="space-y-1">
+                          <div className={appliedTwoQuestionsPerLine ? "grid grid-cols-1 md:grid-cols-2 gap-3" : "space-y-1"}>
                             {section.questions.map((q, idx) => (
-                              <div key={q.id} className="flex items-start justify-between gap-4">
+                              <div key={q.id} className={appliedTwoQuestionsPerLine ? "border border-gray-100 rounded-lg p-3" : "flex items-start justify-between gap-4"}>
                                 {isManualEditing ? (
                                   <>
                                     {showEn && <input
@@ -1577,15 +1699,35 @@ const GeneratePaper = () => {
                                     {(() => {
                                       const qText = editedQuestions[q.id]?.text ?? q.text;
                                       const qUrdu = editedQuestions[q.id]?.urdu ?? q.urdu;
-                                      const { englishStem, urduStem } = getQuestionStems(qText, qUrdu);
+                                      const { englishStem, urduStem, parsedText, parsedUrdu } = getQuestionStems(qText, qUrdu);
+                                      const mergedOptions = mergeMcqOptions(parsedText, parsedUrdu);
+                                      const hasOptions = mergedOptions.some((o) => o.english || o.urdu);
                                       return (
                                         <>
                                           {showEn && <p className="text-sm text-gray-800">{idx + 1}. <MathText text={englishStem} /></p>}
+                                          {showEn && hasOptions && (
+                                            <div className="mt-1 space-y-0.5">
+                                              {mergedOptions.map((opt) => (
+                                                <p key={opt.key} className="text-[12px] text-gray-700">
+                                                  ({opt.key}) <MathText text={sanitizeOptionValue(opt.english || opt.urdu, "english")} />
+                                                </p>
+                                              ))}
+                                            </div>
+                                          )}
                                           {showUr && (
                                             <p className="text-sm text-gray-800 text-right" dir="rtl">
                                               {idx + 1}۔ <MathText text={urduStem} />
                                               {(() => { const sup = getEnglishOnlyTokens(englishStem, urduStem); return sup.length > 0 ? <span dir="ltr" className="ml-1">{sup.join(" ")}</span> : null; })()}
                                             </p>
+                                          )}
+                                          {showUr && hasOptions && (
+                                            <div className="mt-1 space-y-0.5" dir="rtl">
+                                              {mergedOptions.map((opt) => (
+                                                <p key={opt.key} className="text-[12px] text-gray-700 text-right">
+                                                  ({opt.key}) <MathText text={sanitizeOptionValue(opt.urdu || opt.english, "urdu")} />
+                                                </p>
+                                              ))}
+                                            </div>
                                           )}
                                         </>
                                       );
@@ -1617,66 +1759,97 @@ const GeneratePaper = () => {
             <div className="space-y-6">
               <div className="bg-card border border-border rounded-xl p-4 sm:p-5">
                 <h3 className="text-base sm:text-lg font-bold text-foreground mb-3">{selectedSubject?.split("||")[0]} - {selectedLevel}</h3>
-                <p className="text-[11px] sm:text-xs text-muted-foreground mb-5">Select Chapter(s)</p>
+                <p className="text-[12px] sm:text-xs text-muted-foreground mb-5">Select Chapter(s)</p>
 
                 <div className="mb-5">
+                  {isTrial ? (
+                    <p className="text-[12px] sm:text-xs font-semibold text-amber-600">Trial mode: only the first chapter is available. Other chapters are locked.</p>
+                  ) : (
                   <label className="flex items-center gap-3 cursor-pointer">
                     <input
                       type="checkbox"
-                      checked={selectedChapters.length === chapterGroups.flatMap(g => [g.name, ...g.chapters]).length && selectedChapters.length > 0}
+                      checked={
+                        selectedChapters.length ===
+                          chapterGroups.flatMap(g => [g.name, ...g.chapters.map(ch => makeChapterKey(g.name, ch))]).length &&
+                        selectedChapters.length > 0
+                      }
                       onChange={(e) => {
                         if (e.target.checked) {
-                          setSelectedChapters(chapterGroups.flatMap(g => [g.name, ...g.chapters]));
+                          setSelectedChapters(chapterGroups.flatMap(g => [g.name, ...g.chapters.map(ch => makeChapterKey(g.name, ch))]));
                         } else {
                           setSelectedChapters([]);
                         }
                       }}
                       className="h-4 w-4 accent-primary rounded"
                     />
-                    <span className="text-[11px] sm:text-xs font-bold text-foreground uppercase tracking-wide">Select All Chapters</span>
+                    <span className="text-[12px] sm:text-xs font-bold text-foreground uppercase tracking-wide">Select All Chapters</span>
                   </label>
+                  )}
                 </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
-                  {chapterGroups.map((group, groupIdx) => (
-                    <div key={groupIdx} className="bg-background border border-border rounded-lg p-4">
-                      <label className="flex items-start gap-2.5 mb-3 cursor-pointer">
+                  {chapterGroups.map((group, groupIdx) => {
+                    const isFirstGroup = groupIdx === 0;
+                    const isGroupDisabled = isTrial && !isFirstGroup;
+                    return (
+                    <div key={groupIdx} className={`bg-background border border-border rounded-lg p-4 ${isGroupDisabled ? "opacity-50" : ""}`}>
+                      <label className={`flex items-start gap-2.5 mb-3 ${isGroupDisabled ? "cursor-not-allowed" : "cursor-pointer"}`}>
                         <input
                           type="checkbox"
-                          checked={selectedChapters.includes(group.name)}
+                          checked={isTrial ? isFirstGroup : selectedChapters.includes(group.name)}
+                          disabled={isGroupDisabled}
                           onChange={(e) => {
                             if (e.target.checked) {
-                              setSelectedChapters([...selectedChapters, group.name, ...group.chapters]);
+                              setSelectedChapters([...selectedChapters, group.name, ...group.chapters.map(ch => makeChapterKey(group.name, ch))]);
                             } else {
-                              setSelectedChapters(selectedChapters.filter(ch => ch !== group.name && !group.chapters.includes(ch)));
+                              setSelectedChapters(selectedChapters.filter(ch => ch !== group.name && !group.chapters.map(c => makeChapterKey(group.name, c)).includes(ch)));
                             }
                           }}
                           className="h-4 w-4 accent-primary rounded mt-0.5 flex-shrink-0"
                         />
-                        <span className="text-[11px] sm:text-xs font-bold text-foreground">{group.name}</span>
+                        <span className="text-[12px] sm:text-xs font-bold text-foreground">{group.name}</span>
+                        {isGroupDisabled && <Lock className="w-3.5 h-3.5 text-muted-foreground ml-1" />}
                       </label>
 
                       <div className="space-y-2 ml-7">
-                        {group.chapters.filter(ch => ch !== group.name).map((chapter, chIdx) => (
-                          <label key={chIdx} className="flex items-center gap-2.5 cursor-pointer">
+                        {group.chapters
+                          .filter(ch => ch !== group.name)
+                          .filter(ch => {
+                            // Hide "Exercise" for 9TH, 10TH, INTER-I Physics, Chemistry, Computer, Biology (PTB)
+                            const subjectName = selectedSubject?.split("||")[0] || "";
+                            const isTargetSubject = ["Physics", "Chemistry", "Computer", "Biology"].includes(subjectName);
+                            const isTargetLevel = ["9TH", "10TH", "INTER-I"].includes(selectedLevel || "");
+                            const isPTB = selectedBoard === "PTB";
+                            if (isTargetSubject && isTargetLevel && isPTB) {
+                              return ch.toLowerCase() !== "exercise";
+                            }
+                            return true;
+                          })
+                          .map((chapter, chIdx) => {
+                          const chapterKey = makeChapterKey(group.name, chapter);
+                          return (
+                          <label key={chIdx} className={`flex items-center gap-2.5 ${isGroupDisabled ? "cursor-not-allowed opacity-50" : "cursor-pointer"}`}>
                             <input
                               type="checkbox"
-                              checked={selectedChapters.includes(chapter)}
+                              checked={selectedChapters.includes(chapterKey)}
+                              disabled={isGroupDisabled}
                               onChange={(e) => {
                                 if (e.target.checked) {
-                                  setSelectedChapters([...selectedChapters, chapter]);
+                                  setSelectedChapters([...selectedChapters, chapterKey]);
                                 } else {
-                                  setSelectedChapters(selectedChapters.filter(ch => ch !== chapter && ch !== group.name));
+                                  setSelectedChapters(selectedChapters.filter(ch => ch !== chapterKey && ch !== group.name));
                                 }
                               }}
                               className="h-3.5 w-3.5 accent-primary rounded"
                             />
-                            <span className="text-[11px] sm:text-xs text-foreground">{chapter}</span>
+                            <span className="text-[12px] sm:text-xs text-foreground">{chapter}</span>
                           </label>
-                        ))}
+                          );
+                        })}
                       </div>
                     </div>
-                  ))}
+                    );
+                  })}
                 </div>
 
                 {selectedQuestions.length > 0 && (

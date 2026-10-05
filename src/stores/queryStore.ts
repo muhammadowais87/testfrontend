@@ -23,10 +23,13 @@ interface QueryInput {
 }
 
 interface QueryStore {
-  queries: Query[];
+  queries: UiQuery[];
   isLoading: boolean;
   error: string | null;
-  fetchQueries: () => Promise<void>;
+  total: number;
+  page: number;
+  hasMore: boolean;
+  fetchQueries: (page?: number) => Promise<void>;
   submitQuery: (q: QueryInput) => Promise<void>;
   markAsRead: (id: string) => Promise<void>;
   deleteQuery: (id: string) => Promise<void>;
@@ -60,10 +63,13 @@ export const useQueryStore = create<QueryStore>((set) => ({
   queries: [],
   isLoading: false,
   error: null,
-  fetchQueries: async () => {
+  total: 0,
+  page: 1,
+  hasMore: false,
+  fetchQueries: async (page = 1) => {
     set({ isLoading: true, error: null });
     try {
-      const response = await fetch(`${API_BASE_URL}/queries`);
+      const response = await fetch(`${API_BASE_URL}/queries?page=${page}&limit=100`);
       const data = await response.json();
 
       if (!response.ok) {
@@ -71,7 +77,13 @@ export const useQueryStore = create<QueryStore>((set) => ({
       }
 
       const items: QueryApiItem[] = Array.isArray(data?.queries) ? data.queries : [];
-      set({ queries: items.map(toUiQuery), isLoading: false });
+      set({
+        queries: items.map(toUiQuery),
+        total: data.total || 0,
+        page: data.page || 1,
+        hasMore: data.hasMore || false,
+        isLoading: false,
+      });
     } catch (error) {
       set({
         isLoading: false,

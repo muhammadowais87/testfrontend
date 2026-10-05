@@ -7,7 +7,7 @@ export type ParsedQuestionOptions = {
 };
 
 export function parseQuestionOptions(text: string): ParsedQuestionOptions {
-  const optionRegex = /\(([A-D])\)\s*([^()]+?)(?=\s*\([A-D]\)|$)/g;
+  const optionRegex = /\(([A-D])\)\s*((?:(?!\s*\([A-D]\)).)+?)(?=\s*\([A-D]\)|$)/g;
   const options: Array<{ key: string; value: string }> = [];
   let match: RegExpExecArray | null;
 
@@ -56,6 +56,18 @@ export function mergeMcqOptions(
     english: parsedA.options.find((o) => o.key === key)?.value || "",
     urdu: parsedB.options.find((o) => o.key === key)?.value || "",
   }));
+}
+
+// Safety strip: remove trailing Urdu text from an English-only option value
+export function sanitizeOptionValue(val: string, lang: "english" | "urdu"): string {
+  if (!val) return val;
+  if (lang === "english") {
+    const idx = val.search(/[\u0600-\u06FF]/);
+    return idx === -1 ? val : val.slice(0, idx).trim();
+  }
+  const idx = val.search(/[\u0600-\u06FF]/);
+  if (idx === -1) return val;
+  return val.slice(idx).trim();
 }
 
 export function splitVerseText(text: string): string[] {

@@ -5,7 +5,10 @@ import { API_BASE_URL } from "@/lib/api";
 interface SchoolStore {
   schools: SchoolData[];
   isLoading: boolean;
-  fetchSchools: () => Promise<void>;
+  total: number;
+  page: number;
+  hasMore: boolean;
+  fetchSchools: (page?: number) => Promise<void>;
   deleteSchool: (id: number) => Promise<void>;
   addSchool: (school: Omit<SchoolData, "id" | "monthlyPayments"> & { email: string; password?: string }) => Promise<void>;
   updateSchool: (id: number, data: Partial<Omit<SchoolData, "id" | "monthlyPayments">> & { email?: string; password?: string }) => Promise<void>;
@@ -17,17 +20,26 @@ interface SchoolStore {
 export const useSchoolStore = create<SchoolStore>((set) => ({
   schools: [],
   isLoading: false,
-  fetchSchools: async () => {
+  total: 0,
+  page: 1,
+  hasMore: false,
+  fetchSchools: async (page = 1) => {
     set({ isLoading: true });
     try {
-      const response = await fetch(`${API_BASE_URL}/schools`);
+      const response = await fetch(`${API_BASE_URL}/schools?page=${page}&limit=100`);
       const data = await response.json();
 
       if (!response.ok) {
         throw new Error(data?.message || "Failed to fetch schools");
       }
 
-      set({ schools: Array.isArray(data?.schools) ? data.schools : [], isLoading: false });
+      set({
+        schools: Array.isArray(data?.schools) ? data.schools : [],
+        total: data.total || 0,
+        page: data.page || 1,
+        hasMore: data.hasMore || false,
+        isLoading: false,
+      });
     } catch {
       set({ isLoading: false });
     }

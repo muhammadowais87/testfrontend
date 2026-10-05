@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import { getAdminRoute } from "@/lib/adminRoute";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -26,7 +27,7 @@ const AdminTeachers = () => {
 
   useEffect(() => {
     if (localStorage.getItem("admin_logged_in") !== "true") {
-      navigate("/portal-x9k7m/login");
+      navigate("/${getAdminRoute()}/login");
       return;
     }
 
@@ -86,7 +87,7 @@ const AdminTeachers = () => {
                   className="pl-9 h-9 text-sm"
                 />
               </div>
-              <Button size="sm" className="gap-1.5 h-9 shrink-0" onClick={() => navigate("/portal-x9k7m/teacher/add")}>
+              <Button size="sm" className="gap-1.5 h-9 shrink-0" onClick={() => navigate("/${getAdminRoute()}/teacher/add")}>
                 <Plus className="w-4 h-4" /> Add
               </Button>
             </div>
@@ -113,7 +114,7 @@ const AdminTeachers = () => {
                     <TableRow
                       key={teacher.id}
                       className="cursor-pointer group hover:bg-muted/30 transition-colors"
-                      onClick={() => navigate(`/portal-x9k7m/teacher/${teacher.id}`)}
+                      onClick={() => navigate(`/${getAdminRoute()}/teacher/${teacher.id}`)}
                     >
                       <TableCell className="font-medium text-muted-foreground text-xs">{i + 1}</TableCell>
                       <TableCell>
@@ -159,7 +160,7 @@ const AdminTeachers = () => {
                             variant="ghost"
                             size="icon"
                             className="h-8 w-8 text-muted-foreground group-hover:text-primary transition-colors"
-                            onClick={() => navigate(`/portal-x9k7m/teacher/${teacher.id}`)}
+                            onClick={() => navigate(`/${getAdminRoute()}/teacher/${teacher.id}`)}
                           >
                             <ArrowUpRight className="w-4 h-4" />
                           </Button>

@@ -1,7 +1,9 @@
 import { getNineTopicChapters } from "./nineTopicChapters";
+import { getTenTopicChapters } from "./tenTopicChapters";
 import afaqTopicChapters from "./afaqTopicChapters.json";
 import oxfordTopicChapters from "./oxfordTopicChapters.json";
 import baTopicChapters from "./baTopicChapters.json";
+
 
 export type SubjectCard = {
   title: string;
@@ -67,6 +69,8 @@ const bookImages: Record<string, string> = {
   "غذا اور غذائیت": "/images/books/home-economics-book.png",
   "مرغبانی": "/images/books/home-economics-book.png",
   "پارچہ بافی اور لباس": "/images/books/home-economics-book.png",
+  "Electrical Wiring": "/images/books/general-science-book.png",
+  "Textile and Clothing": "/images/books/home-economics-book.png",
   "General Knowledge": "/images/books/general-science-book.png",
   "Social Study": "/images/books/social-studies-book.png",
   "ترجمہ القرآن": "/images/books/quran-book.png",
@@ -95,10 +99,9 @@ export const syllabusCards = [
   { title: "7TH", board: "PTB", gradient: "from-purple-500 to-pink-400", comingSoon: false },
   { title: "8TH", board: "PTB", gradient: "from-emerald-400 to-blue-700", comingSoon: false },
   { title: "9TH", board: "PTB", gradient: "from-cyan-300 to-blue-400", comingSoon: false },
-  { title: "10TH", board: "PTB", gradient: "from-green-600 to-lime-400", comingSoon: true },
+  { title: "10TH", board: "PTB", gradient: "from-green-600 to-lime-400", comingSoon: false },
   { title: "INTER-I", board: "PTB", gradient: "from-cyan-500 to-blue-500", comingSoon: false },
   { title: "INTER-II", board: "PTB", gradient: "from-amber-300 to-orange-300", comingSoon: true },
-  { title: "OLD BOOKS", board: "PTB", gradient: "from-orange-500 to-yellow-400", comingSoon: true },
 ];
 
 export const afaqCards = [
@@ -444,10 +447,16 @@ export const ptbClassSubjectsMap: Record<string, SubjectCard[][]> = {
   "7TH": [classSeventhSubjects],
   "8TH": [classEighthSubjects],
   "9TH": [ninthSubjects, ninthOptionalSubjects],
-  "10TH": [tenthSubjects, tenthOptionalSubjects],
+  "10TH": [
+    [...ninthSubjects, { title: "Pakistan Studies", subtitle: "10TH", image: getBookImage("Pakistan Studies") }],
+    [
+      ...ninthOptionalSubjects.filter(s => s.title !== "پارچہ بافی اور لباس").map(s => s.title === "علم شہریت" ? { ...s, title: "Civics" } : s),
+      { title: "Electrical Wiring", subtitle: "10TH", image: getBookImage("Electrical Wiring") },
+      { title: "Textile and Clothing", subtitle: "10TH", image: getBookImage("Textile and Clothing") },
+    ],
+  ],
   "INTER-I": [interOneCoreSubjects, interOneGeneralSubjects, interOneExtraSubjects],
   "INTER-II": [interTwoCoreSubjects, interTwoCommerceSubjects, interTwoExtraSubjects],
-  "OLD BOOKS": [oldBooksSubjects],
 };
 
 // Board-level map: board name -> class -> subjects
@@ -492,7 +501,8 @@ export const allBoardSubjectOptions: BoardSubjectOption[] = Object.entries(board
       groups.flatMap((subjects) =>
         subjects.map((subject) => {
           const title = subject.title.trim();
-          const label = `${board} - ${className} - ${title}`;
+          const series = (subject.subtitle || '').trim();
+          const label = series ? `${board} - ${className} - ${title} (${series})` : `${board} - ${className} - ${title}`;
           return {
             value: label,
             label,
@@ -2009,21 +2019,21 @@ const statisticsInterOneChapters: ChapterGroup[] = [
 
 // Principles of Accounting INTER-I (1st year) PTB chapters (user-provided)
 const accountingInterOneChapters: ChapterGroup[] = [
-  { name: "CHAP 1: Introduction", chapters: ["Introduction"] },
-  { name: "CHAP 2: Transactions And Accounting Equation", chapters: ["Transactions And Accounting Equation"] },
-  { name: "CHAP 3: Analysis Of Business Transactions And Double Entry System", chapters: ["Analysis Of Business Transactions And Double Entry System"] },
-  { name: "CHAP 4: Journal: The original Book Of Entry", chapters: ["Journal: The Original Book Of Entry"] },
-  { name: "CHAP 5: Ledger: The Main Book Of Accounts", chapters: ["Ledger: The Main Book Of Accounts"] },
-  { name: "CHAP 6: Accounting For Bills Of Exchange", chapters: ["Accounting For Bills Of Exchange"] },
-  { name: "CHAP 7: Special Journals", chapters: ["Special Journals"] },
-  { name: "CHAP 8: Cash Book And Bank Reconciliation Statement", chapters: ["Cash Book And Bank Reconciliation Statement"] },
-  { name: "CHAP 9: Journal Proper And Summary Of Book Keeping To The Trial Balance", chapters: ["Journal: Proper And Summary Of Book Keeping To Trial Balance"] },
-  { name: "CHAP 10: Final Accounts: The Completion Of Accounting Cycle", chapters: ["Final Accounts: The Completion Of Accounting Cycle"] },
-  { name: "CHAP 11: Adjustments And Their Effects On Final Accounts", chapters: ["Adjustments And Their Effects On Final Accounts"] },
-  { name: "CHAP 12: Work Sheet", chapters: ["Work Sheet"] },
-  { name: "CHAP 13: Financial Statements", chapters: ["Financial Statements"] },
-  { name: "CHAP 14: Capital And Revenue", chapters: ["Capital And Revenue"] },
-  { name: "CHAP 15: Rectification Of Errors", chapters: ["Rectification Of Errors"] },
+  { name: "CHAP 1: Introduction", chapters: ["1.1 Introduction"] },
+  { name: "CHAP 2: Transactions And Accounting Equation", chapters: ["2.1 Transactions And Accounting Equation"] },
+  { name: "CHAP 3: Analysis Of Business Transactions And Double Entry System", chapters: ["3.1 Analysis Of Business Transactions And Double Entry System"] },
+  { name: "CHAP 4: Journal: The Original Book Of Entry", chapters: ["4.1 Journal: The Original Book Of Entry"] },
+  { name: "CHAP 5: Ledger: The Main Book Of Accounts", chapters: ["5.1 Ledger: The Main Book Of Accounts"] },
+  { name: "CHAP 6: Accounting For Bills Of Exchange", chapters: ["6.1 Accounting For Bills Of Exchange"] },
+  { name: "CHAP 7: Special Journals", chapters: ["7.1 Special Journals"] },
+  { name: "CHAP 8: Cash Book And Bank Reconciliation Statement", chapters: ["8.1 Cash Book And Bank Reconciliation Statement"] },
+  { name: "CHAP 9: Journal Proper And Summary Of Book Keeping To The Trial Balance", chapters: ["9.1 Journal Proper And Summary Of Book Keeping To Trial Balance"] },
+  { name: "CHAP 10: Final Accounts: The Completion Of Accounting Cycle", chapters: ["10.1 Final Accounts: The Completion Of Accounting Cycle"] },
+  { name: "CHAP 11: Adjustments And Their Effects On Final Accounts", chapters: ["11.1 Adjustments And Their Effects On Final Accounts"] },
+  { name: "CHAP 12: Work Sheet", chapters: ["12.1 Work Sheet"] },
+  { name: "CHAP 13: Financial Statements", chapters: ["13.1 Financial Statements"] },
+  { name: "CHAP 14: Capital And Revenue", chapters: ["14.1 Capital And Revenue"] },
+  { name: "CHAP 15: Rectification Of Errors", chapters: ["15.1 Rectification Of Errors"] },
 ];
 
 // Principles of Economics INTER-I (1st year) PTB chapters (user-provided)
@@ -2474,34 +2484,18 @@ subjectChaptersMap["علم شہریت-INTER-II-PTB"] = civicsChapters;
 subjectChaptersMap["Civics-INTER-I-PTB"] = civicsChapters;
 subjectChaptersMap["Civics-INTER-II-PTB"] = civicsChapters;
 
-// Register AFAQ topic chapters into the map
-console.log(`[AFAQ init] registering ${Object.keys(afaqTopicChapters).length} AFAQ subject entries`);
-let regCount = 0;
-Object.entries(afaqTopicChapters).forEach(([key, chapters]) => {
-  subjectChaptersMap[key] = chapters as ChapterGroup[];
-  regCount++;
-});
-console.log(`[AFAQ init] registered ${regCount} entries. Total map size: ${Object.keys(subjectChaptersMap).length}`);
-
-// Register Oxford topic chapters
-let oxfordRegCount = 0;
-Object.entries(oxfordTopicChapters).forEach(([key, chapters]) => {
-  subjectChaptersMap[key] = chapters as ChapterGroup[];
-  oxfordRegCount++;
-});
-console.log(`[Oxford init] registered ${oxfordRegCount} entries. Total map size: ${Object.keys(subjectChaptersMap).length}`);
-
-// Default single-chapter entry for subjects without specific topic data
+// Load AFAQ, Oxford, BA chapter JSON data synchronously
 const defaultBaChapter: ChapterGroup[] = [{ name: "Syllabus", chapters: ["Full Syllabus"] }];
-
-// Register BA topic chapters into the map
-console.log(`[BA init] registering BA subject entries`);
-Object.entries(baTopicChapters as Record<string, ChapterGroup[]>).forEach(([key, chapters]) => {
-  subjectChaptersMap[key] = chapters;
-  regCount++;
-});
-
-// BA subjects without TXT data - add default entries
+const populateChapters = (data: unknown) => {
+  const records = data as Record<string, unknown>;
+  Object.entries(records).forEach(([key, chapters]) => {
+    subjectChaptersMap[key] = chapters as ChapterGroup[];
+  });
+};
+populateChapters(afaqTopicChapters);
+populateChapters(oxfordTopicChapters);
+populateChapters(baTopicChapters);
+// BA subjects without TXT data — register immediately (hardcoded, no JSON)
 const baSubjectsNoData: Record<string, string[]> = {
   "B.A Part-I": ["پنجابی", "عربی", "کشمیرات", "عمرانیات"],
   "B.A Part-II": ["پنجابی"],
@@ -2511,11 +2505,9 @@ Object.entries(baSubjectsNoData).forEach(([cls, subjects]) => {
     const key = `${subj}-${cls}-BA`;
     if (!subjectChaptersMap[key]) {
       subjectChaptersMap[key] = defaultBaChapter;
-      regCount++;
     }
   });
 });
-console.log(`[BA init] registered BA entries. Total map size: ${Object.keys(subjectChaptersMap).length}`);
 
 export const getChaptersForSubject = (subject: string, className: string, board: string): ChapterGroup[] => {
   // If subject contains a series separator, extract actual subject and series
@@ -2539,6 +2531,11 @@ export const getChaptersForSubject = (subject: string, className: string, board:
   const fromTopicsFile = getNineTopicChapters(actualSubject, className, board);
   if (fromTopicsFile && fromTopicsFile.length > 0) {
     return fromTopicsFile;
+  }
+
+  const fromTenTopicsFile = getTenTopicChapters(actualSubject, className, board);
+  if (fromTenTopicsFile && fromTenTopicsFile.length > 0) {
+    return fromTenTopicsFile;
   }
 
   const key = `${actualSubject}-${className}-${board}`;

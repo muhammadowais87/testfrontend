@@ -1,15 +1,18 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { getAdminRoute } from "@/lib/adminRoute";
+import { API_BASE_URL } from "@/lib/api";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { Lock, Shield } from "lucide-react";
+import { Loader2, Lock, Shield } from "lucide-react";
 
 const AdminLogin = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
+  const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -56,13 +59,36 @@ const AdminLogin = () => {
     };
   }, []);
 
-  const handleLogin = (e: React.FormEvent) => {
+  const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (email.trim() && password.trim()) {
-      localStorage.setItem("admin_logged_in", "true");
-      navigate("/portal-x9k7m/dashboard");
-    } else {
+    setError("");
+    if (!email.trim() || !password.trim()) {
       setError("Email and password are required");
+      return;
+    }
+
+    setLoading(true);
+    try {
+      const res = await fetch(`${API_BASE_URL}/admin/login`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email: email.trim(), password: password.trim() }),
+      });
+
+      const data = await res.json();
+      if (!res.ok) {
+        setError(data.message || "Invalid email or password");
+        return;
+      }
+
+      localStorage.setItem("admin_logged_in", "true");
+      localStorage.setItem("admin_name", data.admin.name);
+      localStorage.setItem("admin_email", data.admin.email);
+      navigate(`/${getAdminRoute()}/dashboard`);
+    } catch {
+      setError("Network error. Please try again.");
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -71,10 +97,10 @@ const AdminLogin = () => {
       <div className="w-full max-w-md space-y-6">
         {/* Branding */}
         <div className="text-center space-y-2">
-          <div className="mx-auto w-14 h-14 rounded-2xl bg-primary/20 flex items-center justify-center">
-            <Shield className="w-7 h-7 text-primary" />
+          <div className="mx-auto w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-primary/20 flex items-center justify-center">
+            <Shield className="w-6 h-6 sm:w-7 sm:h-7 text-primary" />
           </div>
-          <h1 className="text-2xl font-bold text-foreground">Apex Test Solution</h1>
+          <h1 className="text-xl sm:text-2xl font-bold text-foreground">Apex Test Solution</h1>
           <p className="text-sm text-muted-foreground">Admin Portal — Sign in to continue</p>
         </div>
 
@@ -105,9 +131,9 @@ const AdminLogin = () => {
                   className="h-11"
                 />
               </div>
-              <Button type="submit" className="w-full h-11 gap-2 text-sm font-semibold">
-                <Lock className="w-4 h-4" />
-                Sign In
+              <Button type="submit" className="w-full h-11 gap-2 text-sm font-semibold" disabled={loading}>
+                {loading ? <Loader2 className="w-4 h-4 animate-spin" /> : <Lock className="w-4 h-4" />}
+                {loading ? "Signing in..." : "Sign In"}
               </Button>
             </form>
           </CardContent>

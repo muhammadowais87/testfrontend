@@ -3,9 +3,11 @@ import { create } from "zustand";
 interface TeacherSession {
   name: string;
   email: string;
-  schoolName: string | null; // null = individual teacher
+  schoolName: string | null;
+  schoolAddress: string | null;
   token: string;
   portalType: "teacher" | "sub-user";
+  assignedSubjects?: string[];
 }
 
 interface TeacherSessionStore {

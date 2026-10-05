@@ -1,19 +1,13 @@
 import { useEffect, useState } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import { cn } from "@/lib/utils";
+import { getAdminRoute } from "@/lib/adminRoute";
 import {
   LayoutDashboard, School, LogOut, ChevronLeft, ChevronRight, Shield, MessageSquare, UserCheck, Menu, X,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useQueryStore } from "@/stores/queryStore";
 import { useIsMobile } from "@/hooks/use-mobile";
-
-const navItems = [
-  { label: "Dashboard", icon: LayoutDashboard, path: "/portal-x9k7m/dashboard", exact: true },
-  { label: "Schools", icon: School, path: "/portal-x9k7m/dashboard", match: "/portal-x9k7m/school" },
-  { label: "Individuals", icon: UserCheck, path: "/portal-x9k7m/teachers", match: "/portal-x9k7m/teacher" },
-  { label: "Queries", icon: MessageSquare, path: "/portal-x9k7m/queries" },
-];
 
 interface AdminLayoutProps {
   children: React.ReactNode;
@@ -36,9 +30,19 @@ const AdminLayout = ({ children, title, subtitle }: AdminLayoutProps) => {
     }
   }, [fetchQueries]);
 
+  const route = getAdminRoute();
+  const r = (path: string) => `/${route}${path}`;
+
+  const navItems = [
+    { label: "Dashboard", icon: LayoutDashboard, path: r("/dashboard"), exact: true },
+    { label: "Schools", icon: School, path: r("/dashboard"), match: r("/school") },
+    { label: "Individuals", icon: UserCheck, path: r("/teachers"), match: r("/teacher") },
+    { label: "Queries", icon: MessageSquare, path: r("/queries") },
+  ];
+
   const handleLogout = () => {
     localStorage.removeItem("admin_logged_in");
-    navigate("/portal-x9k7m/login");
+    navigate(r("/login"));
   };
 
   const handleNav = (path: string) => {

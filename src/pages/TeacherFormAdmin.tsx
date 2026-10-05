@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
+import { getAdminRoute } from "@/lib/adminRoute";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -91,11 +92,11 @@ const TeacherFormPage = ({ mode, teacherId }: TeacherFormProps) => {
       if (mode === "edit" && teacherId) {
         await updateTeacher(teacherId, data);
         toast({ title: "Teacher Updated", description: `${data.name} has been updated.` });
-        navigate(`/portal-x9k7m/teacher/${teacherId}`);
+        navigate(`/${getAdminRoute()}/teacher/${teacherId}`);
       } else {
         await addTeacher(data);
         toast({ title: "Teacher Added", description: `${data.name} has been added.` });
-        navigate("/portal-x9k7m/teachers");
+        navigate("/${getAdminRoute()}/teachers");
       }
     } catch (error) {
       setFormError(error instanceof Error ? error.message : "Unable to save teacher");
@@ -118,7 +119,7 @@ const TeacherFormPage = ({ mode, teacherId }: TeacherFormProps) => {
         <div className="flex items-center justify-center py-20">
           <div className="text-center space-y-4">
             <p className="text-muted-foreground">Teacher not found</p>
-            <Button onClick={() => navigate("/portal-x9k7m/teachers")}>
+            <Button onClick={() => navigate("/${getAdminRoute()}/teachers")}>
               <ArrowLeft className="w-4 h-4 mr-2" /> Back
             </Button>
           </div>
@@ -133,7 +134,7 @@ const TeacherFormPage = ({ mode, teacherId }: TeacherFormProps) => {
         <div className="flex items-center gap-3">
           <Button
             variant="ghost" size="icon"
-            onClick={() => navigate(mode === "edit" && teacherId ? `/portal-x9k7m/teacher/${teacherId}` : "/portal-x9k7m/teachers")}
+            onClick={() => navigate(mode === "edit" && teacherId ? `/${getAdminRoute()}/teacher/${teacherId}` : "/${getAdminRoute()}/teachers")}
             className="h-9 w-9"
           >
             <ArrowLeft className="w-5 h-5" />

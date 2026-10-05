@@ -48,8 +48,10 @@ const TeacherLogin = () => {
         name: data.teacher?.name || data.subUser?.name || "Teacher",
         email: data.teacher?.email || data.subUser?.email || "",
         schoolName: data.accountType === "sub-user" ? (data.subUser?.schoolName || "Institute") : null,
+        schoolAddress: data.accountType === "sub-user" ? (data.subUser?.schoolAddress || "") : null,
         token: data.token,
         portalType: data.accountType === "sub-user" ? "sub-user" : "teacher",
+        assignedSubjects: data.subUser?.assignedSubjects || data.teacher?.assignedSubjects || undefined,
       });
 
       navigate(data.accountType === "sub-user" ? "/sub-user/dashboard" : "/teacher/dashboard");
@@ -66,11 +68,11 @@ const TeacherLogin = () => {
       <div className="flex items-center justify-center min-h-[calc(100vh-64px)] px-4">
         <div className="w-full max-w-md text-center">
           <div className="flex justify-center mb-6">
-            <GraduationCap className="w-16 h-16 text-primary" />
+            <GraduationCap className="w-12 h-12 sm:w-16 sm:h-16 text-primary" />
           </div>
 
-          <h1 className="text-3xl font-bold text-foreground mb-2">Teacher Login</h1>
-          <p className="text-muted-foreground text-sm mb-8">Login with credentials provided by your institute</p>
+          <h1 className="text-2xl sm:text-3xl font-bold text-foreground mb-2">Teacher Login</h1>
+          <p className="text-muted-foreground text-xs sm:text-sm mb-8 px-2">Login with credentials provided by your institute</p>
 
           <form onSubmit={handleSubmit} className="space-y-5">
             {error && (
@@ -108,13 +110,6 @@ const TeacherLogin = () => {
               >
                 {showPassword ? <EyeOff className="w-5 h-5" /> : <Eye className="w-5 h-5" />}
               </button>
-            </div>
-
-            <div className="text-right">
-              <a href="#" className="text-sm text-primary hover:underline inline-flex items-center gap-1">
-                <Lock className="w-3 h-3" />
-                Forgot Password ?
-              </a>
             </div>
 
             <button

@@ -1,4 +1,4 @@
---mcqs
+->mcqs
 The Saviour of Mankind
 Grammar	1.	Ashfaq Ahmad was a ______ writer:
 (A)famed(B)famous(C)famously(D)infamous
@@ -297,7 +297,7 @@ Exercise	142.	How does Stanley Houghton use satire in The Dear Departed:
 Exercise	143.	The clock on the mantelpiece can be interpreted as a symbol of:
 (A)The passing of time and routine in the family's life.(B)The wealth and prosperity of Mr. Merryweather.(C)The bond between the Slater sisters.(D)The memories that the family cherishes.
 
---question and answers
+->question and answers
 The Saviour of Mankind
 1.	How might the geographical description of Mukarramah influence the reader's understanding of its historical and cultural importance?
 Exercise
@@ -962,7 +962,7 @@ Review Exercise
 Review Exercise
 
 
---tick correct spellings
+->tick correct spellings
 The Saviour of Mankind
 1.(A)Imagination(B)Imagynation(C)Imagionation(D)Imaginasion
 2.(A)Preservation(B)Presarvation(C)Preservetion(D)Presurvation
@@ -1414,7 +1414,7 @@ The Dear Departed (One-Act Play) Stanley Houghton
 438.(A)Accustomede(B)Acustomed(C)Accustomd(D)Accustomed
 439.(A)Sniffs(B)Sniffes(C)Snifs(D)Sniffse
 
---correct meaning of underline word
+->correct meaning of underline word
 
 The Saviour of Mankind
 Exercise	1.	I shall not abandon the true faith:
@@ -1707,7 +1707,7 @@ Additional	139.	The synonym of malicious is:
 (A)Progress(B)Poisonous(C)Express(D)Press
 
 
---tick correct form of verb
+->tick correct form of verb
 The Saviour of Mankind
 Additional	1.	Arabia ___ the land of unparalleled charm and beauty:
 (A)are(B)is(C)was(D)were
@@ -2149,7 +2149,7 @@ Past Papers	212.	They ____ Pakistan before the end of the year:
 Past Papers	213.	By next March, I ____ on this project for ten years:
 (A)shall work(B)shall be working(C)shall have been working(D)have been working
 
---tick correct according to grammer
+->tick correct according to grammer
 The Saviour of Mankind
 Additional	1.	Arabia is the land of unparalleled charm and beauty:
 (A)Noun(B)Adjective(C)Verb(D)Adverb
@@ -2379,7 +2379,7 @@ Grammar	108.	"Close the door,"he said.This sentence is an example:
 (A)Exclamatory(B)Declarative(C)Interrogative(D)Imperative
 
 
---letters
+->letters
 1 Letters
 1.	To your mother who is worried about your health.
 Exercise
@@ -2414,7 +2414,7 @@ Exercise
 16.	To a bookseller requesting him to send you some books per V.P.P.
 Exercise
 
---active and passive voice
+->active and passive voice
 4 Present Indefinite Tense
 1.	The picture is made by the boy.
 2.	Naushaba is helped by Khurshid.
@@ -2952,7 +2952,7 @@ Exercise
 526.	Shall I have been forgotten?
 
 
---stories
+->stories
 2 Stories
 1.	Farmer and his sons
 2.	The Kindness of the Rasool (SAW)
@@ -2968,7 +2968,7 @@ Exercise
 12.	The boy who cried “wolf”
 13.	The jester and the king
 
---summary
+->summary
 
 Daffodils
 1.	Daffodils
@@ -2977,7 +2977,7 @@ If
 3.	If
 
 
---dialoges
+->dialoges
 3 Dialogues
 1.	Dialogue between a teacher and a student
 2.	Dialogue between two students regarding salat
@@ -2986,7 +2986,7 @@ If
 5.	Dialogue between a tailor and a customer
 
 
---words into sentences
+->words into sentences
 The Saviour of Mankind
 1.	Unparalleled
 2.	Trackless
@@ -3325,7 +3325,7 @@ The Dear Departed (One-Act Play) Stanley Houghton
 327.	stupefied
 
 
---translate into urdu paragraph
+->translate into urdu paragraph
 The Saviour of Mankind
 1.	Arabia is the land of unparalleled charm and beauty, with its trackless deserts of sand dunes in the dazzling rays of the tropical sun. Its starry sky has excited the imagination of poets and travelers. It was in this land that the Rasoolullah (صلى الله عليه وسلم) was born, in the city of Makkah Mukarramah, which is about fifty miles from the Red Sea.
 2.	The Arabs possessed a remarkable memory and were an eloquent people. Their eloquence and memory found expression in their poetry. Every year a fair was held for poetical competitions at Ukaz. It is narrated that Hammad said to Caliph Walid bin Yazid: "I can recite to you, for each letter of the alphabet, one hundred long poems, without taking into account short pieces, and all of that was composed exclusively by poets before the promulgation of Islam." It is no wonder that Allah (سبحانہ وتعالیٰ) chose the Arabic language for His final dispensation and the preservation of His Word.
@@ -3493,7 +3493,7 @@ The Dear Departed (One-Act Play) Stanley Houghton
 118.	Abel: To Mrs.John Shorrocks who keeps the 'Ring-o' -Bells. We've had it fixed up a good while now, but I was keeping it for a pleasant surprise.(He rises.) I felt I was a bit of a burden to you, so I found someone who'd think it a pleasure to look after me. We shall be very glad to see you at the ceremony. (He gets to the door.) Till Monday, then. Twelve o'clock at St.Philip's Church.
 
 
---comprehension paragraph
+->comprehension paragraph
 4 Comprehension Paragraphs
 1.	One day, a wolf felt very hungry. He wandered here and there in search of food but he could not find anything to eat. At last, he saw a flock of sheep grazing in a pasture. He wanted to eat one but they were guarded by a hound. The shepherd&rsquo;s son was also tending the flock vigilantly. The wolf found himself helpless. At last he hit upon a plan. He hid himself in the skin of a sheep and safely went into the flock. The hound could not find out the wolf in disguise. He killed a sheep and ate it without being caught. In this way, he ate up many sheep and their number began to fall every day. The shepherd was greatly worried but could not find out the thief.
 1.
@@ -3890,14 +3890,14 @@ How does the camel go without food and water for days and weeks?
 
 
 
---poem stanzas
+>poem stanzas
 Review-02
 1.	If you can keep your head when all about you
 Are losing theirs and blaming it on you,
 Review Exercise
 
 
---ideoms
+->ideoms
 5 Idioms
 1.	as a result of
 2.	at last
@@ -4025,7 +4025,7 @@ Review Exercise
 124.	white elephant
 
 
---words meanings
+->words meanings
 
 The Saviour of Mankind
 1.	Unparalleled
@@ -4365,7 +4365,7 @@ The Dear Departed (One-Act Play) Stanley Houghton
 327.	stupefied
 
 
---fill in tha blanks
+->fill in tha blanks
 Review-01
 1.	Zeeshaan was feeling very ............. (adj.) about the upcoming test.
 2.	She ............. (V.) the ball and it flew across the field.
@@ -4380,7 +4380,7 @@ Review-02
 10.	She is tired ________ she kept working until midnight. (because / although / but)
 
 
---direct and indirect
+->direct and indirect
 Review-02
 1.	Sarah said, "I am going to the market."
 2.	The teacher said, "Have you completed your homework?"
@@ -4389,7 +4389,7 @@ Review-02
 5.	Javed said, "When are we leaving for the trip?"
 
 
---pair of words
+->pair of words
 Review-02
 1.	compliment, complement
 2.	eligible, illegible
@@ -4400,7 +4400,7 @@ Review-02
 7.	yoke, yolk
 
 
---punctuate the paragraph
+->punctuate the paragraph
 Review-01
 1.	Zeeshan and kiran went to the market they bought fruits vegetables and bread
 2.	its raining outside dont forget your umbrella
@@ -4409,7 +4409,7 @@ Review-01
 5.	the books cover was torn but the pages were intact
 
 
---writing paragraphs
+->writing paragraphs
 Review-01
 1.	Write a short paragraph (4-5 sentences) about any topic of your choice (e.g., a hobby, a recent experience, or a goal you have). Make sure to use a least three different transitional words or devices to connect your ideas.
 2.	Think of a situation where a person shows respect for someone very different form themselves (culturally, socially, or ideologically). How does this respect affect their relationship and understanding of each other?

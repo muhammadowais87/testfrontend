@@ -6,7 +6,10 @@ import { planAmounts } from "@/data/schoolData";
 interface TeacherStore {
   teachers: IndividualTeacher[];
   isLoading: boolean;
-  fetchTeachers: () => Promise<void>;
+  total: number;
+  page: number;
+  hasMore: boolean;
+  fetchTeachers: (page?: number) => Promise<void>;
   addTeacher: (t: Omit<IndividualTeacher, "id" | "monthlyPayments">) => Promise<void>;
   updateTeacher: (id: number, data: Partial<Omit<IndividualTeacher, "id" | "monthlyPayments">>) => Promise<void>;
   deleteTeacher: (id: number) => Promise<void>;
@@ -20,17 +23,26 @@ interface TeacherStore {
 export const useTeacherStore = create<TeacherStore>((set) => ({
   teachers: [],
   isLoading: false,
-  fetchTeachers: async () => {
+  total: 0,
+  page: 1,
+  hasMore: false,
+  fetchTeachers: async (page = 1) => {
     set({ isLoading: true });
     try {
-      const response = await fetch(`${API_BASE_URL}/teachers`);
+      const response = await fetch(`${API_BASE_URL}/teachers?page=${page}&limit=100`);
       const data = await response.json();
 
       if (!response.ok) {
         throw new Error(data?.message || "Failed to fetch teachers");
       }
 
-      set({ teachers: Array.isArray(data?.teachers) ? data.teachers : [], isLoading: false });
+      set({
+        teachers: Array.isArray(data?.teachers) ? data.teachers : [],
+        total: data.total || 0,
+        page: data.page || 1,
+        hasMore: data.hasMore || false,
+        isLoading: false,
+      });
     } catch {
       set({ isLoading: false });
     }

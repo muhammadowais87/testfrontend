@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
+import { getAdminRoute } from "@/lib/adminRoute";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -57,7 +58,7 @@ const TeacherDetail = () => {
         <div className="flex items-center justify-center py-20">
           <div className="text-center space-y-4">
             <p className="text-muted-foreground">Teacher not found</p>
-            <Button onClick={() => navigate("/portal-x9k7m/teachers")}>
+            <Button onClick={() => navigate("/${getAdminRoute()}/teachers")}>
               <ArrowLeft className="w-4 h-4 mr-2" /> Back
             </Button>
           </div>
@@ -70,7 +71,7 @@ const TeacherDetail = () => {
     try {
       await deleteTeacher(teacher.id);
       toast({ title: "Teacher Deleted", description: `${teacher.name} has been removed.` });
-      navigate("/portal-x9k7m/teachers");
+      navigate("/${getAdminRoute()}/teachers");
     } catch (error) {
       toast({
         title: "Delete Failed",
@@ -89,7 +90,7 @@ const TeacherDetail = () => {
         {/* Header */}
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
           <div className="flex items-center gap-3">
-            <Button variant="ghost" size="icon" onClick={() => navigate("/portal-x9k7m/teachers")} className="h-9 w-9 shrink-0">
+            <Button variant="ghost" size="icon" onClick={() => navigate("/${getAdminRoute()}/teachers")} className="h-9 w-9 shrink-0">
               <ArrowLeft className="w-5 h-5" />
             </Button>
             <div>
@@ -98,7 +99,7 @@ const TeacherDetail = () => {
             </div>
           </div>
           <div className="flex items-center gap-2 pl-12 sm:pl-0">
-            <Button variant="outline" size="sm" className="gap-2 h-9" onClick={() => navigate(`/portal-x9k7m/teacher/${teacher.id}/edit`)}>
+            <Button variant="outline" size="sm" className="gap-2 h-9" onClick={() => navigate(`/${getAdminRoute()}/teacher/${teacher.id}/edit`)}>
               <Pencil className="w-3.5 h-3.5" /> Edit
             </Button>
             <Button variant="destructive" size="sm" className="gap-2 h-9" onClick={handleDelete}>
