@@ -1337,6 +1337,81 @@
       "Pair of Words",
       "Punctuate the Paragraph",
       "Writing Paragraphs"
+    ],
+    "1 Use of 'is', 'am', 'are' and 'was', were": [
+      "MCQs",
+      "Tick Correct Form of Verb",
+      "Active and Passive Voice"
+    ],
+    "2 Use of 'has' and 'have'": [
+      "MCQs",
+      "Tick Correct Form of Verb",
+      "Active and Passive Voice"
+    ],
+    "3 Use of 'had'": [
+      "MCQs",
+      "Tick Correct Form of Verb",
+      "Active and Passive Voice"
+    ],
+    "4 Present Indefinite Tense": [
+      "MCQs",
+      "Tick Correct Form of Verb",
+      "Active and Passive Voice"
+    ],
+    "5 Present Continuous Tense": [
+      "MCQs",
+      "Tick Correct Form of Verb",
+      "Active and Passive Voice"
+    ],
+    "6 Present Perfect Tense": [
+      "MCQs",
+      "Tick Correct Form of Verb",
+      "Active and Passive Voice"
+    ],
+    "7 Present Perfect Continuous Tense": [
+      "MCQs",
+      "Tick Correct Form of Verb",
+      "Active and Passive Voice"
+    ],
+    "8 Past Indefinite Tense": [
+      "MCQs",
+      "Tick Correct Form of Verb",
+      "Active and Passive Voice"
+    ],
+    "9 Past Continuous Tense": [
+      "MCQs",
+      "Tick Correct Form of Verb",
+      "Active and Passive Voice"
+    ],
+    "10 Past Perfect Tense": [
+      "MCQs",
+      "Tick Correct Form of Verb",
+      "Active and Passive Voice"
+    ],
+    "11 Past Perfect Continuous Tense": [
+      "MCQs",
+      "Tick Correct Form of Verb",
+      "Active and Passive Voice"
+    ],
+    "12 Future Indefinite Tense": [
+      "MCQs",
+      "Tick Correct Form of Verb",
+      "Active and Passive Voice"
+    ],
+    "13 Future Continuous Tense": [
+      "MCQs",
+      "Tick Correct Form of Verb",
+      "Active and Passive Voice"
+    ],
+    "14 Future Perfect Tense": [
+      "MCQs",
+      "Tick Correct Form of Verb",
+      "Active and Passive Voice"
+    ],
+    "15 Future Perfect Continuous Tense": [
+      "MCQs",
+      "Tick Correct Form of Verb",
+      "Active and Passive Voice"
     ]
   },
   "Farsi": {
@@ -3627,81 +3702,372 @@
     ]
   },
   "English-INTER-I": {
-    "1.1 Khatam-un-Nabiyeen Hazrat Muhammad خاتم النبین ﷺ": ["MCQs", "Punctuate the Paragraph", "Tick Correct Synonyms", "Translate into Urdu Paragraph", "Words Meanings"],
-    "2.1 Responsibility of the Youth in Nation-Building": ["MCQs", "Question and Answers", "Tick Correct Synonyms", "Translate into Urdu Paragraph", "Words Meanings"],
-    "3.1 A Bird Came Down the Walk": ["MCQs", "Poem Stanzas", "Question and Answers", "Tick Correct Synonyms", "Words Meanings"],
-    "4.1 Team Moon": ["MCQs", "Question and Answers", "Tick Correct Synonyms", "Translate into Urdu Paragraph", "Words into Sentences", "Words Meanings"],
-    "5.1 Impact of Global Warming on Pakistan": ["MCQs", "Question and Answers", "Tick Correct Synonyms", "Translate into Urdu Paragraph"],
-    "6.1 The Echoing Green (Poem)": ["MCQs", "Poem Stanzas", "Question and Answers", "Tick Correct Synonyms"],
-    "7.1 What You Do is What You Are": ["MCQs", "Question and Answers", "Tick Correct Synonyms", "Translate into Urdu Paragraph"],
-    "8.1 Clean Water": ["MCQs", "Pair of Words", "Question and Answers", "Tick Correct Synonyms", "Translate into Urdu Paragraph"],
-    "9.1 Freedom": ["MCQs", "Poem Stanzas", "Question and Answers", "Summary", "Tick Correct Synonyms", "Words into Sentences"],
-    "10.1 The Punishment of Khipil": ["MCQs", "Question and Answers", "Tick Correct Synonyms", "Translate into Urdu Paragraph"],
-    "11.1 Those Winter Sundays": ["MCQs", "Applications", "Poem Stanzas", "Question and Answers", "Tick Correct Synonyms", "Words into Sentences"],
-    "12.1 The Impact of AI on Society...": ["MCQs", "Question and Answers", "Tick Correct Synonyms", "Translate into Urdu Paragraph", "Words into Sentences"],
-    "13.1 Ruba'iyat": ["MCQs", "Poem Stanzas", "Question and Answers", "Tick Correct Synonyms", "Words Meanings"],
-    "14.1 The End of the Beginning": ["MCQs", "Letters", "Question and Answers", "Stories", "Tick Correct Form of Verb", "Tick Correct Synonyms", "Translate into Urdu Paragraph"],
-    "Letters": ["Letters"],
-    "Applications": ["Applications"],
-    "Stories": ["Stories"],
-    "Pair of words": ["Pair of Words"],
-    "Present Indefinite": ["Tick Correct Form of Verb"],
-    "Present Continuous": ["Tick Correct Form of Verb"],
-    "Present Perfect Tense": ["Tick Correct Form of Verb"],
-    "Present Perfect Continuous Tense": ["Tick Correct Form of Verb"],
-    "Past Indefinite Tense": ["Tick Correct Form of Verb"],
-    "Past Continuous Tense": ["Tick Correct Form of Verb"],
-    "Past Perfect Tense": ["Tick Correct Form of Verb"],
-    "Past Perfect Continuous Tense": ["Tick Correct Form of Verb"],
-    "Future Indefinite Tense": ["Tick Correct Form of Verb"],
-    "Future Continuous Tense": ["Tick Correct Form of Verb"],
-    "Future Perfect Tense": ["Tick Correct Form of Verb"],
-    "Future Perfect Continuous Tense": ["Tick Correct Form of Verb"]
+    "1.1 Khatam-un-Nabiyeen Hazrat Muhammad خاتم النبین ﷺ": [
+      "MCQs",
+      "Punctuate the Paragraph",
+      "Tick Correct Synonyms",
+      "Translate into Urdu Paragraph",
+      "Words Meanings"
+    ],
+    "2.1 Responsibility of the Youth in Nation-Building": [
+      "MCQs",
+      "Question and Answers",
+      "Tick Correct Synonyms",
+      "Translate into Urdu Paragraph",
+      "Words Meanings"
+    ],
+    "3.1 A Bird Came Down the Walk": [
+      "MCQs",
+      "Poem Stanzas",
+      "Question and Answers",
+      "Tick Correct Synonyms",
+      "Words Meanings"
+    ],
+    "4.1 Team Moon": [
+      "MCQs",
+      "Question and Answers",
+      "Tick Correct Synonyms",
+      "Translate into Urdu Paragraph",
+      "Words into Sentences",
+      "Words Meanings"
+    ],
+    "5.1 Impact of Global Warming on Pakistan": [
+      "MCQs",
+      "Question and Answers",
+      "Tick Correct Synonyms",
+      "Translate into Urdu Paragraph"
+    ],
+    "6.1 The Echoing Green (Poem)": [
+      "MCQs",
+      "Poem Stanzas",
+      "Question and Answers",
+      "Tick Correct Synonyms"
+    ],
+    "7.1 What You Do is What You Are": [
+      "MCQs",
+      "Question and Answers",
+      "Tick Correct Synonyms",
+      "Translate into Urdu Paragraph"
+    ],
+    "8.1 Clean Water": [
+      "MCQs",
+      "Pair of Words",
+      "Question and Answers",
+      "Tick Correct Synonyms",
+      "Translate into Urdu Paragraph"
+    ],
+    "9.1 Freedom": [
+      "MCQs",
+      "Poem Stanzas",
+      "Question and Answers",
+      "Summary",
+      "Tick Correct Synonyms",
+      "Words into Sentences"
+    ],
+    "10.1 The Punishment of Khipil": [
+      "MCQs",
+      "Question and Answers",
+      "Tick Correct Synonyms",
+      "Translate into Urdu Paragraph"
+    ],
+    "11.1 Those Winter Sundays": [
+      "MCQs",
+      "Applications",
+      "Poem Stanzas",
+      "Question and Answers",
+      "Tick Correct Synonyms",
+      "Words into Sentences"
+    ],
+    "12.1 The Impact of AI on Society...": [
+      "MCQs",
+      "Question and Answers",
+      "Tick Correct Synonyms",
+      "Translate into Urdu Paragraph",
+      "Words into Sentences"
+    ],
+    "13.1 Ruba'iyat": [
+      "MCQs",
+      "Poem Stanzas",
+      "Question and Answers",
+      "Tick Correct Synonyms",
+      "Words Meanings"
+    ],
+    "14.1 The End of the Beginning": [
+      "MCQs",
+      "Letters",
+      "Question and Answers",
+      "Stories",
+      "Tick Correct Form of Verb",
+      "Tick Correct Synonyms",
+      "Translate into Urdu Paragraph"
+    ],
+    "Letters": [
+      "Letters"
+    ],
+    "Applications": [
+      "Applications"
+    ],
+    "Stories": [
+      "Stories"
+    ],
+    "Pair of words": [
+      "Pair of Words"
+    ],
+    "Present Indefinite": [
+      "Tick Correct Form of Verb"
+    ],
+    "Present Continuous": [
+      "Tick Correct Form of Verb"
+    ],
+    "Present Perfect Tense": [
+      "Tick Correct Form of Verb"
+    ],
+    "Present Perfect Continuous Tense": [
+      "Tick Correct Form of Verb"
+    ],
+    "Past Indefinite Tense": [
+      "Tick Correct Form of Verb"
+    ],
+    "Past Continuous Tense": [
+      "Tick Correct Form of Verb"
+    ],
+    "Past Perfect Tense": [
+      "Tick Correct Form of Verb"
+    ],
+    "Past Perfect Continuous Tense": [
+      "Tick Correct Form of Verb"
+    ],
+    "Future Indefinite Tense": [
+      "Tick Correct Form of Verb"
+    ],
+    "Future Continuous Tense": [
+      "Tick Correct Form of Verb"
+    ],
+    "Future Perfect Tense": [
+      "Tick Correct Form of Verb"
+    ],
+    "Future Perfect Continuous Tense": [
+      "Tick Correct Form of Verb"
+    ]
   },
   "Urdu-INTER-I": {
-    "اخلاق نبوی خاتم النبین ﷺ": ["MCQs", "Question and Answers", "Paragraph ki Tashreeh"],
-    "فاقہ میں روزہ": ["MCQs", "Question and Answers", "Paragraph ki Tashreeh", "Comprehension Paragraph", "Words into Sentences"],
-    "مکاتیب غالب": ["MCQs", "Question and Answers", "Paragraph ki Tashreeh", "Comprehension Paragraph", "Words into Sentences", "Words Meanings"],
-    "ایک اُستاد عدالت کے کٹہرے میں": ["MCQs", "Question and Answers", "Paragraph ki Tashreeh", "Comprehension Paragraph", "Jumlo ki Darustagi", "Summary", "Words into Sentences"],
-    "چار پائی": ["MCQs", "Question and Answers", "Paragraph ki Tashreeh", "Summary", "Zarb ul Misaal"],
-    "اور پاکستان بن گیا": ["MCQs", "Question and Answers", "Paragraph ki Tashreeh", "Comprehension Paragraph", "Applications", "Pointing", "Words into Sentences"],
-    "نیا قانون": ["MCQs", "Question and Answers", "Paragraph ki Tashreeh", "Comprehension Paragraph", "Jumlo ki Darustagi", "Fill in the Blanks", "Pointing"],
-    "دهلیز": ["MCQs", "Question and Answers", "Paragraph ki Tashreeh", "Comprehension Paragraph", "Fill in the Blanks", "Pointing"],
-    "تاریخ کا کفن": ["MCQs", "Question and Answers", "Paragraph ki Tashreeh", "Comprehension Paragraph", "Fill in the Blanks", "Pointing", "Words into Sentences"],
-    "پاکستانی زبانیں اور ان کا باہمی رشتہ": ["MCQs", "Question and Answers", "Paragraph ki Tashreeh", "Comprehension Paragraph"],
-    "حمد": ["MCQs", "Ashaar ki Tashreeh", "Question and Answers", "Words into Sentences", "Words Meanings"],
-    "نعت": ["MCQs", "Markazi Khayal", "Question and Answers", "Summary"],
-    "اے وادیِ لولاب": ["MCQs", "Markazi Khayal", "Question and Answers", "Summary", "Words into Sentences"],
-    "اے وادی ِ لولاب!": ["MCQs", "Markazi Khayal", "Question and Answers", "Summary", "Words into Sentences"],
-    "اوردیس سے آنے والے بتا": ["MCQs", "Markazi Khayal", "Question and Answers", "Summary"],
-    "او دیس سے آنے والے بتا": ["MCQs", "Markazi Khayal", "Question and Answers", "Summary"],
-    "آزادی": ["MCQs", "Question and Answers", "Summary", "Words into Sentences"],
-    "اِخلاص": ["MCQs", "Markazi Khayal", "Question and Answers", "Summary"],
-    "اخلاص": ["MCQs", "Markazi Khayal", "Question and Answers", "Summary"],
-    "کھڑا ڈنر": ["MCQs", "Markazi Khayal", "Question and Answers", "Summary", "Words into Sentences"],
-    "پتا پتا بُو ٹا بُوٹا حال ہمارا جانے ہے": ["MCQs", "Question and Answers"],
-    "سر میں سودا بھی نہیں ، دل میں تمنا بھی نہیں": ["MCQs", "Question and Answers"],
-    "بے چین بہت پھرنا ، گھرائے ہوئے رہنا": ["MCQs", "Question and Answers"],
-    "سلسلے توڑ گیا وہ سبھی جاتے جاتے": ["MCQs", "Question and Answers"],
-    "بادباں کھلنے سے پہلے کا اشارہ دیکھنا": ["MCQs", "Question and Answers"],
-    "مکالمے": ["Dialogues"],
-    "رداد/مضامین": ["History"],
-    "درخواستیں": ["Applications"],
-    "رسیدیں": ["Receipt"],
-    "تلخیص پیراگراف": ["Takhlees Ibarat"],
-    "روزنامچے": ["Newsletters"],
-    "مطلع": ["MCQs"],
-    "مقطع": ["MCQs"],
-    "قافیہ": ["MCQs"],
-    "ردیف": ["MCQs"],
-    "تلمیح": ["MCQs"],
-    "تشبیہہ": ["MCQs"],
-    "استعارہ": ["MCQs"],
-    "جملوں کی درستگی": ["MCQs"],
-    "علم بیان": ["MCQs"],
-    "مجاز مرسل": ["MCQs"],
-    "کنایہ": ["MCQs"],
-    "مراعات النظیر": ["MCQs"],
-    "صنعت تضاد": ["MCQs"]
+    "اخلاق نبوی خاتم النبین ﷺ": [
+      "MCQs",
+      "Question and Answers",
+      "Paragraph ki Tashreeh"
+    ],
+    "فاقہ میں روزہ": [
+      "MCQs",
+      "Question and Answers",
+      "Paragraph ki Tashreeh",
+      "Comprehension Paragraph",
+      "Words into Sentences"
+    ],
+    "مکاتیب غالب": [
+      "MCQs",
+      "Question and Answers",
+      "Paragraph ki Tashreeh",
+      "Comprehension Paragraph",
+      "Words into Sentences",
+      "Words Meanings"
+    ],
+    "ایک اُستاد عدالت کے کٹہرے میں": [
+      "MCQs",
+      "Question and Answers",
+      "Paragraph ki Tashreeh",
+      "Comprehension Paragraph",
+      "Jumlo ki Darustagi",
+      "Summary",
+      "Words into Sentences"
+    ],
+    "چار پائی": [
+      "MCQs",
+      "Question and Answers",
+      "Paragraph ki Tashreeh",
+      "Summary",
+      "Zarb ul Misaal"
+    ],
+    "اور پاکستان بن گیا": [
+      "MCQs",
+      "Question and Answers",
+      "Paragraph ki Tashreeh",
+      "Comprehension Paragraph",
+      "Applications",
+      "Pointing",
+      "Words into Sentences"
+    ],
+    "نیا قانون": [
+      "MCQs",
+      "Question and Answers",
+      "Paragraph ki Tashreeh",
+      "Comprehension Paragraph",
+      "Jumlo ki Darustagi",
+      "Fill in the Blanks",
+      "Pointing"
+    ],
+    "دهلیز": [
+      "MCQs",
+      "Question and Answers",
+      "Paragraph ki Tashreeh",
+      "Comprehension Paragraph",
+      "Fill in the Blanks",
+      "Pointing"
+    ],
+    "تاریخ کا کفن": [
+      "MCQs",
+      "Question and Answers",
+      "Paragraph ki Tashreeh",
+      "Comprehension Paragraph",
+      "Fill in the Blanks",
+      "Pointing",
+      "Words into Sentences"
+    ],
+    "پاکستانی زبانیں اور ان کا باہمی رشتہ": [
+      "MCQs",
+      "Question and Answers",
+      "Paragraph ki Tashreeh",
+      "Comprehension Paragraph"
+    ],
+    "حمد": [
+      "MCQs",
+      "Ashaar ki Tashreeh",
+      "Question and Answers",
+      "Words into Sentences",
+      "Words Meanings"
+    ],
+    "نعت": [
+      "MCQs",
+      "Markazi Khayal",
+      "Question and Answers",
+      "Summary"
+    ],
+    "اے وادیِ لولاب": [
+      "MCQs",
+      "Markazi Khayal",
+      "Question and Answers",
+      "Summary",
+      "Words into Sentences"
+    ],
+    "اے وادی ِ لولاب!": [
+      "MCQs",
+      "Markazi Khayal",
+      "Question and Answers",
+      "Summary",
+      "Words into Sentences"
+    ],
+    "اوردیس سے آنے والے بتا": [
+      "MCQs",
+      "Markazi Khayal",
+      "Question and Answers",
+      "Summary"
+    ],
+    "او دیس سے آنے والے بتا": [
+      "MCQs",
+      "Markazi Khayal",
+      "Question and Answers",
+      "Summary"
+    ],
+    "آزادی": [
+      "MCQs",
+      "Question and Answers",
+      "Summary",
+      "Words into Sentences"
+    ],
+    "اِخلاص": [
+      "MCQs",
+      "Markazi Khayal",
+      "Question and Answers",
+      "Summary"
+    ],
+    "اخلاص": [
+      "MCQs",
+      "Markazi Khayal",
+      "Question and Answers",
+      "Summary"
+    ],
+    "کھڑا ڈنر": [
+      "MCQs",
+      "Markazi Khayal",
+      "Question and Answers",
+      "Summary",
+      "Words into Sentences"
+    ],
+    "پتا پتا بُو ٹا بُوٹا حال ہمارا جانے ہے": [
+      "MCQs",
+      "Question and Answers"
+    ],
+    "سر میں سودا بھی نہیں ، دل میں تمنا بھی نہیں": [
+      "MCQs",
+      "Question and Answers"
+    ],
+    "بے چین بہت پھرنا ، گھرائے ہوئے رہنا": [
+      "MCQs",
+      "Question and Answers"
+    ],
+    "سلسلے توڑ گیا وہ سبھی جاتے جاتے": [
+      "MCQs",
+      "Question and Answers"
+    ],
+    "بادباں کھلنے سے پہلے کا اشارہ دیکھنا": [
+      "MCQs",
+      "Question and Answers"
+    ],
+    "مکالمے": [
+      "Dialogues"
+    ],
+    "رداد/مضامین": [
+      "History"
+    ],
+    "درخواستیں": [
+      "Applications"
+    ],
+    "رسیدیں": [
+      "Receipt"
+    ],
+    "تلخیص پیراگراف": [
+      "Takhlees Ibarat"
+    ],
+    "روزنامچے": [
+      "Newsletters"
+    ],
+    "مطلع": [
+      "MCQs"
+    ],
+    "مقطع": [
+      "MCQs"
+    ],
+    "قافیہ": [
+      "MCQs"
+    ],
+    "ردیف": [
+      "MCQs"
+    ],
+    "تلمیح": [
+      "MCQs"
+    ],
+    "تشبیہہ": [
+      "MCQs"
+    ],
+    "استعارہ": [
+      "MCQs"
+    ],
+    "جملوں کی درستگی": [
+      "MCQs"
+    ],
+    "علم بیان": [
+      "MCQs"
+    ],
+    "مجاز مرسل": [
+      "MCQs"
+    ],
+    "کنایہ": [
+      "MCQs"
+    ],
+    "مراعات النظیر": [
+      "MCQs"
+    ],
+    "صنعت تضاد": [
+      "MCQs"
+    ]
   }
 }

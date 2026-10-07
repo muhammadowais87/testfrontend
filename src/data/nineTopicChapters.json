@@ -771,164 +771,106 @@
   ],
   "Computer-9TH-PTB": [
     {
-      "name": "UNIT 1: Introduction to Systems",
+      "name": "UNIT 1: Introduction to Computational Systems",
       "chapters": [
         "1.1 Theory of Systems",
-        "1.2 Types of Systems",
-        "1.3 System and Science",
-        "1.4 Computer as System",
-        "1.5 The Architecture of von Neumann Computers",
-        "1.6 Computing Systems",
-        "Exercise"
+        "1.2 Software",
+        "1.3 The Architecture of von Neumann Computers",
+        "1.4 Number Systems",
+        "1.5 Data Representation in Computing Systems",
+        "1.6 Binary Arithmetic Operations",
+        "1.7 Common Text Encoding Schemes"
       ]
     },
     {
-      "name": "UNIT 2: Number Systems",
+      "name": "UNIT 2: System Design and Troubleshooting",
       "chapters": [
-        "2.1 Numbering Systems",
-        "2.2 Data Representation in Computing Systems",
-        "2.3 Storing Real Values in Computer Memory",
-        "2.4 Binary Arithmetic Operations",
-        "2.5 Common Text Encoding Schemes",
-        "2.6 Storing Images, Audio, and Video in Computers"
+        "2.1 Basic Concept of Digital Systems",
+        "2.2 Boolean Algebra and Logic Gates",
+        "2.3 Simplification of Boolean Functions",
+        "2.4. Creating Logic Diagrams",
+        "2.5 System Troubleshooting"
       ]
     },
     {
-      "name": "UNIT 3: Digital Systems and Logic Design",
+      "name": "UNIT 3: Introduction to Computer Networks",
       "chapters": [
-        "3.1 Basics of Digital Systems",
-        "3.1.1 What is an Analog Signal",
-        "3.1.2 Fundamentals of Digital Logic",
-        "3.2 Boolean Algebra and Logic Gates",
-        "3. 2.1 Boolean Functions and Expressions",
-        "3.2.2 Logic Gates and their Functions",
-        "3.3 Simplification of Boolean Functions",
-        "3.4. Creating Logic Diagrams",
-        "3.5. Application of Digital Logic",
-        "3.5.1 Half-adder and Full-adder Circuits",
-        "3.5.2 Karnaugh Map( K-Map)"
+        "3.1 Network as a System",
+        "3.2 Fundamental Concepts in Data Communication",
+        "3.3 Networking Devices",
+        "3.4 Network Topologies",
+        "3.5 Transmission Modes",
+        "3.6 The OSI Networking Model",
+        "3.7 Ipv4 and Ipv6",
+        "3.8 Network Protocols",
+        "3.9 Network Security",
+        "3.10 Network Security Methods",
+        "3.11 Types of Networks",
+        "3.12 Real-World Applications of Computer Networks"
       ]
     },
     {
-      "name": "UNIT 4: System Troubleshooting",
+      "name": "UNIT 4: Computational Thinking",
       "chapters": [
-        "4.1 System Troubleshooting",
-        "4.1.1 Systematic Process of Troubleshooting",
-        "4.1.2 Importance of Troubleshooting in Computing Systems",
-        "4.2 Troubleshooting Strategies",
-        "4.2.1 Basic Software-Related Issues",
-        "4.2.2 Basic Hardware-Related Issues",
-        "4.2.3 Hardware Diagnosis and Maintenance",
-        "4.2.4 Security and Maintenance",
-        "4.2.5 Data Management and Backups",
-        "4.2.6 Using Resources for Troubleshooting",
-        "Exercise"
+        "4.1 Computational Thinking",
+        "4.2 Principles of Computational Thinking",
+        "4.3 Algorithm Design Methods",
+        "4.4 Evaluation Techniques for an Algorithm",
+        "4.5 Dry Run",
+        "4.6 Introduction to LARP (Logic of Algorithms for Resolution of Problems)",
+        "4.7 Error Identification and Debugging"
       ]
     },
     {
-      "name": "UNIT 5: Software System",
+      "name": "UNIT 5: Web Development with HTML, CSS and JavaScript",
       "chapters": [
-        "5.1 Software",
-        "5.2 Introduction to System Software",
-        "5.2.1 Operating System",
-        "5.2.2 Utility Programs",
-        "5.2.3 Device Drivers",
-        "5.3 Application Software",
-        "5.3.1 Commonly used application software"
+        "5.1 Web Development",
+        "5.2 Basic Components of Web Development",
+        "5.3 Getting Started with HTML",
+        "5.4 HTML Basic Structure",
+        "5.5 Creating Content with HTML",
+        "5.6 Styling with CSS",
+        "5.7 Introduction to JavaScript"
       ]
     },
     {
-      "name": "UNIT 6: Introduction to Computer Networks",
+      "name": "UNIT 6: Data Science and Data Gathering",
       "chapters": [
-        "6.1 Network as a System",
-        "6.2 Fundamental Concepts in Data Communication",
-        "6.3 Networking Devices",
-        "6.4 Network Topologies",
-        "6.5 Transmission Modes",
-        "6.6 The OSI Networking Model",
-        "6.7 Ipv4 and Ipv6",
-        "6.8 Protocols and Network Services",
-        "6.9 Network Security",
-        "6.10 Types of Networks",
-        "6.11 Real-World Applications of Computer Networks",
-        "6.12. Standard Protocols in TCP/IP Communications",
-        "6.13 Network Security Methods",
-        "6.14 Exercise Mcqs"
+        "6.1 Data",
+        "6.2 Data Types",
+        "6.3 Organising and Analysing Data",
+        "6.4 Data Types",
+        "6.5 Data Visualization",
+        "6.6 Data Pre-Processing and Analysis",
+        "6.7 Cloud Storage and Data Backups",
+        "6.8 Introduction to Data Science"
       ]
     },
     {
-      "name": "UNIT 7: Computational Thinking",
+      "name": "UNIT 7: Emerging Technologies in Computer Science",
       "chapters": [
-        "7.0 Introduction",
-        "7.1 Definition.of Computational Thinking",
-        "7.2 Principles of Computational Thinking",
-        "7.3 Algorithm Design Methods",
-        "7.4 Algorithmic Activities",
-        "7.5 Dry Run",
-        "7.6 Introduction to LARP",
-        "7.7 Error ldentification and Debugging",
-        "7.8 Exercise Mcqs"
+        "7.1 Introduction to Artificial Intelligence (AI)",
+        "7.2 AI Algorithms and Techniques",
+        "7.3 Introduction to Internet of Things (loT)"
       ]
     },
     {
-      "name": "UNIT 8: Web Development with HTML, CSS and JavaScript",
+      "name": "UNIT 8: Ethical, Social, and Legal Concerns in Computer Usage",
       "chapters": [
-        "8.1 Web Development",
-        "8.2 Basic Components of Web Development",
-        "8.3 Getting Started with HTML",
-        "8.4 HTML Basic Structure",
-        "8.5 Creating Content with HTML",
-        "8.6 Styling with CSS",
-        "8.7 Introduction to JavaScript",
-        "8.8 Developing and Debugging",
-        "8.9 Exercise Mcqs"
+        "8.1 Secure Computer Usage",
+        "8.2 Responsible Computer Usage",
+        "8.3 Best Practices in Online Behavior",
+        "8.4 Intellectual Property Rights"
       ]
     },
     {
-      "name": "UNIT 9: Data Science and Data Gathering",
+      "name": "UNIT 9: Entrepreneurship in Digital Age",
       "chapters": [
-        "9.1 Data",
-        "9.2 Data Types",
-        "9.3 Organising and Analysing Data",
-        "9.4 Data Types",
-        "9.5 Data Storage Techniques",
-        "9.6 Data Visualization",
-        "9.7 Data Pre-Processing and Analysis",
-        "9.8 Collaborative Tools and Cloud Storage",
-        "9.9 Introduction to Data Science",
-        "9.10 Big Data and its Applications"
-      ]
-    },
-    {
-      "name": "UNIT 10: Emerging Technologies in Computer Science",
-      "chapters": [
-        "10.1 Introduction to Artificial Intelligence (Al)",
-        "10.2 Al Algorithms and Techniques",
-        "10.3 Introduction to Internet of Things (loT)",
-        "10.4 Implications and Future of Emerging Technologies"
-      ]
-    },
-    {
-      "name": "UNIT 11: Ethical, Social, and Legal Concerns in Computer Usage",
-      "chapters": [
-        "11.1 Responsible Computer Usage",
-        "11.2 Safe and Secure Operation of Digital Platforms",
-        "11.3 Best Practices in Online Behavior",
-        "11.4 Legal and Ethical Frameworks",
-        "11.5 Intellectual Property Rights",
-        "11.6 Responsible Internet Use",
-        "11.7 Impact of Computing on Society"
-      ]
-    },
-    {
-      "name": "UNIT 12: Entrepreneurship in Digital Age",
-      "chapters": [
-        "12.1 Entrepreneurship",
-        "12.2 Entrepreneurship in the Digital Landscape",
-        "12.3 Digital Tools and Platforms",
-        "12.4 Business Idea Generation",
-        "12.5 Developing Business Plans",
-        "12.6 Ethical and Sustainable Entrepreneurship Exercise"
+        "9.1 Entrepreneurship",
+        "9.2 Entrepreneurship in the Digital Landscape",
+        "9.3 Business Idea Generation",
+        "9.4 Developing Business Plans",
+        "9.5 Ethical and Sustainable Entrepreneurship"
       ]
     }
   ],
@@ -1453,23 +1395,33 @@
   "علم شہریت-9TH-PTB": [
     {
       "name": "باب نمبر: 1 علم شہریت کا تعارف",
-      "chapters": ["علم شہریت کا تعارف"]
+      "chapters": [
+        "علم شہریت کا تعارف"
+      ]
     },
     {
       "name": "باب نمبر: 2 افراد کے روابط",
-      "chapters": ["افراد کے روابط"]
+      "chapters": [
+        "افراد کے روابط"
+      ]
     },
     {
       "name": "باب نمبر: 3 ریاست",
-      "chapters": ["ریاست"]
+      "chapters": [
+        "ریاست"
+      ]
     },
     {
       "name": "باب نمبر: 4 حکومت",
-      "chapters": ["حکومت"]
+      "chapters": [
+        "حکومت"
+      ]
     },
     {
       "name": "باب نمبر: 5 شہری اور ریاست",
-      "chapters": ["شہری اور ریاست"]
+      "chapters": [
+        "شہری اور ریاست"
+      ]
     }
   ],
   "اخلاقیات-9TH-PTB": [

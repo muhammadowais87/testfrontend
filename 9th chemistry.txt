@@ -1,4 +1,4 @@
---mcqs
+->mcqs
 1.1 What is Chemistry?
 Exercise	1.	Hazardous effects of shopping bags are studied in:
 1.	شاپنگ بیگس کے مضر اثرات کا مطالعہ کیمسٹری کی کس شاخ میں کیا جاتا ہے:
@@ -3600,7 +3600,7 @@ Additional	1169.	What idea should be kept in mind to cope with the emergency sit
 (A)Stay clamپُر سکون رہیں(B)Do not panicپینک نہ کریں(C)To face problemمسئلے کا سامنا کریں(D)All of theseیہ تمام
 
 
---short
+->short questions
 1.1 What is Chemistry?
 1	.	What is chemistry?
 Additional
@@ -7380,7 +7380,7 @@ Exercise
 1221	.	اچانک جھٹکا کچھ کیمیکلز کے پھٹنے کا سبب کیوں بن سکتا ہے؟
 
 
---long
+->long questions
 1.1 What is Chemistry?
 1.	Define chemistry? Write the any five branches of chemistry and their application or scope.
 Additional

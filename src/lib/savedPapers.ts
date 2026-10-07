@@ -6,6 +6,9 @@ export type SavedPaperQuestion = {
   urdu: string;
   contentType?: "mcq" | "short" | "long";
   chapterPart?: string | null;
+  batch?: number;
+  medium?: string;
+  twoPerLine?: boolean;
 };
 
 export type SavedPaperRecord = {
@@ -85,12 +88,18 @@ const toSavedPaperRecord = (paper: any): SavedPaperRecord => ({
   timeAllowed: typeof paper?.timeAllowed === "string" ? paper.timeAllowed : "",
   totalMarks: typeof paper?.totalMarks === "string" ? paper.totalMarks : "0",
   questionType: typeof paper?.questionType === "string" ? paper.questionType : "",
+  medium: typeof paper?.medium === "string" ? paper.medium : undefined,
+  twoQuestionsPerLine: Boolean(paper?.twoQuestionsPerLine),
   questions: Array.isArray(paper?.questions)
     ? paper.questions.map((q: any) => ({
         id: Number(q?.id) || 0,
         text: typeof q?.text === "string" ? q.text : "",
         urdu: typeof q?.urdu === "string" ? q.urdu : "",
         contentType: q?.contentType === "mcq" || q?.contentType === "short" || q?.contentType === "long" ? q.contentType : undefined,
+        chapterPart: typeof q?.chapterPart === "string" ? q.chapterPart : null,
+        batch: typeof q?.batch === "number" ? q.batch : 0,
+        medium: typeof q?.medium === "string" ? q.medium : undefined,
+        twoPerLine: typeof q?.twoPerLine === "boolean" ? q.twoPerLine : undefined,
       }))
     : [],
 });

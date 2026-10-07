@@ -174,6 +174,19 @@ const QUESTION_TYPE_VALUE_MAP: Record<string, string> = {
   fillintheblanks: "fill_in_tha_blanks",
   idiomssentences: "ilfaz_ko_jumlo_mein_istamal",
   vitals: "vitals",
+  // Raw DB chapterPart labels (English/Urdu 9th, 10th, Inter-I) that otherwise normalize
+  // to nothing or to a value with no dropdown option.
+  "tick correct synonyms": "tick_correct_synonyms",
+  "punctuate the paragraphs": "punctuate_the_paragraph",
+  applications: "darkhaastein",
+  appliations: "darkhaastein",
+  theme: "markazi_khayal",
+  "zarb ul misaail": "zarb_ul_misaal",
+  receipt: "receipt",
+  newsletters: "newsletters",
+  history: "history",
+  "correct meaning of underlined words": "correct_meaning_of_underline_word",
+  "comprehension paragraphs": "comprehension_paragraph",
 };
 
 export const normalizeQuestionTypeValue = (value: string): string | null => {
@@ -523,6 +536,7 @@ export const fetchAvailableQuestionTypes = async (
   className?: string | null,
   board?: string | null,
   allGroups: ChapterGroup[] = [],
+  scopeByTopic = false,
 ): Promise<string[]> => {
   if (selectedChapters.length === 0) {
     return [];
@@ -539,6 +553,12 @@ export const fetchAvailableQuestionTypes = async (
   if (subject) params.set("subject", subject);
   if (className) params.set("className", className);
   if (board) params.set("board", board);
+  // Scope types to the individually selected sub-topics, not their whole chapter.
+  // Sent as repeated params because topic names can contain commas.
+  if (scopeByTopic && scope.chapterParts.length > 0) {
+    scope.chapterParts.forEach((topic) => params.append("topics", topic));
+    if (scope.fullChapters.length > 0) params.set("fullChapters", scope.fullChapters.join(","));
+  }
 
   const response = await fetch(
     `${API_BASE_URL}/question-bank/available-types?${params.toString()}`,

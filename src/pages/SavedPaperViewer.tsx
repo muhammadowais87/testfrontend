@@ -37,12 +37,14 @@ const SavedPaperViewer = () => {
   const [urduFontFamily, setUrduFontFamily] = useState("Noto Nastaliq Urdu");
   const [titleFontFamily, setTitleFontFamily] = useState("Times New Roman");
   const [paperMedium, setPaperMedium] = useState<string | null>(null);
-  const [printExamSyllabus, setPrintExamSyllabus] = useState(true);
+  // True only once the user explicitly changes the toolbar Medium dropdown -- until
+  // then, each section/question keeps the language it was added with.
+  const [mediumOverridden, setMediumOverridden] = useState(false);
+  const [printExamSyllabus, setPrintExamSyllabus] = useState(false);
   const [printBubbleSheet, setPrintBubbleSheet] = useState(false);
   const [printAnswerKeys, setPrintAnswerKeys] = useState(false);
   const [tickAnswers, setTickAnswers] = useState(false);
   const [wordFontSize, setWordFontSize] = useState(14);
-  const [twoQuestionsPerLine, setTwoQuestionsPerLine] = useState(false);
   const [logoScale, setLogoScale] = useState("100");
   const [monogramScale, setMonogramScale] = useState("100");
   const [selectedLineHeight, setSelectedLineHeight] = useState("1.28");
@@ -84,7 +86,7 @@ const SavedPaperViewer = () => {
     phase: "",
     testDetails: "",
   });
-  const [editableQuestions, setEditableQuestions] = useState<Array<{ id: number; text: string; urdu: string; contentType?: "mcq" | "short" | "long"; chapterPart?: string | null }>>([]);
+  const [editableQuestions, setEditableQuestions] = useState<Array<{ id: number; text: string; urdu: string; contentType?: "mcq" | "short" | "long"; chapterPart?: string | null; batch?: number; medium?: string; twoPerLine?: boolean }>>([]);
   const [mobilePreviewZoom, setMobilePreviewZoom] = useState(1);
 
   const handlePrintPaper = useCallback(() => {
@@ -194,10 +196,12 @@ const SavedPaperViewer = () => {
           urdu: q.urdu,
             contentType: q.contentType,
           chapterPart: q.chapterPart ?? null,
+          batch: q.batch ?? 0,
+          medium: q.medium,
+          twoPerLine: q.twoPerLine,
         }))
       );
       if (latestPaper?.medium) setPaperMedium(latestPaper.medium);
-      setTwoQuestionsPerLine(latestPaper?.twoQuestionsPerLine ?? false);
     };
 
     loadPaper();
@@ -480,7 +484,9 @@ const SavedPaperViewer = () => {
     words_meanings: { title: "Words Meanings.", urduTitle: "الفاظ و معنی۔" },
     words_into_sentences: { title: "Use Words in Sentences.", urduTitle: "الفاظ کا جملوں میں استعمال۔" },
     ilfaz_ko_jumlo_mein_istamal: { title: "Idioms in Sentences.", urduTitle: "محاورات / الفاظ کا جملوں میں استعمال۔" },
-    direct_and_indirect: { title: "Direct & Indirect.", urduTitle: "بلاواسطہ اور بالواسطہ۔" },
+    direct_and_indirect: { title: "Change the following sentences into Direct or Indirect Speech.", urduTitle: "مندرجہ ذیل جملوں کو بلاواسطہ یا بالواسطہ کلام میں تبدیل کریں۔" },
+    active_and_passive_voice: { title: "Change the following sentences into Active or Passive Voice.", urduTitle: "مندرجہ ذیل جملوں کو فعال یا مجہول آواز میں تبدیل کریں۔" },
+    pair_of_words: { title: "Use the following pairs of words in sentences.", urduTitle: "مندرجہ ذیل الفاظ کے جوڑوں کو جملوں میں استعمال کریں۔" },
     homophones: { title: "Homophones.", urduTitle: "ہم آواز الفاظ۔" },
     genders: { title: "Genders.", urduTitle: "مذکر / مونث۔" },
     zarb_ul_imsal: { title: "Zarb ul Imsal.", urduTitle: "ضرب الامثال۔" },
@@ -489,24 +495,27 @@ const SavedPaperViewer = () => {
     sabqe_lahqe: { title: "Sabqe Lahqe.", urduTitle: "سابقے لاحقے۔" },
     pointing: { title: "Pointing.", urduTitle: "اشارہ۔" },
     punctuate_the_paragraph: { title: "Punctuate the Paragraph.", urduTitle: "رموزِ اوقاف۔" },
-    translate_into_urdu_sentences: { title: "Translate into Urdu Sentences.", urduTitle: "جملوں کا ترجمہ۔" },
-    translate_into_urdu_paragraph: { title: "Translate into Urdu.", urduTitle: "اردو میں ترجمہ۔" },
+    translate_into_urdu_sentences: { title: "Translate the following sentences/paragraph into Urdu.", urduTitle: "مندرجہ ذیل جملوں/پیراگراف کا اردو میں ترجمہ کریں۔" },
+    translate_into_urdu_paragraph: { title: "Translate the following sentences/paragraph into Urdu.", urduTitle: "مندرجہ ذیل جملوں/پیراگراف کا اردو میں ترجمہ کریں۔" },
     tick_correct_spellings: { title: "Tick Correct Spellings.", urduTitle: "درست ہجے کا انتخاب کریں۔" },
+    correct_meaning_of_underline_word: { title: "Correct Meaning of Underlined Word.", urduTitle: "خط کشیدہ الفاظ کے درست معنی۔" },
+    tick_correct_form_of_verb: { title: "Tick Correct Form of Verb.", urduTitle: "فعل کی درست حالت کا انتخاب۔" },
+    tick_correct_according_to_grammer: { title: "Tick Correct According to Grammar.", urduTitle: "گرائمر کے مطابق درست انتخاب۔" },
     grammar: { title: "Grammar.", urduTitle: "گرائمر۔" },
-    ideoms: { title: "Idioms.", urduTitle: "محاورات۔" },
+    ideoms: { title: "Use the following idioms in sentences.", urduTitle: "مندرجہ ذیل محاورات کو جملوں میں استعمال کریں۔" },
     araab_lagaein: { title: "Put Araab.", urduTitle: "اعراب لگائیں۔" },
-    letters: { title: "Letters.", urduTitle: "خطوط۔" },
-    stories: { title: "Stories.", urduTitle: "کہانیاں۔" },
-    dialoges: { title: "Dialogues.", urduTitle: "مکالمے۔" },
-    mukalmy: { title: "Dialogues.", urduTitle: "مکالمے۔" },
+    letters: { title: "Write the following letters.", urduTitle: "مندرجہ ذیل خطوط تحریر کریں۔" },
+    stories: { title: "Write the following stories.", urduTitle: "مندرجہ ذیل کہانیاں تحریر کریں۔" },
+    dialoges: { title: "Write the following dialogues.", urduTitle: "مندرجہ ذیل مکالمے تحریر کریں۔" },
+    mukalmy: { title: "Write the following dialogues.", urduTitle: "مندرجہ ذیل مکالمے تحریر کریں۔" },
     darkhaastein: { title: "Applications.", urduTitle: "درخواستیں۔" },
-    writing_paragraphs: { title: "Writing Paragraphs.", urduTitle: "پیراگراف نویسی۔" },
-    comprehension_paragraph: { title: "Comprehension Paragraph.", urduTitle: "تفہیمی پیرا گراف۔" },
+    writing_paragraphs: { title: "Write paragraphs on the following topics.", urduTitle: "مندرجہ ذیل عنوانات پر پیراگراف تحریر کریں۔" },
+    comprehension_paragraph: { title: "Read the following paragraph carefully and answer the questions given below.", urduTitle: "مندرجہ ذیل پیراگراف غور سے پڑھ کر نیچے دیے گئے سوالات کے جوابات دیں۔" },
     tafheem_ibarat: { title: "Comprehension of Passage.", urduTitle: "تفہیم عبارت۔" },
     paragraph_ki_tashreeh: { title: "Explanation of Paragraph.", urduTitle: "پیراگراف کی تشریح۔" },
     markazi_khayal: { title: "Central Idea.", urduTitle: "مرکزی خیال۔" },
     farsi_tarjuma: { title: "Translation.", urduTitle: "ترجمہ۔" },
-    questions_answers: { title: "Questions & Answers.", urduTitle: "سوالات و جوابات۔" },
+    questions_answers: { title: "Answer the following questions.", urduTitle: "مندرجہ ذیل سوالات کے جوابات دیں۔" },
     shakhsiyat: { title: "Personalities.", urduTitle: "شخصیات۔" },
     shakhsiyaat: { title: "Personalities.", urduTitle: "شخصیات۔" },
     ayaat: { title: "Ayat.", urduTitle: "آیاتِ مبارکہ۔" },
@@ -514,9 +523,21 @@ const SavedPaperViewer = () => {
     ahadees: { title: "Ahadees.", urduTitle: "احادیث مبارکہ۔" },
   };
 
-  const isSpecialSlugKey = (cp: string | null | undefined) => !!cp && /^[a-z_]+$/.test(cp);
+  // Named question types are stored either as a slug ("words_into_sentences") or as a
+  // lowercase label with spaces ("words into sentences") depending on the subject --
+  // both must be recognized, or the type silently loses its own heading and gets
+  // merged into the generic mcq/short/long section.
+  const isSpecialSlugKey = (cp: string | null | undefined) => !!cp && /^[a-z_ ]+$/.test(cp);
 
-  const getSpecialSectionLabel = (key: string) => specialSlugLabelMap[key] ?? { title: key, urduTitle: key };
+  // Capitalizes every word (e.g. "tick correct according to grammer" -> "Tick Correct
+  // According To Grammer") so a type missing from specialSlugLabelMap still gets a
+  // properly-cased heading instead of the raw lowercase slug.
+  const toTitleCase = (s: string) => s.replace(/_/g, " ").replace(/\b\w/g, (c) => c.toUpperCase());
+
+  const getSpecialSectionLabel = (key: string) =>
+    specialSlugLabelMap[key]
+    ?? specialSlugLabelMap[key.replace(/\s+/g, "_")]
+    ?? { title: toTitleCase(key), urduTitle: key };
 
   const sectionedQuestions = useMemo(() => {
     const all = editableQuestions;
@@ -524,31 +545,30 @@ const SavedPaperViewer = () => {
     const totalCount = all.length;
     const marksPerQuestion = total > 0 && totalCount > 0 ? Math.max(1, Math.round(total / totalCount)) : 2;
 
-    const sectionMap = new Map<string, typeof all>();
-    all.forEach((q) => {
-      const key = isSpecialSlugKey(q.chapterPart) ? q.chapterPart! : classifyQuestionType(q.id, q.text, q.contentType);
-      if (!sectionMap.has(key)) sectionMap.set(key, []);
-      sectionMap.get(key)!.push(q);
-    });
-
     const standardMeta: Record<string, { title: string; urduTitle: string }> = {
       mcq: { title: "Choose the correct answer.", urduTitle: "درست جواب منتخب کریں۔" },
       short: { title: "Write short answers of the following questions.", urduTitle: "مندرجہ ذیل سوالات کے مختصر جوابات تحریر کریں۔" },
       long: { title: "Write the answers of following questions.", urduTitle: "مندرجہ ذیل سوالات کے جوابات تحریر کریں۔" },
     };
 
-    const standardOrder = ["mcq", "short", "long"];
-    const sections: { key: string; title: string; urduTitle: string; questions: typeof all }[] = [];
-    standardOrder.forEach((t) => {
-      if (sectionMap.has(t)) {
-        sections.push({ key: t, ...standardMeta[t], questions: sectionMap.get(t)! });
+    // Group by (batch, type) rather than just type -- so a paper with two separately
+    // added MCQ batches gets two separate sections/headings instead of merging them.
+    const sectionMap = new Map<string, { typeKey: string; questions: typeof all }>();
+    const sectionOrder: string[] = [];
+    all.forEach((q) => {
+      const typeKey = isSpecialSlugKey(q.chapterPart) ? q.chapterPart! : classifyQuestionType(q.id, q.text, q.contentType);
+      const key = `${q.batch ?? 0}::${typeKey}`;
+      if (!sectionMap.has(key)) {
+        sectionMap.set(key, { typeKey, questions: [] });
+        sectionOrder.push(key);
       }
+      sectionMap.get(key)!.questions.push(q);
     });
-    sectionMap.forEach((questions, key) => {
-      if (!standardOrder.includes(key)) {
-        const label = getSpecialSectionLabel(key);
-        sections.push({ key, ...label, questions });
-      }
+
+    const sections = sectionOrder.map((key) => {
+      const { typeKey, questions } = sectionMap.get(key)!;
+      const label = standardMeta[typeKey] ?? getSpecialSectionLabel(typeKey);
+      return { key, typeKey, ...label, questions };
     });
 
     return { sections: sections.filter((s) => s.questions.length > 0), marksPerQuestion };
@@ -560,8 +580,6 @@ const SavedPaperViewer = () => {
   );
 
   const effectiveMedium = paperMedium ?? paper?.medium ?? "dual";
-  const showEn = effectiveMedium !== "urdu";
-  const showUr = effectiveMedium !== "english";
 
   const resolvedLineHeight = Number(lineHeight) > 0 ? Number(lineHeight) : 1.28;
   const resolvedUrduFontSize = Number(urduFontSize) > 0 ? Number(urduFontSize) : 12;
@@ -689,7 +707,7 @@ const SavedPaperViewer = () => {
           </label>
           <select
             value={effectiveMedium}
-            onChange={(e) => setPaperMedium(e.target.value)}
+            onChange={(e) => { setPaperMedium(e.target.value); setMediumOverridden(true); }}
             className="inline-flex h-7 min-w-[90px] items-center rounded-sm border border-black bg-white px-2 text-[10px] text-black"
           >
             <option value="dual">Dual</option>
@@ -1480,7 +1498,7 @@ const SavedPaperViewer = () => {
                 <div className="saved-paper-bubble mt-2 rounded-lg border border-black bg-gradient-to-br from-slate-50 via-white to-sky-50 px-3 py-2 text-black shadow-sm">
                   <div className="mb-1.5 inline-flex rounded-full border border-sky-200 bg-white px-2 py-0.5 text-[11px] font-semibold text-sky-700">Bubble Sheet</div>
                   <div className="grid grid-cols-1 gap-1.5 text-[11px] sm:grid-cols-2 lg:grid-cols-3">
-                    {(sectionedQuestions.sections.find((s) => s.key === "mcq")?.questions || []).map((q, idx) => {
+                    {sectionedQuestions.sections.filter((s) => s.typeKey === "mcq").flatMap((s) => s.questions).map((q, idx) => {
                       const answerKey = getAnswerKey(q.id);
                       return (
                         <div key={`bubble-${q.id}`} className="rounded-md border border-slate-200 bg-white px-2 py-1 shadow-[0_1px_0_rgba(15,23,42,0.03)]">
@@ -1505,9 +1523,17 @@ const SavedPaperViewer = () => {
               )}
 
               <div className="saved-paper-sections mt-5 print:mt-3 space-y-8 print:space-y-6" style={{ lineHeight: resolvedLineHeight }}>
-                {sectionedQuestions.sections.map((section, sectionIndex) => (
+                {sectionedQuestions.sections.map((section, sectionIndex) => {
+                  // Each section keeps the language it was added with, unless the
+                  // toolbar Medium dropdown has been explicitly changed by the user.
+                  const sectionMedium = mediumOverridden ? effectiveMedium : (section.questions[0]?.medium || paper?.medium || "dual");
+                  const showEn = sectionMedium !== "urdu";
+                  const showUr = sectionMedium !== "english";
+                  // Each section also keeps its own "2 Questions Per Line" setting.
+                  const sectionTwoPerLine = section.questions[0]?.twoPerLine ?? paper?.twoQuestionsPerLine ?? false;
+                  return (
                   <section key={section.key} className={`saved-paper-section ${sectionIndex > 0 ? "pt-4 border-t border-black" : ""}`} style={{ breakInside: "avoid" }}>
-                    <div className="mb-1 print:mb-1 grid items-start gap-3" style={{ gridTemplateColumns: showEn && showUr ? "1fr auto 1fr" : showEn ? "1fr auto" : "auto 1fr" }}>
+                    <div className="mb-1 print:mb-1 grid items-start gap-3 pr-3" style={{ gridTemplateColumns: showEn && showUr ? "1fr auto 1fr" : showEn ? "1fr auto" : "auto 1fr" }}>
                       {showEn && (
                         <h2 className="font-bold text-left text-black" style={{ fontSize: `${resolvedEnglishFontSize + 1}px`, fontFamily: englishFontFamily }}>
                           {`Q${sectionIndex + 1}. ${section.title}`}
@@ -1533,7 +1559,7 @@ const SavedPaperViewer = () => {
                       )}
                     </div>
 
-                    {section.key === "match_columns" ? (
+                    {section.typeKey === "match_columns" ? (
                       <table className="border-collapse" dir="rtl" style={{ breakInside: "avoid", width: "auto", minWidth: "40%", maxWidth: "70%" }}>
                         <thead>
                           <tr>
@@ -1581,11 +1607,13 @@ const SavedPaperViewer = () => {
                         </tbody>
                       </table>
                     ) : (
-                    <div className={twoQuestionsPerLine ? "grid grid-cols-1 md:grid-cols-2 gap-4 print:gap-3" : "space-y-2 print:space-y-1.5"}>
+                    <div
+                      className={sectionTwoPerLine ? "grid grid-cols-1 md:grid-cols-2 print:grid-cols-2 gap-4 print:gap-3" : "space-y-2 print:space-y-1.5"}
+                      dir={sectionTwoPerLine && sectionMedium === "urdu" ? "rtl" : undefined}
+                    >
                       {section.questions.map((question, index) => {
                         const { englishStem, urduStem, parsedText, parsedUrdu } = getQuestionStems(question.text, question.urdu || "");
                         const showUrduQuestion = urduStem.trim() !== englishStem.trim();
-                        const isMcq = section.key === "mcq";
                         const answerKey = getAnswerKey(question.id);
                         const mergedOptions = mergeMcqOptions(parsedText, parsedUrdu);
                         const optionKeys = mergedOptions.map((o) => o.key);
@@ -1595,13 +1623,28 @@ const SavedPaperViewer = () => {
                           if (misras.length <= 1) {
                             return <MathText text={`${num}${prefix} ${stem}`} />;
                           }
-                          const parts: React.ReactNode[] = [];
-                          parts.push(<span key="idx">{num}{prefix}</span>);
-                          misras.forEach((m, i) => {
-                            if (i > 0) parts.push(<span key={`sep-${i}`} className="text-gray-400 mx-1">|</span>);
-                            parts.push(<span key={`m-${i}`} className="whitespace-nowrap">{m}</span>);
-                          });
-                          return <span className="inline-flex items-center gap-1 flex-wrap">{parts}</span>;
+                          if (misras.length === 2) {
+                            // 2-line شعر -- مصرعے side by side, centered.
+                            return (
+                              <span className="flex w-full items-baseline justify-center gap-6">
+                                {misras.map((m, i) => (
+                                  <span key={i} className="min-w-0">
+                                    {i === 0 ? `${num}${prefix} ` : ""}<MathText text={m} />
+                                  </span>
+                                ))}
+                              </span>
+                            );
+                          }
+                          // 3+ lines -- stack one above another, preserving line breaks.
+                          return (
+                            <span className="block">
+                              {misras.map((m, i) => (
+                                <span key={i} className="block">
+                                  {i === 0 ? `${num}${prefix} ` : ""}<MathText text={m} />
+                                </span>
+                              ))}
+                            </span>
+                          );
                         };
 
                         return (
@@ -1650,7 +1693,7 @@ const SavedPaperViewer = () => {
                               ))}
                             </div>
 
-                            {isMcq && optionKeys.length > 0 && (
+                            {optionKeys.length > 0 && (
                               <div className="mt-1 grid grid-cols-2 gap-x-4 gap-y-1">
                                 {optionKeys.map((key) => {
                                   const merged = mergedOptions.find((o) => o.key === key);
@@ -1659,7 +1702,7 @@ const SavedPaperViewer = () => {
                                   const showUrduOption = urOption.trim() !== enOption.trim();
                                   if (!showEn && showUr) {
                                     return (
-                                      <div key={`${question.id}-opt-${key}`} className="flex items-baseline justify-end gap-1 text-black" dir="rtl" style={{ fontSize: `${resolvedUrduFontSize}px`, color: resolvedTextColor, fontWeight: resolvedFontWeight, fontFamily: urduFontFamily }}>
+                                      <div key={`${question.id}-opt-${key}`} className="flex items-baseline justify-start gap-1 text-black" dir="rtl" style={{ fontSize: `${resolvedUrduFontSize}px`, color: resolvedTextColor, fontWeight: resolvedFontWeight, fontFamily: urduFontFamily }}>
                                         <span>{tickAnswers && answerKey === key ? "✓ " : ""}({key}) <MathText text={urOption} /></span>
                                       </div>
                                     );
@@ -1687,7 +1730,8 @@ const SavedPaperViewer = () => {
                     </div>
                     )}
                   </section>
-                ))}
+                  );
+                })}
 
                 {printAnswerKeys && (
                   <section style={{ breakInside: "avoid" }}>
@@ -1697,7 +1741,7 @@ const SavedPaperViewer = () => {
                       </h2>
                     </div>
                     <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 text-black" style={{ fontSize: `${resolvedEnglishFontSize}px`, fontFamily: englishFontFamily }}>
-                      {(sectionedQuestions.sections.find((s) => s.key === "mcq")?.questions || []).map((q, i) => {
+                      {sectionedQuestions.sections.filter((s) => s.typeKey === "mcq").flatMap((s) => s.questions).map((q, i) => {
                         return <div key={`answer-${q.id}`}>{`Q${i + 1}: ${getAnswerKey(q.id)}`}</div>;
                       })}
                     </div>

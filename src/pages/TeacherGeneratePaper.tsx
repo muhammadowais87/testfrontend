@@ -22,7 +22,7 @@ import { getOneToEightChapters } from "@/data/oneToEightChapters";
 import { getAvailableQuestionTypesForTopics } from "@/data/topicQuestionTypes";
 import SubjectButton from "@/components/SubjectButton";
 import DualMediumQuestion from "@/components/DualMediumQuestion";
-import { getQuestionStems, mergeMcqOptions, sanitizeOptionValue } from "@/lib/questionDisplay";
+import { getQuestionStems, mergeMcqOptions, sanitizeOptionValue, splitVerseText } from "@/lib/questionDisplay";
 
 const isUrdu = (text: string) => /[\u0600-\u06FF]/.test(text);
 // Strip a leading "<number>. " prefix embedded in stored question text
@@ -131,6 +131,13 @@ const inferContentType = (id: number, text: string): WorkspaceQuestionType => {
   if (id >= 200) return "long";
   return /\([A-D]\)/.test(text) ? "mcq" : "short";
 };
+
+// English / Urdu (PTB) for 9th, 10th and 1st Year -- these use the DB's per-topic data as
+// the source of truth for the question-type dropdown.
+const isEnglishUrduPtbTopicScoped = (subjectName: string, board: string | null, level: string | null) =>
+  board === "PTB" &&
+  ["9TH", "10TH", "INTER-I"].includes(level || "") &&
+  ["Urdu", "English", "اردو", "اردو لازمی"].some((s) => subjectName === s || subjectName.includes(s));
 
 const getProfessionalQuestionTypeLabel = (value: string, fallbackLabel: string): string => {
   const normalizedValue = value.toLowerCase().trim();
@@ -248,6 +255,17 @@ const TeacherGeneratePaper = () => {
   const [availableDbTypes, setAvailableDbTypes] = useState<string[] | null>(null);
   const [editedQuestions, setEditedQuestions] = useState<Record<number, EditedQuestion>>({});
   const [shuffledOrder, setShuffledOrder] = useState<number[]>([]);
+  // Tracks which "add questions" action a question came from, so two separate adds of
+  // the same type (e.g. MCQs added twice) get their own section/heading instead of
+  // merging into one.
+  const [questionBatch, setQuestionBatch] = useState<Record<number, number>>({});
+  const nextBatchIdRef = useRef(0);
+  // Tracks the Dual Medium setting each question was added with, so a later add with a
+  // different medium (English/Urdu/Dual) doesn't change previously-added questions.
+  const [questionMedium, setQuestionMedium] = useState<Record<number, string>>({});
+  // Tracks the "2 Questions Per Line" setting each question was added with, so a later
+  // add with a different setting doesn't change previously-added questions.
+  const [questionTwoPerLine, setQuestionTwoPerLine] = useState<Record<number, boolean>>({});
   const [showSavePaperDialog, setShowSavePaperDialog] = useState(false);
   const [paperName, setPaperName] = useState("");
   const [paperCategory, setPaperCategory] = useState("");
@@ -360,8 +378,17 @@ const TeacherGeneratePaper = () => {
 
     let allowedSet: Set<string> | null = null;
     const dbTypeValues = dbQuestionTypes?.map((t) => t.value) ?? [];
-    if (topicTypes && topicTypes.length > 0) {
-      allowedSet = new Set([...topicTypes, ...(availableDbTypes ?? []), ...dbTypeValues]);
+    const topicScopedSubject = isEnglishUrduPtbTopicScoped(subjectName, selectedBoard, selectedLevel);
+    if (topicScopedSubject && availableDbTypes && availableDbTypes.length > 0) {
+      // availableDbTypes is scoped to exactly the selected topics here, so it alone decides
+      // the list -- unioning the static topic map back in re-adds unrelated types (e.g.
+      // Letters/Stories/Idioms when only "Comprehension Paragraph" is selected).
+      allowedSet = new Set(availableDbTypes);
+    } else if (topicTypes && topicTypes.length > 0) {
+      // dbTypeValues is the FULL subject-wide type list (unscoped by topic/chapter) --
+      // merging it in here would defeat the topic-specific filtering entirely and show
+      // every question type regardless of which topics are actually selected.
+      allowedSet = new Set([...topicTypes, ...(availableDbTypes ?? [])]);
     } else if (availableDbTypes && availableDbTypes.length > 0) {
       allowedSet = new Set(availableDbTypes);
     } else if (dbTypeValues.length > 0) {
@@ -451,7 +478,7 @@ const TeacherGeneratePaper = () => {
       value: opt.value,
       label: getProfessionalQuestionTypeLabel(opt.value, opt.label),
     }));
-  }, [dbQuestionTypes, selectedLevel, selectedSubject, availableDbTypes, selectedChapters, chapterGroups]);
+  }, [dbQuestionTypes, selectedLevel, selectedSubject, selectedBoard, availableDbTypes, selectedChapters, chapterGroups]);
 
   useEffect(() => {
     if (questionType && !questionTypeOptions.some((option) => option.value === questionType)) {
@@ -561,6 +588,9 @@ const TeacherGeneratePaper = () => {
             urdu: editedQuestions[id]?.urdu ?? matched.urdu,
             contentType: matched.contentType,
             chapterPart: matched.chapterPart,
+            batch: questionBatch[id] ?? 0,
+            medium: questionMedium[id] ?? appliedDualMedium,
+            twoPerLine: questionTwoPerLine[id] ?? appliedTwoQuestionsPerLine,
           };
         }
 
@@ -573,10 +603,13 @@ const TeacherGeneratePaper = () => {
           urdu: edited.urdu,
           contentType: edited.contentType || inferContentType(id, edited.text),
           chapterPart: edited.chapterPart ?? null,
+          batch: questionBatch[id] ?? 0,
+          medium: questionMedium[id] ?? appliedDualMedium,
+          twoPerLine: questionTwoPerLine[id] ?? appliedTwoQuestionsPerLine,
         };
       })
-      .filter((q): q is { id: number; text: string; urdu: string; contentType: WorkspaceQuestionType; chapterPart: string | null } => Boolean(q)),
-    [allQuestions, editedQuestions, shuffledOrder]
+      .filter((q): q is { id: number; text: string; urdu: string; contentType: WorkspaceQuestionType; chapterPart: string | null; batch: number; medium: string; twoPerLine: boolean } => Boolean(q)),
+    [allQuestions, editedQuestions, shuffledOrder, questionBatch, questionMedium, appliedDualMedium, questionTwoPerLine, appliedTwoQuestionsPerLine]
   );
 
   const standardSectionMeta: Record<WorkspaceQuestionType, { english: string; urdu: string }> = {
@@ -594,32 +627,73 @@ const TeacherGeneratePaper = () => {
     },
   };
 
+  // Paper-only instructional headings -- these override what's PRINTED on the paper for
+  // these named types, without changing the type's own name in the question-type dropdown
+  // (that dropdown label comes from questionTypeOptions/getProfessionalQuestionTypeLabel,
+  // which this map intentionally does not touch).
+  const sectionHeadingOverrides: Record<string, { english: string; urdu: string }> = {
+    letters: { english: "Write the following letters", urdu: "مندرجہ ذیل خطوط تحریر کریں" },
+    stories: { english: "Write the following stories", urdu: "مندرجہ ذیل کہانیاں تحریر کریں" },
+    dialoges: { english: "Write the following dialogues", urdu: "مندرجہ ذیل مکالمے تحریر کریں" },
+    mukalmy: { english: "Write the following dialogues", urdu: "مندرجہ ذیل مکالمے تحریر کریں" },
+    ideoms: { english: "Use the following idioms in sentences", urdu: "مندرجہ ذیل محاورات کو جملوں میں استعمال کریں" },
+    active_and_passive_voice: { english: "Change the following sentences into Active or Passive Voice", urdu: "مندرجہ ذیل جملوں کو فعال یا مجہول آواز میں تبدیل کریں" },
+    direct_and_indirect: { english: "Change the following sentences into Direct or Indirect Speech", urdu: "مندرجہ ذیل جملوں کو بلاواسطہ یا بالواسطہ کلام میں تبدیل کریں" },
+    pair_of_words: { english: "Use the following pairs of words in sentences", urdu: "مندرجہ ذیل الفاظ کے جوڑوں کو جملوں میں استعمال کریں" },
+    comprehension_paragraph: { english: "Read the following paragraph carefully and answer the questions given below", urdu: "مندرجہ ذیل پیراگراف غور سے پڑھ کر نیچے دیے گئے سوالات کے جوابات دیں" },
+    questions_answers: { english: "Answer the following questions", urdu: "مندرجہ ذیل سوالات کے جوابات دیں" },
+    question_and_answers: { english: "Answer the following questions", urdu: "مندرجہ ذیل سوالات کے جوابات دیں" },
+    writing_paragraphs: { english: "Write paragraphs on the following topics", urdu: "مندرجہ ذیل عنوانات پر پیراگراف تحریر کریں" },
+    translate_into_urdu_paragraph: { english: "Translate the following sentences/paragraph into Urdu", urdu: "مندرجہ ذیل جملوں/پیراگراف کا اردو میں ترجمہ کریں" },
+    translate_urdu_paragraph: { english: "Translate the following sentences/paragraph into Urdu", urdu: "مندرجہ ذیل جملوں/پیراگراف کا اردو میں ترجمہ کریں" },
+    translate_into_urdu_sentences: { english: "Translate the following sentences/paragraph into Urdu", urdu: "مندرجہ ذیل جملوں/پیراگراف کا اردو میں ترجمہ کریں" },
+  };
+
   const getSectionLabel = (key: string): { english: string; urdu: string } => {
     if (key === "mcq" || key === "short" || key === "long") return standardSectionMeta[key];
-    const opt = questionTypeOptions.find((o) => o.value === key);
+    // chapterPart may be stored as a slug ("words_into_sentences") or a spaced label
+    // ("words into sentences") depending on the subject -- match either against the
+    // option list's slug-form values.
+    const normalized = key.replace(/\s+/g, "_");
+    const override = sectionHeadingOverrides[key] ?? sectionHeadingOverrides[normalized];
+    if (override) return { english: `${override.english}.`, urdu: `${override.urdu}۔` };
+    const opt = questionTypeOptions.find((o) => o.value === key || o.value === normalized);
     if (opt) {
       const parenMatch = opt.label.match(/\(([^)]+)\)$/);
       const urduPart = parenMatch ? parenMatch[1] : opt.label;
       const englishPart = opt.label.replace(/\s*\([^)]+\)\s*$/, "").trim();
       return { english: `${englishPart}.`, urdu: `${urduPart}۔` };
     }
-    return { english: key, urdu: key };
+    // Capitalize every word (e.g. "tick correct according to grammer" -> "Tick Correct
+    // According To Grammer") so a type missing from questionTypeOptions still gets a
+    // properly-cased heading instead of the raw lowercase slug.
+    const titleCased = key.replace(/_/g, " ").replace(/\b\w/g, (c) => c.toUpperCase());
+    return { english: titleCased, urdu: key };
   };
 
-  const isSpecialSlugKey = (cp: string | null) => !!cp && /^[a-z_]+$/.test(cp);
+  // Named question types are stored either as a slug ("words_into_sentences") or as a
+  // lowercase label with spaces ("words into sentences") depending on the subject --
+  // both must be recognized, or the type silently loses its own heading and gets
+  // merged into the generic mcq/short/long section.
+  const isSpecialSlugKey = (cp: string | null) => !!cp && /^[a-z_ ]+$/.test(cp);
 
   const workspaceSections = useMemo(() => {
-    const sectionMap = new Map<string, typeof workspaceQuestions>();
+    // Group by (batch, type) rather than just type -- so adding another 5 MCQs in a
+    // separate "add questions" action creates its own section/heading instead of
+    // merging into a previously-added MCQ section. Sections appear in the order they
+    // were first added.
+    const sectionMap = new Map<string, { typeKey: string; questions: typeof workspaceQuestions }>();
+    const sectionOrder: string[] = [];
     workspaceQuestions.forEach((q) => {
-      const key = isSpecialSlugKey(q.chapterPart) ? q.chapterPart! : q.contentType;
-      if (!sectionMap.has(key)) sectionMap.set(key, []);
-      sectionMap.get(key)!.push(q);
+      const typeKey = isSpecialSlugKey(q.chapterPart) ? q.chapterPart! : q.contentType;
+      const key = `${q.batch}::${typeKey}`;
+      if (!sectionMap.has(key)) {
+        sectionMap.set(key, { typeKey, questions: [] });
+        sectionOrder.push(key);
+      }
+      sectionMap.get(key)!.questions.push(q);
     });
-    const standard: string[] = ["mcq", "short", "long"];
-    const sections: { key: string; questions: typeof workspaceQuestions }[] = [];
-    standard.forEach((t) => { if (sectionMap.has(t)) sections.push({ key: t, questions: sectionMap.get(t)! }); });
-    sectionMap.forEach((questions, key) => { if (!standard.includes(key)) sections.push({ key, questions }); });
-    return sections;
+    return sectionOrder.map((key) => ({ key, typeKey: sectionMap.get(key)!.typeKey, questions: sectionMap.get(key)!.questions }));
   }, [workspaceQuestions]);
 
   const handleSearchClick = async () => {
@@ -724,7 +798,23 @@ const TeacherGeneratePaper = () => {
 
     setSelectionError("");
     const ids = [...selectedQuestions];
+    const batchId = nextBatchIdRef.current++;
     setShuffledOrder((prev) => orderQuestionIds([...prev, ...ids]));
+    setQuestionBatch((prev) => {
+      const next = { ...prev };
+      ids.forEach((id) => { next[id] = batchId; });
+      return next;
+    });
+    setQuestionMedium((prev) => {
+      const next = { ...prev };
+      ids.forEach((id) => { next[id] = appliedDualMedium; });
+      return next;
+    });
+    setQuestionTwoPerLine((prev) => {
+      const next = { ...prev };
+      ids.forEach((id) => { next[id] = appliedTwoQuestionsPerLine; });
+      return next;
+    });
     setEditedQuestions((prev) => {
       const next = { ...prev };
       activeQuestions.filter((q) => ids.includes(q.id)).forEach((q) => {
@@ -766,6 +856,10 @@ const TeacherGeneratePaper = () => {
   const clearPaperQuestions = () => {
     setSelectedQuestions([]);
     setShuffledOrder([]);
+    setQuestionBatch({});
+    setQuestionMedium({});
+    setQuestionTwoPerLine({});
+    nextBatchIdRef.current = 0;
     setEditedQuestions({});
     setIsManualEditing(false);
   };
@@ -812,6 +906,16 @@ const TeacherGeneratePaper = () => {
       setRequiredQuestions(String(savedPaper.questions.length || 0));
       setEachQMarks(String(marksPerQuestion));
       setShuffledOrder(orderedIds);
+      setQuestionBatch(
+        Object.fromEntries(savedPaper.questions.map((q) => [q.id, q.batch ?? 0]))
+      );
+      nextBatchIdRef.current = Math.max(0, ...savedPaper.questions.map((q) => (q.batch ?? 0) + 1));
+      setQuestionMedium(
+        Object.fromEntries(savedPaper.questions.map((q) => [q.id, q.medium || paperMedium]))
+      );
+      setQuestionTwoPerLine(
+        Object.fromEntries(savedPaper.questions.map((q) => [q.id, q.twoPerLine ?? savedPaper.twoQuestionsPerLine ?? false]))
+      );
       setEditedQuestions(
         Object.fromEntries(
           savedPaper.questions.map((q) => [q.id, { text: q.text, urdu: q.urdu, contentType: q.contentType, chapterPart: q.chapterPart }])
@@ -874,6 +978,9 @@ const TeacherGeneratePaper = () => {
         chapterPart: question.chapterPart ?? null,
         text: editedQuestions[question.id]?.text ?? question.text,
         urdu: editedQuestions[question.id]?.urdu ?? question.urdu,
+        batch: question.batch,
+        medium: question.medium,
+        twoPerLine: question.twoPerLine,
       })),
     };
 
@@ -892,6 +999,9 @@ const TeacherGeneratePaper = () => {
       chapterPart: q.chapterPart ?? null,
       text: editedQuestions[q.id]?.text ?? q.text,
       urdu: editedQuestions[q.id]?.urdu ?? q.urdu,
+      batch: q.batch,
+      medium: q.medium,
+      twoPerLine: q.twoPerLine,
     }));
 
     const dateForStorage = paperDate || new Date().toLocaleDateString("en-GB");
@@ -957,7 +1067,7 @@ const TeacherGeneratePaper = () => {
     };
   }, [selectedBoard, selectedLevel, selectedSubject]);
 
-  // Auto-select all chapters when chapter groups load for a chosen subject
+  // Reset chapter selection (unchecked) whenever chapter groups load for a chosen subject
   useEffect(() => {
     if (!selectedSubject || !selectedLevel || !selectedBoard) {
       lastInitializedRef.current = null;
@@ -991,7 +1101,8 @@ const TeacherGeneratePaper = () => {
       }
     }
     if (groups && groups.length > 0) {
-      setSelectedChapters(groups.flatMap((g) => [g.name, ...g.chapters]));
+      // Chapter checkboxes must start unchecked -- the user picks which ones to include.
+      setSelectedChapters([]);
       lastInitializedRef.current = { key: currentKey, isDb: hasDb, isTopicsFile: hasTopicsFile };
     }
   }, [dbChapterGroups, selectedSubject, selectedLevel, selectedBoard]);
@@ -1024,6 +1135,7 @@ const TeacherGeneratePaper = () => {
         selectedLevel,
         selectedBoard,
         chapterGroups,
+        isEnglishUrduPtbTopicScoped(selectedSubject?.split("||")[0] ?? "", selectedBoard, selectedLevel),
       )
         .then(setAvailableDbTypes)
         .catch(() => setAvailableDbTypes(null));
@@ -1607,19 +1719,25 @@ const TeacherGeneratePaper = () => {
                   ) : workspaceSections.map((section, sectionIndex) => {
                     const marksPerQuestion = Number(eachQMarks) || 2;
                     const sectionNumber = sectionIndex + 1;
-                    const sectionLabel = getSectionLabel(section.key);
-                    const showEn = appliedDualMedium !== "urdu";
-                    const showUr = appliedDualMedium !== "english";
+                    const sectionLabel = getSectionLabel(section.typeKey);
+                    // Each section keeps the language it was added with -- changing the
+                    // dropdown for a later "Add Questions" action must not retroactively
+                    // change a previously-added section's language.
+                    const sectionMedium = section.questions[0]?.medium ?? appliedDualMedium;
+                    const showEn = sectionMedium !== "urdu";
+                    const showUr = sectionMedium !== "english";
+                    // Each section also keeps its own "2 Questions Per Line" setting.
+                    const sectionTwoPerLine = section.questions[0]?.twoPerLine ?? appliedTwoQuestionsPerLine;
                     return (
                       <div key={section.key} className="border-b border-gray-200 pb-4 last:border-b-0 last:pb-0">
-                        <div className="flex items-start justify-between gap-6 mb-4">
+                        <div className="flex items-start justify-between gap-6 mb-4 pr-3">
                           {showEn && <p className="text-sm font-bold text-gray-900 flex-1">Q{sectionNumber}. {sectionLabel.english}</p>}
                           <p className="text-sm font-bold text-gray-900 whitespace-nowrap">
                             {section.questions.length}X{marksPerQuestion}={section.questions.length * marksPerQuestion}
                           </p>
                           {showUr && <p className="text-sm font-bold text-gray-900 flex-1 text-right" dir="rtl">سوال نمبر{sectionNumber}۔ {sectionLabel.urdu}</p>}
                         </div>
-                        {section.key === "match_columns" ? (
+                        {section.typeKey === "match_columns" ? (
                           <table className="border-collapse text-sm" dir="rtl" style={{ width: "auto", minWidth: "40%", maxWidth: "70%" }}>
                             <thead>
                               <tr>
@@ -1637,9 +1755,9 @@ const TeacherGeneratePaper = () => {
                             </tbody>
                           </table>
                         ) : (
-                          <div className={appliedTwoQuestionsPerLine ? "grid grid-cols-1 md:grid-cols-2 gap-3" : "space-y-1"}>
+                          <div className={sectionTwoPerLine ? "grid grid-cols-1 md:grid-cols-2 gap-3" : "space-y-1"}>
                             {section.questions.map((q, idx) => (
-                              <div key={q.id} className={appliedTwoQuestionsPerLine ? "border border-gray-100 rounded-lg p-3" : "flex items-start justify-between gap-4"}>
+                              <div key={q.id} className={sectionTwoPerLine ? "border border-gray-100 rounded-lg p-3" : "flex items-start justify-between gap-4"}>
                                 {isManualEditing ? (
                                   <>
                                     {showEn && <input
@@ -1662,9 +1780,27 @@ const TeacherGeneratePaper = () => {
                                       const { englishStem, urduStem, parsedText, parsedUrdu } = getQuestionStems(qText, qUrdu);
                                       const mergedOptions = mergeMcqOptions(parsedText, parsedUrdu);
                                       const hasOptions = mergedOptions.some((o) => o.english || o.urdu);
+                                      const englishMisras = splitVerseText(englishStem);
+                                      const urduMisras = splitVerseText(urduStem);
                                       return (
                                         <>
-                                          {showEn && <p className="text-sm text-gray-800">{idx + 1}. {englishStem}</p>}
+                                          {showEn && (englishMisras.length === 2 ? (
+                                            // 2-line شعر -- مصرعے side by side, centered.
+                                            <p className="text-sm text-gray-800 flex w-full items-baseline justify-center gap-6">
+                                              {englishMisras.map((m, i) => (
+                                                <span key={i} className="min-w-0">{i === 0 ? `${idx + 1}. ` : ""}{m}</span>
+                                              ))}
+                                            </p>
+                                          ) : englishMisras.length >= 3 ? (
+                                            // 3+ lines -- stack one above another, preserving line breaks.
+                                            <div className="text-sm text-gray-800">
+                                              {englishMisras.map((m, i) => (
+                                                <p key={i}>{i === 0 ? `${idx + 1}. ` : ""}{m}</p>
+                                              ))}
+                                            </div>
+                                          ) : (
+                                            <p className="text-sm text-gray-800">{idx + 1}. {englishStem}</p>
+                                          ))}
                                           {showEn && hasOptions && (
                                             <div className="mt-1 space-y-0.5">
                                               {mergedOptions.map((opt) => (
@@ -1674,7 +1810,23 @@ const TeacherGeneratePaper = () => {
                                               ))}
                                             </div>
                                           )}
-                                          {showUr && <p className="text-sm text-gray-800 text-right" dir="rtl">{idx + 1}۔ {urduStem}</p>}
+                                          {showUr && (urduMisras.length === 2 ? (
+                                            // 2-line شعر -- مصرعے side by side, centered.
+                                            <p className="text-sm text-gray-800 flex w-full items-baseline justify-center gap-6" dir="rtl">
+                                              {urduMisras.map((m, i) => (
+                                                <span key={i} className="min-w-0">{i === 0 ? `${idx + 1}۔ ` : ""}{m}</span>
+                                              ))}
+                                            </p>
+                                          ) : urduMisras.length >= 3 ? (
+                                            // 3+ lines -- stack one above another, preserving line breaks.
+                                            <div className="text-sm text-gray-800 text-right" dir="rtl">
+                                              {urduMisras.map((m, i) => (
+                                                <p key={i}>{i === 0 ? `${idx + 1}۔ ` : ""}{m}</p>
+                                              ))}
+                                            </div>
+                                          ) : (
+                                            <p className="text-sm text-gray-800 text-right" dir="rtl">{idx + 1}۔ {urduStem}</p>
+                                          ))}
                                           {showUr && hasOptions && (
                                             <div className="mt-1 space-y-0.5" dir="rtl">
                                               {mergedOptions.map((opt) => (

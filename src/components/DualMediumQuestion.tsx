@@ -84,13 +84,31 @@ export default function DualMediumQuestion({
   ) : null;
 
   const renderVerseMisras = (misras: string[], idx: number, prefix: string) => {
-    const parts: React.ReactNode[] = [];
-    parts.push(<span key="idx">{idx}{prefix}</span>);
-    misras.forEach((m, i) => {
-      if (i > 0) parts.push(<span key={`sep-${i}`} className="text-gray-400 mx-1">|</span>);
-      parts.push(<span key={`m-${i}`} className="whitespace-nowrap">{m}</span>);
-    });
-    return <span className="inline-flex items-center gap-1 flex-wrap">{parts}</span>;
+    if (misras.length < 2) {
+      return <>{idx}{prefix} {misras[0] ?? ""}</>;
+    }
+    if (misras.length === 2) {
+      // A 2-line شعر -- its two مصرعے sit side by side, centered with a small gap.
+      return (
+        <span className="flex w-full items-baseline justify-center gap-6">
+          {misras.map((m, i) => (
+            <span key={i} className="min-w-0">
+              {i === 0 ? `${idx}${prefix} ` : ""}{m}
+            </span>
+          ))}
+        </span>
+      );
+    }
+    // 3+ lines -- stack one above another, preserving the original line breaks.
+    return (
+      <span className="block">
+        {misras.map((m, i) => (
+          <span key={i} className="block">
+            {i === 0 ? `${idx}${prefix} ` : ""}{m}
+          </span>
+        ))}
+      </span>
+    );
   };
 
   const renderEnglishStem = () => {
