@@ -121,8 +121,18 @@ export default {
             height: "0",
           },
         },
+        "loader-in": {
+          "0%, 60%": { opacity: "0" },
+          "100%": { opacity: "1" },
+        },
+        "loader-pulse": {
+          "0%, 100%": { transform: "scale(1)", opacity: "1" },
+          "50%": { transform: "scale(0.88)", opacity: "0.85" },
+        },
       },
       animation: {
+        "loader-in": "loader-in 0.25s ease-out both",
+        "loader-pulse": "loader-pulse 1.4s ease-in-out infinite",
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
       },

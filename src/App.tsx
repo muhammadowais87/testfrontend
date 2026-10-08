@@ -1,4 +1,5 @@
 import { Suspense, lazy, useState, useEffect } from "react";
+import PageLoader from "@/components/PageLoader";
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -30,9 +31,7 @@ const SavedPaperViewer = lazy(() => import("./pages/SavedPaperViewer"));
 
 const queryClient = new QueryClient();
 
-const PageFallback = () => (
-  <div className="flex items-center justify-center min-h-screen text-muted-foreground">Loading...</div>
-);
+const PageFallback = () => <PageLoader />;
 
 const TeacherProtectedRoute = ({ children }: { children: JSX.Element }) => {
   const session = useTeacherSessionStore((s) => s.session);

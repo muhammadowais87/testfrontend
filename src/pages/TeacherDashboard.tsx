@@ -13,6 +13,7 @@ import { useTeacherSessionStore } from "@/stores/teacherSessionStore";
 import { useIsMobile } from "@/hooks/use-mobile";
 import { API_BASE_URL } from "@/lib/api";
 import { useToast } from "@/hooks/use-toast";
+import PageLoader from "@/components/PageLoader";
 
 type ActiveView = "dashboard" | "savedpapers" | "billing" | "settings" | "password" | "assigned";
 
@@ -181,11 +182,7 @@ const TeacherDashboard = () => {
   );
 
   if (isLoadingProfile) {
-    return (
-      <div className="min-h-screen bg-background grid place-items-center">
-        <p className="text-muted-foreground">Loading {isSubUserPortal ? "sub user" : "teacher"} portal...</p>
-      </div>
-    );
+    return <PageLoader />;
   }
 
   return (

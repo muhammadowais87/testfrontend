@@ -40,6 +40,7 @@ import { deleteSavedPaper, getSavedPapers, migrateLegacySavedPapersToDb, type Sa
 import { useInstituteSessionStore } from "@/stores/instituteSessionStore";
 import { API_BASE_URL } from "@/lib/api";
 import { useToast } from "@/hooks/use-toast";
+import PageLoader from "@/components/PageLoader";
 
 type ActiveView = "dashboard" | "billing" | "password" | "settings" | "subusers" | "savedpapers";
 
@@ -228,8 +229,8 @@ const Dashboard = () => {
   return (
     <div className="min-h-screen bg-background">
       {isLoadingProfile && (
-        <div className="fixed inset-0 z-[100] bg-background/80 backdrop-blur-sm grid place-items-center">
-          <p className="text-muted-foreground">Loading institute portal...</p>
+        <div className="fixed inset-0 z-[100]">
+          <PageLoader />
         </div>
       )}
       <header className="sticky top-0 z-40 bg-[hsl(var(--pts-dark))] w-full">
