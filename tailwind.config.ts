@@ -127,10 +127,15 @@ export default {
         },
         "loader-pulse": {
           "0%, 100%": { transform: "scale(1)", opacity: "1" },
-          "50%": { transform: "scale(0.88)", opacity: "0.85" },
+          "50%": { transform: "scale(0.95)", opacity: "0.85" },
+        },
+        "loader-bar": {
+          "0%": { transform: "translateX(-100%)" },
+          "100%": { transform: "translateX(200%)" },
         },
       },
       animation: {
+        "loader-bar": "loader-bar 1.1s ease-in-out infinite",
         "loader-in": "loader-in 0.25s ease-out both",
         "loader-pulse": "loader-pulse 1.4s ease-in-out infinite",
         "accordion-down": "accordion-down 0.2s ease-out",
