@@ -136,12 +136,10 @@ const inferContentType = (id: number, text: string): WorkspaceQuestionType => {
   return /\([A-D]\)/.test(text) ? "mcq" : "short";
 };
 
-// English / Urdu (PTB) for 9th, 10th and 1st Year -- these use the DB's per-topic data as
-// the source of truth for the question-type dropdown.
-const isEnglishUrduPtbTopicScoped = (subjectName: string, board: string | null, level: string | null) =>
-  board === "PTB" &&
-  ["9TH", "10TH", "INTER-I"].includes(level || "") &&
-  ["Urdu", "English", "اردو", "اردو لازمی"].some((s) => subjectName === s || subjectName.includes(s));
+// PTB 9th, 10th and 1st Year -- these use the DB's per-topic data as the source of truth
+// for the question-type dropdown.
+const isTopicScopedPtbClass = (board: string | null, level: string | null) =>
+  board === "PTB" && ["9TH", "10TH", "INTER-I"].includes(level || "");
 
 const getProfessionalQuestionTypeLabel = (value: string, fallbackLabel: string): string => {
   const normalizedValue = value.toLowerCase().trim();
@@ -360,7 +358,7 @@ const GeneratePaper = () => {
     // is never hidden by stale static topic maps.
     let allowedSet: Set<string> | null = null;
     const dbTypeValues = dbQuestionTypes?.map((t) => t.value) ?? [];
-    const topicScopedSubject = isEnglishUrduPtbTopicScoped(subjectName, selectedBoard, selectedLevel);
+    const topicScopedSubject = isTopicScopedPtbClass(selectedBoard, selectedLevel);
     if (topicScopedSubject && availableDbTypes && availableDbTypes.length > 0) {
       // availableDbTypes is scoped to exactly the selected topics here, so it alone decides
       // the list -- unioning the static topic map back in re-adds unrelated types (e.g.
@@ -1136,7 +1134,7 @@ const GeneratePaper = () => {
         selectedLevel,
         selectedBoard,
         chapterGroups,
-        isEnglishUrduPtbTopicScoped(selectedSubject?.split("||")[0] ?? "", selectedBoard, selectedLevel),
+        isTopicScopedPtbClass(selectedBoard, selectedLevel),
       )
         .then(setAvailableDbTypes)
         .catch(() => setAvailableDbTypes(null));

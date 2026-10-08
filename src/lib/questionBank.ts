@@ -187,6 +187,10 @@ const QUESTION_TYPE_VALUE_MAP: Record<string, string> = {
   history: "history",
   "correct meaning of underlined words": "correct_meaning_of_underline_word",
   "comprehension paragraphs": "comprehension_paragraph",
+  // Inter-I Farsi spellings.
+  "wahid jamaa": "wahid_jama",
+  "ilfaaz mutazad": "ilfaz_mutazad",
+  araab: "araab_lagaein",
 };
 
 export const normalizeQuestionTypeValue = (value: string): string | null => {
@@ -277,6 +281,9 @@ export const normalizeQuestionTypeValue = (value: string): string | null => {
 const questionBankCache = new Map<string, PaperQuestion[]>();
 const chapterGroupCache = new Map<string, ChapterGroup[]>();
 const chapterTypeCache = new Map<string, QuestionTypeOption[]>();
+// subject-class-board -> normalized topic name -> DB chapter number. Only topics found
+// in exactly one chapter are kept, so generic names ("Exercise", "Review") can't mislead.
+const topicChapterCache = new Map<string, Map<string, number>>();
 let activeFetchController: AbortController | null = null;
 let fetchSequence = 0;
 
@@ -289,7 +296,34 @@ type QuestionBankResponse = {
 type ChapterGroupsResponse = {
   groups?: ChapterGroup[];
   questionTypes?: QuestionTypeOption[];
+  topicChapters?: Array<{ t: string; c: number; n: number }>;
 };
+
+// Ignore diacritics, punctuation and spacing so spelling variants of a topic match.
+const normalizeTopicKey = (value: string): string =>
+  value
+    .normalize("NFC")
+    .replace(/[\p{M}\p{Cf}]/gu, "")
+    .replace(/[^\p{L}\p{N}]+/gu, "")
+    .toLowerCase();
+
+// Same, also ignoring a leading/trailing section number ("1.1 Location of Pakistan" =
+// "Location of Pakistan"). Index keys are prefixed "f:" (exact) and "l:" (loose).
+const looseTopicKey = (value: string): string =>
+  normalizeTopicKey(
+    value
+      .replace(/^\s*\d+(?:\.\d+)*\.?\s+/, "")
+      .replace(/\s+\d+(?:\.\d+)+\.?\s*$/, ""),
+  );
+
+// PTB 9th/10th/1st Year: map chapter groups to DB chapters through their topics.
+const usesTopicChapterMapping = (className?: string | null, board?: string | null) =>
+  board === "PTB" && ["9TH", "10TH", "INTER-I"].includes(className || "");
+
+const getTopicChapterIndex = (subject?: string | null, className?: string | null, board?: string | null) =>
+  usesTopicChapterMapping(className, board)
+    ? topicChapterCache.get(`${subject}-${className}-${board}`)
+    : undefined;
 
 const getAuthHeaders = (): HeadersInit => {
   const headers: Record<string, string> = {};
@@ -324,9 +358,36 @@ export const getChapterNumber = (groupName: string, index: number): number => {
   return index + 1;
 };
 
+// The DB chapter a group's questions are stored under, decided by where its topics live.
+// Static chapter lists don't always share the DB's group order, so list position alone can
+// point a topic at the wrong chapter (e.g. 10th Islamiat Ikhtiyari "عربی زبان کی گرامر",
+// 4th in the static list, is DB chapter 2 -- chapter 4 is Hadith).
+const resolveGroupChapterFromTopics = (
+  group: ChapterGroup,
+  topicChapterIndex?: Map<string, number>,
+): number | null => {
+  if (!topicChapterIndex || topicChapterIndex.size === 0) return null;
+  const votes = new Map<number, number>();
+  [group.name, ...group.chapters].forEach((name) => {
+    const chapter = topicChapterIndex.get(`f:${normalizeTopicKey(name)}`)
+      ?? topicChapterIndex.get(`l:${looseTopicKey(name)}`);
+    if (chapter !== undefined) votes.set(chapter, (votes.get(chapter) || 0) + 1);
+  });
+  let best: number | null = null;
+  let bestVotes = 0;
+  for (const [chapter, count] of votes) {
+    if (count > bestVotes) {
+      best = chapter;
+      bestVotes = count;
+    }
+  }
+  return best;
+};
+
 export const resolveQuestionSelectionScope = (
   selectedChapters: string[],
   allGroups: ChapterGroup[] = [],
+  topicChapterIndex?: Map<string, number>,
 ): QuestionSelectionScope => {
   const chapterNumbersToFetch = new Set<number>();
   const fullySelectedChapters = new Set<number>();
@@ -339,15 +400,27 @@ export const resolveQuestionSelectionScope = (
   };
 
   if (allGroups.length > 0) {
+    const topicResolved = allGroups.map((group) => resolveGroupChapterFromTopics(group, topicChapterIndex));
+    const groupChapters = allGroups.map((group, index) => topicResolved[index] ?? getChapterNumber(group.name, index));
+    const groupsPerChapter = new Map<number, number>();
+    groupChapters.forEach((ch) => groupsPerChapter.set(ch, (groupsPerChapter.get(ch) || 0) + 1));
+
     allGroups.forEach((group, index) => {
-      const chNum = getChapterNumber(group.name, index);
+      const chNum = groupChapters[index];
       const isGroupSelected = selectedChapters.includes(group.name);
       // Match using composite key: group.name::chapter
       const selectedSubs = group.chapters.filter((ch) =>
         selectedChapters.includes(`${group.name}::${ch}`)
       );
+      // Two groups whose topics are stored in the same DB chapter (e.g. "آیات کریمہ" and
+      // "القرآن" both in chapter 1): selecting one whole group must not pull in the other
+      // group's questions, so scope it by its own topics instead of the whole chapter.
+      const sharesChapter = topicResolved[index] !== null && (groupsPerChapter.get(chNum) || 0) > 1;
 
-      if (isGroupSelected) {
+      if (isGroupSelected && sharesChapter) {
+        chapterNumbersToFetch.add(chNum);
+        [group.name, ...group.chapters].forEach((sc) => explicitSubChapters.add(sc));
+      } else if (isGroupSelected) {
         chapterNumbersToFetch.add(chNum);
         fullySelectedChapters.add(chNum);
       } else if (selectedSubs.length > 0) {
@@ -408,6 +481,7 @@ export const clearQuestionBankCache = () => {
   questionBankCache.clear();
   chapterGroupCache.clear();
   chapterTypeCache.clear();
+  topicChapterCache.clear();
 };
 
 export const fetchQuestionsForSelection = async (
@@ -423,7 +497,7 @@ export const fetchQuestionsForSelection = async (
     return [];
   }
 
-  const scope = resolveQuestionSelectionScope(selectedChapters, allGroups);
+  const scope = resolveQuestionSelectionScope(selectedChapters, allGroups, getTopicChapterIndex(subject, className, board));
   if (scope.chapterNumbers.length === 0) {
     return [];
   }
@@ -527,6 +601,23 @@ export const fetchChapterGroupsForSelection = async (
   const questionTypes = Array.isArray(data.questionTypes) ? data.questionTypes : [];
   chapterGroupCache.set(cacheKey, groups);
   chapterTypeCache.set(cacheKey, questionTypes);
+
+  const chaptersByTopic = new Map<string, Set<number>>();
+  (Array.isArray(data.topicChapters) ? data.topicChapters : []).forEach(({ t, c }) => {
+    const name = String(t ?? "");
+    if (!Number.isFinite(c)) return;
+    [`f:${normalizeTopicKey(name)}`, `l:${looseTopicKey(name)}`].forEach((key) => {
+      if (key.length <= 2) return;
+      if (!chaptersByTopic.has(key)) chaptersByTopic.set(key, new Set());
+      chaptersByTopic.get(key)!.add(c);
+    });
+  });
+  const topicIndex = new Map<string, number>();
+  chaptersByTopic.forEach((chapters, key) => {
+    if (chapters.size === 1) topicIndex.set(key, [...chapters][0]);
+  });
+  topicChapterCache.set(cacheKey, topicIndex);
+
   return { groups, questionTypes };
 };
 
@@ -542,7 +633,7 @@ export const fetchAvailableQuestionTypes = async (
     return [];
   }
 
-  const scope = resolveQuestionSelectionScope(selectedChapters, allGroups);
+  const scope = resolveQuestionSelectionScope(selectedChapters, allGroups, getTopicChapterIndex(subject, className, board));
   if (scope.chapterNumbers.length === 0) {
     return [];
   }

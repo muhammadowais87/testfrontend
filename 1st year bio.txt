@@ -1,4 +1,4 @@
-bio all chapters mcqs
+-> bio all chapters mcqs
 1.1 Three-Domain System Of Classification
 Additional	1.	Who proposed the five-kingdom classification system in 1969:
 (A)Robert Whittaker(B)Charles Darwin(C)Carl Linnaeus(D)Carl Woese
@@ -5758,7 +5758,7 @@ Additional	2837.	The skeleton works like a system of:
 
 
 
-bio all chapters short
+-> bio all chapters short
 1.1 Three-Domain System Of Classification
 1	.	What are the three domains of life and how do they differ in terms of cellular structure?
 Exercise
@@ -9301,7 +9301,7 @@ Additional
 Additional
 
 
-bio all chapter long
+-> bio all chapter long
 1.1 Three-Domain System Of Classification
 1.	What is Domain Eukaraya? Write its general characteristics.
 Additional
