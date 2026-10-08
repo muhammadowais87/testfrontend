@@ -299,9 +299,11 @@ type ChapterGroupsResponse = {
   topicChapters?: Array<{ t: string; c: number; n: number }>;
 };
 
-// Ignore diacritics, punctuation and spacing so spelling variants of a topic match.
+// Ignore diacritics, punctuation and spacing so spelling variants of a topic match;
+// "E.x: 6.1" / "Ex: 6.1" read as "Exercise 6.1".
 const normalizeTopicKey = (value: string): string =>
   value
+    .replace(/^\s*e\.?\s*x\.?\s*:?\s*(?=\d)/i, "exercise ")
     .normalize("NFC")
     .replace(/[\p{M}\p{Cf}]/gu, "")
     .replace(/[^\p{L}\p{N}]+/gu, "")
