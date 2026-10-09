@@ -64,7 +64,7 @@ const Navbar = () => {
       <div className="w-full px-4 md:px-8 py-2.5 flex items-center justify-between max-w-7xl mx-auto">
         <Link to="/" className="flex items-center gap-2.5 shrink-0 group">
           <div className="relative">
-            <img src="/images/phn.png" alt="Apex Test Solution" className="h-10 w-auto transition-transform duration-300 group-hover:scale-105" />
+            <img src="/images/apex-loader.jpg" alt="Apex Test Solution" width={61} height={56} className="h-14 w-auto mix-blend-multiply transition-transform duration-300 group-hover:scale-105" />
           </div>
           <div className="hidden sm:block">
             <span className="text-lg font-bold text-foreground leading-tight">Apex Test</span>

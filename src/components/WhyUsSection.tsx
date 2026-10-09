@@ -1,4 +1,4 @@
-import { Check, Sparkles, Zap, Shield, Users, Clock, FileText, Layers, Headphones } from "lucide-react";
+import { Check, Zap, Shield, Users, Clock, FileText, Layers, Headphones } from "lucide-react";
 
 const features = [
   { icon: Zap, text: "Full automatic system", color: "from-amber-500 to-orange-600" },
@@ -7,7 +7,6 @@ const features = [
   { icon: Clock, text: "Last 5 years pastpapers data", color: "from-purple-500 to-indigo-600" },
   { icon: Layers, text: "Topic and chapters selection", color: "from-rose-500 to-pink-600" },
   { icon: Users, text: "Seperate teachers portal", color: "from-teal-500 to-cyan-600" },
-  { icon: Sparkles, text: "Generate unlimited papers", color: "from-orange-500 to-amber-600" },
   { icon: Shield, text: "Save unlimited papers into account", color: "from-emerald-500 to-teal-600" },
   { icon: Headphones, text: "Intime telephonic support", color: "from-indigo-500 to-purple-600" },
 ];

@@ -6,7 +6,7 @@ import { API_BASE_URL } from "@/lib/api";
 import { useInstituteSessionStore } from "@/stores/instituteSessionStore";
 import { useTeacherSessionStore } from "@/stores/teacherSessionStore";
 import { useIsMobile } from "@/hooks/use-mobile";
-import { getQuestionStems, mergeMcqOptions, parseQuestionOptions, splitVerseText } from "@/lib/questionDisplay";
+import { getQuestionStems, mergeMcqOptions, parseQuestionOptions, splitVerseText, isComprehensionType, groupComprehensionSets } from "@/lib/questionDisplay";
 import MathText from "@/components/MathText";
 
 const SavedPaperViewer = () => {
@@ -418,22 +418,29 @@ const SavedPaperViewer = () => {
     }
 
     if (options.length === 0) {
-      // Strip leading "1. " / "12. " style prefix embedded from DB storage
-      const cleanStem = text.trim().replace(/^\d+[\s.,،。]+/, "").trim();
+      // Strip leading "1. " / "12۔ " style prefix embedded from DB storage. Requires an
+      // actual punctuation mark AND a trailing space after the digits, so genuine numeric
+      // content at the start of a question -- "186000 seconds..." (no punctuation after
+      // the number) and a decimal like "2574.32 kg" (period immediately followed by more
+      // digits, not a space) -- is left alone.
+      const cleanStem = text.trim().replace(/^\d+[.,،。۔]\s+/, "").trim();
       return { stem: cleanStem, options: [] };
     }
 
     const firstOptionIndex = text.search(/\([A-D]\)/);
     const rawStem = firstOptionIndex > -1 ? text.slice(0, firstOptionIndex).trim() : text.trim();
     // Strip leading "1. " style prefix from stem
-    const stem = rawStem.replace(/^\d+[\s.,،。]+/, "").trim();
+    const stem = rawStem.replace(/^\d+[.,،。۔]\s+/, "").trim();
     return { stem, options };
   };
 
   const cleanUrduStem = (text: string) => {
+    // Requires a trailing space after the punctuation, so a decimal number like
+    // "2574.32 کلوگرام" (period immediately followed by more digits, not a space) is
+    // left alone instead of having "2574." mistaken for a question-number prefix.
     return text
-      .replace(/^\s*[0-9۰-۹]+\s*[۔\.\-:]\s*/, "")
-      .replace(/^\s*[۰-۹]+\s*۔\s*/, "")
+      .replace(/^\s*[0-9۰-۹]+\s*[۔\.\-:]\s+/, "")
+      .replace(/^\s*[۰-۹]+\s*۔\s+/, "")
       .trim();
   };
 
@@ -1531,6 +1538,12 @@ const SavedPaperViewer = () => {
                   const showUr = sectionMedium !== "english";
                   // Each section also keeps its own "2 Questions Per Line" setting.
                   const sectionTwoPerLine = section.questions[0]?.twoPerLine ?? paper?.twoQuestionsPerLine ?? false;
+                  // A comprehension-paragraph section's mark count is by SET (paragraph +
+                  // its questions together), not by raw item count -- each set is one
+                  // markable unit.
+                  const sectionUnitCount = isComprehensionType(section.typeKey)
+                    ? groupComprehensionSets(section.questions).length
+                    : section.questions.length;
                   return (
                   <section key={section.key} className={`saved-paper-section ${sectionIndex > 0 ? "pt-4 border-t border-black" : ""}`} style={{ breakInside: "avoid" }}>
                     <div className="mb-1 print:mb-1 grid items-start gap-3 pr-3" style={{ gridTemplateColumns: showEn && showUr ? "1fr auto 1fr" : showEn ? "1fr auto" : "auto 1fr" }}>
@@ -1542,14 +1555,14 @@ const SavedPaperViewer = () => {
                       {manualEditing ? (
                         <input
                           type="text"
-                          value={sectionMarksOverrides[section.key] || `${section.questions.length}X${sectionedQuestions.marksPerQuestion}=${section.questions.length * sectionedQuestions.marksPerQuestion}`}
+                          value={sectionMarksOverrides[section.key] || `${sectionUnitCount}X${sectionedQuestions.marksPerQuestion}=${sectionUnitCount * sectionedQuestions.marksPerQuestion}`}
                           onChange={(e) => setSectionMarksOverrides((prev) => ({ ...prev, [section.key]: e.target.value }))}
                           className="h-6 min-w-[170px] rounded border border-black px-2 text-center text-black outline-none"
                           style={{ fontSize: `${resolvedEnglishFontSize}px`, fontFamily: englishFontFamily }}
                         />
                       ) : (
                         <span className="font-bold text-center text-black" style={{ fontSize: `${resolvedEnglishFontSize}px`, fontFamily: englishFontFamily }}>
-                          {sectionMarksOverrides[section.key] || `${section.questions.length}X${sectionedQuestions.marksPerQuestion}=${section.questions.length * sectionedQuestions.marksPerQuestion}`}
+                          {sectionMarksOverrides[section.key] || `${sectionUnitCount}X${sectionedQuestions.marksPerQuestion}=${sectionUnitCount * sectionedQuestions.marksPerQuestion}`}
                         </span>
                       )}
                       {showUr && (
@@ -1606,12 +1619,8 @@ const SavedPaperViewer = () => {
                           ))}
                         </tbody>
                       </table>
-                    ) : (
-                    <div
-                      className={sectionTwoPerLine ? "grid grid-cols-1 md:grid-cols-2 print:grid-cols-2 gap-4 print:gap-3" : "space-y-2 print:space-y-1.5"}
-                      dir={sectionTwoPerLine && sectionMedium === "urdu" ? "rtl" : undefined}
-                    >
-                      {section.questions.map((question, index) => {
+                    ) : (() => {
+                      const renderQuestionItem = (question: typeof section.questions[number], index: number) => {
                         const { englishStem, urduStem, parsedText, parsedUrdu } = getQuestionStems(question.text, question.urdu || "");
                         const showUrduQuestion = urduStem.trim() !== englishStem.trim();
                         const answerKey = getAnswerKey(question.id);
@@ -1726,9 +1735,33 @@ const SavedPaperViewer = () => {
 
                           </div>
                         );
-                      })}
-                    </div>
-                    )}
+                      };
+
+                      if (isComprehensionType(section.typeKey)) {
+                        const sets = groupComprehensionSets(section.questions);
+                        return (
+                          <div className="space-y-3 print:space-y-2">
+                            {sets.map((set, setIdx) => (
+                              <div key={set.paragraph.id} className="space-y-1">
+                                {renderQuestionItem(set.paragraph, setIdx)}
+                                <div className="space-y-1 pl-6 border-l-2 border-gray-300">
+                                  {set.questions.map((q, qIdx) => renderQuestionItem(q, qIdx))}
+                                </div>
+                              </div>
+                            ))}
+                          </div>
+                        );
+                      }
+
+                      return (
+                        <div
+                          className={sectionTwoPerLine ? "grid grid-cols-1 md:grid-cols-2 print:grid-cols-2 gap-4 print:gap-3" : "space-y-2 print:space-y-1.5"}
+                          dir={sectionTwoPerLine && sectionMedium === "urdu" ? "rtl" : undefined}
+                        >
+                          {section.questions.map((question, index) => renderQuestionItem(question, index))}
+                        </div>
+                      );
+                    })()}
                   </section>
                   );
                 })}

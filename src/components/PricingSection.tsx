@@ -10,7 +10,6 @@ const packages = [
 ];
 
 const features = [
-  "Generate Unlimited Papers",
   "Save Unlimited Papers",
   "All Subjects Access",
   "Unlimited Sub Accounts",
@@ -112,7 +111,7 @@ const PricingSection = () => {
               </ul>
 
               <div className="mt-4 space-y-1 text-xs sm:text-sm font-medium text-foreground leading-relaxed">
-                <p>Whatsapp the above info on 03264917496</p>
+                <p>Whatsapp the above info on 03127049445</p>
                 <p>Account registration process will be start after transaction.</p>
                 <p>2 hours will be required for account proceeding.</p>
               </div>

@@ -11,7 +11,7 @@ import { getAvailableQuestionTypesForTopics } from "@/data/topicQuestionTypes";
 import SubjectButton from "@/components/SubjectButton";
 import DualMediumQuestion from "@/components/DualMediumQuestion";
 import MathText, { getEnglishOnlyTokens } from "@/components/MathText";
-import { getQuestionStems, mergeMcqOptions, sanitizeOptionValue, splitVerseText } from "@/lib/questionDisplay";
+import { getQuestionStems, mergeMcqOptions, sanitizeOptionValue, splitVerseText, isComprehensionType, groupComprehensionSets } from "@/lib/questionDisplay";
 import { useIsMobile } from "@/hooks/use-mobile";
 import { addSavedPaper, getSavedPaperById, type SavedPaperRecord } from "@/lib/savedPapers";
 import {
@@ -26,8 +26,12 @@ import {
 import { useInstituteSessionStore } from "@/stores/instituteSessionStore";
 
 const isUrdu = (text: string) => /[\u0600-\u06FF]/.test(text);
-// Strip a leading "<number>. " or "<number>. " prefix that is embedded in stored question text
-const stripLeadingNumber = (text: string) => text.replace(/^\d+[\s.。،]+/, "").trim();
+// Strip a leading "<number>. " or "<number>۔ " prefix embedded in stored question text.
+// Requires an actual punctuation mark AND a trailing space after the digits, so genuine
+// numeric content at the start of a sentence is left alone: "186000 seconds..." has no
+// punctuation after the number, and a decimal like "2574.32 kg" has the period
+// immediately followed by more digits, not a space.
+const stripLeadingNumber = (text: string) => text.replace(/^\d+[.。،۔]\s+/, "").trim();
 
 // All possible question types that can be available based on subject/topic
 // This is expanded to include all types from the generated report
@@ -769,6 +773,13 @@ const GeneratePaper = () => {
     }
     const effectiveCount = appliedQuestionType === "match_columns"
       ? Object.values(groupedQuestions).filter(qs => qs.some(q => selectedQuestions.includes(q.id))).length
+      : isComprehensionType(appliedQuestionType)
+      ? Object.values(groupedQuestions).reduce(
+          (count, qs) => count + groupComprehensionSets(qs).filter(
+            (set) => [set.paragraph, ...set.questions].some((q) => selectedQuestions.includes(q.id))
+          ).length,
+          0,
+        )
       : selectedQuestions.length;
     if (effectiveCount !== requiredCount) {
       setValidationMessage(`Please select exactly ${requiredCount} question(s) first.`);
@@ -1308,6 +1319,12 @@ const GeneratePaper = () => {
                 </button>
               </div>
 
+              {showSearchResults && !isSearchingQuestions && activeQuestions.length > 0 && (
+                <p className="text-xs font-semibold text-gray-700">
+                  Selected {selectedQuestions.length} Question(s) From {activeQuestions.length}
+                </p>
+              )}
+
               {selectionError && (
                 <p className="text-sm font-semibold text-red-600">{selectionError}</p>
               )}
@@ -1332,7 +1349,64 @@ const GeneratePaper = () => {
                         globalOffset += qs.length;
                         return (
                       <div key={topic} className="border border-gray-200 rounded-lg overflow-hidden bg-white shadow-sm">
-                        {appliedQuestionType === "match_columns" ? (() => {
+                        {isComprehensionType(appliedQuestionType) ? (() => {
+                          const sets = groupComprehensionSets(qs);
+                          return (
+                            <>
+                              <div className="bg-[#311b92] text-white text-center py-2 px-4 font-semibold text-sm">
+                                {typeSlugToLabel[topic] || topic}
+                              </div>
+                              {sets.map((set, setIdx) => {
+                                const setIds = [set.paragraph.id, ...set.questions.map((q) => q.id)];
+                                const allSelected = setIds.every((id) => selectedQuestions.includes(id));
+                                const toggleSet = () => {
+                                  if (allSelected) {
+                                    const idSet = new Set(setIds);
+                                    setSelectedQuestions((prev) => prev.filter((id) => !idSet.has(id)));
+                                  } else {
+                                    const newIds = setIds.filter((id) => !selectedQuestions.includes(id));
+                                    setSelectedQuestions((prev) => [...prev, ...newIds]);
+                                  }
+                                  setSelectionError("");
+                                };
+                                return (
+                                  <div
+                                    key={set.paragraph.id}
+                                    className={`p-4 border-b border-gray-100 last:border-b-0 flex gap-3 items-start hover:bg-slate-50 transition-colors ${allSelected ? "bg-green-50" : ""}`}
+                                  >
+                                    <input
+                                      type="checkbox"
+                                      checked={allSelected}
+                                      onChange={toggleSet}
+                                      className="w-4 h-4 rounded mt-0.5 flex-shrink-0 cursor-pointer"
+                                    />
+                                    <div className="flex-1 min-w-0 space-y-2">
+                                      <DualMediumQuestion
+                                        text={set.paragraph.text}
+                                        urdu={set.paragraph.urdu}
+                                        index={setIdx + 1}
+                                        dualMedium={appliedDualMedium}
+                                        imageFile={set.paragraph.imageFile}
+                                      />
+                                      <div className="space-y-1 pl-4 border-l-2 border-gray-100">
+                                        {set.questions.map((q, qIdx) => (
+                                          <DualMediumQuestion
+                                            key={q.id}
+                                            text={q.text}
+                                            urdu={q.urdu}
+                                            index={qIdx + 1}
+                                            dualMedium={appliedDualMedium}
+                                            imageFile={q.imageFile}
+                                          />
+                                        ))}
+                                      </div>
+                                    </div>
+                                  </div>
+                                );
+                              })}
+                            </>
+                          );
+                        })() : appliedQuestionType === "match_columns" ? (() => {
                           const allSelected = qs.every(q => selectedQuestions.includes(q.id));
                           const toggleGroup = () => {
                             if (allSelected) {
@@ -1461,6 +1535,32 @@ const GeneratePaper = () => {
                         ))}
                       </tbody>
                     </table>
+                  ) : isComprehensionType(appliedQuestionType) ? (
+                    <div className="space-y-3">
+                      {groupComprehensionSets(activeQuestions.filter(q => selectedQuestions.includes(q.id))).map((set, setIdx) => (
+                        <div key={set.paragraph.id} className="p-2 bg-white rounded text-sm space-y-1">
+                          <DualMediumQuestion
+                            text={set.paragraph.text}
+                            urdu={set.paragraph.urdu}
+                            index={setIdx + 1}
+                            dualMedium={appliedDualMedium}
+                            imageFile={set.paragraph.imageFile}
+                          />
+                          <div className="space-y-1 pl-4 border-l-2 border-gray-100">
+                            {set.questions.map((q, qIdx) => (
+                              <DualMediumQuestion
+                                key={q.id}
+                                text={q.text}
+                                urdu={q.urdu}
+                                index={qIdx + 1}
+                                dualMedium={appliedDualMedium}
+                                imageFile={q.imageFile}
+                              />
+                            ))}
+                          </div>
+                        </div>
+                      ))}
+                    </div>
                   ) : (
                   <div className="space-y-2">
                     {activeQuestions.filter(q => selectedQuestions.includes(q.id)).map((q, idx) => (
@@ -1766,12 +1866,18 @@ const GeneratePaper = () => {
                     const showUr = sectionMedium !== "english";
                     // Each section also keeps its own "2 Questions Per Line" setting.
                     const sectionTwoPerLine = section.questions[0]?.twoPerLine ?? appliedTwoQuestionsPerLine;
+                    // A comprehension-paragraph section's mark count is by SET (paragraph +
+                    // its questions together), not by raw item count -- each set is one
+                    // selectable, markable unit, same as its "required questions" counting.
+                    const sectionUnitCount = isComprehensionType(section.typeKey)
+                      ? groupComprehensionSets(section.questions).length
+                      : section.questions.length;
                     return (
                       <div key={section.key} className="border-b border-gray-200 pb-4 last:border-b-0 last:pb-0">
                         <div className="flex items-start justify-between gap-6 mb-4 pr-3">
                           {showEn && <p className="text-sm font-bold text-gray-900 flex-1">Q{sectionNumber}. {sectionLabel.english}</p>}
                           <p className="text-sm font-bold text-gray-900 whitespace-nowrap">
-                            {section.questions.length}X{marksPerQuestion}={section.questions.length * marksPerQuestion}
+                            {sectionUnitCount}X{marksPerQuestion}={sectionUnitCount * marksPerQuestion}
                           </p>
                           {showUr && <p className="text-sm font-bold text-gray-900 flex-1 text-right" dir="rtl">سوال نمبر{sectionNumber}۔ {sectionLabel.urdu}</p>}
                         </div>
@@ -1792,104 +1898,132 @@ const GeneratePaper = () => {
                               ))}
                             </tbody>
                           </table>
-                        ) : (
-                          <div className={sectionTwoPerLine ? "grid grid-cols-1 md:grid-cols-2 gap-3" : "space-y-1"}>
-                            {section.questions.map((q, idx) => (
-                              <div key={q.id} className={sectionTwoPerLine ? "border border-gray-100 rounded-lg p-3" : "flex items-start justify-between gap-4"}>
-                                {isManualEditing ? (
-                                  <>
-                                    {showEn && <input
-                                      value={editedQuestions[q.id]?.text ?? q.text}
-                                      onChange={(e) => setEditedQuestions(prev => ({ ...prev, [q.id]: { ...prev[q.id] ?? { text: q.text, urdu: q.urdu }, text: e.target.value } }))}
-                                      className="flex-1 text-sm text-gray-800 border border-gray-300 rounded px-2 py-1"
-                                    />}
-                                    {showUr && <input
-                                      dir="rtl"
-                                      value={editedQuestions[q.id]?.urdu ?? q.urdu}
-                                      onChange={(e) => setEditedQuestions(prev => ({ ...prev, [q.id]: { ...prev[q.id] ?? { text: q.text, urdu: q.urdu }, urdu: e.target.value } }))}
-                                      className="flex-1 text-sm text-gray-800 border border-gray-300 rounded px-2 py-1 text-right"
-                                    />}
-                                  </>
-                                ) : (
-                                  <>
-                                    {(() => {
-                                      const qText = editedQuestions[q.id]?.text ?? q.text;
-                                      const qUrdu = editedQuestions[q.id]?.urdu ?? q.urdu;
-                                      const { englishStem, urduStem, parsedText, parsedUrdu } = getQuestionStems(qText, qUrdu);
-                                      const mergedOptions = mergeMcqOptions(parsedText, parsedUrdu);
-                                      const hasOptions = mergedOptions.some((o) => o.english || o.urdu);
-                                      const englishMisras = splitVerseText(englishStem);
-                                      const urduMisras = splitVerseText(urduStem);
-                                      return (
-                                        <>
-                                          {showEn && (englishMisras.length === 2 ? (
-                                            // 2-line شعر -- مصرعے side by side, centered.
-                                            <p className="text-sm text-gray-800 flex w-full items-baseline justify-center gap-6">
-                                              {englishMisras.map((m, i) => (
-                                                <span key={i} className="min-w-0">
-                                                  {i === 0 ? `${idx + 1}. ` : ""}<MathText text={m} />
-                                                </span>
-                                              ))}
-                                            </p>
-                                          ) : englishMisras.length >= 3 ? (
-                                            // 3+ lines -- stack one above another, preserving line breaks.
-                                            <div className="text-sm text-gray-800">
-                                              {englishMisras.map((m, i) => (
-                                                <p key={i}>{i === 0 ? `${idx + 1}. ` : ""}<MathText text={m} /></p>
-                                              ))}
-                                            </div>
-                                          ) : (
-                                            <p className="text-sm text-gray-800">{idx + 1}. <MathText text={englishStem} /></p>
+                        ) : (() => {
+                          const renderQuestionBody = (q: typeof section.questions[number], idx: number) => (
+                            isManualEditing ? (
+                              <>
+                                {showEn && <input
+                                  value={editedQuestions[q.id]?.text ?? q.text}
+                                  onChange={(e) => setEditedQuestions(prev => ({ ...prev, [q.id]: { ...prev[q.id] ?? { text: q.text, urdu: q.urdu }, text: e.target.value } }))}
+                                  className="flex-1 text-sm text-gray-800 border border-gray-300 rounded px-2 py-1"
+                                />}
+                                {showUr && <input
+                                  dir="rtl"
+                                  value={editedQuestions[q.id]?.urdu ?? q.urdu}
+                                  onChange={(e) => setEditedQuestions(prev => ({ ...prev, [q.id]: { ...prev[q.id] ?? { text: q.text, urdu: q.urdu }, urdu: e.target.value } }))}
+                                  className="flex-1 text-sm text-gray-800 border border-gray-300 rounded px-2 py-1 text-right"
+                                />}
+                              </>
+                            ) : (
+                              <>
+                                {(() => {
+                                  const qText = editedQuestions[q.id]?.text ?? q.text;
+                                  const qUrdu = editedQuestions[q.id]?.urdu ?? q.urdu;
+                                  const { englishStem, urduStem, parsedText, parsedUrdu } = getQuestionStems(qText, qUrdu);
+                                  const mergedOptions = mergeMcqOptions(parsedText, parsedUrdu);
+                                  const hasOptions = mergedOptions.some((o) => o.english || o.urdu);
+                                  const englishMisras = splitVerseText(englishStem);
+                                  const urduMisras = splitVerseText(urduStem);
+                                  return (
+                                    <>
+                                      {showEn && (englishMisras.length === 2 ? (
+                                        // 2-line شعر -- مصرعے side by side, centered.
+                                        <p className="text-sm text-gray-800 flex w-full items-baseline justify-center gap-6">
+                                          {englishMisras.map((m, i) => (
+                                            <span key={i} className="min-w-0">
+                                              {i === 0 ? `${idx + 1}. ` : ""}<MathText text={m} />
+                                            </span>
                                           ))}
-                                          {showEn && hasOptions && (
-                                            <div className="mt-1 space-y-0.5">
-                                              {mergedOptions.map((opt) => (
-                                                <p key={opt.key} className="text-[12px] text-gray-700">
-                                                  ({opt.key}) <MathText text={sanitizeOptionValue(opt.english || opt.urdu, "english")} />
-                                                </p>
-                                              ))}
-                                            </div>
-                                          )}
-                                          {showUr && (urduMisras.length === 2 ? (
-                                            // 2-line شعر -- مصرعے side by side, centered.
-                                            <p className="text-sm text-gray-800 flex w-full items-baseline justify-center gap-6" dir="rtl">
-                                              {urduMisras.map((m, i) => (
-                                                <span key={i} className="min-w-0">
-                                                  {i === 0 ? `${idx + 1}۔ ` : ""}<MathText text={m} />
-                                                </span>
-                                              ))}
-                                            </p>
-                                          ) : urduMisras.length >= 3 ? (
-                                            // 3+ lines -- stack one above another, preserving line breaks.
-                                            <div className="text-sm text-gray-800 text-right" dir="rtl">
-                                              {urduMisras.map((m, i) => (
-                                                <p key={i}>{i === 0 ? `${idx + 1}۔ ` : ""}<MathText text={m} /></p>
-                                              ))}
-                                            </div>
-                                          ) : (
-                                            <p className="text-sm text-gray-800 text-right" dir="rtl">
-                                              {idx + 1}۔ <MathText text={urduStem} />
-                                              {(() => { const sup = getEnglishOnlyTokens(englishStem, urduStem); return sup.length > 0 ? <span dir="ltr" className="ml-1">{sup.join(" ")}</span> : null; })()}
+                                        </p>
+                                      ) : englishMisras.length >= 3 ? (
+                                        // 3+ lines -- stack one above another, preserving line breaks.
+                                        <div className="text-sm text-gray-800">
+                                          {englishMisras.map((m, i) => (
+                                            <p key={i}>{i === 0 ? `${idx + 1}. ` : ""}<MathText text={m} /></p>
+                                          ))}
+                                        </div>
+                                      ) : (
+                                        <p className="text-sm text-gray-800">{idx + 1}. <MathText text={englishStem} /></p>
+                                      ))}
+                                      {showEn && hasOptions && (
+                                        <div className="mt-1 space-y-0.5">
+                                          {mergedOptions.map((opt) => (
+                                            <p key={opt.key} className="text-[12px] text-gray-700">
+                                              ({opt.key}) <MathText text={sanitizeOptionValue(opt.english || opt.urdu, "english")} />
                                             </p>
                                           ))}
-                                          {showUr && hasOptions && (
-                                            <div className="mt-1 space-y-0.5" dir="rtl">
-                                              {mergedOptions.map((opt) => (
-                                                <p key={opt.key} className="text-[12px] text-gray-700 text-right">
-                                                  ({opt.key}) <MathText text={sanitizeOptionValue(opt.urdu || opt.english, "urdu")} />
-                                                </p>
-                                              ))}
-                                            </div>
-                                          )}
-                                        </>
-                                      );
-                                    })()}
-                                  </>
-                                )}
+                                        </div>
+                                      )}
+                                      {showUr && (urduMisras.length === 2 ? (
+                                        // 2-line شعر -- مصرعے side by side, centered.
+                                        <p className="text-sm text-gray-800 flex w-full items-baseline justify-center gap-6" dir="rtl">
+                                          {urduMisras.map((m, i) => (
+                                            <span key={i} className="min-w-0">
+                                              {i === 0 ? `${idx + 1}۔ ` : ""}<MathText text={m} />
+                                            </span>
+                                          ))}
+                                        </p>
+                                      ) : urduMisras.length >= 3 ? (
+                                        // 3+ lines -- stack one above another, preserving line breaks.
+                                        <div className="text-sm text-gray-800 text-right" dir="rtl">
+                                          {urduMisras.map((m, i) => (
+                                            <p key={i}>{i === 0 ? `${idx + 1}۔ ` : ""}<MathText text={m} /></p>
+                                          ))}
+                                        </div>
+                                      ) : (
+                                        <p className="text-sm text-gray-800 text-right" dir="rtl">
+                                          {idx + 1}۔ <MathText text={urduStem} />
+                                          {(() => { const sup = getEnglishOnlyTokens(englishStem, urduStem); return sup.length > 0 ? <span dir="ltr" className="ml-1">{sup.join(" ")}</span> : null; })()}
+                                        </p>
+                                      ))}
+                                      {showUr && hasOptions && (
+                                        <div className="mt-1 space-y-0.5" dir="rtl">
+                                          {mergedOptions.map((opt) => (
+                                            <p key={opt.key} className="text-[12px] text-gray-700 text-right">
+                                              ({opt.key}) <MathText text={sanitizeOptionValue(opt.urdu || opt.english, "urdu")} />
+                                            </p>
+                                          ))}
+                                        </div>
+                                      )}
+                                    </>
+                                  );
+                                })()}
+                              </>
+                            )
+                          );
+
+                          if (isComprehensionType(section.typeKey)) {
+                            const sets = groupComprehensionSets(section.questions);
+                            return (
+                              <div className="space-y-3">
+                                {sets.map((set, setIdx) => (
+                                  <div key={set.paragraph.id} className="space-y-1">
+                                    <div className="flex items-start justify-between gap-4">
+                                      {renderQuestionBody(set.paragraph, setIdx)}
+                                    </div>
+                                    <div className="space-y-1 pl-4 border-l-2 border-gray-100">
+                                      {set.questions.map((q, qIdx) => (
+                                        <div key={q.id} className="flex items-start justify-between gap-4">
+                                          {renderQuestionBody(q, qIdx)}
+                                        </div>
+                                      ))}
+                                    </div>
+                                  </div>
+                                ))}
                               </div>
-                            ))}
-                          </div>
-                        )}
+                            );
+                          }
+
+                          return (
+                            <div className={sectionTwoPerLine ? "grid grid-cols-1 md:grid-cols-2 gap-3" : "space-y-1"}>
+                              {section.questions.map((q, idx) => (
+                                <div key={q.id} className={sectionTwoPerLine ? "border border-gray-100 rounded-lg p-3" : "flex items-start justify-between gap-4"}>
+                                  {renderQuestionBody(q, idx)}
+                                </div>
+                              ))}
+                            </div>
+                          );
+                        })()}
                       </div>
                     );
                   })}

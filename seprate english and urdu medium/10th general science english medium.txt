@@ -1,0 +1,1783 @@
+-> mcqs
+ورک اور انرجی
+Exercise	1.	The unit of energy is:
+(A)Newton(B)Meter(C)Joul(D)Second
+Exercise	2.	The ability of a body to do work is called:
+(A)Work(B)Energy(C)Ability(D)Role
+Exercise	3.	The product of the force and the distance traveled in the direction of the force is called:
+(A)Newton(B)Momentum(C)Work(D)Speed
+Exercise	4.	The SI unit of work is:
+(A)Ampere(B)Meter per second(C)Newton(D)Joul
+انرجی کی مختلف اقسام
+Exercise	5.	Energy due to motion is called:
+(A)Potential energy(B)Kinetic energy(C)Nuclear clear energy(D)Chemical energy
+Exercise	6.	Energy due to motion is called:
+(A)Potential energy(B)Kinetic energy(C)Nuclear clear energy(D)Chemical energy
+Past Papers	7.	The energy of a body in motion is called:
+(A)Chemical energy(B)Potential energy(C)Kinetic energy(D)Elastic energy
+Past Papers	8.	Energy due to position in a body is called:
+(A)Kinetic energy(B)Gravitational potential energy(C)Electric energy(D)Elastic potential energy
+Past Papers	9.	What energy do plants use for photosynthesis:
+(A)Chemical energy(B)Nuclear energy(C)Wind Energy(D)Light energy
+Past Papers	10.	The energy stored in a body by pushing, pulling or twisting it is called:
+(A)Kinetic energy(B)Gravitational potential energy(C)Electric energy(D)Elastic potential energy
+Past Papers	11.	Chemical energy changes in a cell or battery are:
+(A)Electrical energy(B)Heat energy(C)Kinetic energy(D)Potential energy
+Past Papers	12.	The cooling towers of nuclear reactors emit into the atmosphere day and night:
+(A)Light(B)Carbon(C)Heat(D)Smoke
+Past Papers	13.	An atomic bomb has the destructive energy of:
+(A)Chemical energy(B)Nuclear clear energy(C)Potential energy(D)Kinetic energy
+Past Papers	14.	Nuclear fission releases energy in the form of:
+(A)Light(B)Heat(C)Electrical energy(D)Chemical energy
+Past Papers	15.	A compressed spring has energy of:
+(A)Chemical energy(B)Gravitational potential energy(C)Elastic potential energy(D)Electrical energy
+Past Papers	16.	Energy in the body is due to the movement of the body's molecules:
+(A)Heat energy(B)Chemical energy(C)Electrical energy(D)Nuclear clear energy
+Past Papers	17.	The energy of moving charges is called:
+(A)Light energy(B)Heat energy(C)Chemical energy(D)Electrical energy
+Past Papers	18.	The disintegration of the nucleus of heavy atoms is called:
+(A)Nuclear Clear Fusion(B)Nuclear fusion(C)Radiation(D)Greenhouse effect
+Past Papers	19.	Fossil fuels store energy in:
+(A)Chemical potential energy(B)Kinetic energy(C)Nuclear clear energy(D)Electrical energy
+Past Papers	20.	A battery provides energy for:
+(A)Chemical(B)Nuclear(C)Potential(D)Electrical
+Past Papers	21.	What is the energy obtained from the sun:
+(A)Chemical energy(B)Potential energy(C)Heat energy(D)Kinetic energy
+Past Papers	22.	Burning petrol produces:
+(A)Chemical energy(B)Light energy(C)Heat energy(D)Electrical energy
+Past Papers	23.	The nervous system uses energy to:
+(A)Food energy(B)Atomic energy(C)Nuclear energy(D)Chemical energy
+Past Papers	24.	Source of Nuclear Energy:
+(A)Nucleus(B)Electron(C)Proton(D)Neutron
+انرجی کا باہم تبادلہ
+Past Papers	25.	Energy that is neither created nor lost is called:
+(A)Law of demand for energy(B)Law of Conservation of Energy(C)Law of Interchange of Energy(D)Law of conservation of energy
+انرجی کی طلب
+Past Papers	26.	From today ...... years ago most homes did not have light bulbs lit:
+(A)50(B)60(C)70(D)80
+Past Papers	27.	Today electricity has reached not only in cities but also in ......:
+(A)Countries(B)States(C)Village(D)All of these
+Past Papers	28.	The industry's dependence on ...... has increased manifold:
+(A)Cars(B)Computers(C)Electricity(D)Water
+Past Papers	29.	The use of ...... is also increasing in agriculture:
+(A)Cars(B)Water(C)Computers(D)Electricity
+Past Papers	30.	Tube wells are now being operated from ......:
+(A)Water(B)Electricity(C)Computer(D)ox
+الیکٹریکل انرجی کا حصول
+Exercise	31.	A method of generating electricity that does not cause thermal pollution is:
+(A)Hydroelectric power(B)Thermal power(C)Nuclear power(D)Biogas burning
+Exercise	32.	Burning fossil fuels produces:
+(A)Solar power(B)Tidal power(C)Nuclear power(D)Thermal power
+Past Papers	33.	The height of the windmill is approximately:
+(A)80 feet(B)90 feet(C)100 feet(D)110 feet
+Past Papers	34.	Solid waste is produced by burning in a furnace:
+(A)Ethanol(B)Methane(C)Electricity(D)Biogas
+Past Papers	35.	Solar cells convert sunlight into:
+(A)Heat(B)Electricity(C)Charge(D)Coal
+Past Papers	36.	An alternative to gasoline is:
+(A)Methane(B)Ethanol(C)Athene(D)Coal
+Past Papers	37.	The amount of solar energy reaching the Earth's surface is:
+(A)1.4 kW per square meter(B)2.1 kW per square meter(C)1 kW per square meter(D)1.6 kW per square meter
+Past Papers	38.	The amount of solar energy incident vertically on the Earth's surface is:
+(A)1.2 kW per square meter(B)1.4 kW per square meter(C)1.6 kW per square meter(D)1.8 kW per square meter
+Past Papers	39.	Alcoholic fermentation of biomass yields:
+(A)Ethanol(B)Naphthalene(C)Methanol(D)Benzene
+Past Papers	40.	Extraction of energy in the form of hot water or steam from deep within the earth is called:
+(A)Geothermal Power(B)Wind power(C)Solar power(D)Tidal power
+Past Papers	41.	Ethanol substitutes are:
+(A)Nuclearenergy(B)Biogas(C)Thermal power(D)Gasoline
+Past Papers	42.	Practically the unit of electricity is:
+(A)1 kilo watt(B)Watt(C)Joul(D)Ampere
+Past Papers	43.	A fuel derived from biogas is:
+(A)Two types(B)Three types(C)Four types(D)Five types
+Past Papers	44.	The SI unit of power is:
+(A)Watt(B)Ohm(C)Kilowatt hour(D)Ampere
+Past Papers	45.	One thousand watts of power is called:
+(A)Kilowatt(B)Two kilowatts(C)1000 kW(D)Joul
+Past Papers	46.	A 200W bulb consumes electricity in 5 hours:
+(A)One unit(B)Five unit(C)12 units(D)6 units
+Past Papers	47.	Natural gas is measured by:
+(A)In square meters(B)In cubic meters(C)In Btu(D)Both B and C
+Past Papers	48.	One Btu is equal to:
+(A)1055 joules(B)9555 joules(C)830 joules(D)746 joules
+Past Papers	49.	Which method of generating electricity is not conventional:
+(A)Hydroelectric power(B)Thermal power(C)Nuclear power(D)Solar power
+Past Papers	50.	What is coal, oil, natural gas called:
+(A)Fossil fuel(B)Tunnels(C)Turbines(D)Non-fossils
+Past Papers	51.	A source of solar energy is:
+(A)Satellite(B)Moon(C)Sun(D)Soil
+Past Papers	52.	Using the kinetic energy of wind to generate electricity is called:
+(A)Wind power(B)Tidal power(C)Solar energy(D)Thermal energy
+Past Papers	53.	The energy of tidal waves is called:
+(A)Wind energy(B)Tidal power(C)Solar energy(D)Thermal energy
+Past Papers	54.	The amount of energy expended in one second is called:
+(A)Kilowatt hour(B)Ohm(C)Power(D)Ampere
+Past Papers	55.	Watts in a kilowatt are:
+(A)10(B)100(C)1000(D)10000
+Past Papers	56.	Electricity obtained from water is called:
+(A)Thermal power(B)Solar power(C)Nuclear power(D)Hydroelectric power
+Past Papers	57.	...... is not a fossil fuel:
+(A)Coal(B)Petrol(C)Natural gas(D)Wood
+Past Papers	58.	Which energy source is conventional:
+(A)Solar power(B)Wind power(C)Tidal power(D)Thermal power
+Past Papers	59.	What is the main reason for the increase in thermal power pollution:
+(A)Oxygen gas(B)Greenhouse effect(C)Animals(D)Plants
+Past Papers	60.	What do solar panels absorb:
+(A)Heat(B)Light(C)Tidal power(D)Thermal power
+Past Papers	61.	Alternatives to natural gas are:
+(A)Athene(B)Ethanol(C)Alcohol(D)Methane
+Past Papers	62.	The traditional method of generating electricity is:
+(A)Solar Power(B)Nuclear power(C)Wind power(D)Geothermal Power
+Past Papers	63.	A 2500W air conditioner consumes units per hour:
+(A)1.5(B)2.00(C)2.5(D)3.5
+Past Papers	64.	The color on the plate of solar panels is:
+(A)Black(B)White(C)Green(D)Red
+Past Papers	65.	Energy is obtained by splitting the nucleus of heavy atoms:
+(A)Nuclear energy(B)Electrical energy(C)Solar energy(D)Chemical energy
+Past Papers	66.	Water is stored:
+(A)In the well(B)In the turbine(C)In the canals(D)In the dam
+انرجی کا ماحول
+Additional	67.	All the physical and social factors in and around the place where people live are called:
+(A)Environment(B)Society(C)Village(D)City
+Additional	68.	Air, water and land are the components of the environment:
+(A)Living things(B)Dead(C)Both A and B(D)None of these
+Additional	69.	Air is a component of Earth's atmosphere:
+(A)Water(B)Air(C)Soil(D)Electricity
+Additional	70.	Life on earth would be impossible without .......:
+(A)Water(B)Soil(C)Carbon dioxide(D)Air
+Additional	71.	The part of the atmosphere in which all living things live is the mantle of gases extending for ...... kilometers above the Earth's surface:
+(A)One to five(B)Six to ten(C)Eight to twenty(D)Fifteen to twenty
+Additional	72.	The part of the atmosphere in which all living things live is the covering of gases extending from eight to twenty ...... above the surface of the earth:
+(A)Meter(B)Kilometer(C)Mile(D)Feet
+Additional	73.	The part of the atmosphere in which all living things live is the covering of the Earth, extending from eight to twenty kilometers above the Earth's surface:
+(A)Air(B)Gases(C)Soil(D)Heats
+Additional	74.	The types of pollution are:
+(A)One(B)Two(C)Three(D)Four
+Additional	75.	Pollution caused by the increase of heat, smoke and harmful gases in the atmosphere is called:
+(A)Water pollution(B)Air pollution(C)Thermal pollution(D)Air pollution
+Additional	76.	The causes of thermal pollution are:
+(A)Two(B)Three(C)Four(D)Many
+Additional	77.	If the ratio of heat in the atmosphere exceeds a certain limit, it can be:
+(A)Beneficial(B)Harmful(C)No change(D)None of these
+Additional	78.	Burning fossil fuels adds to the atmosphere:
+(A)Carbon dioxide(B)Sulfur dioxide(C)Lead compounds(D)All of these
+Additional	79.	Fossil fuels are burned for the following purposes:
+(A)Transport(B)Industries(C)Gas and thermal power generation(D)All of these
+Additional	80.	The cooling towers of nuclear reactors emit into the atmosphere day and night:
+(A)Light(B)Heat(C)Pollution(D)Smell
+Additional	81.	A major cause of increase in thermal pollution is also......:
+(A)Water(B)Air(C)The greenhouse effect(D)Light
+Past Papers	82.	......exists above the surface of the earth:
+(A)100 km(B)200 km(C)300 km(D)400 km
+ماحول کی ابتری
+Additional	83.	If the thermal pollution becomes too much...... the climate can be adversely affected:
+(A)Regional(B)Citizen(C)National(D)State
+Additional	84.	When an excessive amount of pollution is added to the environment, it is called:
+(A)Lack of environment(B)Environmental degradation(C)Environmental pollution(D)Environmental comfort
+Additional	85.	Wastes and other wastes from hospitals should be buried:
+(A)In the bags(B)Inthe envelope(C)In theland(D)In the garbage
+Additional	86.	Care of ...... should be taken of the vehicles plying on the roads:
+(A)Oil(B)Petrol(C)Rides(D)Fitness
+Additional	87.	Industries consume roughly the following sources of energy:
+(A)10%(B)20%(C)30%(D)40%
+Additional	88.	Energy sources to be developed that cause pollution:
+(A)Less(B)More(C)Not at all(D)None of these
+نیو کلئیر فیول سے لاحق خطرات
+Additional	89.	In pursuit of nuclear energy, the potential for emissions of...... cannot be ignored:
+(A)Radiation(B)Rays(C)Pollution(D)dirt
+Additional	90.	The elements which emit radiation are called ...... elements:
+(A)Ionic(B)Non-ionic(C)Radioactive(D)X-rays
+Additional	91.	In ...... the cooling system of one of the reactors at Chernobyl failed:
+(A)1984(B)1985(C)1986(D)1987
+Additional	92.	In 1986, the cooling system of a reactorof ...... faild:
+(A)Chernobyl(B)Russia(C)Both A and B(D)None of these
+Additional	93.	Used nuclear fuel also emits some radiation. What is it called:
+(A)Nuclear waste(B)Nuclear pollution(C)The nuclear atom(D)Nuclear clear fission
+Additional	94.	Thick walls of ...... should be built around nuclear reactors:
+(A)Iron(B)Bricks(C)soil(D)Concrete
+انرجی کا تحفظ
+Additional	95.	We can conserve energy:
+(A)By increasing the number of personal vehicles(B)By making vehicle bodies heavier(C)Stop walking(D)By avoiding unnecessary use of energy
+الیکٹرک کرنٹ
+Past Papers	96.	The flow of charges is called:
+(A)Electric charge(B)Electric potential(C)Electric current(D)Kilowatt hours
+Past Papers	97.	The current can be written mathematically as:
+(A)(B)(C)(D)
+Past Papers	98.	The unit of current in System International is:
+(A)Ohm(B)Ampere(C)KiloWatt(D)Coulomb
+Past Papers	99.	One microampere is equal to:
+(A)10-9A(B)10-3A(C)10-6A(D)10-12A
+Past Papers	100.	One milliampere of current is equal to:
+(A)10-1A(B)10-2A(C)10-3A(D)10-4A
+Past Papers	101.	If Q coulomb charge passes through a cross section in t second, the current I is calculated as:
+(A)I=Qt(B)Q=t/I(C)I=t/Q(t)(D)I=Q/t
+کنوینشنل کرنٹ
+Additional	102.	As electric current moves from the positive terminal to the negative terminal, it is called:
+(A)Conventional current(B)Conditional current(C)Current(D)Electric current
+Additional	103.	In which direction do electrons move from the negative terminal of the battery:
+(A)On the other side of the battery(B)Towards the positive terminal(C)Towards the negative terminal(D)They do not move
+Additional	104.	Current is actually caused by the flow of what:
+(A)Positive charges(B)Battery cells(C)Negative charges(D)All of these
+Additional	105.	A conductor has numerous motions:
+(A)Positive charges(B)Negitive charges(C)Both A and B(D)Free electrons
+Additional	106.	The movement of numerous free electrons in a conductor in different directions between atoms is called:
+(A)Sequential motion(B)Motion(C)Random motion(D)Movement
+Additional	107.	The rate of passage of electrons from one side of the cross section is:
+(A)Zero(B)One(C)A lot(D)None of these
+Additional	108.	Charge on electrons is:
+(A)Positive(B)Negative(C)Both A and B(D)None of these
+Additional	109.	Electrons carry with them:
+(A)Positive charges(B)Negative charge(C)Both A and B(D)None of these
+پوٹینشل ڈفرینس
+Additional	110.	The SI unit of potential difference is:
+(A)VوولٹVolt(B)FفیراڈFerrad(C)AایمپیئرAmpere(D)اوہمOhm
+Additional	111.	Current flowing in a conductor is considered to be equivalent to what:
+(A)Of flowing water(B)Of the drowning man(C)Of the floating man(D)Of a man on the run
+Additional	112.	A chemical reaction in a battery moves electrons from the positive terminal to which side:
+(A)Towards the positive charge(B)Towards the negative terminal(C)Both A and B(D)Does not transfer
+Additional	113.	A chemical reaction in the battery causes the potential energy of the electrons collected at the negative terminal to become:
+(A)Less(B)Twice(C)More(D)Fourfold
+Additional	114.	When electrons reach the positive terminal in a battery, their potential energy becomes:
+(A)Less(B)More(C)Twice(D)Threefold
+Additional	115.	The potential energy level is also called......:
+(A)Positive charge(B)Negative charge(C)Both A and B(D)Potential
+Additional	116.	In which direction does the current flow:
+(A)From low potential to high potential(B)From high potential to low potential(C)Both A and B(D)None of these
+Additional	117.	To keep current flowing, the battery receives charges from:
+(A)Positive charge(B)Negative charge(C)Energy(D)Potential
+Additional	118.	The amount of energy a battery provides per coulomb of charge is called its:
+(A)Difference(B)Potential(C)Potential difference(D)Current
+Additional	119.	Potential difference is also known as......:
+(A)Current(B)Charges(C)ٔFlow of charges(D)Voltage
+اوہم کا قانون
+Exercise	120.	The constant in Ohm's law is:
+(A)Current(B)Resistance(C)Potential difference(D)Charge
+Additional	121.	The formula for Ohm's law is:
+(A)V=RI(B)V=12R(C)(D)V=21R
+Additional	122.	Who discovered Ohm's law:
+(A)George Simon Ohm(B)Pasteur(C)Al-Biruni(D)Bo Ali Sena
+Additional	123.	The relationship between potential difference and current is established as:
+(A)1825(B)1824(C)1826(D)1830
+رزسٹنس
+Exercise	124.	SI unit of resistance is:
+(A)Ampere(B)Volt(C)Hertz(D)Ohm
+Past Papers	125.	An obstruction to the flow of charges is called:
+(A)Potential difference(B)Resistance(C)Current(D)Ohm
+Past Papers	126.	The symbol for Ohm is:
+(A)VV(B)AA(C)(D)FF
+Past Papers	127.	The equation of resistance is:
+(A)R=V/I(B)R=I/V(C)R=IV(D)R=I/F
+سرکٹ کے اجزا
+Exercise	128.	A circuit is used to turn on or off:
+(A)Switch(B)Fuse(C)Circuit breaker(D)Earth wire
+Past Papers	129.	Types of transformers are:
+(A)Two(B)Three(C)Four(D)Six
+Past Papers	130.	A device for completing or breaking a circuit is:
+(A)Fuse(B)Switch(C)Resistor(D)Capacitor
+Past Papers	131.	An electric charge storage device is:
+(A)Fuse(B)Switch(C)Resistor(D)Capacitor
+Past Papers	132.	A capacitor stores:
+(A)Charge(B)Current(C)Light(D)Heat
+Past Papers	133.	SI unit of capacitance is:
+(A)Farad(B)Ampere(C)Ohm(D)Newton
+Past Papers	134.	The transformer consists of:
+(A)On a coil(B)On two coil(C)On four coil(D)On six coil
+Past Papers	135.	The equation of the transformer is:
+(A)(B)(C)(D)
+Past Papers	136.	Conductors having high resistance are called:
+(A)Fuse(B)Switches(C)Resistors(D)Competitors
+Past Papers	137.	One microfarad is equal to:
+(A)10-3F(B)10-9F(C)10-12F(D)10-6F
+Past Papers	138.	A device that increases or decreases AC voltage:
+(A)Transformer(B)Radio(C)Voltmeter(D)Fuse
+Past Papers	139.	The components of the circuit are:
+(A)Switches(B)Resistors(C)Capacitors(D)All of these
+Past Papers	140.	The insulator placed between the two plates of the capacitor is called:
+(A)Fuse(B)Switch(C)Dielectric(D)Resistor
+Past Papers	141.	A step-up transformer is used:
+(A)Radio(B)T.V(C)Tape recorder(D)Computer
+Past Papers	142.	A transformer is a device that ...... the AC voltage:
+(A)More(B)Less(C)Equal(D)less or more
+ڈائریکٹ اور آلٹرنینٹگ کرنٹ
+Past Papers	143.	A current that always flows in the same direction is called:
+(A)DC current(B)AC current(C)Electric current(D)Conventional current
+Past Papers	144.	A current that changes its direction repeatedly:
+(A)Conventional current(B)DC current(C)AC current(D)Positive current
+Past Papers	145.	Alternating current is represented by:
+(A)AD(B)A. X(C)AC(D)AE
+ڈی۔سی اور اے۔سی کا استعمال
+Additional	146.	A car battery provides:
+(A)AC(B)DC(C)Both A and B(D)None of these
+Additional	147.	A DC operated item is:
+(A)Radio(B)Tape recorder(C)Computer(D)All of these
+Additional	148.	AC operated item is:
+(A)Fan(B)Motor(C)Both A and B(D)T.V
+Additional	149.	What does the heater run on:
+(A)DC(B)AC(C)Both A and B(D)None of these
+Additional	150.	By whom is the electricity supply brought from a distance:
+(A)Through the wires(B)Through the poles(C)Through batteries(D)All of these
+Additional	151.	A transformer supplies to consumers:
+(A)110 volts(B)220 volts(C)240 volts(D)1000 volts
+Additional	152.	A transformer can only step up or down the voltage:
+(A)AC(B)DC(C)Both A and B(D)None of these
+Additional	153.	A transformer cannot step up or step down which voltage:
+(A)To AC voltage(B)To DC voltage(C)Both A and B(D)None of these
+Additional	154.	Considered more useful:
+(A)AC Voltage(B)DC Voltage(C)Both A and B(D)None of these
+Additional	155.	A microphone is used for:
+(A)Potential current(B)DC voltage(C)AC voltage(D)All of these
+گھر یلو الیکٹرک سپلائی
+Exercise	156.	Potential of neutral wire:
+(A)Is zero(B)+220 volts(C)220 volts(D)It keeps changing
+Past Papers	157.	The potential difference between the live and neutral wire is:
+(A)240 volt(B)220 volt(C)280 volt(D)100 volt
+Past Papers	158.	AC supply voltage in homes is:
+(A)240 volts(B)50 volts(C)220 volts(D)1000 volts
+Past Papers	159.	All electrical appliances are fitted with mains supply:
+(A)In series(B)In parallel(C)Unparalleled(D)Straight
+Past Papers	160.	The potential of the neutral wire is:
+(A)100v(B)200v(C)-200v(D)Zero
+الیکٹریسٹی سپلائی کی پیمائش
+Additional	161.	The unit of electrical energy is:
+(A)Joul(B)Volt(C)Watt(D)Kilowatt hour
+Additional	162.	In which unit do household electricity meters measure:
+(A)Joul(B)Volt(C)Kilowatt hour(D)Watt
+الیکٹریسٹی کے خطرات اور احتیاطی تدابیر
+Additional	163.	Advantages of electricity are:
+(A)Two(B)Three(C)Four(D)A lot
+Additional	164.	The danger of electricity is:
+(A)Electric shock(B)Fire(C)Blast(D)All of these
+Additional	165.	When a current passes through the body of a case organism, it is called:
+(A)Electric shock(B)Fire(C)Blast(D)None of these
+Additional	166.	What can happen from an electric shock:
+(A)Burning of the body(B)Death occurs(C)Both A and B(D)Nothing can happen
+Additional	167.	Electrical items are:
+(A)Non-resistors(B)Resistors(C)Meter(D)Voltmeter
+Additional	168.	If the current completes its circuit through wires instead of transistors, it is called:
+(A)Electric shock(B)Fire(C)Blast(D)Short circuit
+Additional	169.	A wiring fire can be caused by:
+(A)Damaged insulation(B)Over loading(C)Presence of moisture(D)All of these
+Additional	170.	Where can a short circuit be most dangerous:
+(A)Near petrol(B)Near Diesel(C)Near flammable chemicals(D)All of these
+Additional	171.	Always turn on the switches:
+(A)In open area(B)On the way to the live wire(C)In close area(D)None of these
+Additional	172.	Plugging too many electrical appliances into a single socket causes:
+(A)Over loading(B)The bill is high(C)Meter slow(D)All of these
+Additional	173.	Do not let electrical appliances:
+(A)Soil(B)Wood(C)Water(D)Germs
+Additional	174.	Water is a ......of electricity:
+(A)Conductor(B)Non-conductor(C)Direct current(D)Alternating current
+Additional	175.	Reduces the dangers of electricity:
+(A)Fuse(B)Circuit breaker(C)Both A and B(D)Switches
+Additional	176.	Electrical appliances must be accompanied by:
+(A)Tape(B)Bulb(C)Meter(D)Earth wire
+آلات پیمائش
+Exercise	177.	The name of the current measuring instrument is:
+(A)Volt meter(B)Circuit breaker(C)Emitter(D)Switch
+Past Papers	178.	A potential difference detector in a circuit is:
+(A)Galvanometer(B)Emitter(C)Volt meter(D)Multimeter
+Past Papers	179.	An instrument for measuring current, voltage and resistance is:
+(A)Volt meter(B)Emeter(C)Multimeter(D)Galvanometer
+Past Papers	180.	A galvanometer is connected in parallel to convert it into an ammeter:
+(A)Shunt resistance(B)Volt meter(C)Transformer(D)Capacitor
+Past Papers	181.	A device that detects the presence of current in a circuit:
+(A)Galvanometer(B)Emitter(C)Volt meter(D)Multimeter
+Past Papers	182.	A multimeter is called:
+(A)Galvanometer(B)Emetter(C)Volt meter(D)AVO meter
+Past Papers	183.	Ammeter measures:
+(A)Current(B)Potential difference(C)Resistance(D)Charge
+Past Papers	184.	A voltmeter measures:
+(A)Potential difference(B)Resistance(C)Current(D)Charge
+Past Papers	185.	Ampere is applied in a circuit:
+(A)Above(B)Down(C)Parallel(D)Series
+Past Papers	186.	A potential difference measuring device is:
+(A)Volt meter(B)Galvanometer(C)Emitter(D)Meter
+اینا لوگ اور ڈیجیٹل میٹرز
+Past Papers	187.	A multimeter is:
+(A)Analog meter(B)Digital meter(C)Both A and B(D)None of these
+Past Papers	188.	An electrical instrument for measuring current, potential difference and resistance is:
+(A)Analog meter(B)Digital multimeter(C)Galvanometer(D)Voltmeter
+سیمی کنڈکٹرز
+Past Papers	189.	P-type semiconductors have a high current source:
+(A)Free electrons(B)Holes(C)Positive ions(D)Heat
+Past Papers	190.	Objects through which current can pass easily are called:
+(A)Conductors(B)Insulators(C)Semiconductors(D)Non-electrolytes
+Past Papers	191.	Silicon and germanium belong to which group of the periodic table:
+(A)First(B)Second(C)Third(D)Fourth
+Past Papers	192.	Germanium is:
+(A)Semiconductor(B)Conductor(C)Insulator(D)None of these
+Past Papers	193.	A semiconductor is:
+(A)Sodium(B)Potassium(C)Germanium(D)Carbon
+Past Papers	194.	The source of most current flow in n-type semiconductors is:
+(A)Free electrons(B)Protons(C)Holes(D)Neutrons
+Past Papers	195.	Aluminum (AI) belongs to which group of the periodic table:
+(A)Second(B)Third(C)Fifth(D)Sixth
+Past Papers	196.	The ...... part of a diode is called the anode:
+(A)D(B)W(C)P(D)Q
+Past Papers	197.	Doping with the element arsenic will make silicon or germanium an ...... semiconductor:
+(A)P type(B)N type(C)Anode(D)Cathode
+Past Papers	198.	The process of incorporation of impurities into pure semiconductor crystals is called:
+(A)Doping(B)Charging(C)Baiting(D)Induction
+Past Papers	199.	The N part of a semiconductor diode is called:
+(A)Hole(B)Anode(C)Cathode(D)Racket fire
+Past Papers	200.	Used to transmit electric current in the form of signals:
+(A)Mechanics(B)Electronics(C)Modem(D)Processor
+Past Papers	201.	Group of semiconductors is:
+(A)First(B)Second(C)Fourth(D)Sixth
+Past Papers	202.	Which semiconductor has the highest number of holes:
+(A)N type(B)P type(C)Transistor(D)Diode
+Past Papers	203.	The current through a reverse biased diode is:
+(A)20 amperes(B)15 amperes(C)30 amperes(D)0 amperes
+Past Papers	204.	It is a semiconductor:
+(A)Carbon(B)Silicon(C)Calcium(D)Nitrogen
+سیمی کنڈکٹر ڈائیوڈ کے استعمال
+Exercise	205.	Diodes are used in:
+(A)To convert AC to DC(B)To convert DC to AC(C)To store charge(D)To increase or decrease the voltage
+Past Papers	206.	Calcium is made from specific compounds:
+(A)Photodiode(B)Reverse diode(C)Forward Biased Diode(D)Light emitting diodes
+Past Papers	207.	Light emitting diodes are called:
+(A)Calcium(B)Sodium(C)Carbon(D)Magnesium
+Past Papers	208.	A light sensitive diode is called:
+(A)Simple diodes(B)Photodiode(C)Rectifier(D)Transformer
+Past Papers	209.	The process of converting alternating current into direct current is called:
+(A)Transmission(B)Rectification(C)Radiations(D)Ionization
+Past Papers	210.	A device that converts AC voltage to DC is called:
+(A)Resistors(B)Insulators(C)Computer(D)Rectifier
+ریڈیو ویوز
+Past Papers	211.	Speed of radio waves is equal to:
+(A)Light(B)Air(C)Sound(D)Rocket
+Past Papers	212.	The inventor of the radio system or sound was:
+(A)John Dalton(B)JJ Thompson(C)Marconi(D)Addison
+Past Papers	213.	The speed of sound waves is:
+(A)340 kilometers per second(B)340 meters per second(C)340 cm per second(D)340 kilometers per hour
+Past Papers	214.	How many electron guns are used in color television:
+(A)One(B)Two(C)Three(D)Four
+Past Papers	215.	A 100m high TV transmitter aerial has a range of approximately:
+(A)30 km(B)50 km(C)100 km(D)75 km
+Past Papers	216.	At what height above the Earth's surface do hovering satellites complete one revolution around the earth in 24 hours:
+(A)360 km(B)3600 km(C)36000 km(D)360000 km
+Past Papers	217.	To transmit signals from ground radio stations to satellites are used:
+(A)Radio waves(B)Light waves(C)Micro waves(D)Ultraviolet Waves
+Past Papers	218.	How many hovering satellites together can broadcast to the whole world:
+(A)One(B)Two(C)Three(D)Four
+Past Papers	219.	The radio set is:
+(A)Radiator(B)Receiver(C)Insulator(D)Transmitter
+Past Papers	220.	Radio waves are transmitted over the air by:
+(A)Antenna(B)Radiator(C)Receiver(D)Transmitter antenna
+Past Papers	221.	Carrier waves of frequency up to how many hertz are used for radio transmission:
+(A)40 kHz(B)50 kHz(C)30 kHz(D)70 kHz
+Past Papers	222.	Radio waves are called:
+(A)Light waves(B)Conductors(C)Insulators(D)Career waves
+Past Papers	223.	The beam on the TV picture tube has:
+(A)Electrons(B)Protons(C)Neutrons(D)Photorons
+کمپیوٹر
+Past Papers	224.	Creating images and designs etc. on computer is called:
+(A)Word processing(B)Graphics(C)Data management(D)E-mail
+Past Papers	225.	Why is the world called a global village:
+(A)T.V(B)Telephone(C)Computer(D)Airplane
+Past Papers	226.	The main parts of a computer are:
+(A)Three(B)Two(C)Four(D)Seven
+Past Papers	227.	Computer devices that can be physically touched are called:
+(A)Software(B)Hardware(C)Output devices(D)Memory unit
+Past Papers	228.	The devices through which information or data is transferred in a computer are called:
+(A)Information storage devices(B)Output devices(C)Input devices(D)Central processing devices
+Past Papers	229.	An input device is:
+(A)Keyboard(B)Printer(C)Monitor(D)CPU
+Past Papers	230.	An output device is:
+(A)Keyboard(B)Mouse(C)Monitor(D)CPU
+Past Papers	231.	The brain of a computer:
+(A)Central processing unit(B)Keyboard(C)Monitor(D)Mouse
+Past Papers	232.	Temporary memory is:
+(A)Ram and Rom(B)Floppy disk(C)Hard disk(D)Compact disc
+Past Papers	233.	Instructions given electronically to a computer are called:
+(A)Hardware(B)Software(C)Graphics(D)Data management
+Past Papers	234.	The material on which a floppy disk is coated:
+(A)Ferric oxide(B)Sodium oxide(C)Magnesium oxide(D)Barium oxide
+Past Papers	235.	Data is transferred from the hard disk first:
+(A)In Ram(B)In Rom(C)In ALU(D)In chip
+Past Papers	236.	An output device that prints the results of processing on paper:
+(A)Scanner(B)Monitor(C)Printer(D)Mouse
+Past Papers	237.	The interconnection of millions of computers is called:
+(A)E mail(B)Website(C)Protocol(D)Internet
+Past Papers	238.	Whichis the input device:
+(A)Printer(B)Monitor(C)Scanner(D)Speaker
+Past Papers	239.	The disk is called:
+(A)Floppy disk(B)Compact disc(C)Monitor(D)Storage disk
+Past Papers	240.	The laser pen is:
+(A)Input device(B)Output device(C)Storage device(D)Broadcasting device
+Past Papers	241.	A floppy disk is made up of:
+(A)Iron(B)Plastic(C)Gold(D)Silver
+Past Papers	242.	Recording on a compact disc:
+(A)Audio(B)Video(C)Analogue(D)Digital
+Past Papers	243.	Instructions for working on a computer are:
+(A)Telecommunications(B)Fax(C)E mail(D)Software
+Past Papers	244.	The program is a list of ......:
+(A)Electron(B)Laser(C)Atoms(D)Instructions
+Past Papers	245.	Analog signals are recorded as:
+(A)On magnetic tape(B)On a floppy disk(C)On the hard disk(D)On CD
+Past Papers	246.	How many basic parts of hardware are there:
+(A)Four(B)Three(C)Two(D)One
+Past Papers	247.	The smooth space between craters in a compact disc is called:
+(A)Flats(B)Driver(C)Spindle(D)Scratch
+Past Papers	248.	The control unit in a computer is the main part of:
+(A)Of Ram(B)Of ALU(C)Of Rom(D)Of CPU
+Past Papers	249.	A hard disk is called:
+(A)Floppy disk(B)C.D(C)Monitor(D)Storage disk
+Past Papers	250.	The compact disc contains of:
+(A)Carbon(B)Copper(C)Iron(D)Aluminium
+Past Papers	251.	Specify the output device:
+(A)Keyboard(B)Mouse(C)Printer(D)Scanner
+Past Papers	252.	Computers have made the whole world:
+(A)Global City(B)Global Village(C)Global Town(D)Global Society
+Past Papers	253.	A person who writes computer programs is called:
+(A)Painter(B)Writer(C)Programmer(D)Carpenter
+Past Papers	254.	The central part of the central processing unit is:
+(A)Arithmetic Logic Unit(B)Ram(C)Control unit(D)Rom
+اینالوگ/ڈیجیٹل کنورٹرز
+Exercise	255.	Converts electrical signals to digital signals:
+(A)Keyboard(B)Monitor(C)Scanner(D)Modem
+Exercise	256.	37 in the binary number system would be written as:
+(A)101101(B)100101(C)110011(D)101011
+Exercise	257.	An analog signal is recorded as:
+(A)On magnetic tape(B)On a floppy disk(C)On the hard disk(D)On C.D
+Past Papers	258.	Converts analog to digital single:
+(A)Keyboard(B)Monitor(C)Scanner(D)Modem
+Past Papers	259.	361 in binary system is written as:
+(A)101101001101101001(B)1111000111110001(C)1000111110001111(D)1000111110001111
+Past Papers	260.	How to write 26 in binary system:
+(A)11010(B)11110(C)10001(D)11111
+Past Papers	261.	How to write 36 in binary number system:
+(A)100001(B)11000(C)100100(D)101010
+Past Papers	262.	A microphone is filled with particles of an element:
+(A)Hydrogen(B)Carbon(C)Iron(D)Nitrogen
+Past Papers	263.	A clock with hands is called:
+(A)Standard Watch(B)Night watch(C)Analog watch(D)Digital watch
+انفارمیشن ٹیکنالوجی
+Exercise	264.	Mobile is called:
+(A)Cellular phone(B)Phone(C)Net(D)Telephone
+Past Papers	265.	An advanced form of telegraphy is:
+(A)Radio(B)Telephone(C)Internet(D)T.V
+Past Papers	266.	The basic components of communication are:
+(A)Two(B)Three(C)Four(D)Five
+Past Papers	267.	Each station in a mobile phone network is called a circle:
+(A)Cell(B)Binary number(C)Optical fiber(D)Converter
+Past Papers	268.	A machine used to send and receive documents and images from one place to another:
+(A)Telegraph(B)Fax machine(C)T.V(D)Telephone
+Past Papers	269.	The orbits of communication satellites are called:
+(A)Geostationary Orbit(B)Stationary orbit(C)Orbit(D)Geo orbit
+Past Papers	270.	High-speed messaging over the Internet is called:
+(A)E-mail(B)Website(C)Protocol(D)ISG
+Past Papers	271.	The source of electrical power for satellites is:
+(A)Solar cell(B)Air(C)Rays(D)Moon
+Past Papers	272.	Who invented telecommunication:
+(A)Newton(B)Marconi(C)Volta(D)Dalton
+Past Papers	273.	Human voice broadcast for the first time:
+(A)In 1901(B)In 1902(C)In 1904(D)In 1906
+Past Papers	274.	A reliable device for sending and receiving electromagnetic waves is:
+(A)Radar(B)T.V(C)Radio(D)Telephone
+Past Papers	275.	The number of links used in communication is:
+(A)One(B)Two(C)Three(D)Four
+Past Papers	276.	In ...... messages are transmitted in the form of code:
+(A)Telegraphy(B)Telephone(C)Telescope(D)Fax
+Past Papers	277.	Receiver amplifies sound signals and sends them to which direction:
+(A)Transmitter(B)Microphone(C)Speaker(D)Telephone
+سائنس اور ٹیکنالوجی کا کردار
+Additional	278.	When Pakistan was created, we had resources:
+(A)Two(B)Five(C)Very limited(D)Much more
+Additional	279.	Now made in Pakistan:
+(A)Motorcycle(B)Cars(C)Ships(D)All of these
+Additional	280.	Today's era is:
+(A)Of electronics(B)Of science(C)Of technology(D)Both B and C
+Additional	281.	Modern assessment methods include:
+(A)Ultrasound(B)CT scan(C)MRIMRI(D)All of these
+Additional	282.	Which industry has now seen significant growth:
+(A)Sugar making(B)Cement making(C)Both A and B(D)None of these
+لیزر
+Past Papers	283.	The first used laser crystal is:
+(A)Ruby(B)Glass(C)Germanium(D)Silicon
+Past Papers	284.	Used as a light knife:
+(A)Laser(B)Capacitor(C)Voltmeter(D)Transformer
+Past Papers	285.	The argon laser is used to:
+(A)In cataract operations(B)In the operation of glaucoma(C)In liver operation(D)Both A and B
+Past Papers	286.	Gallstones and kidney stones are broken by laser without surgery. This process is called:
+(A)Ophthalmology(B)Dentistry(C)Dermatology(D)Lithotropia
+Past Papers	287.	Treatment of skin diseases with laser rays is called:
+(A)Dermatology(B)Ophthalmology(C)Dentistry(D)Methotropia
+Past Papers	288.	Diseases treated with laser:
+(A)Polio(B)T.B(C)Hepatitis(D)Cancer
+Past Papers	289.	Technologies used to treat the retina of the eye:
+(A)Radar(B)Internet(C)Laser(D)Microprocessor
+Past Papers	290.	The argon laser is used to:
+(A)To cut(B)For cataracts(C)For capillaries(D)For skin disease
+Past Papers	291.	Part of the human eye is repaired with a laser:
+(A)Ayers(B)Pupil(C)Retina(D)Pupil
+Past Papers	292.	A laser is used as a ...... of light:
+(A)Fiber optics(B)Taar(C)Sheets(D)Beam
+Past Papers	293.	From a laser we get images of:
+(A)One way(B)Two way(C)Three way(D)Four way
+Past Papers	294.	The process of breaking up kidney stones without surgery with a laser is called:
+(A)Laser braking(B)Laser operation(C)Autopsy(D)Lithotropia
+Past Papers	295.	Cataract and reglaucoma operations are performed by:
+(A)Wool laser(B)Argon laser(C)Krypton laser(D)Fiber optics
+Past Papers	296.	The laser beam travels:
+(A)In many directions(B)In one directions(C)Without direction(D)In three directions
+Past Papers	297.	To make the light from a laser more powerful:
+(A)Convex mirror(B)Plain Mirror(C)Concave Mirror(D)High convex mirror
+فائبر آپٹکس
+Exercise	298.	The principles on which fiber optics light works are:
+(A)Reflection(B)Refraction(C)Total internal reflection(D)Dispersion
+Past Papers	299.	Today metal cables are being replaced by:
+(A)Plastic fibers(B)Electrical fibers(C)Optical fibers(D)Natural fibers
+Past Papers	300.	Caller calls are converted into what type of signals are dispersed in optical fibers:
+(A)Light signals(B)Voice signals(C)Electric signals(D)Electromagnetic signals
+Past Papers	301.	Optical fibers are:
+(A)Fine glass wires(B)Fine aluminum wire(C)Silicone bar wire(D)Fine plastic wire
+Past Papers	302.	Optical fibers are made of......:
+(A)Iron(B)Steel(C)Plastic(D)Glass
+Past Papers	303.	Optical fibers are fine ...... of glass:
+(A)Taar(B)Waves(C)Sheets(D)Boxes
+Past Papers	304.	Optical fibers are very:
+(A)Thick(B)Long(C)Wide(D)Subtle
+Past Papers	305.	In what form is the signal sent in optical fiber:
+(A)Electric(B)Light(C)Radio wave(D)Microwave
+Past Papers	306.	The angle of refraction in total internal reflection is:
+(A)800(B)900(C)1000(D)1800
+سٹیلائیٹس اور راڈار
+Past Papers	307.	Generate electrical power for satellites:
+(A)Solar cells panels(B)Fossil fuels(C)Wind wave(D)Tidal wave
+Past Papers	308.	A reliable device for sending and receiving electromagnetic waves is:
+(A)Satellites(B)Radar(C)Radio(D)T.V
+Past Papers	309.	With radar we get ...... information about a body:
+(A)Speed(B)Distance(C)Direction of motion(D)All of these
+Past Papers	310.	Air traffic is controlled by:
+(A)Lasers(B)Orbit(C)Satellite(D)Radar
+ریڈیو ایکٹیویٹی
+Exercise	311.	Emissions of radiation from the nucleus are called:
+(A)Chemical reaction(B)Atomic reaction(C)Radioactivity(D)Nuclear fission
+Exercise	312.	Radioactivity occurs in elements with higher atomic number than:
+(A)82(B)80(C)70(D)62
+Past Papers	313.	The helium nucleus consists of:
+(A)Alpha radiations(B)Radiations(C)Gamma radiations(D)Nuclear radiations
+Past Papers	314.	The atomic number of radioactive elements is:
+(A)Less than 82(B)Less than 70(C)More than 109(D)More than 82
+Past Papers	315.	How many types of radiation do radioactive elements emit:
+(A)Two(B)Three(C)Four(D)Five
+Past Papers	316.	When was the process of radioactivity discovered:
+(A)1896(B)1886(C)1796(D)1698
+Past Papers	317.	Alpha radiations are actually:
+(A)Oxygen Nuclei(B)Helium Nuclei(C)Uranium Nuclei(D)Carbon Nuclei
+Past Papers	318.	Alpha radiations are charged with:
+(A)Negitive(B)Positive(C)Neutral(D)None of these
+Past Papers	319.	The charge number of a beta particle is:
+(A)-1(B)-2(C)1(D)2
+Past Papers	320.	The mass of helium is:
+(A)2(B)4(C)6(D)3
+Past Papers	321.	Electromagnetic radiations with very high energy are:
+(A)Alpha radiations(B)Beta radiations(C)Gamma radiations(D)Light radiations
+Past Papers	322.	The number of isotopes of chlorine is:
+(A)4(B)3(C)2(D)10
+Past Papers	323.	To preserve food for a longer period of time, it is spent on:
+(A)Alpha radiations(B)Betaradiations(C)Gammaradiations(D)X rays
+Past Papers	324.	Non-surgical tests used to detect bone and tooth abnormalities inside the body include:
+(A)Alpha rays(B)Beta rays(C)Gamma rays(D)C rays
+Past Papers	325.	The mass of beta particle is:
+(A)00(B)44(C)22(D)66
+Past Papers	326.	Gamma rays originate from:
+(A)From nucleus(B)From orbits(C)From protons(D)From electrons
+Past Papers	327.	What diseases can be caused by radiations:
+(A)Heart(B)Skin(C)Head(D)Brain
+Past Papers	328.	How many types of radiations are there:
+(A)One(B)Two(C)Three(D)Four
+Past Papers	329.	Which rays has no effect on any field:
+(A)Apha rays(B)Beta rays(C)Gamma radiations(D)Radiations
+Past Papers	330.	What is the atomic number of elements that emit radiations:
+(A)Less than 80(B)More than 80(C)More than 82(D)Less than 82
+Past Papers	331.	To find the thickness of objects, use:
+(A)Alpha Rays(B)Beta rays(C)Gamma rays(D)Light rays
+Past Papers	332.	Which rays were discovered by accident:
+(A)Alpha rays(B)Beta rays(C)X-rays(D)Gamma Rays
+Past Papers	333.	Particles having mass number 4 and charge number 2 are called:
+(A)Beta radiation(B)Alpha radiation(C)Gamma radiation(D)Radio activity
+ایکس ریز
+Additional	334.	Accidentally invented:
+(A)Of tractor(B)OfCT scan(C)Of x-rays(D)Of thermometer
+Additional	335.	When high-energy electrons collide with a certain metal, they emit very strong radiations, called X-rays:
+(A)CT scan(B)X-rays(C)Isotops(D)Alpha radiations
+Additional	336.	Objects that contain lighter atoms emit more X-rays:
+(A)Does not absorb(B)They absorb(C)Some do and some don't(D)None of these
+Additional	337.	X-rays do not pass through which object:
+(A)Living tissues(B)Bones(C)Meat(D)Blood
+الٹرا ساؤنڈ
+Exercise	338.	The frequency of ultrasound is:
+(A)Below 20Hz(B)20Hz20Hz(C)20KHz20KHz(D)More than 20KHz
+Additional	339.	Ultrasound provides an image of:
+(A)One way(B)Three-way(C)Two-way(D)Four-way
+Additional	340.	What is used to dissolve kidney stones:
+(A)ECG(B)EEG(C)X-rays(D)Ultrasound
+ای۔سی۔جی
+Exercise	341.	An ECG measures the electrical activity of:
+(A)Liver(B)Heart(C)Brain(D)Eye
+Exercise	342.	A test of the electrical activity of the heart is:
+(A)ECG(B)EEG(C)MRI(D)Angiography
+ای۔ای۔جی
+Past Papers	343.	A test that measures the electrical activity of the brain:
+(A)ECG(B)EEG(C)MRI(D)Angiography
+Past Papers	344.	Tests that detect brain death and coma:
+(A)E.C.G(B)E.E.G(C)MRI(D)C.T Scan
+Past Papers	345.	Electrodes are placed to obtain the E.E.G.:
+(A)20(B)18(C)16(D)14
+Past Papers	346.	The EEG test is:
+(A)Of skin(B)Of brain(C)Of heart(D)Of liver
+Past Papers	347.	Epilepsy is diagnosed by:
+(A)Angiography(B)CT scan(C)ECG(D)EEG
+ایم۔آر۔آئی
+Past Papers	348.	Tests performed to diagnose the nervous system include:
+(A)E.C.GE.C.G(B)E.E.GE.E.G(C)MRIMRI(D)Angiography
+Past Papers	349.	An X-ray of the brain is called:
+(A)Ultrasound(B)MRI(C)EEG(D)CT scan
+سی۔ٹی سکین
+Past Papers	350.	Which scientist introduced CT scanning:
+(A)John Dalton(B)Einstein(C)JJ Thompson(D)Sir Geoffrey Hounsfield
+Past Papers	351.	This is a special type of X-ray:
+(A)MRIMRI(B)EEGEEG(C)CT scan(D)Angiography
+Past Papers	352.	The inventor of CT scanning is:
+(A)Spanish(B)German(C)British(D)American
+انجیوگرافی
+Past Papers	353.	A method that provides internal pictures of arteries:
+(A)X-rays(B)CT scan(C)Angiography(D)M.R.I
+Past Papers	354.	What element of the body does angiography relate to:
+(A)Heart(B)Kidneys(C)Lungs(D)Brain
+Past Papers	355.	Angiography is used to treat which part of the body:
+(A)Liver(B)Lungs(C)Arteries(D)Brain
+پاکستان کی اہم انڈسٹریز
+Past Papers	356.	To obtain pig iron from ore, it is heated with:
+(A)Carbon + limestone(B)Carbon + nickel(C)Carbon + graphite(D)Limestone + chromium
+Past Papers	357.	What is the percentage of carbon in normal steel:
+(A)1.5%(B)1.6%(C)1.7%(D)1.8%
+Past Papers	358.	Converting cotton fiber into yarn is called:
+(A)Senning(B)Weaving(C)Knitting(D)Fabric formation
+Past Papers	359.	An industry related to pharmaceuticals is called:
+(A)Leather industry(B)Pharmaceutical industry(C)Fiber industry(D)Sugar industry
+Past Papers	360.	The second largest source of commercial sugar in the world is:
+(A)Potato(B)Beetroot(C)Corn(D)Rice
+Past Papers	361.	How many sections does the textile industry consist of:
+(A)Six(B)Five(C)Four(D)Three
+Past Papers	362.	...... is a synthetic fiber:
+(A)Cotton(B)Wool(C)Teflon(D)Silk
+Past Papers	363.	A synthetic fiber is:
+(A)Jyot(B)Wool(C)Ryan(D)Silk
+Past Papers	364.	Industries consume roughly the following sources of energy:
+(A)10%(B)15%(C)20%(D)25%
+Past Papers	365.	This natural fiber is:
+(A)Polyester(B)Nylon(C)Silk(D)Ryan
+Past Papers	366.	Types of synthetic fibers are:
+(A)Two(B)Four(C)Six(D)Eight
+Past Papers	367.	What is obtained by crushing sugarcane:
+(A)Juice(B)Crystal(C)Fiber(D)Milk
+Past Papers	368.	The main sources of sugar are:
+(A)Two(B)Three(C)Four(D)Five
+سپیس پروگرام کی اہمیت
+Exercise	369.	The country whose first artificial satellite went into space:
+(A)United States(B)France(C)Russia(D)Pakistan
+Exercise	370.	Pakistan's first artificial satellite is named:
+(A)1Badar 1(B)Rahbar(C)1Sputnik 1(D)Sakwa
+Additional	371.	Many are left in the space:
+(A)Space probes(B)Space Airplanes(C)Space Drums(D)Communication channels
+Additional	372.	Space probes have been sent to:
+(A)On planets(B)On moon(C)On Halley's Comet(D)All of these
+Additional	373.	When did America send its first space station into space:
+(A)1969(B)1971(C)1973(D)1947
+Additional	374.	America's first space station was named:
+(A)ISky Lab.I(B)ISputnik.I(C)11Apollo. 11(D)None of these
+Additional	375.	The size of the Hubble Space Telescope mirror was:
+(A)2 meter(B)2.1 meter(C)2.3 meter(D)2.5 meter
+Additional	376.	Name of the man who landed on the moon by Apollo 11:
+(A)Neil Armstrong(B)Edwin Aldrin(C)Both A and B(D)Giglio
+Additional	377.	A long-term branch of climate study:
+(A)Metrology(B)Climatology(C)Psychology(D)Physiology
+Past Papers	378.	Russia sends first artificial satellite into space:
+(A)25 October 1950(B)4 October 1957(C)10 December 1969(D)25 February 1963
+Past Papers	379.	Hubble Space Telescope launched into space:
+(A)1980April 24, 1980(B)1990April 24, 1990(C)195724 April 1957(D)1992April 24, 1992
+Past Papers	380.	Man stepped on the moon:
+(A)197920 July 1979(B)197620 July 1976(C)196920 July 1969(D)197020 July 1970
+Past Papers	381.	First Russian artificial satellite sent into space:
+(A)ISky Lab.I(B)Mir(C)ISputnik.I(D)Sakwa
+Past Papers	382.	Russia sent Mir Space into space:
+(A)In 1986(B)In 1987(C)In 1988(D)In 1990
+Past Papers	383.	The weight of the Hubble Space Telescope is:
+(A)13 tons(B)14tons(C)11tons(D)12tons
+Past Papers	384.	When Skylab was destroyed:
+(A)1977(B)1978(C)1979(D)1980
+Past Papers	385.	The study of weather over a short period of time is called:
+(A)Morphology(B)Zoology(C)Metrology(D)Radiology
+پاکستان کاسپیس پروگرام
+Exercise	386.	Sparco was established:
+(A)In 1956(B)In 1961(C)In 1973(D)In 1990
+Additional	387.	When did Pakistan send the first rocket leader into space:
+(A)7 June 1961(B)7 June 1962(C)17 June 1961(D)17 June 1962
+Additional	388.	How many rockets have been sent into space by Pakistan so far:
+(A)More than 100(B)More than 150(C)More than 200(D)More than 300
+Additional	389.	Pakistan has established a ground station with the help of whom:
+(A)NASA(B)Apollo(C)Sparco(D)None of these
+Additional	390.	When did Sparco set up an earth station at Rawat near Rawalpindi:
+(A)1971(B)1973(C)1980(D)1989
+Additional	391.	In July 1990, Pakistan launched which domestically developed artificial satellite into space:
+(A)11Apollo. 11(B)1Badra 1(C)Sakwa(D)ISky Lab.I
+Past Papers	392.	The name of Pakistan's first space rocket is:
+(A)Badar awal(B)Badar doum(C)Rahbar(D)Ballistic
+Past Papers	393.	Pakistan Atomic Energy Commission established SPARCO in the year:
+(A)1962(B)1961(C)1972(D)1982
+Past Papers	394.	The headquarters of Sparco is located in:
+(A)Islaambad(B)Lahore(C)Karachi(D)Multan
+Past Papers	395.	Pakistan has launched three rockets named Squaw into space:
+(A)1965(B)1973(C)1979(D)1995
+Past Papers	396.	Sparco established the ground station:
+(A)Rawat(B)Taxila(C)Lahore(D)Kohata
+Past Papers	397.	First man in space:
+(A)1960(B)1961(C)1962(D)1963
+پاکستان کا نیوکلئیر پاور پروگرام
+Exercise	398.	The total generating capacity of Pakistan's first nuclear power plant is:
+(A)10 MW(B)137 MW(C)300 MW(D)400 MW
+Past Papers	399.	The total generating capacity of Chashma Nuclear Power Plant is:
+(A)100 MW(B)200 MW(C)300 MW(D)400 MW
+Past Papers	400.	Chagai is located in the province of ......:
+(A)Punjab(B)Sindh(C)KPK(D)Balochistan
+Past Papers	401.	Pakistan Institute of Nuclear Science and Technology was established in ......:
+(A)1960(B)1962
+(C)1965(D)1966
+
+-> short questions
+ورک اور انرجی
+1	.	Define energy and what is its SI unit?
+Past Papers
+2	.	What is meant by work?
+Past Papers
+3	.	Define Joule.
+Past Papers
+انرجی کی مختلف اقسام
+4	.	Define kinetic energy and give two examples.
+Past Papers
+5	.	Write the definition of potential energy and give an example.
+Past Papers
+6	.	What is elastic potential energy?
+Past Papers
+7	.	What is meant by chemical energy?
+Past Papers
+8	.	Write the definition of thermal energy. And give examples.
+Past Papers
+9	.	What is meant by electrical energy? Explain what it means.
+Past Papers
+10	.	What is called nuclear fission?
+Past Papers
+11	.	What is nuclear fusion?
+Past Papers
+12	.	Differentiate between elastic potential energy and gravitational potential energy.
+Past Papers
+13	.	Define nuclear energy.
+Past Papers
+14	.	Explain the difference between electrical energy and nuclear energy.
+Past Papers
+15	.	Write the names of the types of energy.
+Past Papers
+16	.	Write the difference between nuclear fission and nuclear fusion.
+Past Papers
+انرجی کا باہم تبادلہ
+17	.	What is the Law of Conservation of Energy?
+Exercise
+18	.	What do you know about of energy in agriculture?
+Additional
+19	.	What is meant by mutual exchange of energy?
+Past Papers
+الیکٹریکل انرجی کا حصول
+20	.	Write the definition of unit of electrical energy.
+Exercise
+21	.	Write the names of three conventional methods and five non-conventional methods of generating electricity.
+Exercise
+22	.	What is called hydroelectric power?
+Past Papers
+23	.	Where and how is nuclear power obtained?
+Past Papers
+24	.	What is used as fuel in nuclear fission?
+Past Papers
+25	.	What is called solar power?
+Past Papers
+26	.	What is meant by solar panels?
+Past Papers
+27	.	What is Tidal Power?
+Past Papers
+28	.	What is meant by geothermal power? How is geothermal energy produced?
+Past Papers
+29	.	What is biogas called?
+Past Papers
+30	.	Write the definition of power.
+Past Papers
+31	.	What is the SI unit of power?
+Past Papers
+32	.	What does Btu mean?
+Past Papers
+33	.	What is the difference between solar power and wind power?
+Past Papers
+34	.	What is called wind power?
+Past Papers
+35	.	What is the difference between thermal power and geothermal power?
+Past Papers
+36	.	Define biomass.
+Past Papers
+37	.	What is the difference between solar energy and solar power?
+Past Papers
+38	.	How is biogas obtained from biomass?
+Past Papers
+39	.	On what principle is tidal power generated?
+Past Papers
+40	.	What is light energy?
+Past Papers
+41	.	Can tidal energy be used to generate electricity?
+Past Papers
+42	.	What is thermal power?
+Past Papers
+43	.	What is meant by solid waste?
+Past Papers
+44	.	Write the uses of traditional and modern windmills.
+Past Papers
+45	.	How can energy be generated from solid waste?
+Past Papers
+انرجی کا ماحول
+46	.	Define the environment.
+Exercise
+47	.	What is meant by the sphere of air?
+Past Papers
+48	.	What is called pollution?
+Past Papers
+49	.	Define thermal pollution.
+Past Papers
+50	.	Write three causes of thermal pollution.
+Past Papers
+51	.	How is the use of fossil fuels increasing thermal pollution?
+Past Papers
+52	.	How does nuclear energy production cause thermal pollution?
+Past Papers
+53	.	What is meant by greenhouse effect?
+Past Papers
+ماحول کی ابتری
+54	.	What is meant by environmental degradation?
+Exercise
+55	.	Give two suggestions for reducing environmental degradation.
+Past Papers
+نیو کلئیر فیول سے لاحق خطرات
+56	.	Write two proposals for safe disposal of nuclear waste.
+Exercise
+57	.	Write the effects of the failure of the cooling system of the Chernobyl (Russia) reactor in 1986.
+Past Papers
+58	.	What proposals are being considered for disposal of nuclear waste?
+Past Papers
+59	.	What is Nucleir West?
+Past Papers
+60	.	What is meant by radiation?
+Past Papers
+61	.	When and where did the Chernobyl reactor incident occur?
+Past Papers
+انرجی کا تحفظ
+62	.	Write any three suggestions for saving energy.
+Exercise
+الیکٹرک کرنٹ
+63	.	What is electric current?
+Exercise
+64	.	What is the SI unit of electric current? Also define it.
+Past Papers
+کنوینشنل کرنٹ
+65	.	What is conventional current?
+Past Papers
+66	.	What is the random motion of electrons?
+Past Papers
+67	.	What is the random motion of electrons?
+Past Papers
+پوٹینشل ڈفرینس
+68	.	Define potential difference. Write its unit.
+Exercise
+69	.	What is the SI unit of potential difference?
+Past Papers
+اوہم کا قانون
+70	.	Ohm's law shows the relationship between which quantities?
+Exercise
+رزسٹنس
+71	.	Define resistance.
+Exercise
+72	.	What causes resistance?
+Past Papers
+سرکٹ کے اجزا
+73	.	What are resistors?
+Exercise
+74	.	What is meant by capacitor charging?
+Exercise
+75	.	Where are gang capacitors used?
+Exercise
+76	.	What does a step-up transformer do?
+Exercise
+77	.	What does a step-down transformer do?
+Exercise
+78	.	Describe the structure of a simple capacitor.
+Additional
+79	.	What is the cause of capacitor discharge?
+Past Papers
+80	.	Write the names of the main components of a circuit.
+Past Papers
+81	.	What is a switch in a circuit?
+Past Papers
+82	.	What is a capacitor called?
+Past Papers
+83	.	What is meant by dielectric?
+Past Papers
+84	.	What is meant by capacitance? Also write its SI unit.
+Past Papers
+85	.	How many microfarads are in a farad?
+Past Papers
+86	.	State some uses of fixed capacitors.
+Past Papers
+87	.	What is the use of variable capacitor or gang capacitor?
+Past Papers
+88	.	What is a transformer?
+Past Papers
+89	.	What is meant by A.C voltage?
+Past Papers
+90	.	What is step down transformer called?
+Past Papers
+91	.	How many types of capacitors are there? Write the names of three of them.
+Past Papers
+92	.	Explain the difference between step-up and step-down transformers.
+Past Papers
+93	.	Define two types of capacitors.
+Past Papers
+94	.	Write two uses of capacitor.
+Past Papers
+95	.	How do you build fixed capacitors?
+Past Papers
+ڈائریکٹ اور آلٹرنینٹگ کرنٹ
+96	.	What is meant by direct current?
+Past Papers
+97	.	What is meant by alternating current?
+Past Papers
+98	.	Explain the difference between direct current and alternating current.
+Past Papers
+ڈی۔سی اور اے۔سی کا استعمال
+99	.	Name three objects that use D.C.
+Past Papers
+100	.	Name three objects that are powered by A.C.
+Past Papers
+گھر یلو الیکٹرک سپلائی
+101	.	What is the role of main switch in household circuits?
+Past Papers
+102	.	What is the role of a fuse in a circuit?
+Past Papers
+الیکٹریسٹی سپلائی کی پیمائش
+103	.	How can you find out how much electricity you have used during a certain period of time?
+Past Papers
+الیکٹریسٹی کے خطرات اور احتیاطی تدابیر
+104	.	Write three measures to prevent the dangers of electricity.
+Past Papers
+105	.	What is electric shock?
+Past Papers
+106	.	What is meant by short circuit?
+Past Papers
+107	.	Name three dangers of electricity.
+Past Papers
+108	.	What is First Aid?
+Past Papers
+آلات پیمائش
+109	.	Where is the shunt resistance placed to make the galvanometer an ammeter?
+Exercise
+110	.	What is the use of a galvanometer?
+Past Papers
+111	.	How can a galvanometer be converted into an ammeter?
+Past Papers
+112	.	What is the function of a voltmeter, how is it used in a circuit?
+Past Papers
+113	.	Define the word aerometer.
+Past Papers
+114	.	What is a multimeter used for?
+Past Papers
+115	.	Write two uses of ammeter.
+Past Papers
+116	.	What is the difference between ammeter and volt?
+Past Papers
+اینا لوگ اور ڈیجیٹل میٹرز
+117	.	What are analog meters?
+Past Papers
+سیمی کنڈکٹرز
+118	.	Write the definition of electronics.
+Past Papers
+119	.	What is meant by semiconductor?
+Past Papers
+120	.	What is doping?
+Past Papers
+121	.	How are n-type semiconductors formed?
+Past Papers
+122	.	Why does current flow in n-type semiconductors?
+Past Papers
+123	.	What are p-type semiconductors?
+Past Papers
+124	.	What is p-type junction or semiconductor diode?
+Past Papers
+125	.	What is a forward biased diode? Draw a circuit diagram.
+Past Papers
+126	.	How do forward biased diodes work?
+Past Papers
+127	.	What does a reverse biased diode do?
+Past Papers
+128	.	What is meant by hole?
+Past Papers
+129	.	Write two uses of electronics.
+Past Papers
+سیمی کنڈکٹر ڈائیوڈ کے استعمال
+130	.	Write the definition of electronics.
+Past Papers
+131	.	What is meant by semiconductor?
+Past Papers
+132	.	What is doping?
+Past Papers
+133	.	How are n-type semiconductors formed?
+Past Papers
+134	.	Why does current flow in n-type semiconductors?
+Past Papers
+135	.	What are p-type semiconductors?
+Past Papers
+136	.	What is p-type junction or semiconductor diode?
+Past Papers
+137	.	What is a forward biased diode? Draw a circuit diagram.
+Past Papers
+138	.	How do forward biased diodes work?
+Past Papers
+139	.	What does a reverse biased diode do?
+Past Papers
+140	.	What is meant by hole?
+Past Papers
+141	.	Write two uses of electronics.
+Past Papers
+ریڈیو ویوز
+142	.	Write the names of two electromagnetic waves.
+Past Papers
+143	.	Why are radio waves called carrier waves?
+Past Papers
+144	.	What are hovering satellites? Also what is meant by geostationary orbit?
+Past Papers
+145	.	How does a radio set work as a receiver?
+Past Papers
+146	.	What is the function of picture tube?
+Past Papers
+147	.	What is meant by cable TV?
+Past Papers
+148	.	How are sound waves transmitted in the air at a radio station?
+Past Papers
+149	.	Explain the working of electron guns in color TV.
+Past Papers
+150	.	What are electromagnetic waves? Give examples.
+Past Papers
+کمپیوٹر
+151	.	What is meant by computer?
+Past Papers
+152	.	What is hardware?
+Past Papers
+153	.	What is software? Give examples.
+Past Papers
+154	.	Write the names of important parts of computer.
+Past Papers
+155	.	What is meant by input devices? Also write the names of some input devices.
+Past Papers
+156	.	What is meant by output devices? Give examples.
+Past Papers
+157	.	What is the brain of a computer?
+Past Papers
+158	.	State the main functions of the control unit of a computer.
+Past Papers
+159	.	What are the temporary memory units of a computer?
+Past Papers
+160	.	What is Arithmetic and Logic Unit?
+Past Papers
+161	.	What is meant by program?
+Past Papers
+162	.	What is a Microprocessor?
+Past Papers
+163	.	What is meant by information storage devices?
+Past Papers
+164	.	Write the names of four information storage devices.
+Past Papers
+165	.	What is a floppy disk?
+Past Papers
+166	.	What is meant by programming or software engineering?
+Past Papers
+167	.	What is meant by word processing?
+Past Papers
+168	.	What is meant by graphics?
+Past Papers
+169	.	What is meant by data management?
+Past Papers
+170	.	What is a mouse in relation to a computer?
+Past Papers
+171	.	Write two uses of computer.
+Past Papers
+172	.	Computer is basically divided into how many parts? Write the names of these parts.
+Past Papers
+173	.	Write the names of different types of printers.
+Past Papers
+174	.	What is the difference between hardware and software?
+Past Papers
+175	.	What is the function of input devices?
+Past Papers
+176	.	What to do with the CPU?
+Past Papers
+177	.	What is a compact disc?
+Past Papers
+178	.	What is the difference between a compact disk and a floppy disk?
+Past Papers
+179	.	Explain the difference between hard disk and floppy disk.
+Past Papers
+180	.	Name any two computer programs.
+Past Papers
+181	.	Explain the function of video cassette.
+Past Papers
+اینالوگ/ڈیجیٹل کنورٹرز
+182	.	What is meant by digital quantities?
+Past Papers
+183	.	What does a modem do?
+Past Papers
+184	.	What does binary number system mean?
+Past Papers
+185	.	What is meant by analog quantities?
+Past Papers
+186	.	What are analog signals?
+Past Papers
+187	.	What is the difference between analog and digital converters?
+Past Papers
+انفارمیشن ٹیکنالوجی
+188	.	Name the three basic components of communication.
+Past Papers
+189	.	What is the Internet?
+Past Papers
+190	.	What is meant by protocol?
+Past Papers
+191	.	What is email?
+Past Papers
+192	.	What is meant by voicemail?
+Past Papers
+193	.	What is meant by telegraphy?
+Past Papers
+194	.	Why are mobile phones called cellular phones?
+Past Papers
+195	.	State two advantages of the Internet.
+Past Papers
+196	.	What do you know about telegraphy? Briefly explain.
+Past Papers
+197	.	How does a fax machine work?
+Past Papers
+198	.	Define email and voicemail?
+Past Papers
+199	.	What is meant by information technology?
+Past Papers
+200	.	What is meant by telecommunication?
+Past Papers
+201	.	What is the function of a telex machine?
+Past Papers
+202	.	What is the use of a fax machine?
+Past Papers
+203	.	What is communication and communication system?
+Past Papers
+سائنس اور ٹیکنالوجی کا کردار
+204	.	What do you know about Pakistan's development in agriculture sector?
+Additional
+205	.	Briefly describe the development of Pakistan in the field of medicine.
+Additional
+لیزر
+206	.	What materials are used to make lasers?
+Exercise
+207	.	What word is laser an abbreviation for?
+Past Papers
+208	.	What is a laser?
+Past Papers
+209	.	What materials are commonly used to make lasers?
+Past Papers
+210	.	In which fields is the use of lasers common?
+Past Papers
+211	.	Describe the use of lasers in ophthalmology.
+Past Papers
+212	.	What is meant by laser surgery?
+Past Papers
+213	.	What is the use of lasers in the field of dermatology?
+Past Papers
+214	.	What is the role of lasers in the field of dentistry?
+Past Papers
+215	.	What is Holography?
+Past Papers
+216	.	What is lithotropia?
+Past Papers
+217	.	Why is a laser called a light beam?
+Past Papers
+218	.	Name any three diseases that are treated with laser surgery.
+Past Papers
+219	.	What is meant by monochromatic light?
+Past Papers
+220	.	Write the name of the laser used earlier.
+Past Papers
+221	.	Write two points on the role of science and technology.
+Past Papers
+222	.	Write two properties of laser.
+Past Papers
+223	.	What are the uses of lasers in military purposes?
+Past Papers
+224	.	Write two uses of laser.
+Past Papers
+225	.	What is meant by derma-to-logy?
+Past Papers
+فائبر آپٹکس
+226	.	What are optical fibers?
+Past Papers
+227	.	What is the principle of fiber optics?
+Past Papers
+228	.	Write three advantages of optical fibers.
+Past Papers
+229	.	Are optical fibers used in telephones?
+Past Papers
+سٹیلائیٹس اور راڈار
+230	.	Where does electrical power for satellites come from?
+Exercise
+231	.	What is meant by communication satellites?
+Past Papers
+232	.	What is geostationary orbit?
+Past Papers
+233	.	Write any three advantages of communication satellite.
+Past Papers
+234	.	What is radar?
+Past Papers
+235	.	How does radar work?
+Past Papers
+236	.	State two advantages of radar.
+Past Papers
+237	.	Write two types of satellites.
+Past Papers
+238	.	What is the main function of radar?
+Past Papers
+ریڈیو ایکٹیویٹی
+239	.	Which elements produce radioactivity?
+Exercise
+240	.	Write the definition of radioactivity.
+Past Papers
+241	.	Write two/three characteristics of alpha radiations.
+Past Papers
+242	.	Write two/three properties of beta radiations.
+Past Papers
+243	.	Write two/three properties of gamma radiations.
+Past Papers
+244	.	What is meant by isotopes? Give examples.
+Past Papers
+245	.	What are radioisotopes?
+Past Papers
+246	.	Write two/three advantages of radio isotopes.
+Past Papers
+247	.	Write three measures to protect against radiations.
+Past Papers
+248	.	What is the mass and charge of beta radiation?
+Past Papers
+249	.	Write the names of two radioisotopes.
+Past Papers
+ایکس ریز
+250	.	What is meant by x-rays?
+Past Papers
+251	.	Write three characteristics of X-rays.
+Past Papers
+252	.	Write two/three advantages of X-rays.
+Past Papers
+الٹرا ساؤنڈ
+253	.	What is ultrasound?
+Past Papers
+254	.	Write two/three advantages of ultrasound.
+Past Papers
+ای۔سی۔جی
+255	.	What is meant by ECG?
+Past Papers
+ای۔ای۔جی
+256	.	What is the difference between E.C.G and E.E.G?
+Exercise
+257	.	What is meant by EEG?
+Past Papers
+258	.	Write three advantages of EEG.
+Past Papers
+ایم۔آر۔آئی
+259	.	What is meant by MRI?
+Past Papers
+260	.	Write two advantages or uses of MRI technique.
+Past Papers
+261	.	What words does MRI stand for?
+Past Papers
+سی۔ٹی سکین
+262	.	What is a CT scan?
+Past Papers
+263	.	Who invented the CT scan?
+Past Papers
+264	.	Write two/three advantages of CT scan.
+Past Papers
+انجیوگرافی
+265	.	Write the definition of angiography.
+Past Papers
+266	.	Explain angiography and MRI.
+Past Papers
+پاکستان کی اہم انڈسٹریز
+267	.	How is hardness produced in steel?
+Exercise
+268	.	What is meant by pharmaceutical products?
+Past Papers
+269	.	What is a pharmacy?
+Past Papers
+270	.	How many types of fibers are there in general?
+Past Papers
+271	.	Write the names of some synthetic fibers.
+Past Papers
+272	.	What is meant by centrifugation?
+Past Papers
+273	.	What is meant by spinning?
+Past Papers
+274	.	What is the difference between weaving and knitting?
+Past Papers
+275	.	Name four important industries of Pakistan.
+Past Papers
+276	.	What is the use of sugar cane?
+Past Papers
+277	.	How is steel obtained from iron?
+Past Papers
+278	.	What is the function of the sugar industry?
+Past Papers
+279	.	Write the uses of foams and molasses.
+Past Papers
+280	.	What are the two sources of sugar?
+Past Papers
+281	.	What is meant by natural fiber?
+Past Papers
+282	.	What is synthetic fiber?
+Past Papers
+283	.	Write the constituents found in sugarcane.
+Past Papers
+284	.	Name the three sections of cotton industry.
+Past Papers
+سپیس پروگرام کی اہمیت
+285	.	Which space probes collected samples of soil and rocks from the surface of Mars?
+Exercise
+286	.	What is meant by Hubble Telescope?
+Exercise
+287	.	Write some advantages of artificial satellites.
+Exercise
+288	.	Which country was the first to send an artificial satellite into space?
+Past Papers
+289	.	When did America send its first space station into space?
+Past Papers
+290	.	Write the names of the two American astronauts who were the first to land on the moon.
+Past Papers
+291	.	Name the astronauts who stepped on the surface of the moon on 20 July 1969.
+Past Papers
+292	.	What are the benefits of artificial satellites?
+Past Papers
+293	.	What is meant by metrology?
+Past Papers
+294	.	Define climatology.
+Past Papers
+295	.	What is the function of an artificial satellite metostat?
+Past Papers
+296	.	What are the purposes of space probes?
+Past Papers
+297	.	When did Russia launch the Mir space station?
+Past Papers
+298	.	What is Hubble and how was it sent into space?
+Past Papers
+299	.	Who first went into space?
+Past Papers
+300	.	What is a space suit?
+Past Papers
+301	.	Why do astronauts wear space suits?
+Past Papers
+302	.	Explain the importance of space probes.
+Past Papers
+پاکستان کاسپیس پروگرام
+303	.	What are the main objectives of Sparco?
+Exercise
+304	.	Sparco was established with whom and when?
+Past Papers
+305	.	Where is Sparco's headquarters located?
+Past Papers
+306	.	When did Pakistan launch its first rocket in Fuja and what was its name?
+Past Papers
+307	.	What is the advantage of a rocket named Squaw?
+Past Papers
+308	.	When did Pakistan launch its domestically developed artificial satellite into space and what was its name?
+Past Papers
+309	.	What do you know about NASA?
+Past Papers
+310	.	Where did Pakistan set up the first ground station to explore for mineral deposits?
+Past Papers
+311	.	What is meant by NASA?
+Past Papers
+312	.	What is Badar Series?
+Past Papers
+پاکستان کا نیوکلئیر پاور پروگرام
+313	.	Where are Pakistan's nuclear power plants located and what is their total generating capacity?
+Exercise
+314	.	Where is the canopy located and what is its total production capacity?
+Past Papers
+315	.	What is the total production capacity of Chashma Nuclear Power Plant and what is used as fuel?
+Past Papers
+316	.	Pakistan Atomic Energy Commission has established institutions in which areas to achieve peaceful objectives?
+Past Papers
+317	.	Pakistan Atomic Energy Commission has established which institutions to achieve peaceful objectives?
+Past Papers
+318	.	State two advantages of using nuclear technology in the field of agriculture.
+Past Papers
+319	.	Write two services of nuclear technology in the field of medicine.
+Past Papers
+320	.	When and where did Pakistan make the first nuclear explosions?
+Past Papers
+321	.	What does PINSTECH stand for and when was this institute formed?
+Past Papers
+322	.	When and with whose support was the Chashma Power Plant installed?
+Past Papers
+323	.	When did Pakistan become a nuclear power?
+Past Papers
+324	.	What are the objectives of Nuclear Institute of Food and Agriculture?
+Past Papers
+325	.	What are Penstick's services?
+Past Papers
+326	.	What does knap mean?
+Past Papers
+327	.	Write the name of the second nuclear power plant of Pakistan and its total production capacity.
+Past Papers
+328	.	What are the duties of Pakistan Welding Institute?
+Past Papers
+
+-> long questions
+ورک اور انرجی
+1.	Define work and energy. Also explain the SI units of work and energy.
+Past Papers
+انرجی کی مختلف اقسام
+2.	Explain different types of energy.
+Exercise
+3.	Define the energy. What is the difference between kinetic and potential energy? Illustrate with examples.
+Exercise
+4.	What is meant by kinetic energy? Write its formula. Also, on what factors does kinetic energy depend? Also give two examples.
+Past Papers
+5.	What is potential energy? Explain with examples.
+Past Papers
+انرجی کا باہم تبادلہ
+6.	What is the effect of mutual exchange of energy? Explain with examples.
+Exercise
+7.	Define Law of Conservation of Energy and explain with an example.
+Past Papers
+انرجی کی طلب
+8.	Why is the demand for energy increasing day by day?
+Past Papers
+الیکٹریکل انرجی کا حصول
+9.	What are the traditional methods of obtaining energy? Explain in detail.
+Exercise
+10.	What are the non-conventional methods of obtaining energy? Explain in detail.
+Exercise
+11.	In which unit is electrical energy measured?Explain.
+Exercise
+12.	Explain the working principle and method of electricity meter.
+Past Papers
+13.	How is electricity obtained from biomass and solid waste?
+Past Papers
+14.	How is natural gas measured? please explain.
+Past Papers
+15.	Define nuclear energy and nuclear power.
+Past Papers
+انرجی کا ماحول
+16.	What is called thermal pollution? How is it produced and what effect does it have on the environment?
+Exercise
+ماحول کی ابتری
+17.	What is the cause of environmental degradation? Give suggestions to reduce it.
+Past Papers
+نیو کلئیر فیول سے لاحق خطرات
+18.	Write two proposals for safe disposal of nuclear waste.
+Exercise
+19.	Write detailed notes on the dangers of nuclear fuel.
+Past Papers
+20.	What is meant by nuclear waste? How can it be disposed of?
+Past Papers
+انرجی کا تحفظ
+21.	Write notes on the following. (a) Dangers of nuclear fuel (b) Conservation of energy
+Exercise
+22.	Why is energy conservation important?
+Past Papers
+الیکٹرک کرنٹ
+23.	Define electric current. What is conventional current? Explain.
+Exercise
+کنوینشنل کرنٹ
+24.	What is meant by conventional current? Explain with example.
+Past Papers
+پوٹینشل ڈفرینس
+25.	Explain potential difference with example, and what is its SI unit?
+Exercise
+اوہم کا قانون
+26.	State Ohm's law. And write Ross's formula. Also prove it through an activity.
+Exercise
+27.	What is meant by resistance? Write its calculation formula. What is its SI unit? What is its symbol?
+Exercise
+رزسٹنس
+28.	What is a capacitor? Where are capacitors used?
+Exercise
+سرکٹ کے اجزا
+29.	What are the components of a circuit? Write a description of each.
+Exercise
+30.	Explain the types of capacitors and their uses.
+Past Papers
+31.	What is a transformer? Explain its structure, working and uses.
+Past Papers
+ڈی۔سی اور اے۔سی کا استعمال
+32.	What is the difference between direct current and alternating current? Explain the use of direct current and alternating current.
+Exercise
+گھر یلو الیکٹرک سپلائی
+33.	What is the function of fuses and switches in an electric circuit? Explain.
+Past Papers
+34.	What is the function of fuses and switches in an electric circuit? Explain.
+Past Papers
+الیکٹریسٹی سپلائی کی پیمائش
+35.	In what unit and how is the electricity consumed measured?
+Past Papers
+الیکٹریسٹی کے خطرات اور احتیاطی تدابیر
+36.	What is meant by electric explosion? Write precautions to prevent electric shock.
+Past Papers
+37.	What are the dangers of electricity and what precautions should be taken for them? Explain in detail.
+Past Papers
+آلات پیمائش
+38.	What is the structural difference between an ammeter and a voltmeter? Explain the use of both.
+Exercise
+39.	What is multimeter called? What does it do? How is a galvanometer converted to an ammeter? Explain its uses.
+Exercise
+40.	What is the use of a galvanometer? Describe its structure.
+Past Papers
+41.	What is meant by emitter? How is a galvanometer converted to an ammeter? Also how is the emitter connected in the circuit? And explain its necessary precautions.
+Past Papers
+42.	What is a voltmeter? How is a galvanometer converted to a voltmeter? Also explain how to install voltmeter in circuit and precautions.
+Past Papers
+اینا لوگ اور ڈیجیٹل میٹرز
+43.	What is meant by analog and digital meters? Explain the main difference between them. How do analog meters differ from digital meters?
+Past Papers
+سیمی کنڈکٹرز
+44.	How are n-type and p-type semiconductors made? And what do they do?
+Exercise
+45.	What is meant by diode? What is its symbol? How is a diode forward biased and reverse biased? Also make a diagram.
+Exercise
+46.	What is the difference between conductors, insulators and semiconductors? Also give their examples.
+Past Papers
+سیمی کنڈکٹر ڈائیوڈ کے استعمال
+47.	How are n-type and p-type semiconductors made? And what do they do?
+Exercise
+48.	What is meant by diode? What is its symbol? How is a diode forward biased and reverse biased? Also make a diagram.
+Exercise
+ریڈیو ویوز
+49.	What are radio waves? How do radio broadcasts reach us?
+Exercise
+50.	How does television work? Briefly explain satellite TV.
+Exercise
+51.	ow do cable TV and satellite TV work? Explain in brief.
+Past Papers
+کمپیوٹر
+52.	What are the main parts of a computer and what do they do?
+Exercise
+53.	What is meant by programming or software engineering? What do programs do?Explain it.
+Past Papers
+54.	Explain the difference between computer hardware and software.
+Past Papers
+55.	What is meant by information storage devices? How is data stored on them?
+Past Papers
+56.	Write detailed note on the complex disk.
+Past Papers
+57.	Write a note on input and output devices.
+Past Papers
+اینالوگ/ڈیجیٹل کنورٹرز
+58.	What is meant by analog and digital quantities and devices? Explain with examples.
+Past Papers
+انفارمیشن ٹیکنالوجی
+59.	Write explanatory notes on the telephone.
+Exercise
+60.	Write a note on communication system.
+Exercise
+61.	What is meant by telecommunication? Name the main sources of telecommunication and explain any two sources in brief.
+Past Papers
+62.	What is information technology? Explain its importance.
+Past Papers
+63.	What is meant by internet? Explain the website and protocol. Explain the importance of internet in modern times.
+Past Papers
+64.	What is meant by email and voicemail?Explain it. How is e-mail done? Explain its importance.
+Past Papers
+65.	Explain the function of mobile.
+Past Papers
+سائنس اور ٹیکنالوجی کا کردار
+66.	xplain the role of science and technology in the development of Pakistan.
+Past Papers
+لیزر
+67.	What is a laser? State its main uses.
+Past Papers
+فائبر آپٹکس
+68.	What is meant by optical fiber? Explain their structure, principle and working method.
+Exercise
+سٹیلائیٹس اور راڈار
+69.	Discuss in detail about satellite and its types and highlight the advantages.
+Exercise
+70.	What is meant by radar system and how it works? Write down some of its advantages.
+Exercise
+ریڈیو ایکٹیویٹی
+71.	What is radioactivity? How many types of radiations are there? Describe their characteristics.
+Exercise
+72.	What are radioisotopes? Write some of their advantages.
+Exercise
+73.	What measures should be taken to avoid the effects of radiations?
+Past Papers
+ایکس ریز
+74.	How are X-rays obtained? Write their features and advantages.
+Exercise
+75.	What is the difference between an X-ray and a CT scan? Which method may be best for treatment?
+Past Papers
+الٹرا ساؤنڈ
+76.	What is meant by ultrasound? Write down some of its advantages.
+Past Papers
+77.	State four advantages of ultrasound.
+Past Papers
+ای۔سی۔جی
+78.	Write notes on ECG.
+Past Papers
+ای۔ای۔جی
+79.	Write a detailed note on E.E.G.
+Additional
+ایم۔آر۔آئی
+80.	Write a detailed note on M.R.I.
+Additional
+سی۔ٹی سکین
+81.	Write a note on CT Scan.
+Past Papers
+انجیوگرافی
+82.	Write a note on Angiography.
+Past Papers
+پاکستان کی اہم انڈسٹریز
+83.	Explain in detail the various stages of sugar processing.
+Exercise
+84.	Write the importance and advantages of steel mill.
+Exercise
+85.	Write a note on pharmaceutical industry.
+Exercise
+86.	What are synthetic fibers? Write a note on two types of fibers in synthetic fiber industry.
+Exercise
+87.	Write a note on leather industry.
+Exercise
+88.	What do you know about the main sections of the textile industry?
+Exercise
+سپیس پروگرام کی اہمیت
+89.	Write a note on the importance of space programme. Also explain the utility of artificial satellites.
+Exercise
+90.	State some advantages of artificial satellites.
+Past Papers
+91.	Write in detail the importance of metrology and metostat.
+Past Papers
+پاکستان کاسپیس پروگرام
+92.	Write detail notes on space program of Pakistan.
+Exercise
+پاکستان کا نیوکلئیر پاور پروگرام
+93.	Write the services of Pakistan Atomic Energy Commission for peaceful acquisition of nuclear energy.
+Exercise
+94.	Write a note on Karachi Nuclear Power Plant and Chashma Nuclear Power Plant.
+Past Papers
+

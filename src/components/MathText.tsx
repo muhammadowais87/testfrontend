@@ -1,4 +1,5 @@
 import { useMemo, useState, useEffect } from "react";
+import type { ReactNode } from "react";
 
 // ─────────────────────────────────────────────────────────────────────────────
 // Superscript digit map  (used for scientific exponents)
@@ -333,6 +334,70 @@ function parseSegments(text: string): Segment[] {
   return segments.length > 0 ? segments : [{ type: "text", content: text }];
 }
 
+// ─────────────────────────────────────────────────────────────────────────────
+// Emphasis markup: **bold**, __underline__, **__bold+underline__** (order of the
+// inner/outer markers doesn't matter -- both nestings are recognized). Splits a
+// text segment into plain strings interspersed with <strong>/<u> React nodes.
+// ─────────────────────────────────────────────────────────────────────────────
+function renderEmphasis(content: string, keyPrefix: string | number): ReactNode[] {
+  const pattern = /\*\*__(.+?)__\*\*|__\*\*(.+?)\*\*__|\*\*(.+?)\*\*|__(.+?)__/g;
+  const nodes: ReactNode[] = [];
+  let lastIndex = 0;
+  let match: RegExpExecArray | null;
+  let i = 0;
+
+  while ((match = pattern.exec(content)) !== null) {
+    if (match.index > lastIndex) nodes.push(content.slice(lastIndex, match.index));
+    const key = `${keyPrefix}-${i++}`;
+    if (match[1] !== undefined || match[2] !== undefined) {
+      nodes.push(<strong key={key}><u>{match[1] ?? match[2]}</u></strong>);
+    } else if (match[3] !== undefined) {
+      nodes.push(<strong key={key}>{match[3]}</strong>);
+    } else if (match[4] !== undefined) {
+      nodes.push(<u key={key}>{match[4]}</u>);
+    }
+    lastIndex = pattern.lastIndex;
+  }
+  if (lastIndex < content.length) nodes.push(content.slice(lastIndex));
+  return nodes.length > 0 ? nodes : [content];
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// Reading-comprehension sub-question list: some Urdu paragraphs embed their
+// follow-up questions inline in the same text -- "...paragraph... سوالات:
+// (i) Q1 (ii) Q2 (iii) Q3" -- which otherwise all runs together on one line.
+// Splits into [intro, "(i) Q1", "(ii) Q2", ...] so each renders on its own line.
+// Only triggers when 2+ markers are present (a single "(i)" elsewhere in a
+// question, e.g. a math sub-part, is left alone -- a real list always has
+// multiple items).
+// ─────────────────────────────────────────────────────────────────────────────
+const SUBQ_MARKER_RE = /\((?:i{1,3}|iv|vi{0,3}|ix|x|الف|ب|ج|د|ه|ھ)\)/g;
+
+function splitSubQuestions(text: string): string[] {
+  const starts = [...text.matchAll(SUBQ_MARKER_RE)].map((m) => m.index);
+  if (starts.length < 2) return [text];
+  const lines = [text.slice(0, starts[0]).trim()];
+  for (let i = 0; i < starts.length; i++) {
+    const end = i + 1 < starts.length ? starts[i + 1] : text.length;
+    lines.push(text.slice(starts[i], end).trim());
+  }
+  return lines.filter(Boolean);
+}
+
+// Renders a "text" segment's content, applying both the sub-question line split
+// and emphasis markup. Single-line content (the common case) renders exactly as
+// before; multi-line content (the embedded sub-question-list case) renders each
+// line as its own block so they stack instead of running together.
+function renderTextContent(content: string, keyPrefix: string | number): ReactNode {
+  const lines = splitSubQuestions(content);
+  if (lines.length <= 1) return renderEmphasis(content, keyPrefix);
+  return lines.map((line, i) => (
+    <span key={`${keyPrefix}-l${i}`} className="block">
+      {renderEmphasis(line, `${keyPrefix}-l${i}`)}
+    </span>
+  ));
+}
+
 let _katex: typeof import("katex").default | null = null;
 let _katexCssLoaded = false;
 
@@ -415,7 +480,7 @@ export default function MathText({ text, className }: MathTextProps) {
   }, [hasMath, segments]);
 
   if (!hasMath) {
-    return <span className={className} dir={dir}>{cleaned}</span>;
+    return <span className={className} dir={dir}>{renderTextContent(cleaned, "r")}</span>;
   }
 
   return (
@@ -443,7 +508,7 @@ export default function MathText({ text, className }: MathTextProps) {
             />
           );
         }
-        return <span key={i}>{seg.content}</span>;
+        return <span key={i}>{renderTextContent(seg.content, i)}</span>;
       })}
     </span>
   );

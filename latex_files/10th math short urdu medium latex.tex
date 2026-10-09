@@ -1,0 +1,682 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=1.8cm]{geometry}
+\usepackage{amsmath,amssymb,tabularx,array,needspace,fontspec,cancel,tikz,graphicx}
+\setmainfont{FreeSerif}
+\newfontfamily\urdufont[Script=Arabic]{FreeSerif}
+\TeXXeTstate=1
+\newcommand{\urdu}[1]{{\urdufont\beginR #1\endR}}
+\newcommand{\lr}[1]{\beginL #1\endL}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\renewcommand{\arraystretch}{1.15}
+\newcommand{\ut}[1]{\text{{\urdufont\beginR #1\endR}}}
+\newcounter{sq}
+% \usq{text}: auto-numbered Roman numeral label on the right, Urdu (RTL) text
+\newcommand{\usq}[1]{\stepcounter{sq}\par\medskip{\urdufont\raggedleft\beginR\textbf{\lr{\Roman{sq}.}}\ #1\endR\par}}
+\newcommand{\fd}[3]{\par\smallskip\noindent\hspace*{8.5em}\begin{tikzpicture}[>=stealth,scale=0.75]
+ \draw (0,0) ellipse (0.9 and 1.5); \draw (3.5,0) ellipse (0.9 and 1.5);
+ \foreach \l [count=\i] in {#1} {\node[font=\small] (L\i) at (0,1.25-0.7*\i+0.7) {\l};}
+ \foreach \r [count=\i] in {#2} {\node[font=\small] (R\i) at (3.5,1.25-0.7*\i+0.7) {\r};}
+ #3
+ \end{tikzpicture}\par}
+% \tfig{tikz code}: geometry figure
+\newcommand{\tfig}[1]{\par\smallskip\noindent\hspace*{8.5em}{\TeXXeTstate=0 \begin{tikzpicture}[scale=0.8,font=\small]#1\end{tikzpicture}}\par}
+% \pfig{file}: figure copied (cropped) from the original paper
+\newcommand{\pfig}[2]{\par\smallskip\noindent\hspace*{8.5em}\includegraphics[width=#2]{#1}\par}
+% score-distribution table used in several questions
+\newcommand{\dist}{\par\smallskip\noindent\hspace*{8.5em}\begin{tabular}{|l|c|c|c|c|c|c|c|}\hline
+\textbf{Scores} & 24-28 & 29-33 & 34-38 & 39-43 & 44-48 & 49-53 & \textbf{Total}\\ \hline
+\textbf{No. of students} & 3 & 6 & 12 & 23 & 15 & 6 & 65\\ \hline\end{tabular}\par\smallskip\hspace*{8.5em}}
+% biology marks tables (6 columns / 5 columns as in the original)
+\newcommand{\bioA}{\par\smallskip\noindent\hspace*{8.5em}\begin{tabular}{|l|c|c|c|c|c|c|}\hline
+\textbf{Marks} & 20-24 & 25-29 & 30-34 & 35-39 & 40-44 & 45-49\\ \hline
+\textbf{No. of students} & 05 & 08 & 12 & 15 & 03 & 02\\ \hline\end{tabular}\par\smallskip\hspace*{8.5em}}
+\newcommand{\bioB}{\par\smallskip\noindent\hspace*{8.5em}\begin{tabular}{|l|c|c|c|c|c|}\hline
+\textbf{Marks} & 20-24 & 25-29 & 30-34 & 35-39 & 40-44\\ \hline
+\textbf{No. of students} & 05 & 08 & 12 & 15 & 03\\ \hline\end{tabular}\par\smallskip\hspace*{8.5em}}
+% continuation paragraph (no label) and Urdu tables
+\newcommand{\usc}[1]{\par\smallskip{\urdufont\raggedleft\beginR #1\endR\par}}
+\newcommand{\udist}{\par\smallskip\noindent\hspace*{8.5em}\begin{tabular}{|c|c|c|c|c|c|c|c|}\hline
+\urdu{\textbf{نمبرز}} & 24-28 & 29-33 & 34-38 & 39-43 & 44-48 & 49-53 & \urdu{\textbf{مجموعہ}}\\ \hline
+\urdu{\textbf{طلبہ کی تعداد}} & 3 & 6 & 12 & 23 & 15 & 6 & \textbf{65}\\ \hline\end{tabular}\par}
+\newcommand{\usqd}[2]{\usq{#1}\udist\usc{#2}}
+\newcommand{\utabA}{\par\smallskip\noindent\hspace*{8.5em}\begin{tabular}{|c|c|c|}\hline
+\urdu{\textbf{اشیا کی لاگت (ہزاروں میں)}} & \urdu{\textbf{مقدار}} & \urdu{\textbf{اشیا}}\\ \hline
+35 & 5 & \urdu{واشنگ مشین}\\ 5 & 3 & \urdu{ہیٹر}\\ 13 & 2 & \urdu{چولہا}\\ 1 & 6 & \urdu{ڈسپنسر}\\ \hline\end{tabular}\par}
+\newcommand{\utabB}{\par\smallskip\noindent\hspace*{8.5em}\begin{tabular}{|c|c|c|c|c|c|}\hline
+\urdu{\textbf{کمپیوٹر}} & \urdu{\textbf{اسلامیات}} & \urdu{\textbf{ریاضی}} & \urdu{\textbf{سائنس}} & \urdu{\textbf{انگلش}} & \urdu{\textbf{اردو}}\\ \hline
+72 & 85 & 90 & 80 & 65 & 78\\ \hline\end{tabular}\par}
+\newcommand{\utabC}{\par\smallskip\noindent\hspace*{8.5em}\begin{tabular}{|c|c|c|c|}\hline
+74 & 78 & 74 & \urdu{نمبرز \lr{(x)}}\\ \hline 5 & 3 & 4 & \urdu{اوزان \lr{(w)}}\\ \hline\end{tabular}\par}
+% biology tables (Urdu paper): label column on the right; classes in descending order left-to-right
+\newcommand{\ubioB}{\par\smallskip\noindent\hspace*{8.5em}\begin{tabular}{|c|c|c|c|c|c|}\hline
+40-44 & 35-39 & 30-34 & 25-29 & 20-24 & \urdu{\textbf{نمبرز}}\\ \hline
+03 & 15 & 12 & 08 & 05 & \urdu{\textbf{طلبہ کی تعداد}}\\ \hline\end{tabular}\par}
+\newcommand{\ubioA}{\par\smallskip\noindent\hspace*{8.5em}\begin{tabular}{|c|c|c|c|c|c|c|}\hline
+45-49 & 40-44 & 35-39 & 30-34 & 25-29 & 20-24 & \urdu{\textbf{نمبرز}}\\ \hline
+02 & 03 & 15 & 12 & 08 & 05 & \urdu{\textbf{طلبہ کی تعداد}}\\ \hline\end{tabular}\par}
+\newcommand{\usqb}[3]{\usq{45 طلبہ کے بائیولوجی کے ماہانہ ٹیسٹ میں درج ذیل نمبر حاصل کیے:}#1\usc{اوپر دی ہوئی تفصیل سے درج ذیل کے بارے میں بتائیں: #2}}
+\newcommand{\ueq}[1]{\par\smallskip\centerline{\lr{$#1$}}\par}
+
+\begin{document}
+\begin{center}
+  {\Huge\bfseries The Hope Science Academy}\\[3pt]
+  {\small Excellence is our standard not goal}\\[2pt]
+  {\small 247-E-1, (Opposite LDA School) Johar Town, Lahore. PH: 0300-8194789, 0322-4157001}
+\end{center}
+\medskip\noindent
+\begin{tabularx}{\linewidth}{|X|X|X|X|}
+\hline
+\textbf{Student Name:} & \textbf{Roll Num:} & \textbf{Class:} 10th & \textbf{Paper Code:} \\ \hline
+\textbf{Subject Name:} Mathematics. & \textbf{Time Allowed:} & \textbf{Total Marks:} 1428 & \textbf{Exam Date:} 09-Oct-2026 \\ \hline
+\multicolumn{4}{|l|}{\textbf{Exam Syllabus:} FULL BOOK} \\ \hline
+\end{tabularx}
+\bigskip
+\medskip\noindent\textbf{1$\times$604=604}\hfill{\urdufont\beginR\textbf{سوال نمبر \lr{4}۔ مندرجہ ذیل سوالات کے مختصر جوابات تحریر کریں۔}\endR}\par
+
+\usq{درج ذیل کو مختصر کریں۔ \lr{$i^{5}$}}
+\usq{درج ذیل کو مختصر کریں۔ \lr{$i^{16}$}}
+\usq{درج ذیل کو مختصر کریں۔ \lr{$(-i)^{-19}$}}
+\usq{درج ذیل کو مختصر کریں۔ \lr{$27i^{-26}$}}
+\usq{درج ذیل کو مختصر کریں۔ \lr{$i^{11}+i^{5}$}}
+\usq{درج ذیل کو مختصر کریں۔ \lr{$(i^{4}+i^{3}+i^{2}+i)^{2}$}}
+\usq{درج ذیل کو مختصر کریں۔ \lr{$\left(\dfrac{i^{8}}{i^{5}}\right)^{-5}$}}
+\usq{درج ذیل کو مختصر کریں۔ \lr{$i^{13}\times i^{29}$}}
+\usq{\lr{$i$} کی شکل میں لکھیے۔ \lr{$2+\sqrt{-4}$}}
+\usq{\lr{$i$} کی شکل میں لکھیے۔ \lr{$3-\sqrt{-7}$}}
+\usq{\lr{$i$} کی شکل میں لکھیے۔ \lr{$\dfrac{2}{5}+\dfrac{\sqrt{-16}}{5}$}}
+\usq{\lr{$i$} کی شکل میں لکھیے۔ \lr{$\sqrt{2}-\sqrt{3}$}}
+\usq{\lr{x} اور \lr{y} کی قیمت معلوم کیجیے: \lr{$(2x+5)+(y-3)i=1+2i$}}
+\usq{درج ذیل کو مختصر کریں۔ \lr{$i^{7}$}}
+\usq{درج ذیل کو مختصر کریں۔ \lr{$i^{8}$}}
+\usq{درج ذیل کو مختصر کریں۔ \lr{$i^{17}$}}
+\usq{درج ذیل کو مختصر کریں۔ \lr{$i^{-25}$}}
+\usq{اگر \lr{$(2x-1)+(y+4)i=5+7i$} ہو تو \lr{x} اور \lr{y} کی قیمت معلوم کیجیے۔}
+\usq{مختصر کیجیے اور \lr{$a+bi$} کی شکل میں لکھیے: \lr{$(2+5i)+(3-zi)$}}
+\usq{مختصر کیجیے اور \lr{$a+bi$} کی شکل میں لکھیے: \lr{$(16-3i)+(9+2i)$}}
+\usq{مختصر کیجیے اور \lr{$a+bi$} کی شکل میں لکھیے: \lr{$(9-2i)-(7-3i)$}}
+\usq{مختصر کیجیے اور \lr{$a+bi$} کی شکل میں لکھیے: \lr{$(11+9i)-(9-7i)$}}
+\usq{مختصر کیجیے اور \lr{$a+bi$} کی شکل میں لکھیے: \lr{$(3+4i)(2-3i)$}}
+\usq{مختصر کیجیے اور \lr{$a+bi$} کی شکل میں لکھیے: \lr{$(5-2i)(3-4i)$}}
+\usq{مختصر کیجیے اور \lr{$a+bi$} کی شکل میں لکھیے: \lr{$(3-5i)\div(2-4i)$}}
+\usq{مختصر کیجیے اور \lr{$a+bi$} کی شکل میں لکھیے: \lr{$(5+2i)\div(6-3i)$}}
+\usq{دیے گئے کمپلیکس عدد کا جمعی معکوس معلوم کیجیے: \lr{$3+2i$}}
+\usq{دیے گئے کمپلیکس عدد کا جمعی معکوس معلوم کیجیے: \lr{$4-3i$}}
+\usq{دیے گئے کمپلیکس عدد کا جمعی معکوس معلوم کیجیے: \lr{$5-7i$}}
+\usq{دیے گئے کمپلیکس عدد کا جمعی معکوس معلوم کیجیے: \lr{$-\dfrac{2}{3}+\dfrac{5}{4}i$}}
+\usq{دیے گئے کمپلیکس عدد کا ضربی معکوس معلوم کیجیے: \lr{$4+5i$}}
+\usq{دیے گئے کمپلیکس عدد کا ضربی معکوس معلوم کیجیے: \lr{$6+2i$}}
+\usq{دیے گئے کمپلیکس عدد کا ضربی معکوس معلوم کیجیے: \lr{$7-3i$}}
+\usq{دیے گئے کمپلیکس عدد کا ضربی معکوس معلوم کیجیے: \lr{$\sqrt{5}-4i$}}
+\usq{اگر \lr{$z_{1}=2+5i,\ z_{2}=1-3i$} اور \lr{$z_{3}=2+i$} ہو تو تصدیق کیجیے:}\ueq{z_{1}+z_{2}=z_{2}+z_{1}}
+\usq{اگر \lr{$z_{1}=2+5i,\ z_{2}=1-3i$} اور \lr{$z_{3}=2+i$} ہو تو تصدیق کیجیے:}\ueq{z_{1}z_{2}=z_{2}z_{1}}
+\usq{اگر \lr{$z_{1}=2+5i,\ z_{2}=1-3i$} اور \lr{$z_{3}=2+i$} ہو تو تصدیق کیجیے:}\ueq{z_{1}+(-z_{1})=(-z_{1})+z_{1}=0}
+\usq{\lr{$a$} اور \lr{$b$} کی قیمتیں معلوم کیجیے اگر: \lr{$(a+bi)(1+3i)=-8+11i$}}
+\usq{\lr{$(3+4i)$} اور \lr{$(5-2i)$} کو جمع کیجیے۔}
+\usq{مختصر کیجیے: \lr{$(8+2i)-(5-6i)$}}
+\usq{مختصر کیجیے: \lr{$(4-3i)-(2-5i)$}}
+\usq{مختصر کیجیے: \lr{$(3-4i)(5-6i)$}}
+\usq{اگر \lr{$z_{1}=2+3i$} اور \lr{$z_{2}=4+7i$} ہو تو \lr{$z_{1}z_{2}$} معلوم کیجیے۔}
+\usq{اگر \lr{$z=-7-4i$} ہو تو ثابت کیجیے: \lr{$z+0=z$}}
+\usq{\lr{$z=3-2i$} کے لیے ضربی ذاتی عنصر کی تصدیق کیجیے۔}
+\usq{\lr{$z=7-10i$} کا جمعی معکوس معلوم کیجیے۔}
+\usq{\lr{$4-3i$} کا ضربی معکوس معلوم کیجیے۔}
+\usq{درج ذیل کمپلیکس عدد کا ماڈیولس معلوم کیجیے: \lr{$4+3i$}}
+\usq{درج ذیل کمپلیکس عدد کا ماڈیولس معلوم کیجیے: \lr{$-5-4i$}}
+\usq{درج ذیل کمپلیکس عدد کا ماڈیولس معلوم کیجیے: \lr{$\dfrac{3}{5}-\dfrac{4}{5}i$}}
+\usq{درج ذیل کمپلیکس عدد کا ماڈیولس معلوم کیجیے: \lr{$-\sqrt{2}-\sqrt{3}\,i$}}
+\usq{اگر \lr{$z=5-2i$} ہو تو تصدیق کیجیے: \lr{$\overline{z}=z$}}
+\usq{اگر \lr{$z=5-2i$} ہو تو تصدیق کیجیے: \lr{$|z|=|\overline{z}|$}}
+\usq{اگر \lr{$z=5-2i$} ہو تو تصدیق کیجیے: \lr{$|z|=|-z|$}}
+\usq{اگر \lr{$z=5-2i$} ہو تو تصدیق کیجیے: \lr{$z\overline{z}=|z|^{2}$}}
+\usq{اگر \lr{$z=5-2i$} ہو تو تصدیق کیجیے: \lr{$|z|=|-\overline{z}|$}}
+\usq{اگر \lr{$z_{1}=2+3i,z_{2}=-1+i$} ہوں تو معلوم کیجیے: \lr{$Re(z_{1}z_{2})$}}
+\usq{اگر \lr{$z_{1}=2+3i,z_{2}=-1+i$} ہوں تو معلوم کیجیے: \lr{$Im(z_{1}z_{2})$}}
+\usq{کوئی سے دو کمپلیکس اعداد \lr{$z_{1}$} اور \lr{$z_{2}$} کے لیے \lr{$\overline{z_{1}+z_{2}}=\overline{z_{1}}+\overline{z_{2}}$}۔}
+\usq{اگر \lr{$z_{1}=4+3i,\ z_{2}=5+2i$} ہوں تو ثابت کیجیے کہ: \lr{$\overline{z_{1}+z_{2}}=\overline{z_{1}}+\overline{z_{2}}$}}
+\usq{اگر \lr{$z_{1}=4+3i,\ z_{2}=5+2i$} ہوں تو ثابت کیجیے کہ: \lr{$\overline{z_{1}+z_{2}}=\overline{z_{1}}+\overline{z_{2}}$}}
+\usq{حل کیجیے: \lr{$\overline{z}=z$}}
+\usq{اگر \lr{$z=7+3i$} ہو تو ثابت کیجیے کہ: \lr{$\overline{z}=z$}}
+\usq{حل کریں: \lr{$|z|=|\overline{z}|$}}
+\usq{اگر \lr{$z=5+4i$} ہو تو ثابت کیجیے کہ \lr{$|z|=|\overline{z}|$}}
+\usq{حل کریں: \lr{$z\overline{z}=|z|^{2}$}}
+\usq{اگر \lr{$z=5+3i$} ہو تو ثابت کیجیے کہ \lr{$z\overline{z}=|z|^{2}$}}
+\usq{درج ذیل کمپلیکس عدد کے حقیقی اور خیالاتی حصہ معلوم کیجیے: \lr{$(8-3i)^{2}$}}
+\usq{درج ذیل کمپلیکس عدد کے حقیقی اور خیالاتی حصہ معلوم کیجیے: \lr{$(5+3i)^{-1}$}}
+\usq{درج ذیل کمپلیکس عدد کے حقیقی اور خیالاتی حصہ معلوم کیجیے: \lr{$(4-5i)^{-1}$}}
+\usq{درج ذیل کمپلیکس عدد کے حقیقی اور خیالاتی حصہ معلوم کیجیے: \lr{$(4-3i)^{-2}$}}
+\usq{درج ذیل کمپلیکس عدد کے حقیقی اور خیالاتی حصہ معلوم کیجیے: \lr{$\left(\dfrac{3+2i}{4+3i}\right)^{-1}$}}
+\usq{کیا \lr{0} ایک کمپلیکس عدد ہے؟ وضاحت کیجیے۔}
+\usq{کمپلیکس عدد کی اپنی ہی کانجوگیٹ سے ضرب کا نتیجہ کیا ہوتا ہے؟}
+\usq{دو کمپلیکس اعداد کے برابر ہونے کی شرط بیان کیجیے۔}
+\usq{مختصر کیجیے: \lr{$i^{37}$}}
+\usq{مختصر کیجیے: \lr{$i^{13}\times i^{11}$}}
+\usq{مختصر کیجیے: \lr{$(-i)^{-9}$}}
+\usq{مختصر کیجیے: \lr{$(3-4i)(5-6i)$}}
+\usq{مختصر کیجیے: \lr{$(3+4i)\div(5-7i)$}}
+\usq{\lr{$z=8+9i$} کا جمعی اور ضربی معکوس معلوم کیجیے۔}
+\usq{اگر \lr{$z_{1}=5+4i,\ z_{2}=3+2i$} ہوں تو معلوم کیجیے: \lr{$z_{1}z_{2}$}}
+\usq{اگر \lr{$z_{1}=5+4i,\ z_{2}=3+2i$} ہوں تو معلوم کیجیے: \lr{$\dfrac{z_{1}}{z_{2}}$}}
+\usq{اگر \lr{$z_{1}=5+4i,\ z_{2}=3+2i$} ہوں تو معلوم کیجیے: \lr{$\overline{z_{1}}\,\overline{z_{2}}$}}
+\usq{اگر \lr{$z_{1}=5+4i,\ z_{2}=3+2i$} ہوں تو معلوم کیجیے: \lr{$|z_{1}z_{2}|$}}
+\usq{\lr{$z=(2+7i)^{-1}$} کے حقیقی اور خیالاتی حصے معلوم کیجیے۔}
+\usq{درج ذیل دو درجی مساوات کو معیاری شکل میں لکھیے: \lr{$3x-1=2x^{2}$}}
+\usq{درج ذیل دو درجی مساوات کو معیاری شکل میں لکھیے: \lr{$2x(x+1)=4(2x+3)$}}
+\usq{درج ذیل دو درجی مساوات کو معیاری شکل میں لکھیے: \lr{$2x^{2}-4x=4x+7$}}
+\usq{درج ذیل دو درجی مساوات کو معیاری شکل میں لکھیے: \lr{$4(3x-2)=9x^{2}$}}
+\usq{درج ذیل دو درجی مساوات کو معیاری شکل میں لکھیے: \lr{$2x+\dfrac{1}{x}=5-\dfrac{1}{x},\ x\neq0$}}
+\usq{درج ذیل دو درجی مساوات کو معیاری شکل میں لکھیے: \lr{$\dfrac{6x+6}{20-x}=\dfrac{1}{x},\ x\neq0,20$}}
+\usq{درج ذیل دو درجی مساوات کو تجزی کے طریقے سے حل کیجیے: \lr{$x^{2}-x-6=0$}}
+\usq{درج ذیل دو درجی مساوات کو تجزی کے طریقے سے حل کیجیے: \lr{$x^{2}+3x-28=0$}}
+\usq{درج ذیل دو درجی مساوات کو تجزی کے طریقے سے حل کیجیے: \lr{$6x^{2}+13x-5=0$}}
+\usq{درج ذیل دو درجی مساوات کو دو درجی کلیہ کی مدد سے حل کیجیے: \lr{$2x^{2}-5x+3=0$}}
+\usq{درج ذیل دو درجی مساوات کو دو درجی کلیہ کی مدد سے حل کیجیے: \lr{$2x^{2}-7x-15=0$}}
+\usq{درج ذیل دو درجی مساوات کو دو درجی کلیہ کی مدد سے حل کیجیے: \lr{$2x^{2}+7x=15$}}
+\usq{درج ذیل دو درجی مساوات کو دو درجی کلیہ کی مدد سے حل کیجیے: \lr{$x^{2}+11=7x$}}
+\usq{الجبری جملہ کی تعریف کریں۔}
+\usq{یک درجی مساوات کی تعریف کریں۔}
+\usq{خالص دو درجی مساوات کی تعریف کریں۔}
+\usq{کسری مساوات کی تعریف کریں۔}
+\usq{پیرابولا کی تعریف کریں۔}
+\usq{ٹرانسپوزیشن کی تعریف کریں۔}
+\usq{تجزی کے طریقے سے حل کیجیے: \lr{$x^{2}+\dfrac{7}{3}x=2$}}
+\usq{دو درجی کلیہ کی مدد سے حل کیجیے: \lr{$3x^{2}+7x-6=0$}}
+\usq{دو درجی مساوات کو حل کیجیے: \lr{$y=2x^{2}-x-10=0$}}
+\usq{درج ذیل یک درجی مساوات اور محدداتی محوروں کے تقاطع کے نقاط بذریعہ گراف معلوم کیجیے:}\ueq{x+y=8}
+\usq{درج ذیل یک درجی مساوات اور محدداتی محوروں کے تقاطع کے نقاط بذریعہ گراف معلوم کیجیے:}\ueq{x-y=1}
+\usq{درج ذیل یک درجی مساوات اور محدداتی محوروں کے تقاطع کے نقاط بذریعہ گراف معلوم کیجیے:}\ueq{x-2y=1}
+\usq{درج ذیل یک درجی مساوات اور محدداتی محوروں کے تقاطع کے نقاط بذریعہ گراف معلوم کیجیے:}\ueq{x-2y+2=0}
+\usq{درج ذیل یک درجی مساوات اور محدداتی محوروں کے تقاطع کے نقاط بذریعہ گراف معلوم کیجیے:}\ueq{5x-5y=1}
+\usq{\lr{$y=2x+4$} کا محدداتی محوروں کے ساتھ تقاطع کے نقاط بذریعہ گراف معلوم کیجیے۔}
+\usq{مساوات معلوم کیجیے جس کے روٹس دیے گئے ہیں: \lr{-4,9}}
+\usq{مساوات معلوم کیجیے جس کے روٹس دیے گئے ہیں: \lr{-7,5}}
+\usq{مساوات معلوم کیجیے جس کے روٹس دیے گئے ہیں: \lr{$\dfrac{-7}{5}$ ، $\dfrac{-6}{5}$}}
+\usq{مساوات معلوم کیجیے جس کے روٹس دیے گئے ہیں: \lr{$\dfrac{-3}{4}$ ، $\dfrac{7}{2}$}}
+\usq{مساوات معلوم کیجیے جس کے روٹس دیے گئے ہیں: \lr{$3+\sqrt{5}$ ، $3-\sqrt{5}$}}
+\usq{مساوات معلوم کیجیے جس کے روٹس دیے گئے ہیں: \lr{$-2+\sqrt{3}$ ، $-2-\sqrt{3}$}}
+\usq{اگر \lr{$\alpha,\beta$} مساوات \lr{$x^{2}+2x+4=0$} کے روٹس ہوں تو وہ مساوات معلوم کیجیے۔ جس کے روٹس درج ذیل ہوں: \lr{$\dfrac{1}{\alpha},\dfrac{1}{\beta}$}}
+\usq{اگر \lr{$\alpha,\beta$} مساوات \lr{$x^{2}+2x+4=0$} کے روٹس ہوں تو وہ مساوات معلوم کیجیے۔ جس کے روٹس درج ذیل ہوں: \lr{$\dfrac{\alpha}{\beta},\dfrac{\beta}{\alpha}$}}
+\usq{دو درجی مساوات \lr{$x^{2}+6x+8=0$} کے روٹس کا مجموعہ اور حاصل ضرب معلوم کیجیے۔}
+\usq{ایسی مساوات بنائیے جس کے روٹس \lr{$\dfrac{2}{3}$} اور \lr{$\dfrac{3}{4}$} ہوں۔}
+\usq{ایسی شرط معلوم کریں کہ \lr{$ax^{2}+bx+c=0$} کے روٹس مقدار میں برابر لیکن علامت میں مخالف ہوں، جہاں \lr{a} صفر کے برابر نہ ہو۔}
+\usq{درج ذیل دو درجی مساوات کے روٹس کی نوعیت کا جائزہ لیجیے: \lr{$3x^{2}-9x-2=0$}}
+\usq{درج ذیل دو درجی مساوات کے روٹس کی نوعیت کا جائزہ لیجیے: \lr{$x^{2}+6x+9=0$}}
+\usq{درج ذیل دو درجی مساوات کے روٹس کی نوعیت کا جائزہ لیجیے: \lr{$2x^{2}+4x+5=0$}}
+\usq{درج ذیل دو درجی مساوات کے روٹس کی نوعیت کا جائزہ لیجیے: \lr{$7x^{2}-6x-1=0$}}
+\usq{درج ذیل دو درجی مساوات کے روٹس کی نوعیت کا جائزہ لیجیے: \lr{$5x^{2}-2x+10=0$}}
+\usq{درج ذیل دو درجی مساوات کے روٹس کی نوعیت کا جائزہ لیجیے: \lr{$x^{2}-8x+16=0$}}
+\usq{درج ذیل دو درجی مساوات کے روٹس کی نوعیت کا جائزہ لیجیے: \lr{$3x^{2}-8x-2=0$}}
+\usq{درج ذیل دو درجی مساوات کے روٹس کی نوعیت کا جائزہ لیجیے: \lr{$4x^{2}+4x+1=0$}}
+\usq{درج ذیل دو درجی مساوات کے روٹس کی نوعیت کا جائزہ لیجیے: \lr{$2x^{2}+3x+4=0$}}
+\usq{درج ذیل دو درجی مساوات کے روٹس کی نوعیت کا جائزہ لیجیے: \lr{$x^{2}+4x+3=0$}}
+\usq{\lr{F} کو کلیہ \lr{$C^{o}=\dfrac{5}{9}(F^{o}-32)$} کا سبجیکٹ بنایئے۔}
+\usq{سادہ منافع معلوم کرنے کا کلیہ \lr{$I=PRT$} ہے: \lr{P} کو کلیے کا سبجیکٹ بنایئے۔}
+\usq{سادہ منافع معلوم کرنے کا کلیہ \lr{$I=PRT$} ہے: \lr{T} کو کلیے کا سبجیکٹ بنایئے۔}
+\usq{\lr{a} کو کلیہ \lr{$S=2a+(n-1)d$} کا سبجیکٹ بنایئے۔}
+\usq{ایک سلنڈر کا حجم \lr{$V=\pi r^{2}h$} ہے۔ \lr{h} کو کلیے کا سبجیکٹ بنایئے}
+\usq{ایک ذوزنقہ کے رقبے کا کلیہ \lr{$A=\dfrac{1}{2}h(b_{1}+b_{2})$} ہے۔ \lr{h} کو کلیے کا سبجیکٹ بنایئے۔}
+\usq{اگر \lr{$y=mx+c$} ہو تو \lr{x} کو اس مساوات کا سبجیکٹ بنایئے۔}
+\usq{مستطیل کے احاطہ \lr{(P)} کا کلیہ \lr{P=2(L+w)} ہے۔ \lr{l} کو اس کلیے کا سبجیکٹ بنایئے۔}
+\usq{ایک پیرابولا کی مساوات \lr{$y^{2}=4ax$} ہے۔ \lr{x} کو مساوات کا سبجیکٹ بنایئے۔}
+\usq{اگر \lr{$P=S-C$} ہو جہاں \lr{S} قیمت فروخت اور \lr{C} قیمت خرید ہے تو \lr{S} کو مساوات کا سبجیکٹ بنایئے۔}
+\usq{مخروط کے حجم کا کلیہ \lr{$V=\dfrac{1}{3}\pi r^{2}h$} ہے۔ \lr{h} کو کلیے کا سبجیکٹ بنایئے۔}
+\usq{ایک دائرے کا رقبہ \lr{$A=\pi r^{2}$} ہے۔ \lr{r} کو کلیے کا سبجیکٹ بنایئے۔}
+\usq{ایک کمپنی اپنے منافع \lr{P} (روپے ہزاروں میں) کو مساوات \lr{$P(x)=-5x^{2}+150x-1000$} سے ماڈل کرتی ہے، جہاں \lr{x} فی شے کی قیمت (روپے میں ہے)، وہ قیمت معلوم کریں جو سب سے زیادہ منافع دیتی ہے۔}
+\usq{ایک گیند کو \lr{$40ms^{-1}$} کی ابتدائی ولاسٹی کے ساتھ اوپر کی طرف پھینکا جاتا ہے۔ گیند کی سطح زمین سے زیادہ سے زیادہ بلندی معلوم کریں۔}
+\usq{ایک دو درجی مساوات بنائیے جس کے روٹس \lr{$6,\dfrac{3}{2}$} ہوں۔}
+\usq{درج ذیل دو درجی مساوات کے روٹس کی نوعیت کا جائزہ لیجیے: \lr{$15x^{2}+11x+2=0$}}
+\usq{درج ذیل دو درجی مساوات کے روٹس کی نوعیت کا جائزہ لیجیے: \lr{$x^{2}-x-1=0$}}
+\usq{قالب کی قطاروں اور کالموں کی تعداد لکھیے: \lr{$A=\begin{bmatrix}0&0\\0&0\end{bmatrix}$}}
+\usq{قالب کی قطاروں اور کالموں کی تعداد لکھیے: \lr{$B=\begin{bmatrix}3\\4\\7\end{bmatrix}$}}
+\usq{قالب کی قطاروں اور کالموں کی تعداد لکھیے: \lr{$C=\begin{bmatrix}8&-10&11\end{bmatrix}$}}
+\usq{قالب کی قطاروں اور کالموں کی تعداد لکھیے: \lr{$D=\begin{bmatrix}3&2&1\\1&0&3\\4&5&6\end{bmatrix}$}}
+\usq{قالب کی قطاروں اور کالموں کی تعداد لکھیے: \lr{$E=\begin{bmatrix}5&9&-2\\-3&4&5\end{bmatrix}$}}
+\usq{قالب کا مرتبہ لکھیے: \lr{$A=\begin{bmatrix}1\\0\end{bmatrix}$}}
+\usq{قالب کا مرتبہ لکھیے: \lr{$B=\begin{bmatrix}3&4\end{bmatrix}$}}
+\usq{قالب کا مرتبہ لکھیے: \lr{$C=\begin{bmatrix}3&5\\5&6\end{bmatrix}$}}
+\usq{قالب کا مرتبہ لکھیے: \lr{$D=\begin{bmatrix}0&3&4\\5&0&9\end{bmatrix}$}}
+\usq{قالب کا مرتبہ لکھیے: \lr{$E=\begin{bmatrix}0&1\\3&4\\5&6\end{bmatrix}$}}
+\usq{قالب کا مرتبہ لکھیے: \lr{$F=\begin{bmatrix}5\end{bmatrix}$}}
+\usq{کیا دیا گیا قالب مساوی ہے؟ \lr{$A=\begin{bmatrix}0&3\\4&1\end{bmatrix}$}}
+\usq{کیا دیا گیا قالب مساوی ہے؟ \lr{$B=\begin{bmatrix}9\\-7\end{bmatrix}$}}
+\usq{کیا دیا گیا قالب مساوی ہے؟ \lr{$C=\begin{bmatrix}2\times3&2-1\\2\times2&4-2\\4+4&3+0\end{bmatrix}$}}
+\usq{کیا دیا گیا قالب مساوی ہے؟ \lr{$D=\begin{bmatrix}5+4\\-8+1\end{bmatrix}$}}
+\usq{کیا دیا گیا قالب مساوی ہے؟ \lr{$E=\begin{bmatrix}6&1\\4&2\\8&3\end{bmatrix}$}}
+\usq{کیا دیا گیا قالب مساوی ہے؟ \lr{$F=\begin{bmatrix}3-3&3\\3+1&1\end{bmatrix}$}}
+\usq{اگر \lr{$\begin{bmatrix}2x+1&4\\7&5\end{bmatrix}=\begin{bmatrix}9&4\\7&y\end{bmatrix}$} ہو تو \lr{x} اور \lr{y} کی قیمتیں معلوم کیجیے۔}
+\usq{قالب کی تعریف کریں۔}
+\usq{قطاری قالب کی تعریف کریں۔}
+\usq{کالمی قالب کی تعریف کریں۔}
+\usq{قالب کے مرتبہ کی تعریف کریں۔}
+\usq{مساوی قالب کی تعریف کریں۔}
+\usq{درج ذیل قالب، وحدانی، قطاری، کالمی یا صفری قالبوں میں سے کون سا قالب ہے؟}\ueq{A=\begin{bmatrix}5&7&8\end{bmatrix}}
+\usq{درج ذیل قالب، وحدانی، قطاری، کالمی یا صفری قالبوں میں سے کون سا قالب ہے؟}\ueq{B=\begin{bmatrix}0\end{bmatrix}}
+\usq{درج ذیل قالب، وحدانی، قطاری، کالمی یا صفری قالبوں میں سے کون سا قالب ہے؟}\ueq{C=\begin{bmatrix}1&0\\0&1\end{bmatrix}}
+\usq{درج ذیل قالب، وحدانی، قطاری، کالمی یا صفری قالبوں میں سے کون سا قالب ہے؟}\ueq{D=\begin{bmatrix}0&0\\0&0\end{bmatrix}}
+\usq{درج ذیل قالب، وحدانی، قطاری، کالمی یا صفری قالبوں میں سے کون سا قالب ہے؟}\ueq{E=\begin{bmatrix}6\\0\\8\end{bmatrix}}
+\usq{درج ذیل قالب، وحدانی، قطاری، کالمی یا صفری قالبوں میں سے کون سا قالب ہے؟}\ueq{F=\begin{bmatrix}7\\1\\9\end{bmatrix}}
+\usq{دیا گیا قالب قطاری ہے یا کالمی، مربعی، مستطیلی ہے؟ \lr{$A=\begin{bmatrix}5\\3\\4\end{bmatrix}$}}
+\usq{دیا گیا قالب قطاری ہے یا کالمی، مربعی، مستطیلی ہے؟ \lr{$B=\begin{bmatrix}1&6\\4&1\end{bmatrix}$}}
+\usq{دیا گیا قالب قطاری ہے یا کالمی، مربعی، مستطیلی ہے؟ \lr{$C=\begin{bmatrix}3&5&8\\0&4&-2\end{bmatrix}$}}
+\usq{دیا گیا قالب قطاری ہے یا کالمی، مربعی، مستطیلی ہے؟ \lr{$D=\begin{bmatrix}5&-5\\2&7\end{bmatrix}$}}
+\usq{دیا گیا قالب قطاری ہے یا کالمی، مربعی، مستطیلی ہے؟ \lr{$E=\begin{bmatrix}3&2\\4&1\\5&0\end{bmatrix}$}}
+\usq{دیا گیا قالب قطاری ہے یا کالمی، مربعی، مستطیلی ہے؟ \lr{$F=\begin{bmatrix}5&-3&7\end{bmatrix}$}}
+\usq{دیا گیا قالب قطاری ہے یا کالمی، مربعی، مستطیلی ہے؟ \lr{$G=\begin{bmatrix}3&0&1\\1&3&4\\5&2&-3\end{bmatrix}$}}
+\usq{دیا گیا قالب قطاری ہے یا کالمی، مربعی، مستطیلی ہے؟ \lr{$H=\begin{bmatrix}3&5\\4&4\\5&2\end{bmatrix}$}}
+\usq{دیا گیا قالب وتری، سکیلر اور وحدانی میں سے کون سا قالب ہے؟ \lr{$A=\begin{bmatrix}1&0\\0&1\end{bmatrix}$}}
+\usq{دیا گیا قالب وتری، سکیلر اور وحدانی میں سے کون سا قالب ہے؟ \lr{$B=\begin{bmatrix}5&0\\0&5\end{bmatrix}$}}
+\usq{دیا گیا قالب وتری، سکیلر اور وحدانی میں سے کون سا قالب ہے؟ \lr{$C=\begin{bmatrix}3&0\\0&0\end{bmatrix}$}}
+\usq{دیا گیا قالب وتری، سکیلر اور وحدانی میں سے کون سا قالب ہے؟ \lr{$D=\begin{bmatrix}7&0\\0&6\end{bmatrix}$}}
+\usq{دیا گیا قالب وتری، سکیلر اور وحدانی میں سے کون سا قالب ہے؟ \lr{$E=\begin{bmatrix}2&0\\0&2\end{bmatrix}$}}
+\usq{درج ذیل قالب کا ٹرانسپوز معلوم کیجیے: \lr{$A=\begin{bmatrix}2&3\\4&5\end{bmatrix}$}}
+\usq{درج ذیل قالب کا ٹرانسپوز معلوم کیجیے: \lr{$B=\begin{bmatrix}3\\7\\6\end{bmatrix}$}}
+\usq{درج ذیل قالب کا ٹرانسپوز معلوم کیجیے: \lr{$C=\begin{bmatrix}5&-2&4\end{bmatrix}$}}
+\usq{درج ذیل قالب کا ٹرانسپوز معلوم کیجیے: \lr{$D=\begin{bmatrix}2&5\\3&6\\4&7\end{bmatrix}$}}
+\usq{درج ذیل قالب کا منفی قالب معلوم کیجیے: \lr{$A=\begin{bmatrix}-3&0\\5&6\end{bmatrix}$}}
+\usq{درج ذیل قالب کا منفی قالب معلوم کیجیے: \lr{$B=\begin{bmatrix}-3&3\\-2&2\end{bmatrix}$}}
+\usq{درج ذیل قالب کا منفی قالب معلوم کیجیے: \lr{$C=\begin{bmatrix}-9&1\\1&-7\end{bmatrix}$}}
+\usq{اگر \lr{$A=\begin{bmatrix}2&3\\4&5\end{bmatrix}$} اور \lr{$B=\begin{bmatrix}7&6\\5&8\end{bmatrix}$} ہوں تو تصدیق کیجیے کہ: \lr{$(A^{t})^{t}=A$}}
+\usq{اگر \lr{$A=\begin{bmatrix}2&3\\4&5\end{bmatrix}$} اور \lr{$B=\begin{bmatrix}7&6\\5&8\end{bmatrix}$} ہوں تو تصدیق کیجیے کہ: \lr{$(B^{t})^{t}=B$}}
+\usq{صفری یا نل قالب کی تعریف کریں۔}
+\usq{مربعی قالب کی تعریف کریں۔}
+\usq{وتری قالب کی تعریف کریں۔}
+\usq{مستطیلی قالب کی تعریف کریں۔}
+\usq{اسکیلر قالب کی تعریف کریں۔}
+\usq{واحدانی قالب کی تعریف کریں۔}
+\usq{قالب کے ٹرانسپوز کی تعریف کریں۔}
+\usq{سمیٹرک قالب کی تعریف کریں۔}
+\usq{سکیو سمیٹرک قالب کی تعریف کریں۔}
+\usq{منفی قالب کی تعریف کریں۔}
+\usq{کیا دیا گیا قالب جمع اور تفریق کے لیے قابل موافق ہے؟ \lr{$A=\begin{bmatrix}3&4\\-2&1\end{bmatrix}$}}
+\usq{کیا دیا گیا قالب جمع اور تفریق کے لیے قابل موافق ہے؟ \lr{$B=\begin{bmatrix}3\\4\end{bmatrix}$}}
+\usq{کیا دیا گیا قالب جمع اور تفریق کے لیے قابل موافق ہے؟ \lr{$C=\begin{bmatrix}5&2\end{bmatrix}$}}
+\usq{کیا دیا گیا قالب جمع اور تفریق کے لیے قابل موافق ہے؟ \lr{$D=\begin{bmatrix}1&7\\2&5\end{bmatrix}$}}
+\usq{کیا دیا گیا قالب جمع اور تفریق کے لیے قابل موافق ہے؟ \lr{$E=\begin{bmatrix}2\end{bmatrix}$}}
+\usq{کیا دیا گیا قالب جمع اور تفریق کے لیے قابل موافق ہے؟ \lr{$F=\begin{bmatrix}7&11\end{bmatrix}$}}
+\usq{کیا دیا گیا قالب جمع اور تفریق کے لیے قابل موافق ہے؟ \lr{$G=\begin{bmatrix}a\\b\end{bmatrix}$}}
+\usq{کیا دیا گیا قالب جمع اور تفریق کے لیے قابل موافق ہے؟ \lr{$H=\begin{bmatrix}3\end{bmatrix}$}}
+\usq{کیا دیا گیا قالب جمع اور تفریق کے لیے قابل موافق ہے؟ \lr{$M=\begin{bmatrix}l\\m\end{bmatrix}$}}
+\usq{اگر \lr{$X=\begin{bmatrix}1&-1\\-2&2\end{bmatrix},\ Y=\begin{bmatrix}1&2\\3&4\end{bmatrix}$} اور \lr{$Z=\begin{bmatrix}3&0\\0&-2\end{bmatrix}$} ہوں تو درج ذیل معلوم کیجیے:}\ueq{X+Y}
+\usq{اگر \lr{$X=\begin{bmatrix}1&-1\\-2&2\end{bmatrix},\ Y=\begin{bmatrix}1&2\\3&4\end{bmatrix}$} اور \lr{$Z=\begin{bmatrix}3&0\\0&-2\end{bmatrix}$} ہوں تو درج ذیل معلوم کیجیے:}\ueq{Y+7Z}
+\usq{اگر \lr{$X=\begin{bmatrix}1&-1\\-2&2\end{bmatrix},\ Y=\begin{bmatrix}1&2\\3&4\end{bmatrix}$} اور \lr{$Z=\begin{bmatrix}3&0\\0&-2\end{bmatrix}$} ہوں تو درج ذیل معلوم کیجیے:}\ueq{4X-Z}
+\usq{اگر \lr{$X=\begin{bmatrix}1&-1\\-2&2\end{bmatrix},\ Y=\begin{bmatrix}1&2\\3&4\end{bmatrix}$} اور \lr{$Z=\begin{bmatrix}3&0\\0&-2\end{bmatrix}$} ہوں تو درج ذیل معلوم کیجیے:}\ueq{X+2y+3Z}
+\usq{اگر \lr{$X=\begin{bmatrix}1&-1\\-2&2\end{bmatrix},\ Y=\begin{bmatrix}1&2\\3&4\end{bmatrix}$} اور \lr{$Z=\begin{bmatrix}3&0\\0&-2\end{bmatrix}$} ہوں تو درج ذیل معلوم کیجیے:}\ueq{X-4y+Z}
+\usq{اگر \lr{$X=\begin{bmatrix}1&-1\\-2&2\end{bmatrix},\ Y=\begin{bmatrix}1&2\\3&4\end{bmatrix}$} اور \lr{$Z=\begin{bmatrix}3&0\\0&-2\end{bmatrix}$} ہوں تو درج ذیل معلوم کیجیے:}\ueq{Z-Z}
+\usq{درج ذیل قالب کا جمعی معکوس معلوم کیجیے: \lr{$P=\begin{bmatrix}5\\-7\end{bmatrix}$}}
+\usq{درج ذیل قالب کا جمعی معکوس معلوم کیجیے: \lr{$Q=\begin{bmatrix}9&-3\end{bmatrix}$}}
+\usq{درج ذیل قالب کا جمعی معکوس معلوم کیجیے: \lr{$R=\begin{bmatrix}2&-1\\-2&3\end{bmatrix}$}}
+\usq{درج ذیل قالب کا جمعی معکوس معلوم کیجیے: \lr{$S=\begin{bmatrix}1&0\\0&1\end{bmatrix}$}}
+\usq{اگر \lr{$A=\begin{bmatrix}2&4\\1&5\end{bmatrix},\ B=\begin{bmatrix}3&4&1\\5&2&7\end{bmatrix}$} ہوں تو \lr{$A+B$} اور \lr{$B-A$} معلوم کیجیے۔ اگر ممکن ہے تو۔}
+\usq{اگر \lr{$\begin{bmatrix}x&1\\y&2\end{bmatrix}\begin{bmatrix}1&0\\3&-1\end{bmatrix}=\begin{bmatrix}7&-1\\4&-2\end{bmatrix}$} ہو تو \lr{$x$} اور \lr{$y$} کی قیمتیں معلوم کیجیے۔}
+\usq{اگر ممکن ہو تو \lr{$AB$} اور \lr{$BA$} معلوم کیجیے: \lr{$A=\begin{bmatrix}1&2\\-1&0\end{bmatrix},\ B=\begin{bmatrix}3&2\\1&-1\end{bmatrix}$}}
+\usq{اگر ممکن ہو تو \lr{$AB$} اور \lr{$BA$} معلوم کیجیے: \lr{$A=\begin{bmatrix}1&-2\end{bmatrix},\ B=\begin{bmatrix}3\\-4\end{bmatrix}$}}
+\usq{اگر ممکن ہو تو \lr{$AB$} اور \lr{$BA$} معلوم کیجیے: \lr{$A=\begin{bmatrix}4\\4\end{bmatrix},\ B=\begin{bmatrix}2&5\end{bmatrix}$}}
+\usq{اگر ممکن ہو تو \lr{$AB$} اور \lr{$BA$} معلوم کیجیے: \lr{$A=\begin{bmatrix}1&2\\-1&1\\3&0\end{bmatrix},\ B=\begin{bmatrix}-1&4&1\\2&3&1\end{bmatrix}$}}
+\usq{اگر ممکن ہو تو \lr{$AB$} اور \lr{$BA$} معلوم کیجیے: \lr{$A=\begin{bmatrix}1&2&2\\3&1&1\end{bmatrix},\ B=\begin{bmatrix}1&5\\2&4\\1&6\end{bmatrix}$}}
+\usq{اگر \lr{$\begin{bmatrix}4&a\\b&3\end{bmatrix}\begin{bmatrix}6\\6\end{bmatrix}=\begin{bmatrix}6\\3\end{bmatrix}$} ہو تو \lr{$a$} اور \lr{$b$} کی قیمتیں معلوم کیجیے۔}
+\usq{اگر \lr{$A=\begin{bmatrix}a&b\\c&d\end{bmatrix},\ B=\begin{bmatrix}l&m\\n&p\end{bmatrix}$} ہو تو \lr{$AB$} معلوم کریں اگر ممکن ہے۔}
+\usq{اگر \lr{$A=\begin{bmatrix}a&b\\c&d\end{bmatrix},\ B=\begin{bmatrix}l&m\\n&p\end{bmatrix}$} ہو تو \lr{$BA$} معلوم کریں اگر ممکن ہے۔}
+\usq{اگر \lr{$A=\begin{bmatrix}2&0\\5&-3\end{bmatrix},\ B=\begin{bmatrix}-2\\1\end{bmatrix}$} ہو تو \lr{$AB$} معلوم کریں اگر ممکن ہے۔}
+\usq{اگر \lr{$A=\begin{bmatrix}2&0\\5&-3\end{bmatrix},\ B=\begin{bmatrix}-2\\1\end{bmatrix}$} ہو تو \lr{$BA$} معلوم کریں اگر ممکن ہے۔}
+\usq{مقطع کی قیمت معلوم کیجیے: \lr{$\begin{vmatrix}10&5\\4&6\end{vmatrix}$}}
+\usq{مقطع کی قیمت معلوم کیجیے: \lr{$\begin{vmatrix}-5&8\\-3&-7\end{vmatrix}$}}
+\usq{مقطع کی قیمت معلوم کیجیے: \lr{$\begin{vmatrix}3&8\\0&2\end{vmatrix}$}}
+\usq{معلوم کیجیے کہ درج ذیل قالب نادر ہیں یا غیر نادر: \lr{$A=\begin{bmatrix}5&3\\3&2\end{bmatrix}$}}
+\usq{معلوم کیجیے کہ درج ذیل قالب نادر ہیں یا غیر نادر: \lr{$B=\begin{bmatrix}7&21\\2&6\end{bmatrix}$}}
+\usq{معلوم کیجیے کہ درج ذیل قالب نادر ہیں یا غیر نادر: \lr{$C=\begin{bmatrix}13&5\\7&3\end{bmatrix}$}}
+\usq{معلوم کیجیے کہ درج ذیل قالب نادر ہیں یا غیر نادر: \lr{$D=\begin{bmatrix}2&0\\0&0\end{bmatrix}$}}
+\usq{اگر \lr{$A=\begin{bmatrix}x&6\\5&15\end{bmatrix}$} نادر قالب ہو تو \lr{$x$} کی قیمت معلوم کریں۔}
+\usq{درج ذیل قالبوں کا ایڈجائنٹ معلوم کیجیے: \lr{$A=\begin{bmatrix}a&b\\c&d\end{bmatrix},\ B\begin{bmatrix}5&-2\\3&7\end{bmatrix},C\begin{bmatrix}-3&5\\-3&2\end{bmatrix}$}}
+\usq{درج ذیل قالبوں کا ایڈجائنٹ معلوم کیجیے: \lr{$A=\begin{bmatrix}a&b\\c&d\end{bmatrix},\ B\begin{bmatrix}5&-2\\3&7\end{bmatrix},C\begin{bmatrix}-3&5\\-3&2\end{bmatrix}$}}
+\usq{درج ذیل قالبوں کا ایڈجائنٹ معلوم کیجیے: \lr{$A=\begin{bmatrix}a&b\\c&d\end{bmatrix},\ B\begin{bmatrix}5&-2\\3&7\end{bmatrix},C\begin{bmatrix}-3&5\\-3&2\end{bmatrix}$}}
+\usq{درج ذیل قالب کا ضربی معکوس معلوم کیجیے: \lr{$\begin{bmatrix}5&0\\0&5\end{bmatrix}$}}
+\usq{درج ذیل قالب کا ضربی معکوس معلوم کیجیے: \lr{$\begin{bmatrix}-4&8\\7&2\end{bmatrix}$}}
+\usq{درج ذیل قالب کا ضربی معکوس معلوم کیجیے: \lr{$\begin{bmatrix}40&8\\5&2\end{bmatrix}$}}
+\usq{درج ذیل قالب کا ضربی معکوس معلوم کیجیے: \lr{$\begin{bmatrix}3&5\\5&-3\end{bmatrix}$}}
+\usq{درج ذیل قالب کا ضربی معکوس معلوم کیجیے: \lr{$\begin{bmatrix}10&8\\3&3\end{bmatrix}$}}
+\usq{درج ذیل قالب کا ضربی معکوس معلوم کیجیے: \lr{$\begin{bmatrix}-2&-3\\4&5\end{bmatrix}$}}
+\usq{نادر قالب کی تعریف کریں۔}
+\usq{غیر نادر قالب کی تعریف کریں۔}
+\usq{قالب کے ایڈجوائنٹ کی تعریف کریں۔}
+\usq{ضربی معکوس کی تعریف کریں۔}
+\usq{\lr{$B=\begin{bmatrix}8&2\\4&3\end{bmatrix}$} کے مقطع کی قیمت معلوم کیجیے۔}
+\usq{اگر \lr{$A=\begin{bmatrix}x&8\\5&10\end{bmatrix}$} ایک نادر قالب ہو تو \lr{$x$} کی قیمت معلوم کیجیے۔}
+\usq{اگر \lr{$A\begin{bmatrix}4&2\\7&6\end{bmatrix},\ B=\begin{bmatrix}5&5\\8&8\end{bmatrix}$} ہوں تو معلوم کریں: \lr{$(A-B)^{t}$}}
+\usq{اگر \lr{$A\begin{bmatrix}4&2\\7&6\end{bmatrix},\ B=\begin{bmatrix}5&5\\8&8\end{bmatrix}$} ہوں تو معلوم کریں: \lr{$B^{t}-A^{t}$}}
+\usq{اگر \lr{$A\begin{bmatrix}4&2\\7&6\end{bmatrix},\ B=\begin{bmatrix}5&5\\8&8\end{bmatrix}$} ہوں تو معلوم کریں: \lr{$2A+3B$}}
+\usq{اگر \lr{$A=\begin{bmatrix}7&3\\2&1\end{bmatrix},\ B=\begin{bmatrix}5&3\\2&4\end{bmatrix}$} ہوں تو معلوم کیجیے: \lr{$|B|$}}
+\usq{اگر \lr{$A=\begin{bmatrix}7&3\\2&1\end{bmatrix},\ B=\begin{bmatrix}5&3\\2&4\end{bmatrix}$} ہوں تو معلوم کیجیے: \lr{$Adj\ B$}}
+\usq{اگر \lr{$A=\begin{bmatrix}7&3\\2&1\end{bmatrix},\ B=\begin{bmatrix}5&3\\2&4\end{bmatrix}$} ہوں تو معلوم کیجیے: \lr{$A^{-1}$}}
+\usq{اگر \lr{$A=\begin{bmatrix}7&3\\2&1\end{bmatrix},\ B=\begin{bmatrix}5&3\\2&4\end{bmatrix}$} ہوں تو معلوم کیجیے: \lr{$A^{-1}A$}}
+\usq{اگر \lr{$A=\begin{bmatrix}7&3\\2&1\end{bmatrix},\ B=\begin{bmatrix}5&3\\2&4\end{bmatrix}$} ہوں تو معلوم کیجیے: \lr{$(AB)^{t}$}}
+\usq{اگر \lr{$A=\begin{bmatrix}7&3\\2&1\end{bmatrix},\ B=\begin{bmatrix}5&3\\2&4\end{bmatrix}$} ہوں تو معلوم کیجیے: \lr{$(B^{t})^{t}$}}
+\usq{اگر \lr{$f(x)=2x+5,g(x)=3x-2$} ہوں تو معلوم کیجیے: \lr{$f(x)+g(x)$}}
+\usq{اگر \lr{$f(x)=2x+5,g(x)=3x-2$} ہوں تو معلوم کیجیے: \lr{$f(x)-g(x)$}}
+\usq{اگر \lr{$f(x)=x+2,\ g(x)=2x+4$} ہوں تو معلوم کیجیے: \lr{$f(x).g(x)$}}
+\usq{اگر \lr{$f(x)=x+2,\ g(x)=2x+4$} ہوں تو معلوم کیجیے: \lr{$g(x).f(x)$}}
+\usq{اگر \lr{$f(x)=x+2,\ g(x)=2x+4$} ہوں تو معلوم کیجیے: \lr{$\dfrac{f(x)}{g(x)}$}}
+\usq{اگر \lr{$f(x)=x+2,\ g(x)=2x+4$} ہوں تو معلوم کیجیے: \lr{$\dfrac{g(x)}{f(x)}$}}
+\usq{درج ذیل \lr{f} اور \lr{g} تفاعل کے لیے معلوم کیجیے: \lr{$(fog)(x)$} جبکہ}\ueq{f(x)=2x+3\ ;\ g(x)=x^{3}}
+\usq{درج ذیل \lr{f} اور \lr{g} تفاعل کے لیے معلوم کیجیے: \lr{$(fog)(x)$} جبکہ}\ueq{f(x)=\dfrac{2}{x},x\neq0\ ;\ g(x)=2x^{2}-1}
+\usq{درج ذیل \lr{f} اور \lr{g} تفاعل کے لیے معلوم کیجیے: \lr{$(fog)(x)$} جبکہ}\ueq{f(x)=2x-1\ ;\ g(x)=\dfrac{x+1}{2}}
+\usq{درج ذیل \lr{f} اور \lr{g} تفاعل کے لیے معلوم کیجیے: \lr{$(gof)(x)$} جبکہ}\ueq{f(x)=2x+3\ ;\ g(x)=x^{3}}
+\usq{درج ذیل \lr{f} اور \lr{g} تفاعل کے لیے معلوم کیجیے: \lr{$(gof)(x)$} جبکہ}\ueq{f(x)=\dfrac{2}{x},x\neq0\ ;\ g(x)=2x^{2}-1}
+\usq{درج ذیل \lr{f} اور \lr{g} تفاعل کے لیے معلوم کیجیے: \lr{$(gof)(x)$} جبکہ}\ueq{f(x)=2x-1\ ;\ g(x)=\dfrac{x+1}{2}}
+\usq{درج ذیل \lr{f} اور \lr{g} تفاعل کے لیے معلوم کیجیے: \lr{$(fof)(x)$} جبکہ}\ueq{f(x)=2x+3\ ;\ g(x)=x^{3}}
+\usq{درج ذیل \lr{f} اور \lr{g} تفاعل کے لیے معلوم کیجیے: \lr{$(fof)(x)$} جبکہ}\ueq{f(x)=\dfrac{2}{x},x\neq0\ ;\ g(x)=2x^{2}-1}
+\usq{درج ذیل \lr{f} اور \lr{g} تفاعل کے لیے معلوم کیجیے: \lr{$(fof)(x)$} جبکہ}\ueq{f(x)=2x-1\ ;\ g(x)=\dfrac{x+1}{2}}
+\usq{درج ذیل \lr{f} اور \lr{g} تفاعل کے لیے معلوم کیجیے: \lr{$(gog)(x)$} جبکہ}\ueq{f(x)=2x+3\ ;\ g(x)=x^{3}}
+\usq{درج ذیل \lr{f} اور \lr{g} تفاعل کے لیے معلوم کیجیے: \lr{$(gog)(x)$} جبکہ}\ueq{f(x)=2x+3\ ;\ g(x)=x^{3}}
+\usq{درج ذیل \lr{f} اور \lr{g} تفاعل کے لیے معلوم کیجیے: \lr{$(gog)(x)$} جبکہ}\ueq{f(x)=\dfrac{2}{x},x\neq0\ ;\ g(x)=2x^{2}-1}
+\usq{درج ذیل \lr{f} اور \lr{g} تفاعل کے لیے معلوم کیجیے: \lr{$(gog)(x)$} جبکہ}\ueq{f(x)=2x-1\ ;\ g(x)=\dfrac{x+1}{2}}
+\usq{اگر \lr{$f(x)=3x+2$} اور \lr{$g(x)=2x+3$} ہوں تو معلوم کیجیے: \lr{$g(f(4))$}}
+\usq{اگر \lr{$f(x)=3x+2$} اور \lr{$g(x)=2x+3$} ہوں تو معلوم کیجیے: \lr{$f(f(3))$}}
+\usq{اگر \lr{$f(x)=3x+2$} اور \lr{$g(x)=2x+3$} ہوں تو معلوم کیجیے: \lr{$f(g(-2))$}}
+\usq{درج ذیل ہر ایک کا \lr{$f^{-1}(x)$} معلوم کیجیے: \lr{$f(x)=2x-3$}}
+\usq{درج ذیل ہر ایک کا \lr{$f^{-1}(x)$} معلوم کیجیے: \lr{$f(x)=4x^{3}-1$}}
+\usq{درج ذیل ہر ایک کا \lr{$f^{-1}(x)$} معلوم کیجیے: \lr{$f(x)=\sqrt{x-1},\ x\geq1$}}
+\usq{درج ذیل ہر ایک کا \lr{$f^{-1}(x)$} معلوم کیجیے: \lr{$f(x)=\dfrac{x+1}{3x-2},x\neq\dfrac{2}{3}$}}
+\usq{\lr{$f$} اور \lr{$g$} دو تفاعل ہیں جب کہ \lr{$f(x)=4x+2$} اور \lr{$g(x)=6x-18$} \lr{$f^{-1}(x)$} اور \lr{$g^{-1}(x)$} معلوم کیجیے۔}
+\usq{\lr{$f$} اور \lr{$g$} دو تفاعل ہیں جب کہ \lr{$f(x)=4x+2$} اور \lr{$g(x)=6x-18$} \lr{$f^{-1}(x)$} اور \lr{$g^{-1}(x)$} معلوم کیجیے۔}
+\usq{\lr{$f^{-1}(x)$} کی ڈومین اور رینج معلوم کیجیے: \lr{$f(x)=12x-3$}}
+\usq{\lr{$f^{-1}(x)$} کی ڈومین اور رینج معلوم کیجیے: \lr{$f(x)=\dfrac{1}{2}x+8$}}
+\usq{\lr{$f^{-1}(x)$} کی ڈومین اور رینج معلوم کیجیے: \lr{$f(x)=\dfrac{x}{1+x},x\neq-1$}}
+\usq{\lr{$f^{-1}(x)$} کی ڈومین اور رینج معلوم کیجیے: \lr{$f(x)=\sqrt{x-2},x\geq2$}}
+\usq{تفاعل کی ترکیب کی تعریف کریں۔}
+\usq{ون-ٹو-ون تفاعل کی تعریف کریں۔}
+\usq{آن ٹو تفاعل کی تعریف کریں۔}
+\usq{بائی جیکٹیو تفاعل کی تعریف کریں۔}
+\usq{معکوس تفاعل کی تعریف کریں۔}
+\usq{اگر \lr{$f(x)=x^{2}+3x+1$} ہو تو، معلوم کیجیے: \lr{$f(0)$}}
+\usq{اگر \lr{$f(x)=x^{2}+3x+1$} ہو تو، معلوم کیجیے: \lr{$f(-2)$}}
+\usq{اگر \lr{$f(x)=x^{2}+3x+1$} ہو تو، معلوم کیجیے: \lr{$f(a)$}}
+\usq{اگر \lr{$f(x)=x^{2}+3x+1$} ہو تو معلوم کیجیے: \lr{$f(x+1)$}}
+\usq{\lr{$f(x)=(x+1)^{2}$} کی ڈومین اور رینج معلوم کیجیے۔}
+\usq{فرض کریں \lr{$f(x)=2x+3$} اور \lr{$g(x)=x^{2}+x+1$} ہوں تو \lr{$f(x)$} اور \lr{$g(x)$} کو جمع کیجیے۔}
+\usq{اگر \lr{$f(x)=5x+2,\ g(x)=x^{2}-3$} ہوں تو \lr{$f(x)-g(x)$} معلوم کریں۔}
+\usq{اگر \lr{$f(x)=x+1,\ g(x)=2x-3$} ہوں تو \lr{$f(x).g(x)$} معلوم کیجیے۔}
+\usq{فرض کریں \lr{$f(x)=x^{2}-4,\ g(x)=x+2$} ہوں تو \lr{$\left(\dfrac{f}{g}\right)(x)$} معلوم کیجیے۔ جبکہ \lr{$x\neq-2$}۔}
+\usq{اگر \lr{$f(x)=2x+3,\ g(x)=x^{2}$} ہوں تو معلوم کیجیے: \lr{$(fog)(x)$}}
+\usq{اگر \lr{$f(x)=2x+3,\ g(x)=x^{2}$} ہوں تو معلوم کیجیے: \lr{$(gof)(x)$}}
+\usq{اگر \lr{$f(x)=2x+3,\ g(x)=x^{2}$} ہوں تو معلوم کیجیے: \lr{$(fof)(x)$}}
+\usq{اگر \lr{$f(x)=2x+3,\ g(x)=x^{2}$} ہوں تو معلوم کیجیے: \lr{$(gog)(x)$}}
+\usq{\lr{$f(x)=2x+3$} کا معکوس تفاعل معلوم کیجیے۔ \lr{$f^{-1}(x)$} کی ڈومین اور رینج بھی معلوم کیجیے۔}
+\usq{حل کیجیے اور حل کو عددی خط پر ظاہر کیجیے: \lr{$|x-2|=6$}}
+\usq{حل کیجیے اور حل کو عددی خط پر ظاہر کیجیے: \lr{$|2x+1|=7$}}
+\usq{حل کیجیے اور حل کو عددی خط پر ظاہر کیجیے: \lr{$|4x-9|=3$}}
+\usq{حل کیجیے اور حل کو عددی خط پر ظاہر کیجیے: \lr{$|7-2x|=1$}}
+\usq{حل کیجیے اور حل کو عددی خط پر ظاہر کیجیے: \lr{$|5x+8|\leq3$}}
+\usq{حل کیجیے اور حل کو عددی خط پر ظاہر کیجیے: \lr{$|4x-12|\leq0$}}
+\usq{حل کیجیے اور حل کو عددی خط پر ظاہر کیجیے: \lr{$|3-4x|>0$}}
+\usq{حل کیجیے اور حل کو عددی خط پر ظاہر کیجیے: \lr{$|3x-2|\leq12$}}
+\usq{حل کیجیے اور حل کو عددی خط پر ظاہر کیجیے: \lr{$|1-2x|>5$}}
+\usq{مطلق قدر یک درجی مساوات کی تعریف کریں۔}
+\usq{مطلق قدر والی یک درجی غیر مساوات کی تعریف کریں۔}
+\usq{درج ذیل تفاعل کے گراف بنائیں: \lr{$f(x)=|x|+2$}}
+\usq{درج ذیل تفاعل کے گراف بنائیں: \lr{$g(x)=|x-3|$}}
+\usq{\lr{$2|x-3|=16$} کا حل کیجیے اور عددی خط پر حل کو ظاہر کیجیے۔}
+\usq{غیر مساوات \lr{$|x-1|\geq5$} کو حل کیجیے اور حل کو عددی خط پر ظاہر کیجیے۔}
+\usq{\lr{$40|2x-5|+1>201$} کے حل کو عددی خط پر ظاہر کیجیے۔}
+\usq{اگر \lr{$f(x)=25-x^{2}$} اور \lr{$g(x)=5+x$} ہوں تو معلوم کیجیے: \lr{$f(x)+g(x)$}}
+\usq{اگر \lr{$f(x)=25-x^{2}$} اور \lr{$g(x)=5+x$} ہوں تو معلوم کیجیے: \lr{$f(x)-g(x)$}}
+\usq{اگر \lr{$f(x)=25-x^{2}$} اور \lr{$g(x)=5+x$} ہوں تو معلوم کیجیے: \lr{$f(x).g(x)$}}
+\usq{اگر \lr{$f(x)=25-x^{2}$} اور \lr{$g(x)=5+x$} ہوں تو معلوم کیجیے: \lr{$\dfrac{f(x)}{g(x)}$}}
+\usq{اگر \lr{$f(x)=25-x^{2}$} اور \lr{$g(x)=5+x$} ہوں تو معلوم کیجیے: \lr{$f(7)$}}
+\usq{اگر \lr{$f(x)=25-x^{2}$} اور \lr{$g(x)=5+x$} ہوں تو معلوم کیجیے: \lr{$g(-8)$}}
+\usq{اگر \lr{$f(x)=x^{3}$} اور \lr{$g(x)=14+2x$} ہوں تو معلوم کیجیے: \lr{$(fog)(x)$}}
+\usq{اگر \lr{$f(x)=x^{3}$} اور \lr{$g(x)=14+2x$} ہوں تو معلوم کیجیے: \lr{$(gof)(x)$}}
+\usq{اگر \lr{$f(x)=x^{3}$} اور \lr{$g(x)=14+2x$} ہوں تو معلوم کیجیے: \lr{$(fof)(x)$}}
+\usq{اگر \lr{$f(x)=x^{3}$} اور \lr{$g(x)=14+2x$} ہوں تو معلوم کیجیے: \lr{$(gog)(x)$}}
+\usq{درج ذیل ناطق جملے کو مختصر ترین شکل میں لکھیے: \lr{$\dfrac{3a^{2}-6ab}{2a^{2}b-4ab^{2}}$}}
+\usq{درج ذیل ناطق جملے کو مختصر ترین شکل میں لکھیے: \lr{$\dfrac{abx+bx^{2}}{acx+cx^{2}}$}}
+\usq{درج ذیل ناطق جملے کو مختصر ترین شکل میں لکھیے: \lr{$\dfrac{ac}{a^{2}x^{2}-ax}$}}
+\usq{درج ذیل ناطق جملے کو مختصر ترین شکل میں لکھیے: \lr{$\dfrac{15a^{2}b^{2}c}{100(a^{2}-a^{2}b)}$}}
+\usq{درج ذیل ناطق جملے کو مختصر ترین شکل میں لکھیے: \lr{$\dfrac{4x^{2}-9y^{2}}{4x^{2}+6xy}$}}
+\usq{درج ذیل ناطق جملے کو مختصر ترین شکل میں لکھیے: \lr{$\dfrac{20(x^{3}-y^{3})}{5x^{2}+5xy+5y^{2}}$}}
+\usq{درج ذیل ناطق جملے کو مختصر ترین شکل میں لکھیے: \lr{$\dfrac{x(2a^{2}-3ax)}{a(4a^{2}x-9x^{3})}$}}
+\usq{درج ذیل ناطق جملے کو مختصر ترین شکل میں لکھیے: \lr{$\dfrac{x^{2}-5x}{x^{2}-4x-5}$}}
+\usq{درج ذیل ناطق جملے کو مختصر ترین شکل میں لکھیے: \lr{$\dfrac{3x^{2}+6x}{x^{2}+4x+4}$}}
+\usq{درج ذیل ناطق جملے کو مختصر ترین شکل میں لکھیے: \lr{$\dfrac{x^{2}+xy-2y^{2}}{x^{3}-y^{3}}$}}
+\usq{درج ذیل ناطق جملے کو مختصر ترین شکل میں لکھیے: \lr{$\dfrac{2x^{2}+17x+21}{3x^{2}+26x+35}$}}
+\usq{الجبری کسر کی تعریف کریں۔}
+\usq{ناطق جملہ کی تعریف کریں۔}
+\usq{\lr{$\dfrac{24a^{3}c^{2}x^{2}}{18a^{3}x^{2}-12a^{2}x^{3}}$} کو مختصر ترین شکل میں لکھیے۔}
+\usq{\lr{$\dfrac{6x^{2}-8xy}{9xy-12y^{2}}$} کو مختصر ترین شکل میں لکھیے۔}
+\usq{مختصر کیجیے: \lr{$\dfrac{3}{x-y}+\dfrac{1}{y-x}$}}
+\usq{مختصر کیجیے: \lr{$\dfrac{x^{3}}{x-y}+\dfrac{y^{3}}{y-x}$}}
+\usq{الجبری مہارت کی تعریف کریں۔}
+\usq{مختصر کیجیے: \lr{$\dfrac{24lm}{5l+10m}\times\dfrac{5l^{2}-20m^{2}}{16mn}$}}
+\usq{مختصر کیجیے: \lr{$\dfrac{x^{2}-3x+2}{x^{2}+3x-4}\times\dfrac{2x^{2}+8x}{3x+6}$}}
+\usq{مختصر کیجیے: \lr{$\dfrac{x^{3}-8}{x^{2}-4}\div\dfrac{x^{2}+2x+4}{x^{2}+4x+4}$}}
+\usq{مختصر کیجیے: \lr{$\dfrac{(a^{2}+ab)^{2}}{(a^{2}-ab)^{2}}\div\left(\dfrac{a+b}{a-b}\right)^{2}$}}
+\usq{مختصر کیجیے: \lr{$\dfrac{x^{2}-5x+6}{x^{2}-25}\times\dfrac{x^{2}+5x}{2x-6}$}}
+\usq{مختصر کیجیے: \lr{$\dfrac{3a^{2}-6ab}{6ab}\times\dfrac{10b^{2}}{4ab-8b^{2}}$}}
+\usq{مختصر کیجیے: \lr{$\dfrac{2a^{2}-2c^{2}}{15a^{2}c^{2}}\div\dfrac{3a+3c}{5ac}$}}
+\usq{قوت نمائی مساوات کی تعریف کریں۔}
+\usq{معکوس مساوات کی تعریف کریں۔}
+\usq{مختصر ترین شکل میں لکھیے: \lr{$\dfrac{x^{2}-7x+12}{x^{2}-6x+9}$}}
+\usq{مختصر ترین شکل میں لکھیے: \lr{$\dfrac{x^{2}+3x-18}{7x-21}$}}
+\usq{ربع بنائیے جب میں دیا گیا ہر ایک نقطہ واقع ہے: \lr{(4،3)}}
+\usq{ربع بنائیے جس میں دیا گیا ہر ایک نقطہ واقع ہے: \lr{(5،-4)}}
+\usq{ربع بنائیے جب میں دیا گیا ہر ایک نقطہ واقع ہے: \lr{(-6،2)}}
+\usq{ربع بنائیے جس میں دیا گیا ہر نقطہ واقع ہے: \lr{(-4،-4)}}
+\usq{محدداتی مستوی پر درج ذیل نقاط کو مرتسم کیجیے: \lr{A(3,-3)}}
+\usq{محدواتی مستوی پر درج ذیل نقاط کو مرتسم کیجیے: \lr{B(-3,3)}}
+\usq{محدارتی مستوی پر درج ذیل نقاط کو مرتسم کیجیے: \lr{C(5,7)}}
+\usq{محدداتی مستوی پر درج ذیل نقاط کو مرتسم کیجیے: \lr{D(-2,-4)}}
+\usq{درج ذیل ویکٹر کی ٹیل اور ہیڈ کے نام بتایئے:}
+\usq{درج ذیل ویکٹر کی ٹیل اور ہیڈ کے نام بتایئے۔}
+\usq{درج ذیل ویکٹر کی ٹیل اور ہیڈ کے نام بتایئے۔}
+\usq{درج ذیل ویکٹر کی ٹیل اور ہیڈ کے نام بتایئے۔}
+\usq{درج ذیل ویکٹر کی ٹیل اور ہیڈ کے نام بتایئے۔}
+\usq{درج ذیل ویکٹر کی ٹیل اور ہیڈ کے نام بتایئے۔}
+\usq{ویکٹر \lr{AB} کو \lr{$x\underline{i}+y\underline{j}$} کی شکل میں لکھیے: \lr{$A(1,-7),\ B(-2,4)$}}
+\usq{ویکٹر \lr{AB} کو \lr{$x\underline{i}+y\underline{j}$} کی شکل میں لکھیے: \lr{$A(8,9),\ B(12,3)$}}
+\usq{\lr{$\underline{a}$} کی عددی قیمت معلوم کیجیے: \lr{$\underline{a}=-3\underline{i}+2\underline{j}$}}
+\usq{\lr{$\underline{a}$} کی عددی قیمت معلوم کیجیے: \lr{$\underline{a}=4\underline{i}-3\underline{j}$}}
+\usq{\lr{$\underline{a}$} کی عددی قیمت معلوم کیجیے: \lr{$\underline{a}=\dfrac{1}{2}\underline{i}+\dfrac{3}{2}\underline{j}$}}
+\usq{دیے گئے ویکٹر کی سمت میں یونٹ ویکٹر معلوم کیجیے: \lr{$\underline{a}=-4\underline{i}+5\underline{j}$}}
+\usq{دیے گئے ویکٹر کی سمت میں یونٹ ویکٹر معلوم کیجیے: \lr{$\underline{a}=6\underline{i}+8\underline{j}$}}
+\usq{دیے گئے ویکٹر کی سمت میں یونٹ ویکٹر معلوم کیجیے: \lr{$\underline{a}=\dfrac{1}{\sqrt{6}}\underline{i}+\dfrac{1}{\sqrt{6}}\underline{j}$}}
+\usq{دیے گئے ویکٹر کی سمت میں یونٹ ویکٹر معلوم کیجیے: \lr{$\underline{a}=\dfrac{1}{2}\underline{i}-\dfrac{3}{4}\underline{j}$}}
+\usq{کیا دیا گیا ویکٹر متوازی ہے؟ \lr{$\underline{a}=6\underline{i}+\underline{j},\ \underline{b}=12\underline{i}+2\underline{j}$}}
+\usq{کیا دیا گیا ویکٹر متوازی ہے؟ \lr{$\underline{a}=-2\underline{i}+3\underline{j},\ \underline{b}=6\underline{i}-9\underline{j}$}}
+\usq{کیا دیا گیا ویکٹر متوازی ہے؟ \lr{$\underline{a}=5\underline{i}-4\underline{j},\ \underline{b}=6\underline{i}-3\underline{j}$}}
+\usq{کیا دیا گیا ویکٹر متوازی ہے؟ \lr{$\underline{a}=3\underline{i}-7\underline{j},\ \underline{b}=6\underline{i}-14\underline{j}$}}
+\usq{ایک ایسا ویکٹر معلوم کیجیے جو \lr{$3\underline{i}-2\underline{j}$} سے تین گنا بڑا ہو، لیکن اس کی سمت مخالف ہو۔}
+\usq{مبداء کی تعریف کریں۔}
+\usq{سکیلر مقدار کی تعریف کریں۔}
+\usq{ویکٹر مقدار کی تعریف کریں۔}
+\usq{منفی ویکٹر کی تعریف کریں۔}
+\usq{مساوی ویکٹر کی تعریف کریں۔}
+\usq{صفر ویکٹر کی تعریف کریں۔}
+\usq{پوزیشن ویکٹر کی تعریف کریں۔}
+\usq{متوازی ویکٹر کی تعریف کریں۔}
+\usq{یونٹ ویکٹر کی تعریف کریں۔}
+\usq{دی گئی شکل سے درج ذیل نقاط کے محدودات لکھیے: (تصویر)}
+\usq{اگر \lr{$P(2,4)$} اور \lr{$Q(-5,3)$} ہوں تو معلوم کیجیے: (ایکویشن)}
+\usq{اگر \lr{$P(2,4)$} اور \lr{$Q(-5,3)$} ہوں تو معلوم کیجیے: (ایکویشن)}
+\usq{اگر ایکویشن اور ایکویشن ہوں تو درج ذیل ویکٹر معلوم کیجیے: \lr{$\underline{a}+\underline{b}$}}
+\usq{اگر ایکویشن اور ایکویشن ہوں تو درج ذیل ویکٹر معلوم کیجیے: \lr{$\underline{a}+3\underline{b}$}}
+\usq{اگر ایکویشن اور ایکویشن ہوں تو درج ذیل ویکٹر معلوم کیجیے: \lr{$3\underline{a}+\dfrac{1}{2}\underline{b}$}}
+\usq{اگر ایکویشن اور ایکویشن ہوں تو درج ذیل ویکٹر معلوم کیجیے: \lr{$\underline{b}-\underline{a}$}}
+\usq{اگر ایکویشن اور ایکویشن ہوں تو درج ذیل ویکٹر معلوم کیجیے: \lr{$4\underline{b}-5\underline{a}$}}
+\usq{اگر ایکویشن اور ایکویشن ہوں تو درج ذیل ویکٹر معلوم کیجیے: \lr{$\dfrac{3}{2}\underline{a}-\underline{b}$}}
+\usq{اگر \lr{$\underline{a}=6\underline{i}-\underline{j},\ \underline{b}=\underline{i}+5\underline{j}$} اور \lr{$\underline{c}=3\underline{i}+5\underline{j}$} ہوں تو درج ذیل ویکٹر کی مقدار معلوم کریں۔ \lr{$\underline{b}-\underline{c}$}}
+\usq{اگر \lr{$\underline{a}=6\underline{i}-\underline{j},\ \underline{b}=\underline{i}+5\underline{j}$} اور \lr{$\underline{c}=3\underline{i}+5\underline{j}$} ہوں تو درج ذیل ویکٹر کی مقدار معلوم کریں۔ \lr{$\underline{a}-2\underline{b}+\underline{c}$}}
+\usq{اگر \lr{$\underline{a}=6\underline{i}-\underline{j},\ \underline{b}=\underline{i}+5\underline{j}$} اور \lr{$\underline{c}=3\underline{i}+5\underline{j}$} ہوں تو درج ذیل ویکٹر کی مقدار معلوم کریں۔ \lr{$\underline{c}-\underline{b}-\underline{a}$}}
+\usq{درج ذیل مساوات میں \lr{$x$} اور \lr{$y$} کی قیمتیں معلوم کریں: \lr{$(x\underline{i}+y\underline{j})+(2\underline{i}+3\underline{j})=7\underline{i}+6\underline{j}$}}
+\usq{درج ذیل مساوات میں \lr{$x$} اور \lr{$y$} کی قیمتیں معلوم کریں: \lr{$(x\underline{i}-5\underline{j})+(3\underline{i}+5\underline{j})=8\underline{i}+y\underline{j}$}}
+\usq{درج ذیل مساوات میں \lr{$x$} اور \lr{$y$} کی قیمتیں معلوم کریں: \lr{$(y\underline{i}+3\underline{j})+(-5\underline{i}+2x\underline{j})=9\underline{i}+7\underline{j}$}}
+\usq{اگر \lr{$\underline{a}=-2\underline{i}+7\underline{j}$} اور \lr{$\underline{b}=3\underline{i}-5\underline{j}$} ہوں تو \lr{$\underline{a}+5\underline{b}$} کے اجزاء معلوم کیجیے۔}
+\usq{جمع کا متوازی الاضلاع قانونِ کی تعریف کریں۔}
+\usq{ہم مستوی ویکٹرز کی تعریف کریں۔}
+\usq{اگر \lr{$\underline{a}=2\underline{i}+3\underline{j},\ \underline{b}=4\underline{i}-6\underline{j}$} ہوں تو \lr{$\underline{a}+\underline{b}$} معلوم کیجیے۔}
+\usq{اگر \lr{$\underline{a}=6\underline{i}+13\underline{j}$} اور \lr{$\underline{b}=-4\underline{i}+7\underline{j}$} ہوں تو \lr{$\underline{a}-\underline{b}$} معلوم کیجیے۔}
+\usq{اگر \lr{$\underline{a}=2\underline{i}-3\underline{j}$} اور \lr{$\underline{b}=3\underline{i}+4\underline{j}$} ہوں تو \lr{$3\underline{a}+4\underline{b}$} کے ویکٹرز کے اجزاء معلوم کیجیے۔}
+\usq{ایک کار ولاسٹی ویکٹر \lr{$\underline{v}=30\underline{j}$} کے ساتھ ایک لوپ میں داخل ہوتی ہے اور ولاسٹی \lr{$\underline{v}'=30\underline{i}$} کے ساتھ باہر نکلیتی ہے۔ بتایئے ولاسٹی ویکٹر میں کیا تبدیلی آئی؟}
+\usq{ٹرانسلیشن ویکٹر کی تعریف کریں۔}
+\usq{متساوی الساقین مثلث کی تعریف کریں۔}
+\usq{مثلث \lr{ABC} کا رقبہ معلوم کیجیے: \lr{$a=7\ cm,\ b=8\ cm,\ \gamma=38^{o}$}}
+\usq{مثلث \lr{ABC} کا رقبہ معلوم کیجیے: \lr{$a=11\ cm,\ c=14\ cm,\ \beta=51^{o}$}}
+\usq{مثلث \lr{ABC} کا رقبہ معلوم کیجیے: \lr{$b=3\ cm,\ c=9\ cm,\ \alpha=78^{o}$}}
+\usq{مثلث \lr{ABC} کا رقبہ معلوم کیجیے: \lr{$a=10\ cm,\ \alpha=62^{o},\ \beta=69^{o}$}}
+\usq{مثلث \lr{ABC} کا رقبہ معلوم کیجیے: \lr{$c=4\ cm,\ \beta=36^{o},\ \gamma=80^{o}$}}
+\usq{مثلث \lr{ABC} کا رقبہ معلوم کیجیے: \lr{$c=6.6\ cm,\ \alpha=23^{o},\ \gamma=89^{o}$}}
+\usq{مثلث \lr{ABC} کا رقبہ معلوم کیجیے: \lr{$a=5.3\ cm,\ b=4.7\ cm,\ c=8.2\ cm$}}
+\usq{مثلث \lr{ABC} کا رقبہ معلوم کیجیے: }\ueq{a=6.12\ cm,\ b=8.34\ cm,\ c=7.12\ cm}
+\usq{غیر قائمۃ الزاویہ مثلث کی تعریف کریں۔}
+\usq{سائن قانون کیا ہے؟}
+\usq{کوسائن قانون کیا ہے؟}
+\usq{مثلث \lr{ABC} کا رقبہ معلوم کیجیے جس میں \lr{$a=4.2,\ b=3.2$} اور \lr{$\gamma=70^{o}$} ہو۔}
+\usq{\lr{$\triangle ABC$} کا رقبہ معلوم کیجیے جس میں \lr{$a=4\ cm,\ b=3\ cm,\ c=5\ cm$} ہے۔}
+\usq{مثلث \lr{ABC} کا رقبہ معلوم کیجیے جس میں \lr{$\alpha=35^{o},\ \beta=65^{o},\ a=2cm$} ہے۔}
+\usq{ایک کشتی \lr{80} میٹر چوڑے دریا کو روانی سے \lr{$60^{o}$} کے زاویہ پر عبور کرتی ہے۔ کشتی حقیقت میں کتنا فاصلہ طے کرتی ہے؟}
+\usq{ایک ساؤنڈ لیب میں دو مائیکروفون \lr{c=3m} کے فاصلے پر رکھے گئے ہیں۔ ایک آواز کے سورس سے ایک مائیکروفون \lr{a=2m} اور دوسرے سے \lr{b=2.5m} کے فاصلے پر ہے۔ ان آواز کے راستوں \lr{a} اور \lr{b} کے درمیان زاویہ معلوم کیجیے۔}
+\usq{ایک ہوائی جہاز \lr{$12^{o}$} کے زاویہ صعود پر پرواز شروع کرتا ہے اور اس راستے پر \lr{2000} میٹر کا فاصلہ طے کرتا ہے۔ یہ فاصلہ طے کرنے کے بعد ہوائی جہاز کتنی بلندی پر ہے؟}
+\usq{درج ذیل میں نقطہ \lr{P} کا بیرنگ معلوم کریں:}\pfig{f461.png}{4.5cm}
+\usq{درج ذیل میں نقطہ \lr{P} کا بیرنگ معلوم کیجیے۔}\pfig{f462.png}{4.5cm}
+\usq{درج ذیل میں نقطہ \lr{P} کا بیرنگ معلوم کیجیے۔}\pfig{f463.png}{4.5cm}
+\usq{درج ذیل میں نقطہ \lr{P} کا بیرنگ معلوم کیجیے۔}\pfig{f464.png}{4.5cm}
+\usq{\lr{$\triangle ABC$} کا رقبہ معلوم کیجیے جس میں: }\ueq{a=4\ cm,\ b=6\ cm,\ c=8\ cm}
+\usq{\lr{$\triangle ABC$} کا رقبہ معلوم کیجیے جس میں: }\ueq{b=2.1\ cm,\ c=5\ cm,\ \gamma=45^{o}}
+\usq{\lr{$\triangle ABC$} کا رقبہ معلوم کیجیے جس میں: }\ueq{c=3.1\ cm,\ \gamma=44^{o},\ \alpha=36^{o}}
+\usq{ایک وتر جس کی لمبائی \lr{8} سینٹی میٹر ہے اور وہ مرکز سے \lr{3cm} کے فاصلے پر ہے۔ دائرہ کا رداس معلوم کریں۔}
+\usq{دی گئی شکل میں اکائیاں \lr{$m\overline{CD}=121$} اور اکائیاں \lr{$m\overline{BC}=3x$} ہیں۔ \lr{x} کی قیمت معلوم کیجیے۔}\pfig{uf469.png}{4.2cm}
+\usq{دائرے کی تعریف کریں۔}
+\usq{محیط کی تعریف کریں۔}
+\usq{رداسی قطعہ کی تعریف کریں۔}
+\usq{قطر کی تعریف کریں۔}
+\usq{وتر کی تعریف کریں۔}
+\usq{نصف دائرہ کی تعریف کریں۔}
+\usq{قوس کبیرہ کی تعریف کریں۔}
+\usq{قوس صغیرہ کی تعریف کریں۔}
+\usq{قطعہ کی تعریف کریں۔}
+\usq{سیکٹر کی تعریف کریں۔}
+\usq{زاویہ کی تعریف کریں۔}
+\usq{مرکزی زاویہ کی تعریف کریں۔}
+\usq{قاطع خط کی تعریف کریں۔}
+\usq{قوس کی تعریف کریں۔}
+\usq{ثابت کریں کہ نقاط \lr{$A(1,1),\ B(4,2),\ C(3,5)$} میں سے ایک منفرد دائرہ گزر سکتا ہے۔}
+\usq{\lr{8} میٹر رداس کے دائروی فوارے میں ایک پائپ \lr{AB} پر لگا ہوا ہے۔ اگر \lr{$m\overline{AB}=12\ m$} ہو تو \lr{O} سے وتر \lr{AB} کا فاصلہ معلوم کریں۔}
+\usq{ایک دائروی کھیل کے میدان میں دو برابر رسیاں (وتر) باندھی گئی ہیں۔ ایک رسی مرکز سے \lr{8} میٹر کے فاصلے پر ہے۔ دوسری رسی کو کہاں رکھا جانا چاہیے؟}
+\usq{مرکز والے ایک دائرے میں \lr{$m\overline{NP}=12\ cm$} اور \lr{$m\overline{EF}=m\overline{FM}$} ہے۔ \lr{DE} کی لمبائی معلوم کیجیے۔}
+\usq{ایک گول میز کے ڈئزاین میں دو آرائش اشیا متناسب طور پر مرکز سے \lr{4cm} کے فاصلے پر رکھی گئی ہیں۔}
+\usq{دی گئی شکل میں اگر \lr{$m\overline{PQ}=m\overline{QR}=m\overline{RS}=m\overline{ST}$} اور \lr{$m\angle POT=70^{o}$} ہو تو \lr{x} کی قیمت معلوم کیجیے۔}\pfig{uf489.png}{4.2cm}
+\usq{دی گئی شکل میں \lr{x} اور \lr{y} کی قیمتیں معلوم کیجیے۔}\pfig{uf490.png}{4.2cm}
+\usq{دی گئی شکل میں \lr{x} اور \lr{y} کی قیمتیں معلوم کیجیے جب کہ \lr{$m\widehat{AB}=m\widehat{BD}$}۔}\pfig{uf491.png}{4.5cm}
+\usq{دی گئی شکل میں \lr{x} کی قیمت معلوم کیجیے۔}\pfig{uf492.png}{4.2cm}
+\usq{دی گئی شکل میں \lr{$x$} کی قیمت معلوم کیجیے۔}\pfig{uf493.png}{3.8cm}
+\usq{دی گئی شکل میں اگر \lr{$\overline{PT}$} دائرے کا قطر ہے اگر \lr{$m\overline{PQ}=m\overline{QR}=m\overline{RS}=m\overline{ST}$} ہو تو \lr{a} کی قیمت معلوم کیجیے۔}\pfig{uf494.png}{3.8cm}
+\usq{ایک وتر کی لمبائی \lr{6cm} ہے جو مرکز سے \lr{4cm} کے فاصلے پر ہے۔ دائرے کا رداس معلوم کیجیے:}
+\usq{\lr{x} کی قیمت معلوم کیجیے:}\pfig{uf496.png}{3.8cm}
+\usq{زاویہ \lr{ABC} معلوم کیجیے:}\pfig{uf497.png}{3.8cm}
+\usq{\lr{D,E} اور \lr{F} مرکز \lr{O} کے ساتھ ایک دائرے کے محیط پر نقاط ہیں اور \lr{$m\angle DOF=130^{o}$}، \lr{$m\angle DEF$} معلوم کریں۔}
+\usq{\lr{X,Y} اور \lr{Z} مرکز \lr{O} والے دائرہ کے محیط پر نقاط ہیں اور \lr{$m\angle XYZ=85^{o}$} ہے۔ \lr{x} معلوم کیجیے۔}
+\usq{دو دائروں کے رداس \lr{4cm} اور \lr{6cm} ہیں۔ اگر وہ بیرونی طور پر مس کرتے ہیں تو ان کے مرکز کا درمیانی فاصلہ معلوم کیجیے۔}
+\usq{ایک اندرونی آرائشی دائرہ بیرونی گھڑی کی سطح کو اندرونی طور پر مس کرتا ہے۔ اگر بیرونی دائرے کا رداس \lr{12cm} ہو اور اندرونی دائرے کا رداس \lr{7.5cm} ہو تو ان کے مراکز کا درمیانی فاصلہ معلوم کیجیے۔}
+\usq{درج ذیل شکل میں \lr{x} اور \lr{y} زاویے معلوم کیجیے: (تصویر)}
+\usq{درج ذیل شکل میں \lr{x} اور \lr{y} زاویے معلوم کیجیے: (تصویر)}
+\usq{درج ذیل شکل میں \lr{x} اور \lr{y} زاویے معلوم کیجیے: (تصویر)}
+\usq{دی گئی شکل میں زاویہ \lr{x} معلوم کیجیے۔ (تصویر)}
+\usq{دائروی باغ میں ایک پیدل چلنے کا راستہ ایک چوکور بناتا ہے۔ اگر ایک زاویہ \lr{$87^{o}$} ہو تو متقابلہ زاویہ معلوم کیجیے۔}
+\usq{\lr{$\theta$} معلوم کیجیے، جب: \lr{$\ell=3\ cm,\ r=2.2\ cm$}}
+\usq{\lr{$\theta$} معلوم کیجیے، جب: \lr{$\ell=5.6\ cm,\ r=2\ cm$}}
+\usq{\lr{r} معلوم کیجیے، جب: \lr{$\ell=5.5\ cm,\theta=40^{o}20'$}}
+\usq{\lr{r} معلوم کیجیے، جب: \lr{$\ell=13\ cm,\theta=70^{o}$}}
+\usq{\lr{$\ell$} اور سیکٹر کا رقبہ معلوم کیجیے، جب: \lr{$r=1.7\ cm,\ \theta=0.25$}}
+\usq{\lr{$\ell$} اور سیکٹر کا رقبہ معلوم کیجیے، جب: \lr{$r=3\ cm,\ \theta=45^{o}$}}
+\usq{عظمی نے \lr{14cm} رداس کا ایک پیزا \lr{8} برابر ٹکڑوں میں کاٹا۔ ایک ٹکڑے (سیکٹر) کا رقبہ معلوم کیجیے۔}
+\usq{\lr{U,T,S} اور \lr{Y} دائرے کے محیط پر نقاط ہیں۔ \lr{x} اور \lr{y} زاویے معلوم کیجیے۔}
+\usq{دائرہ کے سیکٹر کا رقبہ معلوم کیجیے جس کا مرکزی زاویہ \lr{$60^{o}$} اور رداس \lr{7cm} ہے۔ قوس \lr{AB} کی لمبائی بھی معلوم کیجیے۔}
+\usq{ایک دائرہ کی قوس کی لمبائی اور سیکٹر کا رقبہ بالترتیب \lr{5cm} اور \lr{$25cm^{2}$} ہیں۔ رداس اور سیکٹر کا مرکزی زاویہ معلوم کیجیے۔}
+\usq{ایک مثلثی ڈھانچہ ایک نصف دائروی گیٹ کی اندر قطر کے سروں سے چوٹی تک جوڑ تا ہے۔ چوٹی پر بننے والا زاویہ معلوم کیجیے۔}
+\usq{ملحقہ شکل میں دائرہ کا رداس معلوم کیجیے۔ (تصویر)}
+\usq{اگر \lr{O} دائرہ کا مرکز ہو تو دی گئی شکل میں \lr{a,b,c} اور \lr{d} زاویے معلوم کیجیے۔}
+\usq{زاویے \lr{a,b} اور \lr{c} معلوم کیجیے اگر \lr{$\overrightarrow{ML}$} ایک مماسی خط اور \lr{O} دائرہ کا مرکز ہو۔}
+\usq{دی گئی شکل میں نامعلوم زاویے معلوم کیجیے۔ جہاں \lr{O} دائرہ کا مرکز ہے۔}
+\usq{دیے گئے رداس کی مدد سے دائرہ بنائیں اور بناوٹ سے اس کے مرکز کی تصدیق کیجیے: \lr{r=1.5 cm}}
+\usq{دیے گئے رداس کی مدد سے دائرہ بنائیں اور بناوٹ سے اس کے مرکز کی تصدیق کیجیے: \lr{r=1.7 cm}}
+\usq{دیے گئے رداس کی مدد سے دائرہ بنائیں اور بناوٹ سے اس کے مرکز کی تصدیق کیجیے: \lr{r=2 cm}}
+\usq{کوئی سے تین غیر ہم خط نقاط \lr{P,Q,R} لیں اور ان نقاط میں گزرنے والا دائرہ بنائیں۔}
+\usq{ایک قوس \lr{ABC} کھنچیں اور اس کا مرکز معلوم کر کے دائرہ مکمل کیجیے۔}
+\usq{ایک قوس \lr{PQR} کھنچیں اور اس کا مرکز معلوم کیے بغیر دائرہ مکمل کیجیے۔}
+\usq{قوس \lr{$\widehat{APB}$} کا مماس نقطہ \lr{P} پر کھنچیں۔ جب \lr{P} قوس کا درمیانی نقطہ ہو۔}
+\usq{قوس \lr{$\widehat{PQR}$} کا مماس نقطہ \lr{P} پر کھنچیں۔ جب \lr{P} قوس کا اختتامی نقطہ ہو۔}
+\usq{\lr{1.3cm} رداس کا ایک دائرہ کھنچیں اور نقطہ \lr{P} پر ایک مماس کھنچیں جب \lr{P} اس کے محیط پر واقع ہو۔}
+\usq{\lr{1.5cm} رداس کا ایک دائرہ کھنچیں اور نقطہ \lr{P} پر ایک مماس کھنچیں، جب \lr{P} اس کے مرکز سے \lr{8cm} کے فاصلے پر ہو۔}
+\usq{\lr{r=2cm} ٹریک کے دائروی حصے کے کسی بھی نقطہ پر ایک مماس کھنچیں۔}
+\usq{\lr{1.4cm} رداس کا ایک دائرہ کھنچیں اور نقطہ \lr{P} پر ایک مماس کھنچیں جب \lr{P} اس کے محیط پر واقع ہو۔}
+\usq{\lr{1.2cm} رداس کا ایک دائرہ بنایئے اور نقطہ \lr{P} پر ایک مماس کھنچیں، جب \lr{P} مرکز سے \lr{5cm} کے فاصلے پر ہو۔}
+\usq{ایک دائرہ کھنچیں جس کا رداس \lr{1.5cm} ہو۔ اس دائرہ پر دو مماس کھنچیں جو \lr{$30^{o}$} زاویہ پر ملتے ہوں۔}
+\usq{درج ذیل باکس اور وسکر پلاٹ کے لیے \lr{$Q_{1},Q_{3}$} وسطانیہ سب سے چھوٹی اور سب سے بڑی قدریں معلوم کیجیے (تصویر)}
+\usq{باکس اور وسکر پلاٹ بنایئے اگر \lr{$12$}=سب سے چھوٹی قدر، \lr{$26$}=سب سے بڑی قدر، \lr{$19$}=وسطانیہ، \lr{$Q_{1}=14,\ Q_{3}=24$} ہوں۔}
+\usq{طلبہ کے سکور کے لیے ایک انتشاری خاکہ بنایئے اور موزوں ترین خط کھنچیں:}\par\smallskip\noindent\hspace*{8.5em}\begin{tabular}{|c|c|c|c|c|c|c|c|l|}\hline 49&46&45&43&36&34&25&14&\urdu{\textbf{پہلا کوئز}}\\ 43&42&39&38&35&33&20&16&\urdu{\textbf{دوسرا کوئز}}\\ \hline\end{tabular}\usc{پہلے اور دوسرے کوئز کے درمیان ارتباط کی بھی وضاحت کیجیے۔}
+\usq{مجموعی تعدد کی تعریف کریں۔}
+\usq{مجموعی تعدد کی جدول کیا ہے؟}
+\usq{مجموعی تعدد کثیر الاضلاع کی تعریف کریں۔}
+\usq{وسطانیہ کی تعریف کریں۔}
+\usq{چہاری حصہ کی تعریف کریں۔}
+\usq{دسواں حصہ کی تعریف کریں۔}
+\usq{سواں حصہ کی تعریف کریں۔}
+\usq{چہاری حصہ کی سعت کی تعریف کریں۔}
+\usq{باکس اور وسکر پلاٹ کیا ہے؟}
+\usq{باکس کیا ہے؟}
+\usq{وسکر کیا ہے؟}
+\usq{انتشاری خاکہ کی تعریف کریں۔}
+\usq{موزوں ترین خط کی تعریف کریں۔}
+\usq{ارتباط کی تعریف کریں۔}
+\usq{مثبت ارتباط کی تعریف کریں۔}
+\usq{منفی ارتباط کی تعریف کریں۔}
+\usq{صفر ارتباط کی تعریف کریں۔}
+\usq{عدم ارتباط کی تعریف کریں۔}
+\usq{مواد کے دیے گئے سیٹ کے لیے: \lr{2،10،3،16،14،13،4،7،11،5،17،14،18} مواد کا وسطانیہ کیا ہے؟}
+\usq{مواد کے دیے گئے سیٹ کے لیے: \lr{2،10،3،16،14،13،4،7،11،5،17،14،18} زیریں اور بالائی چہاری حصے کیا ہیں؟}
+\usq{مواد کے دیے گئے سیٹ کے لیے: \lr{2،10،3،16،14،13،4،7،11،5،17،14،18} مواد کی انتہائی قدریں کیا ہیں؟}
+\usq{مواد کے دیے گئے سیٹ کے لیے \lr{2،10،3،16،14،13،4،7،11،5،17،14،18} مواد کو ظاہر کرنے کے لیے باکس اور وسکر پلاٹ بنایئے۔}
+\usq{درج ذیل مواد کی سعت معلوم کیجیے: \lr{63،89،98،125،79،108،117،60}}
+\usq{درج ذیل مواد کی سعت معلوم کیجیے: \lr{43.5,13.6,18.9,38.4,61.4,29.4}}
+\usq{مواد کے ایک سیٹ کی سعت اور سب سے چھوٹی قدر بالترتیب \lr{46.7} اور \lr{13.4} ہو تو سب سے بڑی قدر معلوم کیجیے۔}
+\usq{درج ذیل مواد کی سعت معلوم کیجیے:}\par\smallskip\noindent\hspace*{8.5em}\begin{tabular}{|c|c|c|c|c|l|}\hline \lr{...500}&\lr{5500-6000}&\lr{5000-5500}&\lr{4500-5000}&\lr{4000-4500}&\urdu{\textbf{آمدنی}}\\ &21&30&12&8&\urdu{\textbf{ملازمتوں کی تعداد}}\\ \hline\end{tabular}
+\usq{ایک کمپنی کی ماہانہ فروخت کا تخمینہ (ملین میں) درج ذیل ہے: \lr{15،18،14،20،13} فروخت کے تخمینوں میں تغیر معلوم کیجیے۔}
+\usq{انتشار کے پیمانے کی تعریف کریں۔}
+\usq{سعت کی تعریف کریں۔}
+\usq{تغیریت کی تعریف کریں۔}
+\usq{معیاری انحراف کی تعریف کریں۔}
+\usq{اوسط انحراف کی تعریف کریں۔}
+\usq{اندرونی چہاری حصہ کے انحراف کی تعریف کریں۔}
+\usq{تغیر کے عددی سر کی تعریف کریں۔}
+\usq{درج ذیل مواد کی سعت معلوم کیجیے: \lr{15،22،18،30،17،25}}
+\usq{ہفتے کے ہر دن بیچے جانے والے قالینوں کی تعداد \lr{13,8,4,9,7,12,10} ہے۔ اس کی تغیریت معلوم کیجیے۔}
+\usq{مواد کے ایک سیٹ کے لیے درج ذیل شماریات دیے گئے ہیں اسے باکس اور وسکر پلاٹ پر ظاہر کیجیے:}\par\smallskip\noindent\hspace*{8.5em}\begin{tabular}{|c|c|c|c|c|}\hline \lr{Q3}&\urdu{وسطانیہ}&\lr{Q1}&\urdu{سب سے بڑی قدر}&\urdu{سب سے چھوٹی قدر}\\ 55.6&43&12.6&70&5\\ \hline\end{tabular}
+\usq{مواد \lr{75،65،60،50،40،35،30،25} کی سعت معلوم کیجیے۔}
+\usq{تین سکے اچھالنے کے لیے شجری خاکہ کا استعمال کرتے ہوئے سیمپل اسپیس معلوم کیجیے۔}
+\usq{اگر ایک بلاترتیب تجربہ کا ایک واقعہ \lr{A} ہے۔ جب کہ \lr{$P(A):P(\overline{A})=17:15$} اور \lr{n(S)=640} ہے۔ تو معلوم کیجیے: (الف) \lr{$n(A)$} (ب) \lr{$P(\overline{A})$}}
+\usq{ایک سکے کو تین بار پھینکا گیا۔ لگاتار دو ٹیل آنے کا احتمال کیا ہے؟}
+\usq{اگر ایک واقعہ \lr{A} کا احتمال، \lr{$\dfrac{7}{10}$} ہو تو واقعہ \lr{A} نہیں کا احتمال معلوم کیجیے}
+\usq{بلاترتیب تجربہ کیا ہے؟}
+\usq{نتائج کی تعریف کریں۔}
+\usq{سیمپل سپیس کی تعریف کریں۔}
+\usq{واقعہ کی تعریف کریں۔}
+\usq{مساوی امکانی واقعات کی تعریف کریں۔}
+\usq{یقینی واقعات کی تعریف کریں۔}
+\usq{ناممکن واقعات کی تعریف کریں۔}
+\usq{باہمی متنافی واقعات کی تعریف کریں۔}
+\usq{جامع واقعات کی تعریف کریں۔}
+\usq{تکمیلی واقعات کی تعریف کریں۔}
+\usq{ابتدائی واقعہ کی تعریف کریں۔}
+\usq{مشترکہ واقعہ کی تعریف کریں۔}
+\usq{مشترکہ واقعات کی اقسام کے نام لکھیں۔}
+\usq{آزاد واقعات کی تعریف کریں۔}
+\usq{منحصر واقعات کی تعریف کریں۔}
+\usq{غیر باہمی متنافی واقعات کی تعریف کریں۔}
+\usq{شجری خاکہ کی تعریف کریں۔}
+\usq{سیمپل سپیس خاکہ کی تعریف کریں۔}
+\usq{امکانی خاکہ کی تعریف کریں۔}
+\usq{کسی واقعہ کے احتمال کی تعریف کریں۔ اس کا فارمولا بھی لکھیں۔}
+\usq{شجری خاکہ استعمال کرتے ہوئے دو ڈائس کے پھینکنے کی سیمپل اسپیس معلوم کیجیے۔}
+\usq{ہاشم نے ایک ڈائس اور ایک سکہ بیک وقت اچھالا۔ امکانی خاکہ بنایئے۔}
+\usq{دو سکے ایک ساتھ اچھالے گئے۔ دونوں سکوں پر مختلف رخ آنے کا احتمال کیا ہے؟}
+\usq{اگر \lr{$P(A)=0.37,\ P(B)=0.42,\ P(A\cap B)=0.09$} ہو تو \lr{$P(A\cup B)$} معلوم کیجیے۔}
+
+\end{document}
