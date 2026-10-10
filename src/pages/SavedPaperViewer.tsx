@@ -409,7 +409,7 @@ const SavedPaperViewer = () => {
   ]);
 
   const parseQuestionOptions = (text: string) => {
-    const optionRegex = /\(([A-D])\)\s*([^()]+?)(?=\s*\([A-D]\)|$)/g;
+    const optionRegex = /\(([A-D])\)\s*((?:(?!\s*\([A-D]\)).)+?)(?=\s*\([A-D]\)|$)/g;
     const options: Array<{ key: string; value: string }> = [];
     let match: RegExpExecArray | null;
 
