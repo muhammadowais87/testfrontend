@@ -27,3 +27,27 @@ coverage/
 # OS files
 .DS_Store
 Thumbs.db
+
+# Raw reference/seed-source material (subject question banks, syllabi, OCR
+# training data) and one-off parsing scripts kept at the repo root for the
+# backend reseed workflow. None of this is imported by src/ or copied from
+# public/, so Vite never bundles it and it is never served by the deployed
+# app — it has no effect on the live site if it isn't in the repo.
+/*.txt
+/*.xlsx
+/*.tex
+/*.pdf
+/*.traineddata
+/11biomcqsshortandlong.json
+/11computermcqsshortandlong.json
+/11physicsmcqsshortandlong.json
+/computerPtbClass10Chapter1Mcqs.json
+/parse_afaq.py
+/parse_ba_question_types.mjs
+/tmpInspectTopicTypes.js
+/vite.config.ts.timestamp-*.mjs
+/10th all subject data/
+/Afaq All subjects data/
+/Oxford All subjects data/
+/BA 3rd & 4th/
+/seprate english and urdu medium/
