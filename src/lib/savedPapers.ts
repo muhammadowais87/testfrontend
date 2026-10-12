@@ -26,6 +26,11 @@ export type SavedPaperRecord = {
   medium?: string;
   twoQuestionsPerLine?: boolean;
   questions: SavedPaperQuestion[];
+  // Optional "Ignore Questions" count per batch (one batch = one Add-to-Paper action).
+  // When set for a batch, that section's heading shows "(Any N)" where
+  // N = that batch's question count - the ignore count, e.g. "Answer the
+  // following questions (Any 3)" for 5 selected questions with 2 ignored.
+  batchIgnoreCounts?: Record<number, number>;
 };
 
 type StoredSession = {

@@ -468,6 +468,7 @@ const buildCacheKey = (
   board?: string | null,
   contentType?: QuestionContentType | null,
   sectionType?: string | null,
+  priorityKeys?: string[] | null,
 ) => [
   scope.chapterNumbers.join(","),
   scope.fullChapters.join(","),
@@ -477,6 +478,7 @@ const buildCacheKey = (
   board || "",
   contentType || "",
   sectionType || "",
+  (priorityKeys && priorityKeys.length > 0) ? [...priorityKeys].sort().join("|") : "",
 ].join("::");
 
 export const clearQuestionBankCache = () => {
@@ -494,6 +496,7 @@ export const fetchQuestionsForSelection = async (
   allGroups: ChapterGroup[] = [],
   contentType?: QuestionContentType | null,
   sectionType?: string | null,
+  priorityKeys?: string[] | null,
 ): Promise<PaperQuestion[]> => {
   if (selectedChapters.length === 0) {
     return [];
@@ -504,7 +507,7 @@ export const fetchQuestionsForSelection = async (
     return [];
   }
 
-  const cacheKey = buildCacheKey(scope, subject, className, board, contentType, sectionType);
+  const cacheKey = buildCacheKey(scope, subject, className, board, contentType, sectionType, priorityKeys);
   const cached = questionBankCache.get(cacheKey);
   if (cached) {
     return cached;
@@ -533,6 +536,9 @@ export const fetchQuestionsForSelection = async (
   if (board) baseParams.set("board", board);
   if (contentType) baseParams.set("contentType", contentType);
   if (sectionType) baseParams.set("sectionType", sectionType);
+  if (priorityKeys && priorityKeys.length > 0) {
+    priorityKeys.forEach((key) => baseParams.append("priorityKeys", key));
+  }
 
   try {
     const aggregated: PaperQuestion[] = [];
@@ -623,6 +629,12 @@ export const fetchChapterGroupsForSelection = async (
   return { groups, questionTypes };
 };
 
+export type PriorityOption = { value: string; label: string };
+
+// Returns both the available question types and the available "Question Priority"
+// checkbox options (Additional/Exercise/Past Papers/Conceptuals) for the current
+// subject/chapter scope, straight from the database -- so the Priority dropdown can
+// be populated (and required) before the first Search, same as the type dropdown.
 export const fetchAvailableQuestionTypes = async (
   selectedChapters: string[],
   subject?: string | null,
@@ -630,14 +642,19 @@ export const fetchAvailableQuestionTypes = async (
   board?: string | null,
   allGroups: ChapterGroup[] = [],
   scopeByTopic = false,
-): Promise<string[]> => {
+  // The question type already picked in the UI, if any -- only used to scope the
+  // returned `priorities` so the Priority dropdown never offers a priority that has
+  // zero matches for the type the search will actually run with. Does not narrow
+  // `types` itself, so the type dropdown still shows every choice.
+  selectedQuestionType?: string | null,
+): Promise<{ types: string[]; priorities: PriorityOption[] }> => {
   if (selectedChapters.length === 0) {
-    return [];
+    return { types: [], priorities: [] };
   }
 
   const scope = resolveQuestionSelectionScope(selectedChapters, allGroups, getTopicChapterIndex(subject, className, board));
   if (scope.chapterNumbers.length === 0) {
-    return [];
+    return { types: [], priorities: [] };
   }
 
   const params = new URLSearchParams({
@@ -651,6 +668,13 @@ export const fetchAvailableQuestionTypes = async (
   if (scopeByTopic && scope.chapterParts.length > 0) {
     scope.chapterParts.forEach((topic) => params.append("topics", topic));
     if (scope.fullChapters.length > 0) params.set("fullChapters", scope.fullChapters.join(","));
+  }
+  if (selectedQuestionType) {
+    if (["mcq", "short", "long"].includes(selectedQuestionType)) {
+      params.set("contentType", selectedQuestionType);
+    } else {
+      params.set("sectionType", selectedQuestionType);
+    }
   }
 
   const response = await fetch(
@@ -668,28 +692,9 @@ export const fetchAvailableQuestionTypes = async (
     .map((type) => normalizeQuestionTypeValue(String(type)))
     .filter((type): type is string => Boolean(type));
 
-  return Array.from(new Set(normalizedTypes));
-};
+  const rawPriorities = Array.isArray(data.availablePriorities) ? data.availablePriorities : [];
+  const priorities: PriorityOption[] = rawPriorities
+    .filter((p): p is PriorityOption => p && typeof p.value === "string" && typeof p.label === "string");
 
-
-export type PriorityOption = { value: string; label: string };
-
-export const buildPriorityOptions = (questions: PaperQuestion[], selectedChapters: string[]): PriorityOption[] => {
-  const options: PriorityOption[] = [{ value: "all", label: "Select all" }];
-
-  const availableCategories = new Set(questions.map((q) => q.priorityKey).filter(Boolean));
-  if (availableCategories.has("exercise")) {
-    options.push({ value: "cat:exercise", label: "Exercise" });
-  }
-  if (availableCategories.has("additional")) {
-    options.push({ value: "cat:additional", label: "Additional" });
-  }
-  if (availableCategories.has("pastpapers")) {
-    options.push({ value: "cat:pastpapers", label: "Past Papers" });
-  }
-  if (availableCategories.has("conceptuals")) {
-    options.push({ value: "cat:conceptuals", label: "Conceptuals" });
-  }
-
-  return options;
+  return { types: Array.from(new Set(normalizedTypes)), priorities };
 };

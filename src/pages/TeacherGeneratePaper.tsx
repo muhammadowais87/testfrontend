@@ -1,17 +1,25 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { addSavedPaper, getSavedPaperById, type SavedPaperRecord } from "@/lib/savedPapers";
-import { Menu, X, Home, LogOut, ChevronLeft, GraduationCap, List, PencilLine, Save, Printer, Shuffle, Trash2 } from "lucide-react";
+import { Menu, X, Home, LogOut, ChevronLeft, GraduationCap, List, PencilLine, Save, Printer, Shuffle, Trash2, ChevronDown } from "lucide-react";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuCheckboxItem,
+  DropdownMenuTrigger,
+  DropdownMenuSeparator,
+  DropdownMenuLabel,
+} from "@/components/ui/dropdown-menu";
 import { useIsMobile } from "@/hooks/use-mobile";
 import {
-  buildPriorityOptions,
   fetchChapterGroupsForSelection,
   fetchQuestionsForSelection,
   fetchAvailableQuestionTypes,
   type PaperQuestion,
   type QuestionContentType,
   type QuestionTypeOption,
+  type PriorityOption,
 } from "@/lib/questionBank";
 import { useTeacherSessionStore } from "@/stores/teacherSessionStore";
 import {
@@ -246,8 +254,8 @@ const TeacherGeneratePaper = () => {
   const [ignoreQuestions, setIgnoreQuestions] = useState("");
   const [blankLines, setBlankLines] = useState("");
   const [blankLineType, setBlankLineType] = useState("1 LINE");
-  const [questionPriority, setQuestionPriority] = useState("all");
-  const [appliedQuestionPriority, setAppliedQuestionPriority] = useState("all");
+  const [questionPriorities, setQuestionPriorities] = useState<string[]>([]);
+  const [appliedQuestionPriorities, setAppliedQuestionPriorities] = useState<string[]>([]);
   const [twoQuestionsPerLine, setTwoQuestionsPerLine] = useState(false);
   const [appliedTwoQuestionsPerLine, setAppliedTwoQuestionsPerLine] = useState(false);
   const [showSearchResults, setShowSearchResults] = useState(false);
@@ -255,6 +263,7 @@ const TeacherGeneratePaper = () => {
   const [selectionError, setSelectionError] = useState("");
   const [isManualEditing, setIsManualEditing] = useState(false);
   const [availableDbTypes, setAvailableDbTypes] = useState<string[] | null>(null);
+  const [priorityOptions, setPriorityOptions] = useState<PriorityOption[]>([]);
   const [editedQuestions, setEditedQuestions] = useState<Record<number, EditedQuestion>>({});
   const [shuffledOrder, setShuffledOrder] = useState<number[]>([]);
   // Tracks which "add questions" action a question came from, so two separate adds of
@@ -262,6 +271,10 @@ const TeacherGeneratePaper = () => {
   // merging into one.
   const [questionBatch, setQuestionBatch] = useState<Record<number, number>>({});
   const nextBatchIdRef = useRef(0);
+  // "Ignore Questions" count per batch -- not required; when set for a batch, that
+  // section's heading on the generated paper shows "(Any N)" where N = that batch's
+  // selected count minus the ignore count (e.g. 5 selected, ignore 2 -> "Any 3").
+  const [ignoreCountByBatch, setIgnoreCountByBatch] = useState<Record<number, number>>({});
   // Tracks the Dual Medium setting each question was added with, so a later add with a
   // different medium (English/Urdu/Dual) doesn't change previously-added questions.
   const [questionMedium, setQuestionMedium] = useState<Record<number, string>>({});
@@ -489,10 +502,13 @@ const TeacherGeneratePaper = () => {
     }
   }, [questionType, questionTypeOptions]);
 
-  const priorityOptions = useMemo(
-    () => buildPriorityOptions(allQuestions, selectedChapters),
-    [allQuestions, selectedChapters]
-  );
+  useEffect(() => {
+    setQuestionPriorities((prev) => {
+      const validValues = new Set(priorityOptions.map((option) => option.value));
+      const next = prev.filter((value) => validValues.has(value));
+      return next.length === prev.length ? prev : next;
+    });
+  }, [priorityOptions]);
 
   const activeQuestions = useMemo(() => {
     let filtered = allQuestions;
@@ -518,18 +534,12 @@ const TeacherGeneratePaper = () => {
     if (appliedQuestionType === "mcq") filtered = filtered.filter((q) => q.contentType === "mcq" && !isCompositionType(q.chapterPart));
     if (appliedQuestionType === "short") filtered = filtered.filter((q) => q.contentType === "short" && !isCompositionType(q.chapterPart));
     if (appliedQuestionType === "long") filtered = filtered.filter((q) => q.contentType === "long" && !isCompositionType(q.chapterPart));
-    if (appliedQuestionPriority && appliedQuestionPriority !== "all") {
-      if (appliedQuestionPriority.startsWith("cat:")) {
-        const categoryValue = appliedQuestionPriority.replace("cat:", "");
-        filtered = filtered.filter((q) => q.priorityKey === categoryValue);
-      } else if (appliedQuestionPriority.startsWith("part:")) {
-        const partValue = appliedQuestionPriority.replace("part:", "");
-        filtered = filtered.filter((q) => q.chapterPart === partValue);
-      }
+    if (appliedQuestionPriorities.length > 0) {
+      filtered = filtered.filter((q) => appliedQuestionPriorities.includes(q.priorityKey));
     }
 
     return filtered;
-  }, [allQuestions, appliedQuestionPriority, appliedQuestionType]);
+  }, [allQuestions, appliedQuestionPriorities, appliedQuestionType]);
 
   const typeSlugToLabel = useMemo(() => {
     const map: Record<string, string> = {};
@@ -707,6 +717,14 @@ const TeacherGeneratePaper = () => {
       return;
     }
 
+    if (questionPriorities.length === 0) {
+      setSelectionError("Please select at least one question priority.");
+      setShowSearchResults(false);
+      setValidationMessage("Select at least one Question Priority!");
+      setShowValidationDialog(true);
+      return;
+    }
+
     const requiredCount = getRequiredCount();
     if (!requiredCount) {
       setSelectionError("Please enter a valid Required Questions value first.");
@@ -745,7 +763,7 @@ const TeacherGeneratePaper = () => {
     setAllQuestions([]);
     setSelectedQuestions([]);
     setAppliedQuestionType(questionType);
-    setAppliedQuestionPriority(questionPriority);
+    setAppliedQuestionPriorities(questionPriorities);
     setAppliedDualMedium(dualMedium);
     setAppliedTwoQuestionsPerLine(twoQuestionsPerLine);
 
@@ -764,6 +782,7 @@ const TeacherGeneratePaper = () => {
         chapterGroups,
         contentTypeFilter,
         sectionTypeFilter,
+        questionPriorities,
       );
       const maxExistingId = shuffledOrder.length > 0 ? Math.max(...shuffledOrder) : 0;
       const uniqueQuestions = questions.map((q, idx) => ({ ...q, id: maxExistingId + idx + 1 }));
@@ -805,9 +824,30 @@ const TeacherGeneratePaper = () => {
       return;
     }
 
+    // Ignore Questions is optional -- only validated when something was typed.
+    let ignoreCount = 0;
+    const trimmedIgnore = ignoreQuestions.trim();
+    if (trimmedIgnore !== "") {
+      const parsedIgnore = Number.parseInt(trimmedIgnore, 10);
+      if (!Number.isFinite(parsedIgnore) || parsedIgnore < 0) {
+        setValidationMessage("Question Choice must be a valid number.");
+        setShowValidationDialog(true);
+        return;
+      }
+      if (parsedIgnore >= effectiveCount) {
+        setValidationMessage(`Question Choice must be less than ${effectiveCount} (the selected question count).`);
+        setShowValidationDialog(true);
+        return;
+      }
+      ignoreCount = parsedIgnore;
+    }
+
     setSelectionError("");
     const ids = [...selectedQuestions];
     const batchId = nextBatchIdRef.current++;
+    if (ignoreCount > 0) {
+      setIgnoreCountByBatch((prev) => ({ ...prev, [batchId]: ignoreCount }));
+    }
     setShuffledOrder((prev) => orderQuestionIds([...prev, ...ids]));
     setQuestionBatch((prev) => {
       const next = { ...prev };
@@ -866,6 +906,7 @@ const TeacherGeneratePaper = () => {
     setSelectedQuestions([]);
     setShuffledOrder([]);
     setQuestionBatch({});
+    setIgnoreCountByBatch({});
     setQuestionMedium({});
     setQuestionTwoPerLine({});
     nextBatchIdRef.current = 0;
@@ -908,7 +949,7 @@ const TeacherGeneratePaper = () => {
       setSelectedChapters(allChapterSelections);
       setQuestionType(savedPaper.questionType || "");
       setAppliedQuestionType(savedPaper.questionType || "");
-      setAppliedQuestionPriority("all");
+      setAppliedQuestionPriorities([]);
       const paperMedium = savedPaper.medium || "dual";
       setDualMedium(paperMedium);
       setAppliedDualMedium(paperMedium);
@@ -919,6 +960,7 @@ const TeacherGeneratePaper = () => {
         Object.fromEntries(savedPaper.questions.map((q) => [q.id, q.batch ?? 0]))
       );
       nextBatchIdRef.current = Math.max(0, ...savedPaper.questions.map((q) => (q.batch ?? 0) + 1));
+      setIgnoreCountByBatch(savedPaper.batchIgnoreCounts ?? {});
       setQuestionMedium(
         Object.fromEntries(savedPaper.questions.map((q) => [q.id, q.medium || paperMedium]))
       );
@@ -991,6 +1033,7 @@ const TeacherGeneratePaper = () => {
         medium: question.medium,
         twoPerLine: question.twoPerLine,
       })),
+      batchIgnoreCounts: ignoreCountByBatch,
     };
 
     navigate(`/teacher/saved-paper/${previewPaper.id}/view`, {
@@ -1032,6 +1075,7 @@ const TeacherGeneratePaper = () => {
       medium: appliedDualMedium,
       twoQuestionsPerLine,
       questions: activeQuestions,
+      batchIgnoreCounts: ignoreCountByBatch,
     });
 
     setShowSavePaperDialog(false);
@@ -1122,7 +1166,7 @@ const TeacherGeneratePaper = () => {
     setShowSearchResults(false);
     setSelectionError("");
     setAppliedQuestionType("");
-    setAppliedQuestionPriority("all");
+    setAppliedQuestionPriorities([]);
     setAppliedDualMedium("dual");
   }, [selectedBoard, selectedLevel, selectedSubject]);
 
@@ -1132,7 +1176,7 @@ const TeacherGeneratePaper = () => {
     setSelectionError("");
     setAllQuestions([]);
     setAppliedQuestionType("");
-    setAppliedQuestionPriority("all");
+    setAppliedQuestionPriorities([]);
     setAppliedDualMedium("dual");
   }, [selectedChapters]);
 
@@ -1145,13 +1189,21 @@ const TeacherGeneratePaper = () => {
         selectedBoard,
         chapterGroups,
         isTopicScopedPtbClass(selectedBoard, selectedLevel),
+        questionType,
       )
-        .then(setAvailableDbTypes)
-        .catch(() => setAvailableDbTypes(null));
+        .then(({ types, priorities }) => {
+          setAvailableDbTypes(types);
+          setPriorityOptions(priorities);
+        })
+        .catch(() => {
+          setAvailableDbTypes(null);
+          setPriorityOptions([]);
+        });
     } else {
       setAvailableDbTypes(null);
+      setPriorityOptions([]);
     }
-  }, [showQuestionSelection, selectedChapters, selectedSubject, selectedLevel, selectedBoard, chapterGroups]);
+  }, [showQuestionSelection, selectedChapters, selectedSubject, selectedLevel, selectedBoard, chapterGroups, questionType]);
 
   const sidebarContent = (showQuestionSelection || showPaperWorkspace) ? (
     <>
@@ -1248,8 +1300,8 @@ const TeacherGeneratePaper = () => {
                 <h2 className="text-base font-semibold text-gray-900">Select Your Questions Here ... {selectedLevel} - {selectedSubject?.split("||")[0]}</h2>
               </div>
 
-              {/* First Row: Question Type and Dual Medium */}
-              <div className="grid grid-cols-2 gap-6">
+              {/* First Row: Question Type, Question Priority and Dual Medium */}
+              <div className="grid grid-cols-3 gap-6">
                 <div>
                   <label className="block text-[12px] font-semibold text-gray-700 mb-2">SELECT QUESTION TYPE</label>
                   <select value={questionType} onChange={(e) => setQuestionType(e.target.value)} className="w-full border border-gray-300 rounded px-2 py-1.5 text-xs text-gray-700 bg-white">
@@ -1258,6 +1310,60 @@ const TeacherGeneratePaper = () => {
                       <option key={option.value} value={option.value}>{option.label}</option>
                     ))}
                   </select>
+                </div>
+                <div>
+                  <label className="block text-[12px] font-semibold text-gray-700 mb-2">QUESTION PRIORITY <span className="text-red-500">*</span></label>
+                  <DropdownMenu>
+                    <DropdownMenuTrigger asChild>
+                      <button
+                        type="button"
+                        disabled={priorityOptions.length === 0}
+                        className="w-full flex items-center justify-between border border-gray-300 rounded px-2 py-1.5 text-xs text-gray-700 bg-white disabled:opacity-60 disabled:cursor-not-allowed"
+                      >
+                        <span className={`truncate text-left ${questionPriorities.length === 0 ? "text-gray-400" : ""}`}>
+                          {priorityOptions.length === 0
+                            ? "No priorities available"
+                            : questionPriorities.length === 0
+                            ? "Select priority"
+                            : questionPriorities.length === priorityOptions.length
+                            ? "All priorities"
+                            : priorityOptions
+                                .filter((option) => questionPriorities.includes(option.value))
+                                .map((option) => option.label)
+                                .join(", ")}
+                        </span>
+                        <ChevronDown className="w-3.5 h-3.5 text-gray-400 flex-shrink-0 ml-1" />
+                      </button>
+                    </DropdownMenuTrigger>
+                    <DropdownMenuContent align="start" className="w-56">
+                      <DropdownMenuLabel className="text-[11px] text-gray-500">Select priorities</DropdownMenuLabel>
+                      <DropdownMenuSeparator />
+                      <DropdownMenuCheckboxItem
+                        checked={priorityOptions.length > 0 && questionPriorities.length === priorityOptions.length}
+                        onSelect={(e) => e.preventDefault()}
+                        onCheckedChange={(checked) =>
+                          setQuestionPriorities(checked ? priorityOptions.map((option) => option.value) : [])
+                        }
+                      >
+                        Select All
+                      </DropdownMenuCheckboxItem>
+                      <DropdownMenuSeparator />
+                      {priorityOptions.map((option) => (
+                        <DropdownMenuCheckboxItem
+                          key={option.value}
+                          checked={questionPriorities.includes(option.value)}
+                          onSelect={(e) => e.preventDefault()}
+                          onCheckedChange={(checked) =>
+                            setQuestionPriorities((prev) =>
+                              checked ? [...prev, option.value] : prev.filter((value) => value !== option.value)
+                            )
+                          }
+                        >
+                          {option.label}
+                        </DropdownMenuCheckboxItem>
+                      ))}
+                    </DropdownMenuContent>
+                  </DropdownMenu>
                 </div>
                 <div>
                   <label className="block text-[12px] font-semibold text-gray-700 mb-2">DUAL MEDIUM <span className="text-red-500">*</span></label>
@@ -1271,7 +1377,7 @@ const TeacherGeneratePaper = () => {
               </div>
 
               {/* Second Row: Input Fields */}
-              <div className="grid grid-cols-2 gap-3">
+              <div className="grid grid-cols-3 gap-3">
                 <div>
                   <label className="block text-[12px] font-semibold text-gray-700 mb-2">Required Questions <span className="text-red-500">*</span></label>
                   <input type="text" value={requiredQuestions} onChange={(e) => setRequiredQuestions(e.target.value.replace(/\D/g, ''))} className="w-full border border-gray-300 rounded px-2 py-1.5 text-xs text-gray-700" placeholder="0" />
@@ -1279,6 +1385,10 @@ const TeacherGeneratePaper = () => {
                 <div>
                   <label className="block text-[12px] font-semibold text-gray-700 mb-2">Each Q Marks <span className="text-red-500">*</span></label>
                   <input type="text" value={eachQMarks} onChange={(e) => setEachQMarks(e.target.value.replace(/\D/g, ''))} className="w-full border border-gray-300 rounded px-2 py-1.5 text-xs text-gray-700" placeholder="0" />
+                </div>
+                <div>
+                  <label className="block text-[12px] font-semibold text-gray-700 mb-2">Question Choice</label>
+                  <input type="text" value={ignoreQuestions} onChange={(e) => setIgnoreQuestions(e.target.value.replace(/\D/g, ''))} className="w-full border border-gray-300 rounded px-2 py-1.5 text-xs text-gray-700" placeholder="0" />
                 </div>
               </div>
 
@@ -1295,7 +1405,7 @@ const TeacherGeneratePaper = () => {
                 </label>
                 <button
                   type="button"
-                  disabled={isSearchingQuestions}
+                  disabled={isSearchingQuestions || questionPriorities.length === 0}
                   onClick={handleSearchClick}
                   className="bg-green-600 text-white text-sm font-semibold px-6 py-2 rounded hover:bg-green-700 disabled:opacity-60 disabled:cursor-not-allowed"
                 >
@@ -2149,7 +2259,7 @@ const TeacherGeneratePaper = () => {
                   <input type="text" value={eachQMarks} onChange={(e) => setEachQMarks(e.target.value)} className="w-full border border-border rounded-lg bg-card text-foreground px-3 py-2 text-sm" placeholder="0" />
                 </div>
                 <div>
-                  <label className="block text-xs font-semibold text-foreground mb-2">Ignore Questions</label>
+                  <label className="block text-xs font-semibold text-foreground mb-2">Question Choice</label>
                   <input type="text" value={ignoreQuestions} onChange={(e) => setIgnoreQuestions(e.target.value)} className="w-full border border-border rounded-lg bg-card text-foreground px-3 py-2 text-sm" placeholder="0" />
                 </div>
                 <div>

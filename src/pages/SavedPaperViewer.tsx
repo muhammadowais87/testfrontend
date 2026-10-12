@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { useNavigate, useParams, useLocation } from "react-router-dom";
-import { ChevronDown, ChevronLeft, Printer } from "lucide-react";
+import { ChevronDown, ChevronLeft, Printer, RotateCcw } from "lucide-react";
 import { getSavedPaperById, type SavedPaperRecord } from "@/lib/savedPapers";
 import { API_BASE_URL } from "@/lib/api";
 import { useInstituteSessionStore } from "@/stores/instituteSessionStore";
@@ -23,7 +23,7 @@ const SavedPaperViewer = () => {
   const [paper, setPaper] = useState<SavedPaperRecord | null>(navState?.paperOverride ?? null);
   const [lineHeight, setLineHeight] = useState("1.28");
   const [urduFontSize, setUrduFontSize] = useState("12");
-  const [englishFontSize, setEnglishFontSize] = useState("11");
+  const [englishFontSize, setEnglishFontSize] = useState("12");
   const [titleFontSize, setTitleFontSize] = useState("35");
   const [fontWeight, setFontWeight] = useState("Normal");
   const [fontColor, setFontColor] = useState("Black");
@@ -43,7 +43,6 @@ const SavedPaperViewer = () => {
   const [printExamSyllabus, setPrintExamSyllabus] = useState(false);
   const [printBubbleSheet, setPrintBubbleSheet] = useState(false);
   const [printAnswerKeys, setPrintAnswerKeys] = useState(false);
-  const [tickAnswers, setTickAnswers] = useState(false);
   const [wordFontSize, setWordFontSize] = useState(14);
   const [logoScale, setLogoScale] = useState("100");
   const [monogramScale, setMonogramScale] = useState("100");
@@ -88,6 +87,13 @@ const SavedPaperViewer = () => {
   });
   const [editableQuestions, setEditableQuestions] = useState<Array<{ id: number; text: string; urdu: string; contentType?: "mcq" | "short" | "long"; chapterPart?: string | null; batch?: number; medium?: string; twoPerLine?: boolean }>>([]);
   const [mobilePreviewZoom, setMobilePreviewZoom] = useState(1);
+  // Bold/Underline/A+/A-/Line-height apply by mutating the live DOM directly (wrapping
+  // the selection in a <span> via Range.surroundContents) and never touch React state,
+  // so changing state alone can't undo them -- React sees the same text and leaves
+  // those manually-injected spans in place. Bumping this and folding it into the paper's
+  // key below forces React to fully remount that DOM instead of diffing it, which is the
+  // only way to actually discard them.
+  const [resetKey, setResetKey] = useState(0);
 
   const handlePrintPaper = useCallback(() => {
     const prevTitle = document.title;
@@ -154,15 +160,32 @@ const SavedPaperViewer = () => {
   };
 
   const applyUnderlineToSelection = (e: React.MouseEvent) => {
+    const sel = window.getSelection();
     const anchorEl = getSelectionAnchorElement();
     const hasUnderline = Boolean(anchorEl && window.getComputedStyle(anchorEl).textDecorationLine.includes("underline"));
+
+    // Removing an underline by nesting a new "text-decoration: none" span inside the
+    // already-underlined span doesn't actually work -- the CSS underline is painted by
+    // the outer (ancestor) span and still shows through a descendant that says "none".
+    // When the current selection exactly matches a span this tool underlined earlier,
+    // undo it in place on that same span instead of nesting another one.
+    if (hasUnderline && anchorEl instanceof HTMLElement && anchorEl.style.textDecoration.includes("underline")
+      && sel && sel.rangeCount > 0) {
+      const range = sel.getRangeAt(0);
+      if (anchorEl.contains(range.commonAncestorContainer) && range.toString().trim() === (anchorEl.textContent || "").trim()) {
+        e.preventDefault();
+        anchorEl.style.textDecoration = "none";
+        return;
+      }
+    }
+
     applySelectionStyle(e, { textDecoration: hasUnderline ? "none" : "underline" });
   };
 
   const handleResetFontStyles = () => {
     setLineHeight("1.28");
     setUrduFontSize("12");
-    setEnglishFontSize("11");
+    setEnglishFontSize("12");
     setTitleFontSize("35");
     setFontWeight("Normal");
     setFontColor("Black");
@@ -171,6 +194,62 @@ const SavedPaperViewer = () => {
     setEnglishFontFamily("Poppins");
     setUrduFontFamily("Noto Nastaliq Urdu");
     setTitleFontFamily("Times New Roman");
+  };
+
+  // Undoes every change made in the editing tool this session -- font styles, layout,
+  // borders, watermark, print options, manual marks overrides and any manual text edits
+  // to the questions -- back to how the paper looked when it was opened. Deliberately
+  // leaves headerInfo/paperFields (school name, logo, date, marks totals, etc.) alone,
+  // since those are the paper's own saved data, not toolbar edits.
+  const handleResetChanges = () => {
+    setResetKey((k) => k + 1);
+    handleResetFontStyles();
+    setBorderStyle("No Border");
+    setPageBorder("No Border");
+    setLayout("Layout 1");
+    setWatermark("Monogram Watermark");
+    setLogoScale("100");
+    setMonogramScale("100");
+    setPrintExamSyllabus(false);
+    setPrintBubbleSheet(false);
+    setPrintAnswerKeys(false);
+    setMediumOverridden(false);
+    setPaperMedium(paper?.medium ?? null);
+    setManualEditing(false);
+    setSectionMarksOverrides({});
+    setEditableQuestions(
+      (paper?.questions || []).map((q) => ({
+        id: q.id,
+        text: q.text,
+        urdu: q.urdu,
+        contentType: q.contentType,
+        chapterPart: q.chapterPart ?? null,
+        batch: q.batch ?? 0,
+        medium: q.medium,
+        twoPerLine: q.twoPerLine,
+      }))
+    );
+    // paperFields is edited through the same Manual Editing inputs as the question
+    // text (see updateField/renderFieldValue), so it has to reset together with them.
+    // The handful of fields the paper itself supplies are restored from it; everything
+    // else (student name, roll no., paper code, etc.) is manual-entry-only and goes
+    // back to blank, same as when the paper was first opened.
+    setPaperFields({
+      studentName: "",
+      rollNum: "",
+      paperCode: "",
+      className: paper?.className || "",
+      subjectName: paper?.subject || "",
+      timeAllowed: paper?.timeAllowed || "40",
+      totalMarks: paper?.totalMarks || "0",
+      examDate: paper?.date || "",
+      section: "",
+      paperType: "",
+      groupName: "",
+      round: "",
+      phase: "",
+      testDetails: "",
+    });
   };
 
   useEffect(() => {
@@ -213,7 +292,18 @@ const SavedPaperViewer = () => {
   useEffect(() => {
     const handleSelectionChange = () => {
       const sel = window.getSelection();
-      setHasTextSelection(Boolean(sel && !sel.isCollapsed && (sel.toString() || "").trim().length > 0));
+      const hasSelection = Boolean(sel && !sel.isCollapsed && (sel.toString() || "").trim().length > 0);
+      setHasTextSelection(hasSelection);
+
+      // Keep the A+/A- size box in sync with whatever text is now selected, instead of
+      // leaving it stuck at the last size that was applied to a previous selection.
+      if (hasSelection) {
+        const anchorEl = getSelectionAnchorElement();
+        const computedSize = anchorEl ? Number.parseFloat(window.getComputedStyle(anchorEl).fontSize) : NaN;
+        if (Number.isFinite(computedSize) && computedSize > 0) {
+          setWordFontSize(Math.round(computedSize));
+        }
+      }
     };
 
     document.addEventListener("selectionchange", handleSelectionChange);
@@ -575,11 +665,23 @@ const SavedPaperViewer = () => {
     const sections = sectionOrder.map((key) => {
       const { typeKey, questions } = sectionMap.get(key)!;
       const label = standardMeta[typeKey] ?? getSpecialSectionLabel(typeKey);
-      return { key, typeKey, ...label, questions };
+
+      // Optional "Ignore Questions" -> "(Any N)" on the heading, e.g. 5 selected
+      // with 2 ignored shows "Answer the following questions (Any 3)". Counted in
+      // the same unit as what's actually displayed/marked (comprehension sets
+      // count as one unit each, same as the marks calculation below).
+      const batchNum = Number(key.split("::")[0]) || 0;
+      const ignoreCount = paper?.batchIgnoreCounts?.[batchNum] ?? 0;
+      const unitCount = isComprehensionType(typeKey) ? groupComprehensionSets(questions).length : questions.length;
+      const attemptCount = unitCount - ignoreCount;
+      const title = ignoreCount > 0 && attemptCount > 0 ? `${label.title} (Any ${attemptCount})` : label.title;
+      const urduTitle = ignoreCount > 0 && attemptCount > 0 ? `${label.urduTitle} (کوئی بھی ${attemptCount})` : label.urduTitle;
+
+      return { key, typeKey, title, urduTitle, questions };
     });
 
     return { sections: sections.filter((s) => s.questions.length > 0), marksPerQuestion };
-  }, [editableQuestions, paper?.totalMarks, paperFields.totalMarks]);
+  }, [editableQuestions, paper?.totalMarks, paperFields.totalMarks, paper?.batchIgnoreCounts]);
 
   const totalQuestionCount = useMemo(
     () => sectionedQuestions.sections.reduce((sum, section) => sum + section.questions.length, 0),
@@ -590,7 +692,7 @@ const SavedPaperViewer = () => {
 
   const resolvedLineHeight = Number(lineHeight) > 0 ? Number(lineHeight) : 1.28;
   const resolvedUrduFontSize = Number(urduFontSize) > 0 ? Number(urduFontSize) : 12;
-  const resolvedEnglishFontSize = Number(englishFontSize) > 0 ? Number(englishFontSize) : 11;
+  const resolvedEnglishFontSize = Number(englishFontSize) > 0 ? Number(englishFontSize) : 12;
   const resolvedTitleFontSize = Number(titleFontSize) > 0 ? Number(titleFontSize) : 35;
   const resolvedTextColor = fontColor === "Blue" ? "#1d4ed8" : fontColor === "Gray" ? "#475569" : "#000000";
   const resolvedFontWeight = fontWeight === "Bold" ? 700 : 400;
@@ -608,6 +710,12 @@ const SavedPaperViewer = () => {
               ? "border-2 border-black rounded-xl"
               : "";
   const watermarkTextValue = (paper?.title || headerInfo.schoolName || "THE HOPE").toUpperCase();
+  // The text watermark's font-size was a fixed 110px, which only looked right for a
+  // short word -- any realistic phrase (e.g. a school name) wrapped onto several
+  // left-aligned lines and spilled past the page edge. Scale it down for longer text
+  // so any watermark renders as one clean, centered line instead.
+  const resolvedWatermarkText = headerInfo.watermarkText || watermarkTextValue;
+  const resolvedWatermarkTextFontSize = Math.max(28, Math.min(110, Math.round(1000 / Math.max(1, resolvedWatermarkText.length))));
   const watermarkMonogramFallback = (headerInfo.schoolName || "THE HOPE")
     .split(" ")
     .filter(Boolean)
@@ -707,10 +815,6 @@ const SavedPaperViewer = () => {
           <label className="inline-flex h-7 min-w-[132px] items-center gap-1 rounded-sm border border-black bg-white px-1.5 text-[10px] text-[#2d2d2d]">
             <input type="checkbox" checked={printAnswerKeys} onChange={(e) => setPrintAnswerKeys(e.target.checked)} className="h-4 w-4 rounded-sm border border-black accent-blue-600" />
             Print Answer Keys
-          </label>
-          <label className="inline-flex h-7 min-w-[132px] items-center gap-1 rounded-sm border border-black bg-white px-1.5 text-[10px] text-[#2d2d2d]">
-            <input type="checkbox" checked={tickAnswers} onChange={(e) => setTickAnswers(e.target.checked)} className="h-4 w-4 rounded-sm border border-black accent-blue-600" />
-            Tick Answers
           </label>
           <select
             value={effectiveMedium}
@@ -919,6 +1023,19 @@ const SavedPaperViewer = () => {
 
           <button
             type="button"
+            onClick={() => {
+              if (window.confirm("Reset all changes made in the editing tool? This can't be undone.")) {
+                handleResetChanges();
+              }
+            }}
+            className="inline-flex h-7 min-w-[114px] items-center justify-center gap-1 rounded-sm border border-black bg-white px-2 text-[10px] font-medium text-[#2d2d2d]"
+          >
+            <RotateCcw className="w-4 h-4" />
+            Reset Changes
+          </button>
+
+          <button
+            type="button"
             onClick={handlePrintPaper}
             className="inline-flex h-7 min-w-[114px] items-center justify-center gap-1 rounded-sm bg-emerald-600 px-2 text-[10px] font-medium text-white"
           >
@@ -932,7 +1049,7 @@ const SavedPaperViewer = () => {
         <div className="overflow-hidden print:overflow-visible">
         <div className={previewCopiesClass}>
         {previewCopyIndexes.map((copyIndex) => (
-        <div key={`paper-copy-${copyIndex}`} className="saved-paper-copy">
+        <div key={`paper-copy-${copyIndex}-${resetKey}`} className="saved-paper-copy">
         <div
           className={`saved-paper-canvas preview-zoom mx-auto w-[1100px] min-w-[1100px] bg-white shadow-sm print:min-w-0 print:w-full print:shadow-none ${pageBorderClass}`}
           style={mobileCanvasStyle}
@@ -953,8 +1070,17 @@ const SavedPaperViewer = () => {
             <div className="relative">
               <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
                 {watermark === "Text Watermark" ? (
-                  <div className="text-[110px] font-black tracking-[0.22em] select-none" style={{ transform: `scale(${resolvedMonogramScale / 100})`, transformOrigin: "center", color: `rgba(254, 202, 202, ${Number(headerInfo.watermarkOpacity)})` }}>
-                    {headerInfo.watermarkText || watermarkTextValue}
+                  <div
+                    className="font-black tracking-[0.22em] select-none whitespace-nowrap text-center"
+                    style={{
+                      fontSize: `${resolvedWatermarkTextFontSize}px`,
+                      maxWidth: "90%",
+                      transform: `scale(${resolvedMonogramScale / 100})`,
+                      transformOrigin: "center",
+                      color: `rgba(254, 202, 202, ${Number(headerInfo.watermarkOpacity)})`,
+                    }}
+                  >
+                    {resolvedWatermarkText}
                   </div>
                 ) : headerInfo.logoUrl ? (
                   <img
@@ -1506,7 +1632,6 @@ const SavedPaperViewer = () => {
                   <div className="mb-1.5 inline-flex rounded-full border border-sky-200 bg-white px-2 py-0.5 text-[11px] font-semibold text-sky-700">Bubble Sheet</div>
                   <div className="grid grid-cols-1 gap-1.5 text-[11px] sm:grid-cols-2 lg:grid-cols-3">
                     {sectionedQuestions.sections.filter((s) => s.typeKey === "mcq").flatMap((s) => s.questions).map((q, idx) => {
-                      const answerKey = getAnswerKey(q.id);
                       return (
                         <div key={`bubble-${q.id}`} className="rounded-md border border-slate-200 bg-white px-2 py-1 shadow-[0_1px_0_rgba(15,23,42,0.03)]">
                           <div className="mb-0.5 text-[11px] font-semibold text-black">Q{idx + 1}</div>
@@ -1514,10 +1639,8 @@ const SavedPaperViewer = () => {
                             {(["A", "B", "C", "D"] as const).map((option) => (
                               <div key={`${q.id}-${option}`} className="inline-flex items-center gap-1 rounded px-0.5 py-0.5 hover:bg-slate-50">
                                 <span
-                                  className={`inline-flex h-3.5 w-3.5 items-center justify-center rounded-full border border-black text-[9px] ${tickAnswers && answerKey === option ? "border-emerald-600 bg-emerald-600 text-white" : "bg-white"}`}
-                                >
-                                  {tickAnswers && answerKey === option ? "✓" : ""}
-                                </span>
+                                  className="inline-flex h-3.5 w-3.5 items-center justify-center rounded-full border border-black bg-white text-[9px]"
+                                />
                                 <span className="text-[10px] font-medium text-black">{option}</span>
                               </div>
                             ))}
@@ -1623,7 +1746,6 @@ const SavedPaperViewer = () => {
                       const renderQuestionItem = (question: typeof section.questions[number], index: number) => {
                         const { englishStem, urduStem, parsedText, parsedUrdu } = getQuestionStems(question.text, question.urdu || "");
                         const showUrduQuestion = urduStem.trim() !== englishStem.trim();
-                        const answerKey = getAnswerKey(question.id);
                         const mergedOptions = mergeMcqOptions(parsedText, parsedUrdu);
                         const optionKeys = mergedOptions.map((o) => o.key);
 
@@ -1712,14 +1834,13 @@ const SavedPaperViewer = () => {
                                   if (!showEn && showUr) {
                                     return (
                                       <div key={`${question.id}-opt-${key}`} className="flex items-baseline justify-start gap-1 text-black" dir="rtl" style={{ fontSize: `${resolvedUrduFontSize}px`, color: resolvedTextColor, fontWeight: resolvedFontWeight, fontFamily: urduFontFamily }}>
-                                        <span>{tickAnswers && answerKey === key ? "✓ " : ""}({key}) <MathText text={urOption} /></span>
+                                        <span>({key}) <MathText text={urOption} /></span>
                                       </div>
                                     );
                                   }
                                   return (
                                     <div key={`${question.id}-opt-${key}`} className="flex items-baseline gap-1 text-black" style={{ fontSize: `${resolvedEnglishFontSize}px`, color: resolvedTextColor, fontWeight: resolvedFontWeight, fontFamily: englishFontFamily }}>
                                       <span dir="ltr">
-                                        {tickAnswers && answerKey === key ? "✓ " : ""}
                                         ({key}) <MathText text={enOption} />
                                       </span>
                                       {showUr && urOption && showUrduOption && (

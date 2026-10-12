@@ -145,14 +145,14 @@ export const boardClassMap: Record<string, { title: string; board: string; gradi
 };
 
 export const ninthSubjects: SubjectCard[] = [
-  { title: "Biology", subtitle: "SNC-2025", image: getBookImage("Biology") },
-  { title: "Computer", subtitle: "SNC-2025", image: getBookImage("Computer"), showArrow: true },
-  { title: "Chemistry", subtitle: "SNC-2025", image: getBookImage("Chemistry") },
-  { title: "Physics", subtitle: "SNC-2025", image: getBookImage("Physics") },
-  { title: "Mathematics", subtitle: "SNC-2025", image: getBookImage("Mathematics") },
-  { title: "English", subtitle: "SNC-2025", image: getBookImage("English") },
-  { title: "اردو لازمی", subtitle: "SNC-2025", image: getBookImage("اردو لازمی") },
-  { title: "اسلامیات لازمی", subtitle: "SNC-2025", image: getBookImage("اسلامیات لازمی") },
+  { title: "Biology", subtitle: "", image: getBookImage("Biology") },
+  { title: "Computer", subtitle: "", image: getBookImage("Computer"), showArrow: true },
+  { title: "Chemistry", subtitle: "", image: getBookImage("Chemistry") },
+  { title: "Physics", subtitle: "", image: getBookImage("Physics") },
+  { title: "Mathematics", subtitle: "", image: getBookImage("Mathematics") },
+  { title: "English", subtitle: "", image: getBookImage("English") },
+  { title: "اردو لازمی", subtitle: "", image: getBookImage("اردو لازمی") },
+  { title: "اسلامیات لازمی", subtitle: "", image: getBookImage("اسلامیات لازمی") },
   { title: "General Science", subtitle: "9TH", image: getBookImage("General Science") },
 ];
 
@@ -162,7 +162,7 @@ export const ninthOptionalSubjects: SubjectCard[] = [
   { title: "اسلامیات اختیاری", subtitle: "9TH", image: getBookImage("اسلامیات اختیاری") },
   { title: "ہوم اکنامکس", subtitle: "9TH", image: getBookImage("ہوم اکنامکس") },
   { title: "معاشیات", subtitle: "9TH", image: getBookImage("معاشیات") },
-  { title: "ترجمہ القرآن المجید", subtitle: "2022", image: getBookImage("ترجمہ القرآن المجید") },
+  { title: "ترجمہ القرآن المجید", subtitle: "", image: getBookImage("ترجمہ القرآن المجید") },
   { title: "اخلاقیات", subtitle: "9TH", image: getBookImage("اخلاقیات") },
   { title: "علم شہریت", subtitle: "9TH", image: getBookImage("علم شہریت") },
   { title: "فزیکل ایجوکیشن", subtitle: "9TH", image: getBookImage("فزیکل ایجوکیشن") },
@@ -173,14 +173,14 @@ export const ninthOptionalSubjects: SubjectCard[] = [
 
 export const tenthSubjects: SubjectCard[] = [
   { title: "Biology", subtitle: "10TH", image: getBookImage("Biology") },
-  { title: "Computer", subtitle: "2022", image: getBookImage("Computer"), showArrow: true },
+  { title: "Computer", subtitle: "", image: getBookImage("Computer"), showArrow: true },
   { title: "Chemistry", subtitle: "10TH", image: getBookImage("Chemistry") },
   { title: "Physics", subtitle: "10TH", image: getBookImage("Physics") },
   { title: "Mathematics", subtitle: "10TH", image: getBookImage("Mathematics") },
   { title: "English", subtitle: "10TH", image: getBookImage("English") },
-  { title: "Pakistan Studies", subtitle: "SNC-2025", image: getBookImage("Pakistan Studies") },
+  { title: "Pakistan Studies", subtitle: "", image: getBookImage("Pakistan Studies") },
   { title: "اردو لازمی", subtitle: "10TH", image: getBookImage("اردو لازمی") },
-  { title: "اسلامیات لازمی", subtitle: "SNC-2023", image: getBookImage("اسلامیات لازمی") },
+  { title: "اسلامیات لازمی", subtitle: "", image: getBookImage("اسلامیات لازمی") },
 ];
 
 export const tenthOptionalSubjects: SubjectCard[] = [
@@ -191,7 +191,7 @@ export const tenthOptionalSubjects: SubjectCard[] = [
   { title: "اسلامیات اختیاری", subtitle: "10TH", image: getBookImage("اسلامیات اختیاری") },
   { title: "ہوم اکنامکس", subtitle: "10TH", image: getBookImage("ہوم اکنامکس") },
   { title: "معاشیات", subtitle: "10TH", image: getBookImage("معاشیات") },
-  { title: "ترجمہ القرآن المجید", subtitle: "2023", image: getBookImage("ترجمہ القرآن المجید") },
+  { title: "ترجمہ القرآن المجید", subtitle: "", image: getBookImage("ترجمہ القرآن المجید") },
   { title: "اخلاقیات", subtitle: "PTB", image: getBookImage("اخلاقیات") },
   { title: "علم شہریت", subtitle: "10TH", image: getBookImage("علم شہریت") },
   { title: "فزیکل ایجوکیشن", subtitle: "PTB", image: getBookImage("فزیکل ایجوکیشن") },
@@ -200,14 +200,14 @@ export const tenthOptionalSubjects: SubjectCard[] = [
 ];
 
 export const interOneCoreSubjects: SubjectCard[] = [
-  { title: "Biology", subtitle: "SNC-2025", image: getBookImage("Biology"), showArrow: true },
-  { title: "Chemistry", subtitle: "SNC-2025", image: getBookImage("Chemistry"), showArrow: true },
-  { title: "Physics", subtitle: "SNC-2025", image: getBookImage("Physics"), showArrow: true },
-  { title: "Mathematics", subtitle: "SNC-2025", image: getBookImage("Mathematics") },
-  { title: "Computer", subtitle: "SNC-2025", image: getBookImage("Computer") },
+  { title: "Biology", subtitle: "", image: getBookImage("Biology"), showArrow: true },
+  { title: "Chemistry", subtitle: "", image: getBookImage("Chemistry"), showArrow: true },
+  { title: "Physics", subtitle: "", image: getBookImage("Physics"), showArrow: true },
+  { title: "Mathematics", subtitle: "", image: getBookImage("Mathematics") },
+  { title: "Computer", subtitle: "", image: getBookImage("Computer") },
   { title: "Statistics", subtitle: "ICS", image: getBookImage("Statistics") },
   { title: "Economics", subtitle: "ICS", image: getBookImage("Economics") },
-  { title: "English", subtitle: "SNC-2025", image: getBookImage("English") },
+  { title: "English", subtitle: "", image: getBookImage("English") },
   { title: "Principles of Accounting", subtitle: "I.COM", image: getBookImage("Principles of Accounting") },
 ];
 
@@ -215,8 +215,8 @@ export const interOneGeneralSubjects: SubjectCard[] = [
   { title: "Principles of Economics", subtitle: "I.COM", image: getBookImage("Principles of Economics") },
   { title: "Principles of Commerce", subtitle: "I.COM", image: getBookImage("Principles of Commerce"), showArrow: true },
   { title: "Business Maths", subtitle: "I.COM", image: getBookImage("Business Maths") },
-  { title: "اسلامیات لازمی", subtitle: "SNC-2025", image: getBookImage("اسلامیات لازمی") },
-  { title: "اردو لازمی", subtitle: "SNC-2025", image: getBookImage("اردو لازمی") },
+  { title: "اسلامیات لازمی", subtitle: "", image: getBookImage("اسلامیات لازمی") },
+  { title: "اردو لازمی", subtitle: "", image: getBookImage("اردو لازمی") },
   { title: "ایجوکیشن", subtitle: "F.A", image: getBookImage("ایجوکیشن") },
   { title: "سوکس", subtitle: "F.A", image: getBookImage("سوکس") },
   { title: "پنجابی", subtitle: "F.A", image: getBookImage("پنجابی") },
@@ -229,7 +229,7 @@ export const interOneGeneralSubjects: SubjectCard[] = [
 ];
 
 export const interOneExtraSubjects: SubjectCard[] = [
-  { title: "ترجمہ القرآن المجید", subtitle: "SNC-2022", image: getBookImage("ترجمہ القرآن المجید") },
+  { title: "ترجمہ القرآن المجید", subtitle: "", image: getBookImage("ترجمہ القرآن المجید") },
   { title: "فارسی", subtitle: "PTB", image: getBookImage("فارسی") },
   { title: "تاریخ اسلام", subtitle: "PTB", image: getBookImage("تاریخ اسلام") },
   { title: "طبی جغرافیہ", subtitle: "PTB", image: getBookImage("طبی جغرافیہ") },
@@ -252,7 +252,7 @@ export const interTwoCommerceSubjects: SubjectCard[] = [
   { title: "اصول بینکاری", subtitle: "I.COM", image: getBookImage("اصول بینکاری") },
   { title: "تجارتی جغرافیہ", subtitle: "I.COM", image: getBookImage("تجارتی جغرافیہ") },
   { title: "کاروباری شماریات", subtitle: "I.COM", image: getBookImage("کاروباری شماریات") },
-  { title: "پاکستان کا معاشرہ", subtitle: "2022", image: getBookImage("پاکستان کا معاشرہ") },
+  { title: "پاکستان کا معاشرہ", subtitle: "", image: getBookImage("پاکستان کا معاشرہ") },
   { title: "اردو لازمی", subtitle: "12TH", image: getBookImage("اردو لازمی") },
   { title: "ایجوکیشن", subtitle: "F.A", image: getBookImage("ایجوکیشن") },
   { title: "سوکس", subtitle: "F.A", image: getBookImage("سوکس") },
@@ -264,7 +264,7 @@ export const interTwoExtraSubjects: SubjectCard[] = [
   { title: "فزیکل ایجوکیشن", subtitle: "F.A", image: getBookImage("فزیکل ایجوکیشن") },
   { title: "سوشیالوجی", subtitle: "F.A", image: getBookImage("سوشیالوجی") },
   { title: "اخلاقیات", subtitle: "PTB", image: getBookImage("اخلاقیات") },
-  { title: "ترجمہ القرآن المجید", subtitle: "SNC-2023", image: getBookImage("ترجمہ القرآن المجید") },
+  { title: "ترجمہ القرآن المجید", subtitle: "", image: getBookImage("ترجمہ القرآن المجید") },
   { title: "قبلیت", subtitle: "PTB", image: getBookImage("قبلیت") },
   { title: "فارسی", subtitle: "PTB", image: getBookImage("فارسی") },
   { title: "تاریخ اسلام", subtitle: "PTB", image: getBookImage("تاریخ اسلام") },
@@ -278,88 +278,88 @@ export const interTwoExtraSubjects: SubjectCard[] = [
 // ---- PTB Classes 1-8 & OLD BOOKS subjects ----
 
 export const classOneSubjects: SubjectCard[] = [
-  { title: "اردو لازمی", subtitle: "SNC-2021", image: getBookImage("اردو لازمی") },
-  { title: "General Knowledge", subtitle: "SNC-2021", image: getBookImage("General Knowledge") },
-  { title: "Mathematics", subtitle: "SNC-2021", image: getBookImage("Mathematics") },
-  { title: "English", subtitle: "SNC-2021", image: getBookImage("English") },
-  { title: "اسلامیات لازمی", subtitle: "SNC-2021", image: getBookImage("اسلامیات لازمی") },
+  { title: "اردو لازمی", subtitle: "", image: getBookImage("اردو لازمی") },
+  { title: "General Knowledge", subtitle: "", image: getBookImage("General Knowledge") },
+  { title: "Mathematics", subtitle: "", image: getBookImage("Mathematics") },
+  { title: "English", subtitle: "", image: getBookImage("English") },
+  { title: "اسلامیات لازمی", subtitle: "", image: getBookImage("اسلامیات لازمی") },
 ];
 
 export const classTwoSubjects: SubjectCard[] = [
-  { title: "اردو لازمی", subtitle: "SNC-2021", image: getBookImage("اردو لازمی") },
-  { title: "اسلامیات لازمی", subtitle: "SNC-2021", image: getBookImage("اسلامیات لازمی") },
-  { title: "واقفیت عامہ", subtitle: "SNC-2021", image: getBookImage("General Knowledge") },
-  { title: "Mathematics", subtitle: "SNC-2021", image: getBookImage("Mathematics") },
-  { title: "English", subtitle: "SNC-2021", image: getBookImage("English") },
+  { title: "اردو لازمی", subtitle: "", image: getBookImage("اردو لازمی") },
+  { title: "اسلامیات لازمی", subtitle: "", image: getBookImage("اسلامیات لازمی") },
+  { title: "واقفیت عامہ", subtitle: "", image: getBookImage("General Knowledge") },
+  { title: "Mathematics", subtitle: "", image: getBookImage("Mathematics") },
+  { title: "English", subtitle: "", image: getBookImage("English") },
 ];
 
 export const classThreeSubjects: SubjectCard[] = [
-  { title: "اردو لازمی", subtitle: "SNC-2021", image: getBookImage("اردو لازمی") },
-  { title: "General Knowledge", subtitle: "SNC-2021", image: getBookImage("General Knowledge") },
-  { title: "اسلامیات لازمی", subtitle: "SNC-2021", image: getBookImage("اسلامیات لازمی") },
-  { title: "English", subtitle: "SNC-2021", image: getBookImage("English") },
-  { title: "Mathematics", subtitle: "SNC-2021", image: getBookImage("Mathematics") },
+  { title: "اردو لازمی", subtitle: "", image: getBookImage("اردو لازمی") },
+  { title: "General Knowledge", subtitle: "", image: getBookImage("General Knowledge") },
+  { title: "اسلامیات لازمی", subtitle: "", image: getBookImage("اسلامیات لازمی") },
+  { title: "English", subtitle: "", image: getBookImage("English") },
+  { title: "Mathematics", subtitle: "", image: getBookImage("Mathematics") },
 ];
 
 export const classFourSubjects: SubjectCard[] = [
-  { title: "English", subtitle: "SNC-2021", image: getBookImage("English") },
-  { title: "General Science", subtitle: "SNC-2021", image: getBookImage("General Science") },
-  { title: "اسلامیات لازمی", subtitle: "SNC-2021", image: getBookImage("اسلامیات لازمی") },
-  { title: "اردو لازمی", subtitle: "SNC-2021", image: getBookImage("اردو لازمی") },
-  { title: "Social Study", subtitle: "SNC-2021", image: getBookImage("Social Study") },
-  { title: "Mathematics", subtitle: "SNC-2021", image: getBookImage("Mathematics") },
+  { title: "English", subtitle: "", image: getBookImage("English") },
+  { title: "General Science", subtitle: "", image: getBookImage("General Science") },
+  { title: "اسلامیات لازمی", subtitle: "", image: getBookImage("اسلامیات لازمی") },
+  { title: "اردو لازمی", subtitle: "", image: getBookImage("اردو لازمی") },
+  { title: "Social Study", subtitle: "", image: getBookImage("Social Study") },
+  { title: "Mathematics", subtitle: "", image: getBookImage("Mathematics") },
 ];
 
 export const classFifthSubjects: SubjectCard[] = [
-  { title: "English", subtitle: "SNC-2021", image: getBookImage("English") },
-  { title: "General Science", subtitle: "SNC-2021", image: getBookImage("General Science") },
-  { title: "اردو لازمی", subtitle: "SNC-2021", image: getBookImage("اردو لازمی") },
-  { title: "اسلامیات لازمی", subtitle: "SNC-2021", image: getBookImage("اسلامیات لازمی") },
-  { title: "Mathematics", subtitle: "SNC-2023", image: getBookImage("Mathematics") },
-  { title: "Social Studies", subtitle: "SNC-2021", image: getBookImage("Social Studies") },
+  { title: "English", subtitle: "", image: getBookImage("English") },
+  { title: "General Science", subtitle: "", image: getBookImage("General Science") },
+  { title: "اردو لازمی", subtitle: "", image: getBookImage("اردو لازمی") },
+  { title: "اسلامیات لازمی", subtitle: "", image: getBookImage("اسلامیات لازمی") },
+  { title: "Mathematics", subtitle: "", image: getBookImage("Mathematics") },
+  { title: "Social Studies", subtitle: "", image: getBookImage("Social Studies") },
 ];
 
 export const classSixthSubjects: SubjectCard[] = [
   { title: "ترجمہ القرآن", subtitle: "6th", image: getBookImage("ترجمہ القرآن") },
-  { title: "اسلامیات لازمی", subtitle: "SNC-2023", image: getBookImage("اسلامیات لازمی") },
-  { title: "اردو لازمی", subtitle: "SNC-2023", image: getBookImage("اردو لازمی") },
-  { title: "General Science", subtitle: "SNC-2023", image: getBookImage("General Science") },
-  { title: "English", subtitle: "SNC-2023", image: getBookImage("English") },
-  { title: "Mathematics", subtitle: "SNC-2023", image: getBookImage("Mathematics") },
-  { title: "History", subtitle: "SNC-2023", image: getBookImage("History") },
-  { title: "Geography", subtitle: "SNC-2023", image: getBookImage("Geography") },
+  { title: "اسلامیات لازمی", subtitle: "", image: getBookImage("اسلامیات لازمی") },
+  { title: "اردو لازمی", subtitle: "", image: getBookImage("اردو لازمی") },
+  { title: "General Science", subtitle: "", image: getBookImage("General Science") },
+  { title: "English", subtitle: "", image: getBookImage("English") },
+  { title: "Mathematics", subtitle: "", image: getBookImage("Mathematics") },
+  { title: "History", subtitle: "", image: getBookImage("History") },
+  { title: "Geography", subtitle: "", image: getBookImage("Geography") },
   { title: "پنجابی", subtitle: "6th", image: getBookImage("پنجابی") },
   { title: "زرعی تعلیم", subtitle: "6th", image: getBookImage("زرعی تعلیم") },
   { title: "ہوم اکنامکس", subtitle: "6th", image: getBookImage("ہوم اکنامکس") },
   { title: "اخلاقیات", subtitle: "6th", image: getBookImage("اخلاقیات") },
-  { title: "Computer", subtitle: "SNC-2023", image: getBookImage("Computer") },
+  { title: "Computer", subtitle: "", image: getBookImage("Computer") },
 ];
 
 export const classSeventhSubjects: SubjectCard[] = [
-  { title: "English", subtitle: "SNC-2023", image: getBookImage("English") },
-  { title: "General Science", subtitle: "SNC-2023", image: getBookImage("General Science") },
-  { title: "Geography", subtitle: "SNC-2023", image: getBookImage("Geography") },
+  { title: "English", subtitle: "", image: getBookImage("English") },
+  { title: "General Science", subtitle: "", image: getBookImage("General Science") },
+  { title: "Geography", subtitle: "", image: getBookImage("Geography") },
   { title: "پنجابی", subtitle: "7th", image: getBookImage("پنجابی") },
   { title: "زرعی تعلیم", subtitle: "7th", image: getBookImage("زرعی تعلیم") },
   { title: "ہوم اکنامکس", subtitle: "7th", image: getBookImage("ہوم اکنامکس") },
-  { title: "اردو لازمی", subtitle: "SNC-2023", image: getBookImage("اردو لازمی") },
-  { title: "Mathematics", subtitle: "SNC-2023", image: getBookImage("Mathematics") },
-  { title: "Computer", subtitle: "SNC-2023", image: getBookImage("Computer") },
-  { title: "History", subtitle: "SNC-2023", image: getBookImage("History") },
-  { title: "ترجمہ القرآن", subtitle: "SNC-2023", image: getBookImage("ترجمہ القرآن") },
-  { title: "اسلامیات لازمی", subtitle: "SNC-2023", image: getBookImage("اسلامیات لازمی") },
+  { title: "اردو لازمی", subtitle: "", image: getBookImage("اردو لازمی") },
+  { title: "Mathematics", subtitle: "", image: getBookImage("Mathematics") },
+  { title: "Computer", subtitle: "", image: getBookImage("Computer") },
+  { title: "History", subtitle: "", image: getBookImage("History") },
+  { title: "ترجمہ القرآن", subtitle: "", image: getBookImage("ترجمہ القرآن") },
+  { title: "اسلامیات لازمی", subtitle: "", image: getBookImage("اسلامیات لازمی") },
 ];
 
 export const classEighthSubjects: SubjectCard[] = [
-  { title: "ترجمہ القرآن", subtitle: "SNC-2023", image: getBookImage("ترجمہ القرآن") },
-  { title: "اسلامیات لازمی", subtitle: "SNC-2023", image: getBookImage("اسلامیات لازمی") },
-  { title: "اردو لازمی", subtitle: "SNC-2023", image: getBookImage("اردو لازمی") },
-  { title: "English", subtitle: "SNC-2023", image: getBookImage("English") },
-  { title: "Mathematics", subtitle: "SNC-2023", image: getBookImage("Mathematics") },
-  { title: "General Science", subtitle: "SNC-2023", image: getBookImage("General Science") },
-  { title: "Computer", subtitle: "SNC-2023", image: getBookImage("Computer") },
-  { title: "جغرافیہ", subtitle: "SNC-2023", image: getBookImage("جغرافیہ") },
-  { title: "تاریخ", subtitle: "SNC-2023", image: getBookImage("تاریخ") },
+  { title: "ترجمہ القرآن", subtitle: "", image: getBookImage("ترجمہ القرآن") },
+  { title: "اسلامیات لازمی", subtitle: "", image: getBookImage("اسلامیات لازمی") },
+  { title: "اردو لازمی", subtitle: "", image: getBookImage("اردو لازمی") },
+  { title: "English", subtitle: "", image: getBookImage("English") },
+  { title: "Mathematics", subtitle: "", image: getBookImage("Mathematics") },
+  { title: "General Science", subtitle: "", image: getBookImage("General Science") },
+  { title: "Computer", subtitle: "", image: getBookImage("Computer") },
+  { title: "جغرافیہ", subtitle: "", image: getBookImage("جغرافیہ") },
+  { title: "تاریخ", subtitle: "", image: getBookImage("تاریخ") },
   { title: "اخلاقیات", subtitle: "8th", image: getBookImage("اخلاقیات") },
   { title: "پنجابی", subtitle: "8th", image: getBookImage("پنجابی") },
   { title: "زرعی تعلیم", subtitle: "8th", image: getBookImage("زرعی تعلیم") },
@@ -393,7 +393,7 @@ const afaqClassSubjects: Record<string, AfaqSubject[]> = (generatedAfaq && Objec
 const makeSNCGroups = (items: AfaqSubject[]): SubjectCard[][] => {
   const groups = new Map<string, SubjectCard[]>();
   for (const it of items) {
-    const series = it.series || "SNC";
+    const series = it.series || "";
     if (!groups.has(series)) groups.set(series, []);
     groups.get(series)!.push({ title: it.title, subtitle: series, image: getBookImage(it.title) });
   }
@@ -470,8 +470,8 @@ export const boardSubjectsMap: Record<string, Record<string, SubjectCard[][]>> =
 
 export const boardCards = [
   { name: "PTB", label: "PTB", subtitle: "Syllabus", logo: "/images/PTBLogo.png", gradient: "from-cyan-300 to-blue-400", comingSoon: false },
-  { name: "AFAQ", label: "AFAQ SNC", subtitle: "Syllabus", logo: "/images/AfaqLogo.png", gradient: "from-green-500 to-lime-400", comingSoon: false },
-  { name: "OXFORD", label: "OXFORD SNC", subtitle: "Syllabus", logo: "/images/OxfordLogo.png", gradient: "from-cyan-400 to-blue-500", comingSoon: false },
+  { name: "AFAQ", label: "AFAQ", subtitle: "Syllabus", logo: "/images/AfaqLogo.png", gradient: "from-green-500 to-lime-400", comingSoon: false },
+  { name: "OXFORD", label: "OXFORD", subtitle: "Syllabus", logo: "/images/OxfordLogo.png", gradient: "from-cyan-400 to-blue-500", comingSoon: false },
 
   { name: "BA", label: "B.A", subtitle: "Syllabus", logo: "/images/PULogo.png", gradient: "from-yellow-400 to-amber-500", comingSoon: false },
 ];
