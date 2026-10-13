@@ -19,7 +19,7 @@ import {
   type PaperQuestion,
   type QuestionContentType,
   type QuestionTypeOption,
-  type PriorityOption,
+  buildPriorityOptions,
 } from "@/lib/questionBank";
 import { useTeacherSessionStore } from "@/stores/teacherSessionStore";
 import {
@@ -255,7 +255,6 @@ const TeacherGeneratePaper = () => {
   const [blankLines, setBlankLines] = useState("");
   const [blankLineType, setBlankLineType] = useState("1 LINE");
   const [questionPriorities, setQuestionPriorities] = useState<string[]>([]);
-  const [appliedQuestionPriorities, setAppliedQuestionPriorities] = useState<string[]>([]);
   const [twoQuestionsPerLine, setTwoQuestionsPerLine] = useState(false);
   const [appliedTwoQuestionsPerLine, setAppliedTwoQuestionsPerLine] = useState(false);
   const [showSearchResults, setShowSearchResults] = useState(false);
@@ -263,7 +262,6 @@ const TeacherGeneratePaper = () => {
   const [selectionError, setSelectionError] = useState("");
   const [isManualEditing, setIsManualEditing] = useState(false);
   const [availableDbTypes, setAvailableDbTypes] = useState<string[] | null>(null);
-  const [priorityOptions, setPriorityOptions] = useState<PriorityOption[]>([]);
   const [editedQuestions, setEditedQuestions] = useState<Record<number, EditedQuestion>>({});
   const [shuffledOrder, setShuffledOrder] = useState<number[]>([]);
   // Tracks which "add questions" action a question came from, so two separate adds of
@@ -502,6 +500,10 @@ const TeacherGeneratePaper = () => {
     }
   }, [questionType, questionTypeOptions]);
 
+  // Priority checkboxes come from the priorities actually present in the searched
+  // results (not a separate DB lookup), so every option offered is guaranteed to match.
+  const priorityOptions = useMemo(() => buildPriorityOptions(allQuestions), [allQuestions]);
+
   useEffect(() => {
     setQuestionPriorities((prev) => {
       const validValues = new Set(priorityOptions.map((option) => option.value));
@@ -534,12 +536,22 @@ const TeacherGeneratePaper = () => {
     if (appliedQuestionType === "mcq") filtered = filtered.filter((q) => q.contentType === "mcq" && !isCompositionType(q.chapterPart));
     if (appliedQuestionType === "short") filtered = filtered.filter((q) => q.contentType === "short" && !isCompositionType(q.chapterPart));
     if (appliedQuestionType === "long") filtered = filtered.filter((q) => q.contentType === "long" && !isCompositionType(q.chapterPart));
-    if (appliedQuestionPriorities.length > 0) {
-      filtered = filtered.filter((q) => appliedQuestionPriorities.includes(q.priorityKey));
+    if (questionPriorities.length > 0) {
+      filtered = filtered.filter((q) => questionPriorities.includes(q.priorityKey));
     }
 
     return filtered;
-  }, [allQuestions, appliedQuestionPriorities, appliedQuestionType]);
+  }, [allQuestions, questionPriorities, appliedQuestionType]);
+
+  // Changing the priority filter after searching can hide questions that were already
+  // ticked -- drop those from the selection so the count only reflects what's visible.
+  useEffect(() => {
+    const visibleIds = new Set(activeQuestions.map((q) => q.id));
+    setSelectedQuestions((prev) => {
+      const next = prev.filter((id) => visibleIds.has(id));
+      return next.length === prev.length ? prev : next;
+    });
+  }, [activeQuestions]);
 
   const typeSlugToLabel = useMemo(() => {
     const map: Record<string, string> = {};
@@ -717,14 +729,6 @@ const TeacherGeneratePaper = () => {
       return;
     }
 
-    if (questionPriorities.length === 0) {
-      setSelectionError("Please select at least one question priority.");
-      setShowSearchResults(false);
-      setValidationMessage("Select at least one Question Priority!");
-      setShowValidationDialog(true);
-      return;
-    }
-
     const requiredCount = getRequiredCount();
     if (!requiredCount) {
       setSelectionError("Please enter a valid Required Questions value first.");
@@ -763,7 +767,6 @@ const TeacherGeneratePaper = () => {
     setAllQuestions([]);
     setSelectedQuestions([]);
     setAppliedQuestionType(questionType);
-    setAppliedQuestionPriorities(questionPriorities);
     setAppliedDualMedium(dualMedium);
     setAppliedTwoQuestionsPerLine(twoQuestionsPerLine);
 
@@ -782,7 +785,6 @@ const TeacherGeneratePaper = () => {
         chapterGroups,
         contentTypeFilter,
         sectionTypeFilter,
-        questionPriorities,
       );
       const maxExistingId = shuffledOrder.length > 0 ? Math.max(...shuffledOrder) : 0;
       const uniqueQuestions = questions.map((q, idx) => ({ ...q, id: maxExistingId + idx + 1 }));
@@ -949,7 +951,6 @@ const TeacherGeneratePaper = () => {
       setSelectedChapters(allChapterSelections);
       setQuestionType(savedPaper.questionType || "");
       setAppliedQuestionType(savedPaper.questionType || "");
-      setAppliedQuestionPriorities([]);
       const paperMedium = savedPaper.medium || "dual";
       setDualMedium(paperMedium);
       setAppliedDualMedium(paperMedium);
@@ -1166,7 +1167,6 @@ const TeacherGeneratePaper = () => {
     setShowSearchResults(false);
     setSelectionError("");
     setAppliedQuestionType("");
-    setAppliedQuestionPriorities([]);
     setAppliedDualMedium("dual");
   }, [selectedBoard, selectedLevel, selectedSubject]);
 
@@ -1176,7 +1176,6 @@ const TeacherGeneratePaper = () => {
     setSelectionError("");
     setAllQuestions([]);
     setAppliedQuestionType("");
-    setAppliedQuestionPriorities([]);
     setAppliedDualMedium("dual");
   }, [selectedChapters]);
 
@@ -1189,21 +1188,13 @@ const TeacherGeneratePaper = () => {
         selectedBoard,
         chapterGroups,
         isTopicScopedPtbClass(selectedBoard, selectedLevel),
-        questionType,
       )
-        .then(({ types, priorities }) => {
-          setAvailableDbTypes(types);
-          setPriorityOptions(priorities);
-        })
-        .catch(() => {
-          setAvailableDbTypes(null);
-          setPriorityOptions([]);
-        });
+        .then(setAvailableDbTypes)
+        .catch(() => setAvailableDbTypes(null));
     } else {
       setAvailableDbTypes(null);
-      setPriorityOptions([]);
     }
-  }, [showQuestionSelection, selectedChapters, selectedSubject, selectedLevel, selectedBoard, chapterGroups, questionType]);
+  }, [showQuestionSelection, selectedChapters, selectedSubject, selectedLevel, selectedBoard, chapterGroups]);
 
   const sidebarContent = (showQuestionSelection || showPaperWorkspace) ? (
     <>
@@ -1312,20 +1303,15 @@ const TeacherGeneratePaper = () => {
                   </select>
                 </div>
                 <div>
-                  <label className="block text-[12px] font-semibold text-gray-700 mb-2">QUESTION PRIORITY <span className="text-red-500">*</span></label>
+                  <label className="block text-[12px] font-semibold text-gray-700 mb-2">QUESTION PRIORITY</label>
                   <DropdownMenu>
                     <DropdownMenuTrigger asChild>
                       <button
                         type="button"
-                        disabled={priorityOptions.length === 0}
-                        className="w-full flex items-center justify-between border border-gray-300 rounded px-2 py-1.5 text-xs text-gray-700 bg-white disabled:opacity-60 disabled:cursor-not-allowed"
+                        className="w-full flex items-center justify-between border border-gray-300 rounded px-2 py-1.5 text-xs text-gray-700 bg-white"
                       >
-                        <span className={`truncate text-left ${questionPriorities.length === 0 ? "text-gray-400" : ""}`}>
-                          {priorityOptions.length === 0
-                            ? "No priorities available"
-                            : questionPriorities.length === 0
-                            ? "Select priority"
-                            : questionPriorities.length === priorityOptions.length
+                        <span className="truncate text-left">
+                          {questionPriorities.length === 0 || questionPriorities.length === priorityOptions.length
                             ? "All priorities"
                             : priorityOptions
                                 .filter((option) => questionPriorities.includes(option.value))
@@ -1338,30 +1324,41 @@ const TeacherGeneratePaper = () => {
                     <DropdownMenuContent align="start" className="w-56">
                       <DropdownMenuLabel className="text-[11px] text-gray-500">Select priorities</DropdownMenuLabel>
                       <DropdownMenuSeparator />
-                      <DropdownMenuCheckboxItem
-                        checked={priorityOptions.length > 0 && questionPriorities.length === priorityOptions.length}
-                        onSelect={(e) => e.preventDefault()}
-                        onCheckedChange={(checked) =>
-                          setQuestionPriorities(checked ? priorityOptions.map((option) => option.value) : [])
-                        }
-                      >
-                        Select All
-                      </DropdownMenuCheckboxItem>
-                      <DropdownMenuSeparator />
-                      {priorityOptions.map((option) => (
-                        <DropdownMenuCheckboxItem
-                          key={option.value}
-                          checked={questionPriorities.includes(option.value)}
-                          onSelect={(e) => e.preventDefault()}
-                          onCheckedChange={(checked) =>
-                            setQuestionPriorities((prev) =>
-                              checked ? [...prev, option.value] : prev.filter((value) => value !== option.value)
-                            )
-                          }
-                        >
-                          {option.label}
+                      {priorityOptions.length === 0 ? (
+                        // Nothing to pick for this selection -- not selecting anything
+                        // already means "all" at search time, so offer Select All as the
+                        // only, always-available option instead of leaving the menu empty.
+                        <DropdownMenuCheckboxItem checked onSelect={(e) => e.preventDefault()} onCheckedChange={() => {}}>
+                          Select All
                         </DropdownMenuCheckboxItem>
-                      ))}
+                      ) : (
+                        <>
+                          <DropdownMenuCheckboxItem
+                            checked={questionPriorities.length === priorityOptions.length}
+                            onSelect={(e) => e.preventDefault()}
+                            onCheckedChange={(checked) =>
+                              setQuestionPriorities(checked ? priorityOptions.map((option) => option.value) : [])
+                            }
+                          >
+                            Select All
+                          </DropdownMenuCheckboxItem>
+                          <DropdownMenuSeparator />
+                          {priorityOptions.map((option) => (
+                            <DropdownMenuCheckboxItem
+                              key={option.value}
+                              checked={questionPriorities.includes(option.value)}
+                              onSelect={(e) => e.preventDefault()}
+                              onCheckedChange={(checked) =>
+                                setQuestionPriorities((prev) =>
+                                  checked ? [...prev, option.value] : prev.filter((value) => value !== option.value)
+                                )
+                              }
+                            >
+                              {option.label}
+                            </DropdownMenuCheckboxItem>
+                          ))}
+                        </>
+                      )}
                     </DropdownMenuContent>
                   </DropdownMenu>
                 </div>
@@ -1405,7 +1402,7 @@ const TeacherGeneratePaper = () => {
                 </label>
                 <button
                   type="button"
-                  disabled={isSearchingQuestions || questionPriorities.length === 0}
+                  disabled={isSearchingQuestions}
                   onClick={handleSearchClick}
                   className="bg-green-600 text-white text-sm font-semibold px-6 py-2 rounded hover:bg-green-700 disabled:opacity-60 disabled:cursor-not-allowed"
                 >
