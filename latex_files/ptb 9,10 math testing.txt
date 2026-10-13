@@ -1,0 +1,748 @@
+-> ptb 9 math mcqs
+
+Exercise 1.1
+1-20 mcqs
+
+Exercise 1.2
+21-34 mcqs
+
+Exercise 1.3
+35-46 mcqs
+
+Review exercise 1
+47-56 mcqs
+
+Exercise 2.1
+57-63 mcqs
+Exercise 2.2
+64-68 mcqs
+Exercise 2.3
+69-73 mcqs
+Exercise 2.4
+74-84 mcqs
+Review exercise 2
+85-94 mcqs
+
+Exercise 3.1
+95-112 mcqs
+
+Exercise 3.2
+113-128 mcqs
+Exercise 3.3
+129-134 mcqs
+Review exercise 4
+135-144 mcqs
+
+Exercise 4.1
+145-155 mcqs
+
+Exercise 4.2
+156 mcqs
+
+Exercise 4.3
+157-159 mcqs
+
+Exercise 4.4
+160-162 mcqs
+
+Review exercise 4
+163-172 mcqs
+
+Exercise 5.1
+173-185 mcqs
+
+Exercise 5.2
+186-200 mcqs
+Review exercise
+201-210 mcqs
+Exercise 6.1
+211-228 mcqs
+
+Exercise 6.2
+229-234 mcqs
+Exercise 6.4
+235-245 mcqs
+Exercise 6.5
+246-250 mcqs
+Review exercise
+251-260 mcqs
+Exercise 7.1
+261-270 mcqs
+Exercise 7.2
+271-288 mcqs
+Exercise 7.3
+289-294 mcqs
+Review exercise 7
+295-304 mcqs
+Exercise 8.1
+305-333 mcqs
+
+Exercise 9.1
+334-342 mcqs
+
+Exercise 9.2
+343-344 mcqs
+
+Exercise 9.4
+345-356 mcqs
+
+review exercise 9
+357-366 mcqs
+
+Exercise 10.1
+367-408 mcqs
+
+Exercise 10.2
+409-417 mcqs
+
+review exercise 10
+418-427 mcqs
+
+Exercise 11.1
+428-449 mcqs
+
+Exercise 11.2
+450-451 mcqs
+
+review exercise 11
+452-461 mcqs
+
+Exercise 12.1
+462-476 mcqs
+
+
+Exercise 12.2
+477-496 mcqs
+review exercise 12
+497-506 mcqs
+
+Exercise 13.1
+507-528 mcqs
+
+Exercise 13.2
+529-533
+
+review exercise 13
+534-543
+
+
+
+-> ptb 9 math short questions
+Exercise 1.1
+1-53
+
+Exercise 1.2
+54-88
+
+Exercise 1.3
+89-91
+
+Exercise 2.1
+92-117
+
+Exercise 2.2
+118-146
+
+Exercise 2.3
+147-167
+
+Exercise 2.4
+168-198
+
+review exercise 2
+199-219
+
+Exercise 3.1
+220-269
+
+Exercise 3.2
+270-281
+
+Exercise 3.3
+282-307
+
+review exercise 3
+308-334
+
+Exercise 4.1
+335-364
+
+Exercise 4.2
+365-377
+
+Exercise 4.3
+378-388
+
+Exercise 4.4
+389-392
+
+review exercise 4
+393-402
+
+Exercise 5.1
+403-424
+
+Exercise 5.2
+425-433
+
+review exercise
+434-436
+
+Exercise 6.1
+437-482
+
+Exercise 6.3
+483-493
+
+Exercise 6.4
+494-512
+
+Exercise 6.5
+513-523
+
+Exercise 6.6
+524-527
+
+review exercise 6
+528-533
+
+Exercise 7.1
+534-565
+
+Exercise 7.2
+566-597
+
+Exercise 7.3
+598-611
+
+review exercise 7
+612-623
+
+Exercise 8.1
+624-664
+
+Exercise 9.1
+665-672
+
+Exercise 9.2
+673-676
+
+Exercise 9.3
+677-684
+
+Exercise 9.4
+685-693
+
+Exercise 10.1
+694-718
+
+Exercise 10.2
+719-723
+
+review exercise 10
+724-727
+
+Exercise 11.1
+728-744
+
+Exercise 11.2
+745-747
+
+Exercise 12.1
+748-756
+
+Exercise 12.2
+757-780
+
+review exercise 12
+781-790
+
+Exercise 13.1
+791-824
+
+Exercise 13.2
+825-831
+
+
+
+
+-> ptb 9 math long
+
+Exercise 1.1
+1 mcqs
+
+
+Exercise 1.2
+2-12
+
+Exercise 1.3
+13-27
+
+Exercise 2.2
+28-29
+
+Exercise 2.3
+30-34
+
+Exercise 2.4
+35-48
+
+review exercise 2
+49-52
+
+Exercise 3.2
+53-87
+
+Exercise 3.3
+88-92
+
+review exercise 3
+93-109
+
+Exercise 4.1
+110-115
+
+Exercise 4.2
+116-133
+
+Exercise 4.3
+134-150
+
+Exercise 4.4
+151-165
+
+review exercise 4
+166-170
+
+Exercise 5.1
+171-181
+
+Exercise 5.2
+182-189
+
+review exercise 5
+190-194
+
+Exercise 6.1
+195-196
+
+Exercise 6.3
+197-206
+
+Exercise 6.4
+207-210
+
+Exercise 6.5
+211-222
+
+Exercise 6.6
+223-230
+
+review exercise 6
+231-235
+
+Exercise 7.1
+236-244
+
+Exercise 7.2
+245-262
+
+Exercise 7.3
+263-270
+
+review exercise 7
+271-272
+
+Exercise 8.1
+273-286
+
+Exercise 9.1
+287-294
+
+Exercise 9.2
+295-301
+
+Exercise 9.3
+302-310
+
+Exercise 9.4
+311-319
+
+Exercise 10.1
+320-323
+
+Exercise 10.2
+324-334
+
+review exercise 10
+335-339
+
+Exercise 11.1
+340-359
+
+Exercise 11.2
+360-377
+
+review exercise 11
+378-387
+
+Exercise 12.1
+388-396
+
+Exercise 12.2
+397-419
+
+review exercise 12
+420-426
+
+
+Exercise 13.1
+427-434
+
+Exercise 13.2
+435-443
+
+review exercise 13
+444-448
+
+
+
+
+
+
+
+-> 10 ptb math mcqs
+
+Review exercise 1
+1-10
+
+review exercise 2
+11-20
+
+review exercise 3
+21-30
+
+review exercise 4
+31-40
+
+review exercise 5
+41-50
+
+review exercise 7
+51-60
+
+review exercise 8
+61-70
+
+review exercise 9
+71-80
+
+review exercise 10
+81-90
+
+review exercise 11
+91-100
+
+review exercise 12
+101-110
+
+
+
+
+-> 10 ptb math short questions
+
+Exercise 1.1
+1-18
+
+Exercise 1.2
+19-47
+
+Exercise 1.3
+48-67
+
+Exercise 1.4
+68-72
+
+review exercise 1
+73-86
+
+Exercise 2.1
+87-108
+
+Exercise 2.2
+109-114
+
+Exercise 2.3
+115-125
+
+Exercise 2.4
+126-135
+
+Exercise 2.6
+136-148
+
+Exercise 2.7
+149
+
+review exercise 2
+150-152
+
+
+Exercise 3.1
+153-175
+
+Exercise 3.2
+176-213
+
+Exercise 3.3
+214-233
+
+Exercise 3.4
+234-244
+
+Exercise 3.5
+245-267
+
+review exercise 3
+268-276
+
+Exercise 4.1
+277-327
+
+Exercise 4.2
+328-343
+
+review exercise 4
+344-353
+
+Exercise 5.1
+354-368
+
+Exercise 5.2
+369-371
+
+Exercise 5.3
+372-378
+
+Exercise 5.4
+379-380
+
+Review exercise 5
+381-382
+
+Exercise 6.1
+383-422
+
+Exercise 6.2
+423-440
+
+Exercise 6.3
+441-443
+
+Exercise 7.2
+444-457
+
+Exercise 7.3
+458-460
+
+Exercise 7.4
+461-464
+
+Review exercise 7
+465-467
+
+Exercise 8.1
+468-488
+
+Exercise 8.2
+489-494
+
+Review exercise 8
+495
+
+Exercise 9.1
+496-501
+
+Exercise 9.2
+502-516
+
+review exercise 9
+517-521
+
+Exercise 10.1
+522-527
+
+Exercise 10.2
+528-532
+
+review exercise 10
+533-535
+
+Exercise 11.1
+536-560
+
+Exercise 11.2
+561-574
+
+Review exercise 11
+575-576
+
+Exercise 12.1
+577-603
+
+Exercise 12.2
+604
+
+
+
+-> 10 ptb math long questions
+
+Exercise 1.1
+1-4
+
+Exercise 1.2
+5-9
+
+Exercise 1.3
+10-18
+
+Exercise 1.4
+19-25
+
+Review exercise
+26-34
+
+Exercise 2.1
+35-52
+
+Exercise 2.2
+53-61
+
+Exercise 2.3
+62-73
+
+Exercise 2.4
+74-78
+
+Exercise 2.5
+79-86
+
+Exercise 2.7
+87-93
+
+Review exercise 2
+94-97
+
+Exercise 3.1
+98-100
+
+Exercise 3.2
+101
+
+Exercise 3.3
+102-110
+
+Exercise 3.4
+111-115
+
+Exercise 3.5
+116-122
+
+Exercise 3.6
+123-141
+
+Review exercise 3
+142-155
+
+Exercise 4.1
+156-162
+
+Exercise 4.2
+163-170
+
+Exercise 4.3
+171-182
+
+Review exercise 4
+183-196
+
+Exercise 5.2
+197-209
+
+Exercise 5.3
+210-216
+
+Exercise 5.4
+217-232
+
+Exercise 5.5
+233-243
+
+Review exercise 5
+244-256
+
+Exercise 6.1
+257-262
+
+Exercise 6.2
+263-264
+
+Exercise 6.3
+265-279
+
+Exercise 7.2
+280-289
+
+Exercise 7.3
+290-300
+
+Exercise 7.4
+301-311
+
+Review exercise 7
+312-319
+
+Exercise 8.1
+320-329
+
+Exercise 8.2
+330-334
+
+Review exercise 8
+335-340
+
+Exercise 9.1
+341-349
+
+Exercise 9.2
+350-356
+
+Review exercise 9
+357-360
+
+Exercise 10.1
+361-363
+
+Exercise 10.2
+364-366
+
+Review exercise 10
+367-369
+
+Exercise 11.1
+370-380
+
+Exercise 11.2
+381-395
+
+Review exercise 11
+396-401
+
+Exercise 12.1
+402-414
+
+Exercise 12.2
+415-430
+
+Exercise 12.3
+431-445
