@@ -284,10 +284,44 @@ function removeTrailingPeriodValues(text: string): string {
 }
 
 // ─────────────────────────────────────────────────────────────────────────────
+// LaTeX delimiter normalisation
+// Some question text (e.g. Part 1 Math, seeded straight from .tex) wraps maths in
+// \[ ... \] (display) and \( ... \) (inline) instead of $$ ... $$ / $ ... $, which the
+// segment parser below doesn't recognise -- the raw backslash code showed up as text.
+// ─────────────────────────────────────────────────────────────────────────────
+function normalizeLatexDelimiters(text: string): string {
+  return text
+    .replace(/\\\[([\s\S]+?)\\\]/g, (_m, c: string) => "$$" + c.trim() + "$$")
+    .replace(/\\\(([\s\S]+?)\\\)/g, (_m, c: string) => "$" + c.trim() + "$");
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// Text-mode LaTeX (outside $...$): blanks, bold/underline/italic, spacing commands.
+// Math segments are left untouched -- KaTeX already understands those commands.
+// A blank is drawn with full-width low lines so the emphasis parser (which treats
+// "__x__" as underline) can't mistake a run of ASCII underscores for markup.
+// ─────────────────────────────────────────────────────────────────────────────
+const BLANK = "＿＿＿＿＿";
+export function cleanTextLatex(text: string): string {
+  if (!text.includes("\\")) return text;
+  return text
+    .replace(/\\underline\{\s*(?:\\hspace\*?\{[^}]*\}|\\quad|\\qquad|\\ )*\s*\}/g, BLANK)
+    .replace(/\\hspace\*?\{[^}]*\}/g, " ")
+    .replace(/\\underline\{([^{}]+)\}/g, "__$1__")
+    .replace(/\\textbf\{([^{}]+)\}/g, "**$1**")
+    .replace(/\\(?:textit|emph|textrm|textsf|texttt|text|mbox)\{([^{}]*)\}/g, "$1")
+    .replace(/\\(?:newline|noindent|centering|par)\b/g, " ")
+    .replace(/\\\\(?:\[[^\]]*\])?/g, " ")
+    .replace(/\\(?:ldots|dots)\b/g, "…")
+    .replace(/\\([%&#_$])/g, "$1")
+    .replace(/\\(?:quad|qquad|,|;|:|!)/g, " ");
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
 // Main preprocessor
 // ─────────────────────────────────────────────────────────────────────────────
 export function preprocessMathText(raw: string): string {
-  let text = raw;
+  let text = normalizeLatexDelimiters(raw);
   for (const [re, rep] of FIXES) {
     text = text.replace(re, rep as string);
   }
@@ -452,7 +486,9 @@ export default function MathText({ text, className }: MathTextProps) {
 
   const { segments, hasMath, cleaned } = useMemo(() => {
     const cleaned = preprocessMathText(text || "");
-    const segs = parseSegments(cleaned);
+    const segs = parseSegments(cleaned).map((seg) =>
+      seg.type === "text" ? { ...seg, content: cleanTextLatex(seg.content) } : seg
+    );
     const hasMath = segs.some((s) => s.type !== "text");
     return { segments: segs, hasMath, cleaned };
   }, [text]);
@@ -480,7 +516,7 @@ export default function MathText({ text, className }: MathTextProps) {
   }, [hasMath, segments]);
 
   if (!hasMath) {
-    return <span className={className} dir={dir}>{renderTextContent(cleaned, "r")}</span>;
+    return <span className={className} dir={dir}>{renderTextContent(segments.map((seg) => seg.content).join(""), "r")}</span>;
   }
 
   return (
