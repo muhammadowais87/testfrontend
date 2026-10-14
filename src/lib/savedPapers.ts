@@ -60,6 +60,20 @@ const getStoredSession = (key: string): StoredSession | null => {
 };
 
 const getAuthToken = () => {
+  // A trial session (private to this tab) always wins -- it must never fall through to a
+  // real teacher/institute token that happens to be saved in this browser.
+  if (typeof window !== "undefined") {
+    try {
+      const trialRaw = window.sessionStorage.getItem("institute_session");
+      const trialToken = trialRaw ? (JSON.parse(trialRaw) as StoredSession)?.token : "";
+      if (typeof trialToken === "string" && trialToken.startsWith("trial_")) {
+        return trialToken;
+      }
+    } catch {
+      // ignore parse errors and fall through to the saved sessions
+    }
+  }
+
   const teacherSession = getStoredSession("teacher_session");
   if (teacherSession?.token) {
     return teacherSession.token;
@@ -145,6 +159,13 @@ export const migrateLegacySavedPapersToDb = async (): Promise<number> => {
   }
 
   if (window.localStorage.getItem(LEGACY_SAVED_PAPERS_MIGRATED_KEY) === "1") {
+    return 0;
+  }
+
+  // Never migrate under a trial session: the legacy papers in this browser belong to a real
+  // account, so uploading them as trial papers would expose them in the trial (and trial
+  // papers are auto-deleted after 24h, so they'd be lost). Leave them for the real login.
+  if (getAuthToken().startsWith("trial_")) {
     return 0;
   }
 

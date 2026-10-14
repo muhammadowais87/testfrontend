@@ -330,6 +330,15 @@ const getTopicChapterIndex = (subject?: string | null, className?: string | null
 const getAuthHeaders = (): HeadersInit => {
   const headers: Record<string, string> = {};
   try {
+    // A trial session (private to this tab) takes priority over any saved real login.
+    const trialRaw = sessionStorage.getItem("institute_session");
+    if (trialRaw) {
+      const trial = JSON.parse(trialRaw) as { token?: string };
+      if (trial?.token?.startsWith("trial_")) {
+        headers.Authorization = `Bearer ${trial.token}`;
+        return headers;
+      }
+    }
     const instituteRaw = localStorage.getItem("institute_session");
     if (instituteRaw) {
       const parsed = JSON.parse(instituteRaw) as { token?: string };
