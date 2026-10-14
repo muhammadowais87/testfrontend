@@ -1149,18 +1149,13 @@ const GeneratePaper = () => {
       }
     }
     if (groups && groups.length > 0) {
-      if (isTrial) {
-        // Trial mode locks selection to the first chapter -- its checkbox is rendered as
-        // permanently checked below, so selectedChapters must stay in sync with that.
-        const firstGroup = groups[0];
-        setSelectedChapters(firstGroup ? [firstGroup.name, ...firstGroup.chapters] : []);
-      } else {
-        // Chapter checkboxes must start unchecked -- the user picks which ones to include.
-        setSelectedChapters([]);
-      }
+      // Chapter checkboxes must start unchecked -- the user picks which ones to include.
+      // Trial mode only restricts WHICH chapter can be picked (everything but the first
+      // is disabled below); it doesn't pre-select it.
+      setSelectedChapters([]);
       lastInitializedRef.current = { key: currentKey, isDb: hasDb, isTopicsFile: hasTopicsFile };
     }
-  }, [dbChapterGroups, selectedSubject, selectedLevel, selectedBoard, isTrial]);
+  }, [dbChapterGroups, selectedSubject, selectedLevel, selectedBoard]);
 
   useEffect(() => {
     setAllQuestions([]);
@@ -2189,7 +2184,7 @@ const GeneratePaper = () => {
                       <label className={`flex items-start gap-2.5 mb-3 ${isGroupDisabled ? "cursor-not-allowed" : "cursor-pointer"}`}>
                         <input
                           type="checkbox"
-                          checked={isTrial ? isFirstGroup : selectedChapters.includes(group.name)}
+                          checked={selectedChapters.includes(group.name)}
                           disabled={isGroupDisabled}
                           onChange={(e) => {
                             if (e.target.checked) {
