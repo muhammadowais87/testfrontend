@@ -1310,8 +1310,10 @@ const TeacherGeneratePaper = () => {
                         type="button"
                         className="w-full flex items-center justify-between border border-gray-300 rounded px-2 py-1.5 text-xs text-gray-700 bg-white"
                       >
-                        <span className="truncate text-left">
-                          {questionPriorities.length === 0 || questionPriorities.length === priorityOptions.length
+                        <span className={`truncate text-left ${priorityOptions.length === 0 ? "text-gray-400" : ""}`}>
+                          {priorityOptions.length === 0
+                            ? "Search questions first"
+                            : questionPriorities.length === 0 || questionPriorities.length === priorityOptions.length
                             ? "All priorities"
                             : priorityOptions
                                 .filter((option) => questionPriorities.includes(option.value))
@@ -1325,12 +1327,9 @@ const TeacherGeneratePaper = () => {
                       <DropdownMenuLabel className="text-[11px] text-gray-500">Select priorities</DropdownMenuLabel>
                       <DropdownMenuSeparator />
                       {priorityOptions.length === 0 ? (
-                        // Nothing to pick for this selection -- not selecting anything
-                        // already means "all" at search time, so offer Select All as the
-                        // only, always-available option instead of leaving the menu empty.
-                        <DropdownMenuCheckboxItem checked onSelect={(e) => e.preventDefault()} onCheckedChange={() => {}}>
-                          Select All
-                        </DropdownMenuCheckboxItem>
+                        // Priorities are read from the searched results, so there's nothing to list until
+                        // a search has run -- tell the user that instead of showing a Select All that does nothing.
+                        <div className="px-2 py-2 text-xs text-gray-500">Search questions first, then filter by priority.</div>
                       ) : (
                         <>
                           <DropdownMenuCheckboxItem
