@@ -6,7 +6,7 @@ const packages = [
   { name: "Package-1", price: "Rs:1,000", originalPrice: "Rs:2,000", validity: "1 month", popular: false },
   { name: "Package-2", price: "Rs:2,000", originalPrice: "Rs:3,000", validity: "3 months", popular: false },
   { name: "Package-3", price: "Rs:4,000", originalPrice: "Rs:6,000", validity: "6 months", popular: true },
-  { name: "Package-4", price: "Rs:10,000", originalPrice: "Rs:12,000", validity: "1 year", popular: false },
+  { name: "Package-4", price: "Rs:8,000", originalPrice: "Rs:12,000", validity: "1 year", popular: false },
 ];
 
 const features = [
