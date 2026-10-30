@@ -404,7 +404,7 @@ const TeacherSavedPapersView = () => {
   const [entriesPerPage, setEntriesPerPage] = useState(5);
   const [currentPage, setCurrentPage] = useState(1);
   const [openMenuPaperId, setOpenMenuPaperId] = useState<number | null>(null);
-  const [menuBtnPos, setMenuBtnPos] = useState<{ top: number; right: number } | null>(null);
+  const [menuBtnPos, setMenuBtnPos] = useState<{ top?: number; bottom?: number; right: number; maxHeight: number } | null>(null);
 
   useEffect(() => {
     if (!openMenuPaperId) return;
@@ -504,7 +504,18 @@ const TeacherSavedPapersView = () => {
                             } else {
                               const rect = (e.currentTarget as HTMLButtonElement).getBoundingClientRect();
                               setOpenMenuPaperId(p.id);
-                              setMenuBtnPos({ top: rect.bottom + 4, right: window.innerWidth - rect.right });
+                              // The menu is position:fixed, so on rows near the bottom of the screen it
+                              // used to run off the page with no way to reach the last items. Open it
+                              // upward when there's more room above, and cap its height to the space
+                              // available so it scrolls instead of being cut off.
+                              const spaceBelow = window.innerHeight - rect.bottom - 12;
+                              const spaceAbove = rect.top - 12;
+                              const openUp = spaceBelow < 260 && spaceAbove > spaceBelow;
+                              setMenuBtnPos(
+                                openUp
+                                  ? { bottom: window.innerHeight - rect.top + 4, right: window.innerWidth - rect.right, maxHeight: Math.max(120, spaceAbove) }
+                                  : { top: rect.bottom + 4, right: window.innerWidth - rect.right, maxHeight: Math.max(120, spaceBelow) }
+                              );
                             }
                           }}
                           className="h-8 w-8 inline-flex items-center justify-center rounded-lg border border-border text-muted-foreground hover:text-foreground hover:bg-secondary/70"
@@ -514,8 +525,8 @@ const TeacherSavedPapersView = () => {
 
                         {openMenuPaperId === p.id && menuBtnPos && (
                           <div
-                            className="fixed min-w-44 rounded-lg border border-border bg-card shadow-md z-50 p-1"
-                            style={{ top: menuBtnPos.top, right: menuBtnPos.right }}
+                            className="fixed min-w-44 overflow-y-auto overscroll-contain rounded-lg border border-border bg-card shadow-md z-50 p-1"
+                            style={{ top: menuBtnPos.top, bottom: menuBtnPos.bottom, right: menuBtnPos.right, maxHeight: menuBtnPos.maxHeight }}
                             onMouseDown={(e) => e.stopPropagation()}
                           >
                             <button

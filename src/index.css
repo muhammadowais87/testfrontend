@@ -272,15 +272,26 @@ html {
     page-break-inside: avoid;
   }
 
+  /* Half print shrinks each copy to 50%. transform: scale() only changes how a copy LOOKS --
+     its layout box keeps the full-size height, so the printer paginates as if every copy were
+     still a full page tall: page 1 ended half empty and the long questions were pushed to page 2.
+     zoom shrinks the layout box too, so the real (halved) height decides where pages break. */
   .saved-paper-print.mode-half .saved-paper-canvas {
-    width: 200% !important;
-    min-width: 200% !important;
-    transform: scale(0.5);
-    transform-origin: top left;
+    width: 100% !important;
+    min-width: 0 !important;
+    zoom: 0.5 !important;
+    transform: none !important;
     box-shadow: none !important;
   }
 
   .saved-paper-print.mode-half .saved-paper-page {
     padding: 3.5mm !important;
+  }
+
+  /* Let a big section (e.g. the long questions) continue onto the remaining space of the page
+     instead of jumping whole to the next one -- individual questions still stay unbroken. */
+  .saved-paper-print.mode-half .saved-paper-section {
+    break-inside: auto !important;
+    page-break-inside: auto !important;
   }
 }
