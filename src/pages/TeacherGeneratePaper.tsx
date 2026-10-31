@@ -273,6 +273,12 @@ const TeacherGeneratePaper = () => {
   // section's heading on the generated paper shows "(Any N)" where N = that batch's
   // selected count minus the ignore count (e.g. 5 selected, ignore 2 -> "Any 3").
   const [ignoreCountByBatch, setIgnoreCountByBatch] = useState<Record<number, number>>({});
+  // "Each Q Marks" per batch -- a later add with different marks must not change the
+  // "NxM=T" figure of sections that were added earlier.
+  const [marksByBatch, setMarksByBatch] = useState<Record<number, number>>({});
+  // Last total auto-filled into the Save dialog, so it can follow questions added since
+  // without overwriting a total the user typed in themselves.
+  const autoTotalMarksRef = useRef("");
   // Tracks the Dual Medium setting each question was added with, so a later add with a
   // different medium (English/Urdu/Dual) doesn't change previously-added questions.
   const [questionMedium, setQuestionMedium] = useState<Record<number, string>>({});
@@ -720,6 +726,26 @@ const TeacherGeneratePaper = () => {
     return sectionOrder.map((key) => ({ key, typeKey: sectionMap.get(key)!.typeKey, questions: sectionMap.get(key)!.questions }));
   }, [workspaceQuestions]);
 
+  const getSectionMarks = (batch: number) => marksByBatch[batch] ?? (Number(eachQMarks) || 2);
+
+  // Sum of every section's own count x marks (comprehension sets count as one unit each).
+  const getDefaultTotalMarks = () =>
+    String(
+      workspaceSections.reduce((sum, section) => {
+        const unitCount = isComprehensionType(section.typeKey)
+          ? groupComprehensionSets(section.questions).length
+          : section.questions.length;
+        return sum + unitCount * getSectionMarks(section.questions[0]?.batch ?? 0);
+      }, 0),
+    );
+
+  // A total the user typed in wins; otherwise (empty, "0", or still the value auto-filled
+  // earlier) it is re-derived from the sections.
+  const resolveTotalMarks = () =>
+    !totalMarks || totalMarks === "0" || totalMarks === autoTotalMarksRef.current
+      ? getDefaultTotalMarks()
+      : totalMarks;
+
   const handleSearchClick = async () => {
     if (!questionType) {
       setSelectionError("Please select question type first.");
@@ -847,6 +873,7 @@ const TeacherGeneratePaper = () => {
     setSelectionError("");
     const ids = [...selectedQuestions];
     const batchId = nextBatchIdRef.current++;
+    setMarksByBatch((prev) => ({ ...prev, [batchId]: Number.parseInt(eachQMarks, 10) || 2 }));
     if (ignoreCount > 0) {
       setIgnoreCountByBatch((prev) => ({ ...prev, [batchId]: ignoreCount }));
     }
@@ -909,6 +936,7 @@ const TeacherGeneratePaper = () => {
     setShuffledOrder([]);
     setQuestionBatch({});
     setIgnoreCountByBatch({});
+    setMarksByBatch({});
     setQuestionMedium({});
     setQuestionTwoPerLine({});
     nextBatchIdRef.current = 0;
@@ -955,7 +983,14 @@ const TeacherGeneratePaper = () => {
       setDualMedium(paperMedium);
       setAppliedDualMedium(paperMedium);
       setRequiredQuestions(String(savedPaper.questions.length || 0));
-      setEachQMarks(String(marksPerQuestion));
+      // Older saved papers have no per-batch marks, so every batch starts from the average.
+      const batchMarksForLoad: Record<number, number> = {
+        ...Object.fromEntries(savedPaper.questions.map((q) => [q.batch ?? 0, marksPerQuestion])),
+        ...(savedPaper.batchMarks ?? {}),
+      };
+      const lastBatchId = Math.max(0, ...savedPaper.questions.map((q) => q.batch ?? 0));
+      setEachQMarks(String(batchMarksForLoad[lastBatchId] ?? marksPerQuestion));
+      setMarksByBatch(batchMarksForLoad);
       setShuffledOrder(orderedIds);
       setQuestionBatch(
         Object.fromEntries(savedPaper.questions.map((q) => [q.id, q.batch ?? 0]))
@@ -997,9 +1032,10 @@ const TeacherGeneratePaper = () => {
       const formattedDate = `${String(today.getDate()).padStart(2, "0")}/${String(today.getMonth() + 1).padStart(2, "0")}/${today.getFullYear()}`;
       setPaperDate(formattedDate);
     }
-    if (!totalMarks || totalMarks === "0") {
-      const marksPerQuestion = Number(eachQMarks) || 2;
-      setTotalMarks(String(shuffledOrder.length * marksPerQuestion));
+    if (!totalMarks || totalMarks === "0" || totalMarks === autoTotalMarksRef.current) {
+      const defaultTotal = getDefaultTotalMarks();
+      setTotalMarks(defaultTotal);
+      autoTotalMarksRef.current = defaultTotal;
     }
     setShowSavePaperDialog(true);
   };
@@ -1020,7 +1056,7 @@ const TeacherGeneratePaper = () => {
       date: paperDate || new Date().toLocaleDateString("en-GB"),
       paperCategory: paperCategory || `${selectedSubject?.split("||")[0] || "Paper"} - ${questionType}`,
       timeAllowed: timeAllowed || "40",
-      totalMarks: totalMarks && totalMarks !== "0" ? totalMarks : String(workspaceQuestions.length * (Number(eachQMarks) || 2)),
+      totalMarks: resolveTotalMarks(),
       questionType,
       medium: appliedDualMedium,
       twoQuestionsPerLine,
@@ -1035,6 +1071,7 @@ const TeacherGeneratePaper = () => {
         twoPerLine: question.twoPerLine,
       })),
       batchIgnoreCounts: ignoreCountByBatch,
+      batchMarks: marksByBatch,
     };
 
     navigate(`/teacher/saved-paper/${previewPaper.id}/view`, {
@@ -1058,8 +1095,7 @@ const TeacherGeneratePaper = () => {
     }));
 
     const dateForStorage = paperDate || new Date().toLocaleDateString("en-GB");
-    const marksPerQuestion = Number(eachQMarks) || 2;
-    const calculatedTotalMarks = totalMarks && totalMarks !== "0" ? totalMarks : String(activeQuestions.length * marksPerQuestion);
+    const calculatedTotalMarks = resolveTotalMarks();
 
     await addSavedPaper({
       id: Date.now(),
@@ -1077,6 +1113,7 @@ const TeacherGeneratePaper = () => {
       twoQuestionsPerLine,
       questions: activeQuestions,
       batchIgnoreCounts: ignoreCountByBatch,
+      batchMarks: marksByBatch,
     });
 
     setShowSavePaperDialog(false);
@@ -1921,7 +1958,7 @@ const TeacherGeneratePaper = () => {
                   {workspaceQuestions.length === 0 ? (
                     <p className="text-sm text-gray-500 italic">No questions added.</p>
                   ) : workspaceSections.map((section, sectionIndex) => {
-                    const marksPerQuestion = Number(eachQMarks) || 2;
+                    const marksPerQuestion = getSectionMarks(section.questions[0]?.batch ?? 0);
                     const sectionNumber = sectionIndex + 1;
                     const sectionLabel = getSectionLabel(section.typeKey);
                     // Each section keeps the language it was added with -- changing the

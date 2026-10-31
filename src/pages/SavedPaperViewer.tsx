@@ -677,11 +677,15 @@ const SavedPaperViewer = () => {
       const title = ignoreCount > 0 && attemptCount > 0 ? `${label.title} (Any ${attemptCount})` : label.title;
       const urduTitle = ignoreCount > 0 && attemptCount > 0 ? `${label.urduTitle} (کوئی بھی ${attemptCount})` : label.urduTitle;
 
-      return { key, typeKey, title, urduTitle, questions };
+      // Each section prints the marks it was added with. Papers saved before per-batch
+      // marks existed fall back to the paper-wide average.
+      const sectionMarksPerQuestion = paper?.batchMarks?.[batchNum] ?? marksPerQuestion;
+
+      return { key, typeKey, title, urduTitle, questions, marksPerQuestion: sectionMarksPerQuestion };
     });
 
-    return { sections: sections.filter((s) => s.questions.length > 0), marksPerQuestion };
-  }, [editableQuestions, paper?.totalMarks, paperFields.totalMarks, paper?.batchIgnoreCounts]);
+    return { sections: sections.filter((s) => s.questions.length > 0) };
+  }, [editableQuestions, paper?.totalMarks, paperFields.totalMarks, paper?.batchIgnoreCounts, paper?.batchMarks]);
 
   const totalQuestionCount = useMemo(
     () => sectionedQuestions.sections.reduce((sum, section) => sum + section.questions.length, 0),
@@ -1678,14 +1682,14 @@ const SavedPaperViewer = () => {
                       {manualEditing ? (
                         <input
                           type="text"
-                          value={sectionMarksOverrides[section.key] || `${sectionUnitCount}X${sectionedQuestions.marksPerQuestion}=${sectionUnitCount * sectionedQuestions.marksPerQuestion}`}
+                          value={sectionMarksOverrides[section.key] || `${sectionUnitCount}X${section.marksPerQuestion}=${sectionUnitCount * section.marksPerQuestion}`}
                           onChange={(e) => setSectionMarksOverrides((prev) => ({ ...prev, [section.key]: e.target.value }))}
                           className="h-6 min-w-[170px] rounded border border-black px-2 text-center text-black outline-none"
                           style={{ fontSize: `${resolvedEnglishFontSize}px`, fontFamily: englishFontFamily }}
                         />
                       ) : (
                         <span className="font-bold text-center text-black" style={{ fontSize: `${resolvedEnglishFontSize}px`, fontFamily: englishFontFamily }}>
-                          {sectionMarksOverrides[section.key] || `${sectionUnitCount}X${sectionedQuestions.marksPerQuestion}=${sectionUnitCount * sectionedQuestions.marksPerQuestion}`}
+                          {sectionMarksOverrides[section.key] || `${sectionUnitCount}X${section.marksPerQuestion}=${sectionUnitCount * section.marksPerQuestion}`}
                         </span>
                       )}
                       {showUr && (

@@ -32,6 +32,10 @@ export type SavedPaperRecord = {
   // N = that batch's question count - the ignore count, e.g. "Answer the
   // following questions (Any 3)" for 5 selected questions with 2 ignored.
   batchIgnoreCounts?: Record<number, number>;
+  // Marks per question for each batch (one batch = one Add-to-Paper action), so every
+  // section prints its own "NxM=T" instead of one paper-wide figure. Older saved papers
+  // don't have it and fall back to an average of the total marks.
+  batchMarks?: Record<number, number>;
 };
 
 const LEGACY_SAVED_PAPERS_STORAGE_KEY = "institute_saved_papers";
@@ -51,6 +55,14 @@ const getAuthHeaders = () => {
   };
 };
 
+const toBatchNumberMap = (value: unknown): Record<number, number> | undefined => {
+  if (!value || typeof value !== "object" || Array.isArray(value)) return undefined;
+  const entries = Object.entries(value as Record<string, unknown>)
+    .map(([key, amount]) => [Number(key), Number(amount)] as const)
+    .filter(([key, amount]) => Number.isInteger(key) && key >= 0 && Number.isInteger(amount) && amount > 0);
+  return entries.length > 0 ? Object.fromEntries(entries) : undefined;
+};
+
 const toSavedPaperRecord = (paper: any): SavedPaperRecord => ({
   id: Number(paper?.id) || 0,
   title: typeof paper?.title === "string" ? paper.title : "Paper",
@@ -65,6 +77,8 @@ const toSavedPaperRecord = (paper: any): SavedPaperRecord => ({
   questionType: typeof paper?.questionType === "string" ? paper.questionType : "",
   medium: typeof paper?.medium === "string" ? paper.medium : undefined,
   twoQuestionsPerLine: Boolean(paper?.twoQuestionsPerLine),
+  batchIgnoreCounts: toBatchNumberMap(paper?.batchIgnoreCounts),
+  batchMarks: toBatchNumberMap(paper?.batchMarks),
   questions: Array.isArray(paper?.questions)
     ? paper.questions.map((q: any) => ({
         id: Number(q?.id) || 0,
