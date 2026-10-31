@@ -27,7 +27,7 @@ const AdminTeachers = () => {
 
   useEffect(() => {
     if (localStorage.getItem("admin_logged_in") !== "true") {
-      navigate("/${getAdminRoute()}/login");
+      navigate(`/${getAdminRoute()}/login`);
       return;
     }
 
@@ -87,7 +87,7 @@ const AdminTeachers = () => {
                   className="pl-9 h-9 text-sm"
                 />
               </div>
-              <Button size="sm" className="gap-1.5 h-9 shrink-0" onClick={() => navigate("/${getAdminRoute()}/teacher/add")}>
+              <Button size="sm" className="gap-1.5 h-9 shrink-0" onClick={() => navigate(`/${getAdminRoute()}/teacher/add`)}>
                 <Plus className="w-4 h-4" /> Add
               </Button>
             </div>

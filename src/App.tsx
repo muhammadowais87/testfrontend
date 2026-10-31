@@ -20,11 +20,13 @@ const TeacherGeneratePaper = lazy(() => import("./pages/TeacherGeneratePaper"));
 const AdminLogin = lazy(() => import("./pages/AdminLogin"));
 const AdminDashboard = lazy(() => import("./pages/AdminDashboard"));
 const SchoolDetail = lazy(() => import("./pages/SchoolDetail"));
-const SchoolForm = lazy(() => import("./pages/SchoolForm"));
+const AddSchool = lazy(() => import("./pages/SchoolForm").then((m) => ({ default: m.AddSchool })));
+const EditSchool = lazy(() => import("./pages/SchoolForm").then((m) => ({ default: m.EditSchool })));
 const AdminQueries = lazy(() => import("./pages/AdminQueries"));
 const AdminTeachers = lazy(() => import("./pages/AdminTeachers"));
 const TeacherDetailAdmin = lazy(() => import("./pages/TeacherDetailAdmin"));
-const TeacherFormAdmin = lazy(() => import("./pages/TeacherFormAdmin"));
+const AddTeacher = lazy(() => import("./pages/TeacherFormAdmin").then((m) => ({ default: m.AddTeacher })));
+const EditTeacher = lazy(() => import("./pages/TeacherFormAdmin").then((m) => ({ default: m.EditTeacher })));
 const QueryPage = lazy(() => import("./pages/QueryPage"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 const SavedPaperViewer = lazy(() => import("./pages/SavedPaperViewer"));
@@ -104,14 +106,14 @@ const AppContent = () => {
       <Route path="/sub-user/generate-paper" element={<SubUserProtectedRoute><Suspense fallback={<PageFallback />}><TeacherGeneratePaper /></Suspense></SubUserProtectedRoute>} />
       <Route path={p("/login")} element={<Suspense fallback={<PageFallback />}><AdminLogin /></Suspense>} />
       <Route path={p("/dashboard")} element={<Suspense fallback={<PageFallback />}><AdminDashboard /></Suspense>} />
-      <Route path={p("/school/add")} element={<Suspense fallback={<PageFallback />}><SchoolForm /></Suspense>} />
+      <Route path={p("/school/add")} element={<Suspense fallback={<PageFallback />}><AddSchool /></Suspense>} />
       <Route path={p("/school/:id")} element={<Suspense fallback={<PageFallback />}><SchoolDetail /></Suspense>} />
-      <Route path={p("/school/:id/edit")} element={<Suspense fallback={<PageFallback />}><SchoolForm /></Suspense>} />
+      <Route path={p("/school/:id/edit")} element={<Suspense fallback={<PageFallback />}><EditSchool /></Suspense>} />
       <Route path={p("/queries")} element={<Suspense fallback={<PageFallback />}><AdminQueries /></Suspense>} />
       <Route path={p("/teachers")} element={<Suspense fallback={<PageFallback />}><AdminTeachers /></Suspense>} />
-      <Route path={p("/teacher/add")} element={<Suspense fallback={<PageFallback />}><TeacherFormAdmin /></Suspense>} />
+      <Route path={p("/teacher/add")} element={<Suspense fallback={<PageFallback />}><AddTeacher /></Suspense>} />
       <Route path={p("/teacher/:id")} element={<Suspense fallback={<PageFallback />}><TeacherDetailAdmin /></Suspense>} />
-      <Route path={p("/teacher/:id/edit")} element={<Suspense fallback={<PageFallback />}><TeacherFormAdmin /></Suspense>} />
+      <Route path={p("/teacher/:id/edit")} element={<Suspense fallback={<PageFallback />}><EditTeacher /></Suspense>} />
       <Route path="*" element={<Suspense fallback={<PageFallback />}><NotFound /></Suspense>} />
     </Routes>
   );

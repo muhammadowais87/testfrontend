@@ -64,7 +64,7 @@ const TeacherFormPage = ({ mode, teacherId }: TeacherFormProps) => {
     }
   }, [existing]);
 
-  const amount = planAmounts[plan] || 2000;
+  const amount = planAmounts[plan] || existing?.amount || 2000;
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -96,7 +96,7 @@ const TeacherFormPage = ({ mode, teacherId }: TeacherFormProps) => {
       } else {
         await addTeacher(data);
         toast({ title: "Teacher Added", description: `${data.name} has been added.` });
-        navigate("/${getAdminRoute()}/teachers");
+        navigate(`/${getAdminRoute()}/teachers`);
       }
     } catch (error) {
       setFormError(error instanceof Error ? error.message : "Unable to save teacher");
@@ -119,7 +119,7 @@ const TeacherFormPage = ({ mode, teacherId }: TeacherFormProps) => {
         <div className="flex items-center justify-center py-20">
           <div className="text-center space-y-4">
             <p className="text-muted-foreground">Teacher not found</p>
-            <Button onClick={() => navigate("/${getAdminRoute()}/teachers")}>
+            <Button onClick={() => navigate(`/${getAdminRoute()}/teachers`)}>
               <ArrowLeft className="w-4 h-4 mr-2" /> Back
             </Button>
           </div>
@@ -134,7 +134,7 @@ const TeacherFormPage = ({ mode, teacherId }: TeacherFormProps) => {
         <div className="flex items-center gap-3">
           <Button
             variant="ghost" size="icon"
-            onClick={() => navigate(mode === "edit" && teacherId ? `/${getAdminRoute()}/teacher/${teacherId}` : "/${getAdminRoute()}/teachers")}
+            onClick={() => navigate(mode === "edit" && teacherId ? `/${getAdminRoute()}/teacher/${teacherId}` : `/${getAdminRoute()}/teachers`)}
             className="h-9 w-9"
           >
             <ArrowLeft className="w-5 h-5" />

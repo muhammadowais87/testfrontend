@@ -59,7 +59,7 @@ const SchoolForm = ({ mode, schoolId }: SchoolFormProps) => {
     }
   }, [existing]);
 
-  const amount = planAmounts[plan] || 2000;
+  const amount = planAmounts[plan] || existing?.amount || 2000;
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -87,7 +87,7 @@ const SchoolForm = ({ mode, schoolId }: SchoolFormProps) => {
       } else {
         await addSchool(data);
         toast({ title: "School Added", description: `${data.name} has been added.` });
-        navigate("/${getAdminRoute()}/dashboard");
+        navigate(`/${getAdminRoute()}/dashboard`);
       }
     } catch (error) {
       toast({
@@ -114,7 +114,7 @@ const SchoolForm = ({ mode, schoolId }: SchoolFormProps) => {
         <div className="flex items-center justify-center py-20">
           <div className="text-center space-y-4">
             <p className="text-muted-foreground">School not found</p>
-            <Button onClick={() => navigate("/${getAdminRoute()}/dashboard")}>
+            <Button onClick={() => navigate(`/${getAdminRoute()}/dashboard`)}>
               <ArrowLeft className="w-4 h-4 mr-2" /> Back
             </Button>
           </div>
@@ -129,7 +129,7 @@ const SchoolForm = ({ mode, schoolId }: SchoolFormProps) => {
         <div className="flex items-center gap-3">
           <Button
             variant="ghost" size="icon"
-            onClick={() => navigate(mode === "edit" && schoolId ? `/${getAdminRoute()}/school/${schoolId}` : "/${getAdminRoute()}/dashboard")}
+            onClick={() => navigate(mode === "edit" && schoolId ? `/${getAdminRoute()}/school/${schoolId}` : `/${getAdminRoute()}/dashboard`)}
             className="h-9 w-9"
           >
             <ArrowLeft className="w-5 h-5" />

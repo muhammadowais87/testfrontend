@@ -58,7 +58,7 @@ const TeacherDetail = () => {
         <div className="flex items-center justify-center py-20">
           <div className="text-center space-y-4">
             <p className="text-muted-foreground">Teacher not found</p>
-            <Button onClick={() => navigate("/${getAdminRoute()}/teachers")}>
+            <Button onClick={() => navigate(`/${getAdminRoute()}/teachers`)}>
               <ArrowLeft className="w-4 h-4 mr-2" /> Back
             </Button>
           </div>
@@ -71,7 +71,7 @@ const TeacherDetail = () => {
     try {
       await deleteTeacher(teacher.id);
       toast({ title: "Teacher Deleted", description: `${teacher.name} has been removed.` });
-      navigate("/${getAdminRoute()}/teachers");
+      navigate(`/${getAdminRoute()}/teachers`);
     } catch (error) {
       toast({
         title: "Delete Failed",
@@ -90,7 +90,7 @@ const TeacherDetail = () => {
         {/* Header */}
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
           <div className="flex items-center gap-3">
-            <Button variant="ghost" size="icon" onClick={() => navigate("/${getAdminRoute()}/teachers")} className="h-9 w-9 shrink-0">
+            <Button variant="ghost" size="icon" onClick={() => navigate(`/${getAdminRoute()}/teachers`)} className="h-9 w-9 shrink-0">
               <ArrowLeft className="w-5 h-5" />
             </Button>
             <div>
