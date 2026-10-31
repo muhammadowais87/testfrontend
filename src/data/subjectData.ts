@@ -3,6 +3,7 @@ import { getTenTopicChapters } from "./tenTopicChapters";
 import afaqTopicChapters from "./afaqTopicChapters.json";
 import oxfordTopicChapters from "./oxfordTopicChapters.json";
 import baTopicChapters from "./baTopicChapters.json";
+import { interTwoChapters } from "./interTwoChapters";
 
 
 export type SubjectCard = {
@@ -81,6 +82,7 @@ const bookImages: Record<string, string> = {
   "English (IS)": "/images/books/english-book.png",
   "اردو (Iqbal)": "/images/books/urdu-book.png",
   "مطالعہ اسلام": "/images/books/islamiat-book.png",
+  "انسانی جغرافیہ": "/images/books/geography-book.png",
   "معلومات عامہ": "/images/books/general-science-book.png",
   "واقعیت عامہ": "/images/books/general-science-book.png",
 };
@@ -234,6 +236,16 @@ export const interOneExtraSubjects: SubjectCard[] = [
   { title: "تاریخ اسلام", subtitle: "PTB", image: getBookImage("تاریخ اسلام") },
   { title: "طبی جغرافیہ", subtitle: "PTB", image: getBookImage("طبی جغرافیہ") },
   { title: "لائبریری سائنس", subtitle: "PTB", image: getBookImage("لائبریری سائنس") },
+];
+
+// INTER-II subjects that have no INTER-I counterpart (INTER-II shows the INTER-I list plus these).
+const interTwoOnlySubjects: SubjectCard[] = [
+  { title: "کاروباری شماریات", subtitle: "I.COM", image: getBookImage("کاروباری شماریات") },
+  { title: "اصول بینکاری", subtitle: "I.COM", image: getBookImage("اصول بینکاری") },
+  { title: "تجارتی جغرافیہ", subtitle: "I.COM", image: getBookImage("تجارتی جغرافیہ") },
+  { title: "Pakistan Studies", subtitle: "", image: getBookImage("Pakistan Studies") },
+  { title: "ہوم اکنامکس", subtitle: "PTB", image: getBookImage("ہوم اکنامکس") },
+  { title: "انسانی جغرافیہ", subtitle: "PTB", image: getBookImage("انسانی جغرافیہ") },
 ];
 
 export const interTwoCoreSubjects: SubjectCard[] = [
@@ -456,7 +468,7 @@ export const ptbClassSubjectsMap: Record<string, SubjectCard[][]> = {
     ],
   ],
   "INTER-I": [interOneCoreSubjects, interOneGeneralSubjects, interOneExtraSubjects],
-  "INTER-II": [interTwoCoreSubjects, interTwoCommerceSubjects, interTwoExtraSubjects],
+  "INTER-II": [interOneCoreSubjects, interOneGeneralSubjects, [...interOneExtraSubjects, ...interTwoOnlySubjects]],
 };
 
 // Board-level map: board name -> class -> subjects
@@ -2320,7 +2332,6 @@ export const subjectChaptersMap: Record<string, ChapterGroup[]> = {
 
 // Map Islamiyat (اختیاری) optional chapters for INTER classes
 subjectChaptersMap["اسلامیات اختیاری-INTER-I-PTB"] = islamiyatOptionalChapters;
-subjectChaptersMap["اسلامیات اختیاری-INTER-II-PTB"] = islamiyatOptionalChapters;
 
 // Map Nazra Quran for early PTB classes
 subjectChaptersMap["ناظرہ قرآن مجید-ONE-PTB"] = nazraQuranChapters;
@@ -2333,9 +2344,7 @@ subjectChaptersMap["ناظرہ قرآن مجید-7TH-PTB"] = nazraQuranChapters;
 subjectChaptersMap["ناظرہ قرآن مجید-8TH-PTB"] = nazraQuranChapters;
 // Map Tarjuma (ترجمہ القرآن المجید) for INTER classes as well
 subjectChaptersMap["ترجمہ القرآن المجید-INTER-I-PTB"] = nazraQuranChapters;
-subjectChaptersMap["ترجمہ القرآن المجید-INTER-II-PTB"] = nazraQuranChapters;
 subjectChaptersMap["Tarjuma-INTER-I-PTB"] = nazraQuranChapters;
-subjectChaptersMap["Tarjuma-INTER-II-PTB"] = nazraQuranChapters;
 subjectChaptersMap["ترجمہ القرآن المجید-INTER-I"] = nazraQuranChapters;
 // Also map Tarjuma / ترجمہ القرآن المجید to the same groups for Part ONE
 subjectChaptersMap["ترجمہ القرآن المجید-ONE-PTB"] = nazraQuranChapters;
@@ -2349,20 +2358,15 @@ subjectChaptersMap["اردو لازمی-9TH-PTB"] = urduPreChapters;
 subjectChaptersMap["اردو لازمی-11TH-PTB"] = urduPreChapters;
 // Also allow Urdu Lazmi pre-chapters to be used for INTER classes where needed
 subjectChaptersMap["اردو لازمی-INTER-I-PTB"] = urduPreChapters;
-subjectChaptersMap["اردو لازمی-INTER-II-PTB"] = urduPreChapters;
 
 // Map Sociology for INTER classes
 subjectChaptersMap["سوشیالوجی-INTER-I-PTB"] = sociologyChapters;
-subjectChaptersMap["سوشیالوجی-INTER-II-PTB"] = sociologyChapters;
 // Tolerant keys for Sociology (سوکس)
 subjectChaptersMap["سوکس-INTER-I-PTB"] = sociologyChapters;
-subjectChaptersMap["سوکس-INTER-II-PTB"] = sociologyChapters;
 subjectChaptersMap["Sociology-INTER-I-PTB"] = sociologyChapters;
-subjectChaptersMap["Sociology-INTER-II-PTB"] = sociologyChapters;
 
 // Map Education for INTER classes
 subjectChaptersMap["ایجوکیشن-INTER-I-PTB"] = educationChapters;
-subjectChaptersMap["ایجوکیشن-INTER-II-PTB"] = educationChapters;
 
 // Map Punjabi chapters for PTB 9th and 10th
 subjectChaptersMap["پنجابی-9TH-PTB"] = punjabiChapters;
@@ -2373,17 +2377,13 @@ subjectChaptersMap["Punjabi-ONE-PTB"] = punjabiChapters;
 subjectChaptersMap["پنجابی-ONE"] = punjabiChapters;
 // Map Punjabi for INTER classes (if selected under INTER-I/II)
 subjectChaptersMap["پنجابی-INTER-I-PTB"] = punjabiChapters;
-subjectChaptersMap["پنجابی-INTER-II-PTB"] = punjabiChapters;
 subjectChaptersMap["Punjabi-INTER-I-PTB"] = punjabiChapters;
-subjectChaptersMap["Punjabi-INTER-II-PTB"] = punjabiChapters;
 
 // Map Physical Education for INTER classes
 subjectChaptersMap["فزیکل ایجوکیشن-INTER-I-PTB"] = physicalEducationChapters;
-subjectChaptersMap["فزیکل ایجوکیشن-INTER-II-PTB"] = physicalEducationChapters;
 
 // Map Psychology (نفسیات) for INTER classes
 subjectChaptersMap["نفسیات-INTER-I-PTB"] = psychologyChapters;
-subjectChaptersMap["نفسیات-INTER-II-PTB"] = psychologyChapters;
 
 // Map Civics / علم شہریت for secondary classes (user-requested)
 subjectChaptersMap["علم شہریت-9TH-PTB"] = civicsChapters;
@@ -2400,9 +2400,7 @@ subjectChaptersMap["Farsi-ONE-PTB"] = farsiPartOneChapters;
 subjectChaptersMap["فارسی-ONE"] = farsiPartOneChapters;
 // Map Farsi for INTER classes (use Part1 chapters as fallback)
 subjectChaptersMap["فارسی-INTER-I-PTB"] = farsiPartOneChapters;
-subjectChaptersMap["فارسی-INTER-II-PTB"] = farsiPartOneChapters;
 subjectChaptersMap["Farsi-INTER-I-PTB"] = farsiPartOneChapters;
-subjectChaptersMap["Farsi-INTER-II-PTB"] = farsiPartOneChapters;
 subjectChaptersMap["فارسی-INTER-I"] = farsiPartOneChapters;
 // Map Physical Geography (طبعی جغرافیہ) for Part ONE
 subjectChaptersMap["طبعی جغرافیہ-ONE-PTB"] = physicalGeographyPartOneChapters;
@@ -2428,7 +2426,6 @@ subjectChaptersMap["Tareekh-e-Islam-PTB"] = tareekhIslamPartOneChapters;
 subjectChaptersMap["Tareekh-e-Islam"] = tareekhIslamPartOneChapters;
 subjectChaptersMap["History of Islam-PTB"] = tareekhIslamPartOneChapters;
 subjectChaptersMap["تاریخ اسلام-INTER-I-PTB"] = tareekhIslamPartOneChapters;
-subjectChaptersMap["تاریخ اسلام-INTER-II-PTB"] = tareekhIslamPartOneChapters;
 subjectChaptersMap["تاریخ اسلام-9TH-PTB"] = tareekhIslamPartOneChapters;
 subjectChaptersMap["تاریخ اسلام-10TH-PTB"] = tareekhIslamPartOneChapters;
 
@@ -2440,12 +2437,10 @@ subjectChaptersMap["Library Science-ONE-PTB"] = librarySciencePartOneChapters;
 subjectChaptersMap["Library Science-PTB"] = librarySciencePartOneChapters;
 subjectChaptersMap["Library Science"] = librarySciencePartOneChapters;
 subjectChaptersMap["لائبریری سائنس-INTER-I-PTB"] = librarySciencePartOneChapters;
-subjectChaptersMap["لائبریری سائنس-INTER-II-PTB"] = librarySciencePartOneChapters;
 subjectChaptersMap["لازمیری سائنس-ONE-PTB"] = librarySciencePartOneChapters;
 subjectChaptersMap["لازمیری سائنس-ONE"] = librarySciencePartOneChapters;
 subjectChaptersMap["لازمیری سائنس-PTB"] = librarySciencePartOneChapters;
 subjectChaptersMap["لازمیری سائنس-INTER-I-PTB"] = librarySciencePartOneChapters;
-subjectChaptersMap["لازمیری سائنس-INTER-II-PTB"] = librarySciencePartOneChapters;
 
 // Tolerant aliases for Ikhlaqiat / اخلاقیات
 subjectChaptersMap["اخلاقیات-ONE-PTB"] = ikhlaqiatPartOneChapters;
@@ -2453,7 +2448,6 @@ subjectChaptersMap["اخلاقیات-ONE"] = ikhlaqiatPartOneChapters;
 subjectChaptersMap["Ethics-ONE-PTB"] = ikhlaqiatPartOneChapters;
 subjectChaptersMap["اخلاقیات-PTB"] = ikhlaqiatPartOneChapters;
 subjectChaptersMap["اخلاقیات-INTER-I-PTB"] = ikhlaqiatPartOneChapters;
-subjectChaptersMap["اخلاقیات-INTER-II-PTB"] = ikhlaqiatPartOneChapters;
 
 // Tolerant aliases for Physical Geography / طبعی جغرافیہ
 subjectChaptersMap["طبعی جغرافیہ-ONE-PTB"] = physicalGeographyPartOneChapters;
@@ -2462,12 +2456,10 @@ subjectChaptersMap["طبعی جغرافیہ-PTB"] = physicalGeographyPartOneChap
 subjectChaptersMap["Physical Geography-ONE-PTB"] = physicalGeographyPartOneChapters;
 subjectChaptersMap["Physical Geography-PTB"] = physicalGeographyPartOneChapters;
 subjectChaptersMap["طبعی جغرافیہ-INTER-I-PTB"] = physicalGeographyPartOneChapters;
-subjectChaptersMap["طبعی جغرافیہ-INTER-II-PTB"] = physicalGeographyPartOneChapters;
 subjectChaptersMap["طبی جغرافیہ-ONE-PTB"] = physicalGeographyPartOneChapters;
 subjectChaptersMap["طبی جغرافیہ-ONE"] = physicalGeographyPartOneChapters;
 subjectChaptersMap["طبی جغرافیہ-PTB"] = physicalGeographyPartOneChapters;
 subjectChaptersMap["طبی جغرافیہ-INTER-I-PTB"] = physicalGeographyPartOneChapters;
-subjectChaptersMap["طبی جغرافیہ-INTER-II-PTB"] = physicalGeographyPartOneChapters;
 // Map Ikhlaqiat (اخلاقیات) Part ONE
 subjectChaptersMap["اخلاقیات-ONE-PTB"] = ikhlaqiatPartOneChapters;
 subjectChaptersMap["اخلاقیات-ONE"] = ikhlaqiatPartOneChapters;
@@ -2480,9 +2472,10 @@ subjectChaptersMap["لازمیری سائنس-ONE-PTB"] = librarySciencePartOneC
 subjectChaptersMap["لازمیری سائنس-ONE"] = librarySciencePartOneChapters;
 // Map Civics for INTER classes
 subjectChaptersMap["علم شہریت-INTER-I-PTB"] = civicsChapters;
-subjectChaptersMap["علم شہریت-INTER-II-PTB"] = civicsChapters;
 subjectChaptersMap["Civics-INTER-I-PTB"] = civicsChapters;
-subjectChaptersMap["Civics-INTER-II-PTB"] = civicsChapters;
+
+// INTER-II (2nd year): only the subjects in interTwoChapters.ts have topics.
+Object.assign(subjectChaptersMap, interTwoChapters);
 
 // Load AFAQ, Oxford, BA chapter JSON data synchronously
 const defaultBaChapter: ChapterGroup[] = [{ name: "Syllabus", chapters: ["Full Syllabus"] }];
@@ -2539,6 +2532,10 @@ export const getChaptersForSubject = (subject: string, className: string, board:
   }
 
   const key = `${actualSubject}-${className}-${board}`;
+  // INTER-II: show only the topics registered for it; never fall back to Part 1 or the dummy list.
+  if (board === "PTB" && className === "INTER-II") {
+    return subjectChaptersMap[key] ?? [];
+  }
   // Debug logging to help trace why some subjects don't return chapters
   try {
     // eslint-disable-next-line no-console

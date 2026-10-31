@@ -1,4 +1,5 @@
 import { API_BASE_URL } from "@/lib/api";
+import { getPortalToken } from "@/lib/portalToken";
 
 export type SavedPaperQuestion = {
   id: number;
@@ -33,55 +34,10 @@ export type SavedPaperRecord = {
   batchIgnoreCounts?: Record<number, number>;
 };
 
-type StoredSession = {
-  token: string;
-};
-
 const LEGACY_SAVED_PAPERS_STORAGE_KEY = "institute_saved_papers";
 const LEGACY_SAVED_PAPERS_MIGRATED_KEY = "institute_saved_papers_migrated_to_db_v1";
 
-const getStoredSession = (key: string): StoredSession | null => {
-  if (typeof window === "undefined") {
-    return null;
-  }
-
-  const raw = window.localStorage.getItem(key);
-  if (!raw) return null;
-
-  try {
-    const parsed = JSON.parse(raw) as StoredSession;
-    if (typeof parsed?.token === "string" && parsed.token.trim()) {
-      return parsed;
-    }
-    return null;
-  } catch {
-    return null;
-  }
-};
-
-const getAuthToken = () => {
-  // A trial session (private to this tab) always wins -- it must never fall through to a
-  // real teacher/institute token that happens to be saved in this browser.
-  if (typeof window !== "undefined") {
-    try {
-      const trialRaw = window.sessionStorage.getItem("institute_session");
-      const trialToken = trialRaw ? (JSON.parse(trialRaw) as StoredSession)?.token : "";
-      if (typeof trialToken === "string" && trialToken.startsWith("trial_")) {
-        return trialToken;
-      }
-    } catch {
-      // ignore parse errors and fall through to the saved sessions
-    }
-  }
-
-  const teacherSession = getStoredSession("teacher_session");
-  if (teacherSession?.token) {
-    return teacherSession.token;
-  }
-
-  const instituteSession = getStoredSession("institute_session");
-  return instituteSession?.token || "";
-};
+const getAuthToken = getPortalToken;
 
 const getAuthHeaders = () => {
   const token = getAuthToken();

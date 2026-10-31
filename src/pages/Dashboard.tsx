@@ -442,7 +442,7 @@ const BillingView = ({ profile, token }: { profile: InstituteProfile | null; tok
               <Wallet className="w-4 h-4" />
               Current Plan
             </div>
-            <p className="text-xl font-bold text-foreground">{profile?.plan || "Basic"}</p>
+            <p className="text-xl font-bold text-foreground">{profile?.plan || "Package-1"}</p>
           </div>
           <div className="rounded-lg bg-secondary/50 p-4">
             <div className="flex items-center gap-2 text-xs uppercase tracking-wide text-muted-foreground font-semibold mb-1">

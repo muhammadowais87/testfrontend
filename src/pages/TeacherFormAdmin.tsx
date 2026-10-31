@@ -34,7 +34,7 @@ const TeacherFormPage = ({ mode, teacherId }: TeacherFormProps) => {
   const [email, setEmail] = useState(existing?.email || "");
   const [password, setPassword] = useState(existing?.password || "");
   const [subject, setSubject] = useState(existing?.subject || "");
-  const [plan, setPlan] = useState(existing?.plan || "Basic");
+  const [plan, setPlan] = useState(existing?.plan || "Package-1");
   const [status, setStatus] = useState(existing?.status || "Pending");
   const [assignedSubjects, setAssignedSubjects] = useState<string[]>(
     existing?.assignedSubjects?.length ? existing.assignedSubjects : (existing?.subject ? [existing.subject] : [])
@@ -64,7 +64,7 @@ const TeacherFormPage = ({ mode, teacherId }: TeacherFormProps) => {
     }
   }, [existing]);
 
-  const amount = planAmounts[plan] || 5000;
+  const amount = planAmounts[plan] || 1000;
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -193,9 +193,10 @@ const TeacherFormPage = ({ mode, teacherId }: TeacherFormProps) => {
                   <Select value={plan} onValueChange={setPlan}>
                     <SelectTrigger><SelectValue /></SelectTrigger>
                     <SelectContent>
-                      <SelectItem value="Basic">Basic — Rs 5,000</SelectItem>
-                      <SelectItem value="Standard">Standard — Rs 8,000</SelectItem>
-                      <SelectItem value="Premium">Premium — Rs 15,000</SelectItem>
+                      <SelectItem value="Package-1">Package-1 — Rs 1,000 (1 month)</SelectItem>
+                      <SelectItem value="Package-2">Package-2 — Rs 2,000 (3 months)</SelectItem>
+                      <SelectItem value="Package-3">Package-3 — Rs 4,000 (6 months)</SelectItem>
+                      <SelectItem value="Package-4">Package-4 — Rs 8,000 (1 year)</SelectItem>
                     </SelectContent>
                   </Select>
                 </div>

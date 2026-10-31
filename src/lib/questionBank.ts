@@ -1,4 +1,5 @@
 import { API_BASE_URL } from "@/lib/api";
+import { getPortalToken } from "@/lib/portalToken";
 import type { ChapterGroup } from "@/data/subjectData";
 
 export type QuestionContentType = "mcq" | "short" | "long";
@@ -329,33 +330,9 @@ const getTopicChapterIndex = (subject?: string | null, className?: string | null
 
 const getAuthHeaders = (): HeadersInit => {
   const headers: Record<string, string> = {};
-  try {
-    // A trial session (private to this tab) takes priority over any saved real login.
-    const trialRaw = sessionStorage.getItem("institute_session");
-    if (trialRaw) {
-      const trial = JSON.parse(trialRaw) as { token?: string };
-      if (trial?.token?.startsWith("trial_")) {
-        headers.Authorization = `Bearer ${trial.token}`;
-        return headers;
-      }
-    }
-    const instituteRaw = localStorage.getItem("institute_session");
-    if (instituteRaw) {
-      const parsed = JSON.parse(instituteRaw) as { token?: string };
-      if (parsed?.token) {
-        headers.Authorization = `Bearer ${parsed.token}`;
-        return headers;
-      }
-    }
-    const teacherRaw = localStorage.getItem("teacher_session");
-    if (teacherRaw) {
-      const parsed = JSON.parse(teacherRaw) as { token?: string };
-      if (parsed?.token) {
-        headers.Authorization = `Bearer ${parsed.token}`;
-      }
-    }
-  } catch {
-    // ignore parse errors
+  const token = getPortalToken();
+  if (token) {
+    headers.Authorization = `Bearer ${token}`;
   }
   return headers;
 };

@@ -720,7 +720,7 @@ const TeacherBillingView = ({ profile, token }: { profile: TeacherPortalProfile 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div className="rounded-lg bg-secondary/50 p-4">
             <p className="text-xs uppercase tracking-wide text-muted-foreground">Current Plan</p>
-            <p className="text-xl font-bold text-foreground mt-1">{profile?.plan || "Basic"}</p>
+            <p className="text-xl font-bold text-foreground mt-1">{profile?.plan || "Package-1"}</p>
           </div>
           <div className="rounded-lg bg-secondary/50 p-4">
             <p className="text-xs uppercase tracking-wide text-muted-foreground">Valid Till</p>

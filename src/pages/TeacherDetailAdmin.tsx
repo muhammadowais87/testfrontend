@@ -111,7 +111,7 @@ const TeacherDetail = () => {
         {/* Info cards */}
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
           {[
-            { label: "Plan", content: <Badge variant={teacher.plan === "Premium" ? "default" : "secondary"} className="text-xs">{teacher.plan}</Badge> },
+            { label: "Plan", content: <Badge variant={teacher.plan === "Package-4" ? "default" : "secondary"} className="text-xs">{teacher.plan}</Badge> },
             { label: "Monthly Fee", content: <span className="text-lg font-bold text-foreground">Rs {teacher.amount.toLocaleString()}</span> },
             { label: "Phone", content: <span className="text-sm font-bold text-foreground flex items-center gap-1.5"><Phone className="w-4 h-4 text-muted-foreground" />{teacher.phone}</span> },
             { label: "Since", content: <span className="text-sm font-bold text-foreground">{teacher.subscriptionDate}</span> },
@@ -167,9 +167,10 @@ const TeacherDetail = () => {
                 }}>
                   <SelectTrigger className="w-[110px] h-8 text-xs"><SelectValue /></SelectTrigger>
                   <SelectContent>
-                    <SelectItem value="Basic">Basic</SelectItem>
-                    <SelectItem value="Standard">Standard</SelectItem>
-                    <SelectItem value="Premium">Premium</SelectItem>
+                    <SelectItem value="Package-1">Package-1</SelectItem>
+                    <SelectItem value="Package-2">Package-2</SelectItem>
+                    <SelectItem value="Package-3">Package-3</SelectItem>
+                    <SelectItem value="Package-4">Package-4</SelectItem>
                   </SelectContent>
                 </Select>
               </div>

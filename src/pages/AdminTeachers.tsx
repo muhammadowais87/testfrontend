@@ -126,7 +126,7 @@ const AdminTeachers = () => {
                       <TableCell className="text-sm text-muted-foreground">{teacher.subject}</TableCell>
                       <TableCell className="text-sm text-muted-foreground">{teacher.city}</TableCell>
                       <TableCell>
-                        <Badge variant={teacher.plan === "Premium" ? "default" : "secondary"} className="text-[11px] font-medium">
+                        <Badge variant={teacher.plan === "Package-4" ? "default" : "secondary"} className="text-[11px] font-medium">
                           {teacher.plan}
                         </Badge>
                       </TableCell>

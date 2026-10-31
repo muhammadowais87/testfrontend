@@ -123,7 +123,7 @@ const AdminDashboard = () => {
                       </TableCell>
                       <TableCell className="text-sm text-muted-foreground">{school.city}</TableCell>
                       <TableCell>
-                        <Badge variant={school.plan === "Premium" ? "default" : "secondary"} className="text-[11px] font-medium">
+                        <Badge variant={school.plan === "Package-4" ? "default" : "secondary"} className="text-[11px] font-medium">
                           {school.plan}
                         </Badge>
                       </TableCell>
