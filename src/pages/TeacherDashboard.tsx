@@ -13,6 +13,7 @@ import { useTeacherSessionStore } from "@/stores/teacherSessionStore";
 import { useIsMobile } from "@/hooks/use-mobile";
 import { API_BASE_URL } from "@/lib/api";
 import { useToast } from "@/hooks/use-toast";
+import { getValidTill } from "@/data/schoolData";
 import PageLoader from "@/components/PageLoader";
 
 type ActiveView = "dashboard" | "savedpapers" | "billing" | "settings" | "password" | "assigned";
@@ -724,7 +725,7 @@ const TeacherBillingView = ({ profile, token }: { profile: TeacherPortalProfile 
           </div>
           <div className="rounded-lg bg-secondary/50 p-4">
             <p className="text-xs uppercase tracking-wide text-muted-foreground">Valid Till</p>
-            <p className="text-xl font-bold text-foreground mt-1">{profile?.subscriptionDate || "-"}</p>
+            <p className="text-xl font-bold text-foreground mt-1">{getValidTill(profile?.plan, profile?.status, profile?.lastPaymentDate) || "-"}</p>
           </div>
           <div className="rounded-lg bg-secondary/50 p-4">
             <p className="text-xs uppercase tracking-wide text-muted-foreground">Payment Method</p>

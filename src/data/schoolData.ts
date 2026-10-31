@@ -85,6 +85,20 @@ export const initialSchools: SchoolData[] = [
 
 export const planAmounts: Record<string, number> = { "Package-1": 2000, "Package-2": 3000, "Package-3": 6000, "Package-4": 12000 };
 
+export const planMonths: Record<string, number> = { "Package-1": 1, "Package-2": 3, "Package-3": 6, "Package-4": 12 };
+
+// Valid Till = last payment date + package duration. The day is clamped to the length of the
+// target month (31 Oct + 6 months = 30 Apr). Only a paid account has a validity, so anything
+// else (pending, trial, unknown plan, bad date) returns null.
+export const getValidTill = (plan?: string, status?: string, lastPaymentDate?: string): string | null => {
+  const months = plan ? planMonths[plan] : undefined;
+  const [y, m, d] = (lastPaymentDate || "").slice(0, 10).split("-").map(Number);
+  if (status !== "Paid" || !months || !y || !m || !d) return null;
+
+  const lastDay = new Date(Date.UTC(y, m - 1 + months + 1, 0)).getUTCDate();
+  return new Date(Date.UTC(y, m - 1 + months, Math.min(d, lastDay))).toISOString().slice(0, 10);
+};
+
 export const statusConfig: Record<string, { icon: string; color: string }> = {
   Paid: { icon: "CheckCircle", color: "bg-primary/10 text-primary" },
   Pending: { icon: "Clock", color: "bg-accent text-accent-foreground" },

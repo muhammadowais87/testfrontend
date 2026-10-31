@@ -40,6 +40,7 @@ import { deleteSavedPaper, getSavedPapers, migrateLegacySavedPapersToDb, type Sa
 import { useInstituteSessionStore } from "@/stores/instituteSessionStore";
 import { API_BASE_URL } from "@/lib/api";
 import { useToast } from "@/hooks/use-toast";
+import { getValidTill } from "@/data/schoolData";
 import PageLoader from "@/components/PageLoader";
 
 type ActiveView = "dashboard" | "billing" | "password" | "settings" | "subusers" | "savedpapers";
@@ -415,7 +416,7 @@ const BillingView = ({ profile }: { profile: InstituteProfile | null }) => {
               <CalendarCheck className="w-4 h-4" />
               Valid Till
             </div>
-            <p className="text-xl font-bold text-foreground">{profile?.subscriptionDate || "-"}</p>
+            <p className="text-xl font-bold text-foreground">{getValidTill(profile?.plan, profile?.status, profile?.lastPaymentDate) || "-"}</p>
           </div>
           <div className="rounded-lg bg-secondary/50 p-4">
             <div className="flex items-center gap-2 text-xs uppercase tracking-wide text-muted-foreground font-semibold mb-1">
