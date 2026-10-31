@@ -655,10 +655,12 @@ const SettingsView = ({ profile, token }: { profile: InstituteProfile | null; to
         ...prev,
         schoolName: profile.name || prev.schoolName,
         schoolAddress: profile.address || prev.schoolAddress,
-        principalName: profile.principalName || prev.principalName,
+        // These can be saved empty on purpose, so only fall back to the placeholder when the
+        // profile has no value at all (`||` would bring the placeholder back after a refresh).
+        principalName: profile.principalName ?? prev.principalName,
         email: profile.email || prev.email,
-        phonePrimary: profile.phonePrimary || prev.phonePrimary,
-        phoneSecondary: profile.phoneSecondary || prev.phoneSecondary,
+        phonePrimary: profile.phonePrimary ?? prev.phonePrimary,
+        phoneSecondary: profile.phoneSecondary ?? prev.phoneSecondary,
         logoUrl: profile.portalSettings?.logoUrl ?? prev.logoUrl,
         monogramHeight: profile.portalSettings?.monogramHeight ?? prev.monogramHeight,
         monogramWidth: profile.portalSettings?.monogramWidth ?? prev.monogramWidth,
