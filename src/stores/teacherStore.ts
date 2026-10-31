@@ -97,7 +97,7 @@ export const useTeacherStore = create<TeacherStore>((set) => ({
     set((state) => ({ teachers: state.teachers.filter((t) => t.id !== id) }));
   },
   updateTeacherPlan: async (id, plan) => {
-    const amount = planAmounts[plan] || 1000;
+    const amount = planAmounts[plan] || 2000;
     const response = await fetch(`${API_BASE_URL}/teachers/${id}/plan`, {
       method: "PATCH",
       headers: { "Content-Type": "application/json" },

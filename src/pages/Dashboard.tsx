@@ -345,7 +345,7 @@ const Dashboard = () => {
             </>
           )}
 
-          {activeView === "billing" && <BillingView profile={profile} token={session?.token || ""} />}
+          {activeView === "billing" && <BillingView profile={profile} />}
           {activeView === "password" && <ChangePasswordView token={session?.token || ""} />}
           {activeView === "settings" && <SettingsView profile={profile} token={session?.token || ""} />}
           {activeView === "subusers" && <SubUsersView token={session?.token || ""} />}
@@ -390,9 +390,7 @@ const buildBillingHistory = (profile: InstituteProfile | null): BillingHistoryIt
     .reverse();
 };
 
-const BillingView = ({ profile, token }: { profile: InstituteProfile | null; token: string }) => {
-  const { toast } = useToast();
-  const [isDeleting, setIsDeleting] = useState<number | null>(null);
+const BillingView = ({ profile }: { profile: InstituteProfile | null }) => {
   const [history, setHistory] = useState<BillingHistoryItem[]>(() => buildBillingHistory(profile));
 
   useEffect(() => {
@@ -400,38 +398,6 @@ const BillingView = ({ profile, token }: { profile: InstituteProfile | null; tok
   }, [profile]);
 
   const totalPaid = history.reduce((sum, item) => sum + item.amount, 0);
-
-  const handleDeletePayment = async (item: BillingHistoryItem) => {
-    if (!profile?.schoolId) {
-      toast({ title: "Unavailable", description: "School id missing.", variant: "destructive" });
-      return;
-    }
-
-    setIsDeleting(item.id);
-    try {
-      const response = await fetch(`${API_BASE_URL}/schools/${profile.schoolId}/payments/${encodeURIComponent(item.month)}`, {
-        method: "DELETE",
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
-      });
-      const data = await response.json();
-      if (!response.ok) {
-        throw new Error(data?.message || "Failed to delete payment");
-      }
-
-      setHistory((prev) => prev.filter((entry) => entry.id !== item.id));
-      toast({ title: "Payment Deleted" });
-    } catch (error) {
-      toast({
-        title: "Delete Failed",
-        description: error instanceof Error ? error.message : "Could not delete payment",
-        variant: "destructive",
-      });
-    } finally {
-      setIsDeleting(null);
-    }
-  };
 
   return (
     <div className="space-y-4">
@@ -476,13 +442,12 @@ const BillingView = ({ profile, token }: { profile: InstituteProfile | null; tok
                   <th className="text-left py-3 px-3 text-muted-foreground font-semibold text-xs uppercase tracking-wide">Date</th>
                   <th className="text-left py-3 px-3 text-muted-foreground font-semibold text-xs uppercase tracking-wide">Amount</th>
                   <th className="text-left py-3 px-3 text-muted-foreground font-semibold text-xs uppercase tracking-wide">Status</th>
-                  <th className="text-left py-3 px-3 text-muted-foreground font-semibold text-xs uppercase tracking-wide">Action</th>
                 </tr>
               </thead>
               <tbody>
                 {history.length === 0 ? (
                   <tr>
-                    <td colSpan={4} className="py-8 text-center text-muted-foreground text-sm">No payments found</td>
+                    <td colSpan={3} className="py-8 text-center text-muted-foreground text-sm">No payments found</td>
                   </tr>
                 ) : (
                   history.map((item) => (
@@ -493,17 +458,6 @@ const BillingView = ({ profile, token }: { profile: InstituteProfile | null; tok
                         <span className="inline-flex items-center gap-1 text-xs font-semibold px-2.5 py-1 rounded-full bg-primary/10 text-primary">
                           {item.status}
                         </span>
-                      </td>
-                      <td className="py-3 px-3">
-                        <button
-                          disabled={isDeleting === item.id}
-                          type="button"
-                          onClick={() => handleDeletePayment(item)}
-                          className="inline-flex items-center gap-1 text-xs font-semibold px-2.5 py-1.5 rounded-lg bg-destructive/10 text-destructive hover:bg-destructive/20 border border-border transition-all disabled:opacity-60 disabled:cursor-not-allowed"
-                        >
-                          <Trash2 className="w-3.5 h-3.5" />
-                          {isDeleting === item.id ? "Deleting..." : "Delete"}
-                        </button>
                       </td>
                     </tr>
                   ))

@@ -59,7 +59,7 @@ const SchoolForm = ({ mode, schoolId }: SchoolFormProps) => {
     }
   }, [existing]);
 
-  const amount = planAmounts[plan] || 1000;
+  const amount = planAmounts[plan] || 2000;
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -180,10 +180,10 @@ const SchoolForm = ({ mode, schoolId }: SchoolFormProps) => {
                   <Select value={plan} onValueChange={setPlan}>
                     <SelectTrigger><SelectValue /></SelectTrigger>
                     <SelectContent>
-                      <SelectItem value="Package-1">Package-1 — Rs 1,000 (1 month)</SelectItem>
-                      <SelectItem value="Package-2">Package-2 — Rs 2,000 (3 months)</SelectItem>
-                      <SelectItem value="Package-3">Package-3 — Rs 4,000 (6 months)</SelectItem>
-                      <SelectItem value="Package-4">Package-4 — Rs 8,000 (1 year)</SelectItem>
+                      <SelectItem value="Package-1">Package-1 — Rs 2,000 (1 month)</SelectItem>
+                      <SelectItem value="Package-2">Package-2 — Rs 3,000 (3 months)</SelectItem>
+                      <SelectItem value="Package-3">Package-3 — Rs 6,000 (6 months)</SelectItem>
+                      <SelectItem value="Package-4">Package-4 — Rs 12,000 (1 year)</SelectItem>
                     </SelectContent>
                   </Select>
                 </div>

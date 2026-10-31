@@ -92,7 +92,7 @@ export const useSchoolStore = create<SchoolStore>((set) => ({
     await useSchoolStore.getState().fetchSchools();
   },
   updateSchoolPlan: async (id, plan) => {
-    const amount = planAmounts[plan] || 1000;
+    const amount = planAmounts[plan] || 2000;
     const response = await fetch(`${API_BASE_URL}/schools/${id}/plan`, {
       method: "PATCH",
       headers: { "Content-Type": "application/json" },

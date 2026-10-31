@@ -83,7 +83,7 @@ export const initialSchools: SchoolData[] = [
   monthlyPayments: generateMonthlyPayments(s.subscriptionDate, s.plan, s.amount, s.status, s.lastPaymentDate),
 }));
 
-export const planAmounts: Record<string, number> = { "Package-1": 1000, "Package-2": 2000, "Package-3": 4000, "Package-4": 8000 };
+export const planAmounts: Record<string, number> = { "Package-1": 2000, "Package-2": 3000, "Package-3": 6000, "Package-4": 12000 };
 
 export const statusConfig: Record<string, { icon: string; color: string }> = {
   Paid: { icon: "CheckCircle", color: "bg-primary/10 text-primary" },
