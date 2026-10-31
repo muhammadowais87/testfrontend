@@ -321,7 +321,7 @@ const looseTopicKey = (value: string): string =>
 
 // PTB 9th/10th/1st Year: map chapter groups to DB chapters through their topics.
 const usesTopicChapterMapping = (className?: string | null, board?: string | null) =>
-  board === "PTB" && ["9TH", "10TH", "INTER-I"].includes(className || "");
+  board === "PTB" && ["9TH", "10TH", "INTER-I", "INTER-II"].includes(className || "");
 
 const getTopicChapterIndex = (subject?: string | null, className?: string | null, board?: string | null) =>
   usesTopicChapterMapping(className, board)

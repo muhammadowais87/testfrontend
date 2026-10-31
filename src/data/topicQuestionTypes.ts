@@ -267,6 +267,10 @@ export const getAvailableQuestionTypesForTopics = (
 ): string[] | null => {
   const normalizedClass = (className || "").toUpperCase().replace(/\s+/g, "");
 
+  // INTER-II has no static type maps: its question types come from the question bank (DB).
+  // Without this it would fall into the INTER-I branch below and borrow the 9th/Part 1 maps.
+  if (normalizedClass === "INTER-II") return null;
+
   let subjectMap: Record<string, string[]> | undefined;
 
   // AFAQ: subject is encoded as "English||Sun Series"

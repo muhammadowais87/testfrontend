@@ -147,7 +147,7 @@ const inferContentType = (id: number, text: string): WorkspaceQuestionType => {
 // PTB 9th, 10th and 1st Year -- these use the DB's per-topic data as the source of truth
 // for the question-type dropdown.
 const isTopicScopedPtbClass = (board: string | null, level: string | null) =>
-  board === "PTB" && ["9TH", "10TH", "INTER-I"].includes(level || "");
+  board === "PTB" && ["9TH", "10TH", "INTER-I", "INTER-II"].includes(level || "");
 
 const getProfessionalQuestionTypeLabel = (value: string, fallbackLabel: string): string => {
   const normalizedValue = value.toLowerCase().trim();
@@ -1929,6 +1929,7 @@ const TeacherGeneratePaper = () => {
                       <button
                         key={s.title}
                         type="button"
+                        disabled={s.comingSoon}
                         onClick={() => {
                           if (hasSubjectRestrictions && !isSubjectAllowed(selectedBoard!, selectedLevel!, s.title, s.subtitle)) {
                             setRestrictedSubjectName(s.title);
@@ -1938,8 +1939,13 @@ const TeacherGeneratePaper = () => {
                           setSelectedSubject(selectedBoard === "AFAQ" && s.subtitle ? `${s.title}||${s.subtitle}` : s.title);
                           setSelectedChapters([]);
                         }}
-                        className="flex items-center gap-4 rounded-xl bg-card border border-border p-4 hover:shadow-md hover:bg-secondary/50 transition-all"
+                        className={`relative flex items-center gap-4 rounded-xl bg-card border border-border p-4 transition-all ${s.comingSoon ? "opacity-60 cursor-not-allowed" : "hover:shadow-md hover:bg-secondary/50"}`}
                       >
+                        {s.comingSoon && (
+                          <span className="absolute top-1.5 right-1.5 inline-flex items-center rounded-full bg-amber-500/90 text-white text-[8px] font-bold px-1.5 py-0.5 shadow-sm uppercase tracking-wide">
+                            Coming Soon
+                          </span>
+                        )}
                         <img src={s.image} alt={s.title} className="w-16 h-16 object-contain shrink-0" />
                         <div className={`text-left ${isUrdu(s.title) ? "font-urdu" : ""}`} dir={isUrdu(s.title) ? "rtl" : "ltr"}>
                           <h4 className="font-bold text-sm text-foreground">{s.title}</h4>

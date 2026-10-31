@@ -11,6 +11,8 @@ export type SubjectCard = {
   subtitle: string;
   image: string;
   showArrow?: boolean;
+  // Shown greyed out with a "Coming Soon" badge and can't be opened (only INTER-II uses this).
+  comingSoon?: boolean;
 };
 
 // Book image mapping by subject name
@@ -103,7 +105,7 @@ export const syllabusCards = [
   { title: "9TH", board: "PTB", gradient: "from-cyan-300 to-blue-400", comingSoon: false },
   { title: "10TH", board: "PTB", gradient: "from-green-600 to-lime-400", comingSoon: false },
   { title: "INTER-I", board: "PTB", gradient: "from-cyan-500 to-blue-500", comingSoon: false },
-  { title: "INTER-II", board: "PTB", gradient: "from-amber-300 to-orange-300", comingSoon: true },
+  { title: "INTER-II", board: "PTB", gradient: "from-amber-300 to-orange-300", comingSoon: false },
 ];
 
 export const afaqCards = [
@@ -238,6 +240,42 @@ export const interOneExtraSubjects: SubjectCard[] = [
   { title: "لائبریری سائنس", subtitle: "PTB", image: getBookImage("لائبریری سائنس") },
 ];
 
+// INTER-I subjects that are not part of the INTER-II list. Only the INTER-II map filters
+// these out -- INTER-I keeps showing them.
+const interTwoExcludedTitles = new Set([
+  "Principles of Economics",
+  "Principles of Commerce",
+  "Business Maths",
+  "اسلامیات لازمی",
+  "سوکس",
+  "علم شہریت",
+  "اسلامیات اختیاری",
+  "طبی جغرافیہ",
+  "لائبریری سائنس",
+]);
+
+// INTER-II subjects whose questions are in the question bank. Every other INTER-II subject
+// is shown as "Coming Soon" -- add a title here once its data has been seeded.
+const interTwoReadyTitles = new Set([
+  "Economics",
+  "Pakistan Studies",
+  "ایجوکیشن",
+  "سوشیالوجی",
+  "اخلاقیات",
+  "ہوم اکنامکس",
+  "پنجابی",
+  "فزیکل ایجوکیشن",
+  "نفسیات",
+  "انسانی جغرافیہ",
+  "ترجمہ القرآن المجید",
+  "فارسی",
+  "تاریخ اسلام",
+]);
+const forInterTwo = (cards: SubjectCard[]) =>
+  cards
+    .filter((card) => !interTwoExcludedTitles.has(card.title))
+    .map((card) => (interTwoReadyTitles.has(card.title) ? card : { ...card, comingSoon: true }));
+
 // INTER-II subjects that have no INTER-I counterpart (INTER-II shows the INTER-I list plus these).
 const interTwoOnlySubjects: SubjectCard[] = [
   { title: "کاروباری شماریات", subtitle: "I.COM", image: getBookImage("کاروباری شماریات") },
@@ -247,6 +285,26 @@ const interTwoOnlySubjects: SubjectCard[] = [
   { title: "ہوم اکنامکس", subtitle: "PTB", image: getBookImage("ہوم اکنامکس") },
   { title: "انسانی جغرافیہ", subtitle: "PTB", image: getBookImage("انسانی جغرافیہ") },
 ];
+
+// INTER-II shows the subjects that already have data first and the "Coming Soon" ones after
+// them, as two groups so there is a gap between. The page prints the first card's subtitle as
+// the group heading, so each group leads with a card that has no subtitle (no stray "ICS" etc.).
+const buildInterTwoGroups = (): SubjectCard[][] => {
+  const all = forInterTwo([
+    ...interOneCoreSubjects,
+    ...interOneGeneralSubjects,
+    ...interOneExtraSubjects,
+    ...interTwoOnlySubjects,
+  ]);
+  const leadWithUntitled = (cards: SubjectCard[]) => {
+    const lead = cards.findIndex((card) => !card.subtitle);
+    return lead > 0 ? [cards[lead], ...cards.filter((_, i) => i !== lead)] : cards;
+  };
+  return [
+    leadWithUntitled(all.filter((card) => !card.comingSoon)),
+    leadWithUntitled(all.filter((card) => card.comingSoon)),
+  ];
+};
 
 export const interTwoCoreSubjects: SubjectCard[] = [
   { title: "Biology", subtitle: "FSc", image: getBookImage("Biology") },
@@ -468,7 +526,7 @@ export const ptbClassSubjectsMap: Record<string, SubjectCard[][]> = {
     ],
   ],
   "INTER-I": [interOneCoreSubjects, interOneGeneralSubjects, interOneExtraSubjects],
-  "INTER-II": [interOneCoreSubjects, interOneGeneralSubjects, [...interOneExtraSubjects, ...interTwoOnlySubjects]],
+  "INTER-II": buildInterTwoGroups(),
 };
 
 // Board-level map: board name -> class -> subjects
