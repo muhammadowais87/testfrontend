@@ -3,10 +3,10 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/u
 import { Check, Sparkles } from "lucide-react";
 
 const packages = [
-  { name: "Package-1", price: "Rs:2,000", validity: "1 month", popular: false },
-  { name: "Package-2", price: "Rs:3,000", validity: "3 months", popular: false },
-  { name: "Package-3", price: "Rs:6,000", validity: "6 months", popular: true },
-  { name: "Package-4", price: "Rs:12,000", validity: "1 year", popular: false },
+  { name: "Package-1", price: "Rs:1,000", originalPrice: "Rs:2,000", validity: "1 month", popular: false },
+  { name: "Package-2", price: "Rs:2,000", originalPrice: "Rs:3,000", validity: "3 months", popular: false },
+  { name: "Package-3", price: "Rs:4,000", originalPrice: "Rs:6,000", validity: "6 months", popular: true },
+  { name: "Package-4", price: "Rs:8,000", originalPrice: "Rs:12,000", validity: "1 year", popular: false },
 ];
 
 const features = [
@@ -58,6 +58,11 @@ const PricingSection = () => {
                 <p className={`text-xs uppercase tracking-wide mb-1 ${pkg.popular ? "text-primary-foreground/80" : "text-muted-foreground"}`}>Plan</p>
                 <h3 className={`text-xl font-bold ${pkg.popular ? "text-white" : "text-foreground"}`}>{pkg.name}</h3>
                 <div className="mt-3">
+                  {pkg.originalPrice && (
+                    <span className={`block text-lg font-bold line-through decoration-2 ${pkg.popular ? "text-red-400" : "text-red-500"}`}>
+                      {pkg.originalPrice}
+                    </span>
+                  )}
                   <div className="flex items-baseline gap-1">
                     <span className={`text-3xl font-extrabold ${pkg.popular ? "text-white" : "text-foreground"}`}>{pkg.price}</span>
                     <span className={`text-lg font-medium ${pkg.popular ? "text-primary-foreground/80" : "text-muted-foreground"}`}>/{pkg.validity}</span>
