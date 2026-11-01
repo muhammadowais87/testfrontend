@@ -20,7 +20,7 @@ import SubjectButton from "@/components/SubjectButton";
 import DualMediumQuestion from "@/components/DualMediumQuestion";
 import MathText, { getEnglishOnlyTokens } from "@/components/MathText";
 import { getQuestionStems, mergeMcqOptions, sanitizeOptionValue, splitVerseText, isComprehensionType, groupComprehensionSets } from "@/lib/questionDisplay";
-import { useIsMobile } from "@/hooks/use-mobile";
+import { useIsMobile, isMobileViewport } from "@/hooks/use-mobile";
 import { addSavedPaper, getSavedPaperById, type SavedPaperRecord } from "@/lib/savedPapers";
 import {
   fetchChapterGroupsForSelection,
@@ -245,7 +245,13 @@ const GeneratePaper = () => {
   const isTrial = searchParams.get("trial") === "true";
   const [selectedChapters, setSelectedChapters] = useState<string[]>([]);
   const lastInitializedRef = useRef<{ key: string; isDb: boolean; isTopicsFile?: boolean } | null>(null);
-  const [sidebarOpen, setSidebarOpen] = useState(true);
+  // Desktop starts with its sidebar showing; on a phone the sidebar is an overlay and stays closed until the hamburger is tapped.
+  const [sidebarOpen, setSidebarOpen] = useState(() => !isMobileViewport());
+  // The page re-opens the sidebar after some actions (add to paper, cancel, ...). That is right on desktop,
+  // but on a phone it would pop the overlay over the page, so there it only opens from the hamburger.
+  const openSidebarOnDesktop = () => {
+    if (!isMobileViewport()) setSidebarOpen(true);
+  };
   const [showQuestionSelection, setShowQuestionSelection] = useState(false);
   const [showPaperWorkspace, setShowPaperWorkspace] = useState(false);
   const [questionType, setQuestionType] = useState("");
@@ -889,6 +895,8 @@ const GeneratePaper = () => {
     setIsManualEditing(false);
     setShowQuestionSelection(false);
     setShowPaperWorkspace(true);
+    // Opens on phones too (unlike the other re-opens): it shows the Question's Menu so the user sees
+    // they can add the next batch (e.g. Short Questions after MCQs).
     setSidebarOpen(true);
   };
 
@@ -930,7 +938,7 @@ const GeneratePaper = () => {
     clearPaperQuestions();
     setShowQuestionSelection(false);
     setShowPaperWorkspace(false);
-    setSidebarOpen(true);
+    openSidebarOnDesktop();
   };
 
   const handleOpenSavePaperDialog = () => {
@@ -1101,7 +1109,7 @@ const GeneratePaper = () => {
       setShowSearchResults(false);
       setShowQuestionSelection(Boolean(state.openQuestionMenu));
       setShowPaperWorkspace(true);
-      setSidebarOpen(true);
+      openSidebarOnDesktop();
       setIsManualEditing(false);
     };
 
@@ -1328,22 +1336,22 @@ const GeneratePaper = () => {
         <Dialog open={showQuestionSelection} onOpenChange={(open) => {
           setShowQuestionSelection(open);
           if (!open) {
-            setSidebarOpen(true);
+            openSidebarOnDesktop();
             setShowPaperWorkspace(true);
           }
         }}>
-          <DialogContent className="w-[95vw] max-w-5xl max-h-[90vh] overflow-y-auto">
-            <div className="space-y-4">
+          <DialogContent className="w-[96vw] max-w-5xl max-h-[92vh] md:w-[95vw] md:max-h-[90vh] overflow-y-auto p-3 md:p-6 gap-2 md:gap-4">
+            <div className="space-y-2 md:space-y-4">
               {/* Header */}
-              <div className="flex items-center justify-between pb-4 border-b border-gray-200">
-                <h2 className="text-base font-semibold text-gray-900">Select Your Questions Here ... {selectedLevel} - {selectedSubject?.split("||")[0]}</h2>
+              <div className="flex items-center justify-between pb-2 md:pb-4 border-b border-gray-200">
+                <h2 className="text-[11px] md:text-base font-semibold text-gray-900">Select Your Questions Here ... {selectedLevel} - {selectedSubject?.split("||")[0]}</h2>
               </div>
 
               {/* First Row: Question Type, Question Priority and Dual Medium */}
-              <div className="grid grid-cols-3 gap-6">
+              <div className="grid grid-cols-3 gap-2 md:gap-6">
                 <div>
-                  <label className="block text-[12px] font-semibold text-gray-700 mb-2">SELECT QUESTION TYPE</label>
-                  <select value={questionType} onChange={(e) => setQuestionType(e.target.value)} className="w-full border border-gray-300 rounded px-2 py-1.5 text-xs text-gray-700 bg-white">
+                  <label className="block text-[8px] md:text-[12px] font-semibold text-gray-700 mb-1 md:mb-2">SELECT QUESTION TYPE</label>
+                  <select value={questionType} onChange={(e) => setQuestionType(e.target.value)} className="w-full border border-gray-300 rounded px-1 md:px-2 py-1 md:py-1.5 text-[10px] md:text-xs text-gray-700 bg-white">
                     <option value="">Select question type</option>
                     {questionTypeOptions.map((option) => (
                       <option key={option.value} value={option.value}>{option.label}</option>
@@ -1351,12 +1359,12 @@ const GeneratePaper = () => {
                   </select>
                 </div>
                 <div>
-                  <label className="block text-[12px] font-semibold text-gray-700 mb-2">QUESTION PRIORITY</label>
+                  <label className="block text-[8px] md:text-[12px] font-semibold text-gray-700 mb-1 md:mb-2">QUESTION PRIORITY</label>
                   <DropdownMenu>
                     <DropdownMenuTrigger asChild>
                       <button
                         type="button"
-                        className="w-full flex items-center justify-between border border-gray-300 rounded px-2 py-1.5 text-xs text-gray-700 bg-white"
+                        className="w-full flex items-center justify-between border border-gray-300 rounded px-1 md:px-2 py-1 md:py-1.5 text-[10px] md:text-xs text-gray-700 bg-white"
                       >
                         <span className={`truncate text-left ${priorityOptions.length === 0 ? "text-gray-400" : ""}`}>
                           {priorityOptions.length === 0
@@ -1410,8 +1418,8 @@ const GeneratePaper = () => {
                   </DropdownMenu>
                 </div>
                 <div>
-                  <label className="block text-[12px] font-semibold text-gray-700 mb-2">DUAL MEDIUM <span className="text-red-500">*</span></label>
-                  <select value={dualMedium} onChange={(e) => setDualMedium(e.target.value)} className="w-full border border-gray-300 rounded px-2 py-1.5 text-xs text-gray-700 bg-white">
+                  <label className="block text-[8px] md:text-[12px] font-semibold text-gray-700 mb-1 md:mb-2">DUAL MEDIUM <span className="text-red-500">*</span></label>
+                  <select value={dualMedium} onChange={(e) => setDualMedium(e.target.value)} className="w-full border border-gray-300 rounded px-1 md:px-2 py-1 md:py-1.5 text-[10px] md:text-xs text-gray-700 bg-white">
                     <option value="" disabled>Select Mode</option>
                     <option value="dual">Dual</option>
                     <option value="english">English</option>
@@ -1421,44 +1429,44 @@ const GeneratePaper = () => {
               </div>
 
               {/* Second Row: Input Fields */}
-              <div className="grid grid-cols-3 gap-3">
+              <div className="grid grid-cols-3 gap-2 md:gap-3">
                 <div>
-                  <label className="block text-[12px] font-semibold text-gray-700 mb-2">Required Questions <span className="text-red-500">*</span></label>
-                  <input type="text" value={requiredQuestions} onChange={(e) => setRequiredQuestions(e.target.value.replace(/\D/g, ''))} className="w-full border border-gray-300 rounded px-2 py-1.5 text-xs text-gray-700" placeholder="0" />
+                  <label className="block text-[8px] md:text-[12px] font-semibold text-gray-700 mb-1 md:mb-2">Required Questions <span className="text-red-500">*</span></label>
+                  <input type="text" value={requiredQuestions} onChange={(e) => setRequiredQuestions(e.target.value.replace(/\D/g, ''))} className="w-full border border-gray-300 rounded px-1 md:px-2 py-1 md:py-1.5 text-[10px] md:text-xs text-gray-700" placeholder="0" />
                 </div>
                 <div>
-                  <label className="block text-[12px] font-semibold text-gray-700 mb-2">Each Q Marks <span className="text-red-500">*</span></label>
-                  <input type="text" value={eachQMarks} onChange={(e) => setEachQMarks(e.target.value.replace(/\D/g, ''))} className="w-full border border-gray-300 rounded px-2 py-1.5 text-xs text-gray-700" placeholder="0" />
+                  <label className="block text-[8px] md:text-[12px] font-semibold text-gray-700 mb-1 md:mb-2">Each Q Marks <span className="text-red-500">*</span></label>
+                  <input type="text" value={eachQMarks} onChange={(e) => setEachQMarks(e.target.value.replace(/\D/g, ''))} className="w-full border border-gray-300 rounded px-1 md:px-2 py-1 md:py-1.5 text-[10px] md:text-xs text-gray-700" placeholder="0" />
                 </div>
                 <div>
-                  <label className="block text-[12px] font-semibold text-gray-700 mb-2">Question Choice</label>
-                  <input type="text" value={ignoreQuestions} onChange={(e) => setIgnoreQuestions(e.target.value.replace(/\D/g, ''))} className="w-full border border-gray-300 rounded px-2 py-1.5 text-xs text-gray-700" placeholder="0" />
+                  <label className="block text-[8px] md:text-[12px] font-semibold text-gray-700 mb-1 md:mb-2">Question Choice</label>
+                  <input type="text" value={ignoreQuestions} onChange={(e) => setIgnoreQuestions(e.target.value.replace(/\D/g, ''))} className="w-full border border-gray-300 rounded px-1 md:px-2 py-1 md:py-1.5 text-[10px] md:text-xs text-gray-700" placeholder="0" />
                 </div>
               </div>
 
               {/* Search Button */}
-              <div className="flex items-center gap-3">
+              <div className="flex items-center gap-2 md:gap-3">
                 <label className="flex items-center gap-2 cursor-pointer">
                   <input
                     type="checkbox"
                     checked={twoQuestionsPerLine}
                     onChange={(e) => setTwoQuestionsPerLine(e.target.checked)}
-                    className="w-4 h-4 rounded border-gray-300 text-green-600 focus:ring-green-500"
+                    className="w-3 h-3 md:w-4 md:h-4 rounded border-gray-300 text-green-600 focus:ring-green-500"
                   />
-                  <span className="text-xs font-medium text-gray-700">2 Questions Per Line</span>
+                  <span className="text-[10px] md:text-xs font-medium text-gray-700">2 Questions Per Line</span>
                 </label>
                 <button
                   type="button"
                   disabled={isSearchingQuestions}
                   onClick={handleSearchClick}
-                  className="bg-green-600 text-white text-sm font-semibold px-6 py-2 rounded hover:bg-green-700 disabled:opacity-60 disabled:cursor-not-allowed"
+                  className="bg-green-600 text-white text-[11px] md:text-sm font-semibold px-4 md:px-6 py-1.5 md:py-2 rounded hover:bg-green-700 disabled:opacity-60 disabled:cursor-not-allowed"
                 >
                   {isSearchingQuestions ? "SEARCHING..." : "SEARCH"}
                 </button>
               </div>
 
               {showSearchResults && !isSearchingQuestions && activeQuestions.length > 0 && (
-                <p className="text-xs font-semibold text-gray-700">
+                <p className="text-[10px] md:text-xs font-semibold text-gray-700">
                   Selected {selectedQuestions.length} Question(s) From {activeQuestions.length}
                 </p>
               )}
@@ -1469,7 +1477,7 @@ const GeneratePaper = () => {
 
               {/* Questions List */}
               {showSearchResults && (
-                <div className="space-y-4 max-h-[500px] overflow-y-auto pr-2">
+                <div className="space-y-2 md:space-y-4 max-h-[55vh] md:max-h-[500px] overflow-y-auto pr-1 md:pr-2">
                   {isSearchingQuestions ? (
                     <div className="p-4 text-center text-sm font-semibold text-gray-500 bg-gray-50 border border-gray-200 rounded-lg">
                       Loading questions...
@@ -1491,7 +1499,7 @@ const GeneratePaper = () => {
                           const sets = groupComprehensionSets(qs);
                           return (
                             <>
-                              <div className="bg-[#311b92] text-white text-center py-2 px-4 font-semibold text-sm">
+                              <div className="bg-[#311b92] text-white text-center py-1 px-2 md:py-2 md:px-4 font-semibold text-[10px] md:text-sm">
                                 {typeSlugToLabel[topic] || topic}
                               </div>
                               {sets.map((set, setIdx) => {
@@ -1516,7 +1524,7 @@ const GeneratePaper = () => {
                                       type="checkbox"
                                       checked={allSelected}
                                       onChange={toggleSet}
-                                      className="w-4 h-4 rounded mt-0.5 flex-shrink-0 cursor-pointer"
+                                      className="w-3 h-3 md:w-4 md:h-4 rounded mt-0.5 flex-shrink-0 cursor-pointer"
                                     />
                                     <div className="flex-1 min-w-0 space-y-2">
                                       <DualMediumQuestion
@@ -1558,7 +1566,7 @@ const GeneratePaper = () => {
                           };
                           return (
                             <>
-                              <label className="bg-[#311b92] text-white py-2 px-4 font-semibold text-sm flex items-center gap-3 cursor-pointer select-none">
+                              <label className="bg-[#311b92] text-white py-1 px-2 md:py-2 md:px-4 font-semibold text-[10px] md:text-sm flex items-center gap-3 cursor-pointer select-none">
                                 <input
                                   type="checkbox"
                                   checked={allSelected}
@@ -1587,13 +1595,13 @@ const GeneratePaper = () => {
                           );
                         })() : (
                         <>
-                        <div className="bg-[#311b92] text-white text-center py-2 px-4 font-semibold text-sm">
+                        <div className="bg-[#311b92] text-white text-center py-1 px-2 md:py-2 md:px-4 font-semibold text-[10px] md:text-sm">
                           {typeSlugToLabel[topic] || topic}
                         </div>
-                        <div className={`grid grid-cols-1 ${appliedTwoQuestionsPerLine ? 'md:grid-cols-2' : ''} gap-0`}>
+                        <div className={`grid ${appliedTwoQuestionsPerLine ? 'grid-cols-2' : 'grid-cols-1'} gap-0`}>
                           {qs.map((q, idx) => (
-                            <div key={q.id} className="p-4 border-b border-r border-gray-100 flex flex-col justify-between hover:bg-slate-50 transition-colors">
-                              <div className="flex gap-3 items-start mb-3">
+                            <div key={q.id} className="p-2 md:p-4 border-b border-r border-gray-100 flex flex-col justify-between hover:bg-slate-50 transition-colors">
+                              <div className="flex gap-2 md:gap-3 items-start mb-1 md:mb-3">
                                 <input
                                   type="checkbox"
                                   checked={selectedQuestions.includes(q.id)}
@@ -1611,7 +1619,7 @@ const GeneratePaper = () => {
                                       setSelectedQuestions(selectedQuestions.filter(id => id !== q.id));
                                     }
                                   }}
-                                  className="w-4 h-4 rounded mt-0.5 flex-shrink-0 cursor-pointer"
+                                  className="w-3 h-3 md:w-4 md:h-4 rounded mt-0.5 flex-shrink-0 cursor-pointer"
                                 />
                                 <div className="flex-1 min-w-0">
                                   <DualMediumQuestion
@@ -1620,13 +1628,13 @@ const GeneratePaper = () => {
                                     index={topicOffset + idx + 1}
                                     dualMedium={appliedDualMedium}
                                     imageFile={q.imageFile}
-                                    textClassName="text-[13px] font-medium text-gray-800"
-                                    urduClassName="text-[13px] text-gray-800 font-medium"
+                                    textClassName="text-[10px] md:text-[13px] font-medium text-gray-800"
+                                    urduClassName="text-[10px] md:text-[13px] text-gray-800 font-medium"
                                   />
                                 </div>
                               </div>
-                              <div className="flex justify-center mt-auto pt-2">
-                                <span className={`px-4 py-1 rounded-sm text-[10px] font-bold uppercase tracking-wider ${q.type === "Exercise" ? "bg-green-600 text-white" : "bg-yellow-400 text-black shadow-sm"}`}>
+                              <div className="flex justify-center mt-auto pt-1 md:pt-2">
+                                <span className={`px-2 md:px-4 py-0.5 md:py-1 rounded-sm text-[8px] md:text-[10px] font-bold uppercase tracking-wider ${q.type === "Exercise" ? "bg-green-600 text-white" : "bg-yellow-400 text-black shadow-sm"}`}>
                                   {q.type}
                                 </span>
                               </div>
@@ -1644,17 +1652,17 @@ const GeneratePaper = () => {
               )}
 
               {/* Action Buttons */}
-              <div className="grid grid-cols-2 gap-4 py-4">
-                <button type="button" onClick={handleRandomSelect} className="bg-cyan-500 text-white text-sm font-semibold py-2 rounded hover:bg-cyan-600">
+              <div className="grid grid-cols-2 gap-2 md:gap-4 py-2 md:py-4">
+                <button type="button" onClick={handleRandomSelect} className="bg-cyan-500 text-white text-[11px] md:text-sm font-semibold py-1.5 md:py-2 rounded hover:bg-cyan-600">
                   ↻ RANDOM SELECT ›
                 </button>
-                <button type="button" onClick={handleAddQuestions} className="bg-green-600 text-white text-sm font-semibold py-2 rounded hover:bg-green-700">
+                <button type="button" onClick={handleAddQuestions} className="bg-green-600 text-white text-[11px] md:text-sm font-semibold py-1.5 md:py-2 rounded hover:bg-green-700">
                   ADD QUESTIONS ›
                 </button>
               </div>
 
               {/* Green Selected Questions Area */}
-              <div className="bg-green-200 border-2 border-green-300 rounded-xl p-4 min-h-[200px]">
+              <div className="bg-green-200 border-2 border-green-300 rounded-xl p-2 md:p-4 min-h-[100px] md:min-h-[200px]">
                 {selectedQuestions.length > 0 && (
                   appliedQuestionType === "match_columns" ? (
                     <table className="w-full border-collapse text-sm bg-white rounded" dir="rtl">
@@ -1702,7 +1710,7 @@ const GeneratePaper = () => {
                   ) : (
                   <div className="space-y-2">
                     {activeQuestions.filter(q => selectedQuestions.includes(q.id)).map((q, idx) => (
-                      <div key={q.id} className="p-2 bg-white rounded text-sm">
+                      <div key={q.id} className="p-2 bg-white rounded text-[10px] md:text-sm">
                         <DualMediumQuestion
                           text={q.text}
                           urdu={q.urdu}
@@ -2295,16 +2303,18 @@ const GeneratePaper = () => {
                 )}
               </div>
 
-              <div className="flex justify-end mt-8">
+              {/* Stays pinned to the bottom of the screen so NEXT is visible without scrolling the whole chapter list. */}
+              {/* No bar behind it: the wrapper ignores taps, only the button itself is tappable, so the chapter checkboxes under the wrapper stay usable. */}
+              <div className="sticky bottom-4 z-30 flex justify-end pointer-events-none">
                 <button
                   type="button"
                   disabled={selectedChapters.length === 0}
                   onClick={() => {
                     setShowQuestionSelection(true);
                     setShowPaperWorkspace(true);
-                    setSidebarOpen(true);
+                    openSidebarOnDesktop();
                   }}
-                  className="bg-foreground text-background text-xs font-semibold py-2.5 px-7 rounded-full hover:opacity-90 disabled:opacity-50 disabled:cursor-not-allowed transition-opacity flex items-center gap-2"
+                  className="pointer-events-auto shadow-lg bg-foreground text-background text-xs font-semibold py-2.5 px-7 rounded-full hover:opacity-90 disabled:opacity-50 disabled:cursor-not-allowed transition-opacity flex items-center gap-2"
                 >
                   NEXT <span>›</span>
                 </button>

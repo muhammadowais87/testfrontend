@@ -10,7 +10,7 @@ import {
   Users, ArrowUp, ArrowRight, RotateCcw, Upload,
 } from "lucide-react";
 import { useTeacherSessionStore } from "@/stores/teacherSessionStore";
-import { useIsMobile } from "@/hooks/use-mobile";
+import { useIsMobile, isMobileViewport } from "@/hooks/use-mobile";
 import { API_BASE_URL } from "@/lib/api";
 import { useToast } from "@/hooks/use-toast";
 import { getValidTill } from "@/data/schoolData";
@@ -62,7 +62,8 @@ type TeacherPortalProfile = {
 
 const TeacherDashboard = () => {
   const isMobile = useIsMobile();
-  const [sidebarOpen, setSidebarOpen] = useState(true);
+  // Desktop starts with its sidebar showing; on a phone the sidebar is an overlay and stays closed until the hamburger is tapped.
+  const [sidebarOpen, setSidebarOpen] = useState(() => !isMobileViewport());
   const location = useLocation();
   const [activeView, setActiveView] = useState<ActiveView>(
     (location.state as { activeView?: ActiveView } | null)?.activeView ?? "dashboard"

@@ -133,11 +133,17 @@ export default {
           "0%": { transform: "translateX(-100%)" },
           "100%": { transform: "translateX(200%)" },
         },
+        // Arrow on the dashboard's main action box: a gentle push to the right that repeats.
+        "nudge-right": {
+          "0%, 100%": { transform: "translateX(0)" },
+          "50%": { transform: "translateX(3px)" },
+        },
       },
       animation: {
         "loader-bar": "loader-bar 1.1s ease-in-out infinite",
         "loader-in": "loader-in 0.25s ease-out both",
         "loader-pulse": "loader-pulse 1.4s ease-in-out infinite",
+        "nudge-right": "nudge-right 1.4s ease-in-out infinite",
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
       },

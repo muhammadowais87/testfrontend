@@ -34,7 +34,7 @@ import {
 } from "lucide-react";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
 import { Switch } from "@/components/ui/switch";
-import { useIsMobile } from "@/hooks/use-mobile";
+import { useIsMobile, isMobileViewport } from "@/hooks/use-mobile";
 import { allBoardSubjectOptions } from "@/data/subjectData";
 import { deleteSavedPaper, getSavedPapers, migrateLegacySavedPapersToDb, type SavedPaperRecord } from "@/lib/savedPapers";
 import { useInstituteSessionStore } from "@/stores/instituteSessionStore";
@@ -93,7 +93,8 @@ const Dashboard = () => {
   const { toast } = useToast();
   const session = useInstituteSessionStore((s) => s.session);
   const logout = useInstituteSessionStore((s) => s.logout);
-  const [sidebarOpen, setSidebarOpen] = useState(true);
+  // Desktop starts with its sidebar showing; on a phone the sidebar is an overlay and stays closed until the hamburger is tapped.
+  const [sidebarOpen, setSidebarOpen] = useState(() => !isMobileViewport());
   const [activeView, setActiveView] = useState<ActiveView>(() => location.state?.activeView ?? "dashboard");
   const [profile, setProfile] = useState<InstituteProfile | null>(null);
   const [isLoadingProfile, setIsLoadingProfile] = useState(true);
@@ -156,7 +157,7 @@ const Dashboard = () => {
   ];
 
   const actionCards = [
-    { title: "Generate Paper", subtitle: "Create a new exam paper", icon: <ClipboardList className="w-7 h-7" />, onClick: () => navigate(session?.token?.startsWith("trial_") ? "/dashboard/generate-paper?trial=true" : "/dashboard/generate-paper"), color: "text-indigo-600" },
+    { title: "Generate Paper", subtitle: "Create a new exam paper", icon: <ClipboardList className="w-7 h-7" />, onClick: () => navigate(session?.token?.startsWith("trial_") ? "/dashboard/generate-paper?trial=true" : "/dashboard/generate-paper"), color: "text-indigo-600", showArrow: true },
     { title: "Saved Papers", subtitle: "View and print saved papers", icon: <FileText className="w-7 h-7" />, onClick: () => handleNav("savedpapers"), color: "text-sky-600" },
     { title: "Sub Users", subtitle: "Manage sub user accounts", icon: <Users className="w-7 h-7" />, onClick: () => handleNav("subusers"), color: "text-teal-600" },
     { title: "Settings", subtitle: "Account and app settings", icon: <Settings className="w-7 h-7" />, onClick: () => handleNav("settings"), color: "text-rose-600" },
@@ -305,6 +306,14 @@ const Dashboard = () => {
                 {actionCards.map((card) => {
                   const content = (
                     <>
+                      {card.showArrow && (
+                        <span
+                          aria-hidden="true"
+                          className="absolute top-4 right-4 flex h-7 w-7 items-center justify-center rounded-full bg-indigo-600 text-white animate-nudge-right"
+                        >
+                          <ArrowRight className="h-4 w-4" strokeWidth={3} />
+                        </span>
+                      )}
                       <div className={card.color + " mb-3"}>
                         {card.icon}
                       </div>
@@ -312,7 +321,8 @@ const Dashboard = () => {
                       <p className="text-xs text-muted-foreground mt-1">{card.subtitle}</p>
                     </>
                   );
-                  const cls = "rounded-xl p-5 text-left transition-all hover:shadow-lg hover:-translate-y-1 block bg-card text-foreground border border-border";
+                  // The card with an arrow is the main action ("click here to make a paper").
+                  const cls = `rounded-xl p-5 text-left transition-all hover:shadow-lg hover:-translate-y-1 block bg-card text-foreground border border-border${card.showArrow ? " relative group" : ""}`;
 
                   return <button key={card.title} type="button" className={cls} onClick={card.onClick}>{content}</button>;
                 })}
