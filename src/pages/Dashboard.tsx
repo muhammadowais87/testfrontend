@@ -598,7 +598,10 @@ const loadTrialSettings = () => {
 const SettingsView = ({ profile, token }: { profile: InstituteProfile | null; token: string }) => {
   const { toast } = useToast();
   const isTrial = token?.startsWith("trial_");
-  const [isSaving, setIsSaving] = useState(false);
+  // Which of the three save buttons is running, so only that one shows "Updating..." (the others are just
+  // disabled meanwhile: two saves at once could overwrite each other's portalSettings on the server).
+  const [savingSection, setSavingSection] = useState<"appearance" | "information" | "watermark" | null>(null);
+  const isSaving = savingSection !== null;
   const logoFileInputRef = useRef<HTMLInputElement>(null);
   const handleLogoFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
@@ -705,12 +708,12 @@ const SettingsView = ({ profile, token }: { profile: InstituteProfile | null; to
     localStorage.setItem(TRIAL_SETTINGS_KEY, JSON.stringify(settings));
   };
 
-  const callApi = async (body: Record<string, unknown>) => {
+  const callApi = async (section: "appearance" | "information" | "watermark", body: Record<string, unknown>) => {
     if (isTrial) {
       saveToLocalStorage();
       return true;
     }
-    setIsSaving(true);
+    setSavingSection(section);
     try {
       const response = await fetch(`${API_BASE_URL}/institute-auth/settings`, {
         method: "PATCH",
@@ -728,13 +731,13 @@ const SettingsView = ({ profile, token }: { profile: InstituteProfile | null; to
       });
       return false;
     } finally {
-      setIsSaving(false);
+      setSavingSection(null);
     }
   };
 
   const handleSaveAppearance = async () => {
     if (!token) { toast({ title: "Session Expired", description: "Please login again.", variant: "destructive" }); return; }
-    const ok = await callApi({
+    const ok = await callApi("appearance", {
       portalSettings: {
         monogramHeight: settings.monogramHeight,
         monogramWidth: settings.monogramWidth,
@@ -752,7 +755,7 @@ const SettingsView = ({ profile, token }: { profile: InstituteProfile | null; to
 
   const handleSaveInformation = async () => {
     if (!token) { toast({ title: "Session Expired", description: "Please login again.", variant: "destructive" }); return; }
-    const ok = await callApi({
+    const ok = await callApi("information", {
       schoolName: settings.schoolName,
       schoolAddress: settings.schoolAddress,
       principalName: settings.principalName,
@@ -766,7 +769,7 @@ const SettingsView = ({ profile, token }: { profile: InstituteProfile | null; to
 
   const handleSaveWatermark = async () => {
     if (!token) { toast({ title: "Session Expired", description: "Please login again.", variant: "destructive" }); return; }
-    const ok = await callApi({
+    const ok = await callApi("watermark", {
       portalSettings: {
         watermarkMode: settings.watermarkMode,
         watermarkHeight: settings.watermarkHeight,
@@ -925,7 +928,7 @@ const SettingsView = ({ profile, token }: { profile: InstituteProfile | null; to
         <div className="flex justify-end">
           <button disabled={isSaving} type="button" onClick={handleSaveAppearance} className="inline-flex items-center gap-2 rounded-lg bg-slate-900 px-5 py-2.5 text-sm font-semibold text-white hover:bg-slate-800 transition-colors disabled:opacity-60 disabled:cursor-not-allowed">
             <Save className="w-4 h-4" />
-            {isSaving ? "Updating..." : "Update Appearance"}
+            {savingSection === "appearance" ? "Updating..." : "Update Appearance"}
           </button>
         </div>
       </div>
@@ -983,7 +986,7 @@ const SettingsView = ({ profile, token }: { profile: InstituteProfile | null; to
         <div className="flex justify-end">
           <button disabled={isSaving} type="button" onClick={handleSaveInformation} className="inline-flex items-center gap-2 rounded-lg bg-slate-900 px-5 py-2.5 text-sm font-semibold text-white hover:bg-slate-800 transition-colors disabled:opacity-60 disabled:cursor-not-allowed">
             <Save className="w-4 h-4" />
-            {isSaving ? "Updating..." : "Update Information"}
+            {savingSection === "information" ? "Updating..." : "Update Information"}
           </button>
         </div>
       </div>
@@ -1078,7 +1081,7 @@ const SettingsView = ({ profile, token }: { profile: InstituteProfile | null; to
               <div className="flex justify-end pt-2">
                 <button disabled={isSaving} type="button" onClick={handleSaveWatermark} className="inline-flex items-center gap-2 rounded-lg bg-slate-900 px-5 py-2.5 text-sm font-semibold text-white hover:bg-slate-800 transition-colors disabled:opacity-60 disabled:cursor-not-allowed">
                   <Save className="w-4 h-4" />
-                  {isSaving ? "Updating..." : "Update Watermark"}
+                  {savingSection === "watermark" ? "Updating..." : "Update Watermark"}
                 </button>
               </div>
             </div>
