@@ -734,15 +734,23 @@ const TeacherGeneratePaper = () => {
 
   const getSectionMarks = (batch: number) => marksByBatch[batch] ?? (Number(eachQMarks) || 2);
 
-  // Sum of every section's own count x marks (comprehension sets count as one unit each).
+  // How many of a section's questions carry marks. Comprehension sets count as one unit each, and with
+  // "Question Choice" only N are attempted: "Any 6" out of 8 questions is 6 x marks, not 8 x marks.
+  const getMarkedCount = (section: (typeof workspaceSections)[number]) => {
+    const unitCount = isComprehensionType(section.typeKey)
+      ? groupComprehensionSets(section.questions).length
+      : section.questions.length;
+    const attempted = unitCount - (ignoreCountByBatch[section.questions[0]?.batch ?? 0] ?? 0);
+    return attempted > 0 ? attempted : unitCount;
+  };
+
+  // Sum of every section's own marked count x marks.
   const getDefaultTotalMarks = () =>
     String(
-      workspaceSections.reduce((sum, section) => {
-        const unitCount = isComprehensionType(section.typeKey)
-          ? groupComprehensionSets(section.questions).length
-          : section.questions.length;
-        return sum + unitCount * getSectionMarks(section.questions[0]?.batch ?? 0);
-      }, 0),
+      workspaceSections.reduce(
+        (sum, section) => sum + getMarkedCount(section) * getSectionMarks(section.questions[0]?.batch ?? 0),
+        0,
+      ),
     );
 
   // A total the user typed in wins; otherwise (empty, "0", or still the value auto-filled
@@ -1983,18 +1991,13 @@ const TeacherGeneratePaper = () => {
                     const showUr = sectionMedium !== "english";
                     // Each section also keeps its own "2 Questions Per Line" setting.
                     const sectionTwoPerLine = section.questions[0]?.twoPerLine ?? appliedTwoQuestionsPerLine;
-                    // A comprehension-paragraph section's mark count is by SET (paragraph +
-                    // its questions together), not by raw item count -- each set is one
-                    // selectable, markable unit, same as its "required questions" counting.
-                    const sectionUnitCount = isComprehensionType(section.typeKey)
-                      ? groupComprehensionSets(section.questions).length
-                      : section.questions.length;
+                    const sectionMarkedCount = getMarkedCount(section);
                     return (
                       <div key={section.key} className="border-b border-gray-200 pb-4 last:border-b-0 last:pb-0">
                         <div className="flex items-start justify-between gap-6 mb-4 pr-3">
                           {showEn && <p className="text-sm font-bold text-gray-900 flex-1">Q{sectionNumber}. {sectionLabel.english}</p>}
                           <p className="text-sm font-bold text-gray-900 whitespace-nowrap">
-                            {sectionUnitCount}X{marksPerQuestion}={sectionUnitCount * marksPerQuestion}
+                            {sectionMarkedCount}X{marksPerQuestion}={sectionMarkedCount * marksPerQuestion}
                           </p>
                           {showUr && <p className="text-sm font-bold text-gray-900 flex-1 text-right" dir="rtl">سوال نمبر{sectionNumber}۔ {sectionLabel.urdu}</p>}
                         </div>

@@ -681,7 +681,10 @@ const SavedPaperViewer = () => {
       // marks existed fall back to the paper-wide average.
       const sectionMarksPerQuestion = paper?.batchMarks?.[batchNum] ?? marksPerQuestion;
 
-      return { key, typeKey, title, urduTitle, questions, marksPerQuestion: sectionMarksPerQuestion };
+      // Only the attempted questions carry marks: "Any 6" out of 8 prints 6X2=12, not 8X2=16.
+      const markedCount = ignoreCount > 0 && attemptCount > 0 ? attemptCount : unitCount;
+
+      return { key, typeKey, title, urduTitle, questions, marksPerQuestion: sectionMarksPerQuestion, markedCount };
     });
 
     return { sections: sections.filter((s) => s.questions.length > 0) };
@@ -1665,12 +1668,6 @@ const SavedPaperViewer = () => {
                   const showUr = sectionMedium !== "english";
                   // Each section also keeps its own "2 Questions Per Line" setting.
                   const sectionTwoPerLine = section.questions[0]?.twoPerLine ?? paper?.twoQuestionsPerLine ?? false;
-                  // A comprehension-paragraph section's mark count is by SET (paragraph +
-                  // its questions together), not by raw item count -- each set is one
-                  // markable unit.
-                  const sectionUnitCount = isComprehensionType(section.typeKey)
-                    ? groupComprehensionSets(section.questions).length
-                    : section.questions.length;
                   return (
                   <section key={section.key} className={`saved-paper-section ${sectionIndex > 0 ? "pt-4 border-t border-black" : ""}`} style={{ breakInside: "avoid" }}>
                     <div className="mb-1 print:mb-1 grid items-start gap-3 pr-3" style={{ gridTemplateColumns: showEn && showUr ? "1fr auto 1fr" : showEn ? "1fr auto" : "auto 1fr" }}>
@@ -1682,14 +1679,14 @@ const SavedPaperViewer = () => {
                       {manualEditing ? (
                         <input
                           type="text"
-                          value={sectionMarksOverrides[section.key] || `${sectionUnitCount}X${section.marksPerQuestion}=${sectionUnitCount * section.marksPerQuestion}`}
+                          value={sectionMarksOverrides[section.key] || `${section.markedCount}X${section.marksPerQuestion}=${section.markedCount * section.marksPerQuestion}`}
                           onChange={(e) => setSectionMarksOverrides((prev) => ({ ...prev, [section.key]: e.target.value }))}
                           className="h-6 min-w-[170px] rounded border border-black px-2 text-center text-black outline-none"
                           style={{ fontSize: `${resolvedEnglishFontSize}px`, fontFamily: englishFontFamily }}
                         />
                       ) : (
                         <span className="font-bold text-center text-black" style={{ fontSize: `${resolvedEnglishFontSize}px`, fontFamily: englishFontFamily }}>
-                          {sectionMarksOverrides[section.key] || `${sectionUnitCount}X${section.marksPerQuestion}=${sectionUnitCount * section.marksPerQuestion}`}
+                          {sectionMarksOverrides[section.key] || `${section.markedCount}X${section.marksPerQuestion}=${section.markedCount * section.marksPerQuestion}`}
                         </span>
                       )}
                       {showUr && (
