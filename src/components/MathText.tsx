@@ -16,6 +16,13 @@ const toSup = (s: string) => s.split("").map((c) => SUPER[c] ?? c).join("");
 // ─────────────────────────────────────────────────────────────────────────────
 type Fix = [RegExp, string | ((m: string, ...g: string[]) => string)];
 
+// A real Roman numeral of 2+ letters, 1..399 (IX, XIII, XLI, CCCXXVIII…), as a whole token. Deliberately NOT
+// "any run of I/V/X/L/C/D/M": that also swallowed real words and names -- "C language", "CD stands for",
+// "DVD", "LCM", "DC Motor", "LCD Screens", "VLC Media Player", "Vol. II" -- and the first letter of any
+// sentence that starts with C/D/L/M/X ("Define", "Compare", "Make", "DNA"). D and M are left out (the
+// exercise numbers never reach 400), and single letters are left out (too many real uses: "C", "M", "X").
+const ROMAN_NUMERAL = String.raw`(?=[IVXLC]{2,}(?:\s|$))C{0,3}(?:XC|XL|L?X{0,3})(?:IX|IV|V?I{0,3})`;
+
 const FIXES: Fix[] = [
 
   // ── 0. Roman numeral exercise-number artifacts (PTB book 2-column PDF) ─────
@@ -24,15 +31,14 @@ const FIXES: Fix[] = [
   //     "15 . IX Identify..."      →  "Identify..."
   //     "0.35 . XLI 0.35"         →  "0.35 0.35"  (dupe removed by pass below)
   //     ": . CCCXXVIII k(x)=100"  →  " k(x)=100"
-  //   Only letters from {I,V,X,L,C,D,M} match — the exact Roman numeral set.
-  //   {2,} catches multi-char Roman numerals (IX, XXXI, CCCXXVIII…)
-  //   [XLCDM] catches single-char X/L/C/D/M — I and V excluded (too common as
-  //   English letters: pronoun "I", Roman numeral V vs. version/grade "V").
-  [/^\S{0,15}\s*\.\s+(?:[IVXLCDM]{2,}|[XLCDM])\s+/, ""],   // "15 . IX " or "p . XVII " at START
-  [/:?\s*\.\s+(?:[IVXLCDM]{2,}|[XLCDM])\s*/g, " "],          // ". CCCXXVIII " or ": . X " in middle
+  //   "N . ROMAN " at the START, followed by a capital letter or a digit.
+  [new RegExp(String.raw`^\S{0,15}\s*\.\s+${ROMAN_NUMERAL}\s+(?=[A-Z0-9])`), ""],   // "15 . IX " or "p . XVII " at START
+  //   In the middle the period has to stand on its own (after a space or a colon): that is what the artifact
+  //   looks like, whereas a sentence end / abbreviation ("Vol. II", "cell. Describe") has it attached.
+  [new RegExp(String.raw`(?:\s|:)\s*\.\s+${ROMAN_NUMERAL}(?:\s+|$)`, "g"), " "],   // " . CCCXXVIII " or ": . XL " in middle
   //   After stripLeadingNumber strips "1 . " the bare Roman stays: "XIII Represent…"
-  //   Require a capital letter after so we don't strip real words like "MIX".
-  [/^(?:[IVXLCDM]{2,}|[XLCDM])\s+(?=[A-Z])/g, ""],          // "XIII Represent…" → "Represent…"
+  //   Require a capital letter after so we don't strip real words.
+  [new RegExp(String.raw`^${ROMAN_NUMERAL}\s+(?=[A-Z])`, "g"), ""],          // "XIII Represent…" → "Represent…"
   // NOTE: leading digit artifact ("1 Name…") is cleaned AFTER dedup — see preprocessMathText
 
   // ── 1. Non-breaking space → regular space ─────────────────────────────────
