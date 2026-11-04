@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { useNavigate, useParams, useLocation } from "react-router-dom";
-import { ChevronDown, ChevronLeft, Printer, RotateCcw } from "lucide-react";
+import { ChevronDown, ChevronLeft, FileText, Printer, RotateCcw } from "lucide-react";
 import { getSavedPaperById, type SavedPaperRecord } from "@/lib/savedPapers";
 import { API_BASE_URL } from "@/lib/api";
 import { useInstituteSessionStore } from "@/stores/instituteSessionStore";
@@ -21,6 +21,8 @@ const SavedPaperViewer = () => {
   const isMobile = useIsMobile();
   const paperId = Number(id);
   const [paper, setPaper] = useState<SavedPaperRecord | null>(navState?.paperOverride ?? null);
+  // True while the paper is being fetched, so the page shows a loading screen instead of "Saved paper not found".
+  const [isLoadingPaper, setIsLoadingPaper] = useState(!navState?.paperOverride);
   const [lineHeight, setLineHeight] = useState("1.28");
   const [urduFontSize, setUrduFontSize] = useState("12");
   const [englishFontSize, setEnglishFontSize] = useState("12");
@@ -256,8 +258,15 @@ const SavedPaperViewer = () => {
     let cancelled = false;
 
     const loadPaper = async () => {
-      const latestPaper = navState?.paperOverride ?? await getSavedPaperById(paperId);
+      if (!navState?.paperOverride) setIsLoadingPaper(true);
+      let latestPaper: SavedPaperRecord | null = null;
+      try {
+        latestPaper = navState?.paperOverride ?? await getSavedPaperById(paperId);
+      } catch {
+        latestPaper = null;
+      }
       if (cancelled) return;
+      setIsLoadingPaper(false);
 
       setPaper(latestPaper);
       setPaperFields((prev) => ({
@@ -765,6 +774,32 @@ const SavedPaperViewer = () => {
       <div className={className}>{paperFields[key]}</div>
     )
   );
+
+  if (!paper && isLoadingPaper) {
+    return (
+      <div className="min-h-screen bg-background grid place-items-center px-4" role="status" aria-live="polite">
+        <div className="w-full max-w-sm rounded-2xl border border-border bg-card p-6 shadow-lg">
+          <div className="flex items-center gap-4">
+            <div className="relative h-14 w-14 shrink-0">
+              <span className="absolute inset-0 rounded-full border-4 border-primary/15" />
+              <span className="absolute inset-0 animate-spin rounded-full border-4 border-transparent border-t-primary" />
+              <FileText className="absolute inset-0 m-auto h-6 w-6 text-primary" />
+            </div>
+            <div>
+              <p className="text-base font-semibold text-foreground">Loading your paper</p>
+              <p className="text-xs text-muted-foreground">Please wait a moment...</p>
+            </div>
+          </div>
+          <div className="mt-6 space-y-2.5">
+            <div className="h-3 w-2/3 animate-pulse rounded bg-secondary" />
+            <div className="h-3 w-full animate-pulse rounded bg-secondary" />
+            <div className="h-3 w-5/6 animate-pulse rounded bg-secondary" />
+            <div className="h-3 w-3/4 animate-pulse rounded bg-secondary" />
+          </div>
+        </div>
+      </div>
+    );
+  }
 
   if (!paper) {
     return (

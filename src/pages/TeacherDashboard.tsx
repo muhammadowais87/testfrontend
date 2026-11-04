@@ -7,7 +7,7 @@ import {
   GraduationCap, Building2, TrendingUp, Clock,
   BookOpen, Calendar, Sparkles, ChevronRight, ChevronLeft,
   Trash2, CreditCard, MoreVertical, Eye, Printer, Edit, Key, Settings, Save, EyeOff,
-  Users, ArrowUp, ArrowRight, RotateCcw, Upload,
+  Users, ArrowUp, ArrowRight, RotateCcw, Upload, Loader2,
 } from "lucide-react";
 import { useTeacherSessionStore } from "@/stores/teacherSessionStore";
 import { useIsMobile, isMobileViewport } from "@/hooks/use-mobile";
@@ -381,6 +381,8 @@ const TeacherSavedPapersView = () => {
   const generatePaperPath = teacherSession?.portalType === "sub-user" ? "/sub-user/generate-paper" : "/teacher/generate-paper";
   const [search, setSearch] = useState("");
   const [teacherPapers, setTeacherPapers] = useState<SavedPaperRecord[]>([]);
+  // true until the first fetch finishes, so a slow connection shows "Loading" instead of "No papers found"
+  const [isLoadingPapers, setIsLoadingPapers] = useState(true);
 
   useEffect(() => {
     let cancelled = false;
@@ -394,6 +396,10 @@ const TeacherSavedPapersView = () => {
       } catch {
         if (!cancelled) {
           setTeacherPapers([]);
+        }
+      } finally {
+        if (!cancelled) {
+          setIsLoadingPapers(false);
         }
       }
     };
@@ -466,18 +472,27 @@ const TeacherSavedPapersView = () => {
         <div className="overflow-x-auto">
           <table className="w-full text-sm">
             <thead>
-              <tr className="border-b border-border bg-secondary/40">
-                <th className="text-left py-3 px-3 sm:px-4 text-muted-foreground font-medium">#</th>
-                <th className="text-left py-3 px-3 sm:px-4 text-muted-foreground font-medium">Paper Title</th>
-                <th className="text-left py-3 px-3 sm:px-4 text-muted-foreground font-medium">Subject</th>
-                <th className="text-left py-3 px-3 sm:px-4 text-muted-foreground font-medium">Class</th>
-                <th className="text-left py-3 px-3 sm:px-4 text-muted-foreground font-medium">Date</th>
-                <th className="text-left py-3 px-3 sm:px-4 text-muted-foreground font-medium">Status</th>
-                <th className="text-left py-3 px-3 sm:px-4 text-muted-foreground font-medium">Action</th>
+              <tr className="border-b border-border bg-primary">
+                <th className="text-left py-3 px-3 sm:px-4 text-primary-foreground font-medium">#</th>
+                <th className="text-left py-3 px-3 sm:px-4 text-primary-foreground font-medium">Paper Title</th>
+                <th className="text-left py-3 px-3 sm:px-4 text-primary-foreground font-medium">Subject</th>
+                <th className="text-left py-3 px-3 sm:px-4 text-primary-foreground font-medium">Class</th>
+                <th className="text-left py-3 px-3 sm:px-4 text-primary-foreground font-medium">Date</th>
+                <th className="text-left py-3 px-3 sm:px-4 text-primary-foreground font-medium">Status</th>
+                <th className="text-left py-3 px-3 sm:px-4 text-primary-foreground font-medium">Action</th>
               </tr>
             </thead>
             <tbody>
-              {filtered.length === 0 ? (
+              {isLoadingPapers ? (
+                <tr>
+                  <td colSpan={7} className="py-10">
+                    <div className="flex items-center justify-center gap-2 text-muted-foreground" role="status" aria-live="polite">
+                      <Loader2 className="h-5 w-5 animate-spin" />
+                      <span>Loading papers...</span>
+                    </div>
+                  </td>
+                </tr>
+              ) : filtered.length === 0 ? (
                 <tr>
                   <td colSpan={7} className="text-center py-8 text-muted-foreground">No papers found</td>
                 </tr>

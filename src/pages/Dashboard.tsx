@@ -31,6 +31,7 @@ import {
   CalendarCheck,
   Building2,
   DollarSign,
+  Loader2,
 } from "lucide-react";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
 import { Switch } from "@/components/ui/switch";
@@ -1118,6 +1119,8 @@ const SavedPapersView = () => {
   const navigate = useNavigate();
   const [search, setSearch] = useState("");
   const [savedPapers, setSavedPapers] = useState<SavedPaper[]>([]);
+  // true until the first fetch finishes, so a slow connection shows "Loading" instead of "No papers found"
+  const [isLoadingPapers, setIsLoadingPapers] = useState(true);
   const [entriesPerPage, setEntriesPerPage] = useState(5);
   const [currentPage, setCurrentPage] = useState(1);
   const [openMenuPaperId, setOpenMenuPaperId] = useState<number | null>(null);
@@ -1135,6 +1138,10 @@ const SavedPapersView = () => {
       } catch {
         if (!cancelled) {
           setSavedPapers([]);
+        }
+      } finally {
+        if (!cancelled) {
+          setIsLoadingPapers(false);
         }
       }
     };
@@ -1204,19 +1211,28 @@ const SavedPapersView = () => {
         <div className="overflow-x-auto">
           <table className="w-full text-sm">
             <thead>
-              <tr className="border-b border-border bg-secondary/40">
-                <th className="text-left py-3 px-4 text-muted-foreground font-medium">#</th>
-                <th className="text-left py-3 px-4 text-muted-foreground font-medium">Paper Title</th>
-                <th className="text-left py-3 px-4 text-muted-foreground font-medium">Subject</th>
-                <th className="text-left py-3 px-4 text-muted-foreground font-medium">Class</th>
-                <th className="text-left py-3 px-4 text-muted-foreground font-medium">Board</th>
-                <th className="text-left py-3 px-4 text-muted-foreground font-medium">Teacher</th>
-                <th className="text-left py-3 px-4 text-muted-foreground font-medium">Date</th>
-                <th className="text-left py-3 px-4 text-muted-foreground font-medium">Action</th>
+              <tr className="border-b border-border bg-primary">
+                <th className="text-left py-3 px-4 text-primary-foreground font-medium">#</th>
+                <th className="text-left py-3 px-4 text-primary-foreground font-medium">Paper Title</th>
+                <th className="text-left py-3 px-4 text-primary-foreground font-medium">Subject</th>
+                <th className="text-left py-3 px-4 text-primary-foreground font-medium">Class</th>
+                <th className="text-left py-3 px-4 text-primary-foreground font-medium">Board</th>
+                <th className="text-left py-3 px-4 text-primary-foreground font-medium">Teacher</th>
+                <th className="text-left py-3 px-4 text-primary-foreground font-medium">Date</th>
+                <th className="text-left py-3 px-4 text-primary-foreground font-medium">Action</th>
               </tr>
             </thead>
             <tbody>
-              {filtered.length === 0 ? (
+              {isLoadingPapers ? (
+                <tr>
+                  <td colSpan={8} className="py-10">
+                    <div className="flex items-center justify-center gap-2 text-muted-foreground" role="status" aria-live="polite">
+                      <Loader2 className="h-5 w-5 animate-spin" />
+                      <span>Loading papers...</span>
+                    </div>
+                  </td>
+                </tr>
+              ) : filtered.length === 0 ? (
                 <tr>
                   <td colSpan={8} className="text-center py-8 text-muted-foreground">No papers found</td>
                 </tr>
