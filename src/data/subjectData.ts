@@ -3,7 +3,7 @@ import { getTenTopicChapters } from "./tenTopicChapters";
 import afaqTopicChapters from "./afaqTopicChapters.json";
 import oxfordTopicChapters from "./oxfordTopicChapters.json";
 import baTopicChapters from "./baTopicChapters.json";
-import { interTwoChapters } from "./interTwoChapters";
+import { interTwoChapters, HOPE_FULL_BOOK_ONLY, fullBookTopic } from "./interTwoChapters";
 
 
 export type SubjectCard = {
@@ -254,8 +254,8 @@ const interTwoExcludedTitles = new Set([
   "لائبریری سائنس",
 ]);
 
-// INTER-II subjects whose questions are in the question bank. Every other INTER-II subject
-// is shown as "Coming Soon" -- add a title here once its data has been seeded.
+// INTER-II subjects whose questions are in the question bank. They are listed first; the rest follow.
+// (To grey a subject out again, set `comingSoon: true` on its card in forInterTwo below.)
 const interTwoReadyTitles = new Set([
   "Economics",
   "Pakistan Studies",
@@ -270,11 +270,29 @@ const interTwoReadyTitles = new Set([
   "ترجمہ القرآن المجید",
   "فارسی",
   "تاریخ اسلام",
+  "Physics",
+  "Chemistry",
+  "Biology",
+  "Computer",
+  "تجارتی جغرافیہ",
+  "اصول بینکاری",
+  "Statistics",
+  "Mathematics",
+  "کاروباری شماریات",
+  "Principles of Accounting",
 ]);
-const forInterTwo = (cards: SubjectCard[]) =>
-  cards
-    .filter((card) => !interTwoExcludedTitles.has(card.title))
-    .map((card) => (interTwoReadyTitles.has(card.title) ? card : { ...card, comingSoon: true }));
+const forInterTwo = (cards: SubjectCard[]) => cards.filter((card) => !interTwoExcludedTitles.has(card.title));
+
+// Subjects whose questions (Hope Science Academy files) are stored under the single "Full Book" topic only.
+// While HOPE_FULL_BOOK_ONLY is on they show "Coming Soon" and cannot be opened; they open again when the flag is
+// turned off (in interTwoChapters.ts) after the questions are arranged topic-wise.
+const interOneFullBookTitles = new Set(["Statistics", "Business Maths", "Principles of Accounting"]);
+const interTwoFullBookTitles = new Set(["Statistics", "Mathematics", "کاروباری شماریات", "Principles of Accounting"]);
+// INTER-II subjects that have topics but no questions in the question bank yet (always Coming Soon, listed last).
+const interTwoNoQuestionsTitles = new Set(["English", "اردو لازمی"]);
+const isFullBookOnly = (card: SubjectCard, titles: Set<string>) => HOPE_FULL_BOOK_ONLY && titles.has(card.title);
+const markFullBookComingSoon = (cards: SubjectCard[], titles: Set<string>): SubjectCard[] =>
+  cards.map((card) => (isFullBookOnly(card, titles) ? { ...card, comingSoon: true } : card));
 
 // INTER-II subjects that have no INTER-I counterpart (INTER-II shows the INTER-I list plus these).
 const interTwoOnlySubjects: SubjectCard[] = [
@@ -286,9 +304,9 @@ const interTwoOnlySubjects: SubjectCard[] = [
   { title: "انسانی جغرافیہ", subtitle: "PTB", image: getBookImage("انسانی جغرافیہ") },
 ];
 
-// INTER-II shows the subjects that already have data first and the "Coming Soon" ones after
-// them, as two groups so there is a gap between. The page prints the first card's subtitle as
-// the group heading, so each group leads with a card that has no subtitle (no stray "ICS" etc.).
+// INTER-II is one list: the subjects that already have data first, the rest after them. The page prints
+// the first card's subtitle as the group heading, so the list leads with a card that has no subtitle
+// (no stray "ICS" etc.).
 const buildInterTwoGroups = (): SubjectCard[][] => {
   const all = forInterTwo([
     ...interOneCoreSubjects,
@@ -296,14 +314,15 @@ const buildInterTwoGroups = (): SubjectCard[][] => {
     ...interOneExtraSubjects,
     ...interTwoOnlySubjects,
   ]);
-  const leadWithUntitled = (cards: SubjectCard[]) => {
-    const lead = cards.findIndex((card) => !card.subtitle);
-    return lead > 0 ? [cards[lead], ...cards.filter((_, i) => i !== lead)] : cards;
-  };
-  return [
-    leadWithUntitled(all.filter((card) => !card.comingSoon)),
-    leadWithUntitled(all.filter((card) => card.comingSoon)),
-  ];
+  const hasData = (card: SubjectCard) => interTwoReadyTitles.has(card.title) && !isFullBookOnly(card, interTwoFullBookTitles);
+  const withData = all.filter(hasData);
+  const needsComingSoon = (card: SubjectCard) => isFullBookOnly(card, interTwoFullBookTitles) || interTwoNoQuestionsTitles.has(card.title);
+  const others = all.filter((card) => !hasData(card));
+  const rest = others.filter((card) => !needsComingSoon(card));
+  const comingSoon = others.filter(needsComingSoon).map((card) => ({ ...card, comingSoon: true }));
+  const ordered = [...withData, ...rest, ...comingSoon];
+  const lead = ordered.findIndex((card) => !card.subtitle);
+  return [lead > 0 ? [ordered[lead], ...ordered.filter((_, i) => i !== lead)] : ordered];
 };
 
 export const interTwoCoreSubjects: SubjectCard[] = [
@@ -525,7 +544,7 @@ export const ptbClassSubjectsMap: Record<string, SubjectCard[][]> = {
       { title: "Textile and Clothing", subtitle: "10TH", image: getBookImage("Textile and Clothing") },
     ],
   ],
-  "INTER-I": [interOneCoreSubjects, interOneGeneralSubjects, interOneExtraSubjects],
+  "INTER-I": [interOneCoreSubjects, interOneGeneralSubjects, interOneExtraSubjects].map((group) => markFullBookComingSoon(group, interOneFullBookTitles)),
   "INTER-II": buildInterTwoGroups(),
 };
 
@@ -2373,13 +2392,19 @@ export const subjectChaptersMap: Record<string, ChapterGroup[]> = {
   "اسلامیات لازمی-INTER-I-PTB": islamiyatInterOneChapters,
   "Economics-INTER-I-PTB": economicsInterOneChapters,
   "معاشیات-INTER-I-PTB": economicsInterOneChapters,
-  "Statistics-INTER-I-PTB": statisticsInterOneChapters,
-  "شماریات-INTER-I-PTB": statisticsInterOneChapters,
-  "Principles of Accounting-INTER-I-PTB": accountingInterOneChapters,
-  "اصول محاسبت-INTER-I-PTB": accountingInterOneChapters,
-  "Business Maths-INTER-I-PTB": businessMathInterOneChapters,
-  "Business Math-INTER-I-PTB": businessMathInterOneChapters,
-  "کاروباری ریاضی-INTER-I-PTB": businessMathInterOneChapters,
+  // Statistics questions (Hope Science Academy file) have no topic split yet: one "Full Book" topic returns them all.
+  // Set HOPE_FULL_BOOK_ONLY to false in interTwoChapters.ts to bring the real chapter list back.
+  "Statistics-INTER-I-PTB": HOPE_FULL_BOOK_ONLY ? fullBookTopic : statisticsInterOneChapters,
+  "شماریات-INTER-I-PTB": HOPE_FULL_BOOK_ONLY ? fullBookTopic : statisticsInterOneChapters,
+  // Accounting questions (Hope Science Academy file) have no topic split yet: one "Full Book" topic returns them all.
+  // Set HOPE_FULL_BOOK_ONLY to false in interTwoChapters.ts to bring the real chapter list back.
+  "Principles of Accounting-INTER-I-PTB": HOPE_FULL_BOOK_ONLY ? fullBookTopic : accountingInterOneChapters,
+  "اصول محاسبت-INTER-I-PTB": HOPE_FULL_BOOK_ONLY ? fullBookTopic : accountingInterOneChapters,
+  // Business Maths questions (Hope Science Academy file) have no topic split yet: one "Full Book" topic returns them all.
+  // Set HOPE_FULL_BOOK_ONLY to false in interTwoChapters.ts to bring the real chapter list back.
+  "Business Maths-INTER-I-PTB": HOPE_FULL_BOOK_ONLY ? fullBookTopic : businessMathInterOneChapters,
+  "Business Math-INTER-I-PTB": HOPE_FULL_BOOK_ONLY ? fullBookTopic : businessMathInterOneChapters,
+  "کاروباری ریاضی-INTER-I-PTB": HOPE_FULL_BOOK_ONLY ? fullBookTopic : businessMathInterOneChapters,
   "English-INTER-I-PTB": englishInterOneChapters,
   "Principles of Commerce-INTER-I-PTB": principlesOfCommerceInterOneChapters,
   "اصول تجارت-INTER-I-PTB": principlesOfCommerceInterOneChapters,

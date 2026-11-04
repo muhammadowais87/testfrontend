@@ -1,0 +1,379 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=1.8cm]{geometry}
+\usepackage{amsmath,amssymb,tabularx,array,needspace,fontspec,enumitem,cancel}
+\newcommand{\tb}{\cancel{||||}\,}
+\setmainfont{FreeSerif}
+\newfontfamily\urdufont[Script=Arabic]{FreeSerif}
+\TeXXeTstate=1
+\newcommand{\urdu}[1]{{\urdufont\beginR #1\endR}}
+\hyphenpenalty=10000\exhyphenpenalty=10000
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\renewcommand{\arraystretch}{1.15}
+\pagestyle{plain}
+
+% \mcq{number}{question}{A}{B}{C}{D}
+\newcommand{\mcq}[6]{%
+  \Needspace{4\baselineskip}%
+  \par\medskip\noindent\textbf{#1.}\ #2\par\nopagebreak
+  \noindent\begin{tabularx}{\linewidth}{@{\hspace{1.5em}}*{4}{>{\raggedright\arraybackslash}X}@{}}
+    (A)~#3 & (B)~#4 & (C)~#5 & (D)~#6
+  \end{tabularx}\par}
+
+\begin{document}
+
+\begin{center}
+  {\Huge\bfseries The Hope Science Academy}\\[3pt]
+  {\small Excellence is our standard not goal}\\[2pt]
+  {\small 247-E-1, (Opposite LDA School) Johar Town, Lahore. PH: 0300-8194789, 0322-4157001}
+\end{center}
+
+\medskip
+\noindent
+\begin{tabularx}{\linewidth}{|X|X|X|X|}
+\hline
+\textbf{Student Name:} & \textbf{Roll Num:} & \textbf{Class:} 12th & \textbf{Paper Code:} \\ \hline
+\textbf{Subject Name:} Mathematics. & \textbf{Time Allowed:} & \textbf{Total Marks:} 335 & \textbf{Exam Date:} 03-Nov-2026 \\ \hline
+\multicolumn{4}{|l|}{\textbf{Exam Syllabus:} FULL BOOK} \\ \hline
+\end{tabularx}
+
+\bigskip
+\noindent\textbf{Q1. Choose the correct answer.}\hfill\textbf{1$\times$335=335}
+
+
+\mcq{1}{Whether a parabola opens upward or downward depends entirely on the value of:}{b}{c}{a}{x}
+\mcq{2}{Logarithmic functions are widely used in real-life contexts to measure:}{Compound interest}{Sound intensity, growth, and decay}{Graphical scaling only}{Linear factors}
+\mcq{3}{Compound interest is a real-life application primarily related to which type of functions:}{Logarithmic functions}{Linear functions}{Exponential functions}{Hyperbolic functions}
+\mcq{4}{Functions are generally classified in this unit into which two main categories:}{Real and Imaginary}{Algebraic and Transcendental}{Linear and Quadratic}{Shifted and Scaled}
+\mcq{5}{To find the y-intercept of the function y=a(x-h)(x-k), we substitute:}{y=0}{x=0}{x=h}{x=k}
+\mcq{6}{If h=k, the quadratic function becomes y=a(x-h)$^{2}$, and the graph touches the x-axis at:}{(0,h)}{(-h,0)}{(h,0)}{(ah,0)}
+\mcq{7}{At what value does the graph of y=a(x-h)(x-k) cut the y-axis:}{y=h+k}{y=ahk}{y=0}{y=a}
+\mcq{8}{To determine a quadratic function from its graph using factor form, we must know the x-intercepts and:}{The y-intercept only}{One additional point on the curve}{The vertex only}{Two additional points}
+\mcq{9}{In the equation f(x)=a(x-h)(x-k), the constant a determines the parabola's:}{Only position}{Shape and direction}{x-intercepts}{Highest power}
+\mcq{10}{To find the value of the constant a, we substitute the coordinates of:}{The origin (0,0)}{A third known point}{The x-intercepts}{Any point outside the curve}
+\mcq{11}{What are the x-intercepts of the quadratic function y=3(x+1)(x-1):}{(3,0) and (-3,0)}{(1,0) and (-1,0)}{(0,1) and (0,-1)}{(3,0) and (1,0)}
+\mcq{12}{Find the equation of a parabola whose x-intercepts are x=-1 and x=-2 and which passes through the point (-3,2):}{y=x$^{2}$ +3x+2}{y=x$^{2}$ -3x+2}{y=2x$^{2}$ +6x+4}{y=-x$^{2}$ -3x-2}
+\mcq{13}{Find the equation of a parabola that touches the x-axis at x=-1 and cuts the y-axis at y=-2:}{y=(x+1)$^{2}$}{y=-2(x-1)$^{2}$}{y=-2x$^{2}$ -4x-2}{y=2x$^{2}$ +4x+2}
+\mcq{14}{Find the equation of a quadratic function whose graph cuts the x-axis at x=-1 and x=1 and whoes vertex is at (0,-2):}{y=x-2}{y=2x$^{2}$ -2}{y=2x$^{2}$ +2}{y= -2x$^{2}$ +2}
+\mcq{15}{Which two fundamental classes of functions are studied together to model real-world phenomena:}{Linear and Quadratic}{Algebraic and Transcendental}{Real and Complex}{Exponential and Logarithmic}
+\mcq{16}{A function y=f(x) is algebraic if it satisfies a polynomial equation involving powers of:}{Only x}{Powers of y with polynomial coefficients in x}{Trigonometric terms}{Infinite operations}
+\mcq{17}{A function is algebraic if it can be obtained using a...... number of algebraic operations:}{Finite}{Infinite}{Undefined}{Negative}
+\mcq{18}{A function is called a transcendental function if it is:}{Linear}{Not algebraic}{A polynomial of degree n}{Symmetric}
+\mcq{19}{Why are functions like In(2x) and sin(x) called transcendental:}{They cannot be obtained using a finite number of algebraic operations}{They contain only simple quotients}{They always equal zero}{They are always linear}
+\mcq{20}{The function f(x)=e$^{x}$ is specifically called the:}{Common exponential function}{Natural exponential function}{Logarithmic function}{Decay function}
+\mcq{21}{What is the approximate value of the mathematical constant e:}{2.14159}{2.71828}{3.14159}{1.41421}
+\mcq{22}{For any allowed base a, the value of a$^{0}$ is always:}{0}{1}{a}{-1}
+\mcq{23}{For all real values of x (rational and irrational), the expression ax is always:}{Negative}{Zero}{Positive}{Imaginary}
+\mcq{24}{A function is called injective (one-to-one) if:}{Different inputs always give the same output}{Different inputs always give different outputs}{It has a horizontal asymptote}{The base a is equal to 1}
+\mcq{25}{Graphically, a function is injective if every horizontal line meets its graph at most:}{Twice}{Zero times}{Once}{Infinitely many times}
+\mcq{26}{The horizontal asymptote for the exponential function f(x)=ax is represented by the line:}{x=0}{y=1}{y=0}{y=a}
+\mcq{27}{Hyperbolic functions are a specific class of:}{Algebraic functions}{Transcendental functions}{Linear functions}{Polynomial functions}
+\mcq{28}{Hyperbolic functions arise or originate from:}{Hyperbolas}{Circles}{Parabolas}{Ellipses}
+\mcq{29}{Which of the following is NOT listed in the text as a basic hyperbolic function:}{sinhx}{coshx}{tanhx}{secx}
+\mcq{30}{Inverse hyperbolic functions are defined on:}{All complex numbers}{Open intervals only}{Suitable restricted domains}{Entire real number line without restriction}
+\mcq{31}{Which of the following functions from the given list is transcedental:}{$k(x)=\frac{e^{x}+e^{-x}}{2}$}{$h(x)=\sqrt{x^{2}+2x}$}{f(x)= sec x}{$f(x)=3^{x}$}
+\mcq{32}{Which of the following is an algebraic function:}{g(x)= cot x}{$f(x)=\frac{1}{x}$}{$h(x)=\sqrt{x^{2}+2x}$}{$1-\tanh^{2}x=\mathrm{sech}^{2}x$}
+\mcq{33}{Which formula correctly represents the hyperbolic identity for cosh2x:}{cosh2x=cosh$^{2}$ x - sinh$^{2}$ x}{cosh2x=1 - tanh$^{2}$ x}{cosh2x=cosh$^{2}$ x + sinh$^{2}$ x}{cosh2x=2sinhx cosh x}
+\mcq{34}{Which of the following simplifies to sech$^{2}$ x?}{1+tanh$^{2}$ x}{1 - tanh$^{2}$ x}{coth$^{2}$ x - 1}{cosh x + sinh x}
+\mcq{35}{The identity for sinh2x is equivalent to:}{cosh$^{2}$ x - sinh$^{2}$ x}{cosh$^{2}$ x + sinh$^{2}$ x}{2 sin h x cosh x}{None of these}
+\mcq{36}{A logarithmic function y=log$_{a}$ x is defined only when the input x is:}{Any real number}{Greater than zero}{Less than zero}{Equal to zero}
+\mcq{37}{A logarithm with base e is called a:}{Natural logarithm}{Common logarithm}{Universal logarithm}{Simple logarithm}
+\mcq{38}{According to basic logarithmic identities, the value of log$_{a}$ 1 is always:}{1}{0}{a}{Undefined}
+\mcq{39}{Unlike exponential functions which have horizontal asymptotes, logarithmic functions possess a:}{Slant asymptote}{Vertical asymptote}{Circular asymptote}{No asymptote at all}
+\mcq{40}{Why does the graph of the function y=log$_{a}$ x have NO y-intercept:}{Because y can never be zero}{Because the function is undefined at x=0}{Because the base a cannot be negative}{Because the graph is always a straight line}
+\mcq{41}{The logarithmic function y=loga x is continuous for:}{All x{>}0}{All real numbers}{All negative real numbers}{Integers only}
+\mcq{42}{The graph of the modulus function f(x)=IxI forms which specific shape:}{U-shaped}{V-shaped}{Straight line}{Parabola}
+\mcq{43}{The modulus or absolute value of any real number is always:}{Strictly negative}{Zero only}{Non-negative}{An integer}
+\mcq{44}{For x{<}0, the piecewise definition of the modulus function is:}{f}{f}{f}{f}
+\mcq{45}{A function has an inverse if and only if it is:}{Linear}{Modulus}{Continuous only}{Bijective}
+\mcq{46}{The graph of a function and its inverse are geometrically symmetric about the line:}{y=0}{x=0}{y=x}{y=-x}
+\mcq{47}{Geometrically, the graph of an inverse function is obtained by reflecting the original graph about the line:}{y=0}{x=0}{y=x}{y=-x}
+\mcq{48}{To geometrically find an inverse function's graph, the original function must be:}{One-to-one}{Modulus}{Discontinuous}{Quadratic}
+\mcq{49}{The reflection mapping maintains an equal...... distance from each point to the line y=x:}{Parallel}{Horizontal}{Perpendicular}{Slant}
+\mcq{50}{The process of reflecting a curve across y=x preserves the...... between the two graphs:}{Geometric symmetry}{Linear intercepts}{Domain limits}{Vertical behavior}
+\mcq{51}{One of the most important real-life applications of graph transformations:}{Chemical testing}{Computer graphics}{Financial audits}{Static accounting}
+\mcq{52}{Which three fundamental transformations are the main focus of this section:}{Horizontal shift, vertical shift, and scaling}{Rotation, reflection, and stretching}{Compression, rotation, and translation}{Inversion, scaling, and rotation}
+\mcq{53}{The movement of a graph from its original position without changing its shape or size is called:}{Scaling}{Stretching}{Shifting}{Compression}
+\mcq{54}{To achieve a horizontal shift, the change is applied directly to the:}{Output variable y}{Input variable x}{Constant term only}{Base value}
+\mcq{55}{In the function y=f(x-h), if h{>}0, the graph shifts h units to the:}{Right}{Left}{Upward}{Downward}
+\mcq{56}{To achieve a vertical shift, the modification is applied directly to the:}{Input variable x}{Output variable y}{Coefficient of x$^{2}$}{Highest power only}
+\mcq{57}{In the function y=f(x)+k if k{>}0, the graph shifts k units:}{To the right}{To the left}{Upward}{Downward}
+\mcq{58}{The graph of the function y=(x-2)$^{2}$ represents a parabola with its vertex at:}{(0,0)}{(0,2)}{(2,0)}{(-2,0)}
+\mcq{59}{What is the inverse function $f^{-1}(x)$ of the logarithmic f(x)=log4(x-2) :}{$f^{-1}(x)=4^{4}-2$}{$f^{-1}(x)=4^{x+2}$}{$f^{-1}(x)=4^{x-2}$}{None of these}
+\mcq{60}{Find the $f(x)=\sin x$ for all $x\in\left[-\frac{\pi}{2},\frac{\pi}{2}\right]$, what is the range of its inverse function $f^{-1}(x)$:}{[-1,1]}{[0,2]}{[0,3]}{equation}
+\mcq{61}{Given the base function $f(x)=\sqrt{x}$ what is the equation after a vertical stretch by factor 2 and a horizontal shift 3 units to the right?}{$f(x)=\sqrt{\frac{2x-1}{x+3}}$}{$f(x)=|x|$}{$f(x)=\log_{4}(x-2)$}{equation}
+\mcq{62}{When the graph of a function f(x) is reflected along the line y=x, the resulting graph represents:}{The absolute value of the function If(x)I}{The reciprocal function}{The inverse function $f^{-1}(x)$}{The negative function -f(x)}
+\mcq{63}{Given the function $f(x)=\sqrt{\frac{2x-1}{x+3}}$ which equation represents the function after a horizontal shift 2 units left, followed by a horizontal compression by factor 3?}{$f(x)=\sqrt{x}$}{equation}{$f(x)=\frac{x}{x+1}$}{$f(x)=\left(\frac{1}{2}\right)^{x}=\frac{1}{2^{x}}$}
+\mcq{64}{How is the graph of g(x)=3$^{x-2}$ +1 transformed from its parent function f(x)=3x:}{Shifted 2 units left and 1 unit down}{Shifted 2 units right and 1 unit down}{Shifted 2 units left and 1 unit up}{Shifted 2 units right and 1 unit up}
+\mcq{65}{Given f(x)=In x, what is the resulting equation after applying a vertical stretch by factor 4, a horizontal shift 6 units to the right, and a horizontal compression by factor 3 in order:}{y=4In(3x-6)}{Y=4In(3x-18)}{y=3In(4x-6)}{y=4In(1/3x - 6)}
+\mcq{66}{If the parent function f(x)=IxI is shifted 7 units to the right and then horizontally compressed by a factor of 2, what is the intermediate equation before any vertical transformations:}{y=I2x-14I}{y=I2x-7I}{y=I3x-7I}{y=2Ix-7I}
+\mcq{67}{What happens to the y-intercept of a function graph when it undergoes a horizontal compression:}{It shifts vertically upward}{It remains completely unchanged}{It moves closer to the origin along the y-axis}{It shifts horizontally to the right}
+\mcq{68}{Where does the variable appear in an exponential equation or inequality:}{In the base}{In the exponent}{In the coefficient}{In the constant term}
+\mcq{69}{What must be considered before solving an expression that is not defined for all real values of the variable:}{The range}{The coefficients}{The domain}{The degree}
+\mcq{70}{Which types of equations and inequalities are specifically covered in this section:}{Exponential and Logarithmic}{Linear and Quadratic}{Polynomial and Radical}{Trigonometric and Matrix}
+\mcq{71}{When solving the inequality $\log_{\frac{1}{3}}(x^{2}-4x+3)>\log_{\frac{1}{3}}(2x-1)$ what happens to the inequality sign when removing the logarithms?}{It remains exactly the same ({>})}{It changes to an equal sign (=)}{It reverses direction ({<})}{None of these}
+\mcq{72}{What is the real solution to the exponential equation $3^{(x+1)}-2.9^{x}+9=0$:}{x=0}{x=1}{x=2}{x=0}
+\mcq{73}{What is the solution set for the inequality $2^{x}\geq\log_{2}(16)$ :}{x{>}4}{x{>}16}{x{>}2}{x{<}0}
+\mcq{74}{Find the exact solution interval for the logarithmic inequality $\log_{2}(x-1)\geq\log_{2}(5-x)$:}{(1,5)}{(3,0)}{(1,3)}{[3,5)}
+\mcq{75}{What is the solution set for the inequality $2^{x}+2^{1-x}\leq 3$?}{[0,1]}{[1,2]}{[0,2]}{[0,3]}
+\mcq{76}{In the growth and decay formula, what does a positive value of k(k{>}0) represent:}{Growth}{Decay}{Initial amount}{Time}
+\mcq{77}{What role do logarithms play in exponential models:}{They calculate the initial amount}{They help determine unknown quantities like time t or rate k.}{They decrease the value over time}{They represent sound intensity in decibels}
+\mcq{78}{In natural growth or decay processes, the rate of change is proportional to which of the following:}{Initial amount only}{Constant time t}{The current amount}{The value of e}
+\mcq{79}{What is the unit of sound intensity:}{Decibel}{Watt}{Watts per square meter}{Joule per second}
+\mcq{80}{Why is sound intensity measured on a logarithmic scale (decibel scale):}{Because sound level is always a constant value}{Because sound intensity varies over a very wide range}{To make calculations linear}{Because the human ear cannot detect high intensities}
+\mcq{81}{Compound interest is generally classified into how many types:}{Three}{Two}{Four}{Five}
+\mcq{82}{In the discrete compound interest formula, what does the variable 'n' represent:}{The initial amount of money invested}{The total time duration in years}{The number of times interest is compounded per unit time}{The annual interest rate in decimal form}
+\mcq{83}{When interest is added to the principal at fixed intervals like yearly, quarterly, or monthly, it is called:}{Continuous compound interest}{Simple interest}{Fixed baseline interest}{Discrete compound interest}
+\mcq{84}{Continuous compounding represents the limiting case of discrete compounding when the number of compounding periods becomes:}{Zero}{One}{Finitely small}{Infinitely large}
+\mcq{85}{In continuous compound interest, how often is interest added to the principal:}{Monthly}{Yearly}{Continuously at every instant of time}{Weekly}
+\mcq{86}{A population is given by $N=300e^{0.02t}$ where (t) is in hours. Find the time (t) when the population becomes 600:}{t=50In(2) hours}{t=25In(2) hours}{t=100In(2) hours}{t=300In(2) hours}
+\mcq{87}{A radioactive substance decays according to $N=800e^{-0.05t}$ where (t) is in hours. Find the time when the amount reduces to 200:}{20In (2) hours}{40In (2) hours}{10In (4) hours}{50In (4) hours}
+\mcq{88}{A sound has an intensity of $I=10^{-6}W/m^{2}$ and a reference intensity of $I_{o}=10^{-12}W/m^{2}$ Find the sound level in decibels (dB):}{50 dB}{60 dB}{70 dB}{80 dB}
+\mcq{89}{Two sounds have intensities $I_{1}$ and $I_{2}$ with levels $L_{1}=85$ and $L_{2}65$ dB Find the ratio $\frac{I_{1}}{I_{2}}$ where $I_{o}=10^{-12}W/m^{2}$ :}{10}{20}{100}{1000}
+\mcq{90}{A sum of Rs. 4000 is invested at 6\% per annum, compounded annually for 3 years. Find the final amount:}{Rs. 4720.00}{Rs. 4764.06}{Rs. 4930.40}{Rs. 4800.00}
+\mcq{91}{A quantity changes according to. If N=250 when t=5, find the value of N when t=10:}{125}{175}{200}{0}
+\mcq{92}{A sum of Rs. 5000 becomes 6324.48 when invested at 8\% per annum, compounded annually. Find the time (t) in years:}{2 years}{3 years}{4 years}{5 years}
+\mcq{93}{An amount of Rs. 2000 becomes 3320.12 under continuous compounding at 6\% per annum. Find the time (t) in years (rounded to the nearest whole number):}{5 years}{6 years}{7 years}{8 years}
+\mcq{94}{Who introduced the fundamental concept of differentiation in calculus:}{Gauss and Riemann}{Newton and Leibniz}{Euler and Lagrange}{Pascal and Fermat}
+\mcq{95}{Which rules were already studied in the previous class to find derivatives of polynomials and rational functions:}{Chain rule and Power rule}{L'Hopital's rule}{Sum, difference, product, and quotient rules}{ubstitution method}
+\mcq{96}{Differentiation will be applied to identify which behavior of functions:}{ncreasing and decreasing functions}{Domain and range}{Periodic behavior}{Continuity and limits}
+\mcq{97}{What will be used to find local and global extrema in this unit:}{Critical points}{Linear approximations}{Percentage errors}{Quotients}
+\mcq{98}{Which trigonometric functions' derivatives are found "by definition" first:}{tan x and cos x}{sec x and csc x}{sin x and cos x}{Only sin x}
+\mcq{99}{Which rules can be used to find the derivatives of the remaining trigonometric functions:}{Chain rule and Power rule}{Product rule and Quotient rule}{Sum rule and Difference rule}{L'Hopital's rule}
+\mcq{100}{Which rule must be applied to terms containing y during implicit differentiation:}{Product Rule}{Quotient Rule}{Chain Rule}{Power Rule}
+\mcq{101}{In the first step of implicit differentiation, both sides of F(x,y)=0 are differentiated with respect to:}{X}{Y}{F}{O}
+\mcq{102}{What is the derivative of y=sec x with respect ro x:}{tan$^{2}$ x}{sec x tan x}{- sec x tanx}{sec x}
+\mcq{103}{Using the Product Rule, find the derivative of $y=x^{2}\cos x$:}{$\frac{dy}{dx}$=2x cos x - x$^{2}$ sin x}{$\frac{dy}{dx}$=2x cos x$^{2}$ + xsin x}{$\frac{dy}{dx}$ = -2x sinx}{$\frac{dy}{dx}$=2x cos x - 2x$^{2}$ sin x}
+\mcq{104}{Find the derivative of y=(1+csct) sin t by first simplifying the expression:}{$\frac{dy}{dx}$ =cos t}{$\frac{dy}{dx}$ = -sin t}{$\frac{dy}{dx}$ = cos t - csc t cot t}{$\frac{dy}{dx}$ = 1+cos t}
+\mcq{105}{Apply the Chain Rule to find the derivative of y=sec (tanx):}{$\frac{dy}{dx}$ = sec(tanx)tan(tanx)}{$\frac{dy}{dx}$ =sec x tan x}{$\frac{dy}{dx}$ = sec(tanx)tan(tanx)sec$^{2}$x}{$\frac{dy}{dx}$ = 2sec x tan x}
+\mcq{106}{Find $\frac{dy}{dx}$ for the parametric equations x=sin$^{2}$ t and y= cos 2t:}{$\frac{dy}{dx}$ =-2}{$\frac{dy}{dx}$ =2}{$\frac{dy}{dx}$ = - tan t}{$\frac{dy}{dx}$ =- 4sint cot t}
+\mcq{107}{What is the approximate value of the mathematical constant e used in the natural exponential function:}{3.14159}{2.71828}{1.41421}{1.61803}
+\mcq{108}{If a$^{y}$ =x, then what is the correct logarithmic representation:}{y=log$_{a}$ x}{x=log$_{a}$ y}{y=log$_{x}$ a}{a=log$_{y}$ x}
+\mcq{109}{What is the domain restriction for the argument x in the function y=log$_{a}$ x:}{x{<}0}{x{<} 0}{x{>}0}{None}
+\mcq{110}{Find $f'(x)$ for the function $f(x)=\sin(2^{x})$:}{$f'(x)$= cos(2$^{x}$)}{$f'(x)$= 2$^{x}$cos(2$^{x}$)}{$f'(x)$ = 2$^{x}$ln(2)cos(2$^{x}$)}{$f'(x)$= 2$^{x-1}$cos(2$^{x}$)}
+\mcq{111}{Simplify and find the derivative $\frac{dy}{dx}$ of the function $y=\ln(1-\cos^{2}x)$:}{$\frac{dy}{dx}$ = 2 tan x}{$\frac{dy}{dx}$ = 2 cot x}{$\frac{dy}{dx}$ = -2cot x}{$\frac{dy}{dx}$ = -3 cotx}
+\mcq{112}{Find $f'(x)$ for the exponential function with a function exponent $f(x)=e^{x\cos x}$:}{$f(x)=e^{x\cos x}$ (cosx - xsinx)}{$f(x)=e^{x\cos x}$ (cos x + xsin x)}{$f'(x)$=(cos x - x sin x)}{$f'(x)$= -x sin x. e$^{x\cos x}$}
+\mcq{113}{For the highly complex rational algebraic function $y=\frac{\sqrt{x^{2}-1}\,(2x+1)}{(x^{3}-1)^{3/2}}$ what is the most efficient calculus technique to find $\frac{dy}{dx}$:}{Basic Power Rule}{Standard Product Rule only}{Logarithmic Differentiation}{Parametric Chain Rule}
+\mcq{114}{What is the equation of the normal line when the slope of the tangent line is zero (m=0):}{x=x$_{0}$}{y=y$_{0}$}{y-y$_{0}$ =0}{None of these}
+\mcq{115}{If the first derivative f' of a function is differentiable, its derivative is called the:}{First derivative}{Second derivative}{Higher-order limit}{Partial derivative}
+\mcq{116}{The collective term used for successive derivatives such as the third, fourth, and fifth derivatives is:}{Initial derivatives}{Lower-order derivatives}{Higher-order derivatives}{Polynomial derivatives}
+\mcq{117}{What condition must be met to continue finding successive derivatives of a function:}{The function must equal zero}{The function must be linear}{The new function must remain differentiable}{The function must be explicit}
+\mcq{118}{If the tangent line to a curve is horizontal, then the value of the first derivative $\frac{dy}{dx}$ at that point must be:}{1}{-1}{0}{3}
+\mcq{119}{If the tangent line to a curve is vertical, then what condition is met by the derivative:}{$\frac{dy}{dx}$ =0}{$\frac{dy}{dx}$ =1}{$\frac{dy}{dx}$ =-1}{None of these}
+\mcq{120}{Find the second derivative $y_{2}$ of the polynomial function $y=x^{4}-3x^{2}+4x-5$:}{4x$^{3}$ -6x+4}{12x$^{2}$ -6}{24x}{12x$^{2}$ -6x}
+\mcq{121}{For the function f(x)=IxI, why is x=0 considered a critical point:}{Because f(0)=0}{Because the derivative does not exist at x=0}{Because the function is discontinuous at x=0}{Because it is a stationary point}
+\mcq{122}{Which of the following statements is completely true regarding critical and stationary points:}{Every stationary point is a critical point}{Every critical point is a stationary point}{Critical points and stationary points are completely unrelated}{A stationary point can never be a critical point}
+\mcq{123}{What are the global maximum and global minimum of a function collectively called:}{Critical boundaries}{Stationary points}{Global extrema}{Absolute intervals}
+\mcq{124}{For the function f(x)=x$^{2}$ defined on the closed interval [0,2], what is the global maximum value:}{2}{0}{4}{It does not exist}
+\mcq{125}{What is the key difference in definition between global extrema and local extrema:}{Global uses derivative while local does not}{Local extrema are defined within a specific open sub-interval}{Global extrema only exist for linear functions}{Local extrema must always equal zero}
+\mcq{126}{When finding the global extrema of a function on a closed interval [a,b], at which points should you first evaluate the function:}{Only at the point x=0}{Only at the midpoint of the interval}{At all critical points and endpoints of the interval}{At infinity}
+\mcq{127}{The largest value obtained after evaluating the function at its critical points and endpoints is called the:}{Local minimum value}{Critical value}{Global maximum value}{Inflection point value}
+\mcq{128}{The smallest value obtained after checking the critical points and endpoints on a closed interval is called the:}{Global minimum value}{Local maximum value}{Stationary value}{Explicit value}
+\mcq{129}{Find the interval on which $f(x)=x^{2}+3x+2$ ; $x\in[-4,1]$:}{[-4,-15)}{(-1.5,1]}{[-4,1]}{(-3,1]}
+\mcq{130}{Determine the global maximum and global minimum values of $f(x)=x^{4/3}$ on $[-1,8]$}{Global Max = (1), Global Min = (-1)}{Global Max = (16), Global Min = (0)}{Global Max = (8), Global Min =0}{Global Max = (16), Global Min = (1)}
+\mcq{131}{Find the global minimum value of the function f(x)=4-x$^{2}$ over the specified closed interval [-1,2]:}{4}{3}{0}{-1}
+\mcq{132}{What geometric line does linearization use to approximate a function near a specific point:}{Secant line}{Tangent line}{Normal line}{Asymptote}
+\mcq{133}{Linearization is widely used in fields like machine learning, physics, engineering, and economics for:}{Finding global extrema}{Finding exact analytical roots}{Quick, local estimates around known values}{Calculating total volumes}
+\mcq{134}{A function of the form y=mx+c is called a:}{Linear function}{Quadratic function}{Exponential function}{Logarithmic function}
+\mcq{135}{Every differentiable curve behaves locally like its:}{Normal line}{Secant line}{Tangent line}{Asymptote}
+\mcq{136}{The approximation provided by the tangent line is highly accurate for:}{All real numbers infinitely}{Large values of x far from the point}{A small interval on either side of the point of tangency}{Negative values of x only}
+\mcq{137}{Find the local linear approximation of the trigonometric function f(x)= sin x at the point x=0:}{L(x)=1}{L(x)=1+x}{L(x)=x}{L(x)=-x}
+\mcq{138}{Find the linear approximation of f(x)= cos x at x=0:}{L(x)=x}{L(x)=1}{L(x)=1-x}{L(x)=1+x}
+\mcq{139}{When using linear approximation to estimate trigonometric values like sin29$^{\circ}$, the angles must always be converted into which unit before evaluating the derivative:}{Degrees}{Radians}{Gradians}{Revolutions}
+\mcq{140}{In the differential formula dy=f'(x)dx, what type of variable is dx:}{Dependent variable}{Independent variable}{Constant variable}{Undefined variable}
+\mcq{141}{Find the differential (dy) for the composite function y=cosx$^{2}$:}{dy=-sinx$^{2}$ dx}{dy=-2sinx$^{2}$ dx}{dy=2cosx$^{2}$ dx}{dy=-2cosx$^{2}$ dx}
+\mcq{142}{Use the differential (dy) to approximate the change Δy for y=x$^{3}$ -x when x changes from 3 to 3.02:}{0.26}{0.52}{0.02}{26.0}
+\mcq{143}{Use differentials to approximate the value of √26 using the perfect square center x=25:}{5.1}{5.01}{5.2}{4.9}
+\mcq{144}{The side of a cube is measured to be 30 cm with a maximum error of 0.14 cm. Find the maximum error in the calculated volume of the cube:}{126 cm$^{3}$}{378 cm$^{3}$}{2700 cm$^{3}$}{12.6 cm$^{3}$}
+\mcq{145}{The radius of a sphere is measured as $100\pm0.5$ . Estimate the percentage error in the calculated volume of the sphere:}{0.5\%}{1..0\%}{1.5\%}{3.0\%}
+\mcq{146}{What is the very first step in solving extrema problems in real-life scenarios:}{Understand the Problem}{Define Variables}{Formulate the Function}{Find Critical Points}
+\mcq{147}{Which mathematical test is mentioned to confirm whether a critical point is a maximum or minimum:}{First derivative test}{Second derivative test}{Rolle's theorem}{Mean value theorem}
+\mcq{148}{An environmental monitoring team models the oxygen level in a lake by the equation $O(t)=t^{3}-18t^{2}+81t+100$ . Find the time t (in days) when the oxygen level reaches its absolute minimum:}{3 days}{6 days}{9 days}{12 days}
+\mcq{149}{Find two positive integers whose sum is 12 such that the product of one with the square of the other is maximum:}{6 and 6}{4 and 8}{3 and 9}{5 and 7}
+\mcq{150}{The perimeter of a triangle is 16cm. If one side has a fixed length of 6cm, what must the lengths of the other two sides be to maximize the area of the triangle:}{4 cm and 6 cm}{5 cm and 5 cm}{3 cm and 7 cm}{2 cm and 8cm}
+\mcq{151}{A closed cylindrical tank is designed to hold a volume of $54\pi$ liters of water. Find the radius r and height h that will minimize the construction cost (surface area) of the tank.}{r=3, h=6}{r=2, h=9}{r=4, h=4}{r=6, h=3}
+\mcq{152}{Integration is defined as the reverse process of which of the following:}{Limit notation}{Differentiation}{Linearization}{Matrix multiplication}
+\mcq{153}{Integration is an important branch of calculus used to find:}{Slopes of curves only}{Percentage errors}{Accumulation, area, volume, and total change}{Tangent line equations}
+\mcq{154}{What can be calculated using integration to find the space occupied by solids of revolution:}{Critical boundaries}{Linear approximations}{Derivatives}{Volumes}
+\mcq{155}{What is the process of recovering a function F from its derivative f called:}{Differentiation}{Linearization}{Antidifferentiation}{Integration by parts}
+\mcq{156}{The set or family of all antiderivatives of f is called the:}{Definite integral}{Indefinite integral}{Differential equation}{Constant set}
+\mcq{157}{The method of substitution or change of variable stems from reversing which rule for derivatives:}{Product Rule}{Quotient Rule}{Chain Rule}{Power Rule}
+\mcq{158}{What is the process of replacing x with a new variable u=g(x) and dx with du called:}{Integration by parts}{Method of substitution}{Implicit differentiation}{Linearization}
+\mcq{159}{What is the primary objective of using a trigonometric substitution in integration:}{To increase the degree of the polynomial}{To convert a definite integral into an indefinite one}{To eliminate the radical sign in the integrand}{To find the derivative of the function}
+\mcq{160}{Which pair of identities is used to simplify the expressions after substitution:}{Sum and difference identities}{Double angle identities}{Pythagorean identities}{Product-to-sum identities}
+\mcq{161}{The rule that corresponds to the Product Rule for differentiation is called:}{Substitution method}{Integration by parts}{Partial fractions}{Chain rule}
+\mcq{162}{In the mnemonic LIATE, the letter 'I' stands for:}{Inverse trigonometric functions}{Integral functions}{Identity functions}{Irrational functions}
+\mcq{163}{The mnemonic LIATE is used as a guideline to choose the:}{Value of the constant c}{First function for integration by parts}{Derivative of the function}{Limits of integration}
+\mcq{164}{According to the LIATE rule, which type of function comes first between Algebraic (A) and Trigonometric (T) functions:}{Both at the same time}{Trigonometric functions}{Algebraic functions}{None of the above}
+\mcq{165}{The definite integral of a functionff from a to b is geometrically defined as the:}{Derivative of the curve}{Slope of the tangent line}{Net signed area bounded by the curve and the x- axis}{Product of the limits}
+\mcq{166}{The value of a definite integral is always a:}{Family of functions}{Real number}{Variable quantity}{Imaginary number}
+\mcq{167}{Unlike definite integrals, the result of an indefinite integral is a:}{Single real number}{Family of functions}{Constant zero}{Geometrical point}
+\mcq{168}{If a curve lies entirely above the x-axis, the sign of the net signed area is:}{Positive}{Negative}{Zero}{Infinite}
+\mcq{169}{When the curve lies entirely below the x-axis, the definite integral gives a net signed area that is:}{Negative}{Positive}{Zero}{Undefined}
+\mcq{170}{If a curve crosses the x-axis, how is the net signed area found:}{By multiplying the areas}{By subtracting the upper area from the lower area}{By algebraically adding the positive and negative areas}{By taking the absolute value of the total area}
+\mcq{171}{The net signed area will be zero when:}{The curve does not touch the x- axis}{The positive area above the axis exactly equals the negative area below it}{The limits of integration are zero}{The curve is a straight line}
+\mcq{172}{In economics, the area between two curves is used to calculate consumer surplus and:}{Market price}{Producer surplus}{Demand function}{Supply function}
+\mcq{173}{The graph of the demand function p=D(x) generally slopes:}{Upwards}{Downwards}{Horizontally}{Vertically}
+\mcq{174}{According to the supply function, as the price of a commodity increases, the producer is willing to:}{Supply more}{Supply less}{Stop supply}{Maintain the same supply}
+\mcq{175}{The point where the demand and supply curves intersect is called the:}{Surplus point}{Market equilibrium}{Origin}{Break-even point}
+\mcq{176}{If a region in a plane is revolved about a line in the plane, the resulting solid is called a:}{Cylinder of revolution}{Solid of revolution}{Cross-sectional area}{Solid region}
+\mcq{177}{The line about which a plane region is revolved to generate a solid is called the:}{Axis of revolution}{Normal line}{Tangent line}{Boundary line}
+\mcq{178}{If the moment of inertia of a body of mass M about any axis is MR$^{2}$, then R is called the:}{Center of mass}{Radius of gyration}{Axis of revolution}{Moment arm}
+\mcq{179}{The term "differential equation" was introduced by Leibniz in which year:}{1686}{1676}{1776}{1576}
+\mcq{180}{The idea of differential equations was first proposed by Isaac Newton and:}{Leonhard Euler}{Joseph-Louis Lagrange}{Gottfried Leibniz}{Taylor}
+\mcq{181}{Differential equations are generally classified into how many broad categories:}{Two}{Three}{Four}{Five}
+\mcq{182}{The order of a differential equation is determined by the order of the:}{Lowest derivative}{Highest derivative}{Degree of the dependent variable}{Number of variables}
+\mcq{183}{The degree of a differential equation is the greatest exponent of the:}{Lowest-order derivative}{Highest-order derivative}{Independent variable}{Dependent variable}
+\mcq{184}{If a differential equation cannot be written as a polynomial in derivatives, its degree is:}{Zero}{One}{Undefined}{Infinite}
+\mcq{185}{A differential equation of degree 1 is specifically called a:}{First-order differential equation}{First-degree differential equation}{Linear differential equation}{Homogeneous differential equation}
+\mcq{186}{According to Newton's law of cooling, the rate of change of a body's temperature is proportional to:}{The body's initial temperature only}{The difference between the body's temperature and the surrounding temperature}{The time elapsed}{The surrounding temperature only}
+\mcq{187}{Inflation in economics means that the price of goods is:}{Decreasing over time}{Increasing over time}{Remaining constant}{Becoming zero}
+\mcq{188}{An RC circuit consists of a resistor and a capacitor connected in series with a:}{AC voltage source}{DC voltage source of constant emf}{Current source only}{Ground only}
+\mcq{189}{Which law states that the sum of voltages across the resistor and capacitor is equal to the total battery voltage:}{Ohm's Law}{Newton's Law}{Kirchhoff's Voltage Law}{Faraday's Law}
+\mcq{190}{Find the order and degree of the differential equation: $\frac{d^{3}y}{dx^{3}}+7\frac{d^{2}y}{dx^{2}}-9xy\frac{dy}{dx}+x^{2}y=0$}{Order = 3, Degree = 3}{Order = 3, Degree = 1}{Order = 2, Degree = 7}{Order = 1, Degree = 3}
+\mcq{191}{Geometrically, the presence of an arbitrary constant c in the general solution represents a:}{Single straight line}{Family of curves}{Fixed single point}{Circle at the origin}
+\mcq{192}{A solution that does not contain any arbitrary constant is called a:}{General solution}{Singular solution}{Particular solution}{Homogeneous solution}
+\mcq{193}{Which of the following are the two specific types of differential equations mentioned:}{Linear and non- linear equations}{Separable and homogeneous differential equations}{Exact and inexact equations}{First-order and second-order equations}
+\mcq{194}{Finding the general solution of a given differential equation often involves introducing a/an:}{Exact derivative}{Arbitrary constant during integration}{New independent variable}{Non-zero boundary value}
+\mcq{195}{Which of the following is a homogeneous differential equation:}{x=1+y}{x2 2y+1dy-dx=0}{2xy+x2 dy-y2dx}{None}
+\mcq{196}{The differential equation dy/dx=e$^{x-y}$ is:}{Homogeneous but not separable}{Separable but not homogeneous}{Both separable and homogeneous}{Neither separable nor homogeneous}
+\mcq{197}{What is the order of the differential equation y.dx+x.dy=0:}{0}{1}{2}{Not defined}
+\mcq{198}{If y=cx-1. then its corresponding differential equation is:}{x $\frac{dy}{dx}$ =1+y}{$\frac{dy}{dx}$ =x+y}{x $\frac{dy}{dx}$ =y-1}{$\frac{dy}{dx}$ =cy}
+\mcq{199}{For the initial value problem dy/dx=-x-xy$^{2}$ with y(0)=1, the value of the constant of integration c when separated as arctan(y) =.... or similar form depends on:}{Initial condition y(0)=1}{Homogeneous condition}{Only the value of x=0}{None of these}
+\mcq{200}{The general solution of the differential equation sec$^{2}$ xtany dx + sec$^{2}$ ytanx dy=0 is:}{tan x + tan y = c}{tan x. tan y = c}{sec x. sec y = c}{In}
+\mcq{201}{The general solution of the differential equation y dx + x dy=0 represents a family of:}{Straight lines passing through the origin}{Circles centered at the origin}{Rectangular hyperbolas}{Parabolas}
+\mcq{202}{Which substitution is appropriate to solve the homogeneous differential equation (y$^{2}$ +2xy)dx+x$^{2}$ dy=0:}{x=ut}{y=vx}{y=v+x}{xy=v}
+\mcq{203}{First-order differential equations play a vital role in modeling:}{Only theoretical mathematics}{Various real-life phenomena}{Fixed static structures}{Historical events only}
+\mcq{204}{First-order differential equations involve which of the following:}{The absolute mass of an object}{The rate of change of a quantity}{The volume of a stationary solid}{The geometric center of a curve}
+\mcq{205}{A particle moves with acceleration a=2t-7. If its initial velocity at t=0 m/sec, its velocity v in terms of t is:}{v=t$^{2}$ -7t}{v=t$^{2}$ -7t+10}{v=2t$^{2}$ -7t+10}{v=t$^{2}$ -7}
+\mcq{206}{A radioactive isotope has a half-life of 12 hours. If the initial mass is 160 grams, how much mass will remain after 36 hours:}{40 grams}{30 grams}{20 grams}{10 grams}
+\mcq{207}{Analytical geometry is also known as:}{Algebra}{Coordinate geometry}{Topology}{Calculus}
+\mcq{208}{Who first developed analytical geometry in the 17th century:}{Isaac Newton}{René Descartes}{Pythagoras}{Euclid}
+\mcq{209}{In the slope-intercept form y=mx+c, what does 'c' represent:}{Slope}{x-intercept}{y-intercept}{Coordinate point}
+\mcq{210}{What is the slope of the side YZ where y(5,7) and Z(-3,9) (used for finding the altitude from X):}{4}{-4}{5}{None of these}
+\mcq{211}{If the lines x+y-4=0, 2x-y+1=0, and kx+2y-10=0 are concurrent (meet at a single point), what is the value of k:}{3}{5}{7}{9}
+\mcq{212}{If thee lines $y=m_{1}x+c_{1}$ ; $y=m_{2}x+c_{2}$ and $y=m_{3}x+c_{3}$ are concurrent, which condition must their coefficients satisfy?}{C$_{1}$ (m$_{2}$ - m$_{3}$)+c$_{2}$ (m$_{3}$ - m$_{1}$)+c$_{3}$ (m$_{1}$ - m$_{2}$)=0}{C$_{1}$ (m-m$_{3}$)+c$_{2}$ (m$_{3}$ - m$_{1}$)+c$_{3}$ (m$_{1}$ - m$_{2}$)=0}{C$_{1}$ (m$_{2}$ -m$_{3}$)+c$_{2}$ (m- m$_{1}$)+c$_{3}$ (m$_{1}$ -m)=0}{C(m$_{2}$ -m$_{3}$)+c$_{2}$ (m$_{3}$ - m$_{1}$)+c$_{3}$ (m$_{1}$ -m)=0}
+\mcq{213}{In $\triangle ABC$, the vertices are A(2,3), B(4,-1), and C(1,2). What is the slope of the altitude drawn from vertex A to the side BC:}{-1}{-2}{1}{2}
+\mcq{214}{Find the slope of the altitude from vertex X(1,3) to the side YZ of triangle XYZ, where Y(5, 7) and Z(-3, 9):}{-3}{-2}{-4}{4}
+\mcq{215}{In a triangle PQR with vertices P(1, 2), Q(5, -6), and R(7, -2), what are the coordinates of the midpoint of side QR through which the median from P passes:}{3,-4}{6,-2}{6,-4}{1,-4}
+\mcq{216}{The point where all three medians of a triangle intersect each other is called the:}{Orthocenter}{Circumcenter}{Incenter}{Centroid}
+\mcq{217}{By computing the area of a triangle, if the area comes out to be 0, then the given three points are:}{Equidistant}{Collinear}{Non-collinear}{Vertices of a right-angled triangle}
+\mcq{218}{What is the area of the triangle formed by the points A(0,4), B(3,2) and C(6,0):}{0}{6 sq. units}{12 sq. units}{18 sq. units}
+\mcq{219}{If two lines are parallel to each other, then the relation between their slopes (m1. m2) is:}{m1. m2 = -1}{m1 + m2 = 0}{m1 - m2 = -1}{None of these}
+\mcq{220}{If the slopes of two lines are $m_{1}=2$, $m_{2}=-\frac{1}{2}$ what is the angle between them?}{30$^{\circ}$}{45$^{\circ}$}{60$^{\circ}$}{90$^{\circ}$}
+\mcq{221}{The coordinates of the midpoint of the line segment joining P(1, -2) and Q(5, 4) are:}{(2,2)}{(3,1)}{(3,3)}{(6,2)}
+\mcq{222}{If a line is horizontal (parallel to the x-axis), its slope is:}{0}{1}{-1}{Undefined}
+\mcq{223}{If the lines represented by $(k-8)x^{2}-9xy+3ky^{2}=0$ are perpendicular to each other, then the value of k is:}{-2}{2}{4}{8}
+\mcq{224}{The lines represented by the homogeneous equation $5x^{2}+6xy+y^{2}=0$ are:}{Perpendicular}{Coincident}{Intersecting at 45$^{\circ}$}{None of these}
+\mcq{225}{What is the joint equation of lines passing through the origin and perpendicular to the lines $3x^{2}+5xy-2y^{2}=0$?}{2x$^{2}$ +5xy-3y$^{2}$ =0}{3x$^{2}$ +5xy-3y$^{2}$ =0}{2x$^{2}$ -5xy-3y$^{2}$ =0}{2x$^{2}$ +5xy+3y$^{2}$ =0}
+\mcq{226}{If a solar panel roof has two points A(-2,-1) and B(3,4) what is its titl angle:}{30$^{0}$}{45$^{\circ}$}{60$^{\circ}$}{90$^{0}$}
+\mcq{227}{The stresses in a metal plate are given by $3x^{2}-8xy-3y^{2}=0$ . The measure of the angle between these lines is:}{0$^{\circ}$}{45$^{\circ}$}{90$^{\circ}$}{60$^{\circ}$}
+\mcq{228}{The separate lines represented by the equation $2x^{2}-7xy+3y^{2}=0$ are:}{2x+y=0 and x+3y=0}{2x-y=0 and x- 3y=0}{x-y=0 and 2x- 3y=0}{2x-y=0 and x+3y=0}
+\mcq{229}{What is the angle between the lines represented by $x^{2}+2xy\sec\alpha+y^{2}=0$?}{a}{2a}{a/2}{None of these}
+\mcq{230}{The separate linear equations for the pair of lines $6x^{2}-5xy-4y^{2}=0$ are:}{6x+y=0 and x- 4y=0}{2x+y=0 and 3x- 4y=0}{2x-y=0 and 3x+4y=0}{3x+y=0 and 2x- 4y=0}
+\mcq{231}{What is the equation of a circle with centre at (5, 7) and radius 2:}{x$^{2}$ +y$^{2}$ -10x- 14y+74=0}{x$^{2}$ +y$^{2}$ -10x- 14y+70=0}{x$^{2}$ +y$^{2}$ +10x+14y+70=0}{x$^{2}$ +y$^{2}$ -5x- 7y+4=0}
+\mcq{232}{If the ends of a diameter of a circle are (3, 4) and (2, -7), its equation is:}{x$^{2}$ +y$^{2}$ +5x- 3y+22=0}{x$^{2}$ +y$^{2}$ -5x+3y- 22=0}{x$^{2}$ +y$^{2}$ +5x- 3y+34=0}{x$^{2}$ +y$^{2}$ +2x-3y- 22=0}
+\mcq{233}{What is the centre of the circle represented by the equation $2x^{2}+2y^{2}-4x-12y+11=0$:}{(-2,-6)}{(2,6)}{(1,3)}{(-1,-3)}
+\mcq{234}{The equation of a circle of radius a lying in the second quadrant and tangent to both the coordinate axes is:}{x$^{2}$ +y$^{2}$ -2ax- 2ay+a$^{2}$ =0}{x$^{2}$ +y$^{2}$ +2ax- 2ay+a$^{2}$ =0}{x$^{2}$ +y$^{2}$ -2ax+2ay+a$^{2}$ =0}{None of these}
+\mcq{235}{Two circles are said to be concentric if they have the same:}{Radius}{Center}{Intercepts}{Area}
+\mcq{236}{Which Greek mathematician made significant contributions to the study of conic sections during 260–200 B.C.:}{Apollonius}{Pappus}{Euclid}{Pythagoras}
+\mcq{237}{Each straight line drawn from a fixed point on the axis to touch any point on the base circle to form a cone is called a:}{Axis}{Nappe}{Generator}{Vertex}
+\mcq{238}{The complete surface of a right circular cone consists of two separate parts called:}{Vertices}{Nappes}{Generators}{Axes}
+\mcq{239}{A comet has a parabolic orbit with the Sun at the focus. When the comet is 100 million km from the Sun, the line joining the Sun and the comet makes an angle of 60$^{\circ}$ with the axis of the parabola. How close will the comet get to the Sun:}{50 million km}{25 million km}{75 million km}{12.5 million km}
+\mcq{240}{A parabolic arch has a 120m base and a height of 25 m. What is the height of the arch at a point 42m from the centre of the base:}{15.50 m}{10.25 m}{12.75 m}{16.75 m}
+\mcq{241}{If two water fountains are placed at the foci of an elliptical running track with a major axis of 120 m and a minor axis of 80m, how far apart are the two fountains from each other:}{80 m}{100 m}{150 m}{None of these}
+\mcq{242}{A landscaper creates an elliptical flower bed with a major axis of 10 meters and a minor axis of 6meters. How far apart should the two stakes be placed at the foci:}{4 meters}{6 meters}{8 meters}{5 meters}
+\mcq{243}{In the gardener's method for tracing an ellipse with a major axis of 10m and a minor axis of 6m, what should be the total length of the string loop stretched around the two stakes at the foci:}{10 meters}{14 meters}{16 meters}{18 meters}
+\mcq{244}{For the parabolic arch with a base of 120 m and height of 25 m, where is the vertex located if the base lies on the x-axis and is centered at the origin:}{(0,0)}{(0,25)}{(60,25)}{(0,-25)}
+\mcq{245}{In the gardener's method, the sum of the distances from any point on the ellipse to the two stakes (foci) is always equal to:}{The length of the minor axis}{The length of the major axis}{Half of the major axis}{The distance between the foci}
+\mcq{246}{For the elliptical flower bed with a major axis of 10 m and minor axis of 6 m, what is its semi-major axis (a) and semi-minor axis (b):}{a=10, b=6}{a=5, b=3}{a=25, b=9}{a=6, b=10}
+\mcq{247}{If the elliptical arch of the bridge has a total width (span) of 24 meters, what are the coordinates of its vertices on the x-axis:}{(12,0) and (-12,0)}{(24,0) and (-24,0)}{(0,12) and (0,-12)}{(6,0) and (-6,0)}
+\mcq{248}{A vehicle moving with a speed of 36 km/h is stopped by applying brakes and comes to rest in 10 seconds. What is its retardation:}{0.5 m/s$^{2}$}{1.0 m/s$^{2}$}{1.5 m/s$^{2}$}{2.0 m/s$^{2}$}
+\mcq{249}{A train moving at 54 km/h accelerates uniformly to 90 km/h in 20 s. What is the distance covered by the train during this time:}{300 m}{350 m}{400 m}{450 m}
+\mcq{250}{A particle starts from rest and accelerates uniformly to attain a velocity of 30 km/h in (5 seconds. Find the distance travelled by the particle in the last three seconds:}{12.5 m}{15.0 m}{17.5 m}{20.0 m}
+\mcq{251}{A particle is projected vertically upwards with a velocity of 100 m/s, and another is let fall from a height of 200 m at the same time. At what height from the ground will they meet (take g=9.8 m/s$^{2}$):}{150.5 m}{180.4 m}{190.2 m}{200.0 m}
+\mcq{252}{The acceleration of a particle is given by $a(t)=\frac{1}{1+t}$ for $t\geq0$ If the velocity is 0 m/s when t=0, find the velocity at t=5 seconds.}{In (5) m/s}{In (6) m/s}{5 m/s}{1 m/s}
+\mcq{253}{Which branch of mechanics describes the motion of objects without considering the causes of motion:}{Dynamics}{Statics}{Kinematics}{Thermodynamics}
+\mcq{254}{The motion of a particle along a straight line is defined as:}{Rotational motion}{Rectilinear motion}{Oscillatory motion}{Circular motion}
+\mcq{255}{Physical quantities that are completely described by magnitude only, without any direction, are called:}{Scalar quantities}{Vector quantities}{Tensor quantities}{Derived quantities}
+\mcq{256}{The rate of change of displacement with respect to time in a specified direction is known as:}{Speed}{Distance}{Velocity}{Acceleration}
+\mcq{257}{Which pair of physical quantities consists entirely of scalar quantities:}{Distance and Velocity}{Speed and Acceleration}{Distance and Speed}{Displacement and Velocity}
+\mcq{258}{For the function $f(x)=3x+\sin(x)-e^{x}[0,1]$ , which of the following is its real root correct to two decimal places?}{0.25}{0.36}{0.48}{0.52}
+\mcq{259}{What is the real root of the polynomial function $f(x)=x^{4}-x-10$ [1,2] correct to two decimal places:}{1.68}{1.74}{1.86}{1.92}
+\mcq{260}{For the equation $f(x)=x^{3}-x-1$ between which two integers does the sign change occur, indicating the presence of a real root:}{[0,1]}{[1,2]}{[2,3]}{[-1,0]}
+\mcq{261}{Find the real root of the transcendental function $f(x)=xe^{x}-2$ correct to two decimal places:}{0.55}{0.71}{0.85}{0.94}
+\mcq{262}{For the function $f(x)=\ln(x)-2$ what is the exact algebraic value of the real root where the function crosses the x-axis:}{e}{2e}{e$^{2}$}{None}
+\mcq{263}{What is the value of the real root of $f(x)=\ln(x)-2$ correct to two decimal places:}{2.72}{5.44}{7.39}{8.12}
+\mcq{264}{On what theoretical foundation are iterative numerical methods like Bisection and Regula-Falsi grounded:}{Taylor's Theorem and Derivatives}{Function continuity and the Intermediate Value Theorem}{Matrices and Linear Transformations}{Synthetic Division and Factor Theorem}
+\mcq{265}{Which numerical integration method is introduced in this unit for estimating definite integrals when analytical integration is impractical:}{Simpson's 1/3 Rule}{Euler's Method}{Trapezium Rule}{Newton's Forward Difference}
+\mcq{266}{Which method offers a visual foundation for approximating roots by plotting functions and identifying axis intersections:}{Newton- Raphson Method}{Bisection Method}{Graphical Method}{Regula-Falsi Method}
+\mcq{267}{For the Regula-Falsi $3x^{3}-9x^{2}+8=0$ ; [2, 3] what are the functional values at the boundaries to confirm a root exists:}{f(2)= -4 and f(3) = 8}{f(2)= 4 and f(3) = -8}{f(2)= -2 and f(3) = 6}{f(2)= 0 and f(3) = 5}
+\mcq{268}{For the Newton-Raphson $x^{3}+2x-5=0$ between which two consecutive integers does the real root lie:}{[0,1]}{[1,2]}{[2,3]}{[-1,0]}
+\mcq{269}{If the Newton-Raphson method is applied to $x^{3}+2x-5=0$ with an initial guess of x$_{0}$ =1 what will be the value of the first approximation x$_{1}$ :}{1.25}{1.33}{1.40}{1.50}
+\mcq{270}{For the equation $xe^{x}=2$ listed under the Regula-Falsi section, which interval contains the real root:}{[0,1]}{[1,2]}{[2,3]}{[-1,0]}
+\mcq{271}{For the polynomial equation f(x)= x$^{4}$ -2x-10=0 given in the top section, what is the value of f(2):}{-2}{2}{0}{6}
+\mcq{272}{Geometrically, the Newton-Raphson method finds the next root approximation by extending what line from the current curve point to the x-axis:}{Secant line}{Chord line}{Tangent line}{Normal line}
+\mcq{273}{For the equation $f(x)=x^{2}\sin(x)-1$ : [1, 2] what is the functional value f(1) using radian mode:}{-0.1585}{0.8415}{-1.0000}{0.1585}
+\mcq{274}{What determines how close the approximate root should be to the actual root to achieve the required decimal places:}{Iteration count}{Tolerance value}{Interval length}{Derivative value}
+\mcq{275}{To obtain a root correct to $n$ decimal places, the "Calculator Setup" section recommends fixing the calculator to at least how many decimal places:}{n decimal places}{n+1 decimal places}{n+2 decimal places}{2n decimal places}
+\mcq{276}{The Regula-Falsi method is directly based on which mathematical theorem to determine the presence of a root:}{Mean Value Theorem}{Location of Root Theorem}{Rolle's Theorem}{Taylor's Theorem}
+\mcq{277}{Geometrically, the straight line drawn through the points (a, f(a)) and (b, f(b)) in the Regula-Falsi method is called a:}{Tangent line}{Normal line}{Secant line}{Asymptote}
+\mcq{278}{To find the next root approximation c, what values are substituted for y and x respectively in the secant line equation to get the x-intercept:}{y=c, x=0}{y=0, x=0}{y=0, x=0}{f}
+\mcq{279}{What is the subinterval width (h) required to approximate the definite integral $\int_{0}^{2}\cos(x)\,dx$ taking n=4:}{0.25}{0.50}{1.00}{0.75}
+\mcq{280}{$\int_{0}^{2}x^{3}\,dx$ with n=8 what are the evenly spaced grid points at which the function must be evaluated:}{0,0.5,1.0,1.5,2.0}{0,0.25,\allowbreak 0.5,\allowbreak 0.75,\allowbreak 1.0,\allowbreak 1.25,\allowbreak 1.5,\allowbreak 1.75,\allowbreak 2.0}{1,2,1,5,1,5,6}{0,1,2,3,\allowbreak 4,5,6,7,8}
+\mcq{281}{The integral $\int_{-1}^{1}e^{-x^{2}}\,dx$ is given with a step size of h=0.4, What is the total number of subintervals (n) used for this approximation:}{4}{5}{6}{10}
+\mcq{282}{The curve is defined as $y=\sqrt{8-2x-x^{2}}$ What is the exact analytical area bounded by this curve and the x-axis using the formula for a semi-circle:}{13.5 square units}{14 square units}{14.5 square units}{None of these}
+\mcq{283}{$\int_{0}^{4}\sqrt{x}\,dx$ taking n=4 what is the correct step-size (h) required for calculation:}{0.50}{0.75}{1.00}{1.25}
+\mcq{284}{$\int_{0}^{\pi}\sin(x^{2})\,dx$ is integrated with $h=\frac{\pi}{6}$ . What is the total number of subintervals (n) for this integral?}{4}{5}{6}{12}
+\mcq{285}{What is the value of the initial ordinate (y$_{0}$) for the function $\int_{1}^{7}\ln(x)\,dx$ ?}{1}{0}{e}{In}
+\mcq{286}{If you increase the value of n (number of subintervals) in a Trapezoidal Rule approximation, the calculated numerical value usually becomes:}{Less accurate}{More accurate}{Unchanged}{Zero}
+\mcq{287}{Which specific numerical integration method is introduced in this section to resolve these types of complex definite integrals:}{Newton- Raphson Method}{Regula-Falsi Method}{Trapezium Rule}{Bisection Method}
+\mcq{288}{A chemical reaction's equilibrium concentration is governed by $x^{2}+0.2x-0.04=0$ What is the exact value of the positive equilibrium concentration $x$ accurate to two decimal places:}{0.12 moles per liter}{0.24 moles per liter}{0.16 moles per liter}{0.08 moles per liter}
+\mcq{289}{For the blood flow rate problem, substituting (P = 100), k = 0.05 and R=10 into $Q=K\left(P-\frac{Q^{2}}{R}\right)$ yields which standard nonlinear equation form:}{0.05 Q$^{2}$ + Q-5=0}{0.005 Q$^{2}$ + Q- 5=0}{0.5 Q$^{2}$ + Q- 100=0}{0.05 Q$^{2}$ + Q- 100=0}
+\mcq{290}{The equilibrium charge $q$ in an LC circuit satisfies q$^{3}$-4q+2=0. What are the functional values at the interval boundaries [0,1] used to start the Regula-Falsi method?}{f(0)=2 and f(1)=1}{f(0)= -2 and f(1)=-1}{f(0)= 2 and f(1)=-1}{f(0)=0 and f(1)= -2}
+\mcq{291}{The voltage across a component is modeled by $f(x)=-0.1x^{2}+2x+1$ . What is the derivative f'(x) used in the Newton-Raphson method with the initial guess $x_{0}=15$?}{-0.2x + 2}{- 0.1x + 2}{- 0.2 x}{0.2x + 2}
+\mcq{292}{In biology and medicine, nonlinear mathematical models are explicitly mentioned to be involved in the regulation of:}{Cell division rates and bone density}{Heartbeats and nerve signals}{Blood glucose levels and respiration}{Muscle mass and physical velocity}
+\mcq{293}{In the field of cryptography, nonlinear equations play an important role in designing:}{Linear database management grids}{Mechanical safety locks}{Secure communication systems and encryption algorithms}{Sorting algorithms for big data sets}
+\mcq{294}{A function must be...... to have an inverse function:}{Constant}{One-to-one and onto}{Periodic}{Even}
+\mcq{295}{The inverse of a function f is denoted by:}{f+1}{f}{f-1}{None of these}
+\mcq{296}{The range of the inverse function f$^{-1}$ is the...... of f:}{Domain}{Range}{Period}{Zero}
+\mcq{297}{The domain of the inverse function f$^{-1}$ is the....... of f.}{Domain}{Range}{Period}{Amplitude}
+\mcq{298}{The inverse of sin x is written as:}{cos$^{-1}$ x}{tan$^{-1}$ x}{sin$^{-1}$ x}{sec$^{-1}$ x}
+\mcq{299}{The domain of y=sin$^{-1}$ x is:}{R}{[-1,1]}{[0,2]}{[0,3]}
+\mcq{300}{If y= sin$^{-1}$ x, then:}{x= cosy}{x=siny}{x=tany}{x=secy}
+\mcq{301}{The value of sin$^{-1}$ (0) is:}{0}{1}{2}{3}
+\mcq{302}{The graph of y=sin x is obtained by reflecting y=sin$^{-1}$ x in the line:}{y=0}{x=0}{y=x}{y=1}
+\mcq{303}{The graph of a function and its inverse are:}{Parallel}{Perpendicular}{Reflections of each other in y=x}{Always identical}
+\mcq{304}{Trigonometric functions are generally not one-to-one on their entire domains because they are:}{Linear}{Periodic}{Constant}{Undefined}
+\mcq{305}{If x=siny, then y can be written as:}{cos$^{-1}$ x}{tan$^{-1}$ x}{sin$^{-1}$ x}{sec$^{-1}$ x}
+\mcq{306}{The value of $\csc\left(\frac{1}{2}\cot^{-1}\frac{4}{3}\right)$:}{2}{3}{4}{5}
+\mcq{307}{A trigonometric equation involves one or more:}{Algebraic functions only}{Trigonometric functions}{Polynomial functions}{Logarithmic functions}
+\mcq{308}{Which of the following is a trigonometric equation:}{x+2x=0}{2x+5=7}{x=8}{None of these}
+\mcq{309}{An unknown value of an angle that satisfies a trigonometric equation is called:}{Period}{Solution}{Amplitude}{Function}
+\mcq{310}{In the general solution, n belongs to:}{Natural numbers only}{Positive integers only}{Integers}{Real numbers only}
+\mcq{311}{If one period is added repeatedly to a solution, we obtain:}{Only principal solutions}{All possible solutions}{No solution}{A different equation}
+\mcq{312}{The general solution of a trigonometric equation is obtained by:}{Removing all solutions}{Adding or subtracting multiples of the period}{Multiplying by zero}{Squaring the equation only}
+\mcq{313}{The solutions of a trigonometric equation are generally:}{Always finite}{Always zero}{Potentially infinite due to periodicity}{Always one}
+\mcq{314}{What does the graphical solution of a trigonometric equation involve:}{Differentiating both sides}{Plotting the graphs of both sides}{Integrating both sides}{Factoring the equation}
+\mcq{315}{n a graphical solution, what do the intersection points of the two curves represent:}{Maximum values}{Minimum values}{Solutions of the equation}{Undefined values}
+\mcq{316}{For an equation of the form f(x)=g(x), which functions are plotted:}{y=x and f(x)}{y=f and y=gx}{x=f(y) and x=g(y)}{y=f(y) and y=g(y)}
+\mcq{317}{Why can trigonometric equations sometimes be challenging to solve exactly:}{They always contain fractions}{They may be too complex for algebraic methods}{They have no solutions}{They cannot be graphed}
+\mcq{318}{What can be used as an alternative when algebraic methods are too complex:}{Graphical methods}{Division only}{Guessing}{Substitution only}
+\mcq{319}{What do the x-coordinates of the intersection points give:}{The slopes of the curves}{The maximum values}{The solutions satisfying f}{The y-intercepts}
+\mcq{320}{What does the graphical approach help determine:}{Only the domain}{The number of solutions}{Only the range}{Only the y- intercept}
+\mcq{321}{What additional insight does the graphical method provide:}{The behavior of the functions and their interactions}{Only the exact angles}{Only the coefficients}{Only the constants}
+\mcq{322}{Which coordinate of an intersection point represents the solution to f(x)=g(x):}{y-coordinate}{x-coordinate}{Both coordinates separately}{Origin}
+\mcq{323}{The graphical method is particularly useful when equations are:}{Very simple}{Already solved}{Too complex for exact algebraic solutions}{Without trigonometric functions}
+\mcq{324}{A scalar function assigns a...... to each point in its domain:}{Vector}{Single real number}{Matrix}{Complex vector}
+\mcq{325}{A vector-valued function takes...... as input and returns...... as output:}{Vector, scalar}{Scalar, vector}{Scalar, scalar}{Vector, vector}
+\mcq{326}{The components of a vector-valued function are themselves:}{Vector functions}{Constant vectors}{Scalar functions}{Matrices}
+\mcq{327}{In the satellite example, the x-coordinate is:}{4000 sint}{3000t}{4000 cos t}{3000 cos t}
+\mcq{328}{In the satellite example, the y-coordinate is:}{4000 sin t}{4000 cos t}{3000 t}{3000 sin t}
+\mcq{329}{In the satellite example, the z-coordinate is:}{4000 cos t}{4000 sin t}{3000 t}{3000 cos t}
+\mcq{330}{The satellite's circular orbit lies in the:}{yz-plane}{xz-plane}{xy-plane}{x-axis}
+\mcq{331}{Vector-valued functions can be used to model:}{Position}{Velocity}{Force}{All of these}
+\mcq{332}{The derivative of a vector-valued function provides the instantaneous:}{Position}{Rate of change}{Temperature}{Distance only}
+\mcq{333}{Vector-valued functions are useful in:}{Engineering}{Physics}{Computer graphics}{All of these}
+\mcq{334}{To construct a vector-valued function, the first step is to:}{Differentiate the function}{Determine the components}{Find the magnitude}{Find the inverse}
+\mcq{335}{Which of the following mathematical functions is classified as a scalar function:}{f(t)=(3t$^{2}$ -5)$^{2}$}{f(t)=(3t$^{2}$ +5)$^{2}$}{f(t)=(3t$^{2}$ -4)$^{2}$}{f(t)=(3t$^{2}$ -3)$^{2}$}
+\end{document}

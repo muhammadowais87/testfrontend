@@ -1,0 +1,774 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=1.8cm]{geometry}
+\usepackage{graphicx}\usepackage{amsmath,amssymb,tabularx,array,needspace,fontspec,enumitem,cancel}
+\newcommand{\tb}{\cancel{||||}\,}
+\setmainfont{FreeSerif}
+\newfontfamily\urdufont[Script=Arabic]{FreeSerif}
+\TeXXeTstate=1
+\newcommand{\urdu}[1]{{\urdufont\beginR #1\endR}}
+\hyphenpenalty=10000\exhyphenpenalty=10000
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\renewcommand{\arraystretch}{1.15}
+\pagestyle{plain}
+
+% \q{roman}{text}
+\newlength{\qw}
+\newcommand{\GA}{\textbackslash{}fn\_jvn\$\$}\newcommand{\GB}{\textbackslash{}fn\_cm\textbackslash{}fn\_jvn\$\$}\newcommand{\GC}{\textbackslash{}fn\_cm\$\$}\settowidth{\qw}{\textbf{000.}\ }
+\newcommand{\q}[2]{%
+  \Needspace{3\baselineskip}%
+  \par\medskip\noindent\hangindent=\qw\hangafter=1\makebox[\qw][l]{\textbf{#1.}}#2\par}
+
+\newcommand{\qq}[1]{\par\medskip\noindent\hangindent=\qw\hangafter=1\hspace*{\qw}#1\par}
+\begin{document}
+
+\begin{center}
+  {\Huge\bfseries The Hope Science Academy}\\[3pt]
+  {\small Excellence is our standard not goal}\\[2pt]
+  {\small 247-E-1, (Opposite LDA School) Johar Town, Lahore. PH: 0300-8194789, 0322-4157001}
+\end{center}
+
+\medskip
+\noindent
+\begin{tabularx}{\linewidth}{|>{\raggedright\arraybackslash}X|>{\raggedright\arraybackslash}X|>{\raggedright\arraybackslash}X|>{\raggedright\arraybackslash}X|}
+\hline
+\textbf{Student Name:} & \textbf{Roll Num:} & \textbf{Class:} 11th & \textbf{Paper Code:} \\ \hline
+\textbf{Subject Name:} Statistics & \textbf{Time Allowed:} & \textbf{Total Marks:} 1357 & \textbf{Exam Date:} 02-Nov-2026 \\ \hline
+\multicolumn{4}{|l|}{\textbf{Exam Syllabus:} FULL BOOK} \\ \hline
+\end{tabularx}
+
+\bigskip
+\noindent\textbf{Q3. Write detailed answers of the following questions.}\hfill\textbf{1$\times$249=249}
+
+\q{1}{Explain in detail the main aspects of a statistical problem.}
+\q{2}{Define descriptive and inferential statistics and differentiate between them.}
+\q{3}{Distinguish between primary and secondary data and give different sources from which these are obtained.}
+\q{4}{Define the Histogram, the frequency polygon and frequency curve.}
+\q{5}{What do you understand by classification and tabulation? Discuss their importance in a statistical anaylsis}
+\q{6}{Distinguish between one-way and two-way tables. Illustrate your answers with examples. Also explain the following: (i) Classification according to attribures (ii) Class limits (iii) Length of class interval (iv) Class frequency}
+\q{7}{The following table gives the details of monthly budgets of two families. Represent these figures through a suitable diagram.\par\smallskip
+\begin{tabular}{|l|l|l|}\hline
+Item & Family A & Family B\\
+Food & Rs. 600 & Rs. 800\\
+Clothing & Rs. 100 & Rs. 100\\
+House Rent & Rs. 400 & Rs. 500\\
+Fuel and Lighting & Rs. 100 & RS. 100\\
+Miscellaneous & Rs. 300 & Rs. 500\\
+Total & Rs. 1500 & Rs. 2000\\\hline
+\end{tabular}}
+\q{8}{Represent the following data through pie diagram.\par\smallskip
+\begin{tabular}{|l|l|}\hline
+Items of Expenditure & Amou\\
+Food & 4000\\
+Clothing & 1000\\
+House Rent & 2500\\
+Education & 1000\\
+Fuel and Light & 600\\
+Miscelleneous & 200\\\hline
+\end{tabular}}
+\q{9}{Define frequency Histogram. Draw a Histogram for the following frequency distribution giving the steps involved.\par\smallskip
+\begin{tabular}{|l|cccccccc|}\hline
+Mid Values (X) & 32 & 37 & 42 & 47 & 52 & 57 & 62 & 67\\
+Frequency (f) & 3 & 17 & 28 & 47 & 54 & 31 & 14 & 4\\\hline
+\end{tabular}}
+\q{10}{i. a) Write down the important points for drawing graphs?\par b) In order to estimate the mean length of leaves from a certain tree, a sample of 100 leaves was chosen and their lengths are measured in millimeter . A grouped frequency table was set up and the results were as follow:\par\smallskip
+\begin{tabular}{|l|ccccccccc|}\hline
+Mid value & 2.2 & 2.7 & 3.2 & 3.7 & 4.2 & 4.7 & 5.2 & 5.7 & 6.2\\
+Frequency & 3 & 5 & 8 & 12 & 18 & 24 & 20 & 8 & 2\\\hline
+\end{tabular}\par\smallskip
+ii) a) Display the table in the form of a frequency polygon.\par b) What are the boundries of the interval whose mid point is 3.7 cm?}
+\q{11}{In a locality, total are is 500 acres where 250 acres are under sugarcane, 125 acres area under maize, 60 acres are under wheat and the ramaining 65 acres are under crops. Make a pie-diagram to represent the distribution of acreage under different crops.}
+\q{12}{A biologist was interested to know whether male spiders are longer or female spiders. He collected random sample of female and male green lyns spiders given below. Advise him?\par\smallskip
+\begin{tabular}{|cccc|cccc|}\hline
+\multicolumn{4}{|l|}{Lenghth of female (in mm)} & \multicolumn{4}{l|}{Length of male (in mm)}\\
+5.7 & 5.2 & 4.7 & 5.8 & 8.2 & 9.9 & 5.9 & 8.4\\
+6.1 & 6.3 & 7.0 & 5.7 & 9.6 & 7.0 & 6.6 & 7.8\\
+7.5 & 6.4 & 6.5 & 4.7 & 7.5 & 9.8 & 6.3 & 8.3\\
+6.2 & 5.4 & 6.2 & 5.8 & 8.0 & 9.1 & 6.3 & 8.4\\
+4.8 & 5.9 & 6.2 & 5.8 & 8.0 & 7.4 & 7.9 & 10.2\\
+5.6 & 5.5 & & & & & &\\\hline
+\end{tabular}}
+\q{13}{i) What is meant by tabulation? Explain the main steps which are generally taken in abulation?\par (ii) What is frequency distribution? How is it constructed?}
+\q{14}{The following data gives the lifetime in minutes, recorded to the nearest tenth of a minute of 50 sprayed insects.\par\smallskip
+\begin{tabular}{|cccccccccc|}\hline
+1.2 & 2.2 & 0.7 & 1.7 & 1.9 & 1.4 & 1.8 & 1.8 & 2.0 & 4.3\\
+2.5 & 0.9 & 3.4 & 2.8 & 3.7 & 3.5 & 0.4 & 2.8 & 1.1 & 0.2\\
+3.9 & 6.3 & 2.5 & 2.1 & 1.3 & 2.1 & 0.3 & 0.4 & 2.4 & 2.1\\
+3.5 & 2.9 & 1.2 & 5.3 & 1.7 & 2.7 & 1.8 & 4.8 & 3.2 & 1.6\\
+2.6 & 1.8 & 2.3 & 1.3 & 3.1 & 1.5 & 2.6 & 5.9 & 2.0 & 2.3\\\hline
+\end{tabular}\par\smallskip
+Using 8 intervals with the lowest starting at 0.1\par\smallskip (i) Form a frequency distribution and cumulative frequency distribution.\par (ii) Also draw Histogram and frequency polygon for the frequency distribution so formed.}
+\q{15}{(i) What are the advantages of diagrammatic representation?\par (ii) Explain the following: (a) A Bar diagram (b) Subdivided bar diagram (c) Multiple bar diagram}
+\q{16}{The following data gives the record of a company's saving over the years Draw a bar diagram to represent it.\par\smallskip
+\begin{tabular}{|l|cccccccc|}\hline
+Year & 1950 & 1951 & 1952 & 1953 & 1954 & 1955 & 1956 & 1957\\
+Rs. (000) & 1010 & 2050 & 3458 & 1980 & 2300 & 1295 & 1520 & 1070\\\hline
+\end{tabular}}
+\q{17}{Draw a sub-divided bar diagram to represent the male and female population of four divisions of Punjab in 1961.\par\smallskip
+\begin{tabular}{|l|c|c|c|}\hline
+Division & Male & Female & Both Sexes\\
+Lahore & 35 & 30 & 65\\
+Multan & 35 & 31 & 66\\
+Sargodha & 32 & 28 & 60\\
+Rawalpindi & 21 & 19 & 40\\\hline
+\end{tabular}}
+\q{18}{The following information is available about the age (in years) and their weights in kilograms (age, weight). Make a scatter plot and bivatite frequency distribution.\par (20, 60), (15,55), (14,45), (17,60), (16, 48), (22, 70), (16, 63), (14,55), (18,57), (19, 67), (21,67), (17, 65), (13, 60) (15,60), (17,49), (19, 65) (23,73), (21,65), (22, 70), (14,50), (16, 60), ()19, 59), (15, 62), (17,59), (24, 75).}
+\q{19}{(i) Define arithmetic mean, geometric mean and harmonic mean, Explain the situations when each of them is used perfectly?\par (ii) The relation between arithmetic mean (A.M), geometric mean (G.M) and harmonic mean (H.M) is A.M \textbackslash{}fn\_jvn\$\$ $\geqslant$ G.M. $\geqslant$ H.M.}
+\q{20}{A man traveling 100 kilometers has 5 stages, at equal intervale. The speed of the man in the various stages was observed to be 10,16,20,14,15 kilometers per hour. Fin the average speed at which the man travels.}
+\q{21}{Calculate mean, median and mode for the following table:\par\smallskip
+\begin{tabular}{|l|l|l|}\hline
+Items & Family A & Family B\\
+Food & Rs. 600 & Rs.800\\
+Clothing & Rs. 100 & Rs. 100\\
+House rent & Rs. 400 & Rs.500\\
+Fuel and lighting & Rs.100 & Rs. 100\\
+Miscellaneous & Rs.300 & Rs. 500\\
+Total & 1500 & 2000\\\hline
+\end{tabular}}
+\q{22}{Calculate mean, median and mode for the grouped data of the following table:\par\smallskip
+\begin{tabular}{|l|cccccccc|}\hline
+Mid values (x) & 32 & 37 & 42 & 47 & 52 & 57 & 62 & 67\\
+Frequency (f) & 3 & 17 & 28 & 47 & 54 & 31 & 14 & 4\\\hline
+\end{tabular}}
+\q{23}{Calculate the following for the data of exercise 2.8 (b) i) calculate an estimate for the mean leaf length ii) Construct a cumulative frequency table and use it to estimate the sample median.\par\smallskip
+\begin{tabular}{|l|ccccccccc|}\hline
+Mid value & 2.2 & 2.7 & 3.2 & 3.7 & 4.2 & 4.7 & 5.2 & 5.7 & 6.2\\
+Frequency & 3 & 5 & 8 & 12 & 18 & 24 & 20 & 8 & 2\\\hline
+\end{tabular}}
+\q{24}{What do you understand by weighted mean? In what circumstances is it preferred to ordinary mean and why?}
+\q{25}{Define the mode of a frequency distribution. How does it compare with other types of Averages?}
+\q{26}{i) Write down the empircial relation between mean, median and mode for unimodel distribution of moderate asymmetry. Illustrate graphically the relative positions of the mean, median and mode for frequency curves which are skewed ro the right and to the left.\par ii) For a certain frequency distribution, with the mean and median 45 and 36 respevtively, find the mode approximately using the empircal relaion between the three.}
+\q{27}{Bilal gets a rise of 10\% in salary at the end of his first year of service and further rise of 20\% and 25\% at the end of second and third year respectively. The rise in each case being calculated on his salary at the beginning of the year. Two what annual percentage increase in this equivalent.}
+\q{28}{Find the mean for the following distribution:\par\smallskip
+\begin{tabular}{|l|ccccccc|}\hline
+Classes & 0-10 & 10-40 & 40-90 & 90-100 & 100-105 & 105-120 & 120-140\\
+f & 40 & 110 & 150 & 200 & 120 & 30 & 20\\\hline
+\end{tabular}}
+\q{29}{The frequency distribution given below has been derived from the use of working origin. If D=X-18, find arithmetic mean and geometric mean:\par\smallskip
+\begin{tabular}{|l|cccccccc|}\hline
+D & -12 & -8 & -4 & 0 & 4 & 8 & 12 & 16\\
+F & 2 & 5 & 8 & 18 & 22 & 13 & 8 & 4\\\hline
+\end{tabular}}
+\q{30}{The receiprocals of 11 values of x are given below: 0.500, 0.454, 0.0400, 0.333, 0.0285, 0.0232, 0.0213, 0.02000, 0.0182, 0151, 0.0143. Calculate Harmonic  and Arithmetic Mean of the data.}
+\q{31}{Reciprocals of x are given below: 0.0267, 0.0235, 0.0211, 0.0191, 0.0174, 0.0160, 0.0148. Calculate Harmonic Mean of the Data}
+\q{32}{The cities A,B and C are equidistant from each other. Fatima travels from A to B at the speed of 30 miles per hour by car. From B to C at speed of 50 miles per hour. Determine her average speed of the entire trip.}
+\q{33}{Harmonic mean and Geometric mean of two numbers are 3.2 and 4 respectively. Find their arimethic mean and both the numbers as well}
+\q{34}{The arithmetic mean and geometric means of three numbers are 34 and 18 respectively. Find all the three numbers, when the geometric mean of the first two numbers is 9.}
+\q{35}{Find out: (i) The averages rate of motion in the case of a person who rides the first ride at the rate of 10 miles per hour the next mile at the rate of 8 miles per hour the third at the rate of 6 miles per hour.\par (ii) Increase in population which in the first decade has incresed 20\% in the next 25\% and in the third.}
+\q{36}{The given table shows the distribution of the maximum loads in short tone supported by certain cables produced by a company. Determine Mean, Median and Mode.\par\smallskip
+\begin{tabular}{|l|c|}\hline
+Maximums Loads & No. of cables\\
+9.3-9.7 & 2\\
+9.8-10.2 & 5\\
+10.3-10.7 & 12\\
+10.8-11.2 & 17\\
+11.3-11.7 & 14\\
+11.8-12.2 & 6\\
+12.3-12.7 & 3\\
+12.8-13.2 & 1\\\hline
+\end{tabular}}
+\q{37}{Compute meann median mode, 6th Decile and 74th percentile for the data given in the table:\par\smallskip
+\begin{tabular}{|l|c|}\hline
+Classes & Frequency\\
+0.7312-0.7313 & 10\\
+0.7314-0.7315 & 15\\
+0.7316-0.73137 & 20\\
+0.7318-0.7319 & 25\\
+0.7320-0.7321 & 30\\
+0.7322-0.7323 & 8\\
+0.7324-0.7325 & 2\\\hline
+\end{tabular}}
+\q{38}{Find the value Q$_{3}$ D$_{5}$ P$_{5}$ and mode for the following data:\par\smallskip
+\begin{tabular}{|l|c|l|c|}\hline
+Groups & Frequency & Groups & Frequency\\
+0-4.9 & 3 & 25-29.9 & 13\\
+5-9.9 & 4 & 30-34.9 & 13\\
+10-14.9 & 9 & 35-39.9 & 5\\
+15-19.9 & 11 & 40-44.9 & 2\\
+20-24.9 & 15 & 45-49.9 & 2\\\hline
+\end{tabular}}
+\q{39}{If for any frequency distribution the mean is 45 and the median is 30. Find mode approximately using formula connecting the three.}
+\q{40}{A bus traveling 200 miles has ten stages at equal intervals. The speed of the bus in the various stages was observed to be 10,15, 20, 75, 20, 30, 40, 50, 30, 40 miles per hour. Find the average speed at which the bus has traveled.}
+\q{41}{The following data has been obtained from a frequency distribution of a continuous variable x after making the subtitution u= \$\$ $\dfrac{x-136.5}{6}$ .\par\smallskip
+\begin{tabular}{|l|cccccccc|}\hline
+U & -4 & -3 & -2 & -1 & 0 & 1 & 2 & 3\\
+F & 2 & 5 & 8 & 18 & 22 & 13 & 8 & 4\\\hline
+\end{tabular}\par\smallskip Find Harmonic Mean.}
+\q{42}{Salman obtained the following marks in a certain examination. Find the weighted mean if weighted 4,3,3,2 and 2 respectively are allotted to the subjects.\par\smallskip
+\begin{tabular}{|l|l|l|l|l|}\hline
+English & Urdu & Math & State & Physics\\
+73 & 82 & 80 & 57 & 62\\\hline
+\end{tabular}}
+\q{43}{Calculate weighted mean for the following items:\par\smallskip
+\begin{tabular}{|l|l|l|}\hline
+Items & Expenditures & Weights\\
+Food & 290 & 7.8\\
+Rent & 54 & 2\\
+Clothing & 98 & 1.5\\
+Fuel and Light & 75 & 1.0\\
+Other items & 75 & 0.5\\\hline
+\end{tabular}}
+\q{44}{For a certain distribution, if\par \GA $\sum(x-15)=5\ \sum(x-18)=0\ \sum(x-211)=21$\par What is the value of  A.M and why?}
+\q{45}{For a certain distribution, if\par \GA $\sum(x-15)=5\ \sum(x-18)=0\ \sum(x-211)=21$\par What is the value of  A.M and why?}
+\q{46}{Arithmetic Mean of 15 values in 20 and by adding more values, then mean remains 20. Find the new three values if taio is a:b:c ::3:2:1.}
+\q{47}{If D=X. Find mean and G.M.\par\smallskip
+\begin{tabular}{|l|cccccccc|}\hline
+D & -12 & -8 & -4 & 0 & 4 & 8 & 12 & 16\\
+F & 2 & 5 & 8 & 18 & 22 & 13 & 8 & 4\\\hline
+\end{tabular}}
+\q{48}{Find Median and Mode:\par\smallskip
+\begin{tabular}{|l|cccc|}\hline
+Classes & 5-9 & 10-14 & 15-19 & 20-24\\
+F & 7 & 18 & 13 & 4\\\hline
+\end{tabular}}
+\q{49}{Find geometric mean from the following frequency distribution:\par\smallskip
+\begin{tabular}{|l|ccccc|}\hline
+x & 2 & 3 & 4 & 5 & 6\\
+f & 5 & 7 & 8 & 3 & 2\\\hline
+\end{tabular}}
+\q{50}{The average marks obtained by three sectioned of a statistics class are given below:\par\smallskip
+\begin{tabular}{|l|l|l|}\hline
+Classes & No. of Students & Mean\\
+A & 45 & 95\\
+B & 42 & 58\\
+C & 38 & 52\\\hline
+\end{tabular}\par\smallskip Find combined mean of the whole class}
+\q{51}{Compute mode of the Data:\par\smallskip
+\begin{tabular}{|l|cccccc|}\hline
+Hourly Wages & 4-6 & 6-8 & 8-10 & 10-12 & 12-14 & 14-16\\
+Number of employees & 13 & 11 & 182 & 105 & 19 & 7\\\hline
+\end{tabular}}
+\q{52}{Find two numbers whose mean is 9 and G.M is 7.2.}
+\q{53}{Find H.M and G.M from the following values: 2,4,6,8,10,12,14}
+\q{54}{Find mean and median from the following data:\par\smallskip
+\begin{tabular}{|l|ccccc|}\hline
+Marks & 11-20 & 21-30 & 31-40 & 41-50 & 51-60\\
+F & 2 & 4 & 6 & 8 & 6\\\hline
+\end{tabular}}
+\q{55}{Calculate the arithmetic mean using step deviation method from the following data:\par\smallskip
+\begin{tabular}{|l|ccccc|}\hline
+Marks & 1-10 & 11-20 & 21-30 & 31-40 & 41-50\\
+F & 5 & 30 & 40 & 25 & 10\\\hline
+\end{tabular}}
+\q{56}{Cosider the following data:\par\smallskip
+\begin{tabular}{|l|ccccc|}\hline
+Wages & 30-40 & 40-50 & 50-60 & 60-70 & 70-80\\
+F & 2 & 5 & 6 & 5 & 2\\\hline
+\end{tabular}\par\smallskip Cmpute Q$_{1}$ and 7th decile}
+\q{57}{The arithmetic mean and harmonic mean of two observations are 5 and 3.2 respectively. Find the geometric mean.}
+\q{58}{Compute the median from the following data:\par\smallskip
+\begin{tabular}{|l|ccccc|}\hline
+Classes & 0-7 & 7-14 & 14-21 & 21-28 & 28-35\\
+f & 2 & 11 & 15 & 9 & 4\\\hline
+\end{tabular}}
+\q{59}{Following are the numbers of mistakes made by typists in a set: 5, 6, 0, 5, 8, 4, 3, 5, 7, 9 4, 7, 8, 6, 8, 3, 2, 7, 1, 4, 5, 9, 6, 4, 5, 10, 5, 4, 9, 6 Find A.M also find mode}
+\q{60}{Calculate geometric mean for the following data:\par\smallskip
+\begin{tabular}{|l|cccccc|}\hline
+Marks & 10-19 & 20-29 & 30-39 & 40-49 & 50-59 & 60-69\\
+Number of students & 5 & 10 & 15 & 20 & 12 & 8\\\hline
+\end{tabular}}
+\q{61}{The weight of 100 students are recorded to the mearest kg:\par\smallskip
+\begin{tabular}{|l|ccccc|}\hline
+Weight & 62-64 & 65-67 & 68-70 & 71-73 & 74-76\\
+F & 19 & 25 & 34 & 17 & 5\\\hline
+\end{tabular}\par\smallskip Find arithmetic mean.}
+\q{62}{Calculate mode for the given data:\par\smallskip
+\begin{tabular}{|l|ccccc|}\hline
+Group & 10-14 & 15-19 & 20-24 & 25-29 & 30-34\\
+F & 4 & 8 & 12 & 9 & 3\\\hline
+\end{tabular}}
+\q{63}{Compute the median from following data:\par\smallskip
+\begin{tabular}{|l|ccccc|}\hline
+Groupd & 10-14 & 15-19 & 20-24 & 25-29 & 30-34\\
+F & 1 & 4 & 10 & 5 & 2\\\hline
+\end{tabular}}
+\q{64}{The logathmetic of 6 values are :1.8129, 1.9037, 1.9777, 1.9294, 1.6990 and 1.7782 find the arthmetic mean of variable x.}
+\q{65}{Calculate the Harmoniv Mean from the following data:\par\smallskip
+\begin{tabular}{|l|cccccc|}\hline
+Classes & 10-14 & 15-19 & 20-24 & 25-29 & 30-34 & 35-39\\
+F & 1 & 4 & 5 & 11 & 9 & 2\\\hline
+\end{tabular}}
+\q{66}{Find geometric mean for the given data.\par\smallskip
+\begin{tabular}{|l|ccccc|}\hline
+X & 2 & 3 & 4 & 5 & 6\\
+F & 5 & 7 & 8 & 3 & 2\\\hline
+\end{tabular}}
+\q{67}{Find the median from the given data:\par\smallskip
+\begin{tabular}{|l|c|}\hline
+C-1 & 1\\
+0.9 & 2\\
+10.19 & 3\\
+20-29 & 11\\
+30-39 & 24\\
+40-49 & 32\\
+50-59 & 40\\\hline
+\end{tabular}}
+\q{68}{he mean weight of 150 students in a class is 60 kg. the mean weight of boys in the class 70kg and that of the girls is 55k. Find the number of boys and girls in the class.}
+\q{69}{The reciporcal of the variable "X" are 0.02857, 0.2222, 0.1534, 0.01176, 0.2222 0.01333. Show that A.M> Geometrical mean> Harmonic mean for the above data}
+\q{70}{Calculate median for the following frequency distribution\par\smallskip
+\begin{tabular}{|l|cccc|}\hline
+Classes & 0.7312-0.7373 & 0.7314-0.7315 & 0.7316-0.7318-0.7319 & 0.7318-0.731\\
+F & 10 & 15 & 20 & 8\\\hline
+\end{tabular}}
+\q{71}{Find Arthmetic mean and Harmonic mean of the following distribution.\par\smallskip
+\begin{tabular}{|l|ccccc|}\hline
+Height & 60-62 & 63-65 & 66-68 & 69-71 & 72-74\\
+No. of Students & 5 & 18 & 42 & 27 & 8\\\hline
+\end{tabular}}
+\q{72}{Reciprocals of 8 values are 0.0667, 0.11111, 0.833, 0.556, 0.0357, 0.0500, 0.0278, 0.222 calculate median of X}
+\q{73}{The mean weight of 45 boys is 120lbs, tha of 37 girls is 116.7 lbs and that of 5 teacher is 122.3 lbs. Calculate the mean weight ob boys, girls and teachers.}
+\q{74}{A man gets a rise of 10\% is salary at the end of his first year of service and further rises of 20\% and 25\% at the end of the second and third years respectively. The rise in each cases being calculated on his salary at the beginning of the year. To what annual percentage increase is this equivalent?}
+\q{75}{Find mean, median for the following data:\par\smallskip
+\begin{tabular}{|l|ccccc|}\hline
+No of rooms & 30 & 33 & 40 & 45 & 52\\
+No of students & 03 & 10 & 8 & 5 & 3\\\hline
+\end{tabular}}
+\q{76}{Calculate H.M and G.M of the given distribution.\par\smallskip
+\begin{tabular}{|l|cccccc|}\hline
+x & 12 & 14 & 16 & 18 & 20 & 21\\
+f & 01 & 04 & 06 & 10 & 07 & 02\\\hline
+\end{tabular}}
+\q{77}{Find the lower and uppar quartiles from the data given below:\par\smallskip
+\begin{tabular}{|l|cccccc|}\hline
+Time Minutes & 10-19 & 20-29 & 30-39 & 40-49 & 50-59 & 60-69\\
+No. of customers & 4 & 8 & 46 & 20 & 40 & 2\\\hline
+\end{tabular}}
+\q{78}{What do you understand by dispersion? What are the most useful methods of measuring dispersion, indicate the advantages of these methods?}
+\q{79}{Define mean deviation its co-efficient. Discuss its advantages has uses.}
+\q{80}{i) What is semi-inter quartile range. ii) Define range and discuss its uses.}
+\q{81}{Explain the difference between absolute dispersion and relative dispersion. Describe the properties of the standard deviation.}
+\q{82}{Define various measures of dispersion and given their formulae. ii) The following table gives the marks of students\par\smallskip
+\begin{tabular}{|l|ccccc|}\hline
+Makrs & 30-39 & 40-49 & 50-59 & 60-69 & 70-79\\
+f & 8 & 87 & 190 & 86 & 20\\\hline
+\end{tabular}\par\smallskip Calculate: a) Quartile Deviation b) co-efficient of skwness}
+\q{83}{Find mean deviation from mean to the following data:\par\smallskip
+\begin{tabular}{|l|ccccc|}\hline
+Marks & 30-39 & 40-49 & 50-59 & 60-69 & 70-79\\
+Frequency & 8 & 87 & 190 & 86 & 20\\\hline
+\end{tabular}}
+\q{84}{Find first moment about mean and second moment about mean of the following data:\par\smallskip
+\begin{tabular}{|l|ccccc|}\hline
+X & 12 & 14 & 16 & 18 & 20\\
+F & 1 & 4 & 6 & 10 & 7\\\hline
+\end{tabular}}
+\q{85}{The data of differences between the age of husbands and wivese is given below. Calculate mean deviation from mean.\par\smallskip
+\begin{tabular}{|l|ccccc|}\hline
+Difference & 0-5 & 5-10 & 10-15 & 15-20 & 20-25\\
+Freq & 14 & 20 & 10 & 5 & 1\\\hline
+\end{tabular}}
+\q{86}{Given \GA $\sum f=120,\ \sum f=296$ Mode =2.944 and the second moment about mean is 1.4884. Calculate co-efficient of skewness}
+\q{87}{Find Quartile deviation for the following distribution:\par\smallskip
+\begin{tabular}{|l|ccccc|}\hline
+Weights & 70-74 & 75-79 & 80-84 & 85-89 & 90-94\\
+F & 1 & 7 & 15 & 5 & 2\\\hline
+\end{tabular}}
+\q{88}{The first three moments of a distribution about the value of 2 the variable are 1, 16 and -40, Show that the mean is3, the variance is 15 and m$_{3}$ is -86}
+\q{89}{Cmpute coefficient of skewness for the data given below: 45, 50, 56, 60, 62, 63, 65, 70}
+\q{90}{Calculate coefficient of variation from the following data:\par\smallskip
+\begin{tabular}{|l|ccccc|}\hline
+X & 0 & 1 & 2 & 3 & 4\\
+f & 17 & 9 & 6 & 5 & 3\\\hline
+\end{tabular}}
+\q{91}{Calculate M.D from mean from the following data:\par\smallskip
+\begin{tabular}{|l|cccccc|}\hline
+X & 110 & 120 & 130 & 140 & 150 & 160\\
+f & 4 & 6 & 7 & 7 & 8 & 2\\\hline
+\end{tabular}}
+\q{92}{First three moments about x=62 are 1. 4 and 10. Find first three moments about mean.}
+\q{93}{Calculate the variance for the following data:\par\smallskip
+\begin{tabular}{|l|cccc|}\hline
+Makrs & 3-5 & 5-7 & 7-9 & 9-11\\
+Freq & 8 & 6 & 7 & 4\\\hline
+\end{tabular}}
+\q{94}{First four moments about mean of a distribution are 0.3, 74, 45 and 121. Find out whether the distribution is leptokurtic or playkurtic.}
+\q{95}{Calculate co-efficient of variation for each series and interpret the result that which series is more consistent.}
+\q{96}{The lower and the uppar quartiles of a distribution are 242.36 and 267.74 respectively. While median is 253.60 Find co efficient of skewness and interpret the result.}
+\q{97}{Calculate the mean deviation from the following data:\par\smallskip
+\begin{tabular}{|l|ccccc|}\hline
+Classes & 10-19 & 20-29 & 30-39 & 40-49 & 50-59\\
+F & 2 & 3 & 8 & 11 & 3\\\hline
+\end{tabular}}
+\q{98}{Calculate the first four moments about X=15 from the following data: 10,12,14,16 and 18.}
+\q{99}{The mean of 200 items is 48 and their S.D is 3. FInd the sum and sum of squares of all this}
+\q{100}{A manufacture of two types of light bulbs A and B has the following results: Type A: \textbackslash{}fn\_cm$\overline{X}_{A}$ = 1495 hrs \& S$_{A}$ 280 hrs Type B: \textbackslash{}fn\_jvn$\overline{X}_{\mathbf{B}}$ = 1895 hrs \& S$_{B}$ = 310 hrs\par Which bulb has greater: (i) Absolute dispersion (ii) Relative Dispersion?}
+\q{101}{The first three moment of a distripunted about the value x=4 are 1,4 and 10, Find the C.V is the distribution symmetrical ?}
+\q{102}{The mean of 200 items is 48 and their S.D is 3. Find the sum and sum of squares all of these}
+\q{103}{Calculate Quartile deviation for the following data.\par\smallskip
+\begin{tabular}{|l|cccccc|}\hline
+Weight (kg) & 5 & 10 & 15 & 20 & 25 & 30\\
+No. of Roads & 5 & 10 & 15 & 20 & 20 & 30\\\hline
+\end{tabular}}
+\q{104}{Given Median = 2.944, \textbackslash{}fn\_jvn\$\$ $\sum fx=296,\ \sum f$ =120 and variances is 1.4884, calculte person's coefficient of skewness}
+\q{105}{The following table gives the marks of students: Calculate  quartile deviation.\par\smallskip
+\begin{tabular}{|l|ccccc|}\hline
+Marks & 30-39 & 40-49 & 50-59 & 60-69 & 70-79\\
+F & 8 & 87 & 190 & 86 & 20\\\hline
+\end{tabular}}
+\q{106}{Find four moments of distrbution of distribution about x=2 are 1, 2.5, 5.5 and 16. Calculate mean and co-efficient of variation.(c.v)}
+\q{107}{Find mean devigation from median for following frequency distribution.\par\smallskip
+\begin{tabular}{|l|cccc|}\hline
+Age (years) & 2-10 & 10-15 & 15-20 & 20-25\\
+Frequency & 10 & 20 & 30 & 15\\\hline
+\end{tabular}}
+\q{108}{First three movemments of a distribution about y=4 are 1, 4 and respectively. Find coefficient of variation (C.V). Is the distribution symmetrical or positively skewed for negtive skewed?}
+\q{109}{Compute quartile deviation for the following data:\par\smallskip
+\begin{tabular}{|l|ccccc|}\hline
+Marks & 40-50 & 50-60 & 60-70 & 70-80 & 80-90\\
+No of students & 30 & 50 & 60 & 40 & 20\\\hline
+\end{tabular}}
+\q{110}{What are index number? Give the uses of an index number.}
+\qq{The first four moment of a set of numbers about 3= are -2, 10, -25 and 50. Determine the corresponding moments about mean}
+\q{111}{Define an index number. Discuss the main points involved in the construction of index number of prices.}
+\q{112}{Define an index number and describe the different types of index number.}
+\q{113}{Disuss the important problems involved in the construction of index number of prices.}
+\q{114}{Compare the following steps: (I) Simple and Composite index. (ii) Fixed and chain base method.}
+\q{115}{What is the weighted index number?}
+\q{116}{Find the index number of price from the following data taking average price of all years as the base.\par\smallskip
+\begin{tabular}{|l|cccccccc|}\hline
+Years & 1970 & 1971 & 1972 & 1973 & 1974 & 1975 & 1976 & 197\\
+Prices & 15 & 19 & 21 & 30 & 37 & 38 & 40 & 48\\\hline
+\end{tabular}}
+\q{117}{Given the price of commodity per maund for the period 1945 to 1960 as:\par\smallskip
+\begin{tabular}{|l|l||l|l||l|l|}\hline
+Year & Price & Year & Price & Year & Price\\
+1945 & 12.7 & 1950 & 24.58 & 1955 & 15.65\\
+1946 & 18.97 & 1951 & 20.90 & 1956 & 16.15\\
+1947 & 19.70 & 1952 & 19.80 & 1957 & 20.20\\
+1948 & 13.50 & 1953 & 23.65 & 1958 & 25.25\\
+1949 & 15.65 & 1954 & 24.55 & 1959 & 32.40\\\hline
+\end{tabular}\par\smallskip Construct index numbers correct to 2 decimal  place: (i) 1945 as base Average price of all years as base prices.}
+\q{118}{Find index number using: (i)  1977 as base (ii) Average of the price  as base:\par\smallskip
+\begin{tabular}{|l|l||l|l||l|l|}\hline
+Years & Prices & Years & Prices & Years & Prices\\
+1977 & 22.5 & 1980 & 30 & 1983 & 37.5\\
+1978 & 25 & 1981 & 35 & 1884 & 47.5\\
+1979 & 27.5 & 1982 & 32.5 & 1985 & 45\\\hline
+\end{tabular}}
+\q{119}{Follow the following data, fixed index numbers taking (I) 1930 as base (ii) Average of 1st 3 years as base (iii) the year 1935 as base\par\smallskip
+\begin{tabular}{|l|l||l|l||l|l|}\hline
+Years & Prices & Years & Prices & Years & Prices\\
+1930 & 4 & 1933 & 7 & 1936 & 9\\
+1931 & 5 & 1934 & 8 & 1937 & 10\\
+1932 & 6 & 1935 & 10 & 1938 & 11\\\hline
+\end{tabular}}
+\q{120}{Construct index numbers of prices for the following data taking 1960 as base:\par\smallskip
+\begin{tabular}{|l|l||l|l|}\hline
+Years & Prices & Years & Prices\\
+1960 & 50 & 1965 & 72\\
+1961 & 52 & 1966 & 73\\
+1962 & 55 & 1967 & 75\\
+1963 & 57 & 1968 & 71\\
+1964 & 62 & 1969 & 70\\\hline
+\end{tabular}}
+\q{121}{The price is Rs. per maund of coal sold during the year 1953-58 as given below: Compute index number of price for the year 1953 as base.\par\smallskip
+\begin{tabular}{|l|l||l|l||l|l|}\hline
+Years & Prices & Years & Prices & Years & Prices\\
+1953 & 14.95 & 1955 & 15.10 & 1957 & 16.28\\
+1954 & 14.95 & 1956 & 15.65 & 1958 & 16.28\\\hline
+\end{tabular}}
+\q{122}{Find the data given below, compute, the index numbers of prices, taking 1962 as base.\par\smallskip
+\begin{tabular}{|l|l|l|l|l|}\hline
+\multicolumn{5}{|l|}{Commodities (Price in Rs.)}\\
+Year & Firewood & Softcake & Kerossene oil & Matches\\
+1962 & 3.25 & 2.50 & 0.20 & 0.06\\
+1963 & 3.44 & 2.80 & 0.22 & 0.06\\
+1964 & 3.50 & 2.00 & 0.25 & 0.06\\
+1965 & 3.75 & 2.50 & 0.25 & 0.06\\\hline
+\end{tabular}}
+\q{123}{Compute index number of prices from the following data taking 1981 as  base and using median as average.\par\smallskip
+\begin{tabular}{|l|c|c|c|}\hline
+ & \multicolumn{3}{c|}{Prices}\\
+Year & A & B & C\\
+1981 & 18 & 85 & 52\\
+1982 & 22 & 76 & 60\\
+1983 & 28 & 80 & 66\\
+1984 & 31 & 95 & 80\\\hline
+\end{tabular}}
+\q{124}{Find chain index numbers (using geometric mean to average the relatives) for the following data of prices, taking 1970 as the base year.\par\smallskip
+\begin{tabular}{|l|ccccc|}\hline
+ & \multicolumn{5}{c|}{Years}\\
+Commodities & 1970 & 1971 & 1972 & 1973 & 1974\\
+A & 40 & 43 & 45 & 42 & 50\\
+B & 160 & 162 & 165 & 161 & 168\\
+C & 240 & 29 & 52 & 23 & 27\\
+D & 240 & 245 & 247 & 250 & 255\\\hline
+\end{tabular}}
+\q{125}{The following table gives the average whole sale prices in rupees per unit of gold, wheat, cotton during the year 1912-1917. Construct index number with the 1912 as base using. (A.M) (ii) G.M\par\smallskip
+\begin{tabular}{|l|cccccc|}\hline
+ & \multicolumn{6}{c|}{Average Price in Rs. Per unit}\\
+Commodities & 1912 & 1913 & 1914 & 1915 & 1916 & 1917\\
+Gold & 25.3 & 30.8 & 33.4 & 35.5 & 35.4 & 36.0\\
+Wheat & 17.3 & 14.5 & 4.9 & 5.7 & 17.7 & 11.6\\
+Cotton & 7.8 & 5.4 & 6.7 & 5.6 & 7.2 & 10.2\\\hline
+\end{tabular}}
+\q{126}{Construct chain indices for the following years, taking 1940 as base.\par\smallskip
+\begin{tabular}{|l|ccccc|}\hline
+ & \multicolumn{5}{c|}{Years}\\
+Item & 1940 & 1941 & 1942 & 1943 & 1944\\
+Wheat & 2.80 & 3.40 & 3.60 & 4.00 & 4.20\\
+Rice & 2.95 & 3.60 & 2.90 & 2.75 & 2.75\\
+Maize & 3.10 & 3.50 & 3.40 & 4.50 & 3.70\\\hline
+\end{tabular}}
+\q{127}{Construct index numbers for 1963 assuming 1953 as base period by (i) Laspeyre's formula (ii) Paasche's formula\par\smallskip
+\begin{tabular}{|l|cc|cc|}\hline
+ & \multicolumn{2}{c|}{1953} & \multicolumn{2}{c|}{1963}\\
+Commodities & Price & Quantity & Price & Quantity\\
+A & 2 & 50 & 10 & 40\\
+B & 3 & 10 & 8 & 5\\
+C & 4 & 5 & 4 & 5\\\hline
+\end{tabular}}
+\q{128}{Compute the weighted index numbers for 1964 from the following data with 1960 as base:\par\smallskip
+\begin{tabular}{|l|cc|cc|}\hline
+ & \multicolumn{2}{c|}{Price} & \multicolumn{2}{c|}{Quantity}\\
+Commodities & 1960 & 1964 & 1960 & 1964\\
+Milk & 3.95 & 4.25 & 97.75 & 104.36\\
+Chese & 34.80 & 38.90 & 78 & 83\\
+Butter & 61.56 & 59.70 & 118 & 116\\\hline
+\end{tabular}}
+\q{129}{Compute Fisher's index number for the following data.\par\smallskip
+\begin{tabular}{|l|cc|cc|}\hline
+ & \multicolumn{2}{c|}{Base Year} & \multicolumn{2}{c|}{Current Year}\\
+Commodities & Price & Quantity & Price & Quantity\\
+A & 7 & 70 & 5 & 49\\
+B & 5 & 27 & 7 & 28\\
+C & 10 & 35 & 9 & 29\\
+D & 9 & 50 & 4 & 42\\
+E & 3 & 16 & 10 & 25\\\hline
+\end{tabular}}
+\q{130}{Construct the following with the help of data given below. Fisher's ideal index taking 1970 as base.\par\smallskip
+\begin{tabular}{|l|cc|cc|}\hline
+ & \multicolumn{2}{c|}{Total Production(tons)} & \multicolumn{2}{c|}{Harvest Price (Rs)}\\
+Commmodities & 1970 & 1971 & 1970 & 1971\\
+Rice & 71 & 26 & 3.80 & 3.50\\
+Barley & 107 & 83 & 2.90 & 1.90\\
+Maize & 72 & 48 & 2.90 & 1.80\\\hline
+\end{tabular}}
+\q{131}{Calculate FIsher's ideal index from the following data with 1965 as base year.\par\smallskip
+\begin{tabular}{|l|cc|cc|}\hline
+ & \multicolumn{2}{c|}{1965} & \multicolumn{2}{c|}{1970}\\
+Commodities & Price & Quantity & Price & Quantity\\
+A & 4.6 & 102 & 9.50 & 96\\
+B & 3.7 & 15 & 7.36 & 28\\
+C & 10.2 & 17 & 8.42 & 21\\
+D & 8.9 & 19 & 9.87 & 13\\\hline
+\end{tabular}}
+\q{132}{Define weighted and unweighted index numbers are explain why weighted index numbers are preffered over unweighted index numbers}
+\q{133}{Calculate Laspeyre's Paasche's and Fisher's ideal index for the following data with 1992 as base.\par\smallskip
+\begin{tabular}{|l|cc|cc|}\hline
+ & \multicolumn{2}{c|}{Average Price (Rs)} & \multicolumn{2}{c|}{Quantity (Units)}\\
+Item & 1992 & 1993 & 1992 & 1993\\
+Wheat flour & 4.38 & 4.57 & 20kg & 16kg\\
+Rice & 14.15 & 15.58 & 10kg & 12kg\\
+Moong pulse & 18.67 & 17.28 & 1kg & 1kg\\
+Gram pulse & 10.41 & 16.36 & 1kg & 1kg\\\hline
+\end{tabular}}
+\q{134}{The following figures gives the average annnual price in U.K for beef and mutton.\par\smallskip
+\begin{tabular}{|l|cc|l|cc|l|cc|}\hline
+Years & \multicolumn{2}{c|}{Price} & Year & \multicolumn{2}{c|}{Price} & Year & \multicolumn{2}{c|}{Price}\\
+ & Beaf & Mutton & & Beaf & Mutton & & Beaf & Mutton\\
+1935 & 54 & 75 & 1938 & 62 & 62 & 1941 & 72 & 85\\
+1936 & 54 & 73 & 1939 & 61 & 68 & 1942 & 76 & 90\\
+1937 & 61 & 73 & 1940 & 72 & 85 & 1943 & 79 & 90\\\hline
+\end{tabular}\par\smallskip
+Construct index number of meat prices giving weighted 2 and 1 for beaf and mutton respectively. Take the year 1935 as the best year.}
+\q{135}{The following table shows the average price in rupees for wheat, rice and barley.\par\smallskip
+\begin{tabular}{|l|l|l|l|}\hline
+ & \multicolumn{3}{c|}{Price}\\
+Year & Wheat & Rice & Barley\\
+1980 & 175.5 & 480.4 & 82.4\\
+1981 & 180.3 & 509.7 & 90.6\\\hline
+\end{tabular}\par\smallskip
+Taking 1980 as base year, construct price index number by weighted average of relative method for the year 1981 using the weight 20 for wheat, 12 for rice and 4 for barley.}
+\q{136}{An inquiry into the budgets of the middle class families in a city of England gave the following information. What change in cost of living the figures of 1929 show as compared in 1928.\par\smallskip
+\begin{tabular}{|l|l|l|l|l|}\hline
+Expenses On & Food 35\% & Rent 15\% & Clothing 20\% & Fuel 10\%\\
+Price (1928) & 150 & 30 & 75 & 25\\
+Price (1959) & 145 & 30 & 65 & 23\\\hline
+\end{tabular}}
+\q{137}{(I) Define random variable and given an example to explain it. (ii) What are random numbers and how these are generated. Also give an example to explain their application. (iii) Classify each of the following random variables as either discrete or continuous. (a) The number of page in a book. (b) The number of questions asked in an oral examination. (C) The life time of a light bulb. (d) The amount of rainfall at a particular location during different months of 1996.}
+\q{138}{Generate the first 6 random digits using the pseudo-random number generator with m=100, a=21, b=7, x$_{o}$=10.}
+\q{139}{Count the number of head and tails when a single coin is tossed 10 times without throwing a coin}
+\q{140}{Two coins are tossed. Let Y donates the number of heads, then the possible number of heads and their corresponding probabilities are given in the adjoinig table.\par\smallskip
+\begin{tabular}{|l|l|}\hline
+Y & p(Y)\\
+0 & 0.25\\
+1 & 0.50\\
+2 & 0.25\\\hline
+\end{tabular}\par\smallskip
+First the squence of number of heads 20 times without throwing a coin?}
+\q{141}{Let the digits 0, 1, 2, 3, 4 represent head and 5, 6, 7, 8, 9 represent tail. Use random numbers to simulate 20 flips of a coin.}
+\q{142}{Two students in a class asked to take one of the two courses Mathematics (M) or Biology (B). Define the random variable Y as number of students taking Biology. Write down the possible outcorners and the values assigned by the random variable Y.}
+\q{143}{Two coins are tossed and let the random variable Y denote the number of heads. Write down the possible outcomes and the values assigned to the random variable}
+\q{144}{There are three children in a family. Let the random variable denote the number of boys in a family. Write down the possible outcomes and the values assigned by the random variable assuming equal chances for boys and girls.}
+\q{145}{Four balls are down from a bag containing 5 white and 3 balck balls. If X denotes the number of white ball drawn, then write down the possible values of the random variable X}
+\q{146}{Differentiate between discrete and countinuous random variable and given an example of each.}
+\q{147}{What are random numbers? How can be they genrerated? Explain the applications of random numbers?}
+\q{148}{Three balls are dawn from a bag containing 5 white and 3 black balls. If X  denotes the number of white ball drawn from the bag, then find the probabiity distribution of X.}
+\q{149}{There are seven candidates for three positions of typist. Four of the candidates know Urdu typing while the other three do not know it. If the three candidates are selected at random, find the probability distribution of the number of persons knowing Urdu typing among selected.}
+\q{150}{(i) What is meant  by probability distribution. DIstinguish between discrete and countinuous random variables by giving examples. (ii) A coin is tossed 4 times. If X denotes the number of tails. What is the probability distribution of X? Draw a probability histogram. (iii) A bag contains 4 red and 6 black balls. A sample of 4 balls find the probability distribution of X.}
+\q{151}{(i) Define probability function and give an example to explain it. (ii) Two fair dice are thrown and Y denote the product of the two scores obtain the probability distribution of Y.}
+\q{152}{(i) What properties a mathematical function should possess to be a probability function and probability density function? (ii) Check weather the following functions satisfy the conditions of a probability function? a.f(y)=14 for y=1,2,3,4,5, b. f(y)=1/y for y=1,2,3,4 , c. f(y) =y/15 for y=0,1,2,3,4,5, d. f(y) =(5-y$^{2}$)/6 for y=0,1,2,3,}
+\q{153}{Determine the value of c so that the function can serve as a probability function a random variable. a. cy for y=1,2,3,4,5 b. (1-c)c$^{y}$ for y=0,1,2.}
+\q{154}{(i) Given the following probability distribution.\par\smallskip
+\begin{tabular}{|l|ccccc|}\hline
+x & 0 & 1 & 2 & 3 & 4\\
+P(x) & 1/26 & 20/26 & 60/120 & 40/126 & 51/126\\\hline
+\end{tabular}\par\smallskip
+Verify that E(2X+3)= 2E (X) +3 (ii) Let x be a random variable with probability distribution.\par\smallskip
+\begin{tabular}{|l|ccccc|}\hline
+x & -1 & 0 & 1 & 2 & 3\\
+P(x) & 0.125 & 0.500 & 0.200 & 0.050 & 0.125\\\hline
+\end{tabular}\par\smallskip
+Find (a) E(X) and Var (X)  (b) The probability distribution of the random varribale Y=2X+1. Using the probability distribution of Y, determined and Var (Y)}
+\q{155}{i) Given the following probability distribution.\par\smallskip
+\begin{tabular}{|l|ccccc|}\hline
+x & 0 & 1 & 2 & 3 & 4\\
+P(x) & 1/26 & 20/26 & 60/120 & 40/126 & 51/126\\\hline
+\end{tabular}\par\smallskip
+Verify that E(2X+3)= 2E (X) +3 (ii) Let x be a random variable with probability distribution.\par\smallskip
+\begin{tabular}{|l|ccccc|}\hline
+x & -1 & 0 & 1 & 2 & 3\\
+P(x) & 0.125 & 0.500 & 0.200 & 0.050 & 0.125\\\hline
+\end{tabular}\par\smallskip
+Find (a) E(X) and Var (X)  (b) The probability distribution of the random varribale Y=2X+1. Using the probability distribution of Y, determined and Var (Y).}
+\q{156}{The following table gives the probability distribution of the random variable Y, the number of courses taught by a teacher during spring smester in the university of Agriculture Faislabad.\par\smallskip
+\begin{tabular}{|l|ccccc|}\hline
+y & 1 & 2 & 3 & 4 & 5\\
+P(y) & .1 & .2. & .3 & .3 & .1\\\hline
+\end{tabular}\par\smallskip
+Find the probability that: i) Teacher taught 2 courses ii) Teacher taught less than 4 courses. iii) Teacher taught between 2 and 5 courses. iv) Teacher taught atleast 3 courses. v) Teacher taught at the most 4 courses.}
+\q{157}{A box contains five slips of paper marked 1,2,3,4 and 5. Two slips are selected without replacement, list the possible values for each of the following random variables: i) The sum of the two numbers on two slips. ii) The difference between the first and second number.}
+\q{158}{Four randomly selected students from a class asked their openion about the teaching system as satisfactory (S) or not satisfactory (NS). Let Y denote the number of students saying satisfactory. Write down the possible outcomes and the possible values.}
+\q{159}{A point is randomly selected on the surface of a lake that has maximum depth of 30 feet. Let y denote the depth of the lake at the randomly selected point. What are possible values for Y? Is Y a dicrese variable or a continuous variable?}
+\q{160}{Calculate mean and variance of the following probability distribution.\par\smallskip
+\begin{tabular}{|l|cccccc|}\hline
+y & 0 & 1 & 2 & 3 & 4 & 5\\
+P(y) & 0.1 & 0.2 & 0.3 & 0.2 & 0.1 & 0.1\\\hline
+\end{tabular}}
+\q{161}{i) A countinuous random variable X having values only between 0 and 4 has a density function given by: f(x) =1/2 -ax, where a is a constant find a) a b) P(1<X<2). ii) A countinuous random variable X has probability density function giving  f(x) =cx for 0<X<2. Find a) c b) probability that 1<X<1.5 c) Probability that X<1.5 iii) If f(x) has probability density kx2, o<x<1, determine its kind and find the probability that 1/3<X<1/2}
+\q{162}{What is a random variable? distinguished between discrete and continuous random variable, giving exmaples.}
+\q{163}{Find the probability distribution of the number boys in families with three children, assuming equal probabilties for boys and girls.}
+\q{164}{Find the probability distribution of the number boys in families with three children, assuming equal probabilties for boys and girls.}
+\q{165}{Define continuous random variable and its probability distribution. (ii) Find the constant k so that the function f(x) defined as follow may be a density function.\par \GB $f(x)=\dfrac{1}{k},a\leqslant X\leqslant b$ =0, elsewhere}
+\q{166}{i) What do you mean by expected value? What are the properties of expectation? ii) Given the following discrete probability distribution\par\smallskip
+\begin{tabular}{|l|cccccc|}\hline
+x & 0 & 1 & 2 & 3 & 4 & 5\\
+P(x) & 6/36 & 10/36 & 8/36 & 6/36 & 4/36 & 2/36\\\hline
+\end{tabular}\par\smallskip Compute its mean, variance, standard deviation and coefficient of variation.}
+\q{167}{Let X be a random variable with probability distribution as follows:\par\smallskip
+\begin{tabular}{|l|ccccc|}\hline
+x & 1 & 2 & 3 & 4 & 5\\
+f(x) & 0.125 & 0.45 & 0.25 & 0.05 & 0.125\\\hline
+\end{tabular}\par\smallskip Find mean and variance,}
+\q{168}{A countonuous random variable X has a destiny function f(x)=$\dfrac{x+1}{8}$ for x=2 to x=4. find a) P(X<3.5) b) P(2.4<X<3.5) c) P(X=1.5). (ii) A countinuous random variable X has density function f(x)=2x, $0\leqslant x\leqslant1$. a) P(X)=1/2) b) P(X>1/4) c) P(1/4<X<1/2).}
+\q{169}{In a summer season, a dealer of desert room coolers can earn Rs.800 per day if it is cloudy. Find his mathematical expectation if the probability of the day being hot is 0.40 and for being cloudy it is 0.35.}
+\q{170}{A committee of size 5 is to be selected from 3 female and 5 male members find the expected number of female members on the commettee.}
+\q{171}{What are the properties of probabalties function and probability density function?}
+\q{172}{i) Explain the conceptof distribution function. ii) 10 Vegetables cans, all of the size, have lost their labes. it is known that 5 contain tomatoes and 5 contain corns. If 5 cans are selected at random, then find the probability distribution and the distribution function for he number of tomato in the sample.}
+\q{173}{i) Define the expected value for a random variable. ii) The number of outomobile accidents in a city are 1,12,3,4,4 with corresponding probabilties 1/8, 2/8, 2/8 and 3/8. What is the expected number of daily accidents?}
+\q{174}{A and B throw a die for a prize of Rs. 11. Which is to be won by the player who first throws a 6. If A has the firs throw, what are their respective expectations?}
+\q{175}{A bag contains 2 white and 2 black balls. Three men A,B and C draw a ball don't replacae it. The person who draws the white ball first receives Rs. 12. What are their respective expectations?}
+\q{176}{Three balls are drawn from a bag containing 5 white balls drwan from the bag. then find the probability distribution of heads and also find the mean and variance of the distribution when it tossed 4 ttimes.}
+\q{177}{Approximately 10\% of the glass bottles coming from a production line have serious defectss. If two bottles are selected at random find the expected number of bottles that having serious defects}
+\q{178}{A random variable X takes the values -3, -2, 2, 3 and 4 with probabilties  P(X) equal to 1/5, 1/10, 1/10 1/5 and 2/5 respevtively. Compute E(X) and show that E (5X+10). Also compute the variance (X) and variance (5X+10) . Find the ratio of two varriances.}
+\q{179}{If f(x) =\GB $\dfrac{6-|7-x|}{36}$ for x=2,3,4, ......12, then find the mean and variance of random variable X.}
+\q{180}{If f(x) =\GB $\dfrac{6-|7-x|}{36}$ for x=2,3,4, ......12, then find the mean and variance of random variable X.}
+\q{181}{For the following Probability distribution. FInd. i) E(X) ii) E(X$^{2}$) iii) E[X-E(X)]$^{2}$.\par\smallskip
+\begin{tabular}{|l|ccc|}\hline
+x & -10 & -20 & 30\\
+P(X) & 1/5 & 3/10 & 1/2\\\hline
+\end{tabular}}
+\q{182}{i) Define expectation of a random variable ii) The probability distribution of a discrete random variable X is given by $f(x)=\left(\dfrac{3}{4}\right)\left(\dfrac{1}{4}\right)^{x}\left(\dfrac{3}{4}\right)^{3-x}$,x = 0,1,2,3 Find E(X) and E(X2).}
+\q{183}{Find mean and variance of the following probability distribution.\par\smallskip
+\begin{tabular}{|l|cccccc|}\hline
+x & 0 & 1 & 2 & 3 & 4 & 5\\
+P(x) & 0.1 & 0.2 & 0.3 & 0.2 & 0.1 & 0.1\\\hline
+\end{tabular}}
+\q{184}{if F(x) =\GB $\dfrac{2(5-x)}{25}\ 0<x<5$ show that it is a p.d.f also find p(x<4)}
+\q{185}{Show that $\dfrac{3+2x}{2}\ 2\leqslant x\leqslant4$ is a proper density function and fid the probability $2\leqslant x\leqslant3$}
+\q{186}{A pair of dice is rolled. Let X represent the sum of dots on both dices. Find (I) range of (X) (ii) probability distribution of X>}
+\q{187}{A random variable X has the probability distribution f(x) =A \GB $\left(\dfrac{5}{x}\right)$ x=0,1,2,3 (i) Determine tha value of A (ii) determine F(x)}
+\q{188}{A conutinuous random variable X can assume value between x=1 and x=3 has a density function given by f(x) = \GB $\dfrac{x}{2}$ (i) show that area under the curve is equal to one (ii) P(x<2)}
+\q{189}{A man draws 2 balls from a bag containing 2 white and 5 black balls. Make a probability distribution of white balls.}
+\q{190}{A bag is containnig 5 white 7 black balls. If 3 balls are drawn from the bag. What is the probability that (i) two white and one black (ii) all are same colour}
+\q{191}{Find E(X) and Var(X) from the following probability distribution:\par\smallskip
+\begin{tabular}{|l|ccccc|}\hline
+x & -2 & 21 & 0 & 1 & 2\\
+P(x) & /10 & 2/10 & 4/10 & 2/10 & 1/10\\\hline
+\end{tabular}}
+\q{192}{Find variance of the probability distribution:\par\smallskip
+\begin{tabular}{|l|cccc|}\hline
+x & 1 & 2 & 3 & 4\\
+P(x) & 0.2 & 0.3 & 0.3 & 0.2\\\hline
+\end{tabular}}
+\q{193}{A bag contains 4 white and 2 black marbles. If two marbles are drawn at random, find the expected number of black marbles}
+\q{194}{If f(x) has probability density Kx2, 0<x<1 determine "k" and find the probability that\par \GB $\dfrac{1}{3}<x<\dfrac{1}{2}$}
+\q{195}{Given the following probability distribution.\par\smallskip
+\begin{tabular}{|l|ccccc|}\hline
+X & 0 & 1 & 2 & 3 & 4\\
+P(X) & $\dfrac{1}{126}$ & $\dfrac{20}{126}$ & $\dfrac{60}{126}$ & $\dfrac{40}{126}$ & $\dfrac{5}{126}$\\\hline
+\end{tabular}\par\smallskip Verify that, E(2x+3)=2E(x)+3}
+\q{196}{A random variable "x" has the following probability distribution.\par\smallskip
+\begin{tabular}{|l|ccc|}\hline
+x & -2 & 3 & 1\\
+f(x) & $\dfrac{1}{3}$ & $\dfrac{1}{2}$ & $\dfrac{1}{6}$\\\hline
+\end{tabular}\par\smallskip Find E(x) and E(x$^{2}$)}
+\q{197}{A random variable X has the following probability distribution.\par\smallskip
+\begin{tabular}{|l|cccccc|}\hline
+X & -2 & -1 & 0 & 1 & 2 & 3\\
+P(X) & 0.1 & k & 0.2 & 2k & 0.3 & 3k\\\hline
+\end{tabular}\par\smallskip Find (i) K (ii) P(X<2)}
+\q{198}{Define the binomial Probability distribution.}
+\q{199}{What is binomial experiment? Give its properties.}
+\q{200}{An event has probability p= \GC $\dfrac{3}{8}$ . Find the complete binomial distribution for n=5 trials.}
+\q{201}{Find the probability i.e., tossing a fair coin four times there will appear (i) 4 heads (ii) 1 tail 3 heads (iii) at least 2 heads (iv) at the most of 2 heads.}
+\q{202}{If 20\% of the bolts produce by a machine are defective, determine the probability that out of 4 bolts chosen random. (i) zero (ii) 2 bolts are defective}
+\q{203}{Given the probability of passing an examination is 0.75. What is the probability of (i) Passing at least two examination if you take six? (ii) Failing at least 2 examinations if you take four?}
+\q{204}{The experience of a house agent indicates that he can provide suitable accommodation for 75\% of the clients who came to him independently, calculate the probability that (i) less than 4 clients will get satisfactory accommodation (ii) at least 5 clients will get satisfactory accommodation.}
+\q{205}{The incidence of an occupational disease in an industry is such that he workers have 20\% chance of suffering from it. What is the probability that out of 6 workmen: (I) not more than 2 will catch the disease? (ii) 4 or more will catch the disease?}
+\q{206}{if 8 coins are tossed what is probability that three are (i) Exactly 5 head (ii) 1 to 7 heads}
+\q{207}{If X=binomially distribution with n=10, p=0.4, then find mean and variance of y=\par \GC $\dfrac{X-6}{10}$}
+\q{208}{If a true dice are thrown once, determine the probability of getting 0, 1, 2, 3, 4, 5 sixes. Find the mean and variance of the probability distribution so obtained.}
+\q{209}{Five dice are tossed 96 times. Find the expected frequencies when throwing of 4, 5 or 6 is regarded as success}
+\q{210}{Four dice are thrown the number of sixes in each throw is recorded. This is repeated 180 times. Write down the theoretical frequencies 0, 1, 2, 3 and 4 sixes. Calculate the mean number of sixes in a single throw.}
+\q{211}{The mean and variance of the binomial distribution are 6 and 2.4 respectively. Find p and n, the two parameters of the binomial distribution.}
+\q{212}{If the probability of a defective bolt is 0.1. Find the mean and standard deviation of the distribution of defective bolts in a total of 500.}
+\q{213}{If in a binomial distribution, the mean is 3 and the standard deviation is 1.5. Find its parameters.}
+\q{214}{Is it possible to have a binomial distribution with mean =5 and S.D. = 3.7.}
+\q{215}{In binomial distribution with n=5, what is the value of other parameters of the binomial, If P(X=0) = P(X=1) find mean of the distribution.}
+\q{216}{Find the binomial distribution whose mean is 12 and standard deviation is 3.}
+\q{217}{Find the mean and variance of the binomial (q+p)$^{3}$}
+\q{218}{Find the mean and standard deviation of the binomial distribution (q+p)$^{n}$}
+\q{219}{Find the probability that in 5 tosses of a fair die "3 or 4" appears (I) at no time (ii) one (iii) twice (iv) at most twice}
+\q{220}{Given the X is a hyper-geometric random variable with: N=8, n=3, k=5. Find P(x \GC $\leqslant3$).}
+\q{221}{In a binomial distribution Mean =2.4 and S.D=1.2. Find (I) n and p (ii) P(X=2).}
+\q{222}{Four balls are drawn from the bag contains 4 white and 6 black balls. Find the probability distribution of white balls}
+\q{223}{Five balls are drawn from a box containing 7 red, and 4 blue balls. If X denotes the number of red balls drawn from box. Obtain probability distribution of X. Also compute Mean and distribution.}
+\q{224}{A fair die is rolled 5 times and the number of sixes is counted. Find the probability of (i) No six (ii) At least one six}
+\q{225}{in heper-geometric distribution n=4, N=10 and k=3 then find (i) P(x \GC $\leqslant3$) (ii) P(x=4).}
+\q{226}{Let X is a binomial r.v with n=5 and p=0.2, find the complete binomial distribution.}
+\q{227}{A committee of size 4 is to be selected at random from 4 3 women and 4 men. Find the probability that (I) women) (ii) at least 2 women Will be selected in committee}
+\q{228}{Given that "x" is hyper-geometric r.v with N=10, n=4, k=5. compute (i) P(x \GC $\leqslant3$) (ii) P(x=4).}
+\q{229}{A random variable 'X' is beleived to follow a binomial distribution with b(x:5,p) if P(x=0) =\par \GC $\dfrac{244}{1043}$ find P(x=3)}
+\q{230}{Find the mean and standard deviation of the binomial distribution if n=2.}
+\q{231}{If N=8, K=4 and n=3, find compete hyper-geometric distribution and show that Mean is 1.5.}
+\q{232}{A committee of size 3 is selected from 4 men and 2 women. Find the probability distribution by the Hyper-geometric experiment for the number of Men in the committee.}
+\q{233}{If X is a binomial distribution with n=10, p=0.35 find the probability of (i) Exactly 6 successes (ii) At most 2 successes.}
+\q{234}{If 'x' is a binomial distributed with n=10, p=0.41. Then fine Mean and variance of y=\par \GC $\dfrac{x-10}{6}$}
+\q{235}{Three balls are drawn without replacement from a box containing 3 white and 7 red balls. If X denotes the number of red balls, then obtain the probability distribution of "X"}
+\q{236}{Workers have 20\% chances of suffering from an occupational disease. What is the probability that out of 6 workers. (i) Exactly 2 will suffer from the disease (ii) at least 2 will suffer from the disease}
+\q{237}{Find Mean and S.D of (q+p)$^{3}$.}
+\q{238}{A bag contains 6 green and 4 red balls. Three are selected at random without replacement. Compute the probability distribution of green balls.}
+\q{239}{A bag contains 6 green and 4 red balls. Three are selected at random without replacement. Compute the probability distribution of green balls.}
+\q{240}{Three balls are drawn from a bag containing 5 white and 3 black balls if X denotes the number of white balls, find probability distribution of X}
+\q{241}{The mean and Variance of binomial distribution are 2 and \GC $\dfrac{24}{13}$ Find (i) parameters (ii) P(X=2)}
+\q{242}{If N=4 N=10 and K=5 find (i) P(X=3) (ii) P(X \GC $\leqslant1$).}
+\q{243}{Find the parameters of the binomial distribution.}
+\q{244}{If N=10, K=6, n=5 then find mean and variance of the hyper-geometric probability distribution.}
+\q{245}{Assuming that each baby has probability 0.4 of being male. Find the probability that a family of 4 children will have (i) at least one boy (ii) at most one girl}
+\q{246}{If n=5, N=12 and K=3 then find (i) P(X \GC $\leqslant1$) (ii) P(X>1)}
+\q{247}{In hyper geo-metric distribution n=4, N=10 and K=3, then find (i) P(X \GC $\leqslant2$) (ii) P(X=4)}
+\q{248}{If a coin is tossed 5 times and the probability that it shows 3 heads it twice the probability that it shows one tail then find p and q}
+\q{249}{From a lot of 10 miles, 4 are selected at random and fired. If the lost contain 3 defective missiles that will not fire. What is the probability that (i( all 4 will fire (ii) at least 2 will not fire}
+\end{document}

@@ -326,7 +326,16 @@ export function cleanTextLatex(text: string): string {
 // ─────────────────────────────────────────────────────────────────────────────
 // Main preprocessor
 // ─────────────────────────────────────────────────────────────────────────────
+// Text seeded from clean LaTeX (the Hope Science Academy 1st/2nd-year files) carries an invisible U+2063 mark in front
+// of each stem/option/question. Such text is exactly what was typed, so the PDF-repair rules below -- which drop
+// "duplicate" numbers and words -- must not run on it (they would delete repeated values from a statistics data set,
+// or "10-14" -> "10⁻¹⁴" in a class-interval table). Text without the mark is processed exactly as before.
+const VERBATIM_MARK = "⁣";
+
 export function preprocessMathText(raw: string): string {
+  if (raw.includes(VERBATIM_MARK)) {
+    return normalizeLatexDelimiters(raw).split(VERBATIM_MARK).join("").trim();
+  }
   let text = normalizeLatexDelimiters(raw);
   for (const [re, rep] of FIXES) {
     text = text.replace(re, rep as string);

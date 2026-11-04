@@ -1,0 +1,543 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=1.8cm]{geometry}
+\usepackage{amsmath,amssymb,tabularx,array,needspace,fontspec,enumitem,cancel}
+\newcommand{\tb}{\cancel{||||}\,}
+\setmainfont{FreeSerif}
+\newfontfamily\urdufont[Script=Arabic]{FreeSerif}
+\TeXXeTstate=1
+\newcommand{\urdu}[1]{{\urdufont\beginR #1\endR}}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\renewcommand{\arraystretch}{1.15}
+\pagestyle{plain}
+
+% \mcq{number}{question}{A}{B}{C}{D}
+\newcommand{\mcq}[6]{%
+  \Needspace{4\baselineskip}%
+  \par\medskip\noindent\textbf{#1.}\ #2\par\nopagebreak
+  \noindent\begin{tabularx}{\linewidth}{@{\hspace{1.5em}}*{4}{>{\raggedright\arraybackslash}X}@{}}
+    (A)~#3 & (B)~#4 & (C)~#5 & (D)~#6
+  \end{tabularx}\par}
+
+\begin{document}
+
+\begin{center}
+  {\Huge\bfseries The Hope Science Academy}\\[3pt]
+  {\small Excellence is our standard not goal}\\[2pt]
+  {\small 247-E-1, (Opposite LDA School) Johar Town, Lahore. PH: 0300-8194789, 0322-4157001}
+\end{center}
+
+\medskip
+\noindent
+\begin{tabularx}{\linewidth}{|X|X|X|X|}
+\hline
+\textbf{Student Name:} & \textbf{Roll Num:} & \textbf{Class:} 12th & \textbf{Paper Code:} \\ \hline
+\textbf{Subject Name:} Statistics & \textbf{Time Allowed:} & \textbf{Total Marks:} 500 & \textbf{Exam Date:} 02-Nov-2026 \\ \hline
+\multicolumn{4}{|l|}{\textbf{Exam Syllabus:} FULL BOOK} \\ \hline
+\end{tabularx}
+
+\bigskip
+\noindent\textbf{Q1. Choose the correct answer.}\hfill\textbf{1$\times$500=500}
+
+\mcq{1}{For a normal distribution with $\mu=55$ and $\sigma=10$, how much area will be found under the curve to the right of X=55:}{1.0}{0.68}{0.5}{0.32}
+\mcq{2}{Suppose you are using a normal distribution to approximate a binomial distribution with $\mu=5,\ \sigma=2$ and wish to determine the probability of getting more than seven successes. From the table of area under the normal curve, you would determine that z is greater tha:}{0}{0.5}{0.75}{1.0}
+\mcq{3}{Which of the following normal curves looks like the curve for $\mu=10,\ \sigma=5$:}{Curve for $\mu=10,\ \sigma=10$}{Curve for $\mu=20,\ \sigma=20$}{Curve for $\mu=20,\ \sigma=5$}{Curve for $\mu=12,\ \sigma=3$}
+\mcq{4}{In a normal distribution $N(\mu,\sigma^{2})$, $\mu_{4}$ is equal to:}{$\sigma^{4}$}{$3\sigma^{4}$}{$\dfrac{3\sigma^{4}}{4}$}{$\dfrac{\sigma^{4}}{2}$}
+\mcq{5}{In a normal distribution $N(\mu,\sigma^{2})$, mean deviation is equal to:}{$0.5\sigma$}{$0.6745\sigma$}{$0.7979\sigma$}{$1.5\sigma$}
+\mcq{6}{In a normal distribution $N(\mu,\sigma^{2})$, what perecentage of the area is contained with the limits $\mu\pm2\sigma$:}{99.73\%}{95.45\%}{68.27\%}{95\%}
+\mcq{7}{In a standard normal distribution, $Q_{1}$ is equal to:}{0.7979}{0.6745}{-0.6745}{-0.7979}
+\mcq{8}{In a standard normal distribution, $Q_{3}$ is equal to:}{0.7979}{0.6745}{-0.6745}{-0.7979}
+\mcq{9}{If Z is N(0, 1), then $P(-1\leq Z\leq1.96)$ is equal to:}{0.9545}{0.95}{0.99}{0.9973}
+\mcq{10}{If Z is N(0, 1), then $P(-2.58\leq Z\leq2.58)$ is equal to:}{0.9545}{0.95}{0.99}{0.9973}
+\mcq{11}{If Z is N(0, 1), then $P(-2.33\leq Z\leq2.33)$ is equal to:}{0.99}{0.98}{0.50}{0.90}
+\mcq{12}{In a normal distribution, the value of $\beta_{1}$ and $\beta_{2}$ are respectively:}{0 \& 3}{3 \& 0}{0 \& 1}{1 \& 3}
+\mcq{13}{In a N(0, 1), $\mu_{4}$ is equal to:}{1}{3}{$\dfrac{3}{4}$}{$\dfrac{1}{2}$}
+\mcq{14}{In a $N(\mu,\sigma^{2})$, $\beta_{2}$ is equal to:}{$3\sigma^{4}$}{3}{$\sigma^{4/2}$}{$3\sigma^{4/4}$}
+\mcq{15}{In a normal distribution $N(\mu,\sigma^{2})$, $95\%$ of the area lies between the limits:}{$\mu\pm2\sigma$}{$\mu\pm1.96\sigma$}{$\mu\pm1.645\sigma$}{$\mu\pm2.58\sigma$}
+\mcq{16}{In a normal distribution $N(\mu,\sigma^{2})$, $99\%$ of the area lies between the limits:}{$\mu\pm1.96\sigma$}{$\mu\pm2.58\sigma$}{$\mu\pm3\sigma$}{$\mu\pm2.33\sigma$}
+\mcq{17}{If Z is N(0, 1) then $P(-2\leq Z\leq2)$ is equal to:}{0.95}{0.99}{0.9545}{0.98}
+\mcq{18}{In a normal distribution $N(\mu,\sigma^{2})$, the quartile deviation is equal to:}{$0.7979\sigma$}{$0.6745\sigma$}{$0.5\sigma$}{$0.75\sigma$}
+\mcq{19}{The points of inflection of the normal curve with mean $\mu$ and variance $\sigma^{2}$ lie at:}{$\mu-\sigma$ and $\mu+\sigma$}{$\mu-2\sigma$ and $\mu+2\sigma$}{$\mu-3\sigma$ and $\mu+3\sigma$}{None of these}
+\mcq{20}{The points of inflection of the normal curve with mean 0 and variance 1 lie at:}{-1 and -1}{0 and 1}{-1 and 0}{-2 and 2}
+\mcq{21}{Which of the following is true for the normal curve:}{Bell - shaped}{Uni-modal}{Symmetrical}{All of these}
+\mcq{22}{Which of the following statement is true for the normal curve:}{A chnage in standard deviation will alter the shape of the normal curve}{A change in mean will alter the place of the normal curve}{A change in mean as well as standard deviation will alter the shape of the normal curve}{All of these}
+\mcq{23}{The normal distribution may be used to approximate the binomial distribution when:}{The number of trialsnis large}{The probability of successpis close to 1/2}{The probability of successpis close to 0 or 1}{All of these}
+\mcq{24}{In a normal distribution $N(\mu,\sigma^{2})$, $Q_{1}$ is equal to:}{$\mu+0.6745\sigma$}{$\mu-0.7979\sigma$}{$\mu-0.6745\sigma$}{$\mu-0.75\sigma$}
+\mcq{25}{In a normal distribution $N(\mu,\sigma^{2})$, $Q_{3}$ is equal to:}{$\mu+0.6745\sigma$}{$\mu+0.7979\sigma$}{$\mu-0.6745\sigma$}{$\mu+0.75\sigma$}
+\mcq{26}{Normal distribution is:}{Uni-modal}{Bi-modal}{Tri-modal}{Multi-modal}
+\mcq{27}{Normal distribution is concerned with:}{Continuous variable}{Discrete variable}{Fixed variable}{Random variable}
+\mcq{28}{The range/limits of the normal distribution are:}{$0\ to\ \infty$}{$-\infty\ to\ \infty$}{$-\infty\ to\ 0$}{0 to 1}
+\mcq{29}{The shape of the normal curve depends upon the value of:}{$\mu$}{$\sigma$}{M.D.}{Q.D.}
+\mcq{30}{The coefficient of skewness of a normal distribution is:}{Zero}{Positive}{Negative}{Both positive and negative}
+\mcq{31}{In a normal curve, the ordinate is highest at:}{Mean}{Median}{Mode}{All of these}
+\mcq{32}{The relationship between mean deviation (M.D.) and standard deviation (S.D. of the normal distribution:}{MD = SD}{MD < SD}{MD > SD}{None}
+\mcq{33}{The relation between Standard Deviation (SD) and Quartile Deviation (QD) of a normal distribution is:}{S.D. = Q.D.}{SD < Q.D.}{SD > QD}{None}
+\mcq{34}{In normal distribution the Mean Deviation (M.D.) and Quartile Deviation (Q.D.) has the following relation:}{M.D. = Q.D.}{M.D. < Q.D.}{M.D. > Q.D.}{None}
+\mcq{35}{For the standardized normal variable $P(0\leq z\leq1)=$:}{0.3415}{.47725}{.49767}{0.33725}
+\mcq{36}{In a normal distribution $\mu=10$ and $\sigma^{2}=25$. The mode is:}{5}{10}{25}{100}
+\mcq{37}{In a normal distribution $\mu_{3}$ is always:}{< 0}{> 0}{= 3}{= 0}
+\mcq{38}{The symmetry of the normal distribution about its mean indicates that:}{The distribution is bell shaped}{The area under the curve on the both sides of the mean is equal}{The two tails extend indefinitely on either sides of the mean}{All of these}
+\mcq{39}{Total area under the normal curve is:}{1}{< 1}{> 1}{None of these}
+\mcq{40}{In a standardized normal distribution mean is:}{1}{0}{$\mu$}{$\pi$}
+\mcq{41}{If $Z\sim N(0,1)$, then C.V. = :}{0}{1}{0.7979}{None}
+\mcq{42}{Normal distribution has parameters:}{$\mu$}{$\sigma$}{$\sigma^{2}$}{$\mu,\ \sigma^{2}$}
+\mcq{43}{The lower and upper quartiles of normal distribution are equidistant from its:}{Variance}{Standard deviation}{Mean}{None}
+\mcq{44}{The maximum ordinate of normal distribution at $x=u$ is:}{Zero}{$\dfrac{1}{\sigma\sqrt{2\pi}}$}{$\dfrac{1}{\sqrt{2\pi}}$}{$\dfrac{1}{\sqrt{2\pi\sigma}}$}
+\mcq{45}{In normal distribution mean, median and mode are:}{Not equal}{Positive}{Equal}{None}
+\mcq{46}{In normal distribution all odd order moments are equal to:}{One}{Three}{Zero}{Additive}
+\mcq{47}{The normal curve is called:}{Leptokurtic}{Platykurtic}{Mesokurtic}{Skewed}
+\mcq{48}{The semi-inter quartile range in the normal distribution is given by:}{$0.7979\sigma$}{$0.329\sigma$}{$314\sigma$}{$0.6745\sigma$}
+\mcq{49}{In a standardized normal distribution variance is:}{1}{0}{$\pi$}{$\sigma^{2}$}
+\mcq{50}{Normal distribution is a limiting from of:}{Hypergeometric distribution}{F-distribution}{Binomial distribution}{x$^{2}$-distribution}
+\mcq{51}{The area outside the rang of $(x=\mu\pm\sigma)$ of normal curve is approximately equal to:}{0.16}{0.05}{0.32}{1}
+\mcq{52}{For the standard normal distribution P(z > mean) is:}{Less than 0.5}{More than 0.5}{Equal to 0.5}{Equal to one}
+\mcq{53}{$\displaystyle\int_{-\infty}^{+\infty}f(x)\,dx$ is always equal to:}{Zero}{One}{E}{f}
+\mcq{54}{In a normal distribution, mean deviation is approximately:}{$\dfrac{2}{3}$}{$\dfrac{2}{3}\sigma$}{$\dfrac{4}{5}$}{$\dfrac{4}{5}\sigma$}
+\mcq{55}{Normal curve always \_\_\_\_\_:}{Stays above X-axis}{Touches X-axis}{Goes below X-axis}{None}
+\mcq{56}{The two points containing the middle 68.27\% area under a normal curve are:}{$\mu\pm20$}{$\mu\pm\sigma$}{$\mu\pm3\sigma$}{None}
+\mcq{57}{The lowest point relative to the rest of the particular cycle is:}{Trough}{Peak}{Expansion}{None}
+\mcq{58}{The normal distribution is:}{Continuous}{Discrete}{Positively skewed}{Negatively skewed}
+\mcq{59}{In case of symmetrical distribution:}{$\mu_{1}=\mu_{2}$}{$\mu_{3}=\mu_{4}$}{$\beta_{1}=\beta_{2}$}{Mean=Median=Mode}
+\mcq{60}{The number of parameters of normal distribution is:}{One}{Two}{Three}{Four}
+\mcq{61}{Which of the following is a method of selecting samples from a population:}{Judgmentsampling}{Random sampling}{Probability sampling}{All of these}
+\mcq{62}{Choose the pair of symbols that best completes this sentence \_\_\_\_\_\_ is a parameter, where as \_\_\_\_\_\_ is a statistic:}{$N,\ \mu$}{$\sigma,\ S$}{N, n}{$n,\ \sigma$}
+\mcq{63}{In random sampling, we can describe mathematically how objective our estimates are because:}{Any population element has the known chance of being included in the sample}{Every sample has always an equal chance of being selected}{All the samples are of exactly the same size and can be counted}{Both}
+\mcq{64}{Suppose you are performing stratified random sampling on a particular population and have divided it into strata of different sizes. How can you now make your sample selection:}{Select at random an equal number of elements from each stratum}{Draw equal numbers of elements from each stratum and weight the results}{Draw numbers of elements from each stratum proportional to their weights in the population}{Both}
+\mcq{65}{In which of the following situations would $\sigma_{\overline{X}}=\sigma/\sqrt{n}$ be the correct formula to use for computing $\sigma_{\overline{X}}$:}{Sampling is from an infinite population}{Sampling is from a finite population with replacement}{Sampling is from a finite population without replacement}{Both}
+\mcq{66}{Suppose that a population has s.d. $\sigma=5$. What is the s.d. of the sampling distribution of mean for samples of size n = 25:}{5}{1}{25}{0.2}
+\mcq{67}{Suppose that a population has mean $\mu=24$. What is the mean of the sampling distribution of the mean for samples of size n = 25:}{24}{2}{4.8}{25}
+\mcq{68}{The central limit theorem assures us that the sampling distribution of the mean:}{Is always normal}{Is always normal for large sample sizes}{Approaches normality as sample size increases}{Appears normal only when N is greater than 1000}
+\mcq{69}{Suppose that, for a certain population, $\sigma_{\overline{X}}$ is calculated as 20 when samples of size 25 are taken. What must be the value of $\sigma$ for this infinite population:}{1000}{500}{100}{4}
+\mcq{70}{A border petrol check point that stops every tenth van is using:}{Simple random sampling}{Systematic sampling}{Stratified sampling}{Complete enumeration}
+\mcq{71}{A part of population is called:}{Parameter}{Statistic}{Sampling}{Sample}
+\mcq{72}{The probability distribution of a statistic is called the:}{Frequency distribution of a statistic}{Sampling distribution of a statistic}{Sampling of a statistic}{Population distribution of a statistic}
+\mcq{73}{A sample is a part of the:}{Sampling}{Population}{Unit}{Error}
+\mcq{74}{If $\sigma^{2}=5$ and n = 2 then $\sigma^{2}_{\overline{X}}$ is:}{2}{2.5}{3}{5}
+\mcq{75}{The possible sample in without replacement sampling is:}{N - n}{N + n}{$^{N}C_{n}$}{N$^{n}$}
+\mcq{76}{Which of the following type of population is subdivided into stratified Random Sampling:}{Homogeneous}{Heterogeneous}{Hexogeneous}{None of these}
+\mcq{77}{If the sampling distribution of $\overline{X}$ is normal, the interval $\mu_{\overline{x}}\pm2\sigma_{\overline{x}}$ includes:}{68.27\% of the sample means}{95\% of the sample means}{95.45\% of the sample means}{90\% of the sample means}
+\mcq{78}{If the sampling distribution of $\overline{X}$ is normal, the interval $\mu_{\overline{x}}\pm3\sigma_{\overline{x}}$ includes:}{99\% of the sample means}{99.73 of the sample means}{98\% of the sample means}{95\% of the sample means}
+\mcq{79}{Standard error of the mean is the standard deviation of the:}{Population}{Sample}{Sampling distribution of means}{None of these}
+\mcq{80}{A value calculated from the sample is called a:}{Parameter}{Statistic}{Mean}{Proportion}
+\mcq{81}{A value calculated from the population is called a:}{Statistic}{Mean}{Parameter}{Proportion}
+\mcq{82}{If samples of size n are drawn with replacement from a population of size N with mean $\mu$ and variance $\sigma^{2}$, the standard error of the sample mean $\overline{X}$ is:}{$\dfrac{\sigma^{2}}{n}$}{$\dfrac{\sigma}{\sqrt{n}}$}{$\dfrac{\sigma^{2}}{n}\left(\dfrac{N-n}{N-1}\right)$}{$\dfrac{\sigma}{\sqrt{n}}\sqrt{\dfrac{N-n}{N-1}}$}
+\mcq{83}{If samples of size n are drawn without replacement from a population of size N with mean $\mu$ and variance $\sigma^{2}$, the standard error of the sample mean $\overline{X}$ is:}{$\dfrac{\sigma^{2}}{n}$}{$\dfrac{\sigma}{\sqrt{n}}$}{$\dfrac{\sigma^{2}}{n}\left(\dfrac{N-n}{N-1}\right)$}{$\dfrac{\sigma}{\sqrt{n}}\sqrt{\dfrac{N-n}{N-1}}$}
+\mcq{84}{The finite population correction factor is:}{$\dfrac{n}{N}$}{$\dfrac{N}{n}$}{$\dfrac{N-n}{N-1}$}{$\sqrt{\dfrac{N-n}{N-1}}$}
+\mcq{85}{The standard error increase when the sample size is:}{Increased}{Decreased}{Fixed}{Small}
+\mcq{86}{The standard error of a sample mean of size by using sampling with replacement:}{$\dfrac{\sigma}{\sqrt{4}}$}{$\dfrac{\sigma^{2}}{2}$}{$\dfrac{\sigma}{2}$}{Both}
+\mcq{87}{When sampling is done with or without replacement then $\mu_{\overline{x}_{2}-\overline{x}_{1}}$ is equal to:}{$\mu_{1}-\mu_{2}$}{$\mu_{2}-\mu_{1}$}{$\mu_{2}+\mu_{1}$}{$\mu_{1}+\mu_{2}$}
+\mcq{88}{The selection of a fast bowler for the president eleven, will follow the technique of:}{random sampling}{systematic sampling}{purposive sampling}{cluster sampling}
+\mcq{89}{If N is the size of the population and n is the size of the sample, then sampling fraction is:}{$\dfrac{n}{N}$}{sample size + population size}{$\dfrac{N}{n}$}{a and b but not c}
+\mcq{90}{In sampling without replacement the relation holds if:}{n < N}{$n\leq N$}{n > N}{$n\geq N$}
+\mcq{91}{In sampling with replacement, possible samples can be performed if:}{n < N}{n > N}{n - N}{All possible}
+\mcq{92}{Non-sampling errors can be reduced by:}{increasing the sample size}{decreasing the sample size}{increasing population size}{decreasing population size}
+\mcq{93}{The difference between a statistic and parameter is called:}{sampling error}{standard error}{systematic error}{non-sampling error}
+\mcq{94}{The sum of the frequencies of the frequency distribution of a statistic is equal to:}{Population size}{sample size}{Possible samples}{one}
+\mcq{95}{The number of possible samples drawn by using with replacement as compared to without replacement would be:}{more}{less}{equal}{not definite}
+\mcq{96}{The standard error of the sample mean for $\sigma^{2}=16$ n=4 is:}{1}{2}{4}{8}
+\mcq{97}{In sampling with replacement a sampling unit can be selected:}{Only once}{Only twice}{Less than once}{More than once}
+\mcq{98}{A complete list of elements in a population is called:}{Population}{Sampling design}{Sampling frame}{Sampling unit}
+\mcq{99}{In sampling without replacement a sampling unit can be selected:}{Only one}{Twice}{Less than one}{More than one}
+\mcq{100}{The errors which arise due to processing of data and faulty sampling frame is called:}{Sampling error}{Non-sampling error}{Standard error}{Random error}
+\mcq{101}{The precision of proportion as an estimator of population proportion is worse when it is:}{0.25}{0.50}{0.75}{None of these}
+\mcq{102}{If $\overline{X}=85,\ \sigma=8,\ n=64$, then standard error of the sample mean is equal to:}{1}{1.96}{2.576}{None of these}
+\mcq{103}{A complete list of sampling units is called:}{Sampling design}{Sample}{Population}{Sampling frame}
+\mcq{104}{The random digit from 0 to 9 are called:}{Triple digit}{Single digit}{Double digit}{All}
+\mcq{105}{$\dfrac{\Sigma X}{N}$ is equal to:}{$\overline{X}$}{$\sigma$}{$\sigma^{2}$}{$\mu$}
+\mcq{106}{A survey conducted by a sampling design is called:}{Population survey}{Sample survey}{Systematic survey}{Pakistan survey}
+\mcq{107}{The parameter are the numeric values of:}{Population}{Sample}{Strata}{None of these}
+\mcq{108}{The sampling errors are positive if the parameter is:}{Over estimated}{Not estimated}{Estimated}{Under estimated}
+\mcq{109}{A specific value calculated by using the sample data is called:}{Estimation}{Estimator}{Estimate}{Bias}
+\mcq{110}{The simple random sampling is:}{Non probability sampling}{Probability sampling}{Systematic sampling}{Quota sampling}
+\mcq{111}{The population about which some information is required is called:}{Finite population}{Infinite population}{Target population}{Sampled population}
+\mcq{112}{Quota sampling belongs to:}{Probability sampling}{Random sampling}{Non-random sampling}{Systematic sampling}
+\mcq{113}{The term sample space is used for:}{All possible outcomes}{Sample}{Probability}{Sample design}
+\mcq{114}{A sample which is free from bias is called:}{Biased}{Unbiased}{Purposive}{None of these}
+\mcq{115}{$\Sigma\,\overline{X}\,P(\overline{X})$ is equal to:}{n}{$\mu_{p}$}{$\mu_{\overline{x}}$}{N}
+\mcq{116}{Bias is \_\_\_\_\_\_\_:}{Decreasing}{De-cumulative}{Cumulative}{None}
+\mcq{117}{The collection of information from a part of population is called:}{Sample survey}{Census}{Population}{None}
+\mcq{118}{The process of dividing a heterogeneous population into homogeneous subgroups is called:}{Stratification}{Sampling}{Ranking}{None}
+\mcq{119}{Random sampling is also called:}{Probability sampling}{Non probability sampling}{Sampling error}{Random error}
+\mcq{120}{If $E(\widehat{\theta})=\theta$, then $\widehat{\theta}$ is:}{Biased}{Unbiased}{Positively biased}{None of these}
+\mcq{121}{A statistic used to estimate a population parameter is a:}{Point estimator}{Point estimate}{Interval estimator}{Interval estimate}
+\mcq{122}{A sample of size n is called a small sample if n is:}{Less than 30}{Greater than or equal to 30}{Equal to 30}{Less than or equal to 30}
+\mcq{123}{We can use the normal distribution to represent the sampling distribution of mean when the sample n is:}{More than 10}{Less than 50}{More than 5}{None of these}
+\mcq{124}{Confidence coefficient or level of confidence is denoted by:}{$1-\beta$}{$1-\alpha$}{$\alpha$}{$\beta$}
+\mcq{125}{A single number used to estimate an unknown population parameter is:}{An interval estimator}{A point estimator}{An unbiased estimator}{A biased estimator}
+\mcq{126}{A range of values used to estimate an unknown population parameter is:}{A point estimator}{An interval estimator}{An unbiased estimator}{A biased estimator}
+\mcq{127}{If the observations are paired and the number of pairs is n, then the number of degrees of freedom is equal to:}{n}{n - 1}{2n}{2n - 1}
+\mcq{128}{In the two-sample problem, if samples of sizes $n_{1}$ and $n_{2}$ ($n_{1}=n_{2}=n$) are independent, then the number of degrees of freedom is:}{n - 1}{n}{2n - 1}{2n - 2}
+\mcq{129}{When $s^{2}=\Sigma(X-\overline{X})^{2}/(n-1)$, then $E(s^{2})$ is equal to:}{$\sigma^{2}/(n-1)$}{$\sigma^{2}/n$}{$\sigma^{2}$}{None of these}
+\mcq{130}{A sample of size n is called a large sample if n is:}{Less than 30}{Equal to 30}{Greater than or equal to 30}{None of these}
+\mcq{131}{For $\alpha=0.05$, the critical value of $z_{0.025}$ is equal to:}{1.96}{2.58}{1.645}{2.33}
+\mcq{132}{For $\alpha=0.02$, the critical value for two tailed test is equal to:}{1.96}{2.33}{1.28}{2.58}
+\mcq{133}{If population proportion (p) is unknown, the standard error of the sample proportion (P) can be estimated by the formula:}{$\sqrt{np(1-p)}$}{$\sqrt{nP(1-P)}$}{$\sqrt{p(1-p)/n}$}{$\sqrt{P(1-P)/n}$}
+\mcq{134}{Suppose that sample mean $\overline{X}=100$ and the upper limit of a 90\% confidence interval for $\mu$ is 112. What is the lower limit of this confidence interval:}{88}{92}{100}{None of these}
+\mcq{135}{A statistician says, "I am 95\% confident that the population mean is between 106 and 122". What does he really mean:}{The probability is 0.95 that $\mu$ is between 106 and 122}{The probability is 0.95 that $\mu=114$, the midpoint of the interval}{Ninety five percent of the intervals calculated from samples of this size will contain the population mean}{All of these}
+\mcq{136}{Which of the following is a necessary condition for using a $t$-distribution table:}{n is small}{s is known but $\sigma$ is not}{The population is infinite}{Both}
+\mcq{137}{The average height of 25 students of a college is known to be 66 inches. In constructing a 95 percent confidence interval for the average height of all students of the college, we would use:}{The normal distribution with 24 degrees of freedom}{The $t$ distribution with 24 degrees of freedom}{The $t$ distribution with 65 degrees of freedom}{The $t$ distribution with 25 degrees of freedom}
+\mcq{138}{A specific value calculated from sample is called:}{Estimator}{Estimate}{Estimation}{Bias}
+\mcq{139}{The following statistics are unbiased estimators:}{$\overline{x}$}{$\widehat{p}$}{$s^{2}$ with n - 1 as divisor}{All a, b and c}
+\mcq{140}{For known population standard deviation, the confidence interval for the population mean ($\mu$) is based on:}{Binomial distribution}{Hypergeometric distribution}{$t$-distribution}{Normal distribution}
+\mcq{141}{For small sample size and unknown population standard deviation the confidence interval for the population mean ($\mu$) is based on:}{the normal distribution}{the "$t$" distribution}{the binomial distribution}{the hypergeometric distribution}
+\mcq{142}{A confidence interval will have more range if:}{$\alpha$ is increased}{$\alpha$ is decreased}{$\sigma$ known}{$\sigma$ unknown}
+\mcq{143}{The 99\% confidence limits for the population mean $\mu$ are 70 kg to 90 kg then the sample mean ($\overline{X}$) would be:}{80 kg}{70 kg}{90 kg}{more than 80 kg}
+\mcq{144}{The 95\% confidence interval for the population proportion p is 40\% to 60\%, the value of the sample proportion ($\widehat{p}$) is:}{40\%}{60\%}{50\%}{outside the given range}
+\mcq{145}{For a small sample size, with known $\sigma$ the 99\% confidence interval for the population mean $\mu$ will be:}{$\overline{x}\pm t_{d/2}\dfrac{s}{\sqrt{n}}$}{$\overline{x}\pm\dfrac{20.01}{2}\dfrac{\sigma}{\sqrt{n}}$}{$\overline{x}\pm20.005\dfrac{\sigma}{\sqrt{n}}$}{both b and c and not "a"}
+\mcq{146}{Interval estimate is associated with:}{Probability}{No probability}{Range of values}{None}
+\mcq{147}{Statistical inference can be divided into \_\_\_\_\_ approaches:}{Four}{Three}{Two}{None}
+\mcq{148}{$E(\widehat{\theta})-\theta=$:}{Sampling error}{Non-sampling error}{Bias}{Standard error}
+\mcq{149}{Unbiased estimator is necessarily:}{Consistent}{Not consistent}{Coefficient}{None of these}
+\mcq{150}{The point estimator of $\mu$ is:}{$\overline{X}$}{X}{$\widehat{X}$}{$\widetilde{X}$}
+\mcq{151}{A function/rule or formula that is used estimate a parameter is called:}{Estimate}{Estimator}{Estimation}{Bias}
+\mcq{152}{How many types of estimation are:}{One}{Three}{Two}{None}
+\mcq{153}{For unbiasedness:}{$E(\overline{X})\neq\mu$}{$E(\overline{X})+\mu$}{$E(\overline{X})=\mu$}{$E(\overline{X})-\mu$}
+\mcq{154}{If $\Sigma X=18,\ N=3$, then $\mu$ is:}{6}{9}{3}{10}
+\mcq{155}{The width of a confidence interval is decreased if $(1-\alpha)$ is:}{Decreased}{Increased}{Equal}{Unchanged}
+\mcq{156}{By decreasing 'n' the length of the confidence interval for $\mu$:}{Decreases}{No effect}{Increases}{None}
+\mcq{157}{A value of an estimates is called:}{Estimation}{Estimate}{Variable}{Constant}
+\mcq{158}{Suppose we wish to test whether a population mean is significantly larger or smaller than 10. We take a sample and find $\overline{X}=9$. Our alternative hypothesis is:}{$\mu<10$}{$\mu>10$}{$\mu\neq10$}{None of these}
+\mcq{159}{For a particular hypothesis test, $\alpha=0.05$ and $\beta=0.10$. The power of the test is equal to:}{0.14}{0.90}{0.95}{0.25}
+\mcq{160}{When the null hypothesis is $H_{0}:\mu=42$, the alternative hypothesis for a "less than" test of hypothesis is:}{$H_{1}:\mu\geq42$}{$H_{1}:\mu<42$}{$H_{1}:\mu=40$}{$H_{1}:\mu\neq40$}
+\mcq{161}{For one-tailed test, when $\alpha=0.05$ the value of z is equal to:}{$\pm1.645$}{$\pm1.96$}{2.33}{2.58}
+\mcq{162}{A judge acquits an innocent person. It is an example of:}{Type I error}{Type II error}{Correct decision}{None of these}
+\mcq{163}{A good scheme of education is rejected by Education Department. It is an example of:}{Type I error}{Type II error}{Correct decision}{None of these}
+\mcq{164}{A judge acquits a thief on benefit of doubt. It is an example of:}{Type I error}{Type II error}{Correct decision}{None of these}
+\mcq{165}{'A deserving player is not selected in the team'. It is an example of:}{Type I error}{Type II error}{Correct decision}{None of these}
+\mcq{166}{'A failing student is passed by an examiner'. It is an example of:}{Type I error}{Type II error}{Correct decision}{None of these}
+\mcq{167}{'Rejecting H$_{0}$ when H$_{0}$ is false' is a:}{Type I error}{Type II error}{Correct decision}{None of these}
+\mcq{168}{Accepting H$_{0}$ when H$_{0}$ is true' is a:}{Type I error}{Type II error}{Correct decision}{None of these}
+\mcq{169}{P(Reject H$_{0}$/H$_{0}$ is true) is denoted by:}{$1-\alpha$}{$\alpha$}{$1+\alpha$}{$\alpha-1$}
+\mcq{170}{'Accepting H$_{0}$ and H$_{1}$ is true' is a:}{Type I error}{Type II error}{Correct decision}{None of these}
+\mcq{171}{The critical region for $H_{1}:\mu<\mu_{0}$ when $\alpha=0.05$ is:}{$z>z_{0.05}$}{$|z|>z_{0.10}$}{$z<-z_{0.05}$}{$|z|>z_{0.05}$}
+\mcq{172}{The critical region for $H_{1}:\mu\neq\mu_{0}$ when $\alpha=0.10$ is:}{$|z|<z_{0.05}$}{$>z_{0.10}$}{$z<-z_{0.10}$}{$z<-z_{0.05}$}
+\mcq{173}{For $\alpha=0.01$, the critical values of z for two-tailed test are equal to:}{-2.58 and 2.58}{-2.33 and 2.33}{-1.645 and 1.645}{-1.96 and 1.98}
+\mcq{174}{For $\alpha=0.05$, the critical values of z for one-tailed test are:}{-1.645 or 1.645}{-1.96 or 1.96}{-1.28 or 1.28}{-2.58 or 2.58}
+\mcq{175}{For $\alpha=0.05$, the critical values of z for two-tailed test are equal to:}{-1.96 and 1.96}{-2.33 and 2.33}{-1.645 and 1.645}{-1.28 and 1.28}
+\mcq{176}{If H$_{1}$ is given by $\theta<\theta_{0}$, we will use test:}{Two sided}{One sided}{Partially two sided}{None}
+\mcq{177}{If our null and alternative hypotheses are respectively $H_{0}:\mu=16$ and $H_{1}:\mu<16$, it is appropriate to use a:}{Right-tailed test}{Left-tailed test}{Two-tailed test}{None of these}
+\mcq{178}{If our null and alternative hypotheses are respectively $H_{0}:\mu=16$ and $H_{1}:\mu\neq16$, it is appropriate to use a:}{Right-tailed test}{Left-tailed test}{Two-tailed test}{None of these}
+\mcq{179}{If our null and alternative hypotheses are respectively $H_{0}:\mu=16$ and $H_{1}:\mu>16$, it is appropriate to use a:}{Right-tailed test}{Left-tailed test}{Two-tailed test}{None of these}
+\mcq{180}{With a lower significance level, the probability of rejecting a null hypothesis that is actually true:}{Decreases}{Increases}{Remains the same}{All of these}
+\mcq{181}{If we say $\alpha=0.05$ for a particular hypothesis test, we are saying that:}{Five percent is our minimum standard for acceptable probability}{Five percent is the risk we take of rejecting a hypothesis that is true}{Five percent is the risk we take of accepting a hypothesis that is false}{Both}
+\mcq{182}{To test hypotheses about the mean of a normal population with a known standard deviation, we can compare:}{The observed value of $\overline{X}$ with the critical value of $\overline{X}$}{The observed value of $\overline{X}$ with the critical value of z}{The observed value of z with the critical value of z}{Either}
+\mcq{183}{The hypothesis which is to be tested for possible rejection is:}{Simple}{Composite}{Null}{Alternative}
+\mcq{184}{Two tailed test is used if:}{$H_{1}\ \mu<\mu_{0}$}{$H_{1}\ \mu>\mu_{0}$}{$H_{1}\ \mu\neq\mu_{0}$}{None}
+\mcq{185}{$1-\alpha$ is known as:}{Level of confidence}{Level of significance}{Confidence coefficients}{Both}
+\mcq{186}{The alternative hypothesis is also called:}{Null hypothesis}{Simple hypothesis}{Composite hypothesis}{Research hypothesis}
+\mcq{187}{The hypothesis that the average marks of a Ravian's is $\mu\geq75\%$ is a:}{Simple hypothesis}{Composite hypothesis}{Alternative hypothesis}{Difficult to tell}
+\mcq{188}{If H$_{0}$ is false and we reject H$_{0}$ it is called:}{Type I error}{Type II error}{Both Type I and Type II error}{Correct decision}
+\mcq{189}{The choice of one tailed test and two tailed test depends upon:}{Alternative hypothesis}{Null hypothesis}{Simple hypothesis}{Composite hypothese}
+\mcq{190}{The probability associated with committing Type I error is:}{$\beta$}{$1-\beta$}{$1-\alpha$}{$\alpha$}
+\mcq{191}{In hypothesis testing $\alpha+\beta$ always equal to:}{1}{zero}{005}{no relationship}
+\mcq{192}{The hypothesis that the average age of the student appearing for inter examination is less than or equal to 18 years is a:}{Null hypothesis}{Alternative hypothesis}{True hypothesis}{False hypothesis}
+\mcq{193}{The alternative hypothesis always contains the sign of:}{Equality}{Inequality}{Ratio}{Proportion}
+\mcq{194}{A misfit person is not selected for the job:}{No error}{Type-I-error}{Type-II-error}{Sampling error}
+\mcq{195}{Critical region is region of:}{Rejection}{Acceptance}{Indecision}{None of these}
+\mcq{196}{The probability of type II error is:}{$\alpha$}{$\beta$}{$1-\alpha$}{None of these}
+\mcq{197}{The probability of type II error is:}{$\alpha$}{$\beta$}{$1-\alpha$}{None of these}
+\mcq{198}{When $H_{1}:\neq Q_{0}$, then H$_{0}$ is:}{Q < Q$_{0}$}{Q > Q$_{0}$}{Q > Q$_{1}$}{Q = Q$_{0}$}
+\mcq{199}{The test statistic $t=\dfrac{\overline{x}-u}{s/\sqrt{n}}$ has d.f. =:}{n}{n - 1}{n - 2}{n$_{1}$+ n$_{2}$- 2}
+\mcq{200}{Hypothesis which completely specifies the population distribution, is called:}{Hypothesis}{Alternative Hypothesis}{Simple Hypothesis}{Composite Hypothesis}
+\mcq{201}{A rule or formula that provides a basis for testing a Null Hypothesis:}{Population parameter}{Test statistics}{Confidence coefficient}{Size of the test}
+\mcq{202}{$\dfrac{\overline{X}-u}{\sigma/\sqrt{n}}$ is equal to:}{t}{X}{X$^{2}$}{Z}
+\mcq{203}{For unpaired observations the degree of freedom are:}{n - 1}{n}{n$_{1}$+ n$_{2}$- 2}{n + 1}
+\mcq{204}{If a hypothesis does not completely specify the value of all parameters, then it is called:}{Composite hypothesis}{Null hypothesis}{Alternative hypothesis}{Simple hypothesis}
+\mcq{205}{An alternative hypothesis is also called:}{True hypothesis}{Null hypothesis}{False hypothesis}{Research hypothesis}
+\mcq{206}{Which of the following can be alternative hypothesis H$_{1}$:}{$\theta\leq\theta_{0}$}{$\theta\geq\theta_{0}$}{$\theta=\theta_{0}$}{$\theta\neq\theta_{0}$}
+\mcq{207}{If the magnitude of calculated value of "t" is less than the tabulated value of "t" and alternative hypothesis is two sides we should:}{Reject H$_{0}$}{Not reject H$_{0}$}{Reject H$_{1}$}{Accept H$_{1}$}
+\mcq{208}{The probability of rejecting null hypothesis when it is false is:}{Error}{Type I error}{Type II error}{Power of test}
+\mcq{209}{Power of the test is denoted by:}{$\alpha$}{$\beta$}{$1-\alpha$}{$1-\beta$}
+\mcq{210}{Which of the following is not composite hypothesis:}{$\mu\geq\mu_{0}$}{$\mu\leq\mu_{0}$}{$\mu=\mu_{0}$}{$\mu\neq\mu_{0}$}
+\mcq{211}{If $\mu\neq60$ then test is called:}{One tailed}{Two tailed}{A and B}{None}
+\mcq{212}{Suppose we estimate the weight of a student on the basis of his known height by using an estimating equation. Which of the following is true:}{Height is the independent variable}{Weight is the dependent variable}{The relationship between height and weight is inverse}{Both}
+\mcq{213}{If a = 4 and b = 2 for a particular estimating line and the independent variable has a value of 2, then the value of the dependent variable is:}{8}{10}{-1}{0}
+\mcq{214}{Suppose the estimating equation $Y'=5-2X$ has been calculated for a set of data (i) The Y-intercept of the line is (ii) The slope of the line is:}{-2}{2}{5}{0}
+\mcq{215}{Which of the following is true for the estimating equation $Y'=7-3X$:}{The slope of the line is negative}{The line represents an inverse relationship}{The intercept of the line is 3}{Both}
+\mcq{216}{If we plot the paired observations (X$_{i}$, Y$_{i}$) i = 1, 2, ..., n on a graph, the resulting set of points is called a:}{Frequency polygon}{Frequency histogram}{Scatter diagram}{Cumulative frequency polygon}
+\mcq{217}{The regression coefficients b and d in the respective regression lines $Y'=a+bX$ and $X'=c+dY$ are:}{Both positive}{Both negative}{One is negative and other positive}{Both}
+\mcq{218}{The dependent variable is also called the:}{Regressand}{Predicted variable}{Explained variable}{All of these}
+\mcq{219}{The independent variable is also called the:}{Regressor}{Predictor}{Explanatory variable}{All of these}
+\mcq{220}{The dependent variable is also called the:}{Regression variable}{Response variable}{Predicted variable}{Both}
+\mcq{221}{The independent variable is also called the:}{Regression variable}{Predictor}{Response variable}{Both}
+\mcq{222}{In regression problem, the independent and dependent variables are:}{Both fixed}{Both random}{Independent variable is fixed and dependent variable is random}{Dependent variable is fixed and independent variable is random}
+\mcq{223}{For the estimating equation to be a perfect estimator of the dependent variable, which of these would have to be true:}{All the data points are on the regression line}{The regression coefficient is positive}{The regression coefficient is negative}{The regression coefficient is zero}
+\mcq{224}{The slope of the regression line of Y on X is also called the:}{Regression coefficient of X on Y}{Regression coefficient of Y on X}{X - intercept}{Y - intercept}
+\mcq{225}{If a constant amount of change in the predicted variable is associated with a unit change in the predicting variable, the relation is said to be:}{Linear}{Non-linear}{Inverse}{None of these}
+\mcq{226}{In the regression line of Y on X:}{$\Sigma X=\Sigma\widehat{X}$}{$\Sigma Y=\Sigma\widehat{Y}$}{$\Sigma(Y-\widehat{Y})=zero$}{Both}
+\mcq{227}{In the regression equation of X on Y viz. X = c + dY, the following is always true:}{$\Sigma(X-\widehat{X})=zero$}{$\Sigma X=\Sigma\widehat{X}$}{$\overline{X}=\overline{\widehat{X}}$}{a, b and c are true}
+\mcq{228}{The sum of the squares of the differences between actual and the corresponding values obtained from the fitted regression line is always:}{Zero}{Minimum}{Least}{b and c but not a}
+\mcq{229}{If $\Sigma(X-\overline{X})(Y-\overline{Y})$ is zero, the regression coefficient of Y on X will be:}{More than zero}{Less than zero}{Exactly zero}{None}
+\mcq{230}{In the regression equation Y = a + bX the constant "a" is called:}{X-intercept}{Y-intercept}{Dependent variable}{Independent variable}
+\mcq{231}{The regression equation always passes the through:}{[X, Y]}{$(\overline{X},\ \overline{Y})$}{$(\overline{X},\ Y)$}{$(X,\ \overline{Y})$}
+\mcq{232}{The graph showing the paired points of (X$_{i}$, Y$_{i}$) is called:}{Histogram}{Historigram}{Scattered diagram}{None}
+\mcq{233}{When byx is negative then bxy will be:}{Negative}{Positive}{Neither negative nor positive}{Zero}
+\mcq{234}{The two regression coefficients have always:}{Opposite sign}{Same signs}{Not definite}{No sign}
+\mcq{235}{The regression coefficient is independent of:}{Origin}{Scale}{Origin and scale}{None}
+\mcq{236}{The product of two regression coefficient will be:}{Positive}{Negative}{Both positive or negative}{Not definite}
+\mcq{237}{The formula for the regression coefficient of y on x is:}{$\dfrac{S_{xy}}{S_{x^{2}}}$}{$\dfrac{S_{xy}}{S_{y^{2}}}$}{$\dfrac{S_{xy}}{\sqrt{S_{y^{2}}}}$}{$\dfrac{S_{xy}}{\sqrt{S_{x^{2}}}}$}
+\mcq{238}{In regression $\Sigma(\widehat{Y})$ is equal to:}{Zero}{$\Sigma Y$}{a}{= bx}
+\mcq{239}{The term regression was used by:}{Newton}{Pearson}{Spearman}{Galton}
+\mcq{240}{Two lines of regression are perpendicular to each other when:}{r = 0}{$r=\dfrac{1}{3}$}{r = -1/2}{$r=\pm1$}
+\mcq{241}{If b$_{xy}$ is negative then b$_{yx}$ is:}{Negative}{Positive}{Zero}{None}
+\mcq{242}{In model $\widehat{y}=\alpha=Bx$, then $\alpha$ is called:}{Axis}{Intercept}{Slope}{All}
+\mcq{243}{The regression line of "Y on X" is Y = -5 + 2X. If X = 5 then value of dependent variable is:}{15}{5}{0}{10}
+\mcq{244}{In estimated regression line $\widehat{Y}=a+bX$, "b" is called:}{Slope}{Intercept}{Random error}{Regressor}
+\mcq{245}{If Y = 2 + 0.6X, then he slope of line is:}{2}{2.6}{0.6}{Zero}
+\mcq{246}{If Y = a + bX, which one is always true:}{$\Sigma(X-\widehat{X})=0$}{$\Sigma(X-\widehat{X})=\Sigma(Y-\widehat{Y})=0$}{$\Sigma(Y-\widehat{Y})=0$}{$\Sigma(Y-\widehat{Y})^{2}=0$}
+\mcq{247}{In regression equation y = 10 - 2X slope of the lien is:}{10}{-2}{2}{Unknown}
+\mcq{248}{$\Sigma(Y-\widehat{Y})^{2}$ is always:}{Least}{Maximum}{Negative}{Unknown}
+\mcq{249}{In the regression equation X = a + bY, X is called:}{Dependent variable}{Independent variable}{Qualitative variable}{Quantitative variable}
+\mcq{250}{The sum of squares of residuals is denoted by:}{e}{$\Sigma e$}{$\Sigma e^{2}$}{$\dfrac{\Sigma e^{2}}{n}$}
+\mcq{251}{In the regression $\widehat{y}=a+bx$, the y is called:}{Independent variable}{Dependent variable}{Fix variable}{Constant}
+\mcq{252}{The best fitting curve has sum of squares of residuals:}{Maximum}{Minimum}{Largest}{None}
+\mcq{253}{In simple regression equation the number of variable involved are:}{0}{1}{2}{3}
+\mcq{254}{In the least squares regression line y=a+bx, the slope is:}{b}{0}{X}{a}
+\mcq{255}{The value of r$^{2}$ for a particular situation is 0.49. What is the coefficient of correlation:}{0.49}{0.7}{0.07}{None of these}
+\mcq{256}{If the dependent variable increases and the independent variable increases in an estimating equation, the coefficient of correlation will be in the range:}{0 to -1}{0 to -0.05}{0 to -2}{None of these}
+\mcq{257}{The coefficient of correlation will have positive sign if:}{X increases, Y decreases}{X decreases, Y increases}{X increases, Y increases}{None of these}
+\mcq{258}{The coefficient of correlation between the variable height (in inches) and weight (in pounds) will be expressed:}{In pounds}{In inches}{Both in inches and pounds}{As a pure number}
+\mcq{259}{Which of the following statements is true about the correlation coefficient r:}{It is the mean of the two regression coefficients}{It is the G. M. of the two regressing coefficients}{It is the sum of the two regression coefficients}{It is the product of the two regression coefficients}
+\mcq{260}{If both regression coefficients are negative, then the correlation coefficients will be:}{Negative}{Positive}{Zero}{1}
+\mcq{261}{If all points (X, Y) in the scatter diagram lie near a line, the correlation coefficient is:}{Linear}{Inverse}{Nonlinear}{None of these}
+\mcq{262}{In the case of correlation, both variables X and Y are assumed to be:}{Fixed}{Unknown}{Known}{Random}
+\mcq{263}{The correlation coefficient r is independent of:}{Origin only}{Scale of measurement only}{Both origin and scale of measurement}{None of these}
+\mcq{264}{If the movements of the variables X and Y are in the opposite direction, the correlation between X and Y is said to be:}{Positive}{Negative}{Zero}{-1}
+\mcq{265}{Both the coefficient of correlation and the coefficient of association lie between:}{0 and 1}{-1 and 0}{-1 and 1}{-2 and 2}
+\mcq{266}{In correlation coefficient:}{r$_{xy}$- r$_{yx}$}{r$_{xy}$+ r$_{yx}$}{r$_{xy}$= r$_{yx}$}{None}
+\mcq{267}{Correlation is said to be positively perfect if:}{r$_{xy}$= r$_{yx}$}{r = 0.98}{r = + 1}{r$_{xy}$= r$_{uv}$}
+\mcq{268}{Strength of relationship between two variables is called:}{Regression}{Causation}{Correlation}{Association}
+\mcq{269}{y is the \_\_\_\_ of two regression coefficients b$_{xy}$ and b$_{yx}$:}{Arithmetic Mean}{Geometric Mean}{Harmonic Mean}{None of these}
+\mcq{270}{If constants are added to or subtracted from the values of the variable, the value of r is:}{Negative}{Positive}{Zero}{Remains the same}
+\mcq{271}{If the two variables are uncorrelated then the value of "r" is:}{-1}{0}{+1}{Fractional}
+\mcq{272}{If b$_{yx}$= 0.8. b$_{xy}$ = 0.2, the value of 'r' is:}{0.10}{0.40}{0.64}{0.8}
+\mcq{273}{If $\gamma_{xy}=0.8$ then $\gamma_{yx}$ is:}{0.4}{0.6}{0.8}{0.10}
+\mcq{274}{The formula of r is given by:}{$\dfrac{S_{XY}}{S_{X}^{2}}$}{$\dfrac{S_{XY}}{S_{Y}^{2}}$}{$\dfrac{S_{XY}}{S_{X}S_{Y}}$}{$\dfrac{S_{XY}}{S_{X}^{2}S_{Y}^{2}}$}
+\mcq{275}{The possible range of r is:}{0 to 1}{-1 to 0}{-1 to +1}{$-\infty$ to $+\infty$}
+\mcq{276}{If r$_{xy}$= 0.6, b$_{xy}$= 1.2 then b$_{yx}$ = \_\_\_\_\_\_\_\_:}{0.30}{0.20}{0.72}{0.36}
+\mcq{277}{The range of slope is:}{$-1$ to $-\propto$}{0 to 1}{$-\propto$ to $\propto$}{0 to $\propto$}
+\mcq{278}{If (AB) < (A)(B)/N, then the association is:}{Positive}{Negative}{Perfect}{None of these}
+\mcq{279}{If attributes A and B are independent, then the coefficient of association is:}{Zero}{Negative}{Positive}{1}
+\mcq{280}{Assume that a chi-square test is to be performed on a contingency table with four rows and four columns. The degrees of freedom should be:}{16}{8}{9}{6}
+\mcq{281}{The value of chi-square can never be negative because the difference between the observed and expected frequencies are:}{Added}{Squared}{Absolute}{None of these}
+\mcq{282}{Both the coefficient of correlation and the coefficient of association lie between:}{0 and 1}{-1 and 0}{-1 and 1}{-2 and 2}
+\mcq{283}{The expected frequency in a chi-square contingency table can be calculated from the expected proportion for that cell by:}{Multiplying by that column's total}{Multiplying by that row's total}{Multiplying by the total sample size}{None of these}
+\mcq{284}{When the expected frequencies are too small, the value of chi-square will be:}{Overestimated}{Underestimated}{Unaffected}{None of these}
+\mcq{285}{Yates correction for continuity is applied in:}{All cases}{A $2\times2$ contingency table}{A $3\times3$ contingency table}{None of these}
+\mcq{286}{If the attributes A and B are completely associated, then the coefficient of association is equal to:}{1}{0}{-1}{None of these}
+\mcq{287}{Presence of Attributes is denoted by:}{Greek letters}{Capital letters}{Small letters}{Latin letters}
+\mcq{288}{A characteristic which varies in quality from one individual to another is called:}{Variable}{Statistics}{Attributes}{Regression}
+\mcq{289}{The chi-square should not be used if any one of the expected frequency is:}{less than 5}{equal to 5}{more than 5}{none}
+\mcq{290}{If the two attributes A and B have perfect negative association, then the Yates coefficient of Association is equal to:}{+1}{0.87}{-1}{-0.83}
+\mcq{291}{For a contingency table of order $r\times C$, the number of the degrees of freedom is equal to:}{rc}{[r - 1]c}{[c - 1] [r]}{[r - 1] [c - 1]}
+\mcq{292}{The value of chi-square may be:}{Zero}{Positive}{Negative}{A and B but not C}
+\mcq{293}{The shape of the chi-square distribution depends upon:}{parameters}{degree of freedom}{e$_{ij}$}{O$_{ij}$}
+\mcq{294}{The total area under the curve of a chi-square distribution is:}{1}{$-\infty$ to 0}{0 to $\infty$}{$-\infty$ to $\infty$}
+\mcq{295}{The value of chi-suqare is always:}{-1 to 1}{zero}{Positive}{Negative}
+\mcq{296}{If $\Sigma d^{2}$ is equal to zero then Rank coefficient of correlation is equal to:}{1}{zero}{-1}{-1 and +1}
+\mcq{297}{If $\Sigma d^{2}=(n)(n^{2}-1)$ then the Spearman's rank coefficient of correlation is equal to:}{1}{-1}{zero}{-1 to +1}
+\mcq{298}{The eye colour of 100 men is:}{Attribute}{Quantitative variable}{Variable}{None of these}
+\mcq{299}{If any ultimate class frequency is negative, the data will be:}{Inconsistent}{Constant}{Correlated}{None of these}
+\mcq{300}{The shape of the x$^{2}$-distribution is:}{Symmetrical}{Negatively skewed}{Positively skewed}{Mesokurtic}
+\mcq{301}{Chi-square should not be used with $2\times2$ contingency table if:}{d.f. = 1}{expected values are below 5 in any cell}{Observed values are below 5 in any cell}{Both B and C}
+\mcq{302}{The number of cells in a $4\times5$ contingency table are:}{9}{20}{12}{18}
+\mcq{303}{Two attributes A and B are independent if:}{$(AB)=\dfrac{(A)(B)}{n}$}{$(AB)<\dfrac{(A)(B)}{n}$}{$(AB)>\dfrac{(A)(B)}{n}$}{$(AB)\neq\dfrac{(A)(B)}{n}$}
+\mcq{304}{Two attributes are said to be negatvely associated if A and B have the relation:}{$(AB)-\dfrac{(A)(B)}{\sqrt{n}}>0$}{$(AB)+\dfrac{(A)(B)}{\sqrt{n}}>0$}{$(AB)-\dfrac{(A)(B)}{\sqrt{n}}<0$}{$(AB)+\dfrac{(A)(B)}{\sqrt{n}}<0$}
+\mcq{305}{The data will be inconsistent if any ultimate frequency turn out to be:}{Contrary}{Negative}{Positive}{None of these}
+\mcq{306}{A table consisting of r rows and C columns is called $r\times C$:}{Frequency table}{t-table}{F-table}{Contingency table}
+\mcq{307}{If $\left(\dfrac{\Sigma d^{2}}{n(n^{2}-1)}\right)$ is zero then value of r$_{s}$ is:}{0.5}{-1}{0}{1}
+\mcq{308}{In the study of attributes, no class frequency can be \_\_\_\_\_\_:}{Positive}{Negative}{Greater than zero}{None}
+\mcq{309}{The graph of a time series is called:}{Histogram}{Polygon}{Straight line}{Historigram}
+\mcq{310}{The secular trend is measured by the method of semi-averages when:}{Time series contains yearly values}{Trend is linear}{Time series contains odd number of values}{None of them}
+\mcq{311}{In the measurement of secular trend the moving averages:}{Give the trend in a straight line}{Measure the seasonal variations}{Smooth out a time series}{None of them}
+\mcq{312}{For a least squares linear trend $\widehat{y}=a+b\,x$:}{$\Sigma y<\Sigma\widehat{y}$}{$\Sigma\widehat{y}=0$}{$\Sigma y=\Sigma\widehat{y}$}{None of them}
+\mcq{313}{For a least squares linear trend $\widehat{y}=a+bx$, the $\Sigma(y-\widehat{y})=0$ when:}{All the y-values lie on the line}{All the y-values are positive}{All the y-values lie above the line}{None of them}
+\mcq{314}{A time series of annual data can contain which of the following components:}{Secular trend}{Cyclical fluctuation}{Seasonal variation}{Both}
+\mcq{315}{Suppose that a particular time series should be fitted with a linear trend $\widehat{Y}=a+bX$. What do the X's represent in this formula:}{Coded values of the time variable}{A numerical constant that is determined by a formula}{Estimates of the dependent variable}{None of these}
+\mcq{316}{Suppose that Y = 20 + 5X describes well an annual time series for 1992 - 2000. If the origin is 1996, then the trend value for 1997 is:}{5}{20}{25}{15}
+\mcq{317}{The graph of a time series is called a:}{Histogram}{Historigram}{Trend line}{Scatter diagram}
+\mcq{318}{If an annual time series consisting of an even number of years is coded, then each coded interval is equal to:}{One year}{Half year}{Two years}{None of these}
+\mcq{319}{A business cycle has:}{One phase}{Two phases}{Three phases}{Four phases}
+\mcq{320}{Long term variations are regarded as:}{Secular trend}{Seasonal variations}{Cyclical variations}{Irregular variations}
+\mcq{321}{Repetitive movements around the trend line in one year or less is:}{Secular trend}{Seasonal variations}{Cyclical variations}{Irregular variations}
+\mcq{322}{Fire in a factory is an example of:}{Secular trend}{Cyclical variation}{Seasonal variation}{Irregular variation}
+\mcq{323}{Increased demand for coolers in summer and heaters in winter is an example of:}{Secular trend}{Cyclical variation}{Seasonal variation}{Irregular variation}
+\mcq{324}{'A decline in death rate due to advances in science' is an example of:}{Secular trend}{Cyclical variation}{Seasonal variation}{Irregular variation}
+\mcq{325}{'An era of prosperity' is an example of:}{Secular trend}{Cyclical variation}{Seasonal variation}{Irregular variation}
+\mcq{326}{In fitting a straight line to the time series sum of residual is:}{Least}{Zero}{Most}{Positive}
+\mcq{327}{The systematic components of time series which follow regular pattern of variation are called:}{Signal}{Noise}{Linear}{None}
+\mcq{328}{A second degree parabola is fitted to the time-series when the variation, in the dependent variable are:}{Linear}{Non-linear}{Upward}{Downward}
+\mcq{329}{A second degree parabola has:}{two constants}{three constants}{2 or 3 constants}{less than 2 constants}
+\mcq{330}{The value of the constant not affected with the change of origin in case of straight line is:}{a but not b}{a and b}{only a}{only b}
+\mcq{331}{The unsystematic sequence which follows irregular pattern of variation is called:}{signal}{noise}{linear}{non-linear}
+\mcq{332}{If a straight line or second degree parabola is fitted to the observed time series, then:}{$\Sigma Y>\Sigma\widehat{Y}$}{$\Sigma(Y)=\Sigma\widehat{Y}$}{$\Sigma Y\leq\Sigma\widehat{Y}$}{$\Sigma Y\geq\Sigma\widehat{Y}$}
+\mcq{333}{A trend is the better fitted trend for which the sum of the squares of errors is:}{maximum}{minimum}{least}{b and c but not a}
+\mcq{334}{In fitting a straight line, the value of "b" remain, unchanged by the change of:}{scale}{origin}{both origin and scale}{none of them}
+\mcq{335}{In fitting a second degree parabola, the value of c is not affected with the change of:}{scale}{origin}{both origin and scale}{none of these}
+\mcq{336}{The number of normal equations in case of second degree parabola are:}{3}{2}{more than or equal to 2}{less than equal to 3}
+\mcq{337}{In fitting a straight line or second degree parabola $\Sigma(Y-\widehat{Y})^{2}$ is equal to zero when each:}{$Y_{i}=\widehat{Y}_{i}$}{$Y_{i}>\widehat{Y}_{i}$}{$Y_{i}<\widehat{Y}_{i}$}{$Y_{i}\neq\widehat{Y}_{i}$}
+\mcq{338}{In semi average method, we divide the data into:}{two parts}{three parts}{more than 2 parts}{less than two parts}
+\mcq{339}{The number of missing observations in case of 7 years moving average are:}{7}{6}{8}{none}
+\mcq{340}{The number of missing observations in case of even year morning averages centered is equal to:}{period of moving average}{less than the period of moving averages}{more than the period of moving averages}{one less than the period of moving average}
+\mcq{341}{For a least squares linear trend $\widehat{Y}=a+bX$:}{$\Sigma\widehat{Y}=\Sigma Y$}{$\Sigma\widehat{Y}=0$}{$\Sigma\widehat{Y}=\Sigma Y$}{None of these}
+\mcq{342}{The sum of squares of residuals is denoted by:}{$\Sigma e$}{$\Sigma e^{2}$}{$\Sigma e^{3}$}{None of these}
+\mcq{343}{Shortage of certain consumer goods before annual budget:}{Secular trend}{Seasonal variation}{Cyclical variation}{Irregular variation}
+\mcq{344}{The recession in the business is:}{Secular trend}{Seasonal variation}{Cyclical movement}{Irregular}
+\mcq{345}{The method of moving average is used to find the:}{Irregular variation}{Cyclical movement}{Seasonal variation}{Secular trend}
+\mcq{346}{Equation of probabola is called:}{Straight line}{Quadratic equation}{Both}{None of these}
+\mcq{347}{Increase use of mobile phones in Pakistan is example of \_\_\_\_\_ variation:}{Trend}{Seasonal}{Cyclical}{Irregular}
+\mcq{348}{Increasing the literacy rate is an example of:}{Secular trend}{Cyclical trend}{Seasonal trend}{Irregular trend}
+\mcq{349}{Methods of secular trend are:}{2}{3}{4}{5}
+\mcq{350}{Decomposition of time series is called:}{Historigram}{Analysis of time series}{Histogram}{De-trending}
+\mcq{351}{The differences between the actual value and trend value is called:}{Slope}{Residual}{Intercept}{Sum of residual}
+\mcq{352}{The addative model of time series can be written as:}{Y=T.S.C.I}{Y=TS+CI}{Y=T+S+C+I}{Y=T+SC+I}
+\mcq{353}{Separating the four components for study is called:}{Time series}{Analysis of time series}{Residual series}{Geometric series}
+\mcq{354}{Increase is demand of ice in summer is an example of:}{Secular trend}{Seasonal variation}{Cyclical variation}{Random variation}
+\mcq{355}{When the production of thing is decreasing the stage is called as:}{Recession}{Recovery}{Boom}{Depression}
+\mcq{356}{Movements in secular trend are:}{Smooth}{Steady}{Regular}{All of these}
+\mcq{357}{A time series is function of:}{Secular trend}{Seasonal variations}{Irregular variations}{Cyclical variations}
+\mcq{358}{Damages due to flood, strikes fires and political disturbances is:}{Trend}{Seasonal}{Cyclical}{Irregular}
+\mcq{359}{The number of instructions processed in one second is called:}{Data}{storage}{accuracy}{speed}
+\mcq{360}{A computer can perform millions of instruction is:}{One second}{One micro second}{One milli second}{One giga second}
+\mcq{361}{Compute means:}{To calculate}{To measure}{To perform}{To solve}
+\mcq{362}{The unit of frequency is:}{newton}{joule}{hertz}{second}
+\mcq{363}{Hertz is abbriviated as:}{HZ}{Hz}{hz}{hZ}
+\mcq{364}{Hertz is measure of number of........ per second:}{oscillation}{repetition}{vibrations}{combination}
+\mcq{365}{The speed of compute is measured in:}{Microhertz}{Megahertz}{Mega}{Hertz}
+\mcq{366}{1 GHz is is equal to:}{1014 MHz}{1020 MHz}{1024 MHz}{1028 MHz}
+\mcq{367}{Modern PC may have speed more tha:}{1 GHz}{4 GHZ}{3 GHz}{2 GHz}
+\mcq{368}{Megahertz is abbriviated as:}{MHz}{MHz}{Mhz}{mHz}
+\mcq{369}{A compute can store a large amount of:}{numbers}{values}{calculations}{data}
+\mcq{370}{The computers are very accurate in:}{computations}{calculations}{repetitions}{performance}
+\mcq{371}{A model PC can perform millions operations in:}{one second}{one minute}{one day}{one hour}
+\mcq{372}{Computer never:}{compute}{work}{calculate}{tires}
+\mcq{373}{First machenical adding machines was developed by:}{J.W Maunchly}{Gottfried}{Blaise Pacal}{Leibnitz}
+\mcq{374}{First machenical adding machine is called:}{Multiplier wheel}{pascaline}{analytic engine}{computer}
+\mcq{375}{First machenical adding machines was developed in:}{1644}{1641}{1640}{1642}
+\mcq{376}{The designer of the first computer was:}{Charles Babbage}{Pascal}{Leibnitz}{Fisher and Yates}
+\mcq{377}{Analytic Engine was developed in:}{1830}{1831}{1832}{1837}
+\mcq{378}{Harved Mark-I was developed between:}{1936 and 1942}{1937 and 1943}{1938 and 1944}{1939 and 1945}
+\mcq{379}{Manufacturing of ENIAC was started in:}{1923}{1933}{1943}{1953}
+\mcq{380}{Manufacturing of ENIAC was finally complete in:}{1943}{1946}{1947}{1949}
+\mcq{381}{The computers are of........ types:}{2}{3}{4}{5}
+\mcq{382}{A digital computer works with:}{Figures}{Data}{Digits}{Values}
+\mcq{383}{A dgital coomputer work with two signals:}{0 and 1}{0 and 2}{1 and 2}{-1 and 1}
+\mcq{384}{Modern is an example of:}{Digital computer}{Analog computer}{Micro computer}{Hybrid computer}
+\mcq{385}{Compuetrs are classified in........ different droups:}{2}{3}{4}{5}
+\mcq{386}{Micro computer is also called:}{super computer}{personal computer}{mini computer}{digital computer}
+\mcq{387}{The micro computers are small in:}{size}{weight}{design}{computer}
+\mcq{388}{Laptop and notebooks are......... computers:}{digital}{hybrid}{micro}{analog}
+\mcq{389}{The mainframes computers are very....... compueters:}{small}{different}{heavy}{large}
+\mcq{390}{The mainframes computers have very high processing:}{speed}{signal}{capacity}{engine}
+\mcq{391}{The largest IBM S/390 mainframes, can support users:}{10,000}{20,000}{40,000}{50,000}
+\mcq{392}{The mini computers released in:}{1940}{1950}{1960}{1970}
+\mcq{393}{The mini computers have large:}{output}{memory}{devices}{input}
+\mcq{394}{The super computer can perform more than......... caculation per second:}{1 million}{1 billion}{1 trillion}{none of these}
+\mcq{395}{Super computers are used by.......... scientist:}{atmoshphere}{biological}{melecular}{nuclear}
+\mcq{396}{The physical parts of the computers are called:}{output devices}{software}{hardware}{input devices}
+\mcq{397}{MIcrosoft Word, Excel, Coral Draw etc. are examples of:}{software}{control unit}{main memory}{hardware}
+\mcq{398}{A personal computer has ......... hardware components:}{2}{3}{4}{5}
+\mcq{399}{The brain of the computer is called:}{CPU}{ALU}{CDR}{RAM}
+\mcq{400}{The entire CPU Is a single ........ called a microcomputer:}{Fusion}{Unit}{Sries}{Chip}
+\mcq{401}{The CPU has at least ...... basic parts:}{2}{3}{4}{5}
+\mcq{402}{The control unit is the logical ........ of the computer:}{Brain}{PArt}{Component}{Hub}
+\mcq{403}{The main memory is also called:}{RAM}{ROM}{PRAM}{CD-Rom}
+\mcq{404}{The main memory has many storage:}{Directions}{Locations}{Positions}{Hubs}
+\mcq{405}{Each memory location has a storage:}{Devices}{Category}{Address}{Number}
+\mcq{406}{1 megabyte is equal to:}{1084756}{1048576}{1048567}{1084657}
+\mcq{407}{Computer output microfirm is abbriviated as:}{CMO}{OMC}{COM}{CMM}
+\mcq{408}{Main memory is also called:}{secondary memory}{primary storage}{main storage}{none of these}
+\mcq{409}{The purpose of storage is to ........ data:}{Hold}{process}{execute}{check}
+\mcq{410}{The primary magnetic storage has types:}{2}{3}{4}{5}
+\mcq{411}{The primary magnetic storage has types:}{3}{4}{5}{6}
+\mcq{412}{The most common storage medium iis the megnetic:}{object}{tape}{head}{disk}
+\mcq{413}{Input devices are categorized as....... types:}{2}{3}{4}{5}
+\mcq{414}{Keyboard has ......... types of keys:}{2}{3}{4}{5}
+\mcq{415}{Keyboard may look like a:}{monitor}{printer}{hard disk}{type writer}
+\mcq{416}{The standard keyboards has buttons:}{100}{101}{103}{102}
+\mcq{417}{The binary string 01000001 from CPU represent letter:}{C}{B}{A}{D}
+\mcq{418}{There are ....... most commonly used softly devices:}{2}{3}{4}{5}
+\mcq{419}{System software can be classified into major categories:}{2}{3}{4}{5}
+\mcq{420}{Disk operating system is abbreviated as:}{SDD}{SOD}{DOS}{SDO}
+\mcq{421}{There are ........ mosrt commonly used hardcopy devies:}{2}{3}{4}{5}
+\mcq{422}{MS-DOS is the text driven user:}{program}{interface}{integrity}{files}
+\mcq{423}{MS\_DOS is was originally develeoped in:}{1980}{1981}{1982}{1983}
+\mcq{424}{Personal computer applicatiuon software are of types:}{7}{8}{9}{10}
+\mcq{425}{The rules of writing of a computer program is called:}{language}{syntax}{DOS}{process}
+\mcq{426}{The process of writing a computer program is called:}{coding}{machine code}{syntax}{assembler}
+\mcq{427}{The symbolic codes are called:}{data base}{language}{program}{mnemonic}
+\mcq{428}{Language processors has........ types:}{2}{3}{4}{5}
+\mcq{429}{A computer program is also known as:}{assembler}{hardware}{software}{translator}
+\mcq{430}{The most common number is the ........ number system:}{octal}{decimal}{hexadecimal}{binary}
+\mcq{431}{The base of decimal number is:}{2}{5}{8}{10}
+\mcq{432}{Decimal number system consists of 10 digits from:}{0 to 9}{1 to 10}{0 to 8}{0 to 10}
+\mcq{433}{The base of hexademical number is:}{10}{12}{14}{16}
+\mcq{434}{B, means ........ in Latin:}{2}{3}{4}{6}
+\mcq{435}{Keyboard, mouse and scanner are .......... devices:}{input}{output}{logical}{none of these}
+\mcq{436}{Monitor or screen output is a:}{hardcopy}{softcopy}{software}{hardware}
+\mcq{437}{The machenical devices that make-up the computer is called:}{software}{hardware}{progeram}{none of these}
+\mcq{438}{Set of electronic instructions is:}{hardware}{software}{output devies}{none of these}
+\mcq{439}{One megebyte is equal to:}{1000 bytes}{10,000 bytes}{108576}{102400 bytes}
+\mcq{440}{Function key consist of:}{6}{8}{12}{14}
+\mcq{441}{The electronic and machenical components of a computer are:}{computer hardware}{computer software}{both a and b}{none of these}
+\mcq{442}{In computer studies, RAM stands for:}{read and memory}{read and memory}{random access memory}{read to memory}
+\mcq{443}{Which types of devices is the thermmometer:}{digital}{analog}{software}{storage}
+\mcq{444}{A binary digit is called:}{Bit}{Byte}{Kilobyte}{Giga byte}
+\mcq{445}{Types of secondary storage devices:}{magnetic types}{meganetic disks}{historigram}{none of these}
+\mcq{446}{Wall clock is an example of:}{digital computer}{analog computer}{disk}{none of these}
+\mcq{447}{The mechancal devices that make up the computer are called:}{Software}{Hardware}{Program}{None of these}
+\mcq{448}{Wall clock is an example of a (an):}{Digital computer}{Analog computer}{Disk}{None of these}
+\mcq{449}{Scientific calculator is an example of a (an):}{Digital computer}{Disk}{Analog computer}{None of these}
+\mcq{450}{The most common input devices are:}{Keyboard and mouse}{Monitor and printer}{Keyboard and mouse}{None of these}
+\mcq{451}{The most common output devices are:}{Software}{Monitor and printer}{Keyboard and mouse}{None of these}
+\mcq{452}{Diskettes are also called:}{Floppy disks}{Hard disks}{Storage}{Memory}
+\mcq{453}{Monitor or screen output is a:}{Hard copy}{Soft copy}{Software}{Hardware}
+\mcq{454}{Printer output is a:}{Software}{Hard copy}{Soft copy}{Hardware}
+\mcq{455}{Thermometers and barometers are:}{Analog devices}{Digital devices}{Communication devices}{None of these}
+\mcq{456}{Electronic calculators and digital watches are:}{Communication devices}{Analog devices}{Digital devices}{None of these}
+\mcq{457}{FORTRAN and BASIC are:}{Low - level languages}{High - level languages}{Machine languages}{None of these}
+\mcq{458}{Programs, in general, are referred to as:}{Software}{Hardware}{Floppy disk}{Hard disk}
+\mcq{459}{Processor, memory unit and storage are:}{Software}{Hardware}{Communication devices}{None of these}
+\mcq{460}{Microphone is a (an):}{Input device}{Output device}{Control unit}{None of these}
+\mcq{461}{Compiler and assembler are:}{Hardware components}{Software components}{Input and output devices}{None of these}
+\mcq{462}{One Mega Byte is equal to:}{1000 bytes}{10,000 bytes}{1048576 bytes}{102400 bytes}
+\mcq{463}{A decimal number system has base:}{2}{8}{10}{16}
+\mcq{464}{01 Byte =:}{4 bits}{6 bits}{8 bits}{10 bits}
+\mcq{465}{The physical part of computer is called:}{CPU}{Software}{Hardware}{All of these}
+\mcq{466}{Brain of computer system is called:}{C.P.U}{Main Memory}{Hard Disk}{Monitor}
+\mcq{467}{The base of octal system is:}{2}{10}{8}{16}
+\mcq{468}{Which one of the following is not an output device:}{Monitor}{Scanner}{Printer}{Modem}
+\mcq{469}{The most common number system is the \_\_\_\_\_\_ number system:}{Octal}{Decimal}{Hexadecimal}{Binary}
+\mcq{470}{Interpreter is a type of:}{Application software}{Computer hardware}{Language processor}{Storage device}
+\mcq{471}{The base of hexadecimal number is:}{10}{12}{14}{16}
+\mcq{472}{The first commercially available computer was:}{Univac}{Eniac}{Mark I}{Analytical engine}
+\mcq{473}{The number of instructions proceed in one second of time is regarded as:}{Data of computer}{Ram of computer}{ROM of computer}{Speed of computer}
+\mcq{474}{A computer device that can capture images is called:}{Monitor}{Plotter}{Scanner}{C.P.U}
+\mcq{475}{The fourth generation computers worked on:}{Vacuum Tube}{Transistors}{Integrated Circuit}{Microprocessor}
+\mcq{476}{Printer, monitor, scanner and plotter are the:}{Error}{Type-I error}{Type-II error}{Power of test}
+\mcq{477}{ALU stands for \_\_\_\_\_\_\_:}{Arithmetic logic unit}{All logical units}{Alone logical unit}{None}
+\mcq{478}{The number of instruction processed in one second of time is regarded as:}{data if computer}{ram of computer}{rom of computers}{speed of computers}
+\mcq{479}{A decimal number system has base:}{3}{9}{10}{16}
+\mcq{480}{One byte equal to:}{eight bits}{four bits}{six bits}{twelve bits}
+\mcq{481}{01 byte=:}{4 bits}{6 bits}{8 bits}{10 bits}
+\mcq{482}{1024 MB is equal to:}{1 KB}{1 GB}{1 MB}{1 byte}
+\mcq{483}{Control unit and arithemetic unit are part of:}{CUP}{program}{language}{input}
+\mcq{484}{The base of Octal system is:}{2}{10}{8}{17}
+\mcq{485}{CPU stands for:}{central plain unit}{central programming unit}{central processing unit}{none of these}
+\mcq{486}{All the arithmetic and logic manipulation is done by the:}{Hard disk}{arithmetic unit}{conrol unit}{main memory}
+\mcq{487}{All the arithmetic and logic manipulation is done by the:}{Hard disk}{arithmetic unit}{conrol unit}{main memory}
+\mcq{488}{ALU stands for:}{arithmetic login unit}{all logic unit}{alone logical unit}{none}
+\mcq{489}{Which memory cannot be changed:}{RAM}{ROM}{DISK}{None}
+\mcq{490}{The CPU of the computer is:}{outputdevice}{software}{hardware}{input devices}
+\mcq{491}{Compact disk is an example of:}{primary}{secondary storage}{main storage}{all of these}
+\mcq{492}{Monitor or screen output is a:}{hard copy}{soft copy}{software}{hardware}
+\mcq{493}{When we switch off the computer, the data vanishes which lies on:}{ROM}{Ram}{Hard Disk}{floppy disk}
+\mcq{494}{Compute came from the word:}{speed}{compute}{calculate}{store}
+\mcq{495}{Speed of a computer is measured by:}{giga bytes}{mega bytes}{kilo grams}{Giga Hertz}
+\mcq{496}{Which one is not a output devices:}{monitor}{scanner}{printer}{modem}
+\mcq{497}{Set of electronic instruments is:}{software}{hardware}{output}{none of these}
+\mcq{498}{In computer studies, DOS stands for:}{data operating system}{disk of system}{data of support}{disk operating system}
+\mcq{499}{1024 MB equal to:}{01 RB}{01 IB}{01 TB}{01 Byte}
+\mcq{500}{The diameter of compact disk is:}{4.75}{4.15}{5.52}{3.77}
+
+\end{document}

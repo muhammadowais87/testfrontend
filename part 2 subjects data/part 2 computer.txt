@@ -1,0 +1,2949 @@
+-> mcqs
+1.1 Introduction to Computer Networks
+Exercise	1.	A computer network is:
+(A)A single computer system(B)A group of connected computers and devices(C)A software program(D)A storage device
+Additional	2.	A computer network allows different devices to:
+(A)Communicate with each other(B)Work without electricity(C)Remove all data(D)Stop communication
+Additional	3.	Communication through computer networks helps save:
+(A)Files and folders(B)Devices and printers(C)Time and effort(D)Cables and signals
+Additional	4.	Which of the following can be connected through a computer network:
+(A)Computers(B)Mobile phones(C)Printers(D)All of these
+Additional	5.	Which is a common example of computer network use:
+(A)Internet browsing(B)Writing on paper(C)Reading a printed book(D)Drawing with a pencil
+Additional	6.	Which of the following is a digital device that can be connected to a network:
+(A)Printer(B)Notebook(C)Pencil(D)Chair
+Additional	7.	Which of the following is an example of a network-connected device:
+(A)Mobile phone(B)Chair(C)Table(D)Book
+Additional	8.	Which of the following can be shared using a computer network:
+(A)Data(B)Files(C)Resources(D)All of these
+Additional	9.	Which system uses computer networks for online classes and learning:
+(A)Banking system(B)School system(C)Smart home system(D)ATM system
+1.2 Network Architecture and Basic Concepts
+Additional	10.	The overall design of a computer network is called:
+(A)Hardware(B)Software(C)Network architecture(D)Communication rules
+Additional	11.	Which of the following is included in network architecture:
+(A)Hardware(B)Software(C)Communication rules(D)All of these
+Additional	12.	Network architecture shows how computers, servers, and other devices are:
+(A)Repaired(B)Arranged(C)Manufactured(D)Removed
+Additional	13.	Before transmission, data is broken into:
+(A)Large files(B)Small packets(C)Programs(D)Signals only
+Additional	14.	A good architecture helps the network:
+(A)Work efficiently(B)Work slowly(C)Stop completely(D)Use more power
+Additional	15.	Which devices guide packets to the correct destination:
+(A)Networking devices(B)Input devices(C)Storage devices(D)Display devices
+Additional	16.	The receiving device reassembles packets into:
+(A)New software(B)The original data(C)Network hardware(D)Communication rules
+1.3 Types of Common Networks
+Additional	17.	Computer networks are classified based on:
+(A)Size(B)Coverage area(C)Model(D)Both a and b
+Additional	18.	A network that connects devices within a small area is called:
+(A)WAN(B)PAN(C)LAN(D)CAN
+Additional	19.	LAN stands for:
+(A)Large Access Network(B)Local Area Network(C)Linked Area Network(D)Local Access Node
+Additional	20.	The area covered by a LAN is generally:
+(A)Small(B)Global(C)Continental(D)Worldwide
+Additional	21.	Which network would be suitable for connecting devices within an office:
+(A)LAN(B)WAN(C)Network(D)CAN
+Additional	22.	Which network is generally managed by a single organization:
+(A)LAN(B)Internet(C)Public WAN(D)Global Internet
+Additional	23.	A network that covers a large geographic area is called:
+(A)Local Area Network(B)Small Area Network(C)Home Area Network(D)Wide Area Network
+Additional	24.	WAN stands for:
+(A)Wide Area Network(B)Wireless Access Network(C)World Access Node(D)Wide Access Node
+Additional	25.	Which of the following can be used by a WAN:
+(A)Leased lines(B)Satellites(C)The Internet(D)All of these
+Additional	26.	Which network is designed to cover a large geographic area:
+(A)LAN(B)WAN(C)Wi-Fi(D)Ethernet
+Additional	27.	Which network can connect networks located in different countries:
+(A)LAN(B)WAN(C)PAN(D)Office network
+Additional	28.	The global network that connects millions of devices and allows information sharing worldwide is called:
+(A)LAN(B)WAN(C)Internet(D)Ethernet
+Additional	29.	A company that provides Internet access to users is known as:
+(A)LAN(B)WAN(C)ISP(D)DSL
+Additional	30.	A global network used for worldwide information sharing is known as:
+(A)Internet(B)LAN(C)Ethernet(D)DSL
+Additional	31.	Which network generally provides higher data transfer speed:
+(A)WAN(B)LAN(C)Internet only(D)Public WAN
+Additional	32.	Which network is generally more expensive to install and manage:
+(A)LAN(B)PAN(C)CAN(D)WAN
+Additional	33.	Which network is generally cost-effective and easy to maintain:
+(A)WAN(B)LAN(C)Public WAN(D)Internet
+Additional	34.	Which of the following services uses the Internet:
+(A)Email(B)Websites(C)Cloud storage(D)All of these
+Additional	35.	The Internet is also referred to as:
+(A)Public WAN(B)Private LAN(C)Local Ethernet(D)Home LAN
+Additional	36.	Which network allows information sharing on a worldwide scale:
+(A)LAN(B)WAN(C)Internet(D)Office network
+1.4 Network Devices
+Exercise	37.	The device used to connect a computer to a network is:
+(A)Monitor(B)Keyboard(C)Network Interface Card(D)Printer
+Exercise	38.	The main function of a router is to:
+(A)Store data(B)Connect devices within a network(C)Connect different networks(D)Display web pages
+Exercise	39.	The device that converts digital signals for Internet transmission is:
+(A)Switch(B)Hub(C)Modem(D)NIC
+Additional	40.	Networking devices control the:
+(A)Size of computers(B)Flow of data(C)Color of cables(D)Power of monitors
+Additional	41.	A device that allows a computer or other device to connect to a network is called:
+(A)Router(B)Switch(C)Network Interface Card(D)Modem
+Additional	42.	A unique address assigned to a Network Interface Card is called:
+(A)IP address(B)MAC address(C)Network address(D)Internet address
+Additional	43.	A device that sends and receives data from a network is:
+(A)NIC(B)Switch(C)Modem(D)Router
+Additional	44.	A device cannot communicate on a network without a:
+(A)Switch(B)Router(C)NIC(D)Modem
+Additional	45.	Which device has a unique MAC address:
+(A)NIC(B)Router(C)Modem(D)Switch
+Additional	46.	A device that connects devices and sends data to the correct device is called:
+(A)Modem(B)Switch(C)Router(D)NIC
+Additional	47.	Which networking device is associated with improving network speed and efficiency:
+(A)Modem(B)Switch(C)NIC(D)ISP
+Additional	48.	A device that connects different networks together is called:
+(A)Switch(B)Modem(C)NIC(D)Router
+Additional	49.	Which device directs data packets to their correct destination:
+(A)Router(B)Switch(C)Modem(D)NIC
+Additional	50.	Which networking device uses IP addresses to send data:
+(A)Router(B)Switch(C)NIC(D)Modem
+Additional	51.	Which device connects a local network to the Internet:
+(A)NIC(B)Router(C)Switch(D)Wireless access point
+Additional	52.	Which networking device is associated with network security and control:
+(A)Switch(B)NIC(C)Modem(D)Router
+Additional	53.	Which device uses IP addresses to send data:
+(A)Modem(B)Router(C)Switch(D)Wireless access point
+Additional	54.	Which device connects different networks together:
+(A)Router(B)Switch(C)NIC(D)Modem
+Additional	55.	Which device improves network security and control:
+(A)NIC(B)Switch(C)Modem(D)Router
+Additional	56.	A device that connects a local network to an Internet Service Provider is called:
+(A)Switch(B)NIC(C)Router(D)Modem
+Additional	57.	Which device converts digital data into signals suitable for transmission:
+(A)Router(B)Modem(C)Switch(D)NIC
+Additional	58.	Which device converts incoming signals back into digital form:
+(A)Modem(B)Router(C)Switch(D)NIC
+Additional	59.	Which networking device is associated with cable, DSL, and fiber connections:
+(A)Modem(B)Switch(C)Router(D)NIC
+Additional	60.	Which device connects a local network to an ISP:
+(A)Switch(B)NIC(C)Modem(D)Wireless access point
+Additional	61.	A device that provides Wi-Fi connectivity is called:
+(A)Modem(B)Router(C)Wireless access point(D)Switch
+Additional	62.	Which device allows wireless devices to connect to a network:
+(A)Switch(B)Wireless access point(C)Modem(D)NIC
+Additional	63.	Which device extends wireless network coverage:
+(A)Wireless access point(B)Switch(C)NIC(D)Modem
+1.5 Network Topologies
+Exercise	64.	A network that covers a small geographical area, such as a school or office, is:
+(A)WAN(B)MAN(C)LAN(D)Internet
+Exercise	65.	The topology that uses a central hub or switch is:
+(A)Bus Topology(B)Ring Topology(C)Star Topology(D)Mesh Topology
+Exercise	66.	The topology that provides the highest reliability is:
+(A)Bus topology(B)Ring topology(C)Star topology(D)Mesh topology
+Additional	67.	The layout of a computer network is called:
+(A)Network topology(B)Network protocol(C)Network device(D)Network architecture
+Additional	68.	The topology that shows the actual connections in a network is called:
+(A)Logical topology(B)Physical topology(C)Bus topology(D)Star topology
+Additional	69.	The topology that shows how data flows in a network is called:
+(A)Physical topology(B)Star topology(C)Bus topology(D)Logical topology
+Additional	70.	Network topology affects network:
+(A)Performance and maintenance(B)Color and size(C)Price and weight(D)Software installation
+Additional	71.	In which topology are all devices connected to a single main cable:
+(A)Star topology(B)Logical topology(C)Physical topology(D)Bus topology
+Additional	72.	Which topology can have its entire network stopped by failure of its main cable:
+(A)Star topology(B)Bus topology(C)Logical topology(D)Physical topology
+Additional	73.	Which of the following is NOT a characteristic of bus topology:
+(A)Single main cable(B)Simple design(C)Low cost(D)Central hub
+Additional	74.	For which type of networks is bus topology suitable:
+(A)Large networks(B)Small networks(C)Global networks(D)Wireless networks
+Additional	75.	Bus topology is not considered good for which type of network:
+(A)Small networks(B)Temporary networks(C)Large networks(D)Simple networks
+Additional	76.	The central device in star topology can be a:
+(A)Hub or switch(B)Router or modem(C)NIC or modem(D)Printer or server
+Additional	77.	Which topology connects all devices to a central hub or switch:
+(A)Bus topology(B)Star topology(C)Logical topology(D)Physical topology
+Additional	78.	Which topology is easier to manage and expand:
+(A)Bus topology(B)Logical topology(C)Star topology(D)Physical topology
+Additional	79.	In which topology does failure of one device not affect other devices:
+(A)Bus topology(B)Star topology(C)Physical topology(D)Logical topology
+Additional	80.	In which topology can failure of the central hub stop the network:
+(A)Bus topology(B)Physical topology(C)Logical topology(D)Star topology
+Additional	81.	Which topology is widely used in modern networks:
+(A)Bus topology(B)Logical topology(C)Star topology(D)Physical topology
+Additional	82.	In which topology are devices connected in a circular path:
+(A)Bus topology(B)Star topology(C)Ring topology(D)Mesh topology
+Additional	83.	Which topology is rarely used today:
+(A)Mesh topology(B)Ring topology(C)Bus topology(D)All topologies
+Additional	84.	The topology in which devices are connected to many other devices is called:
+(A)Bus topology(B)Star topology(C)Ring topology(D)Mesh topology
+Additional	85.	Which topology is described as reliable but complex:
+(A)Bus topology(B)Ring topology(C)Mesh topology(D)Star topology
+Additional	86.	Which topology provides multiple routes for data transmission:
+(A)Ring topology(B)Bus topology(C)Mesh topology(D)Star topology
+Additional	87.	Which topology is more complex than bus topology:
+(A)Ring topology(B)Bus topology(C)Star topology(D)None of these
+Additional	88.	Which topology is suitable for large and critical networks:
+(A)Ring topology(B)Bus topology(C)Star topology(D)Mesh topology
+Additional	89.	Which topology has multiple paths that improve fault tolerance:
+(A)Ring topology(B)Bus topology(C)Mesh topology(D)Star topology
+Additional	90.	Which of the following is an advantage of mesh topology:
+(A)Low cost(B)Simple design(C)High reliability(D)Single communication
+Additional	91.	A network topology in which devices are arranged in a hierarchical structure is called:
+(A)Ring topology(B)Mesh topology(C)Tree topology(D)Bus topology
+Additional	92.	In which structure are devices arranged in tree topology:
+(A)Circular structure(B)Hierarchical structure(C)Random structure(D)Linear structure
+Additional	93.	Which two topologies are combined in tree topology:
+(A)Ring and mesh(B)Bus and star(C)Ring and bus(D)Mesh and star
+Additional	94.	In tree topology, multiple star networks are connected to a:
+(A)Main device(B)Central backbone(C)Single computer(D)Circular path
+Additional	95.	The main node in a tree topology is called the:
+(A)Root(B)Branch(C)Backbone(D)Sub-branch
+1.6 Network Models and Layers
+Exercise	96.	The OSI model contains:
+(A)Five layers(B)Six layers(C)Seven layers(D)Eight layers
+Additional	97.	A model that explains how data moves from one device to another in an organized way is called:
+(A)Network model(B)Network cable(C)Network address(D)Network signal
+Additional	98.	Layered models make networks easier to:
+(A)Replace(B)Disconnect(C)Encrypt(D)Understand and manage
+Additional	99.	Network layers divide the communication process into:
+(A)Smaller parts(B)Larger networks(C)Physical devices(D)Separate computers
+Additional	100.	Data passes through network layers:
+(A)Randomly(B)Step by step(C)In one direction(D)Without processing
+Additional	101.	OSI stands for:
+(A)Open System Internet(B)Organized System Interconnection(C)Open Systems Interconnection(D)Operating System Interface
+Additional	102.	The standard model used to understand network communication is called:
+(A)OSI model(B)LAN model(C)WAN model(D)Bus model
+Additional	103.	The OSI model has.........layers:
+(A)Five(B)Six(C)Eight(D)Seven
+Additional	104.	The layer that sends raw data as signals is the:
+(A)Network Layer(B)Physical Layer(C)Transport Layer(D)Application Layer
+Additional	105.	Which layer defines cables and connectors:
+(A)Session Layer(B)Transport Layer(C)Presentation Layer(D)Physical Layer
+Additional	106.	Which layer defines voltage levels and data transmission rates:
+(A)Physical Layer(B)Network Layer(C)Application Layer(D)Data Link Layer
+Additional	107.	The layer responsible for error-free data transfer between directly connected nodes is:
+(A)Transport Layer(B)Session Layer(C)Data Link Layer(D)Application Layer
+Additional	108.	Which layer handles error detection and correction:
+(A)Data Link Layer(B)Network Layer(C)Presentation Layer(D)Application Layer
+Additional	109.	Which layer handles framing:
+(A)Physical Layer(B)Transport Layer(C)Data Link Layer(D)Session Layer
+Additional	110.	Which layer controls access to the shared transmission medium:
+(A)Data Link Layer(B)Network Layer(C)Session Layer(D)Presentation Layer
+Additional	111.	The layer responsible for routing data from source to destination across different networks is:
+(A)Session Layer(B)Network Layer(C)Physical Layer(D)Presentation Layer
+Additional	112.	Which layer manages logical addressing and determines the best path for data:
+(A)Transport Layer(B)Data Link Layer(C)Network Layer(D)Application Layer
+Additional	113.	Which addresses are managed by the Network Layer:
+(A)MAC addresses(B)Hardware addresses(C)IP addresses(D)Email addresses
+Additional	114.	The layer that provides reliable and ordered delivery of data is:
+(A)Data Link Layer(B)Network Layer(C)Transport Layer(D)Physical Layer
+Additional	115.	Which layer performs segmentation of data into smaller units:
+(A)Transport Layer(B)Network Layer(C)Physical Layer(D)Presentation Layer
+Additional	116.	Which layer ensures reliable delivery between devices:
+(A)Transport Layer(B)Presentation Layer(C)Network Layer(D)Physical Layer
+Additional	117.	The process of dividing data into smaller units is called:
+(A)Routing(B)Framing(C)Segmentation(D)Compression
+Additional	118.	Which layer establishes, maintains, and terminates communication sessions:
+(A)Network Layer(B)Session Layer(C)Data Link Layer(D)Physical Layer
+Additional	119.	Which layer is responsible for session checkpoints and recovery:
+(A)Data Link Layer(B)Application Layer(C)Session Layer(D)Physical Layer
+Additional	120.	Which layer manages communication sessions between applications:
+(A)Presentation Layer(B)Network Layer(C)Session Layer(D)Data Link Layer
+Additional	121.	Which layer handles encryption, compression, and format conversion:
+(A)Presentation Layer(B)Network Layer(C)Transport Layer(D)Data Link Layer
+Additional	122.	The layer that translates data into a format understandable by the application layer is:
+(A)Physical Layer(B)Presentation Layer(C)Network Layer(D)Transport Layer
+Additional	123.	Which OSI layer handles data encryption:
+(A)Presentation Layer(B)Session Layer(C)Network Layer(D)Data Link Layer
+Additional	124.	Which OSI layer handles data compression:
+(A)Transport Layer(B)Application Layer(C)Presentation Layer(D)Physical Layer
+Additional	125.	Format conversion is performed by the:
+(A)Network Layer(B)Data Link Layer(C)Session Layer(D)Presentation Layer
+Additional	126.	The OSI layer that provides services directly to end users and applications is:
+(A)Application Layer(B)Physical Layer(C)Network Layer(D)Data Link Layer
+Additional	127.	Which layer supports protocols such as HTTP and FTP:
+(A)Transport Layer(B)Application Layer(C)Network Layer(D)Session Layer
+Additional	128.	Email services for communication and data exchange are supported by the:
+(A)Physical Layer(B)Network Layer(C)Application Layer(D)Data Link Layer
+Additional	129.	Which layer directly supports user applications:
+(A)Application Layer(B)Transport Layer(C)Physical Layer(D)Network Layer
+Additional	130.	Which OSI layer is associated with electrical, optical, and radio signals:
+(A)Physical Layer(B)Data Link Layer(C)Network Layer(D)Presentation Layer
+Additional	131.	The lower layers of the OSI model handle:
+(A)User applications(B)Physical data transfer(C)Data formatting(D)Session recovery
+Additional	132.	The middle layers of the OSI model manage:
+(A)User interaction(B)Data encryption(C)Routing and delivery(D)Email services
+Additional	133.	The upper layers of the OSI model support:
+(A)User applications(B)Physical cables(C)Voltage levels(D)Raw signals
+1.7 Network Protocols and Services
+Exercise	134.	The protocol mainly used to view web pages is:
+(A)FTP(B)DNS(C)TCP(D)HTTP
+Exercise	135.	DNS is used to:
+(A)Transfer files(B)Protect data(C)Convert domain names into IP addresses(D)Connect hardware devices
+Additional	136.	A set of rules for communication in a network is called:
+(A)Network protocol(B)Network device(C)Network topology(D)Network layer
+Additional	137.	Protocols ensure:
+(A)Smooth data exchange(B)Larger file sizes(C)Faster hardware installation(D)Automatic network expansion
+Additional	138.	Protocols are like ______ that computers use to communicate with each other:
+(A)Cables(B)Languages(C)Routers(D)Addresses
+Additional	139.	TCP/IP stands for:
+(A)Transfer Control Protocol/Internet Program(B)Transmission Control Protocol and Internet Protocol(C)Transmission Communication Protocol/Internet Process(D)Transfer Communication Program and Internet Protocol
+Additional	140.	TCP/IP is the main protocol used on the:
+(A)Local printer(B)Keyboard(C)Internet(D)Monitor
+Additional	141.	Which part of TCP/IP ensures reliable data delivery:
+(A)IP(B)HTTP(C)TCP(D)DNS
+Additional	142.	Which protocol handles addressing and routing:
+(A)TCP(B)FTP(C)HTTP(D)IP
+Additional	143.	Which protocol handles addressing and routing:
+(A)TCP(B)FTP(C)HTTP(D)IP
+Additional	144.	Which protocol ensures reliable data delivery:
+(A)DNS(B)HTTP(C)TCP(D)FTP
+Additional	145.	A protocol used to transfer web pages is called:
+(A)FTP(B)DNS(C)HTTP(D)TCP
+Additional	146.	HTTP stands for:
+(A)Hypertext Transfer Protocol(B)High Transfer Text Protocol(C)Hyperlink Transmission Process(D)Hypertext Transmission Program
+Additional	147.	Which protocol is the secure version of HTTP:
+(A)FTP(B)HTTPS(C)TCP(D)DNS
+Additional	148.	Encryption in HTTPS is provided using:
+(A)TCP/IP(B)FTP/DNS(C)SSL/TLS protocols(D)HTTP/FTP protocols
+Additional	149.	Secure websites use .......... instead of HTTP:
+(A)FTP(B)DNS(C)TCP(D)HTTPS
+Additional	150.	Which protocol is used to transfer files:
+(A)FTP(B)HTTP(C)DNS(D)IP
+Additional	151.	FTP stands for:
+(A)File Transmission Process(B)File Transfer Protocol(C)Fast Transfer Program(D)File Translation Protocol
+Additional	152.	Which protocol is used to upload and download the files:
+(A)FTP(B)HTTP(C)HTTPS(D)SMTP
+Additional	153.	FTP can transfer:
+(A)Small files(B)Text files(C)Large files(D)Web pages
+Additional	154.	A system that converts website names into IP addresses is called:
+(A)FTP(B)HTTP(C)DNS(D)TCP
+Additional	155.	The translation of website names into IP addresses is performed by:
+(A)Web browsers(B)DNS servers(C)FTP servers(D)Routers
+1.8 IP Addressing and Subnetting
+Additional	156.	A unique number assigned to a device on a network is called:
+(A)IP address(B)Subnet(C)NAT(D)Network protocol
+Additional	157.	IP stands for:
+(A)Internet Program(B)Internet Protocol(C)Internal Protocol(D)Information Protocol
+Additional	158.	Communication is not possible without:
+(A)Subnetting(B)NAT(C)IPv6(D)IP address
+Additional	159.	The older version of IP addressing is:
+(A)IPv6(B)IPv4(C)NAT(D)DNS
+Additional	160.	IPv4 uses..............addresses:
+(A)16-bit(B)64-bit(C)32-bit(D)128-bit
+Additional	161.	IPv6 uses.............addresses:
+(A)32-bit(B)64-bit(C)128-bit(D)256-bit
+Additional	162.	The newer version of IP addressing is:
+(A)IPv4(B)IPv6(C)NAT(D)Subnetting
+Additional	163.	Which IP version has a limited number of addresses:
+(A)IPv4(B)IPv6(C)NAT(D)Subnetting
+Additional	164.	An IPv4 address contains:
+(A)4 numbers(B)6 numbers(C)8 groups(D)16 groups
+Additional	165.	Each number in an IPv4 address can range from:
+(A)1–128(B)0–255(C)0–512(D)1–256
+Additional	166.	Each number in an IPv4 address represents:
+(A)4 bits(B)32 bits(C)16 bits(D)8 bits
+Additional	167.	Each number in an IPv4 address is equal to:
+(A)1 byte(B)2 bytes(C)4 bytes(D)8 bytes
+Additional	168.	The total size of an IPv4 address is:
+(A)16 bits(B)24 bits(C)32 bits(D)128 bits
+Additional	169.	The total number of possible IPv4 addresses is approximately:
+(A)340 billion(B)1 billion(C)128 billion(D)4.29 billion
+Additional	170.	An IPv6 address contains:
+(A)4 numbers(B)6 groups(C)8 groups(D)32 groups
+Additional	171.	Each IPv6 group contains.............digits:
+(A)2 hexadecimal(B)4 hexadecimal(C)8 decimal(D)16 decimal
+Additional	172.	Each group in an IPv6 address represents:
+(A)8 bits(B)64 bits(C)32 bits(D)16 bits
+Additional	173.	The total size of an IPv6 address is:
+(A)32 bits(B)64 bits(C)96 bits(D)128 bits
+Additional	174.	The approximate total number of IPv6 addresses is:
+(A)3.4 × 10³⁸(B)4.29 × 10⁹(C)3.4 × 10⁹(D)1.28 × 10⁶
+Additional	175.	Which addressing version has 32-bit addresses:
+(A)IPv6(B)IPv4(C)NAT(D)DNS
+Additional	176.	A part created when a network is divided into smaller parts is called:
+(A)A subnet(B)A protocol(C)A router(D)An IP address
+Additional	177.	Dividing a network into smaller parts is called:
+(A)NAT(B)Routing(C)Subnetting(D)Addressing
+Additional	178.	Subnetting helps reduce:
+(A)Network traffic(B)Address size(C)Number of devices(D)Internet services
+Additional	179.	Subnetting increases:
+(A)Network traffic(B)Network security(C)Address duplication(D)Network complexity
+Additional	180.	Large networks use subnetting mainly for:
+(A)Entertainment(B)Management(C)File compression(D)Website design
+Additional	181.	NAT stands for:
+(A)Network Address Translation(B)Network Access Transfer(C)Network Address Transmission(D)Network Allocation Translation
+Additional	182.	The technique that allows many devices to share one public IP address is:
+(A)Subnetting(B)IPv4(C)NAT(D)DNS
+Additional	183.	NAT is performed by:
+(A)Routers(B)Web browsers(C)DNS servers(D)Network cables
+Additional	184.	Hiding private IP addresses through NAT improves:
+(A)File size(B)Network security(C)Address length(D)Data formatting
+Additional	185.	Which device commonly performs Network Address Translation:
+(A)Switch(B)Router(C)Modem(D)Printer
+Additional	186.	Which technology hides private IP addresses:
+(A)IPv4(B)Subnetting(C)IPv6(D)NAT
+1.9 Home Network Setup and Configuration
+Additional	187.	A network used to connect different devices in a house is called:
+(A)Wide Area Network(B)Home network(C)Public WAN(D)Ring network
+Additional	188.	The main device in a home network is the:
+(A)Modem(B)Printer(C)Router(D)Laptop
+Additional	189.	The device that connects a home network to the Internet service provider is the:
+(A)Router(B)Modem(C)Switch(D)Printer
+Additional	190.	A wired network uses ........... to connect devices:
+(A)Cables(B)Radio signals(C)Wi-Fi signals(D)Wireless waves
+Additional	191.	Which cable is commonly used in wired networks:
+(A)Power cable(B)Ethernet cable(C)Audio cable(D)Display cable
+Additional	192.	A network that connects devices without using cables is called:
+(A)Wireless network(B)Wired network(C)Bus network(D)Cable network
+Additional	193.	Wireless networks use .......... to send and receive data:
+(A)Ethernet cables(B)Radio signals(C)Network cables(D)Fiber cables
+Additional	194.	Wireless networks may be ......... than wired networks in some cases:
+(A)More secure(B)More stable(C)Slower(D)Larger
+1.10 Wi-Fi Security and Router Configuration
+Additional	195.	The protection of a Wi-Fi network from unauthorized access is called:
+(A)Wi-Fi security(B)Data sharing(C)Network routing(D)Guest browsing
+Additional	196.	Hackers can steal personal information from:
+(A)Secure networks(B)Guest networks(C)Unsecured networks(D)Wired networks
+Additional	197.	The tool used to manage router settings is the:
+(A)Guest network(B)Default gateway(C)Router web interface(D)Wi-Fi encryption
+Additional	198.	The router web interface is opened using a:
+(A)Printer(B)Switch(C)Network cable(D)Web browser
+Additional	199.	To access the router web interface, the user enters the router's:
+(A)IP address(B)MAC address(C)Wi-Fi signal(D)Network name
+Additional	200.	The process that protects data sent over a Wi-Fi network is called:
+(A)Routing(B)Encryption(C)Gateway forwarding(D)Guest access
+Additional	201.	A device or setting that connects a local network to other networks is called a:
+(A)Guest network(B)Wi-Fi protocol(C)Default gateway(D)Web browser
+Additional	202.	A default gateway is usually a:
+(A)Computer(B)Printer(C)Mobile phone(D)Router
+Additional	203.	Data meant for outside networks goes through the:
+(A)Web browser(B)Guest network(C)Wi-Fi password(D)Default gateway
+Additional	204.	Which protocol is an older and insecure protocol:
+(A)WPA2(B)WPA3(C)Wi-Fi(D)WEP
+1.11 Network Diagnostic Tools and Commands
+Additional	205.	The process of finding and fixing network issues is called:
+(A)Network sharing(B)Network troubleshooting(C)Network browsing(D)Network installation
+Additional	206.	During network troubleshooting, which of the following is checked:
+(A)Cables(B)Devices(C)Settings(D)All of these
+Additional	207.	The command used to test network connectivity is:
+(A)ping(B)ipconfig(C)ifconfig(D)Telnet
+Additional	208.	The ping command sends ........... to another device:
+(A)Large files(B)Network cables(C)Small data packets(D)Passwords
+Additional	209.	Ping measures the ......... from the destination:
+(A)Response time(B)File size(C)IP version(D)Cable length
+Additional	210.	Which command can be used to identify network delays:
+(A)ipconfig(B)ifconfig(C)PuTTY(D)ping
+Additional	211.	Troubleshooting helps reduce network:
+(A)Speed(B)Downtime and errors(C)Connectivity(D)Security
+Additional	212.	Which command is used in the Windows operating system to display network settings:
+(A)ifconfig(B)SSH(C)Telnet(D)ipconfig
+Additional	213.	Which command is used in Linux and macOS systems to display network settings:
+(A)ifconfig(B)ipconfig(C)ping(D)PuTTY
+Additional	214.	The ipconfig and ifconfig commands display:
+(A)Application files(B)User passwords(C)Network settings(D)Hardware prices
+Additional	215.	Which of the following sends data without encryption:
+(A)SSH(B)PuTTY(C)Telnet(D)Ping
+Additional	216.	Which of the following is used for remote device access device:
+(A)SSH(B)PuTTY(C)Ping(D)Telnet
+Additional	217.	Which tool is specifically described as a popular tool for remote login:
+(A)PuTTY(B)ipconfig(C)ping(D)ifconfig
+Additional	218.	Which method encrypts data for safe remote access:
+(A)Telnet(B)Ping(C)SSH(D)ipconfig
+Additional	219.	Which command tests whether a network device is reachable:
+(A)ping(B)ipconfig(C)ifconfig(D)SSH
+Additional	220.	Which tool provides secure remote access by encrypting data:
+(A)Telnet(B)SSH(C)ping(D)ipconfig
+1.12 Network Performance
+Additional	221.	Network performance shows the ........ of data transfer:
+(A)Speed and quality(B)Size and weight(C)Cost and distance(D)Number and type
+Additional	222.	The amount of data sent in a given time is called:
+(A)Network latency(B)Network congestion(C)Network bandwidth(D)Network delay
+Additional	223.	Network bandwidth is usually measured in:
+(A)Milliseconds(B)Kilometers(C)Mbps(D)Bytes per second
+Additional	224.	The time taken by data to travel is called:
+(A)Bandwidth(B)Network speed(C)Network capacity(D)Network latency
+Additional	225.	Network latency is measured in:
+(A)Mbps(B)Bytes(C)Kilometers(D)Milliseconds
+Additional	226.	Low latency means:
+(A)Faster response(B)Slower response(C)Higher bandwidth(D)Network congestion
+Additional	227.	High latency causes:
+(A)Faster transfer(B)Lag and delay(C)Higher bandwidth(D)Better response
+Additional	228.	Which of the following indicates better response time:
+(A)High latency(B)Low latency(C)Low bandwidth(D)Network congestion
+Additional	229.	Which condition can lead to slow Internet speed:
+(A)High bandwidth(B)Low bandwidth(C)Low latency(D)Fast response
+1.13 Network Load Balancing
+Additional	230.	Load balancing increases network:
+(A)Congestion(B)Failure(C)Reliability and availability(D)Delay
+Additional	231.	The method that sends requests one by one is:
+(A)IP Hash(B)Least Connection(C)Round Robin(D)Network Hash
+Additional	232.	Which of the following is a basic load balancing method:
+(A)Round Robin(B)Least Connection(C)IP Hash(D)All of these
+Additional	233.	Which method sends traffic to less busy servers:
+(A)Round Robin(B)Least Connection(C)IP Hash(D)Random Connection
+Additional	234.	Which method uses an IP address to decide traffic distribution:
+(A)Round Robin(B)Least Connection(C)IP Hash(D)Server Connection
+Additional	235.	Which of the following can improve through load balancing:
+(A)Network speed(B)Response time(C)Reliability(D)All of these
+Additional	236.	Load balancing is particularly useful when a network has:
+(A)High traffic(B)No traffic(C)One device(D)No servers
+Additional	237.	Which of the following helps a network handle more users:
+(A)Load balancing(B)Server failure(C)Network congestion(D)Device overload
+1.14 Network Secutiry
+Additional	238.	The protection of computer networks from unauthorized access is called:
+(A)Network topology(B)Network security(C)Network architecture(D)Network routing
+Additional	239.	Without security, computer networks can become:
+(A)Faster(B)Larger(C)More organized(D)Unsafe
+Additional	240.	Network security also protects devices from:
+(A)Malware(B)Cables(C)Printers(D)Routers
+Additional	241.	Which security measure controls incoming and outgoing traffic:
+(A)Encryption(B)Access control(C)Firewall(D)Username
+Additional	242.	The security process that changes data into a secret form is called:
+(A)Access control(B)Encryption(C)Filtering(D)Routing
+Additional	243.	Only ........ users can read encrypted data:
+(A)New(B)Public(C)Authorized(D)Unknown
+Additional	244.	Encryption protects data during:
+(A)Transfer(B)Printing(C)Typing(D)Storage
+Additional	245.	Encryption helps prevent:
+(A)Data theft(B)Network expansion(C)Device movement(D)File naming
+Additional	246.	The security method that decides who can use a network is called:
+(A)Encryption(B)Firewall(C)Access control(D)Data transfer
+Additional	247.	Which of the following is a network security threat:
+(A)Firewall(B)Encryption(C)Phishing(D)Access control
+Additional	248.	People who try to steal data are called:
+(A)Administrators(B)Hackers(C)Users(D)Operators
+Additional	249.	Which threat attempts to trick users into providing information:
+(A)Malware(B)Virus(C)Phishing(D)Firewall
+Additional	250.	Which threat can stop network services:
+(A)Encryption(B)Access control(C)Firewall(D)Denial of Service attack
+1.15 Data Backup and Recovery
+Additional	251.	Making a copy of important data is called:
+(A)Data recovery(B)Data backup(C)Data deletion(D)Data processing
+Additional	252.	The process of getting data back is called:
+(A)Data recovery(B)Data backup(C)Data storage(D)Data transfer
+Additional	253.	Which backup type saves changes since the last full backup:
+(A)Full backup(B)Differential backup(C)Incremental backup(D)Recovery backup
+Additional	254.	Which service can also be used for storing backups:
+(A)System restore(B)Cloud storage(C)Recovery software(D)Hardware failure
+Additional	255.	Which backup type saves only changed data:
+(A)Incremental backup(B)Full backup(C)Differential backup(D)System backup
+Additional	256.	Which backup type saves all data at once:
+(A)Incremental backup(B)Differential backup(C)Recovery backup(D)Full backup
+Additional	257.	Which files can be used for data recovery:
+(A)Temporary files(B)Backup files(C)Unwanted files(D)System errors
+Additional	258.	Which method can recover system data:
+(A)Full backup(B)Cloud storage(C)System restore(D)Incremental backup
+Additional	259.	Data from damaged devices can be recovered by:
+(A)Users only(B)Backup files(C)Professionals(D)Viruses
+Additional	260.	Which of the following can cause data loss:
+(A)Cloud storage(B)Hardware failure(C)Full backup(D)System restore
+Additional	261.	The backup that saves changes since the last full backup is:
+(A)Incremental backup(B)Differential backup(C)Full backup(D)Recovery backup
+1.16 Usability and Security Tradeoffs
+Additional	262.	The ease with which a system can be used is called:
+(A)Security(B)Usability(C)Accessibility(D)Networking
+Additional	263.	The protection of systems and data is called:
+(A)Usability(B)Simplicity(C)Security(D)Accessibility
+Additional	264.	Which of the following is a benefit of security:
+(A)Increased risk(B)Data protection(C)User confusion(D)Difficult learning
+Additional	265.	Which security measure can slow users down:
+(A)Simple design(B)Extra login steps(C)Clear instructions(D)Easy navigation
+Additional	266.	Which feature is an example of strong security that may reduce usability:
+(A)Simple interface(B)Quick learning(C)Strong passwords(D)Clear tasks
+2.1 Introduction to Computational Thinking
+Exercise	267.	Computational thinking is mainly used for:
+(A)Playing computer games(B)Solving problems in a logical way(C)Writing essays(D)Drawing pictures
+Additional	268.	A way of thinking used to solve problems clearly and logically is called:
+(A)Visual thinking(B)Network thinking(C)Mechanical thinking(D)Computational thinking
+Additional	269.	Computational thinking is mainly used for:
+(A)Solving problems(B)Drawing pictures(C)Playing music(D)Creating hardware
+Additional	270.	What does computational thinking help us identify in problems and solutions:
+(A)Networks(B)Passwords(C)Patterns(D)Hardware
+Additional	271.	Computational thinking removes:
+(A)Important points(B)All information(C)Unnecessary details(D)Solutions
+Additional	272.	While solving a problem, computational thinking focuses on:
+(A)Unnecessary details(B)Important points(C)Random information(D)Unrelated tasks
+Additional	273.	Sorting books by subject or size demonstrates:
+(A)Encryption(B)Pattern recognition(C)Data recovery(D)Network routing
+Additional	274.	Which of the following professionals may use computational thinking:
+(A)Scientists(B)Engineers(C)Chefs(D)All of these
+2.2 Problem Solving Using Computational Thinking
+Exercise	275.	The first step in problem solving is:
+(A)Writing code(B)Evaluating the solution(C)Identifying the problem(D)Breaking the problem
+Exercise	276.	Breaking a large problem into smaller parts is called:
+(A)Abstraction(B)Decomposition(C)Evaluation(D)Automation
+Exercise	277.	A step-by-step solution to a problem is known as an:
+(A)Program(B)Flowchart(C)Algorithm(D)Function2.4 PROPOSITIONAL LOGIC
+Additional	278.	Problem solving using computational thinking helps solve problems in a:
+(A)Random and confusing way(B)Logical and organized way(C)Slow and unclear way(D)Complex and unplanned way
+Additional	279.	Computational thinking improves overall:
+(A)Problem-solving ability(B)Network speed(C)Computer memory(D)Internet connection
+Additional	280.	During problem identification, unnecessary details should be:
+(A)Added(B)Memorized(C)Ignored(D)Repeated
+Additional	281.	A clear problem leads to a:
+(A)Correct solution(B)Larger problem(C)Random result(D)Slower process
+Additional	282.	Clear thinking makes problem solving:
+(A)More difficult(B)Easier(C)Slower(D)Impossible
+Additional	283.	Breaking a problem into smaller parts is called:
+(A)Evaluation(B)Programming(C)Testing(D)Decomposition
+Additional	284.	Smaller parts of a problem are easier to:
+(A)Ignore(B)Understand and manage(C)Remove(D)Complicate
+Additional	285.	Decomposition allows each part to be solved:
+(A)Randomly(B)At the same time(C)Without planning(D)Step by step
+Additional	286.	Decomposition helps us organize our:
+(A)Hardware(B)Networks(C)Thoughts(D)Files
+Additional	287.	Step-by-step solutions are known as:
+(A)Patterns(B)Programs(C)Networks(D)Algorithms
+Additional	288.	Creating step-by-step solutions helps solve problems in an:
+(A)Organized way(B)Random way(C)Unclear way(D)Unplanned way
+Additional	289.	The steps of an algorithm must be in:
+(A)Any order(B)Reverse order(C)Correct order(D)Random order
+Additional	290.	Correctly ordered steps help prevent:
+(A)Learning(B)Understanding(C)Planning(D)Errors
+Additional	291.	Clear step-by-step solutions can be understood and used by:
+(A)Anyone(B)Computers only(C)Experts only(D)Programmers only
+Additional	292.	After finding a solution, it is important to:
+(A)Ignore it(B)Evaluate it(C)Delete it(D)Complicate it
+Additional	293.	Evaluation helps check whether a solution is:
+(A)Expensive(B)Long(C)Correct(D)Complex
+Additional	294.	Evaluation allows us to:
+(A)Find and fix mistakes(B)Create more errors(C)Ignore problems(D)Remove all steps
+2.3 Logic as a Representation Framework
+Additional	295.	The science of true reasoning is called:
+(A)Logic(B)Programming(C)Networking(D)Computing
+Additional	296.	Which of following helps computers store, understand, and use information correctly:
+(A)Networking(B)Programming(C)Logic(D)Computing
+Additional	297.	Logic helps computers think in a:
+(A)Structured way(B)Random way(C)Confusing way(D)Unplanned way
+Additional	298.	Logical reasoning helps solve problems:
+(A)Step by step(B)Randomly(C)Without rules(D)Without information
+Additional	299.	Which of the following helps solve problems without guesswork:
+(A)Logical reasoning(B)Random selection(C)Unplanned action(D)Unclear information
+Additional	300.	Logic helps computers make decisions that are:
+(A)Uncertain(B)Random(C)Confusing(D)Accurate
+Additional	301.	Logic helps computers make decisions that are:
+(A)Unclear(B)Random(C)Consistent(D)Unplanned
+2.4 Propositional Logic
+Exercise	302.	The logic that uses only true or false values is:
+(A)Predicate logic(B)Fuzzy logic(C)Propositional logic(D)Natural logic
+Exercise	303.	A compound proposition is:
+(A)(P)(B)(Q)(C)(P∧Q)(D)TRUTH
+Additional	304.	The basic form of logic used in computer science is called:
+(A)Propositional logic(B)Network logic(C)Hardware logic(D)Numerical logic
+Additional	305.	Statements used in propositional logic are called:
+(A)Algorithms(B)Propositions(C)Variables(D)Commands
+Additional	306.	Propositional logic forms the base of:
+(A)Computer reasoning(B)Computer hardware(C)Network cables(D)Data storage
+Additional	307.	A statement that is either true or false is called:
+(A)Question(B)Command(C)Proposition(D)Algorithm
+Additional	308.	Which of the following cannot be both true and false at the same time:
+(A)An instruction(B)A question(C)A command(D)A proposition
+Additional	309.	Commands are not:
+(A)Propositions(B)Logical expressions(C)Statements(D)Instructions
+Additional	310.	A proposition should not be:
+(A)Clear(B)Confusing(C)Meaningful(D)True or false
+Additional	311.	The basic units of logic are:
+(A)Algorithms(B)Commands(C)Questions(D)Propositions
+Additional	312.	A proposition is usually represented by:
+(A)A capital letter(B)A number only(C)A symbol only(D)A small sentence
+Additional	313.	Compound propositions are joined using:
+(A)Logical connectives(B)Questions(C)Commands(D)Numbers
+Additional	314.	Compound propositions are common in:
+(A)Logical reasoning(B)Hardware manufacturing(C)Cable installation(D)File storage
+Additional	315.	Which of the following is a logical connective:
+(A)AND(B)THEN(C)BECAUSE(D)WHILE
+Additional	316.	Propositions are used to form:
+(A)Logical expressions(B)Computer hardware(C)Network cables(D)Storage devices
+Additional	317.	Which connective reverses the truth of a statement:
+(A)AND(B)OR(C)NOT(D)BOTH
+2.5 Truth Table
+Exercise	318.	The purpose of a truth table is to:
+(A)Write programs(B)Store data(C)Evaluate logical expressions(D)Design algorithms
+Additional	319.	A table used to show the truth values of statements is called:
+(A)Truth table(B)Data table(C)Network table(D)Decision chart
+Additional	320.	Truth tables are used in:
+(A)Logic(B)Hardware design(C)Networking(D)File storage
+Additional	321.	The main purpose of a truth table is to show how a logical expression:
+(A)Is printed(B)Is stored(C)Behaves(D)Is transmitted
+Additional	322.	Truth tables help find when a statement is:
+(A)Open or closed(B)Large or small(C)Fast or slow(D)True or false
+Additional	323.	Truth tables can be used to check:
+(A)Complex expressions(B)Computer hardware(C)Internet speed(D)Storage capacity
+Additional	324.	Each proposition is given a truth value of:
+(A)Open or Closed(B)Yes or Maybe(C)High or Low(D)True or False
+Additional	325.	For n propositions, a truth table has:
+(A)2ⁿ rows(B)n² rows(C)2n rows(D)n + 2 rows
+Additional	326.	If a truth table has 8 rows, the number of propositions is:
+(A)2(B)3(C)4(D)8
+Additional	327.	The number of rows in a truth table depends on the number of:
+(A)Propositions(B)Words(C)Connectives(D)Column
+2.6 Propositional Equivalence
+Additional	328.	The concept that explains when two logical expressions have the same meaning is called:
+(A)Data conversion(B)Logical separation(C)Propositional equivalence(D)Program execution
+Additional	329.	Propositional equivalence is a concept in:
+(A)Propositional logic(B)Computer networking(C)Data storage(D)Hardware design
+Additional	330.	Propositional equivalence is checked using:
+(A)Algorithms(B)Network diagrams(C)Flowcharts(D)Truth tables
+Additional	331.	If two expressions have the same truth values in all cases, they are:
+(A)Unrelated(B)Different(C)Invalid(D)Equivalent
+Additional	332.	The symbol used to show propositional equivalence is:
+(A)=(B)+(C)×(D)%
+Additional	333.	Propositional equivalence improves:
+(A)Clarity in reasoning(B)Network speed(C)Storage capacity(D)Hardware performance
+Additional	334.	Equivalent expressions always give the same:
+(A)Result(B)Appearance(C)Length(D)Logic
+Additional	335.	Equivalent logical expressions are identified using:
+(A)Computer memory(B)Network cables(C)Truth tables(D)Input devices
+Additional	336.	When identifying equivalent expressions, each expression is tested for:
+(A)All possible truth values(B)Only true values(C)Only false values(D)One random value
+Additional	337.	If two expressions have different results in at least one case, they are:
+(A)Identical(B)Always equivalent(C)Not equivalent(D)Simplified
+Additional	338.	Besides truth tables, equivalence can also be identified using:
+(A)File systems(B)Alogrithms(C)Flowcharts(D)Logical laws
+Additional	339.	The main benefit of equivalence in logic is that it helps:
+(A)Simplify logic problems(B)Increase logical confusion(C)Remove logical reasoning(D)Create hardware devices
+Additional	340.	Equivalence allows complex expressions to be replaced with:
+(A)Simpler expressions(B)Longer expressions(C)Unrelated expressions(D)Random statements
+Additional	341.	In programming, equivalent expressions can improve:
+(A)Hardware speed(B)Network security(C)Code efficiency(D)Storage capacity
+Additional	342.	Equivalence helps programmers avoid:
+(A)Logical errors(B)Syntax errors(C)Logical expressions(D)Truth tables
+Additional	343.	Understanding equivalence strengthens:
+(A)Logical thinking(B)Network connections(C)Hardware installation(D)File storage
+2.7 Propositional Satisfiability
+Exercise	344.	A proposition that is true for at least one case is called:
+(A)Unsatisfiable(B)Invalid(C)Satisfiable(D)Equivalent
+Additional	345.	The concept that checks whether a logical statement can be true is called:
+(A)Propositional satisfiability(B)Propositional equivalence(C)Data processing(D)Program execution
+Additional	346.	Understanding satisfiability improves:
+(A)Reasoning skills(B)Network speed(C)Storage capacity(D)Hardware performance
+Additional	347.	Satisfiability helps solve complex problems:
+(A)Randomly(B)Efficiently(C)Without reasoning(D)Logical expressions
+Additional	348.	If all possible combinations make a proposition false, it is:
+(A)Unsatisfiable(B)Satisfiable(C)Equivalent(D)Simple
+Additional	349.	One way to test satisfiability is by using:
+(A)A truth table(B)A network diagram(C)Flowchart(D)A file system
+Additional	350.	An expression with at least one solution is:
+(A)Undefined(B)Unsatisfiable(C)Incorrect(D)Satisfiable
+Additional	351.	An expression with no solution is:
+(A)Simple(B)Satisfiable(C)Equivalent(D)Unsatisfiable
+Additional	352.	The expression “Bring pizza OR (burger AND do NOT bring soda)” is:
+(A)Satisfiable(B)Unsatisfiable(C)Impossible(D)Undefined
+Additional	353.	The example “Bring pizza AND do NOT bring pizza” is:
+(A)Unsatisfiable(B)Satisfiable(C)Equivalent(D)True in every case
+Additional	354.	“Bring pizza AND do NOT bring pizza” has:
+(A)Two solution(B)One solution(C)No solutions(D)Many solutions
+Additional	355.	If every result in a truth table is false, the expression is:
+(A)Unsatisfiable(B)Satisfiable(C)Equivalent(D)Simple
+Additional	356.	If a truth table contains at least one true result for an expression, the expression is:
+(A)Satisfiable(B)Unsatisfiable(C)Invalid(D)Undefined
+2.8 Predicate Logic
+Exercise	357.	Predicate logic is mainly used to:
+(A)Draw diagrams(B)Represent relationships using variables(C)Store numbers(D)Design networks
+Additional	358.	Predicate logic is an extension of:
+(A)Truth tables(B)Propositional logic(C)Algorithmic logic(D)Programming logic
+Additional	359.	Predicate logic allows us to express more detailed statements about:
+(A)Objects and their properties(B)Programs and files only(C)Numbers and equations only(D)Computers and networks only
+Additional	360.	A predicate is a statement that can be true or false depending on the:
+(A)Number of objects(B)Logical connective(C)Values of the variables(D)Size of the statement
+Additional	361.	Which of the following is an example of a predicate:
+(A)x is greater than 5(B)Open the door(C)What is your name(D)Please sit down
+Additional	362.	The statement “x is greater than 5” is a predicate because it depends on:
+(A)5(B)The subject(C)x(D)The sentence length
+Additional	363.	Predicate logic is used to represent knowledge:
+(A)Randomly(B)Formally(C)Visually(D)Numerically
+Additional	364.	Propositional logic cannot describe relationships between:
+(A)Logical expressions(B)Objects(C)Variables(D)Truth values
+Additional	365.	Compared with propositional logic, predicate logic is:
+(A)Less expressive(B)More expressive(C)Equally flexible(D)Unrelated
+Additional	366.	Predicate logic is described as more expressive and:
+(A)Powerful(B)Limited(C)Simple(D)Restricted
+Additional	367.	Propositional logic is easier to understand but:
+(A)More expressive(B)More flexible(C)Less flexible(D)More powerful
+Additional	368.	“For all x, x > 0” is an example of a statement using:
+(A)Variables(B)Commands(C)Questions(D)Logical tables
+Additional	369.	In Tall(Ali), “Tall” represents the:
+(A)Property(B)Variable(C)Object(D)Domain
+Additional	370.	Which logic is described as less flexible:
+(A)Predicate logic(B)Propositional logic(C)Both equally(D)Neither
+2.9 Quantifiers in Predicate Logic
+Exercise	371.	The symbol for the universal quantifier is:
+(A)∃(B)→(C)∧(D)∀
+Additional	372.	Quantifiers make predicate logic more powerful than:
+(A)Mathematics(B)Logic proofs(C)Propositional logic(D)Problem solving
+Additional	373.	The universal quantifier is commonly expressed by:
+(A)∃(B)∧(C)∨(D)∀
+Additional	374.	The universal quantifier makes statements about:
+(A)Every object in a domain(B)Only one object(C)Some objects only(D)No objects
+Additional	375.	The existential quantifier indicates that a statement is true for:
+(A)Every object(B)At least one object(C)No object(D)Every variable only
+Additional	376.	The existential quantifier is denoted by:
+(A)∀(B)∧(C)∃(D)→
+Additional	377.	Which quantifier means “there exists”:
+(A)Universal quantifier(B)Existential quantifier(C)General quantifier(D)Domain quantifier
+Additional	378.	Which quantifier refers to every object in a domain:
+(A)Existential(B)Universal(C)Specific(D)Conditional
+Additional	379.	Which quantifier refers to at least one object:
+(A)Universal(B)General(C)Existential(D)Logical
+Additional	380.	Which statement is associated with the universal quantifier:
+(A)There exists(B)For all(C)Some only(D)At least one
+Additional	381.	Which statement is associated with the existential quantifier:
+(A)For every(B)For all(C)There exists(D)No object
+Additional	382.	Which quantifier is appropriate for a statement about every object in a set:
+(A)Existential(B)Universal(C)Specific(D)Conditional
+Additional	383.	Which quantifier is appropriate when at least one object satisfies a condition:
+(A)Universal(B)Existential(C)General(D)Domain
+Additional	384.	In “∃x, P(x),” the symbol ∃ means:
+(A)For all(B)There exists(C)Not(D)Or
+Additional	385.	In “∀x, P(x),” P(x) is true for:
+(A)At least one x(B)Every x(C)No x(D)Only one x
+Additional	386.	Quantifiers can be combined with:
+(A)Predicates(B)Preposition(C)Logic(D)Flowchart
+Additional	387.	Which quantifier helps express general rules clearly:
+(A)Existential(B)Conditional(C)Specific(D)Universal
+Additional	388.	Which quantifier helps express possibilities and specific examples:
+(A)Universal(B)Existential(C)General(D)Logical
+Additional	389.	Which quantifier is especially associated with possibilities:
+(A)Universal(B)Existential(C)General(D)Logical
+Additional	390.	Which quantifier is especially associated with general truths:
+(A)Existential(B)Variable(C)Specific(D)Universal
+2.10 Applying Predicate Logic to Real-World Problems
+Additional	391.	Predicate logic can model:
+(A)Social networks(B)Only books(C)Only numbers(D)Only equations
+Additional	392.	In ∀x, Student(x) → Borrows(x, Book), Student(x) indicates that x is a:
+(A)Book(B)Teacher(C)Student(D)Library
+Additional	393.	Predicate logic makes a system easier to:
+(A)Manage(B)Ignore(C)Complicate(D)Replace
+2.11 Logic-Based Reasoning and Inference
+Additional	394.	Logic-based reasoning uses:
+(A)Guesswork(B)Rules of logic(C)Personal opinions(D)Random choices
+Additional	395.	Logic-based reasoning reaches conclusions:
+(A)Randomly(B)Without facts(C)Step by step(D)Without rules
+Additional	396.	Logical inference is a way of reasoning that follows:
+(A)Personal preferences(B)Logical rules(C)Random patterns(D)Guesses
+Additional	397.	In the Socrates example, “All humans are mortal” is a:
+(A)Premise(B)Question(C)Conclusion(D)Decision
+Additional	398.	“Socrates is mortal” is the:
+(A)Rule(B)Premise(C)Conclusion(D)Question
+Additional	399.	Inference helps in making decisions based on:
+(A)Evidence(B)Guesswork(C)Emotions(D)Random choices
+Additional	400.	Inference is a fundamental concept in:
+(A)Logic and reasoning(B)Graphic design(C)Word processing(D)File storage
+Additional	401.	Deduction is a type of:
+(A)Data storage(B)Reasoning(C)Programming language(D)Information system
+Additional	402.	Deduction starts from:
+(A)Specific conclusions(B)General facts(C)Random information(D)Questions
+Additional	403.	In the rain example, “It is raining” is:
+(A)A conclusion(B)A premise(C)A question(D)A result of deduction
+Additional	404.	Which process uses known information to derive new facts:
+(A)Deduction(B)Data entry(C)Logical inference(D)Information storage
+Additional	405.	Which process starts with general facts and reaches a specific conclusion:
+(A)Logical inference(B)Decision-making(C)Verification(D)Deduction
+Additional	406.	The main basis of logic-based reasoning is:
+(A)Logical rules(B)Personal opinions(C)Random choices(D)Unverified information
+Additional	407.	Reasoning can be used to verify:
+(A)Information(B)Colors(C)Shapes only(D)File names
+Additional	408.	Logical inference helps make conclusions:
+(A)Correct and reliable(B)Random and uncertain(C)Unclear and incomplete(D)Personal and subjective
+Additional	409.	The conclusion “Socrates is mortal” is obtained through:
+(A)Logical inference(B)Random guessing(C)Data entry(D)Personal belief
+Additional	410.	What does logical inference derive from known information:
+(A)New facts(B)New opinions(C)Random questions(D)Unrelated data
+3.1 Object-Oriented Programming (OOP) Using Python
+Exercise	411.	Polymorphism in OOP is best defined as:
+(A)Allowing an object to take multiple forms through method overriding.(B)Hiding data inside a class for security.(C)Using multiple inheritance to extend classes.(D)Ensuring that each object has only one method.
+Additional	412.	The method of designing programs using objects and classes is called:
+(A)Procedural Programming(B)Object-Oriented Programming(C)Network Programming(D)Functional Testing
+Additional	413.	Object-Oriented Programming is a method of designing programs using:
+(A)Objects and classes(B)Modules and files(C)Functions and variables(D)Data and networks
+Additional	414.	OOP stands for:
+(A)Object-Oriented Programming(B)Object-Organized Processing(C)Operational Object Programming(D)Online Object Processing
+Additional	415.	Classes are used to create multiple objects with similar:
+(A)Programs(B)Characteristics(C)Systems(D)Modules
+Additional	416.	Dividing code into modules makes it easier to:
+(A)Manage(B)Delete all data(C)Increase errors(D)Reduce security
+Additional	417.	Which of the following is a benefit of OOP:
+(A)Modularity(B)Complexity(C)Repetition(D)Difficulty
+Additional	418.	OOP allows code to be divided into:
+(A)Objects(B)Modules(C)Classes(D)Entities
+Additional	419.	Reusing classes and objects helps to reduce:
+(A)Maintenance(B)Organization(C)Repetition(D)Scalability
+Additional	420.	In OOP, changes in one part of a program do not affect the:
+(A)Classes(B)Objects(C)Entire system(D)Modules
+Additional	421.	The structure of OOP supports scalability and:
+(A)Repetition(B)Adaptability(C)Duplication(D)Complexity
+Additional	422.	OOP supports scalability and adaptability in:
+(A)Software development(B)Network development(C)Hardware development(D)Database development
+Additional	423.	OOP helps programmers think in terms of:
+(A)Real-life objects(B)Computer networks(C)Programming languages(D)Mathematical formulas
+3.2 Core Concepts of OOP
+Exercise	424.	The OOP concept that hides data inside a class is:
+(A)Inheritance(B)Polymorphism(C)Encapsulation(D)Abstraction
+Exercise	425.	Classes and objects in Object-Oriented Programming are best described as:
+(A)Classes are real-world entities, and objects are methods.(B)Classes are blueprints, and objects are instances of those blueprints.(C)Classes are used for data storage, and objects are used for functionality.(D)Objects define functionality, and classes store data.
+Exercise	426.	The main idea behind encapsulation in OOP is:
+(A)To hide data inside a class and prevent unauthorised access.(B)To create a flexible and adaptable programme.(C)To reuse code from other classes.(D)To allow multiple inheritance in classes.
+Exercise	427.	Inheritance in OOP means:
+(A)Reusing and extending functionality from a parent class to a child class.(B)Hiding data in a class.(C)Creating multiple instances of the same class.(D)Managing polymorphic behaviour of classes.
+Exercise	428.	The purpose of polymorphism in programming is:
+(A)To create reusable functions with multiple parameter types.(B)To allow a function or method to have different implementations.(C)To combine different classes into a single class.(D)To manage the flow of control in a programme.
+Exercise	429.	The keyword used to define a class in Python is:
+(A)def(B)class(C)function(D)object
+Exercise	430.	Encapsulation is best described as:
+(A)Combining data and methods into a single unit and controlling access to data.(B)Combining multiple classes into one class.(C)Inheriting methods from other classes.(D)Allowing objects to have multiple forms.
+Exercise	431.	Inheritance allows a class to:
+(A)Hide its data only.(B)Inherit attributes and methods from another class.(C)Define multiple functions only.(D)Create objects without a class.
+Exercise	432.	An example of inheritance in Python is:
+(A)Creating two classes with similar attributes.(B)A child class inheriting attributes and methods from a parent class.(C)Using private variables within a class.(D)Modifying a method inside the same class.
+Additional	433.	Which of the following is a core concept of OOP:
+(A)Compilation(B)Encapsulation(C)Debugging(D)Networking
+Additional	434.	Which concept is represented by the idea of a blueprint:
+(A)Class(B)Object(C)Method(D)Attribute
+Additional	435.	Properties of an entity in a class are called:
+(A)Methods(B)Objects(C)Attributes(D)Instances
+Additional	436.	Actions of an entity in a class are called:
+(A)Methods(B)Attributes(C)Instances(D)Templates
+Additional	437.	An object is the real thing created from a:
+(A)Method(B)Property(C)Blueprint(D)Value
+Additional	438.	A class is a blueprint or template that defines the properties and:
+(A)Entities(B)Objects(C)Values(D)Actions
+Additional	439.	An object is an instance of a:
+(A)Method(B)Class(C)Property(D)Blueprint
+Additional	440.	An object holds actual values for its:
+(A)Methods(B)Classes(C)Attributes(D)Blueprints
+Additional	441.	Classes and objects allow programmers to model .......... in code:
+(A)Real-world entities(B)Computer networks(C)Programming languages(D)File systems
+Additional	442.	Using classes and objects helps organize data and related:
+(A)Networks(B)Functionality(C)Programs(D)Blueprints
+Additional	443.	Using classes and objects makes programs more:
+(A)Repetitive(B)Difficult(C)Complex(D)Structured
+Additional	444.	Actual values for attributes are held by:
+(A)Classes(B)Templates(C)Methods(D)Objects
+Additional	445.	Which OOP concept is described as a blueprint or template:
+(A)Object(B)Class(C)Method(D)Attribute
+Additional	446.	Which OOP concept is described as an instance of a class:
+(A)Object(B)Attribute(C)Method(D)Template
+Additional	447.	The OOP concept in which data and methods are bundled into a single unit is called:
+(A)Inheritance(B)Encapsulation(C)Polymorphism(D)Abstraction
+Additional	448.	In encapsulation, data and methods are bundled into a:
+(A)Function(B)Variable(C)Class(D)Module
+Additional	449.	Encapsulation restricts direct access to:
+(A)Methods(B)Classes(C)Data(D)Functions
+Additional	450.	Python does not have strict keywords for:
+(A)Public and class(B)Private and protected(C)Variable and method(D)Function and object
+Additional	451.	Encapsulation helps to hide data and control access using:
+(A)Variables(B)Objects(C)Classes(D)Methods
+Additional	452.	Encapsulation improves:
+(A)Repetition(B)Security(C)Complexity(D)Duplication
+Additional	453.	Encapsulation makes code easier to:
+(A)Manage(B)Hide completely(C)Delete(D)Duplicate
+Additional	454.	The bank account example demonstrates the concept of:
+(A)Inheritance(B)Polymorphism(C)Encapsulation(D)Modularity
+Additional	455.	In Python, the visibility of class members can be controlled using specific:
+(A)Functions(B)Naming prefixes(C)Objects(D)Keywords
+Additional	456.	By default, all members in Python are:
+(A)Private(B)Protected(C)Public(D)Restricted
+Additional	457.	In Python, members that are accessible from anywhere are called:
+(A)Private members(B)Protected members(C)Public members(D)Hidden members
+Additional	458.	The syntax for a public member is:
+(A)self.__attribute_name(B)self._attribute_name(C)self.attribute_name(D)public.attribute_name
+Additional	459.	A member intended for internal use within a class and its subclasses is called:
+(A)Public member(B)Global member(C)Private member(D)Protected member
+Additional	460.	Protected members are intended to be used within the class and its:
+(A)Functions(B)Objects(C)Modules(D)Subclasses
+Additional	461.	The syntax for a protected member is:
+(A)self.attribute_name(B)self._attribute_name(C)self.__attribute_name(D)protected.attribute_name
+Additional	462.	Protected members are a convention, not a:
+(A)Function(B)Restriction(C)Method(D)Class
+Additional	463.	A protected member uses which naming prefix:
+(A)Single underscore(B)Double underscore(C)No underscore(D)Hash symbol
+Additional	464.	Private members cannot be easily accessed from:
+(A)Inside the class(B)Methods(C)Outside the class(D)The class itself
+Additional	465.	Python uses a mechanism called ........ for private members:
+(A)Encapsulation(B)Name Mangling(C)Inheritance(D)Polymorphism
+Additional	466.	Name Mangling changes the internal name of the:
+(A)Class(B)Method(C)Variable(D)Object
+Additional	467.	Which access level is accessible from anywhere inside or outside the class:
+(A)Private(B)Protected(C)Public(D)Restricted
+Additional	468.	Which access level is highly restricted in Python:
+(A)Public(B)Protected(C)Private(D)Internal
+Additional	469.	Which access level uses Name Mangling in Python:
+(A)Public(B)Protected(C)Private(D)All members
+Additional	470.	Python relies on ......... to signal how data should be accessed:
+(A)Naming conventions(B)Classes(C)Functions(D)Objects
+Additional	471.	The mechanism that allows a class to take properties and methods from another class is called:
+(A)Encapsulation(B)Polymorphism(C)Inheritance(D)Abstraction
+Additional	472.	The new class created through inheritance is called a:
+(A)Parent class(B)Base class(C)Subclass(D)Superclass
+Additional	473.	A subclass can add or modify features of the:
+(A)Child class(B)Parent class(C)Object(D)Method
+Additional	474.	Inheritance promotes code:
+(A)Duplication(B)Reuse(C)Removal(D)Separation
+Additional	475.	Inheritance helps reduce:
+(A)Functionality(B)Scalability(C)Reusability(D)Redundancy
+Additional	476.	How many types of inheritance in python:
+(A)Two(B)Three(C)Four(D)Five
+Additional	477.	Which type of inheritance occurs when a child class inherits from exactly one parent class:
+(A)Multiple Inheritance(B)Multilevel Inheritance(C)Single Inheritance(D)Hybrid Inheritance
+Additional	478.	In single inheritance, a child class inherits attributes and methods from exactly:
+(A)One parent class(B)Two parent classes(C)Three parent classes(D)No parent class
+Additional	479.	The parent class in single inheritance is also called the:
+(A)Child class(B)Subclass(C)Superclass(D)Derived class
+Additional	480.	Single inheritance promotes code:
+(A)Reusability(B)Redundancy(C)Duplication(D)Complexity
+Additional	481.	Single inheritance allows the child class to extend or modify the ..... of the parent:
+(A)Data(B)Behavior(C)Name(D)Object
+Additional	482.	self is the reference to the:
+(A)Parent class(B)Superclass(C)Child class(D)Current object
+Additional	483.	self is passed automatically to:
+(A)Class variables(B)Instance methods(C)Parent classes(D)Subclasses
+Additional	484.	The class whose properties are inherited is called the:
+(A)Child class(B)Derived class(C)Parent class(D)Subclass
+Additional	485.	Another name for the Parent Class is:
+(A)Base Class(B)Child Class(C)Derived Class(D)Instance Class
+Additional	486.	The class that inherits from the parent class is called the:
+(A)Base class(B)Parent class(C)Child class(D)Superclass
+Additional	487.	Another name for the Child Class is:
+(A)Base Class(B)Superclass(C)Parent Class(D)Derived Class
+Additional	488.	A child class is defined by passing the parent class name in:
+(A)Square brackets(B)Curly brackets(C)Parentheses(D)Quotation marks
+Additional	489.	Which syntax is used to define a child class from a parent class:
+(A)class Child[Parent]:(B)class Child(Parent):(C)class Child{Parent}:(D)class Child=Parent:
+Additional	490.	Which function can be used to call the parent's version of a method:
+(A)self()(B)parent()(C)super()(D)base()
+Additional	491.	Multiple inheritance allows a class to inherit attributes and methods from more than one:
+(A)Object(B)Method(C)Parent class(D)Subclass
+Additional	492.	Multiple inheritance enables a child class to combine behaviors from:
+(A)Different sources(B)One source only(C)One object only(D)One method only
+Additional	493.	Which type of inheritance creates a chain similar to a family tree:
+(A)Single Inheritance(B)Multiple Inheritance(C)Multilevel Inheritance(D)Simple Inheritance
+Additional	494.	Multilevel inheritance occurs when a class inherits from another:
+(A)Parent class(B)Derived class(C)Object(D)Function
+Additional	495.	Which concept allows a child class to provide a specific implementation of a parent method:
+(A)Method Overriding(B)Multiple Inheritance(C)Name Mangling(D)Encapsulation
+Additional	496.	Polymorphism means:
+(A)One form(B)Many forms(C)No form(D)Same form
+Additional	497.	The ability of an entity to take many forms is called:
+(A)Inheritance(B)Encapsulation(C)Polymorphism(D)Abstraction
+Additional	498.	Polymorphism makes code more:
+(A)Flexible and reusable(B)Complex and lengthy(C)Restricted and fixed(D)Dependent on hardware
+Additional	499.	Which concept allows the same operation to behave differently based on the object or context:
+(A)Inheritance(B)Encapsulation(C)Polymorphism(D)Compilation
+Additional	500.	Which type of polymorphism decides which method or operation to run during compilation:
+(A)Runtime polymorphism(B)Compile-time polymorphism(C)Object polymorphism(D)Dynamic polymorphism
+Additional	501.	Compile-time polymorphism is usually achieved through method or:
+(A)Class overriding(B)Data hiding(C)Object creation(D)Operator overloading
+Additional	502.	Python does not support true method overloading based on:
+(A)Objects(B)Function signatures(C)Classes(D)Methods
+Additional	503.	Python does not support true method overloading like statically typed languages such as:
+(A)Java or C++(B)HTML or CSS(C)SQL or Python(D)PHP or HTML
+Additional	504.	Python is a ........... typed language:
+(A)Statically(B)Manually(C)Strongly(D)Dynamically
+Additional	505.	In Python, signature-based method overloading is considered:
+(A)Necessary(B)Unnecessary(C)Mandatory(D)Not Required
+Additional	506.	Similar behavior to method overloading in Python can be achieved using:
+(A)Default arguments(B)Classes only(C)Objects only(D)Inheritance
+Additional	507.	Similar behavior to method overloading can also be achieved using ...... inside the function:
+(A)Inheritance(B)Conditional logic(C)Encapsulation(D)Name Mangling
+Additional	508.	Runtime polymorphism means that the behavior of a method is decided while the program is:
+(A)Compiled(B)Written(C)Running(D)Installed
+Additional	509.	Runtime polymorphism happens through:
+(A)Method Overriding(B)Method Hiding(C)Name Mangling(D)Method Overloading
+Additional	510.	The dynamic nature of runtime polymorphism makes Python particularly powerful for:
+(A)Runtime polymorphism(B)Compile-time polymorphism(C)Method overloading(D)Static typing
+4.1 Graphical User Interface (GUI) Development with Tkinter
+Exercise	511.	The main purpose of a GUI in Python programming is to:
+(A)Create a user-friendly interface for interacting with software(B)Manage files in Python(C)Handle network operations(D)Store and retrieve data from databases
+Exercise	512.	Python's built-in GUI toolkit is:
+(A)wxPython(B)Tkinter(C)PyQt(D)Kivy
+Exercise	513.	The Tkinter widget used to display text is:
+(A)Button(B)Label(C)Entry(D)Listbox
+Exercise	514.	The pack() method in Tkinter is used to:
+(A)Align widgets vertically or horizontally(B)Organize widgets in rows and columns(C)Set widget sizes manually(D)Create pop-up windows
+Exercise	515.	The methods used to organize widgets in Tkinter include:
+(A)grid()(B)pack()(C)place()(D)All of the above
+Exercise	516.	Event-driven programming in Tkinter means:
+(A)Writing code that runs without user input(B)Writing code that responds to user actions such as clicks or key presses(C)Writing code to manage database queries(D)Writing code to handle network requests
+Exercise	517.	The Tkinter widget used to get user input is:
+(A)Label(B)Button(C)Entry(D)Listbox
+Exercise	518.	The Tkinter layout manager that allows precise positioning of widgets using coordinates is:
+(A)pack()(B)grid()(C)place()(D)align()
+Exercise	519.	The Tkinter option that connects a button click to a function is:
+(A)bind()(B)configure()(C)command= (no parentheses)(D)execute()
+Additional	520.	The visual interface that allows users to interact with software is called:
+(A)Command-Line Interface(B)Graphical User Interface(C)Programming Interface(D)Network Interface
+Additional	521.	Which of the following is a visual element used in GUI development:
+(A)Compiler(B)Button(C)Variable(D)Function
+Additional	522.	Which of the following is mentioned as a visual element of a GUI:
+(A)Windows(B)Algorithms(C)Loops(D)Classes
+Additional	523.	GUIs make applications more:
+(A)Complex(B)Technical(C)Difficult(D)User-friendly
+Additional	524.	The development that allows programs to interact with users through visual elements is called:
+(A)GUI development(B)Network development(C)Database development(D)System development
+Additional	525.	Which of the following is NOT mentioned as a GUI visual element:
+(A)Window(B)Label(C)Text box(D)Router
+Additional	526.	GUIs make applications easier to use compared to:
+(A)Object-oriented interfaces(B)Command-line interfaces(C)Database interfaces(D)Programming interfaces
+Additional	527.	Tkinter is a built-in ......... library in Python:
+(A)Networking(B)GUI(C)Database(D)Security
+Additional	528.	Tkinter is Python's built-in library for creating:
+(A)Database programs(B)Command-line programs(C)Network programs(D)GUI programs
+Additional	529.	Which library is built into Python for creating GUI programs:
+(A)Matplotlib(B)NumPy(C)Pandas(D)Tkinter
+Additional	530.	Tkinter allows developers to design interactive applications:
+(A)Quickly(B)Slowly(C)Manually(D)Indirectly
+Additional	531.	GUI stands for:
+(A)General User Input(B)Graphical User Interface(C)Graphical Utility Integration(D)General Utility Interface
+Additional	532.	GUIs improve usability by reducing the need to remember:
+(A)Visual elements(B)Complex commands(C)Software names(D)Programming languages
+Additional	533.	Tkinter supports .................... programming:
+(A)Event-driven(B)Machine-level(C)Database-driven(D)Command-line
+Additional	534.	In event-driven programming, actions are triggered by:
+(A)Classes(B)User events(C)Variables(D)Files
+Additional	535.	Which Tkinter component creates the main window:
+(A)Window()(B)Create()(C)Tk(D)GUI()
+Additional	536.	Which Tkinter component displays text:
+(A)Label(B)Button(C)Entry(D)Frame
+Additional	537.	Which Tkinter component takes user input:
+(A)Button(B)Frame(C)Label(D)Entry
+Additional	538.	Which Tkinter component performs an action:
+(A)Label(B)Entry(C)Button(D)Frame
+Additional	539.	Which command is associated with event handling for a button click:
+(A)command=on_click(B)click=button(C)event=button(D)action=click
+Additional	540.	Which function runs the Tkinter GUI:
+(A)start()(B)run()(C)mainloop()(D)execute()
+Additional	541.	Tkinter components are also called:
+(A)Variables(B)Widgets(C)Functions(D)Classes
+Additional	542.	Tkinter comes ........... with Python:
+(A)Separately purchased(B)Pre-installed(C)Only with Windows(D)Only with Linux
+Additional	543.	A Tkinter component used to build an interactive graphical application is called a:
+(A)Widget(B)Protocol(C)Packet(D)Compiler
+Additional	544.	Tkinter supports .........management to arrange widgets neatly on the screen:
+(A)Memory(B)Layout(C)Database(D)File
+Additional	545.	A Tkinter program begins by creating a:
+(A)Button(B)Listbox(C)Label(D)Main window
+Additional	546.	The main window serves as the .......... for all other elements:
+(A)Base(B)Output(C)Menu(D)Button
+Additional	547.	The main window can be designed to hold different:
+(A)Widgets(B)Compilers(C)Databases(D)Operating systems
+Additional	548.	Frames are sections within the:
+(A)Button(B)Window(C)Label(D)Entry field
+Additional	549.	The structure created using frames improves:
+(A)Clarity(B)Complexity(C)Redundancy(D)Program size
+Additional	550.	Frames help keep the interface:
+(A)Unorganized(B)Hidden(C)Complicated(D)Well-arranged
+Additional	551.	Which Tkinter component divides a window into sections:
+(A)Label(B)Entry(C)Button(D)Frame
+Additional	552.	Which function places frames and widgets:
+(A)mainloop()(B)pack()(C)place()(D)insert()
+Additional	553.	Which of the following is a common Tkinter widget:
+(A)Label(B)Compiler(C)Database(D)Algorithm
+Additional	554.	Which widget provides a list of options at the top of the window:
+(A)Menu(B)Button(C)Entry(D)Frame
+Additional	555.	Which widget shows a list of items and allows selection from the list:
+(A)Label(B)Entry(C)Button(D)Listbox
+Additional	556.	The technique used to arrange widgets properly inside a window is called:
+(A)Event handling(B)Memory management(C)Data management(D)Layout management
+Additional	557.	Layout management helps keep the window:
+(A)Unorganized(B)Hidden(C)Organized(D)Empty
+Additional	558.	Layout management decides the ........ of each widget on the screen:
+(A)Name and type(B)Position and size(C)Color and font(D)Value and method
+Additional	559.	Tkinter provides different ......... to manage layout:
+(A)Classes(B)Operators(C)Variables(D)Methods
+Additional	560.	Each layout management method has its own way of ........ widgets:
+(A)Deleting(B)Hiding(C)Naming(D)Placing
+Additional	561.	Proper layout management helps applications look:
+(A)Neat(B)Complex(C)Unorganized(D)Confusing
+Additional	562.	Which Tkinter method places widgets in a simple vertical or horizontal order:
+(A)grid()(B)place()(C)pack()(D)mainloop()
+Additional	563.	The pack() method works well for:
+(A)Small applications(B)Only large applications(C)Database systems(D)Operating systems
+Additional	564.	Which method arranges widgets in rows and columns like a table:
+(A)pack()(B)place()(C)grid()(D)mainloop()
+Additional	565.	The grid() method arranges widgets like a:
+(A)Tree(B)Table(C)Circle(D)Line
+Additional	566.	Which method positions widgets at exact locations on the window:
+(A)pack()(B)grid()(C)place()(D)mainloop()
+Additional	567.	The place() method gives:
+(A)Less control(B)More control(C)No control(D)Automatic control
+Additional	568.	Responsive interfaces adjust their layout when the ......... changes:
+(A)Font(B)Size(C)Color(D)Title
+Additional	569.	Responsive interfaces help programs work well on different:
+(A)Screen sizes(B)Programming languages(C)Databases(D)Classes
+Additional	570.	Proper alignment improves the overall ........ of the application:
+(A)Code(B)Look(C)Speed(D)Memory
+Additional	571.	Which layout method is commonly suitable for small applications:
+(A)grid()(B)place()(C)pack()(D)mainloop()
+Additional	572.	Which layout method is useful for forms and structured layouts:
+(A)place()(B)grid()(C)pack()(D)Tk()
+Additional	573.	The process that allows a program to respond to user actions is called:
+(A)Event handling(B)Data processing(C)File handling(D)Memory management
+Additional	574.	An action such as clicking a button or typing text is called a:
+(A)Function(B)Widget(C)Event(D)Variable
+Additional	575.	Which of the following is an example of an event:
+(A)Defining a variable(B)Clicking a button(C)Creating a class(D)Saving a file
+Additional	576.	Event-driven programming is based on actions called:
+(A)Variables(B)Objects(C)Classes(D)Events
+Additional	577.	When an event occurs, a specific .......... is performed:
+(A)Task(B)Database(C)Class(D)Variable
+Additional	578.	In event-driven programming, the program remains idle until:
+(A)A variable is declared(B)A file is created(C)A class is defined(D)An event occurs
+Additional	579.	Each event is linked to a specific:
+(A)Variable(B)Database(C)Class(D)Function
+Additional	580.	The function linked to an event runs only when:
+(A)A variable is created(B)The program starts(C)The window closes(D)The event happens
+Additional	581.	When a widget is used, the connected function:
+(A)Executes(B)Deletes itself(C)Remains inactive(D)Closes the program
+Additional	582.	Connecting widgets to functions allows the program to:
+(A)Process the input(B)Delete the input(C)Hide the input(D)Ignore the input
+4.2 Working with Database in Python
+Exercise	583.	CRUD operations in databases stand for:
+(A)Create, Read, Update, Delete(B)Create, Run, Upload, Delete(C)Copy, Retrieve, Upload, Download(D)Create, Remove, Update, Manage
+Additional	584.	A structured collection of data stored for easy access and management is called a:
+(A)Database(B)Program(C)Network(D)Compiler
+Additional	585.	Databases allow applications to handle large amounts of information:
+(A)Efficiently(B)Randomly(C)Slowly(D)Manually
+Additional	586.	A database is an organized collection of:
+(A)Data(B)Programs(C)Networks(D)Devices
+Additional	587.	A database stores data in a:
+(A)Graphical format(B)Random format(C)Temporary format(D)Structured format
+Additional	588.	Databases reduce:
+(A)Data reliability(B)Data security(C)Data accuracy(D)Data duplication
+Additional	589.	Databases support ............... storage of information:
+(A)Random(B)Secure(C)Temporary(D)Unstructured
+Additional	590.	A real-world object about which data is stored in a database is called an:
+(A)Entity(B)Column(C)Key(D)Field
+Additional	591.	A property or characteristic of an entity is called an:
+(A)Identifier(B)Entity(C)Relationship(D)Attribute
+Additional	592.	The property that describes an entity is called an:
+(A)Relationship(B)Table(C)Attribute(D)Database
+Additional	593.	A connection between two or more entities is called a:
+(A)Relationship(B)Column(C)Attribute(D)Record
+Additional	594.	An attribute that uniquely identifies each record or object is called an:
+(A)Relationship(B)Entity(C)Identifier(D)Column
+Additional	595.	A database that stores data in tables and links them using relationships is called a:
+(A)Relational database(B)Network device(C)File system(D)Programming language
+Additional	596.	A relational database stores data in:
+(A)Files(B)Images(C)Tables(D)Networks
+Additional	597.	A row in a database table represents a:
+(A)Field(B)Record(C)Property(D)Database
+Additional	598.	A column in a database table represents a:
+(A)Field(B)Record(C)Relationship(D)Database
+Additional	599.	A property or characteristic of an entity in a table is represented by a:
+(A)Database(B)Row(C)Column(D)Record
+Additional	600.	A unique identifier for each record in a table is called a:
+(A)Attribute(B)Foreign key(C)Primary key(D)Relationship
+Additional	601.	A field that links one table to another by referring to another table's primary key is called a:
+(A)Foreign key(B)Primary key(C)Entity(D)Attribute
+Additional	602.	A foreign key refers to the ........... of another table:
+(A)Database name(B)Column name(C)Primary key(D)Table size
+Additional	603.	A primary key is a ........... identifier for each record in a table:
+(A)Unique(B)Random(C)Temporary(D)Common
+Additional	604.	Relationships between tables are maintained using:
+(A)Keys(B)Widgets(C)Functions(D)Variables
+Additional	605.	SQL stands for:
+(A)System Query Language(B)Standard Query Language(C)Structured Query Logic(D)Structured Query Language
+Additional	606.	Connecting Python to a database allows programs to work with:
+(A)Stored data(B)Computer hardware(C)Network devices(D)Operating systems
+Additional	607.	Python provides .......... to help establish database connections:
+(A)Methods(B)Routers(C)Libraries(D)Compilers
+Additional	608.	Which Python library is built into Python for working with small databases:
+(A)PostgreSQL(B)MySQL(C)SQLServer(D)sqlite3
+Additional	609.	Which database system is used for larger and more complex database systems:
+(A)MySQL(B)sqlite3(C)Tkinter(D)Python IDLE
+Additional	610.	The final step after the database operation is to:
+(A)Execute Query(B)Create Cursor(C)Close Connection(D)Connect again
+Additional	611.	Python sends SQL commands using a database:
+(A)Window(B)Widget(C)Frame(D)Cursor
+Additional	612.	Data can be retrieved using:
+(A)SELECT queries(B)INSERT queries(C)UPDATE queries(D)DELETE queries
+Additional	613.	CRUD defines the basic ........... of a database:
+(A)Actions(B)Programs(C)Interfaces(D)Connections
+Additional	614.	Which SQL command is used to add new records:
+(A)INSERT(B)SELECT(C)UPDATE(D)DELETE
+Additional	615.	The Read operation is used to ............ data from the database:
+(A)Fetch(B)Delete(C)Modify(D)Replace
+Additional	616.	Which SQL command is commonly used for reading data:
+(A)UPDATE(B)INSERT(C)SELECT(D)DELETE
+Additional	617.	The Update operation changes ........... data in a database:
+(A)Existing(B)New only(C)Deleted(D)Unrelated
+Additional	618.	The Read operation does not ............ the stored data:
+(A)Process(B)Retrieve(C)Display(D)Change
+Additional	619.	Which SQL command modifies selected records:
+(A)DELETE(B)INSERT(C)SELECT(D)UPDATE
+Additional	620.	The Delete operation removes .......... data from a database:
+(A)Unwanted(B)Important(C)New(D)Required
+Additional	621.	Which SQL command is used to remove data:
+(A)UPDATE(B)INSERT(C)SELECT(D)DELETE
+Additional	622.	Which statement is used to save changes in the database:
+(A)connection.commit()(B)connection.close()(C)cursor.execute()(D)cursor.fetch()
+Additional	623.	Without commit(), deletion will not be:
+(A)Selected(B)Possible(C)Executed(D)Permanent
+Additional	624.	Which sequence correctly represents the four CRUD operations:
+(A)Create → Read → Update → Delete(B)Read → Create → Delete → Update(C)Update → Create → Read → Delete(D)Delete → Update → Read → Create
+Additional	625.	Which of the following operations does NOT change stored data:
+(A)Read(B)Create(C)Update(D)Delete
+5.2 Testing and Debugging Techniques
+Exercise	626.	Testing is essential for reliable applications because it helps to:
+(A)Optimise code performance(B)Identify and fix bugs(C)Reduce the program size(D)Make code run faster
+Exercise	627.	Common types of programming errors include:
+(A)Syntax error(B)Logic error(C)Runtime error(D)All of the above
+Exercise	628.	Unit testing focuses on:
+(A)Testing the entire application(B)Testing individual components or functions(C)Testing the user interface(D)Testing database connections
+Exercise	629.	The Python module used for unit testing is:
+(A)numpy(B)matplotlib(C)unittest(D)os
+Exercise	630.	The main purpose of using testing tools like unittest and pytest:
+(A)to increase program size(B)to verify code works correctly(C)to design layouts(D)to compile programs
+Exercise	631.	Breakpoints in debugging are used to:
+(A)Run the program faster(B)Pause the program at specific points and inspect its state(C)Skip certain code sections(D)Optimise the code
+Exercise	632.	Watch expressions in debugging are used to:
+(A)Change variable values(B)Monitor variable values during program execution(C)Pause the program(D)Display output messages
+Exercise	633.	Step-by-step debugging is used to:
+(A)Run the program faster(B)Execute code one line at a time for easier error identification(C)Increase the program's performance(D)Compile the code
+Exercise	634.	The Python keyword pair used for exception handling is:
+(A)try-except(B)try-finally(C)try-catch(D)handle-throw
+Additional	635.	Advanced testing and debugging techniques go beyond:
+(A)Basic error fixing(B)Program development(C)Software installation(D)User interaction
+Additional	636.	Advanced testing and debugging techniques ensure:
+(A)File size(B)Hardware quality(C)Network speed(D)Program quality
+Additional	637.	Testing and debugging techniques identify:
+(A)Hidden problems(B)New users(C)Network devices(D)Database tables
+Additional	638.	Testing ensures that all functions produce:
+(A)Larger outputs(B)Different results(C)Correct results(D)Random outputs
+Additional	639.	Testing checks whether an application meets its:
+(A)Hardware specifications(B)File size(C)Requirements(D)Network address
+Additional	640.	Testing and debugging make future ........... easier:
+(A)Installation(B)Maintenance(C)Networking(D)Typing
+Additional	641.	Debugging locates the:
+(A)User's password(B)Cause of errors(C)Database server(D)Network address
+Additional	642.	19. An error that occurs when code does not follow language rules is called:
+(A)Logic error(B)Runtime error(C)Syntax error(D)Data error
+Additional	643.	21. An error that appears while a program is running is called:
+(A)Syntax error(B)Logic error(C)Runtime error(D)Data error
+Additional	644.	Which occurs when a program produces incorrect results:
+(A)Syntax error(B)Logic error(C)Runtime error(D)Resource leak
+Additional	645.	Which of the following is mentioned as a common bug:
+(A)Data error(B)Syntax rule(C)User requirement(D)Correct output
+Additional	646.	Identifying programming errors is important for building:
+(A)Bigger databases(B)Larger networks(C)Faster keyboards(D)Stable applications
+Additional	647.	Which technique checks whether an application meets its requirements:
+(A)Debugging(B)Testing(C)Programming(D)Maintenance
+Additional	648.	Which technique locates the cause of errors:
+(A)Testing(B)Installation(C)Compilation(D)Debugging
+Additional	649.	The process of testing individual parts or units of a program is called:
+(A)Unit testing(B)Debugging(C)Compilation(D)Maintenance
+Additional	650.	The main purpose of unit testing is to ensure that individual program units:
+(A)Connect to the internet(B)Use less memory(C)Work correctly(D)Store more data
+Additional	651.	Unit testing makes which process easier:
+(A)Networking(B)Debugging(C)Data entry(D)File compression
+Additional	652.	Which Python modules can be used for writing and running tests:
+(A)unittest and pytest(B)tkinter and math(C)random and os(D)time and sys
+Additional	653.	Which module is built into Python for unit testing:
+(A)unittest(B)pytest(C)testing(D)unittesting
+Additional	654.	Which Python module is built into Python for writing and running tests:
+(A)tkinter(B)pytest(C)unittest(D)sqlite3
+Additional	655.	Which module is an external testing module in Python:
+(A)unittest(B)math(C)pytest(D)random
+Additional	656.	The unittest module provides a framework for creating:
+(A)Network connections(B)Databases(C)GUI widgets(D)Test cases
+Additional	657.	Using unittest and pytest improves program:
+(A)Size(B)Speed(C)Stability(D)Appearance
+Additional	658.	Unit tests check whether each component produces the:
+(A)Expected output(B)Largest output(C)Fastest output(D)Random output
+Additional	659.	Besides functions, testing tools can test individual:
+(A)Classes(B)Monitors(C)Printers(D)Routers
+Additional	660.	A test case defines specific inputs and the:
+(A)Program size(B)Expected output(C)File location(D)Programming language
+Additional	661.	A test case is designed for testing a:
+(A)Network cable(B)Monitor(C)Keyboard(D)Function
+Additional	662.	Automated test execution saves:
+(A)Storage devices(B)Hardware(C)Time(D)Network cables
+Additional	663.	Which testing tool does not require test case classes or boilerplate code like unittest:
+(A)Python(B)unittest(C)pytest(D)tkinter
+Additional	664.	In pytest, tests are written as simple:
+(A)Classes(B)Functions(C)Databases(D)Modules
+Additional	665.	Which keyword is used in pytest to check whether the output is correct:
+(A)check(B)verify(C)assert(D)test
+Additional	666.	To run pytest tests, the user executes which command in the command line:
+(A)unittest(B)python-test(C)testpy(D)pytest
+Additional	667.	Which module requires classes and boilerplate code compared with pytest:
+(A)pytest(B)unittest(C)system test(D)random
+Additional	668.	Which approach uses a framework for creating test cases:
+(A)unittest(B)pytest(C)SQL(D)Tkinter
+Additional	669.	Breakpoints and watches are tools used in:
+(A)Programming(B)Debugging(C)Networking(D)Database design
+Additional	670.	Breakpoints and watches help analyze:
+(A)Program behavior(B)Computer hardware(C)Network speed(D)File size
+Additional	671.	Breakpoints and watches help programmers understand how:
+(A)Code flows(B)Hardware operates(C)Networks connect(D)Files are stored
+Additional	672.	A breakpoint is a marker that:
+(A)Deletes a line of code(B)Changes a variable(C)Pauses program execution at a chosen line(D)Runs the entire program
+Additional	673.	When a program reaches a breakpoint, its execution:
+(A)Restarts(B)Stops(C)Finishes(D)Deletes
+Additional	674.	Breakpoints help focus on specific sections of code without:
+(A)Using variables(B)Opening an IDE(C)Running the entire program(D)Writing functions
+Additional	675.	Watch expressions are used to track:
+(A)Computer temperature(B)Variable values(C)File extensions(D)Network cables
+Additional	676.	Watch expressions track variable values while the program is:
+(A)Being deleted(B)Being installed(C)Running(D)Being compiled
+Additional	677.	Watch expressions update automatically when variable values:
+(A)Change(B)Are deleted(C)Are printed(D)Are renamed
+Additional	678.	Which debugging tool pauses execution at a selected line:
+(A)Watch expression(B)Continue(C)Breakpoint(D)Step Over
+Additional	679.	Which debugging tool monitors changing variable values:
+(A)Breakpoint(B)Step Into(C)Continue(D)Watch expression
+Additional	680.	Which debugging process helps detect where errors occur:
+(A)File management(B)Data entry(C)Step-by-step debugging(D)Screen recording
+Additional	681.	Step-by-step debugging helps programmers follow the program’s:
+(A)File structure(B)Logic(C)Hardware configuration(D)Network address
+Additional	682.	Which debugging action goes inside a function to see how it is working:
+(A)Continue(B)Step Over(C)Step Into(D)Breakpoint
+Additional	683.	Which command continues execution until the next breakpoint:
+(A)Step Into(B)Step Over(C)Continue(D)Watch
+Additional	684.	Which debugging option executes the current line without going inside any functions:
+(A)Continue(B)Step Into(C)Step Over(D)Watch Expression
+Additional	685.	Which feature automatically tracks changes in a variable during program execution:
+(A)Breakpoint(B)Step Into(C)Watch expression(D)Continue
+Additional	686.	Exception handling is used to manage errors that occur during:
+(A)Program execution(B)Program installation(C)Hardware manufacturing(D)File downloading
+Additional	687.	Exception handling helps prevent a program from:
+(A)Saving data(B)Crashing(C)Running(D)Executing
+Additional	688.	Which block is used to handle errors and prevent crashes:
+(A)finally(B)rollback(C)try-except(D)commit
+Additional	689.	The commit() operation is used to:
+(A)Cancel changes(B)Save correct data(C)Close the database(D)Catch exceptions
+Additional	690.	The commit() operation helps ensure data:
+(A)Integrity(B)Deletion(C)Compression(D)Duplication
+Additional	691.	Which operation cancels changes if an error occurs:
+(A)commit()(B)try-except(C)finally(D)rollback()
+Additional	692.	Which statement is used to safely close the database:
+(A)rollback()(B)finally(C)commit()(D)except
+Additional	693.	Python allows catching multiple exceptions in one:
+(A)function(B)variable(C)try-except block(D)database
+Additional	694.	Each exception type can be handled with a:
+(A)Specific response(B)Random response(C)Database response(D)Hardware response
+Additional	695.	Handling multiple exceptions ensures proper:
+(A)Error recovery(B)File compression(C)Hardware control(D)Network configuration
+Additional	696.	Which operation saves correct database changes:
+(A)rollback()(B)finally(C)commit()(D)except
+5.3 Profiling and Optimization
+Exercise	697.	Profiling in programming is used to:
+(A)Improve the user interface design(B)Measure performance and identify bottlenecks(C)Optimise memory usage only(D)Test for security vulnerabilities
+Additional	698.	Optimization focuses on making slow or resource-heavy parts:
+(A)Larger(B)Faster(C)More complex(D)Unavailable
+Additional	699.	Regular profiling ensures that code remains efficient as it:
+(A)Is deleted(B)Becomes smaller(C)Grows(D)Stops running
+Additional	700.	Profiling helps identify slow parts of a program so they can be improved for better:
+(A)Security(B)Performance(C)Storage(D)Appearance
+Additional	701.	A statement that runs one hundred million times can make a program:
+(A)More secure(B)Much faster(C)Very slow(D)Easier to read
+Additional	702.	A part of code that makes a program very slow is called a:
+(A)Performance bottleneck(B)Bug(C)Error(D)Function library
+Additional	703.	Profiling tools track the execution time and ......... of different functions:
+(A)File size(B)Memory usage(C)Network speed(D)Screen resolution
+Additional	704.	Which Python module can be used for profiling program performance:
+(A)tkinter(B)sqlite3(C)cProfile(D)unittest
+Additional	705.	Which Python module is used to compare execution times:
+(A)timeit(B)pytest(C)tkinter(D)random
+Additional	706.	Measuring performance helps programmers prioritize areas for:
+(A)Deletion(B)Optimization(C)Installation(D)Documentation
+Additional	707.	Optimization can improve performance by reducing:
+(A)Necessary functions(B)Unnecessary operations(C)Program requirements(D)Expected outputs
+Additional	708.	cProfile generates a profiling report showing how much time each function takes during:
+(A)Program installation(B)Program execution(C)Program deletion(D)Code writing
+Additional	709.	The function taking more execution time is called the:
+(A)Optimizer(B)Profiler(C)Bottleneck(D)Algorithm
+Additional	710.	Which tool helps compare the execution time of slow and fast code:
+(A)cProfile(B)timeit(C)unittest(D)pytest
+6.1 Introduction To Data Science
+Exercise	711.	Data science is mainly concerned with:
+(A)Designing hardware(B)Extracting useful information from data(C)Writing only code(D)Creating websites
+6.2 Understanding Data
+Exercise	712.	Data organised in rows and columns is called:
+(A)Unstructured data(B)Structured data(C)Raw data(D)Random data
+Exercise	713.	An example of unstructured data is:
+(A)Tables(B)Spreadsheets(C)Images and videos(D)Images and videos
+6.4 Machine Learning Mechanisms
+Exercise	714.	Machine learning allows systems to:
+(A)Work without data(B)Learn from data and improve performance(C)Only store data(D)Replace databases
+Exercise	715.	The type of machine learning that uses labelled data is:
+(A)Unsupervised learning(B)Reinforcement learning(C)Supervised learning(D)Rule-based learning
+Exercise	716.	The machine learning method that learns through rewards and penalties is:
+(A)Supervised learning(B)Unsupervised learning(C)Reinforcement learning(D)Rule-based learning
+6.6 Building Machine Learning Model
+Exercise	717.	Feature engineering is used to:
+(A)Delete data(B)Improve data for better model performance(C)Store data(D)Visualise data
+Exercise	718.	train-test-split is used to:
+(A)Delete data(B)Divide data for training and testing(C)Store data(D)Visualise data
+6.7 Model Evaluation And Performance Metrics
+Exercise	719.	The metric that measures the overall correctness of a model is:
+(A)Precision(B)Recall(C)Accuracy(D)F1_score
+6.8 Validation And Model Improvement
+Exercise	720.	A commonly used tool for machine learning and data analysis is:
+(A)MS Word(B)Python(C)PowerPoint(D)Notepad
+7.1 Introduction To Hypothesis Testing
+Exercise	721.	A hypothesis is:
+(A)A final result(B)A test value(C)A proposed explanation(D)A dataset
+7.2 Types Of Hypotheses
+Exercise	722.	The null hypothesis represents:
+(A)An alternative idea(B)No effect or no difference(C)A final conclusion(D)A prediction model
+Exercise	723.	The symbol used for the null hypothesis is:
+(A)(H_1)(B)(H_2)(C)(H_0)(D)(H_x)
+7.3 Concepts In Hypothesis Testing
+Exercise	724.	A p-value is used for:
+(A)Measuring accuracy(B)Testing a hypothesis(C)Measuring variance(D)Data storage
+Exercise	725.	If (p-value < a ), the decision is to:
+(A)Accept (H_0)(B)Reject (H_0)(C)Ignore data(D)Recalculate the mean
+Exercise	726.	The critical region is the:
+(A)Safe area(B)Rejection area(C)Data range(D)Sample space
+7.4 Performing Hypothesis Tests
+Exercise	727.	An example of a test statistic is:
+(A)Mean(B)t-value(C)Mode(D)Median
+7.5 Data Visualization For Hypothesis Testing
+Exercise	728.	Data visualisation is used to:
+(A)Store data(B)Present results clearly(C)Delete data(D)Calculate the mean
+Exercise	729.	A chart useful for comparison is:
+(A)Pie chart(B)Bar chart(C)Table(D)Text
+7.6 Ethical Issues In Data Science And Analysis
+Exercise	730.	Bias in data means:
+(A)Correct data(B)Balanced data(C)Unfair representation(D)Random data
+8.1 Understanding Emerging Technologies
+Exercise	731.	Artificial Intelligence (AI) is best described as:
+(A)A system that connects devices to the Internet(B)A program that performs human-like tasks(C)A method of storing files online(D)A social media algorithm
+Exercise	732.	The Internet of Things (IoT) is mainly used to:
+(A)Allow devices to communicate automatically(B)Store documents securely(C)Manage Internet connections(D)Create digital art
+Exercise	733.	An example of cloud computing is:
+(A)Google Drive(B)Microsoft Word(C)Smartwatch(D)USB flash drive
+Exercise	734.	Blockchain technology is known for:
+(A)Decentralized and secure records(B)Temporary file storage(C)High-speed networking(D)Real-time video editing
+8.2 Cultural And Ethical Implications Of AI Systems
+Exercise	735.	An ethical issue in AI systems is:
+(A)Data bias in decision-making(B)Using colorful interfaces(C)Quick data analysis(D)Saving battery power
+Exercise	736.	The purpose of AI governance policies is to:
+(A)Increase automation speed(B)Protect privacy and ensure responsible use(C)Reduce programming errors(D)Promote entertainment content
+8.3 Designing Applications For Pakistan Using Emerging Technologies
+Exercise	737.	In agriculture, IoT and AI can work together to:
+(A)Automate soil and crop monitoring(B)Create social media advertisements(C)Manage financial transactions(D)Generate artwork
+Exercise	738.	Transparency in agriculture supply chains can be improved using:
+(A)Blockchain and cloud computing(B)HTML and CSS(C)GPS and Wi-Fi(D)Python and Excel
+9.1 Safe And Responsible Digital Practices
+Exercise	739.	The following helps keep online accounts secure:
+(A)Weak passwords(B)Strong passwords(C)Sharing passwords(D)Simple passwords
+Exercise	740.	The main danger of downloading unknown software is:
+(A)Faster browsing(B)Getting rewards(C)Malware infection(D)Extra storage
+Exercise	741.	Digital etiquette means:
+(A)Sharing all files freely(B)Using rude language online(C)Safe and polite online behaviour(D)Ignoring team members
+9.2 Cybersecurity Awareness And Threat Management
+Exercise	742.	The tool that adds an extra layer of login security is:
+(A)Screensaver(B)Two-Factor Authentication(C)Wallpaper(D)Search engine
+Exercise	743.	The cyber threat that tricks users into giving personal information is:
+(A)Phishing(B)Antivirus(C)Encryption(D)Backup
+Exercise	744.	The purpose of a firewall is to:
+(A)Delete files(B)Block harmful network traffic(C)Play games(D)Slow down the computer
+9.3 Digital Collaboration And Equity In Computing
+Exercise	745.	Encryption is used to:
+(A)Delete data(B)Make data readable to everyone(C)Convert data into a secure form(D)Upload data automatically
+Exercise	746.	A commonly used platform for online collaboration is:
+(A)Paint(B)Google Workspace(C)Notepad(D)VLC Player
+9.5 Ethical, Legal And Environmental Impacts Of Computing
+Exercise	747.	E-waste means:
+(A)Old clothes(B)Electronic garbage(C)Raw materials(D)Food waste
+Exercise	748.	The international law that protects user privacy is:
+(A)HTML(B)GDPR(C)CPU(D)LAN
+
+-> short questions
+1.1 Introduction to Computer Networks
+1	.	What is a computer network?
+Exercise
+2	.	Write two uses of computer networks.
+Exercise
+3	.	What is a computer network?
+Additional
+4	.	What is the main purpose of a computer network?
+Additional
+5	.	Name any four places where computer networks are used.
+Additional
+6	.	List any four uses of computer networks.
+Additional
+1.2 Network Architecture and Basic Concepts
+7	.	What is network architecture?
+Exercise
+8	.	Define network architecture.
+Additional
+9	.	What does network architecture include?
+Additional
+10	.	How does a good network architecture help a network?
+Additional
+11	.	How does a network work?
+Additional
+1.3 Types of Common Networks
+12	.	What is a Local Area Network (LAN)?
+Exercise
+13	.	On what basis are computer networks classified?
+Additional
+14	.	What are the common types of computer networks?
+Additional
+15	.	Why is understanding network types important?
+Additional
+16	.	What is a Local Area Network (LAN)?
+Additional
+17	.	What are the main features of a LAN?
+Additional
+18	.	What is a Wide Area Network (WAN)?
+Additional
+19	.	Name two commonly used networking technologies in LANs.
+Additional
+20	.	Write two disadvantages of WAN.
+Additional
+21	.	What is the Internet?
+Additional
+22	.	Name three services that use the Internet.
+Additional
+23	.	Why does the Internet play an important role in daily life?
+Additional
+24	.	What is DSL?
+Additional
+25	.	What is an ISP?
+Additional
+26	.	What is the difference between LAN and WAN?
+Additional
+27	.	What is the difference between DSL and ISP?
+Additional
+1.4 Network Devices
+28	.	Name any two components of a computer network.
+Exercise
+29	.	What is the function of a router?
+Exercise
+30	.	Why are networking devices used in a network?
+Additional
+31	.	Name five common networking devices.
+Additional
+32	.	What is a Network Interface Card (NIC)?
+Additional
+33	.	What is the function of a NIC?
+Additional
+34	.	What is a switch?
+Additional
+35	.	What is the function of a switch in a network?
+Additional
+36	.	What is a router?
+Additional
+37	.	What is the main function of a router?
+Additional
+38	.	What is a modem?
+Additional
+39	.	What is the function of a modem?
+Additional
+40	.	What is a wireless access point?
+Additional
+41	.	What is the purpose of a wireless access point?
+Additional
+42	.	What is the difference between a switch and a router?
+Additional
+43	.	What is the difference between a router and a modem?
+Additional
+44	.	What is the difference between a modem and a wireless access point?
+Additional
+45	.	What is the difference between a NIC and a switch?
+Additional
+1.5 Network Topologies
+46	.	Write the name of any two network topologies.
+Exercise
+47	.	What is network topology?
+Additional
+48	.	Differentiate between physical topology and logical topology.
+Additional
+49	.	What is bus topology?
+Additional
+50	.	Write any three advantages of Bus Topology.
+Additional
+51	.	Write any three disadvantages of Bus Topology.
+Additional
+52	.	What is star topology?
+Additional
+53	.	How are devices connected in star topology?
+Additional
+54	.	Why is star topology easy to manage?
+Additional
+55	.	Write any two advantages of Star Topology.
+Additional
+56	.	Write any two disadvantages of Star Topology.
+Additional
+57	.	What happens if the central device fails in Star Topology?
+Additional
+58	.	What is ring topology?
+Additional
+59	.	Write any two advantages of Ring Topology.
+Additional
+60	.	Write the disadvantages of Ring Topology.
+Additional
+61	.	What is mesh topology?
+Additional
+62	.	How data travel in mesh topology?
+Additional
+63	.	Write the advantages of Mesh Topology.
+Additional
+64	.	Write the disadvantages of Mesh Topology.
+Additional
+65	.	Why is Mesh Topology considered highly reliable?
+Additional
+66	.	What is tree topology?
+Additional
+67	.	Write any two advantages of Tree Topology.
+Additional
+68	.	Write any two disadvantages of Tree Topology.
+Additional
+69	.	What is the major risk in Tree Topology?
+Additional
+1.6 Network Models and Layers
+70	.	What is the OSI model?
+Exercise
+71	.	What is a network model?
+Additional
+72	.	What is the advantage of layered model?
+Additional
+73	.	What are network layers?
+Additional
+74	.	What is the OSI model?
+Additional
+75	.	Why is the OSI model used?
+Additional
+76	.	Write the name of layers of the OSI model.
+Additional
+77	.	What is the function of the Physical Layer?
+Additional
+78	.	What is the role of the Data Link Layer?
+Additional
+79	.	What is the function of the Network Layer?
+Additional
+80	.	What is the role of the Transport Layer?
+Additional
+81	.	What is the function of the Session Layer?
+Additional
+82	.	What does the Presentation Layer handle?
+Additional
+83	.	What is the role of the Application Layer?
+Additional
+84	.	Name the protocols supported by the Application Layer.
+Additional
+1.7 Network Protocols and Services
+85	.	What is a network protocol?
+Exercise
+86	.	What is the purpose of DNS?
+Exercise
+87	.	Define a network protocol.
+Additional
+88	.	What is the purpose of a network protocol?
+Additional
+89	.	What is TCP/IP?
+Additional
+90	.	What is the main use of TCP/IP?
+Additional
+91	.	What is the difference between TCP and IP protocols?
+Additional
+92	.	What is the difference between HTTP and HTTPS?
+Additional
+93	.	What is HTTP?
+Additional
+94	.	What is the purpose of HTTP?
+Additional
+95	.	What is HTTPS?
+Additional
+96	.	What is the purpose of SSL/TLS protocols?
+Additional
+97	.	What is FTP?
+Additional
+98	.	What is the main purpose of FTP?
+Additional
+99	.	What is the main function of DNS?
+Additional
+100	.	Differentiate between HTTP and FTP.
+Additional
+101	.	Differentiate between FTP and DNS.
+Additional
+1.8 IP Addressing and Subnetting
+102	.	Define IP address.
+Additional
+103	.	Write the importance of an IP address.
+Additional
+104	.	What is the difference between IPv4 and IPv6.
+Additional
+105	.	Approximately how many addresses does IPv4 support?
+Additional
+106	.	Why was IPv6 introduced?
+Additional
+107	.	What is IPv4?
+Additional
+108	.	What is IPv6?
+Additional
+109	.	Why will IPv6 never run out of addresses?
+Additional
+110	.	What is subnetting?
+Additional
+111	.	What is a subnet?
+Additional
+112	.	Write any three advantages of subnetting.
+Additional
+113	.	What is NAT?
+Additional
+114	.	Differentiate between subnetting and NAT.
+Additional
+1.9 Home Network Setup and Configuration
+115	.	Define a home network.
+Additional
+116	.	What is the purpose of a home network?
+Additional
+117	.	Name the main components of a home network.
+Additional
+118	.	What is the function of a router and modem in a home network?
+Additional
+119	.	What is a wired network connection?
+Additional
+120	.	Write any two advantages of wired network connections.
+Additional
+121	.	What is the main disadvantage of a wired network?
+Additional
+122	.	Write any two advantages of wireless networks.
+Additional
+123	.	What is a wireless network connection?
+Additional
+124	.	Write one disadvantage of wireless networks?
+Additional
+125	.	Differentiate between wired and wireless network connections.
+Additional
+1.10 Wi-Fi Security and Router Configuration
+126	.	Why is Wi-Fi security important?
+Additional
+127	.	What is a router web interface?
+Additional
+128	.	What is the purpose of a router web interface?
+Additional
+129	.	What is the purpose of Wi-Fi encryption?
+Additional
+130	.	Name two modern and secure Wi-Fi encryption protocols.
+Additional
+131	.	Why should users select the latest encryption method?
+Additional
+132	.	What is a default gateway?
+Additional
+133	.	What is the function of a default gateway?
+Additional
+134	.	What is a guest network?
+Additional
+135	.	Why is a guest network used?
+Additional
+1.11 Network Diagnostic Tools and Commands
+136	.	What are network-diagnostic tools? What is their purpose?
+Additional
+137	.	What is the purpose of network troubleshooting?
+Additional
+138	.	Write any two benefits of proper network troubleshooting.
+Additional
+139	.	What is the purpose of the ping command?
+Additional
+140	.	What are ipconfig and ifconfig commands used for?
+Additional
+141	.	Differentiate between ipconfig and ifconfig.
+Additional
+142	.	Differentiate between Telnet and SSH.
+Additional
+143	.	What is SSH and how does it provide secure remote access?
+Additional
+144	.	What is PuTTY?
+Additional
+1.12 Network Performance
+145	.	What is meant by network performance?
+Additional
+146	.	Name two main factors that affect network performance.
+Additional
+147	.	What is network bandwidth?
+Additional
+148	.	Differentiate between low latency and high latency.
+Additional
+149	.	What is network latency?
+Additional
+150	.	What is network latency?
+Additional
+151	.	Wrtie any four causes of network delay.
+Additional
+152	.	Differentiate between high bandwidth and low bandwidth.
+Additional
+1.13 Network Load Balancing
+153	.	What is network load balancing?
+Additional
+154	.	Why is load balancing used in networks?
+Additional
+155	.	Write any four benefits of load balancing.
+Additional
+156	.	Name three basic load balancing methods.
+Additional
+157	.	What is the Least Connection method?
+Additional
+158	.	Differentiate between Round Robin and Least Connection methods.
+Additional
+159	.	Differentiate between Least Connection and IP Hash methods.
+Additional
+1.14 Network Secutiry
+160	.	What is network security?
+Additional
+161	.	Why is network security important?
+Additional
+162	.	Write any three benefits of network security.
+Additional
+163	.	What is a firewall? What is its main function?
+Additional
+164	.	What is encryption? How does it protect data?
+Additional
+165	.	What is access control?
+Additional
+166	.	Why is access control important for network security?
+Additional
+167	.	Write any four common network security threats.
+Additional
+168	.	Differentiate between firewall and encryption.
+Additional
+169	.	Differentiate between phishing and Denial of Service attack.
+Additional
+1.15 Data Backup and Recovery
+170	.	What is data backup? Why is it important?
+Additional
+171	.	Name any two reasons why data can be lost.
+Additional
+172	.	What is data recovery?
+Additional
+173	.	Name three types of data backup.
+Additional
+174	.	Differentiate between full backup and incremental backup.
+Additional
+175	.	Briefly explain the types of data backup.
+Additional
+176	.	Differentiate between data backup and data recovery.
+Additional
+1.16 Usability and Security Tradeoffs
+177	.	What is meant by usability?
+Additional
+178	.	What are the features of a usable system?
+Additional
+179	.	Write any two benefits of good usability.
+Additional
+180	.	What is meant by security in computer systems?
+Additional
+181	.	What is security? Why is it important for a system?
+Additional
+182	.	What are the tradeoffs between usability and security?
+Additional
+2.1 Introduction to Computational Thinking
+183	.	What is meant by computational thinking?
+Exercise
+184	.	Write two steps involved in computational thinking.
+Additional
+185	.	Name the professionals who use computational thinking.
+Additional
+186	.	Why is computational thinking useful in daily life?
+Additional
+2.2 Problem Solving Using Computational Thinking
+187	.	Why is computational thinking important in problem solving?
+Exercise
+188	.	What is decomposition in problem solving?
+Exercise
+189	.	What is an algorithm?
+Exercise
+190	.	Why is computational thinking useful in daily life?
+Additional
+191	.	What is meant by problem solving using computational thinking?
+Additional
+192	.	How does computational thinking help in problem solving?
+Additional
+193	.	Define decomposition.
+Additional
+194	.	Write any two benefits of breaking a problem into smaller parts.
+Additional
+195	.	Why is identifying a problem clearly the most important step?
+Additional
+196	.	Define an algorithms.
+Additional
+197	.	What is the purpose of evaluating a solution?
+Additional
+198	.	Why is evaluation an important part of problem solving?
+Additional
+199	.	What is meant by identifying a problem clearly?
+Additional
+200	.	What is the of importance of step-by-step solutions in problem solving.
+Additional
+2.3 Logic as a Representation Framework
+201	.	What is logic in computer science?
+Exercise
+202	.	Why is logic important in computer science?
+Additional
+203	.	Why is logic important in computer science?
+Additional
+204	.	How does logic help computers?
+Additional
+205	.	Write any two uses of logic in computer science.
+Additional
+206	.	What is the role of logic in decision making?
+Additional
+2.4 Propositional Logic
+207	.	What is a proposition?
+Exercise
+208	.	Define propositional logic.
+Additional
+209	.	Why are questions and commands not considered propositions?
+Additional
+210	.	What is a simple proposition? Give one example.
+Additional
+211	.	What is a compound proposition? Give one example.
+Additional
+212	.	Name the three main logical connectives.
+Additional
+213	.	Why is understanding propositions important in logic?
+Additional
+214	.	What are logical connectives?
+Additional
+2.5 Truth Table
+215	.	What are truth values?
+Exercise
+216	.	What is a truth table?
+Exercise
+217	.	Define truth table.
+Additional
+218	.	What is the purpose of a truth table?
+Additional
+219	.	Why are truth tables important in propositional logic?
+Additional
+220	.	Write any two uses of truth tables.
+Additional
+221	.	Write the steps involved in creating a truth table for a logical expression.
+Additional
+2.6 Propositional Equivalence
+222	.	What is propositional equivalence?
+Additional
+223	.	How is propositional equivalence checked?
+Additional
+224	.	How are equivalent logical expressions identified using truth tables?
+Additional
+225	.	How do truth tables help in identifying equivalent expressions?
+Additional
+226	.	Write any two benefits of propositional equivalence.
+Additional
+227	.	How can logical laws help in identifying equivalence?
+Additional
+228	.	Why is propositional equivalence important in logic?
+Additional
+2.7 Propositional Satisfiability
+229	.	What is propositional satisfiability?
+Exercise
+230	.	Define propositional satisfiability.
+Additional
+231	.	When is a logical expression called satisfiable?
+Additional
+232	.	Why is satisfiability important in computer science?
+Additional
+233	.	How can we check the satisfiability of a proposition?
+Additional
+234	.	Why is “P AND NOT P” an unsatisfiable expression?
+Additional
+235	.	Why is “P OR Q” a satisfiable expression?
+Additional
+236	.	Differentiate between satisfiable and unsatisfiable expressions with examples.
+Additional
+2.8 Predicate Logic
+237	.	What is a predicate in predicate logic?
+Exercise
+238	.	What is predicate logic?
+Additional
+239	.	What is a predicate? Give one example.
+Additional
+240	.	How is predicate logic different from propositional logic?
+Additional
+241	.	Why is predicate logic more powerful than propositional logic?
+Additional
+242	.	Write one limitation of propositional logic.
+Additional
+243	.	Differentiate between propositional logic and predicate logic.
+Additional
+244	.	Differentiate between predicates and variables.
+Additional
+245	.	What is the role of variables in predicate logic?
+Additional
+246	.	Why is predicate logic more expressive than propositional logic?
+Additional
+247	.	Why is “x is greater than 5” a predicate?
+Additional
+248	.	Define a predicate.
+Additional
+2.9 Quantifiers in Predicate Logic
+249	.	What are quantifiers in predicate logic?
+Additional
+250	.	Define quantifiers.
+Additional
+251	.	What is the universal quantifier? Write its symbol.
+Additional
+252	.	What is the existential quantifier? Write its symbol.
+Additional
+253	.	Why are quantifiers important in predicate logic?
+Additional
+254	.	How do quantifiers make predicate logic more powerful than propositional logic?
+Additional
+255	.	What is the difference between the universal and existential quantifiers?
+Additional
+256	.	Differentiate between “for all” and “there exists” quantifiers.
+Additional
+257	.	What does “∀x, P(x)” and “∃x, P(x)” mean?
+Additional
+258	.	How can quantifiers be combined with predicates?
+Additional
+2.10 Applying Predicate Logic to Real-World Problems
+259	.	How can predicate logic be used to solve real-world problems?
+Additional
+260	.	How does predicate logic help in drawing conclusions?
+Additional
+261	.	What does ∀x, Student(x) → Borrows(x, Book) mean?
+Additional
+262	.	What does ∃y, Book(y) ∧ Available(y) mean?
+Additional
+263	.	How does logical reasoning help in decision-making?
+Additional
+2.11 Logic-Based Reasoning and Inference
+264	.	What is logic-based reasoning?
+Additional
+265	.	Define logical inference.
+Additional
+266	.	What is the purpose of logic-based reasoning and inference?
+Additional
+267	.	What is logical inference? Explain with an example.
+Additional
+268	.	What is deduction in logic?
+Additional
+269	.	Why is deduction considered reliable?
+Additional
+270	.	What logical rules are used in deduction?
+Additional
+271	.	Differentiate between reasoning and inference.
+Additional
+272	.	Differentiate between logical inference and deduction.
+Additional
+3.1 Object-Oriented Programming (OOP) Using Python
+273	.	What is Object-Oriented Programming (OOP)?
+Exercise
+274	.	What is the purpose of a class in Python?
+Exercise
+275	.	Define Object-Oriented Programming.
+Additional
+276	.	What are the main concepts emphasized by OOP?
+Additional
+277	.	Write any two benefits of OOP.
+Additional
+278	.	How does OOP help in code reusability?
+Additional
+279	.	What is an object in OOP?
+Additional
+280	.	Why are programs written using OOP easier to maintain?
+Additional
+281	.	What is meant by modularity in OOP?
+Additional
+282	.	What is meant by reusability?
+Additional
+3.2 Core Concepts of OOP
+283	.	What is the difference between a class and an object?
+Exercise
+284	.	What is purpose of __init_...?
+Exercise
+285	.	What is encapsulation i in OOP, and why is it important?
+Exercise
+286	.	How does encapsulation help in keeping data secure and private?
+Exercise
+287	.	What is inheritance in OOP, and how does it help in reusing functionality?
+Exercise
+288	.	How does inheritance enable the extension of functionality in Python?
+Exercise
+289	.	What is polymorphism in OOP, and how does it make code more flexible?
+Exercise
+290	.	How does polymorphism help in creating adaptable and reusable code?
+Exercise
+291	.	Define a class in OOP.
+Additional
+292	.	What is the relationship between a class and an object?
+Additional
+293	.	Write advantages of using classes and objects.
+Additional
+294	.	Define a class and an object.
+Additional
+295	.	What is the difference between attributes and methods?
+Additional
+296	.	Why is a class called a blueprint or template?
+Additional
+297	.	Define encapsulation.
+Additional
+298	.	Why is encapsulation important in Object-Oriented Programming?
+Additional
+299	.	Write any three advantages of encapsulation.
+Additional
+300	.	Give one real-life example of encapsulation.
+Additional
+301	.	What are the levels of access control in Python?
+Additional
+302	.	What are public members in Python?
+Additional
+303	.	Define protected members and write their syntax.
+Additional
+304	.	Define private members in python and write their syntax.
+Additional
+305	.	What is the difference between protected and private members in Python.
+Additional
+306	.	What is the difference between public and private members in Python.
+Additional
+307	.	What is name mangling in Python?
+Additional
+308	.	What is inheritance in OOP?
+Additional
+309	.	Write the advantages of inheritance?
+Additional
+310	.	What is single inheritance?
+Additional
+311	.	What is multiple inheritance?
+Additional
+312	.	What is multilevel inheritance?
+Additional
+313	.	What is method overriding?
+Additional
+314	.	What is method overriding?
+Additional
+315	.	Differentiate between a parent class and a child class.
+Additional
+316	.	Differentiate between single inheritance and multiple inheritance.
+Additional
+317	.	Differentiate between multiple inheritance and multilevel inheritance.
+Additional
+318	.	What is difference between inheritance and method overriding?
+Additional
+319	.	What is base and drived class?
+Additional
+320	.	What is the purpose of the super() function?
+Additional
+321	.	What is the purpose of self in Python?
+Additional
+322	.	What are the different types of inheritance?
+Additional
+323	.	What is polymorphism in OOP?
+Additional
+324	.	Define polymorphism.
+Additional
+325	.	What is compile-time polymorphism?
+Additional
+326	.	What is runtime polymorphism?
+Additional
+327	.	What is method overriding?
+Additional
+328	.	How is runtime polymorphism achieved in Python?
+Additional
+329	.	Write any two advantages of polymorphism.
+Additional
+330	.	Why is polymorphism useful in programming?
+Additional
+331	.	How is compile-time polymorphism usually achieved?
+Additional
+332	.	Differentiate between compile-time polymorphism and runtime polymorphism.
+Additional
+333	.	Differentiate between method overloading and method overriding.
+Additional
+334	.	Why does Python not support true method overloading?
+Additional
+4.1 Graphical User Interface (GUI) Development with Tkinter
+335	.	What is a GUI and why is it important in application development?
+Exercise
+336	.	What is Tkinter and why is it Python’s built-in GUI toolkit?
+Exercise
+337	.	How do you create a window and add frames in Tkinter?
+Exercise
+338	.	Name two common widgets used in Tkinter.
+Exercise
+339	.	What is the purpose of layout management in Tkinter?
+Exercise
+340	.	How does the pack() method organize elements in Tkinter?
+Exercise
+341	.	What is event-driven programming and how is it used in Tkinter?
+Exercise
+342	.	How do you handle user input in Tkinter?
+Exercise
+343	.	Define Graphical User Interface (GUI).
+Additional
+344	.	Why is GUI important?
+Additional
+345	.	What is Tkinter?
+Additional
+346	.	Write any two advantages of GUI.
+Additional
+347	.	Why is Tkinter used in Python?
+Additional
+348	.	Name any three visual elements used in a GUI.
+Additional
+349	.	Why is Tkinter called Python’s built-in GUI toolkit?
+Additional
+350	.	Name any four common widgets in Tkinter.
+Additional
+351	.	What is the purpose of the Tk() function?
+Additional
+352	.	What is the purpose of mainloop()?
+Additional
+353	.	What is a widget in Tkinter?
+Additional
+354	.	What is the purpose of Tk(), Frame, pack(), and mainloop() in a Tkinter program?
+Additional
+355	.	Differentiate between a Label and an Entry widget.
+Additional
+356	.	Differentiate between a Frame and the main window in Tkinter.
+Additional
+357	.	Differentiate between a Menu and a Listbox.
+Additional
+358	.	Define layout management in Tkinter.
+Additional
+359	.	Why is layout management important?
+Additional
+360	.	What is the purpose of layout management?
+Additional
+361	.	What is the purpose of the pack() method?
+Additional
+362	.	What is the purpose of the grid() method?
+Additional
+363	.	What is the function of the place() method?
+Additional
+364	.	Differentiate between pack() and grid() layout methods.
+Additional
+365	.	Differentiate between grid() and place() layout methods.
+Additional
+366	.	Differentiate between pack() and place() layout methods.
+Additional
+367	.	Write any two features of a clean interface.
+Additional
+368	.	What is a responsive interface?
+Additional
+369	.	What is meant by a clean interface?
+Additional
+370	.	What is the difference between a clean interface and a responsive interface?
+Additional
+371	.	What is event handling?
+Additional
+372	.	Define event-driven programming.
+Additional
+373	.	Differentiate between event handling and event-driven programming.
+Additional
+374	.	Why is event-driven programming useful?
+Additional
+375	.	How user input is handled  in a GUI program?
+Additional
+4.2 Working with Database in Python
+376	.	What is the CRUD operation in database management?
+Exercise
+377	.	How do you connect Python to a database like SQLite?
+Exercise
+378	.	Define database.
+Additional
+379	.	What is an entity? Give one example.
+Additional
+380	.	What is an attribute? Give one example.
+Additional
+381	.	What is a relationship in a database?
+Additional
+382	.	Define an identifier.
+Additional
+383	.	What is a relational database?
+Additional
+384	.	What is a primary key?
+Additional
+385	.	What is a foreign key?
+Additional
+386	.	Define a table in a database.
+Additional
+387	.	Define a column in a database.
+Additional
+388	.	Differentiate between an entity and an attribute.
+Additional
+389	.	Differentiate between a primary key and a foreign key.
+Additional
+390	.	Differentiate between an identifier and an attribute.
+Additional
+391	.	What is SQL?
+Additional
+392	.	What is the purpose of a primary key in a table?
+Additional
+393	.	Differentiate between an entity and a relationship.
+Additional
+394	.	What is the sqlite3 library used for?
+Additional
+395	.	What is the difference between SQLite3 and MySQL?
+Additional
+396	.	What does CRUD stand for?
+Additional
+397	.	What is the purpose of the Create and Read operation?
+Additional
+398	.	What is the purpose of the Update and Delete operation?
+Additional
+399	.	Define CRUD operations.
+Additional
+400	.	What are the four basic operations of CRUD?
+Additional
+401	.	Differentiate between Create and Read operations in CRUD.
+Additional
+402	.	Differentiate between Read and Update operations.
+Additional
+403	.	How are SQL commands executed from Python?
+Additional
+404	.	What is the purpose of connection.commit()?
+Additional
+405	.	What happens if commit() is not used after a deletion?
+Additional
+5.2 Testing and Debugging Techniques
+406	.	Why is testing essential for ensuring reliable applications?
+Exercise
+407	.	What are some common types of programming errors and bugs?
+Exercise
+408	.	What is unit testing, and why is it important in programming?
+Exercise
+409	.	How do Python's unittest and pytest modules help in unit testing?
+Exercise
+410	.	What is the purpose of writing and executing test cases?
+Exercise
+411	.	How do you set breakpoints in IDEs like PyCharm or VS Code?
+Exercise
+412	.	What is the role of monitoring variable values with watch expressions during debugging?
+Exercise
+413	.	What is the step-by-step debugging process in IDEs?
+Exercise
+414	.	How does exception handling help in managing multiple exception types effectively?
+Exercise
+415	.	What is testing in programming?
+Additional
+416	.	What is debugging?
+Additional
+417	.	Why is testing important for applications?
+Additional
+418	.	Why is debugging important?
+Additional
+419	.	Name common types of programming errors.
+Additional
+420	.	Write any two benefits of testing and debugging.
+Additional
+421	.	What is a syntax error?
+Additional
+422	.	What is a logic error?
+Additional
+423	.	What is a runtime error?
+Additional
+424	.	How does testing improve application reliability?
+Additional
+425	.	What is the purpose of testing and debugging?
+Additional
+426	.	Differentiate between testing and debugging.
+Additional
+427	.	Differentiate between syntax errors and logic errors.
+Additional
+428	.	Differentiate between logic errors and runtime errors.
+Additional
+429	.	Differentiate between syntax errors and runtime errors.
+Additional
+430	.	Differentiate between testing and debugging in terms of their purpose.
+Additional
+431	.	Define unit testing.
+Additional
+432	.	Why is unit testing important?
+Additional
+433	.	Name two Python modules used for unit testing.
+Additional
+434	.	What is the unittest module?
+Additional
+435	.	What is pytest?
+Additional
+436	.	Write any two advantages of unit testing.
+Additional
+437	.	How is pytest different from unittest?
+Additional
+438	.	What is a test case?
+Additional
+439	.	What is the purpose of assert in pytest?
+Additional
+440	.	Differentiate between unit testing and automated testing.
+Additional
+441	.	What is a breakpoint in debugging?
+Additional
+442	.	What is a watch expression?
+Additional
+443	.	Why are breakpoints useful in debugging?
+Additional
+444	.	What is the purpose of breakpoints and watches?
+Additional
+445	.	Name two popular IDEs used for setting breakpoints.
+Additional
+446	.	How can a breakpoint be set in PyCharm?
+Additional
+447	.	What is the purpose of monitoring variable values?
+Additional
+448	.	What is step-by-step debugging?
+Additional
+449	.	What is the difference between “Step Into” and “Step Over”?
+Additional
+450	.	Write any two advantages of using breakpoints and watches.
+Additional
+451	.	How do watch expressions monitor variable values?
+Additional
+452	.	How does step-by-step debugging help detect errors?
+Additional
+453	.	What does Step Into do?
+Additional
+454	.	What does Step Over do?
+Additional
+455	.	What is exception handling?
+Additional
+456	.	Why is exception handling important?
+Additional
+457	.	Write any two advantages of exception handling.
+Additional
+458	.	What is the purpose of commit() in database operations?
+Additional
+459	.	What is the purpose of rollback()?
+Additional
+460	.	Differentiate between commit() and rollback().
+Additional
+461	.	Differentiate between try-except and finally.
+Additional
+462	.	What is a bug?
+Additional
+463	.	What is the difference between bug and debugging?
+Additional
+464	.	What is the purpose of the finally block?
+Additional
+465	.	What is the purpose of the try-except block?
+Additional
+5.3 Profiling and Optimization
+466	.	What tools can be used for profiling and measuring performance in Python?
+Exercise
+467	.	What is profiling in programming?
+Additional
+468	.	What is optimization?
+Additional
+469	.	Why is profiling important?
+Additional
+470	.	What is a performance bottleneck?
+Additional
+471	.	Name two Python modules used for profiling.
+Additional
+472	.	What is the use of the cProfile module?
+Additional
+473	.	What is the use of the timeit module?
+Additional
+474	.	Write any two ways to fix performance bottlenecks.
+Additional
+475	.	Why should we regularly profile a program?
+Additional
+476	.	Differentiate between profiling and optimization.
+Additional
+477	.	Differentiate between cProfile and timeit.
+Additional
+478	.	State three techniques for fixing performance bottlenecks.
+Additional
+6.1 Introduction To Data Science
+479	.	What is data science?
+Exercise
+6.2 Understanding Data
+480	.	What are the two main types of data?
+Exercise
+481	.	What is the difference between structured and unstructured data?
+Exercise
+482	.	Name two common data collection methods.
+Exercise
+6.3 Overview Of Machine Learning
+483	.	What is machine learning?
+Exercise
+6.4 Machine Learning Mechanisms
+484	.	What is supervised learning?
+Exercise
+485	.	What is the purpose of feature selection in machine learning?
+Exercise
+6.7 Model Evaluation And Performance Metrics
+486	.	What does accuracy measure in a model?
+Exercise
+6.9 Predicitive Modeling And Causality
+487	.	What is the difference between prediction and causality?
+Exercise
+6.10 Machine Learning Tools And Platforms
+488	.	Name any one tool used for machine learning.
+Exercise
+7.1 Introduction To Hypothesis Testing
+489	.	What is a hypothesis?
+Exercise
+490	.	What is a research question?
+Exercise
+7.2 Types Of Hypotheses
+491	.	Define null hypothesis (H0).
+Exercise
+7.3 Concepts In Hypothesis Testing
+492	.	What is a test statistic?
+Exercise
+493	.	What is-meant by p-value?
+Exercise
+494	.	What is a critical region?
+Exercise
+7.4 Performing Hypothesis Tests
+495	.	What are the basic steps in hypothesis testing?
+Exercise
+7.5 Data Visualization For Hypothesis Testing
+496	.	Why is data visualization important?
+Exercise
+7.6 Ethical Issues In Data Science And Analysis
+497	.	What is bias in data collection?
+Exercise
+498	.	Why is ethical use of data important?
+Exercise
+8.1 Understanding Emerging Technologies
+499	.	What is Artificial Intelligence (AT) and how is it used in daily life?
+Exercise
+500	.	How does the Internet of Things (loT) connect smart devices together?
+Exercise
+501	.	What are the main advantages of using Cloud Computing?
+Exercise
+502	.	How does Blockchain ensure security and transparency in transactions?
+Exercise
+8.2 Cultural And Ethical Implications Of AI Systems
+503	.	Why is it important to consider ethics while developing Al systems?
+Exercise
+504	.	What role do stakeholders play in the design and regulation of AI technologies?
+Exercise
+8.3 Designing Applications For Pakistan Using Emerging Technologies
+505	.	How can emerging technologies help solve national challenges in Pakistan?
+Exercise
+506	.	What is the importance of cultural awareness when designing technological solutions?
+Exercise
+507	.	How can AI, IoT, and Cloud work together to improve agriculture?
+Exercise
+8.4 Policies, Regulations, And Responsible Innovation
+508	.	Why are laws and policies necéssary for the responsible and safe use of technology?
+Exercise
+9.1 Safe And Responsible Digital Practices
+509	.	What is the role of strong passwords in protecting data?
+Exercise
+510	.	How can downloading suspicious software affect a computer?
+Exercise
+511	.	Why is it important to install software updates and security patches?
+Exercise
+9.2 Cybersecurity Awareness And Threat Management
+512	.	What are common types of cyber threats, such as phishing or ransomware?
+Exercise
+513	.	How does Two-Factor Authentication (2FA) improve online security?
+Exercise
+9.3 Digital Collaboration And Equity In Computing
+514	.	Who is responsible for managing privacy and security settings on online platforms?
+Exercise
+9.4 Digital Entrepreneurship And Innovation
+515	.	What is entrepreneurship?
+Exercise
+9.5 Ethical, Legal And Environmental Impacts Of Computing
+516	.	What is intellectual property, and why should it be respected in digital use?
+Exercise
+517	.	How does e-waste impact the environment, and what is sustainable computing?
+Exercise
+518	.	Where do international data protection laws like GDPR apply?
+Exercise
+
+
+-> long questions
+1.1 Introduction to Computer Networks
+1.	Define a computer network. Explain its importance and uses in daily life.
+Exercise
+1.2 Network Architecture and Basic Concepts
+2.	Explain network architecture and describe the main components of a computer network.
+Exercise
+1.3 Types of Common Networks
+3.	Explain the types of computer networks. Describe LAN, WAN, and the Internet.
+Exercise
+1.4 Network Devices
+4.	Describe the main networking devices used in a computer network and explain their functions.
+Exercise
+1.5 Network Topologies
+5.	Define network topology. Explain bus, star, ring, and mesh topologies with advantages and disadvantages.
+Exercise
+1.6 Network Models and Layers
+6.	What is the OSI model? Explain its layers and their functions.
+Exercise
+1.7 Network Protocols and Services
+7.	What are network protocols? Explain TCP/IP, HTTP, FTP, and DNS.
+Exercise
+1.8 IP Addressing and Subnetting
+8.	Explain IP addressing. Describe IPv4, IPv6, the default gateway, and subnetting.
+Exercise
+1.11 Network Diagnostic Tools and Commands
+9.	Explain the network diagnostic Tools and commands.
+Additional
+1.12 Network Performance
+10.	Explain network bandwidth and latency. Discuss the main causes of network delay.
+Additional
+1.13 Network Load Balancing
+11.	What is network load balancing? Explain its benefits and the basic methods used for load balancing.
+Additional
+1.14 Network Secutiry
+12.	Explain why network security is important and briefly describe firewalls, encryption, access control, and common threats.
+Additional
+1.15 Data Backup and Recovery
+13.	Explain the concept of data backup and recovery. Describe the types of backup and common recovery methods.
+Additional
+1.16 Usability and Security Tradeoffs
+14.	Explain the concepts of usability and security. Discuss the tradeoffs between them with suitable examples.
+Additional
+2.1 Introduction to Computational Thinking
+15.	Explain computational thinking and discuss its importance in solving problems with suitable examples.
+Exercise
+16.	Define computational thinking. Discuss the main steps involved in computational thinking with the help of suitable examples.
+Additional
+2.2 Problem Solving Using Computational Thinking
+17.	Describe the steps involved in problem solving using computational thinking. Explain decomposition with an example.
+Exercise
+18.	Explain the process of problem solving using computational thinking. Discuss its main steps with examples.
+Additional
+2.3 Logic as a Representation Framework
+19.	What is logic as a knowledge representation framework? Explain its role in reasoning and decision making.
+Exercise
+20.	Write a detailed note on “Logic in Computer Science”.
+Additional
+21.	Define logic. Discuss the role of logic in computer science with suitable examples.
+Additional
+2.4 Propositional Logic
+22.	Explain propositional logic. Discuss simple and compound propositions with examples.
+Exercise
+23.	What is propositional logic? Explain its importance in computer science.
+Additional
+24.	Explain the following with examples:
+(a) Proposition (b) Simple Proposition (c) Compound Proposition (d) Logical Connectives
+
+Additional
+2.5 Truth Table
+25.	What are truth tables? Explain how truth tables are created and used to evaluate logical expressions.
+Exercise
+26.	Write a detailed note on truth tables.
+Additional
+27.	Explain the following:
+(a) Purpose of Truth Tables  (b) Method of Creating Truth Tables (c) Truth Values of Propositions
+
+Additional
+2.6 Propositional Equivalence
+28.	Explain propositional equivalence. Describe how equivalent logical expressions are identified and why equivalence is important.
+Exercise
+29.	Explain the propositional equivalence.
+Additional
+30.	Write a detailed note on propositional equivalence.
+Additional
+2.7 Propositional Satisfiability
+31.	What is propositional satisfiability? Explain satisfiable and unsatisfiable propositions with examples.
+Exercise
+32.	Explain propositional satisfiability with the help of suitable examples.
+Additional
+2.8 Predicate Logic
+33.	Define predicate logic. Differentiate between propositional logic and predicate logic with suitable examples.
+Additional
+34.	Write a detailed note on predicate logic.
+Additional
+2.9 Quantifiers in Predicate Logic
+35.	What are quantifiers? Explain the universal quantifier and existential quantifier with suitable examples.
+Additional
+36.	Write a detailed note on quantifiers in predicate logic.
+Additional
+2.10 Applying Predicate Logic to Real-World Problems
+37.	Explain predicate logic and quantifiers. Discuss how predicate logic is applied to real-world problems.
+Exercise
+2.11 Logic-Based Reasoning and Inference
+38.	Write a detailed note on logic-based reasoning and inference.
+Additional
+3.1 Object-Oriented Programming (OOP) Using Python
+39.	Write a detailed note on Object-Oriented Programming (OOP). Discuss its advantages.
+Additional
+3.2 Core Concepts of OOP
+40.	Explain the concept of classes and objects in Object-Oriented Programming (OOP).
+Exercise
+41.	What is encapsulation in OOP?
+Exercise
+42.	How does inheritance work in OOP?
+Exercise
+43.	What are the advantages of using inheritance in Python?
+Exercise
+44.	What is polymorphism in OOP, and how does it enhance flexibility in code?
+Exercise
+45.	How can encapsulation help improve data security in OOP?
+Exercise
+46.	How does the combination of inheritance, encapsulation, and polymorphism contribute to better software design?
+Exercise
+47.	What are the key differences between a class and an object in Object-Oriented Programming?
+Exercise
+48.	Define class and object. Explain class and object with suitable example.
+Additional
+49.	Explain the levels of access control in Python.
+Additional
+50.	Define encapsulation. Explain its importance in Object-Oriented Programming with a suitable example.
+Additional
+51.	Write a detailed note on encapsulation in Python. Discuss how data is protected using methods.
+Additional
+52.	What is inheritance? Explain its types with suitable examples.
+Additional
+53.	Explain single inheritance in detail with a suitable example.
+Additional
+54.	What is multiple inheritance? Explain its advantages and give an example.
+Additional
+55.	Explain multilevel inheritance with the help of an example.
+Additional
+56.	Write a detailed note on inheritance. Discuss method overriding and the use of super().
+Additional
+57.	Write a detailed note on polymorphism. Discuss its types with examples.
+Additional
+58.	What is runtime polymorphism? Explain method overriding with a suitable example.
+Additional
+59.	Define polymorphism. Differentiate between compile-time polymorphism and runtime polymorphism.
+Additional
+60.	Explain compile-time polymorphism with suitable example.
+Additional
+4.1 Graphical User Interface (GUI) Development with Tkinter
+61.	Explain the concept of Graphical User Interface (GUI) and discuss its importance in application development.
+Exercise
+62.	Describe Tkinter as Python’s built-in GUI toolkit.
+Exercise
+63.	What are the key components and widgets in Tkinter?
+Exercise
+64.	What is layout management in Tkinter, and how are elements organized using pack(), grid(), and place()?
+Exercise
+65.	How can you design clean and responsive user interfaces in Tkinter?
+Exercise
+66.	Explain the concept of event-driven programming in Tkinter.
+Exercise
+67.	How do you handle user input and connect widgets to functions in Tkinter?
+Exercise
+68.	What is Tkinter? Explain its role in Python GUI development.
+Additional
+69.	Write a detailed note on Tkinter as Python’s built-in GUI toolkit. Discuss its main features and widgets.
+Additional
+70.	What is layout management? Explain its importance in GUI development.
+Additional
+71.	Write detailed note on layout management with suitable example.
+Additional
+72.	Write a detailed note on event handling and interactivity in Tkinter.
+Additional
+73.	Explain the working of a simple login form using event handling.
+Additional
+4.2 Working with Database in Python
+74.	Discuss the process of connecting Python to a database using SQLite or MySQL.
+Exercise
+75.	Write a detailed note on relational databases and the structure of SQL.
+Additional
+76.	Define the following terms with examples:
+(a) Entity (b) Attribute (c) Relationship (d) Identifier
+
+Additional
+77.	What is CRUD? Explain each of the CRUD operations with examples.
+Additional
+5.2 Testing and Debugging Techniques
+78.	Why is testing essential for reliable applications, and what role does it play in ensuring program stability?
+Exercise
+79.	Discuss the common types of engnaning errors and bugs that occur during software development.
+Exercise
+80.	What is unit testing, and how do Python’ s unittest and pytest modules support effective testing?
+Exercise
+81.	Explain the process of writing and exécuting test cases using Python’s unittest or pytest modules.
+Exercise
+82.	How do breakpoints and watch expressions help in debugging? Discuss their role in identifying issues in the code.
+Exercise
+83.	Describe how to set breakpoints in IDEs like PyCharm or VS Code, and explain their significance i in the debugging process.
+Exercise
+84.	What is step-by-step debugging, and how does it help in identifying and fixing bugs in Python programs?
+Exercise
+85.	How does exception handling work in Python? Explain how to handle multiple exception types effectively to prevent program crashes.
+Exercise
+86.	Explain how test cases are written and executed in Python.
+Additional
+87.	Write a detailed note on using breakpoints and watches for effective debugging.
+Additional
+88.	Describe the step-by-step debugging process. Explain the options: Step Into, Step Over, and Continue.
+Additional
+89.	Write a detailed note on exception handling.
+Additional
+5.3 Profiling and Optimization
+90.	Write a detailed note on profiling and optimization techniques.
+Additional
+91.	What is a performance bottleneck? How can it be identified and fixed?
+Additional
+6.1 Introduction To Data Science
+92.	Explain the concept of data science and discuss its importance in modern applications.
+Exercise
+6.2 Understanding Data
+93.	Describe different types of data and explain various data sources and collection methods.
+Exercise
+6.4 Machine Learning Mechanisms
+94.	Explain the concept of machine learning and describe its different mechanisms, including supervised, unsupervised, reinforcement, and rule-based learning.
+Exercise
+6.5 Application Of Machine Learning
+95.	Discuss the applications of machine learning in healthcare, business, education, and daily life.
+Exercise
+6.6 Building Machine Learning Model
+96.	Explain the steps involved in building a machine learning model, including feature selection, feature engineering, and train-test split.
+Exercise
+6.7 Model Evaluation And Performance Metrics
+97.	Describe model evaluation techniques and explain accuracy, precision, recall, and F1-score.
+Exercise
+6.8 Validation And Model Improvement
+98.	Explain validation in machine learning and discuss how models can be improved using parameter tuning.
+Exercise
+6.9 Predicitive Modeling And Causality
+99.	Discuss predictive modeling and causality, and explain the importance of model interpretation in real-world use cases.
+Exercise
+7.2 Types Of Hypotheses
+100.	Describe different types of hypotheses and explain how to formulate correct hypotheses.
+Exercise
+7.3 Concepts In Hypothesis Testing
+101.	Explain the concept of hypothesis testing and its role in data analysis.
+Exercise
+102.	Explain key concepts in hypothesis testing, including test statistics, critical region, and p-value.
+Exercise
+7.4 Performing Hypothesis Tests
+103.	Discuss the steps involved in performing hypothesis testing with a suitable example.
+Exercise
+7.5 Data Visualization For Hypothesis Testing
+104.	Explain the importance of data visualization in hypothesis testing and how graphs help present results.
+Exercise
+7.6 Ethical Issues In Data Science And Analysis
+105.	Discuss ethical issues in data science, including bias, ethical use of data, and responsible communication.
+Exercise
+7.7 Communicating Results And Conclusions
+106.	Explain how to interpret hypothesis testing results and connect conclusions to hypotheses.
+Exercise
+107.	Describe how findings should be communicated clearly in data analysis and why it is important.
+Exercise
+8.1 Understanding Emerging Technologies
+108.	Explain how Artificial Intelligence (Al), the: Internet of Things. (loT), Cloud Computing, and Blockchain are: transforming modem industries. Give suitable examples for each technology.
+Exercise
+109.	Discuss the benefits and challenges of Artificial Intelligence (AI) in, society, How can ethical principles ensure fair and responsible use of AI?
+Exercise
+110.	Describe how IoT devices collect and communicate data for automation. How is IoT improving sectors such as healthcare, agriculture, and smart homes?
+Exercise
+111.	Explain how Cloud Computing supports scalability, accessibility, and collaboration. Compare different cloud platforms like Google Drive, AWS, and Microsoft Azure.
+Exercise
+112.	What is Blockchain technology? Discuss’ how its decentralized nature improves transparency and security in financial and non-financial applications.
+Exercise
+8.2 Cultural And Ethical Implications Of AI Systems
+113.	Discuss the ethical and cultural considerations involved in designing Al systems. How can developers ensure inclusivity and respect for local values?
+Exercise
+8.3 Designing Applications For Pakistan Using Emerging Technologies
+114.	Identify key national challenges in Pakistan and describe how emerging technologies (AI, loT, Cloud, Blockchain) can provide effective and innovative solutions.
+Exercise
+8.4 Policies, Regulations, And Responsible Innovation
+115.	Describe the importance of policies, regulations, and interdisciplinary collaboration in promoting responsible innovation. How can Pakistan benefit from adopting global AI governance standards?
+Exercise
+9.1 Safe And Responsible Digital Practices
+116.	Explain the importance of online safety and describe how strong passwords and safe browsing habits protect personal data.
+Exercise
+117.	Discuss the role of software updates and security patches in maintaining computer security, and explain the risks associated with outdated software.
+Exercise
+118.	Describe how privacy and security settings on online platforms can be managed. Explain why reading privacy policies is important for data protection.
+Exercise
+9.2 Cybersecurity Awareness And Threat Management
+119.	Explain different types of cyber threats such as viruses, phishing, ransomware, spywarc, and DDoS attacks. Discuss how these threats can affect both individuals and organizations. Discuss security tools and techniques like Two-Factor Authentication (2FA), biometric verification, firewalls, intrusion detection systems (IDS), and antivirus software. Explain how each helps in protecting data.
+Exercise
+9.3 Digital Collaboration And Equity In Computing
+120.	Explain the legal aspects of computing by discussing international frameworks like GDPR and cybercrime laws and data protection policies in Pakistan. How do these laws protect digital information?
+Exercise
+9.4 Digital Entrepreneurship And Innovation
+121.	Explain the concept of entrepreneurship and describe how digital technologies have created new opportunities for entrepreneurs. Include at least three examples of digital entrepreneurship.
+Exercise
+9.5 Ethical, Legal And Environmental Impacts Of Computing
+122.	Discuss the environmental and social impacts of computing. Explain how e-waste management and sustainable computing practices can reduce harm to the environment, anddescribe the role of technology in cultural and societal change.
+Exercise
