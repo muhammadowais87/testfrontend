@@ -32,6 +32,8 @@ const PricingSection = () => {
 
   return (
     <>
+      {/* PRICING SECTION (package cards) -- commented out. Only this block is hidden: the registration dialog below
+          stays because the Navbar / Footer "Register Now" links open it. Remove this comment to show the cards again.
       <section id="pricing" className="py-6 md:py-8 bg-secondary/35">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-6">
@@ -98,6 +100,7 @@ const PricingSection = () => {
           </div>
         </div>
       </section>
+      */}
 
       <Dialog open={registrationOpen} onOpenChange={setRegistrationOpen}>
          <DialogContent className="max-w-4xl w-[95vw] sm:w-[92vw] p-0 gap-0 overflow-hidden bg-card border border-border rounded-2xl max-h-[90vh]">
