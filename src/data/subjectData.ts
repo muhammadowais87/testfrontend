@@ -283,11 +283,10 @@ const interTwoReadyTitles = new Set([
 ]);
 const forInterTwo = (cards: SubjectCard[]) => cards.filter((card) => !interTwoExcludedTitles.has(card.title));
 
-// Subjects whose questions (Hope Science Academy files) are stored under the single "Full Book" topic only.
-// While HOPE_FULL_BOOK_ONLY is on they show "Coming Soon" and cannot be opened; they open again when the flag is
-// turned off (in interTwoChapters.ts) after the questions are arranged topic-wise.
-const interOneFullBookTitles = new Set(["Statistics", "Business Maths", "Principles of Accounting"]);
-const interTwoFullBookTitles = new Set(["Statistics", "Mathematics", "کاروباری شماریات", "Principles of Accounting"]);
+// INTER-I subjects are all clickable now (no "Coming Soon" restriction for Part 1).
+const interOneFullBookTitles = new Set<string>([]);
+// INTER-II subjects are all clickable now as well, except the no-questions list below.
+const interTwoFullBookTitles = new Set<string>([]);
 // INTER-II subjects that have topics but no questions in the question bank yet (always Coming Soon, listed last).
 const interTwoNoQuestionsTitles = new Set(["English", "اردو لازمی"]);
 const isFullBookOnly = (card: SubjectCard, titles: Set<string>) => HOPE_FULL_BOOK_ONLY && titles.has(card.title);
