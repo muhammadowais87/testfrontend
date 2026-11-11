@@ -168,6 +168,31 @@ const SchoolDetail = () => {
           ))}
         </div>
 
+        {/* Contact information */}
+        <Card>
+          <CardContent className="p-5 grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div className="min-w-0 sm:col-span-2">
+              <p className="text-[11px] text-muted-foreground mb-1.5 uppercase tracking-wider font-medium">Institute Email</p>
+              <a href={`mailto:${school.email}`} className="text-sm font-semibold text-primary break-words hover:underline">{school.email}</a>
+            </div>
+            <div className="min-w-0">
+              <p className="text-[11px] text-muted-foreground mb-1.5 uppercase tracking-wider font-medium">Phone</p>
+              <p className="text-sm font-semibold text-foreground">
+                {school.phonePrimary || "—"}
+                {school.phoneSecondary ? ` · ${school.phoneSecondary}` : ""}
+              </p>
+            </div>
+            <div className="min-w-0">
+              <p className="text-[11px] text-muted-foreground mb-1.5 uppercase tracking-wider font-medium">Principal</p>
+              <p className="text-sm font-semibold text-foreground">{school.principalName || "—"}</p>
+            </div>
+            <div className="min-w-0 sm:col-span-2">
+              <p className="text-[11px] text-muted-foreground mb-1.5 uppercase tracking-wider font-medium">Address</p>
+              <p className="text-sm font-semibold text-foreground">{school.address || "—"}</p>
+            </div>
+          </CardContent>
+        </Card>
+
         {/* Revenue + Controls */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
           <Card>

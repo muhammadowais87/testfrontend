@@ -26,7 +26,7 @@ export const useSchoolStore = create<SchoolStore>((set) => ({
   fetchSchools: async (page = 1) => {
     set({ isLoading: true });
     try {
-      const response = await fetch(`${API_BASE_URL}/schools?page=${page}&limit=100`);
+      const response = await fetch(`${API_BASE_URL}/schools?page=${page}&limit=100`, { cache: "no-store" });
       const data = await response.json();
 
       if (!response.ok) {

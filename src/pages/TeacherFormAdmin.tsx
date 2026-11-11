@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useRef, useState, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { getAdminRoute } from "@/lib/adminRoute";
 import { Card, CardContent } from "@/components/ui/card";
@@ -43,6 +43,14 @@ const TeacherFormPage = ({ mode, teacherId }: TeacherFormProps) => {
   const [subscriptionDate, setSubscriptionDate] = useState(existing?.subscriptionDate || new Date().toISOString().slice(0, 10));
   const [lastPaymentDate, setLastPaymentDate] = useState(existing?.lastPaymentDate || "");
   const [formError, setFormError] = useState("");
+  // Browser autofill / password managers write straight into the DOM without firing React's onChange.
+  // Reading these refs on submit keeps the visible value authoritative.
+  const nameRef = useRef<HTMLInputElement>(null);
+  const cityRef = useRef<HTMLInputElement>(null);
+  const phoneRef = useRef<HTMLInputElement>(null);
+  const emailRef = useRef<HTMLInputElement>(null);
+  const passwordRef = useRef<HTMLInputElement>(null);
+  const subjectRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
     fetchTeachers();
@@ -81,11 +89,32 @@ const TeacherFormPage = ({ mode, teacherId }: TeacherFormProps) => {
 
     setFormError("");
 
-    const trimmedPassword = password.trim();
+    // Read values directly from the form fields (DOM) so that browser autofill values—which do not
+    // fire React's onChange—are captured instead of the stale React state.
+    const trimmedName = nameRef.current?.value?.trim() ?? name.trim();
+    const trimmedCity = cityRef.current?.value?.trim() ?? city.trim();
+    const trimmedPhone = phoneRef.current?.value?.trim() ?? phone.trim();
+    const trimmedEmail = emailRef.current?.value?.trim() ?? email.trim();
+    const trimmedSubject = subjectRef.current?.value?.trim() ?? subject.trim();
+    const trimmedPassword = passwordRef.current?.value?.trim() ?? password.trim();
+
+    if (!trimmedName || !trimmedCity || !trimmedPhone || !trimmedEmail || !trimmedSubject) {
+      setFormError("Please complete all required fields marked with *.");
+      return;
+    }
+
     const data = {
-      name: name.trim(), city: city.trim(), phone: phone.trim(), email: email.trim(),
-      subject: subject.trim(), plan, amount, status, assignedSubjects,
-      subscriptionDate, lastPaymentDate: lastPaymentDate || subscriptionDate,
+      name: trimmedName,
+      city: trimmedCity,
+      phone: trimmedPhone,
+      email: trimmedEmail,
+      subject: trimmedSubject,
+      plan,
+      amount,
+      status,
+      assignedSubjects,
+      subscriptionDate,
+      lastPaymentDate: lastPaymentDate || subscriptionDate,
       ...(trimmedPassword ? { password: trimmedPassword } : {}),
     };
     try {
@@ -157,15 +186,24 @@ const TeacherFormPage = ({ mode, teacherId }: TeacherFormProps) => {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div className="space-y-2">
                   <Label htmlFor="name" className="text-xs font-medium">Full Name *</Label>
-                  <Input id="name" value={name} onChange={(e) => setName(e.target.value)} placeholder="e.g. Ahmed Khan" maxLength={100} />
+                  <Input id="name" ref={nameRef} autoComplete="off" value={name} onChange={(e) => setName(e.target.value)} placeholder="e.g. Ahmed Khan" maxLength={100} />
                 </div>
                 <div className="space-y-2">
                   <Label htmlFor="phone" className="text-xs font-medium">Phone *</Label>
-                  <Input id="phone" value={phone} onChange={(e) => setPhone(e.target.value)} placeholder="03XX-XXXXXXX" maxLength={15} />
+                  <Input id="phone" ref={phoneRef} autoComplete="off" value={phone} onChange={(e) => setPhone(e.target.value)} placeholder="03XX-XXXXXXX" maxLength={15} />
                 </div>
                 <div className="space-y-2">
                   <Label htmlFor="email" className="text-xs font-medium">Email *</Label>
-                  <Input id="email" type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="email@example.com" maxLength={255} />
+                  <Input
+                    id="email"
+                    type="email"
+                    ref={emailRef}
+                    autoComplete="off"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    placeholder="email@example.com"
+                    maxLength={255}
+                  />
                 </div>
                 <div className="space-y-2">
                   <Label htmlFor="password" className="text-xs font-medium">
@@ -174,6 +212,8 @@ const TeacherFormPage = ({ mode, teacherId }: TeacherFormProps) => {
                   <Input
                     id="password"
                     type="password"
+                    ref={passwordRef}
+                    autoComplete="new-password"
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
                     placeholder="Enter password"
@@ -182,11 +222,11 @@ const TeacherFormPage = ({ mode, teacherId }: TeacherFormProps) => {
                 </div>
                 <div className="space-y-2">
                   <Label htmlFor="city" className="text-xs font-medium">City *</Label>
-                  <Input id="city" value={city} onChange={(e) => setCity(e.target.value)} placeholder="e.g. Lahore" maxLength={100} />
+                  <Input id="city" ref={cityRef} autoComplete="off" value={city} onChange={(e) => setCity(e.target.value)} placeholder="e.g. Lahore" maxLength={100} />
                 </div>
                 <div className="space-y-2">
                   <Label htmlFor="subject" className="text-xs font-medium">Subject *</Label>
-                  <Input id="subject" value={subject} onChange={(e) => setSubject(e.target.value)} placeholder="e.g. Mathematics" maxLength={100} />
+                  <Input id="subject" ref={subjectRef} autoComplete="off" value={subject} onChange={(e) => setSubject(e.target.value)} placeholder="e.g. Mathematics" maxLength={100} />
                 </div>
                 <div className="space-y-2">
                   <Label className="text-xs font-medium">Plan</Label>

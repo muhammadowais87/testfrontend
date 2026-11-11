@@ -604,6 +604,17 @@ const SettingsView = ({ profile, token }: { profile: InstituteProfile | null; to
   const [savingSection, setSavingSection] = useState<"appearance" | "information" | "watermark" | null>(null);
   const isSaving = savingSection !== null;
   const logoFileInputRef = useRef<HTMLInputElement>(null);
+  // Browser autofill / password managers (and some extensions) write straight into the DOM without
+  // firing React's onChange. Reading these refs on submit keeps the visible value authoritative.
+  const schoolNameRef = useRef<HTMLInputElement>(null);
+  const schoolAddressRef = useRef<HTMLInputElement>(null);
+  const logoUrlRef = useRef<HTMLInputElement>(null);
+  const principalNameRef = useRef<HTMLInputElement>(null);
+  const emailRef = useRef<HTMLInputElement>(null);
+  const phonePrimaryRef = useRef<HTMLInputElement>(null);
+  const phoneSecondaryRef = useRef<HTMLInputElement>(null);
+  // Hydrate the form once per institute; otherwise a profile refresh would overwrite unsaved edits.
+  const hydratedSchoolRef = useRef<number | null>(null);
   const handleLogoFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
     if (!file) return;
@@ -664,7 +675,8 @@ const SettingsView = ({ profile, token }: { profile: InstituteProfile | null; to
   };
 
   useEffect(() => {
-    if (profile && !isTrial) {
+    if (profile && !isTrial && hydratedSchoolRef.current !== profile.schoolId) {
+      hydratedSchoolRef.current = profile.schoolId;
       setSettings((prev) => ({
         ...prev,
         schoolName: profile.name || prev.schoolName,
@@ -756,14 +768,26 @@ const SettingsView = ({ profile, token }: { profile: InstituteProfile | null; to
 
   const handleSaveInformation = async () => {
     if (!token) { toast({ title: "Session Expired", description: "Please login again.", variant: "destructive" }); return; }
+    // Read the fields directly instead of trusting state: if the browser filled a field without
+    // firing onChange, `settings` would still hold the previous value and the old email would be saved.
+    const info = {
+      schoolName: schoolNameRef.current?.value ?? settings.schoolName,
+      schoolAddress: schoolAddressRef.current?.value ?? settings.schoolAddress,
+      logoUrl: logoUrlRef.current?.value ?? settings.logoUrl,
+      principalName: principalNameRef.current?.value ?? settings.principalName,
+      email: (emailRef.current?.value ?? settings.email).trim(),
+      phonePrimary: phonePrimaryRef.current?.value ?? settings.phonePrimary,
+      phoneSecondary: phoneSecondaryRef.current?.value ?? settings.phoneSecondary,
+    };
+    setSettings((prev) => ({ ...prev, ...info }));
     const ok = await callApi("information", {
-      schoolName: settings.schoolName,
-      schoolAddress: settings.schoolAddress,
-      principalName: settings.principalName,
-      email: settings.email,
-      phonePrimary: settings.phonePrimary,
-      phoneSecondary: settings.phoneSecondary,
-      portalSettings: { logoUrl: settings.logoUrl },
+      schoolName: info.schoolName,
+      schoolAddress: info.schoolAddress,
+      principalName: info.principalName,
+      email: info.email,
+      phonePrimary: info.phonePrimary,
+      phoneSecondary: info.phoneSecondary,
+      portalSettings: { logoUrl: info.logoUrl },
     });
     if (ok) toast({ title: "Information Updated" });
   };
@@ -943,16 +967,16 @@ const SettingsView = ({ profile, token }: { profile: InstituteProfile | null; to
             </div>
             <div>
               <label className="text-xs font-medium uppercase tracking-wide text-muted-foreground block mb-1.5">School Name</label>
-              <input type="text" value={settings.schoolName} onChange={(e) => updateSetting("schoolName", e.target.value)} className={inputClassName} />
+              <input ref={schoolNameRef} type="text" autoComplete="off" value={settings.schoolName} onChange={(e) => updateSetting("schoolName", e.target.value)} className={inputClassName} />
             </div>
             <div>
               <label className="text-xs font-medium uppercase tracking-wide text-muted-foreground block mb-1.5">School Address</label>
-              <input type="text" value={settings.schoolAddress} onChange={(e) => updateSetting("schoolAddress", e.target.value)} className={inputClassName} />
+              <input ref={schoolAddressRef} type="text" autoComplete="off" value={settings.schoolAddress} onChange={(e) => updateSetting("schoolAddress", e.target.value)} className={inputClassName} />
             </div>
             <div>
               <label className="text-xs font-medium uppercase tracking-wide text-muted-foreground block mb-1.5">School Monogram / Logo URL</label>
               <div className="flex gap-2 items-center">
-                <input type="text" value={settings.logoUrl} onChange={(e) => updateSetting("logoUrl", e.target.value)} placeholder="Paste logo URL here" className={inputClassName + " flex-1"} />
+                <input ref={logoUrlRef} type="text" autoComplete="off" value={settings.logoUrl} onChange={(e) => updateSetting("logoUrl", e.target.value)} placeholder="Paste logo URL here" className={inputClassName + " flex-1"} />
                 <button type="button" onClick={() => logoFileInputRef.current?.click()} className="flex items-center gap-1.5 px-3 py-2 rounded-md border border-input bg-background text-sm font-medium hover:bg-accent hover:text-accent-foreground transition-colors whitespace-nowrap">
                   <Upload className="w-4 h-4" /> Browse
                 </button>
@@ -968,19 +992,19 @@ const SettingsView = ({ profile, token }: { profile: InstituteProfile | null; to
             </div>
             <div>
               <label className="text-xs font-medium uppercase tracking-wide text-muted-foreground block mb-1.5">Principal Name</label>
-              <input type="text" value={settings.principalName} onChange={(e) => updateSetting("principalName", e.target.value)} className={inputClassName} />
+              <input ref={principalNameRef} type="text" autoComplete="off" value={settings.principalName} onChange={(e) => updateSetting("principalName", e.target.value)} className={inputClassName} />
             </div>
             <div>
               <label className="text-xs font-medium uppercase tracking-wide text-muted-foreground block mb-1.5">Email Address</label>
-              <input type="email" value={settings.email} onChange={(e) => updateSetting("email", e.target.value)} className={inputClassName} />
+              <input ref={emailRef} type="email" autoComplete="off" value={settings.email} onChange={(e) => updateSetting("email", e.target.value)} className={inputClassName} />
             </div>
             <div>
               <label className="text-xs font-medium uppercase tracking-wide text-muted-foreground block mb-1.5">Phone Number</label>
-              <input type="text" value={settings.phonePrimary} onChange={(e) => updateSetting("phonePrimary", e.target.value)} className={inputClassName} />
+              <input ref={phonePrimaryRef} type="text" autoComplete="off" value={settings.phonePrimary} onChange={(e) => updateSetting("phonePrimary", e.target.value)} className={inputClassName} />
             </div>
             <div>
               <label className="text-xs font-medium uppercase tracking-wide text-muted-foreground block mb-1.5">Phone Number 2</label>
-              <input type="text" value={settings.phoneSecondary} onChange={(e) => updateSetting("phoneSecondary", e.target.value)} className={inputClassName} />
+              <input ref={phoneSecondaryRef} type="text" autoComplete="off" value={settings.phoneSecondary} onChange={(e) => updateSetting("phoneSecondary", e.target.value)} className={inputClassName} />
             </div>
           </div>
         </div>

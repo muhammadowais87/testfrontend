@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { getAdminRoute } from "@/lib/adminRoute";
 import { Card, CardContent } from "@/components/ui/card";
@@ -26,6 +26,8 @@ const SchoolForm = ({ mode, schoolId }: SchoolFormProps) => {
 
   const existing = mode === "edit" ? schools.find((s) => s.id === schoolId) : null;
 
+  const hydratedIdRef = useRef<number | null>(null);
+
   const [name, setName] = useState(existing?.name || "");
   const [principalName, setPrincipalName] = useState(existing?.principalName || "");
   const [city, setCity] = useState(existing?.city || "");
@@ -44,39 +46,65 @@ const SchoolForm = ({ mode, schoolId }: SchoolFormProps) => {
   }, [fetchSchools]);
 
   useEffect(() => {
-    if (existing) {
-      setName(existing.name);
-      setPrincipalName(existing.principalName || "");
-      setCity(existing.city);
-      setAddress(existing.address || "");
-      setPhonePrimary(existing.phonePrimary || "");
-      setPhoneSecondary(existing.phoneSecondary || "");
-      setEmail(existing.email || "");
-      setPlan(existing.plan);
-      setStatus(existing.status);
-      setSubscriptionDate(existing.subscriptionDate);
-      setLastPaymentDate(existing.lastPaymentDate);
-    }
+    if (!existing) return;
+
+    // Hydrate the fields once per school. Re-running this on every store change
+    // could overwrite an email the user just typed but has not submitted yet.
+    if (hydratedIdRef.current === existing.id) return;
+    hydratedIdRef.current = existing.id;
+
+    setName(existing.name);
+    setPrincipalName(existing.principalName || "");
+    setCity(existing.city);
+    setAddress(existing.address || "");
+    setPhonePrimary(existing.phonePrimary || "");
+    setPhoneSecondary(existing.phoneSecondary || "");
+    setEmail(existing.email || "");
+    setPlan(existing.plan);
+    setStatus(existing.status);
+    setSubscriptionDate(existing.subscriptionDate);
+    setLastPaymentDate(existing.lastPaymentDate);
   }, [existing]);
 
   const amount = planAmounts[plan] || existing?.amount || 2000;
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!name.trim() || !principalName.trim() || !city.trim() || !address.trim() || !phonePrimary.trim() || !email.trim()) {
+
+    // Read the current values straight from the form fields. Browser autofill and
+    // some password managers can fill an input without firing React's onChange, so
+    // relying on state alone silently submitted the previous email address.
+    const form = e.currentTarget as HTMLFormElement;
+    const fieldValue = (id: string, fallback: string) => {
+      const field = form.querySelector<HTMLInputElement>(`#${id}`);
+      return field ? field.value : fallback;
+    };
+
+    const nextName = fieldValue("name", name);
+    const nextPrincipalName = fieldValue("principalName", principalName);
+    const nextCity = fieldValue("city", city);
+    const nextAddress = fieldValue("address", address);
+    const nextPhonePrimary = fieldValue("phonePrimary", phonePrimary);
+    const nextPhoneSecondary = fieldValue("phoneSecondary", phoneSecondary);
+    const nextEmail = fieldValue("email", email);
+    const nextPassword = fieldValue("password", password);
+    const nextSubscriptionDate = fieldValue("subscriptionDate", subscriptionDate);
+    const nextLastPaymentDate = fieldValue("lastPaymentDate", lastPaymentDate);
+
+    if (!nextName.trim() || !nextPrincipalName.trim() || !nextCity.trim() || !nextAddress.trim() || !nextPhonePrimary.trim() || !nextEmail.trim()) {
       toast({ title: "Error", description: "Please fill all required fields.", variant: "destructive" });
       return;
     }
 
-    if (mode === "add" && !password.trim()) {
+    if (mode === "add" && !nextPassword.trim()) {
       toast({ title: "Error", description: "Password is required for new institute account.", variant: "destructive" });
       return;
     }
 
     const data = {
-      name: name.trim(), principalName: principalName.trim(), city: city.trim(), address: address.trim(), phonePrimary: phonePrimary.trim(), phoneSecondary: phoneSecondary.trim(), email: email.trim(), plan, amount, status,
-      subscriptionDate, lastPaymentDate: lastPaymentDate || subscriptionDate,
-      ...(password.trim() ? { password: password.trim() } : {}),
+      name: nextName.trim(), principalName: nextPrincipalName.trim(), city: nextCity.trim(), address: nextAddress.trim(), phonePrimary: nextPhonePrimary.trim(), phoneSecondary: nextPhoneSecondary.trim(), email: nextEmail.trim(), plan, amount, status,
+      subscriptionDate: nextSubscriptionDate, lastPaymentDate: nextLastPaymentDate || nextSubscriptionDate,
+      ...(nextPassword.trim() ? { password: nextPassword.trim() } : {}),
     };
 
     try {
@@ -141,7 +169,7 @@ const SchoolForm = ({ mode, schoolId }: SchoolFormProps) => {
 
         <Card>
           <CardContent className="p-6">
-            <form onSubmit={handleSubmit} className="space-y-5">
+            <form onSubmit={handleSubmit} className="space-y-5" autoComplete="off">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div className="space-y-2">
                   <Label htmlFor="name" className="text-xs font-medium">School Name *</Label>
@@ -169,11 +197,11 @@ const SchoolForm = ({ mode, schoolId }: SchoolFormProps) => {
                 </div>
                 <div className="space-y-2">
                   <Label htmlFor="email" className="text-xs font-medium">Institute Email *</Label>
-                  <Input id="email" type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="institute@example.com" />
+                  <Input id="email" type="email" autoComplete="off" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="institute@example.com" />
                 </div>
                 <div className="space-y-2">
                   <Label htmlFor="password" className="text-xs font-medium">Password {mode === "add" ? "*" : ""}</Label>
-                  <Input id="password" type="password" value={password} onChange={(e) => setPassword(e.target.value)} placeholder={mode === "add" ? "Set institute password" : "Leave blank to keep current"} />
+                  <Input id="password" type="password" autoComplete="new-password" value={password} onChange={(e) => setPassword(e.target.value)} placeholder={mode === "add" ? "Set institute password" : "Leave blank to keep current"} />
                 </div>
                 <div className="space-y-2">
                   <Label className="text-xs font-medium">Plan</Label>
