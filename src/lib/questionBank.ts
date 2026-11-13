@@ -1,5 +1,6 @@
 import { API_BASE_URL } from "@/lib/api";
 import { getPortalToken } from "@/lib/portalToken";
+import { sanitizeChapterSelections } from "@/data/nineSmartSyllabusExclusions";
 import type { ChapterGroup } from "@/data/subjectData";
 
 export type QuestionContentType = "mcq" | "short" | "long";
@@ -485,7 +486,20 @@ export const fetchQuestionsForSelection = async (
     return [];
   }
 
-  const scope = resolveQuestionSelectionScope(selectedChapters, allGroups, getTopicChapterIndex(subject, className, board));
+  // Never request questions for topics that are out of syllabus for this session,
+  // even if an old selection or a saved paper still contains them.
+  const safeSelections = sanitizeChapterSelections(
+    subject ?? "",
+    className ?? "",
+    board ?? "",
+    allGroups,
+    selectedChapters,
+  );
+  if (safeSelections.length === 0) {
+    return [];
+  }
+
+  const scope = resolveQuestionSelectionScope(safeSelections, allGroups, getTopicChapterIndex(subject, className, board));
   if (scope.chapterNumbers.length === 0) {
     return [];
   }
@@ -621,7 +635,18 @@ export const fetchAvailableQuestionTypes = async (
     return [];
   }
 
-  const scope = resolveQuestionSelectionScope(selectedChapters, allGroups, getTopicChapterIndex(subject, className, board));
+  const safeSelections = sanitizeChapterSelections(
+    subject ?? "",
+    className ?? "",
+    board ?? "",
+    allGroups,
+    selectedChapters,
+  );
+  if (safeSelections.length === 0) {
+    return [];
+  }
+
+  const scope = resolveQuestionSelectionScope(safeSelections, allGroups, getTopicChapterIndex(subject, className, board));
   if (scope.chapterNumbers.length === 0) {
     return [];
   }

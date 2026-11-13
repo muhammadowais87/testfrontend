@@ -26,6 +26,11 @@ import {
   afaqCards, boardClassMap, boardCards, boardSubjectsMap, getChaptersForSubject, type ChapterGroup,
 } from "@/data/subjectData";
 import { getNineTopicChapters } from "@/data/nineTopicChapters";
+import {
+  getSelectableSelectionKeys,
+  getSmartSyllabusGroupInfo,
+  sanitizeChapterSelections,
+} from "@/data/nineSmartSyllabusExclusions";
 import { getOneToEightChapters } from "@/data/oneToEightChapters";
 import { getAvailableQuestionTypesForTopics } from "@/data/topicQuestionTypes";
 import SubjectButton from "@/components/SubjectButton";
@@ -373,6 +378,18 @@ const TeacherGeneratePaper = () => {
     }
     return dbChapterGroups ?? staticFallback;
   }, [dbChapterGroups, selectedBoard, selectedLevel, selectedSubject]);
+
+  // Every key "Select All Chapters" may add. Topics excluded by the current Smart
+  // Syllabus are never part of this list.
+  const selectableChapterKeys = useMemo(
+    () => getSelectableSelectionKeys(
+      selectedSubject ?? "",
+      selectedLevel ?? "",
+      selectedBoard ?? "",
+      chapterGroups,
+    ),
+    [chapterGroups, selectedBoard, selectedLevel, selectedSubject],
+  );
 
   const questionTypeOptions = useMemo(() => {
     const groupNameSet = new Set(chapterGroups.map((g) => g.name));
@@ -987,7 +1004,13 @@ const TeacherGeneratePaper = () => {
         ? Math.max(1, Math.round(Number(savedPaper.totalMarks || 0) / savedPaper.questions.length))
         : Number(eachQMarks || 2);
       const chapterGroups = getChaptersForSubject(savedPaper.subject || "", savedPaper.className || "", savedPaper.board || "");
-      const allChapterSelections = chapterGroups.flatMap((group) => [group.name, ...group.chapters]);
+      // Restore only selectable topics -- out-of-syllabus topics stay blank.
+      const allChapterSelections = getSelectableSelectionKeys(
+        savedPaper.subject || "",
+        savedPaper.className || "",
+        savedPaper.board || "",
+        chapterGroups,
+      );
 
       setSelectedBoard(savedPaper.board || null);
       setSelectedLevel(savedPaper.className || null);
@@ -1213,6 +1236,24 @@ const TeacherGeneratePaper = () => {
       lastInitializedRef.current = { key: currentKey, isDb: hasDb, isTopicsFile: hasTopicsFile };
     }
   }, [dbChapterGroups, selectedSubject, selectedLevel, selectedBoard]);
+
+  // Safety net: even a restored paper or old state can never keep an out-of-syllabus
+  // topic selected. A partially excluded group is expanded to its allowed topics only.
+  useEffect(() => {
+    if (!selectedSubject || !selectedLevel || !selectedBoard || chapterGroups.length === 0) return;
+    setSelectedChapters((previous) => {
+      const next = sanitizeChapterSelections(
+        selectedSubject,
+        selectedLevel,
+        selectedBoard,
+        chapterGroups,
+        previous,
+      );
+      return next.length === previous.length && next.every((value, index) => value === previous[index])
+        ? previous
+        : next;
+    });
+  }, [chapterGroups, selectedBoard, selectedLevel, selectedSubject, selectedChapters]);
 
   useEffect(() => {
     setAllQuestions([]);
@@ -2161,17 +2202,18 @@ const TeacherGeneratePaper = () => {
                   <p className="text-[12px] sm:text-xs text-muted-foreground mb-5">Select Chapter(s)</p>
 
                   <div className="mb-5">
-                    <label className="flex items-center gap-3 cursor-pointer">
+                    <label className={`flex items-center gap-3 ${selectableChapterKeys.length === 0 ? "cursor-not-allowed opacity-50" : "cursor-pointer"}`}>
                       <input
                         type="checkbox"
                         checked={
-                          selectedChapters.length ===
-                            chapterGroups.flatMap(g => [g.name, ...g.chapters.map(ch => makeChapterKey(g.name, ch))]).length &&
-                          selectedChapters.length > 0
+                          selectableChapterKeys.length > 0 &&
+                          selectedChapters.length > 0 &&
+                          selectableChapterKeys.every((key) => selectedChapters.includes(key))
                         }
+                        disabled={selectableChapterKeys.length === 0}
                         onChange={(e) => {
                           if (e.target.checked) {
-                            setSelectedChapters(chapterGroups.flatMap(g => [g.name, ...g.chapters.map(ch => makeChapterKey(g.name, ch))]));
+                            setSelectedChapters(selectableChapterKeys);
                           } else {
                             setSelectedChapters([]);
                           }
@@ -2183,22 +2225,44 @@ const TeacherGeneratePaper = () => {
                   </div>
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
-                    {chapterGroups.map((group, groupIdx) => (
+                    {chapterGroups.map((group, groupIdx) => {
+                      const groupInfo = getSmartSyllabusGroupInfo(
+                        selectedSubject ?? "",
+                        selectedLevel ?? "",
+                        selectedBoard ?? "",
+                        group,
+                      );
+                      const groupFullyExcluded = groupInfo.groupExcluded ||
+                        (group.chapters.length > 0 && groupInfo.selectableChapters.length === 0);
+                      const selectableGroupKeys = groupInfo.selectableChapters.map(ch => makeChapterKey(group.name, ch));
+                      const isGroupChecked = !groupFullyExcluded && (
+                        selectedChapters.includes(group.name) ||
+                        (selectableGroupKeys.length > 0 && selectableGroupKeys.every(key => selectedChapters.includes(key)))
+                      );
+                      return (
                       <div key={groupIdx} className="bg-background border border-border rounded-lg p-4">
-                        <label className="flex items-start gap-2.5 mb-3 cursor-pointer">
+                        <label className={`flex items-start gap-2.5 mb-3 ${groupFullyExcluded ? "cursor-not-allowed" : "cursor-pointer"}`}>
                           <input
                             type="checkbox"
-                            checked={selectedChapters.includes(group.name)}
+                            checked={isGroupChecked}
+                            disabled={groupFullyExcluded}
                             onChange={(e) => {
                               if (e.target.checked) {
-                                setSelectedChapters([...selectedChapters, group.name, ...group.chapters.map(ch => makeChapterKey(group.name, ch))]);
+                                const additions = group.chapters.length === 0
+                                  ? [group.name]
+                                  : [
+                                      ...(groupInfo.hasExclusions ? [] : [group.name]),
+                                      ...selectableGroupKeys,
+                                    ];
+                                setSelectedChapters([...new Set([...selectedChapters, ...additions])]);
                               } else {
-                                setSelectedChapters(selectedChapters.filter(ch => ch !== group.name && !group.chapters.map(c => makeChapterKey(group.name, c)).includes(ch)));
+                                const groupChapterKeys = new Set(group.chapters.map(ch => makeChapterKey(group.name, ch)));
+                                setSelectedChapters(selectedChapters.filter(ch => ch !== group.name && !groupChapterKeys.has(ch)));
                               }
                             }}
                             className="h-4 w-4 accent-primary rounded mt-0.5 flex-shrink-0"
                           />
-                          <span className="text-[12px] sm:text-xs font-bold text-foreground">{group.name}</span>
+                          <span className={`text-[12px] sm:text-xs font-bold ${groupFullyExcluded ? "text-muted-foreground line-through decoration-black decoration-2" : "text-foreground"}`}>{group.name}</span>
                         </label>
 
                         <div className="space-y-2 ml-7">
@@ -2217,11 +2281,14 @@ const TeacherGeneratePaper = () => {
                             })
                             .map((chapter, chIdx) => {
                             const chapterKey = makeChapterKey(group.name, chapter);
+                            const isChapterExcluded = groupInfo.isChapterExcluded(chapter);
+                            const isChapterDisabled = groupFullyExcluded || isChapterExcluded;
                             return (
-                            <label key={chIdx} className="flex items-center gap-2.5 cursor-pointer">
+                            <label key={chIdx} className={`flex items-center gap-2.5 ${isChapterDisabled ? "cursor-not-allowed opacity-50" : "cursor-pointer"}`}>
                               <input
                                 type="checkbox"
                                 checked={selectedChapters.includes(chapterKey)}
+                                disabled={isChapterDisabled}
                                 onChange={(e) => {
                                   if (e.target.checked) {
                                     setSelectedChapters([...selectedChapters, chapterKey]);
@@ -2231,13 +2298,14 @@ const TeacherGeneratePaper = () => {
                                 }}
                                 className="h-3.5 w-3.5 accent-primary rounded"
                               />
-                              <span className="text-[12px] sm:text-xs text-foreground">{chapter}</span>
+                              <span className={`text-[12px] sm:text-xs ${isChapterExcluded ? "text-muted-foreground line-through decoration-black decoration-2" : "text-foreground"}`}>{chapter}</span>
                             </label>
                             );
                           })}
                         </div>
                       </div>
-                    ))}
+                      );
+                    })}
                   </div>
 
                 {selectedQuestions.length > 0 && (
