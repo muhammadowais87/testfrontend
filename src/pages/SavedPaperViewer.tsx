@@ -717,6 +717,11 @@ const SavedPaperViewer = () => {
   const resolvedLineHeight = lineHeightStep !== 0
   ? Math.max(0.1, Number(lineHeight) + lineHeightStep)
   : Number(lineHeight) > 0 ? Number(lineHeight) : 1.28;
+  // Space on each side of the rule between question types. The old gap was a
+  // fixed 32px margin plus 16px padding, so the Line Height control never moved
+  // it. Default (line height 1.28) stays tight; each step of the control adds or
+  // removes space so the rule tracks the text.
+  const sectionRuleGap = Math.max(2, Math.round(6 + (resolvedLineHeight - 1.28) * 20));
   const resolvedUrduFontSize = Number(urduFontSize) > 0 ? Number(urduFontSize) : 12;
   const resolvedEnglishFontSize = Number(englishFontSize) > 0 ? Number(englishFontSize) : 12;
   const resolvedTitleFontSize = Number(titleFontSize) > 0 ? Number(titleFontSize) : 35;
@@ -1745,7 +1750,7 @@ const SavedPaperViewer = () => {
                 </div>
               )}
 
-              <div className="saved-paper-sections mt-5 print:mt-3 space-y-8 print:space-y-6" style={{ lineHeight: resolvedLineHeight }}>
+              <div className="saved-paper-sections mt-5 print:mt-3" style={{ lineHeight: resolvedLineHeight }}>
                 {sectionedQuestions.sections.map((section, sectionIndex) => {
                   // Each section keeps the language it was added with, unless the
                   // toolbar Medium dropdown has been explicitly changed by the user.
@@ -1756,7 +1761,16 @@ const SavedPaperViewer = () => {
                   const sectionTwoPerLine = section.questions[0]?.twoPerLine ?? paper?.twoQuestionsPerLine ?? false;
                   const defaultSectionMarks = `${section.markedCount}X${formatMarks(section.marksPerQuestion)}=${formatMarks(section.markedCount * section.marksPerQuestion)}`;
                   return (
-                  <section key={section.key} className={`saved-paper-section ${sectionIndex > 0 ? "pt-4 border-t border-black" : ""}`} style={{ breakInside: "avoid" }}>
+                  <section
+                    key={section.key}
+                    className={`saved-paper-section ${sectionIndex > 0 ? "border-t border-black" : ""}`}
+                    style={{
+                      breakInside: "avoid",
+                      ...(sectionIndex > 0
+                        ? { marginTop: `${sectionRuleGap}px`, paddingTop: `${sectionRuleGap}px` }
+                        : {}),
+                    }}
+                  >
                     <div className="mb-1 print:mb-1 grid items-start gap-3 pr-3" style={{ gridTemplateColumns: showEn && showUr ? "1fr auto 1fr" : showEn ? "1fr auto" : "auto 1fr" }}>
                       {showEn && (
                         <h2 className="font-bold text-left text-black" style={{ fontSize: `${resolvedEnglishFontSize + 1}px`, fontFamily: englishFontFamily }}>
@@ -1867,7 +1881,7 @@ const SavedPaperViewer = () => {
                         };
 
                         return (
-                          <div key={question.id} className={`saved-paper-question pb-2 print:pb-1.5 ${questionBorderClass} ${questionBorderClass ? "px-2 py-1" : ""}`} style={{ breakInside: "avoid" }}>
+                          <div key={question.id} className={`saved-paper-question ${questionBorderClass} ${questionBorderClass ? "px-2 py-1" : ""}`} style={{ breakInside: "avoid" }}>
                             <div className={`grid gap-4 items-start ${showEn && showUr ? "grid-cols-2" : "grid-cols-1"}`}>
                               {showEn && (manualEditing ? (
                                 <textarea
