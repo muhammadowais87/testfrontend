@@ -55,11 +55,20 @@ const getAuthHeaders = () => {
   };
 };
 
-const toBatchNumberMap = (value: unknown): Record<number, number> | undefined => {
+const toBatchNumberMap = (
+  value: unknown,
+  { allowDecimals = false }: { allowDecimals?: boolean } = {},
+): Record<number, number> | undefined => {
   if (!value || typeof value !== "object" || Array.isArray(value)) return undefined;
   const entries = Object.entries(value as Record<string, unknown>)
     .map(([key, amount]) => [Number(key), Number(amount)] as const)
-    .filter(([key, amount]) => Number.isInteger(key) && key >= 0 && Number.isInteger(amount) && amount > 0);
+    .filter(([key, amount]) =>
+      Number.isInteger(key) &&
+      key >= 0 &&
+      Number.isFinite(amount) &&
+      amount > 0 &&
+      (allowDecimals || Number.isInteger(amount)),
+    );
   return entries.length > 0 ? Object.fromEntries(entries) : undefined;
 };
 
@@ -78,7 +87,7 @@ const toSavedPaperRecord = (paper: any): SavedPaperRecord => ({
   medium: typeof paper?.medium === "string" ? paper.medium : undefined,
   twoQuestionsPerLine: Boolean(paper?.twoQuestionsPerLine),
   batchIgnoreCounts: toBatchNumberMap(paper?.batchIgnoreCounts),
-  batchMarks: toBatchNumberMap(paper?.batchMarks),
+  batchMarks: toBatchNumberMap(paper?.batchMarks, { allowDecimals: true }),
   questions: Array.isArray(paper?.questions)
     ? paper.questions.map((q: any) => ({
         id: Number(q?.id) || 0,

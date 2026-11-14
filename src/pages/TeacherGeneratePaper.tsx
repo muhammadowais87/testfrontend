@@ -151,6 +151,23 @@ const inferContentType = (id: number, text: string): WorkspaceQuestionType => {
   return /\([A-D]\)/.test(text) ? "mcq" : "short";
 };
 
+// "Each Q Marks" needs fractional marks (0.5, 1.5) -- keep one decimal point and
+// at most two decimal places, while still rejecting letters and extra dots.
+const sanitizeDecimalInput = (value: string): string => {
+  const cleaned = value.replace(/[^0-9.]/g, "");
+  const firstDot = cleaned.indexOf(".");
+  const singleDot = firstDot === -1
+    ? cleaned
+    : cleaned.slice(0, firstDot + 1) + cleaned.slice(firstDot + 1).replace(/\./g, "");
+  const withLeadingZero = singleDot.startsWith(".") ? `0${singleDot}` : singleDot;
+  const [whole, fraction] = withLeadingZero.split(".");
+  return fraction === undefined ? whole : `${whole}.${fraction.slice(0, 2)}`;
+};
+
+// Avoid floating-point noise in totals (e.g. 0.1 * 3 = 0.30000000000000004).
+const roundMarks = (value: number): number => Math.round(value * 100) / 100;
+const formatMarks = (value: number): string => String(roundMarks(value));
+
 // PTB 9th, 10th and 1st Year -- these use the DB's per-topic data as the source of truth
 // for the question-type dropdown.
 const isTopicScopedPtbClass = (board: string | null, level: string | null) =>
@@ -781,7 +798,7 @@ const TeacherGeneratePaper = () => {
 
   // Sum of every section's own marked count x marks.
   const getDefaultTotalMarks = () =>
-    String(
+    formatMarks(
       workspaceSections.reduce(
         (sum, section) => sum + getMarkedCount(section) * getSectionMarks(section.questions[0]?.batch ?? 0),
         0,
@@ -813,7 +830,7 @@ const TeacherGeneratePaper = () => {
       return;
     }
 
-    const marksPerQuestion = Number.parseInt(eachQMarks, 10);
+    const marksPerQuestion = Number.parseFloat(eachQMarks);
     if (!Number.isFinite(marksPerQuestion) || marksPerQuestion <= 0) {
       setSelectionError("Please enter valid Each Q Marks first.");
       setShowSearchResults(false);
@@ -923,7 +940,7 @@ const TeacherGeneratePaper = () => {
     setSelectionError("");
     const ids = [...selectedQuestions];
     const batchId = nextBatchIdRef.current++;
-    setMarksByBatch((prev) => ({ ...prev, [batchId]: Number.parseInt(eachQMarks, 10) || 2 }));
+    setMarksByBatch((prev) => ({ ...prev, [batchId]: Number.parseFloat(eachQMarks) || 2 }));
     if (ignoreCount > 0) {
       setIgnoreCountByBatch((prev) => ({ ...prev, [batchId]: ignoreCount }));
     }
@@ -1020,8 +1037,8 @@ const TeacherGeneratePaper = () => {
 
       const orderedIds = savedPaper.questions.map((q) => q.id);
       const marksPerQuestion = savedPaper.questions.length > 0
-        ? Math.max(1, Math.round(Number(savedPaper.totalMarks || 0) / savedPaper.questions.length))
-        : Number(eachQMarks || 2);
+        ? Math.max(0.01, roundMarks(Number(savedPaper.totalMarks || 0) / savedPaper.questions.length))
+        : Number.parseFloat(eachQMarks) || 2;
       const chapterGroups = getChaptersForSubject(savedPaper.subject || "", savedPaper.className || "", savedPaper.board || "");
       // Restore only selectable topics -- out-of-syllabus topics stay blank.
       const allChapterSelections = getSelectableSelectionKeys(
@@ -1497,7 +1514,7 @@ const TeacherGeneratePaper = () => {
                 </div>
                 <div>
                   <label className="block text-[8px] md:text-[12px] font-semibold text-gray-700 mb-1 md:mb-2">Each Q Marks <span className="text-red-500">*</span></label>
-                  <input type="text" value={eachQMarks} onChange={(e) => setEachQMarks(e.target.value.replace(/\D/g, ''))} className="w-full border border-gray-300 rounded px-1 md:px-2 py-1 md:py-1.5 text-[10px] md:text-xs text-gray-700" placeholder="0" />
+                  <input type="text" inputMode="decimal" value={eachQMarks} onChange={(e) => setEachQMarks(sanitizeDecimalInput(e.target.value))} className="w-full border border-gray-300 rounded px-1 md:px-2 py-1 md:py-1.5 text-[10px] md:text-xs text-gray-700" placeholder="e.g. 1.5" />
                 </div>
                 <div>
                   <label className="block text-[8px] md:text-[12px] font-semibold text-gray-700 mb-1 md:mb-2">Question Choice</label>
@@ -2061,7 +2078,7 @@ const TeacherGeneratePaper = () => {
                         <div className="flex items-start justify-between gap-6 mb-4 pr-3">
                           {showEn && <p className="text-sm font-bold text-gray-900 flex-1">Q{sectionNumber}. {sectionLabel.english}</p>}
                           <p className="text-sm font-bold text-gray-900 whitespace-nowrap">
-                            {sectionMarkedCount}X{marksPerQuestion}={sectionMarkedCount * marksPerQuestion}
+                            {sectionMarkedCount}X{formatMarks(marksPerQuestion)}={formatMarks(sectionMarkedCount * marksPerQuestion)}
                           </p>
                           {showUr && <p className="text-sm font-bold text-gray-900 flex-1 text-right" dir="rtl">سوال نمبر{sectionNumber}۔ {sectionLabel.urdu}</p>}
                         </div>

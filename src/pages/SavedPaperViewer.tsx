@@ -9,6 +9,10 @@ import { useIsMobile } from "@/hooks/use-mobile";
 import { getQuestionStems, mergeMcqOptions, parseQuestionOptions, splitVerseText, isComprehensionType, groupComprehensionSets } from "@/lib/questionDisplay";
 import MathText from "@/components/MathText";
 
+// Keep fractional marks (0.5, 1.5) without floating-point noise such as 0.30000000000000004.
+const roundMarks = (value: number): number => Math.round(value * 100) / 100;
+const formatMarks = (value: number): string => String(roundMarks(value));
+
 const SavedPaperViewer = () => {
   const DESKTOP_PREVIEW_WIDTH = 1100;
   const navigate = useNavigate();
@@ -651,7 +655,7 @@ const SavedPaperViewer = () => {
     const all = editableQuestions;
     const total = Number(paperFields.totalMarks || paper?.totalMarks || 0);
     const totalCount = all.length;
-    const marksPerQuestion = total > 0 && totalCount > 0 ? Math.max(1, Math.round(total / totalCount)) : 2;
+    const marksPerQuestion = total > 0 && totalCount > 0 ? Math.max(0.01, roundMarks(total / totalCount)) : 2;
 
     const standardMeta: Record<string, { title: string; urduTitle: string }> = {
       mcq: { title: "Choose the correct answer.", urduTitle: "درست جواب منتخب کریں۔" },
@@ -1705,6 +1709,7 @@ const SavedPaperViewer = () => {
                   const showUr = sectionMedium !== "english";
                   // Each section also keeps its own "2 Questions Per Line" setting.
                   const sectionTwoPerLine = section.questions[0]?.twoPerLine ?? paper?.twoQuestionsPerLine ?? false;
+                  const defaultSectionMarks = `${section.markedCount}X${formatMarks(section.marksPerQuestion)}=${formatMarks(section.markedCount * section.marksPerQuestion)}`;
                   return (
                   <section key={section.key} className={`saved-paper-section ${sectionIndex > 0 ? "pt-4 border-t border-black" : ""}`} style={{ breakInside: "avoid" }}>
                     <div className="mb-1 print:mb-1 grid items-start gap-3 pr-3" style={{ gridTemplateColumns: showEn && showUr ? "1fr auto 1fr" : showEn ? "1fr auto" : "auto 1fr" }}>
@@ -1716,14 +1721,14 @@ const SavedPaperViewer = () => {
                       {manualEditing ? (
                         <input
                           type="text"
-                          value={sectionMarksOverrides[section.key] || `${section.markedCount}X${section.marksPerQuestion}=${section.markedCount * section.marksPerQuestion}`}
+                          value={sectionMarksOverrides[section.key] || defaultSectionMarks}
                           onChange={(e) => setSectionMarksOverrides((prev) => ({ ...prev, [section.key]: e.target.value }))}
                           className="h-6 min-w-[170px] rounded border border-black px-2 text-center text-black outline-none"
                           style={{ fontSize: `${resolvedEnglishFontSize}px`, fontFamily: englishFontFamily }}
                         />
                       ) : (
                         <span className="font-bold text-center text-black" style={{ fontSize: `${resolvedEnglishFontSize}px`, fontFamily: englishFontFamily }}>
-                          {sectionMarksOverrides[section.key] || `${section.markedCount}X${section.marksPerQuestion}=${section.markedCount * section.marksPerQuestion}`}
+                          {sectionMarksOverrides[section.key] || defaultSectionMarks}
                         </span>
                       )}
                       {showUr && (
