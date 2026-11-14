@@ -1525,7 +1525,7 @@ const GeneratePaper = () => {
                 </div>
                 <div>
                   <label className="block text-[8px] md:text-[12px] font-semibold text-gray-700 mb-1 md:mb-2">Each Q Marks <span className="text-red-500">*</span></label>
-                  <input type="text" inputMode="decimal" value={eachQMarks} onChange={(e) => setEachQMarks(sanitizeDecimalInput(e.target.value))} className="w-full border border-gray-300 rounded px-1 md:px-2 py-1 md:py-1.5 text-[10px] md:text-xs text-gray-700" placeholder="e.g. 1.5" />
+                  <input type="text" inputMode="decimal" value={eachQMarks} onChange={(e) => setEachQMarks(sanitizeDecimalInput(e.target.value))} className="w-full border border-gray-300 rounded px-1 md:px-2 py-1 md:py-1.5 text-[10px] md:text-xs text-gray-700" placeholder="0" />
                 </div>
                 <div>
                   <label className="block text-[8px] md:text-[12px] font-semibold text-gray-700 mb-1 md:mb-2">Question Choice</label>
