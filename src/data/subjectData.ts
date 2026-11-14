@@ -2391,19 +2391,14 @@ export const subjectChaptersMap: Record<string, ChapterGroup[]> = {
   "اسلامیات لازمی-INTER-I-PTB": islamiyatInterOneChapters,
   "Economics-INTER-I-PTB": economicsInterOneChapters,
   "معاشیات-INTER-I-PTB": economicsInterOneChapters,
-  // Statistics questions (Hope Science Academy file) have no topic split yet: one "Full Book" topic returns them all.
-  // Set HOPE_FULL_BOOK_ONLY to false in interTwoChapters.ts to bring the real chapter list back.
-  "Statistics-INTER-I-PTB": HOPE_FULL_BOOK_ONLY ? fullBookTopic : statisticsInterOneChapters,
-  "شماریات-INTER-I-PTB": HOPE_FULL_BOOK_ONLY ? fullBookTopic : statisticsInterOneChapters,
-  // Accounting questions (Hope Science Academy file) have no topic split yet: one "Full Book" topic returns them all.
-  // Set HOPE_FULL_BOOK_ONLY to false in interTwoChapters.ts to bring the real chapter list back.
-  "Principles of Accounting-INTER-I-PTB": HOPE_FULL_BOOK_ONLY ? fullBookTopic : accountingInterOneChapters,
-  "اصول محاسبت-INTER-I-PTB": HOPE_FULL_BOOK_ONLY ? fullBookTopic : accountingInterOneChapters,
-  // Business Maths questions (Hope Science Academy file) have no topic split yet: one "Full Book" topic returns them all.
-  // Set HOPE_FULL_BOOK_ONLY to false in interTwoChapters.ts to bring the real chapter list back.
-  "Business Maths-INTER-I-PTB": HOPE_FULL_BOOK_ONLY ? fullBookTopic : businessMathInterOneChapters,
-  "Business Math-INTER-I-PTB": HOPE_FULL_BOOK_ONLY ? fullBookTopic : businessMathInterOneChapters,
-  "کاروباری ریاضی-INTER-I-PTB": HOPE_FULL_BOOK_ONLY ? fullBookTopic : businessMathInterOneChapters,
+  // INTER-I Statistics still has no question-number ranges, so it stays one "Full Book" topic.
+  "Statistics-INTER-I-PTB": fullBookTopic,
+  "شماریات-INTER-I-PTB": fullBookTopic,
+  "Principles of Accounting-INTER-I-PTB": accountingInterOneChapters,
+  "اصول محاسبت-INTER-I-PTB": accountingInterOneChapters,
+  "Business Maths-INTER-I-PTB": businessMathInterOneChapters,
+  "Business Math-INTER-I-PTB": businessMathInterOneChapters,
+  "کاروباری ریاضی-INTER-I-PTB": businessMathInterOneChapters,
   "English-INTER-I-PTB": englishInterOneChapters,
   "Principles of Commerce-INTER-I-PTB": principlesOfCommerceInterOneChapters,
   "اصول تجارت-INTER-I-PTB": principlesOfCommerceInterOneChapters,

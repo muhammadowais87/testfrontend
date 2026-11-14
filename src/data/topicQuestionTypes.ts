@@ -92,6 +92,7 @@ const REPORT_TYPE_TO_APP_VALUE: Record<string, string> = {
   "sabqe lahqe": "sabqe_lahqe",
   "missing letters": "missing_letters",
   "translate into urdu sentences": "translate_into_urdu_sentences",
+  "translate into english": "tenses_translation",
   "zarb ul imsal": "zarb_ul_imsal",
   "zarb ul misaal": "zarb_ul_misaal",
   "correct meaning of underline word": "correct_meaning_of_underline_word",

@@ -316,115 +316,19 @@ const economics: ChapterGroup[] = [
   { name: "باب نمبر 13: اسلام کا معاشی نظام", chapters: ["اسلام کا معاشی نظام"] },
 ];
 
+// Topics match the question-number ranges in the Hope files. Each chapter's questions
+// are stored under one topic name (the ranges are not split into the smaller textbook sections).
+// "Conceptuals" is a short-question block (342–368) with no textbook chapter of its own.
 const statistics: ChapterGroup[] = [
-  {
-    name: "CHAP 10: Normal Distribution",
-    chapters: ["10.1 Normal Distribution", "10.2 Standard Normal Random Variable"],
-  },
-  {
-    name: "CHAP 11: Sampling Techniques And Sampling Distribution",
-    chapters: [
-      "11.1 Population (Or Universe)",
-      "11.2 Sample",
-      "11.3 Sampling Design",
-      "11.4 Non-Probability (Non Random) Sampling",
-      "11.5 Probability (Random) Sampling",
-      "11.6 Simple Random Sampling",
-      "11.7 Stratified Sampling",
-      "11.8 Errors",
-      "11.9 Simple Random Sampling And Sample Distribution",
-      "11.10 Sampling Distribution Of A Statistics",
-      "11.11 Sampling Distribution From General Populations",
-      "11.12 Sampling Distribution Of the Sample Mean",
-      "11.13 Sampling Distribution Of The Difference Between Two Sample Measn",
-      "11.14 Sample Distribution Of Sample Proportion, P",
-      "11.15 Sampling Distribution Of The Difference Between Two Sample Proportions,",
-      "11.16 Other Sampling Distributions",
-      "11.17 Sampling Distribution Of The Sample Variance",
-    ],
-  },
-  {
-    name: "CHAP 12: Estimation",
-    chapters: [
-      "12.1 Statistical Inference",
-      "12.2 Statistical Estimation",
-      "12.3 Point Estimation Of A Parameter",
-      "12.4 Unbiasedness",
-      "12.5 Best Estimator",
-      "12.6 Pooled Estimators From Two Samples",
-      "12.7 Interval Estimation",
-      "12.8 Confidence Interval For Population Means",
-      "12.8 Confidence Interval For Population Proportion Of Success",
-      "12.10 Comparative Studies",
-      "12.11 Confidence Interval For Difference Between Two Population Means",
-      "12.12 Confidence Interval For Difference Between Two Population Means",
-    ],
-  },
-  {
-    name: "CHAP 13: Hypothesis Testing",
-    chapters: [
-      "13.1 The Elements Of A Test Of Hypothesis",
-      "13.2 Test Of Hypothesis About A Population Means",
-      "13.3 Test Of Hypothesis About A Population Proportion",
-      "13.4 Test Of Hypothesis About The Difference Between Two Population- Independent Samples",
-      "13.5 Inferences About The Difference Between Two Population Means- Dependent Samples",
-      "13.6 Test Of Hypothesis About The Difference Between Two Population Between Two Population Proportions",
-    ],
-  },
-  {
-    name: "CHAP 14: Simple Linear Regression And Correlation",
-    chapters: [
-      "14.1 Relations Between Variables",
-      "14.2 Regression Analysis",
-      "14.3 Curve Fitting",
-      "14.4 Simple Linear Regression",
-      "14.5 The Simple Linear Regression Model",
-      "14.6 Simple Linear Correlation",
-      "14.7 Correlation Analysis",
-    ],
-  },
-  {
-    name: "CHAP 15: Association",
-    chapters: [
-      "15.1 Multinomial Populations",
-      "15.2 Attribute (Quality Variable)",
-      "15.3 Independence Of Attributes",
-      "15.4 Association Of A Attribures",
-      "15.5 Two Dimensional Count Data: Contingency Table",
-      "15.6 Test For Statistical Independence",
-      "15.7 Rank Correlation",
-    ],
-  },
-  {
-    name: "CHAP 16: Analysis Of Time Series",
-    chapters: [
-      "16.1 Time Series",
-      "16.2 Components Of Time Series",
-      "16.3 Analysis Of Time Series",
-      "16.4 Estimation Of Secular Trend",
-    ],
-  },
-  {
-    name: "CHAP 17: Orientation Of Computers",
-    chapters: [
-      "17.1 Introduction Of Computer",
-      "17.2 History Of Computer",
-      "17.3 Types Of Computer",
-      "17.4 Classification Of Cmputers",
-      "17.5 Hardware And Software",
-      "17.6 Hardware Components Of A Personal Computer",
-      "17.7 Input Devices And Output Devices",
-      "17.8 System Software",
-      "17.9 Operating System",
-      "17.10 Application Software",
-      "17.11 Programming Language",
-      "17.12 Language Processors And Translators",
-      "17.13 Basic Idea Of Writing And Running A Computer Program",
-      "17.14 Number System",
-      "17.15 How Computer Represents Data",
-      "17.16 Binary System As A Foundation Of A Computer Programming",
-    ],
-  },
+  { name: "CHAP 10: Normal Distribution", chapters: ["Normal Distribution"] },
+  { name: "CHAP 11: Sampling Techniques And Sampling Distribution", chapters: ["Population (Or Universe)"] },
+  { name: "CHAP 12: Estimation", chapters: ["Statistical Inference"] },
+  { name: "CHAP 13: Hypothesis Testing", chapters: ["The Elements Of A Test Of Hypothesis"] },
+  { name: "CHAP 14: Simple Linear Regression And Correlation", chapters: ["Relations Between Variables"] },
+  { name: "CHAP 15: Association", chapters: ["Multinomial Populations"] },
+  { name: "CHAP 16: Analysis Of Time Series", chapters: ["Time Series"] },
+  { name: "CHAP 17: Orientation Of Computers", chapters: ["Introduction Of Computer"] },
+  { name: "Conceptuals", chapters: ["Conceptuals"] },
 ];
 
 const businessStatistics: ChapterGroup[] = [
@@ -1233,11 +1137,9 @@ const urdu: ChapterGroup[] = [
   { name: "گرائمر (خطوط)، (مضامین)", chapters: ["1 مضامین", "2 خطوط", "3 آپ بیتی"] },
 ];
 
-// The Hope Science Academy question files (Statistics, Business Statistics, Mathematics, Accounting for 2nd year;
-// Statistics, Business Maths, Accounting for 1st year) have no topic split yet, so their questions are all stored under one topic, "Full Book": picking it
-// returns every question of the subject. Until they are arranged topic-wise those subjects show only that topic.
-// To bring the real topic lists below back, set HOPE_FULL_BOOK_ONLY to false (and re-seed with topics).
-export const HOPE_FULL_BOOK_ONLY = true;
+// INTER-I Statistics still has no topic ranges, so it stays one "Full Book" topic.
+// The other Hope subjects (below, and INTER-I Accounting / Business Maths) are split by question number.
+export const HOPE_FULL_BOOK_ONLY = false;
 export const fullBookTopic: ChapterGroup[] = [{ name: "Full Book", chapters: ["Full Book"] }];
 
 // Subject titles (as shown on the subject cards, plus tolerant aliases) -> topics.
@@ -1256,9 +1158,9 @@ const subjectTopics: [string[], ChapterGroup[]][] = [
   [["ہوم اکنامکس"], homeEconomics],
   [["Pakistan Studies"], pakStudies],
   [["Economics", "معاشیات"], economics],
-  [["Statistics", "شماریات"], HOPE_FULL_BOOK_ONLY ? fullBookTopic : statistics],
-  [["کاروباری شماریات"], HOPE_FULL_BOOK_ONLY ? fullBookTopic : businessStatistics],
-  [["Principles of Accounting", "اصول محاسبت"], HOPE_FULL_BOOK_ONLY ? fullBookTopic : accounting],
+  [["Statistics", "شماریات"], statistics],
+  [["کاروباری شماریات"], businessStatistics],
+  [["Principles of Accounting", "اصول محاسبت"], accounting],
   [["اصول بینکاری"], banking],
   [["تجارتی جغرافیہ"], commercialGeography],
   [["ترجمہ القرآن المجید", "Tarjuma"], tarjumaTulQuran],
@@ -1267,7 +1169,7 @@ const subjectTopics: [string[], ChapterGroup[]][] = [
   [["Physics"], physics],
   [["Biology"], biology],
   [["Computer"], computer],
-  [["Mathematics"], HOPE_FULL_BOOK_ONLY ? fullBookTopic : mathematics],
+  [["Mathematics"], mathematics],
   [["اردو لازمی"], urdu],
 ];
 

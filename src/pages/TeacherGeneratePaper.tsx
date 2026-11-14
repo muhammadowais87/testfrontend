@@ -29,6 +29,7 @@ import { getNineTopicChapters } from "@/data/nineTopicChapters";
 import {
   getSelectableSelectionKeys,
   getSmartSyllabusGroupInfo,
+  hasSmartSyllabusExclusions,
   sanitizeChapterSelections,
 } from "@/data/nineSmartSyllabusExclusions";
 import { getOneToEightChapters } from "@/data/oneToEightChapters";
@@ -108,6 +109,7 @@ const allPossibleQuestionTypeOptions: QuestionTypeOption[] = [
   { value: "farsi_tarjuma", label: "Translation (ترجمہ)" },
   { value: "translate_into_urdu_paragraph", label: "Translate into Urdu Paragraph (اردو میں ترجمہ)" },
   { value: "translate_into_english_paragraphs", label: "Translate into English Paragraphs (انگریزی میں ترجمہ)" },
+  { value: "tenses_translation", label: "Translate into English (انگریزی میں ترجمہ)" },
   // Q&A
   { value: "questions_answers", label: "Questions & Answers (سوالات و جوابات)" },
   // Classes 1-8 specific types
@@ -178,6 +180,7 @@ const getProfessionalQuestionTypeLabel = (value: string, fallbackLabel: string):
     translate_into_urdu_paragraph: "Translate into Urdu Paragraph (اردو میں ترجمہ)",
     translate_urdu_paragraph: "Translate into Urdu Paragraph (اردو میں ترجمہ)",
     translate_into_english_paragraphs: "Translate into English Paragraphs (انگریزی میں ترجمہ)",
+    tenses_translation: "Translate into English (انگریزی میں ترجمہ)",
     comprehension_paragraph: "Comprehension Paragraph (تفہیمی پیرا گراف)",
     poem_stanzas: "Poem Stanzas (نظم کے بند)",
     ideoms: "Idioms (محاورات)",
@@ -253,6 +256,9 @@ const TeacherGeneratePaper = () => {
   const [selectedLevel, setSelectedLevel] = useState<string | null>(null);
   const [selectedSubject, setSelectedSubject] = useState<string | null>(null);
   const [selectedChapters, setSelectedChapters] = useState<string[]>([]);
+  // When true, the chapter picker ignores the 9th-class Smart Syllabus cuts and
+  // shows/selects every topic from the full syllabus. Off by default.
+  const [enableFullSyllabus, setEnableFullSyllabus] = useState(false);
   const lastInitializedRef = useRef<{ key: string; isDb: boolean; isTopicsFile?: boolean } | null>(null);
   const [showQuestionSelection, setShowQuestionSelection] = useState(false);
   const [showPaperWorkspace, setShowPaperWorkspace] = useState(false);
@@ -380,15 +386,25 @@ const TeacherGeneratePaper = () => {
   }, [dbChapterGroups, selectedBoard, selectedLevel, selectedSubject]);
 
   // Every key "Select All Chapters" may add. Topics excluded by the current Smart
-  // Syllabus are never part of this list.
+  // Syllabus are never part of this list unless the teacher enabled the full syllabus.
   const selectableChapterKeys = useMemo(
     () => getSelectableSelectionKeys(
       selectedSubject ?? "",
       selectedLevel ?? "",
       selectedBoard ?? "",
       chapterGroups,
+      enableFullSyllabus,
     ),
-    [chapterGroups, selectedBoard, selectedLevel, selectedSubject],
+    [chapterGroups, selectedBoard, selectedLevel, selectedSubject, enableFullSyllabus],
+  );
+
+  const canToggleFullSyllabus = useMemo(
+    () => hasSmartSyllabusExclusions(
+      selectedSubject ?? "",
+      selectedLevel ?? "",
+      selectedBoard ?? "",
+    ),
+    [selectedBoard, selectedLevel, selectedSubject],
   );
 
   const questionTypeOptions = useMemo(() => {
@@ -700,6 +716,8 @@ const TeacherGeneratePaper = () => {
     translate_into_urdu_paragraph: { english: "Translate the following sentences/paragraph into Urdu", urdu: "مندرجہ ذیل جملوں/پیراگراف کا اردو میں ترجمہ کریں" },
     translate_urdu_paragraph: { english: "Translate the following sentences/paragraph into Urdu", urdu: "مندرجہ ذیل جملوں/پیراگراف کا اردو میں ترجمہ کریں" },
     translate_into_urdu_sentences: { english: "Translate the following sentences/paragraph into Urdu", urdu: "مندرجہ ذیل جملوں/پیراگراف کا اردو میں ترجمہ کریں" },
+    tenses_translation: { english: "Translate the following sentences into English", urdu: "مندرجہ ذیل جملوں کا انگریزی میں ترجمہ کریں" },
+    "tenses translation": { english: "Translate the following sentences into English", urdu: "مندرجہ ذیل جملوں کا انگریزی میں ترجمہ کریں" },
   };
 
   const getSectionLabel = (key: string): { english: string; urdu: string } => {
@@ -842,6 +860,7 @@ const TeacherGeneratePaper = () => {
         chapterGroups,
         contentTypeFilter,
         sectionTypeFilter,
+        enableFullSyllabus,
       );
       const maxExistingId = shuffledOrder.length > 0 ? Math.max(...shuffledOrder) : 0;
       const uniqueQuestions = questions.map((q, idx) => ({ ...q, id: maxExistingId + idx + 1 }));
@@ -1239,6 +1258,7 @@ const TeacherGeneratePaper = () => {
 
   // Safety net: even a restored paper or old state can never keep an out-of-syllabus
   // topic selected. A partially excluded group is expanded to its allowed topics only.
+  // In full-syllabus mode every topic is allowed, so the list is left untouched.
   useEffect(() => {
     if (!selectedSubject || !selectedLevel || !selectedBoard || chapterGroups.length === 0) return;
     setSelectedChapters((previous) => {
@@ -1248,12 +1268,13 @@ const TeacherGeneratePaper = () => {
         selectedBoard,
         chapterGroups,
         previous,
+        enableFullSyllabus,
       );
       return next.length === previous.length && next.every((value, index) => value === previous[index])
         ? previous
         : next;
     });
-  }, [chapterGroups, selectedBoard, selectedLevel, selectedSubject, selectedChapters]);
+  }, [chapterGroups, selectedBoard, selectedLevel, selectedSubject, selectedChapters, enableFullSyllabus]);
 
   useEffect(() => {
     setAllQuestions([]);
@@ -1262,6 +1283,7 @@ const TeacherGeneratePaper = () => {
     setSelectionError("");
     setAppliedQuestionType("");
     setAppliedDualMedium("dual");
+    setEnableFullSyllabus(false);
   }, [selectedBoard, selectedLevel, selectedSubject]);
 
   useEffect(() => {
@@ -1282,13 +1304,14 @@ const TeacherGeneratePaper = () => {
         selectedBoard,
         chapterGroups,
         isTopicScopedPtbClass(selectedBoard, selectedLevel),
+        enableFullSyllabus,
       )
         .then(setAvailableDbTypes)
         .catch(() => setAvailableDbTypes(null));
     } else {
       setAvailableDbTypes(null);
     }
-  }, [showQuestionSelection, selectedChapters, selectedSubject, selectedLevel, selectedBoard, chapterGroups]);
+  }, [showQuestionSelection, selectedChapters, selectedSubject, selectedLevel, selectedBoard, chapterGroups, enableFullSyllabus]);
 
   const sidebarContent = (showQuestionSelection || showPaperWorkspace) ? (
     <>
@@ -2224,6 +2247,21 @@ const TeacherGeneratePaper = () => {
                     </label>
                   </div>
 
+                  {canToggleFullSyllabus && (
+                    <label className="mb-5 flex items-start gap-3 cursor-pointer rounded-lg border border-border bg-background p-3">
+                      <input
+                        type="checkbox"
+                        checked={enableFullSyllabus}
+                        onChange={(e) => setEnableFullSyllabus(e.target.checked)}
+                        className="h-4 w-4 accent-primary rounded mt-0.5 flex-shrink-0"
+                      />
+                      <span>
+                        <span className="block text-[12px] sm:text-xs font-bold text-foreground uppercase tracking-wide">Enable All (Pre 9th/11TH)</span>
+                        <span className="block text-[11px] text-muted-foreground">Show and select every topic from the full syllabus, ignoring the Smart Syllabus cuts.</span>
+                      </span>
+                    </label>
+                  )}
+
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
                     {chapterGroups.map((group, groupIdx) => {
                       const groupInfo = getSmartSyllabusGroupInfo(
@@ -2231,6 +2269,7 @@ const TeacherGeneratePaper = () => {
                         selectedLevel ?? "",
                         selectedBoard ?? "",
                         group,
+                        enableFullSyllabus,
                       );
                       const groupFullyExcluded = groupInfo.groupExcluded ||
                         (group.chapters.length > 0 && groupInfo.selectableChapters.length === 0);

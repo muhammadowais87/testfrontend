@@ -602,6 +602,8 @@ const SavedPaperViewer = () => {
     pointing: { title: "Pointing.", urduTitle: "اشارہ۔" },
     punctuate_the_paragraph: { title: "Punctuate the Paragraph.", urduTitle: "رموزِ اوقاف۔" },
     translate_into_urdu_sentences: { title: "Translate the following sentences/paragraph into Urdu.", urduTitle: "مندرجہ ذیل جملوں/پیراگراف کا اردو میں ترجمہ کریں۔" },
+    tenses_translation: { title: "Translate the following sentences into English.", urduTitle: "مندرجہ ذیل جملوں کا انگریزی میں ترجمہ کریں۔" },
+    "tenses translation": { title: "Translate the following sentences into English.", urduTitle: "مندرجہ ذیل جملوں کا انگریزی میں ترجمہ کریں۔" },
     translate_into_urdu_paragraph: { title: "Translate the following sentences/paragraph into Urdu.", urduTitle: "مندرجہ ذیل جملوں/پیراگراف کا اردو میں ترجمہ کریں۔" },
     tick_correct_spellings: { title: "Tick Correct Spellings.", urduTitle: "درست ہجے کا انتخاب کریں۔" },
     correct_meaning_of_underline_word: { title: "Correct Meaning of Underlined Word.", urduTitle: "خط کشیدہ الفاظ کے درست معنی۔" },

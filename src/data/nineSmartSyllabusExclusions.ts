@@ -10,6 +10,7 @@
  * - their checkboxes are disabled
  * - "Select All Chapters" and whole-chapter selection skip them
  * - they are stripped from saved-paper restores and question-bank requests
+ * - a per-paper "Enable All (Full Syllabus)" toggle bypasses every cut above
  */
 
 import type { ChapterGroup } from "./subjectData";
@@ -164,6 +165,23 @@ const getSubjectExclusions = (
   return EXCLUSIONS[`${actualSubject}-${className}-${board}`] ?? null;
 };
 
+/**
+ * True when this subject/class/board has any Smart Syllabus cut. The chapter picker
+ * uses this to decide whether the "Enable All (Full Syllabus)" toggle is worth
+ * showing at all.
+ */
+export const hasSmartSyllabusExclusions = (
+  subject: string,
+  className: string,
+  board: string,
+): boolean => {
+  const exclusions = getSubjectExclusions(subject, className, board);
+  return Boolean(
+    exclusions &&
+      ((exclusions.groups?.length ?? 0) > 0 || (exclusions.topics?.length ?? 0) > 0),
+  );
+};
+
 const makeSelectionKey = (groupName: string, chapter: string) => `${groupName}::${chapter}`;
 
 export type SmartSyllabusGroupInfo = {
@@ -182,9 +200,10 @@ export const getSmartSyllabusGroupInfo = (
   className: string,
   board: string,
   group: ChapterGroup,
+  includeExcluded = false,
 ): SmartSyllabusGroupInfo => {
   const exclusions = getSubjectExclusions(subject, className, board);
-  if (!exclusions) {
+  if (includeExcluded || !exclusions) {
     return {
       groupExcluded: false,
       hasExclusions: false,
@@ -219,6 +238,7 @@ export const getSelectableSelectionKeys = (
   className: string,
   board: string,
   groups: ChapterGroup[],
+  includeExcluded = false,
 ): string[] => {
   const result: string[] = [];
   const seen = new Set<string>();
@@ -230,7 +250,7 @@ export const getSelectableSelectionKeys = (
   };
 
   groups.forEach((group) => {
-    const info = getSmartSyllabusGroupInfo(subject, className, board, group);
+    const info = getSmartSyllabusGroupInfo(subject, className, board, group, includeExcluded);
     if (info.groupExcluded) return;
 
     if (group.chapters.length === 0) {
@@ -262,15 +282,16 @@ export const sanitizeChapterSelections = (
   board: string,
   groups: ChapterGroup[],
   selections: string[],
+  includeExcluded = false,
 ): string[] => {
   const exclusions = getSubjectExclusions(subject, className, board);
-  if (!exclusions || groups.length === 0 || selections.length === 0) {
+  if (includeExcluded || !exclusions || groups.length === 0 || selections.length === 0) {
     return [...selections];
   }
 
   const groupInfos = groups.map((group) => ({
     group,
-    info: getSmartSyllabusGroupInfo(subject, className, board, group),
+    info: getSmartSyllabusGroupInfo(subject, className, board, group, includeExcluded),
   }));
 
   const findGroupByName = (name: string) =>

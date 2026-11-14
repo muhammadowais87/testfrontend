@@ -131,6 +131,8 @@ html {
 /* Urdu / Arabic text styling — outside @layer so specificity always wins */
 [dir="rtl"], .font-urdu {
   font-family: 'Noto Nastaliq Urdu', 'Jameel Noori Nastaleeq', serif;
+  direction: rtl;
+  text-align: right;
 }
 
 @page {
@@ -199,10 +201,21 @@ html {
   .saved-paper-print.compact-print .saved-paper-question textarea {
     line-height: 1.2 !important;
   }
-}
 
-.saved-paper-print [dir="rtl"] {
-  line-height: 1.45;
+  .saved-paper-print [dir="rtl"] {
+    line-height: 1.45;
+    /* Ensure RTL direction is preserved across page breaks and wraps */
+    unicode-bidi: bidi-override;
+    direction: rtl !important;
+    text-align: right !important;
+  }
+
+  .saved-paper-print [dir="rtl"] * {
+    /* Recursively ensure child elements also maintain RTL direction */
+    direction: rtl !important;
+    text-align: right !important;
+    unicode-bidi: bidi-override !important;
+  }
 }
 
 .saved-paper-canvas.preview-zoom {

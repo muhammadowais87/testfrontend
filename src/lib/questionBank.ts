@@ -134,7 +134,11 @@ const QUESTION_TYPE_VALUE_MAP: Record<string, string> = {
   "question and answers": "questions_answers",
   "questions and answers": "questions_answers",
   "translate into urdu paragraph": "translate_into_urdu_paragraph",
+  "translate into english paragraph": "translate_into_english_paragraphs",
+  "translate into english paragraphs": "translate_into_english_paragraphs",
   "translate into urdu sentences": "translate_into_urdu_sentences",
+  // 9th English TENSES translation exercises (chapterPart "tenses translation").
+  "tenses translation": "tenses_translation",
   "fill in tha blanks": "fill_in_tha_blanks",
   "fill in the blanks": "fill_in_tha_blanks",
   "idioms sentences": "ilfaz_ko_jumlo_mein_istamal",
@@ -225,6 +229,7 @@ export const normalizeQuestionTypeValue = (value: string): string | null => {
     "darkhaastein",
     "questions_answers",
     "translate_into_urdu_paragraph",
+    "translate_into_english_paragraphs",
     "fill_in_tha_blanks",
     "writing_paragraphs",
     "markazi_khayal",
@@ -242,6 +247,7 @@ export const normalizeQuestionTypeValue = (value: string): string | null => {
     "match_columns",
     "essays",
     "translate_into_urdu_sentences",
+    "tenses_translation",
     "wahid_jama",
     "muzakir_monas",
     "jumlo_ki_darustagi",
@@ -455,6 +461,7 @@ const buildCacheKey = (
   board?: string | null,
   contentType?: QuestionContentType | null,
   sectionType?: string | null,
+  includeExcluded = false,
 ) => [
   scope.chapterNumbers.join(","),
   scope.fullChapters.join(","),
@@ -464,6 +471,7 @@ const buildCacheKey = (
   board || "",
   contentType || "",
   sectionType || "",
+  includeExcluded ? "full-syllabus" : "",
 ].join("::");
 
 export const clearQuestionBankCache = () => {
@@ -481,19 +489,22 @@ export const fetchQuestionsForSelection = async (
   allGroups: ChapterGroup[] = [],
   contentType?: QuestionContentType | null,
   sectionType?: string | null,
+  includeExcluded = false,
 ): Promise<PaperQuestion[]> => {
   if (selectedChapters.length === 0) {
     return [];
   }
 
   // Never request questions for topics that are out of syllabus for this session,
-  // even if an old selection or a saved paper still contains them.
+  // even if an old selection or a saved paper still contains them. The caller can
+  // opt out (full-syllabus mode) to fetch every topic.
   const safeSelections = sanitizeChapterSelections(
     subject ?? "",
     className ?? "",
     board ?? "",
     allGroups,
     selectedChapters,
+    includeExcluded,
   );
   if (safeSelections.length === 0) {
     return [];
@@ -504,7 +515,7 @@ export const fetchQuestionsForSelection = async (
     return [];
   }
 
-  const cacheKey = buildCacheKey(scope, subject, className, board, contentType, sectionType);
+  const cacheKey = buildCacheKey(scope, subject, className, board, contentType, sectionType, includeExcluded);
   const cached = questionBankCache.get(cacheKey);
   if (cached) {
     return cached;
@@ -526,7 +537,10 @@ export const fetchQuestionsForSelection = async (
     baseParams.set("fullChapters", scope.fullChapters.join(","));
   }
   if (scope.chapterParts.length > 0) {
-    baseParams.set("chapterParts", scope.chapterParts.join(","));
+    // Sent as repeated params because topic names can contain commas
+    // (e.g. "1 Use of 'is', 'am', 'are' and 'was', were").
+    scope.chapterParts.forEach((part) => baseParams.append("chapterParts", part));
+    baseParams.set("chapterPartsExact", "1");
   }
   if (subject) baseParams.set("subject", subject);
   if (className) baseParams.set("className", className);
@@ -630,6 +644,7 @@ export const fetchAvailableQuestionTypes = async (
   board?: string | null,
   allGroups: ChapterGroup[] = [],
   scopeByTopic = false,
+  includeExcluded = false,
 ): Promise<string[]> => {
   if (selectedChapters.length === 0) {
     return [];
@@ -641,6 +656,7 @@ export const fetchAvailableQuestionTypes = async (
     board ?? "",
     allGroups,
     selectedChapters,
+    includeExcluded,
   );
   if (safeSelections.length === 0) {
     return [];
