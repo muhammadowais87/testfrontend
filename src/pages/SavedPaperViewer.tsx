@@ -833,40 +833,43 @@ const SavedPaperViewer = () => {
     <div className={`saved-paper-print min-h-screen bg-slate-100 print:bg-white mode-${printMode} ${compactPrintMode ? "compact-print" : ""}`}>
       <div className="sticky top-0 z-20 select-none bg-[#24364a] text-white shadow-sm print:hidden">
         <div className="grid grid-cols-2 gap-1 border-b border-black/30 px-2 pb-1 pt-1 md:grid-cols-6 xl:grid-cols-12">
-          <div className="flex items-center gap-2">
+          <div className="flex items-end gap-1">
             <button
               onClick={() => setLineHeightStep((v) => Math.max(-1, v - 0.1))}
-              className="h-6 w-6 rounded-sm border border-black bg-white text-center text-xs font-medium text-black flex items-center justify-center hover:bg-gray-100"
+              className="h-8 w-7 rounded-sm border border-black bg-white text-center text-xs font-medium text-black flex items-center justify-center hover:bg-gray-100"
               title="Decrease line height"
             >
               -
             </button>
-            <input
-              type="text"
-              value={lineHeight}
-              onChange={(e) => {
-                const v = parseFloat(e.target.value);
-                if (!isNaN(v) && v > 0) {
-                  setLineHeight(e.target.value);
-                  setLineHeightStep(0);
-                }
-              }}
-              onKeyDown={(e) => {
-                if (e.key === "ArrowUp") {
-                  setLineHeightStep((v) => Math.min(1, v + 0.1));
-                  e.preventDefault();
-                }
-                if (e.key === "ArrowDown") {
-                  setLineHeightStep((v) => Math.max(-1, v - 0.1));
-                  e.preventDefault();
-                }
-              }}
-              onBlur={(e) => setLineHeightStep(0)}
-              className="h-8 w-24 rounded-sm border border-black bg-white text-center text-xs font-medium text-black"
-            />
+            <label className="block flex-1">
+              <span className="mb-0.5 block pl-1 text-[10px] font-medium text-white">Line Height</span>
+              <input
+                type="text"
+                value={lineHeight}
+                onChange={(e) => {
+                  const v = parseFloat(e.target.value);
+                  if (!isNaN(v) && v > 0) {
+                    setLineHeight(e.target.value);
+                    setLineHeightStep(0);
+                  }
+                }}
+                onKeyDown={(e) => {
+                  if (e.key === "ArrowUp") {
+                    setLineHeightStep((v) => Math.min(1, v + 0.1));
+                    e.preventDefault();
+                  }
+                  if (e.key === "ArrowDown") {
+                    setLineHeightStep((v) => Math.max(-1, v - 0.1));
+                    e.preventDefault();
+                  }
+                }}
+                onBlur={(e) => setLineHeightStep(0)}
+                className="h-8 w-full rounded-sm border border-black bg-white text-center text-xs font-medium text-black"
+              />
+            </label>
             <button
               onClick={() => setLineHeightStep((v) => Math.min(1, v + 0.1))}
-              className="h-6 w-6 rounded-sm border border-black bg-white text-center text-xs font-medium text-black flex items-center justify-center hover:bg-gray-100"
+              className="h-8 w-7 rounded-sm border border-black bg-white text-center text-xs font-medium text-black flex items-center justify-center hover:bg-gray-100"
               title="Increase line height"
             >
               +
@@ -1742,7 +1745,7 @@ const SavedPaperViewer = () => {
                 </div>
               )}
 
-              <div className="saved-paper-sections mt-2 print:mt-2 space-y-4 print:space-y-3" style={{ lineHeight: resolvedLineHeight }}>
+              <div className="saved-paper-sections mt-5 print:mt-3 space-y-8 print:space-y-6" style={{ lineHeight: resolvedLineHeight }}>
                 {sectionedQuestions.sections.map((section, sectionIndex) => {
                   // Each section keeps the language it was added with, unless the
                   // toolbar Medium dropdown has been explicitly changed by the user.
@@ -1753,7 +1756,7 @@ const SavedPaperViewer = () => {
                   const sectionTwoPerLine = section.questions[0]?.twoPerLine ?? paper?.twoQuestionsPerLine ?? false;
                   const defaultSectionMarks = `${section.markedCount}X${formatMarks(section.marksPerQuestion)}=${formatMarks(section.markedCount * section.marksPerQuestion)}`;
                   return (
-                  <section key={section.key} className={`saved-paper-section ${sectionIndex > 0 ? "pt-2 border-t border-black" : ""}`} style={{ breakInside: "avoid" }}>
+                  <section key={section.key} className={`saved-paper-section ${sectionIndex > 0 ? "pt-4 border-t border-black" : ""}`} style={{ breakInside: "avoid" }}>
                     <div className="mb-1 print:mb-1 grid items-start gap-3 pr-3" style={{ gridTemplateColumns: showEn && showUr ? "1fr auto 1fr" : showEn ? "1fr auto" : "auto 1fr" }}>
                       {showEn && (
                         <h2 className="font-bold text-left text-black" style={{ fontSize: `${resolvedEnglishFontSize + 1}px`, fontFamily: englishFontFamily }}>
