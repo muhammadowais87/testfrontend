@@ -273,8 +273,8 @@ const TeacherGeneratePaper = () => {
   const [selectedLevel, setSelectedLevel] = useState<string | null>(null);
   const [selectedSubject, setSelectedSubject] = useState<string | null>(null);
   const [selectedChapters, setSelectedChapters] = useState<string[]>([]);
-  // When true, the chapter picker ignores the 9th-class Smart Syllabus cuts and
-  // shows/selects every topic from the full syllabus. Off by default.
+  // When true, the chapter picker ignores the Smart Syllabus cuts (9th + INTER-I)
+  // and shows/selects every topic from the full syllabus. Off by default.
   const [enableFullSyllabus, setEnableFullSyllabus] = useState(false);
   const lastInitializedRef = useRef<{ key: string; isDb: boolean; isTopicsFile?: boolean } | null>(null);
   const [showQuestionSelection, setShowQuestionSelection] = useState(false);

@@ -269,8 +269,8 @@ const GeneratePaper = () => {
   const [searchParams] = useSearchParams();
   const isTrial = searchParams.get("trial") === "true";
   const [selectedChapters, setSelectedChapters] = useState<string[]>([]);
-  // When true, the chapter picker ignores the 9th-class Smart Syllabus cuts and
-  // shows/selects every topic from the full syllabus. Off by default.
+  // When true, the chapter picker ignores the Smart Syllabus cuts (9th + INTER-I)
+  // and shows/selects every topic from the full syllabus. Off by default.
   const [enableFullSyllabus, setEnableFullSyllabus] = useState(false);
   const lastInitializedRef = useRef<{ key: string; isDb: boolean; isTopicsFile?: boolean } | null>(null);
   // Desktop starts with its sidebar showing; on a phone the sidebar is an overlay and stays closed until the hamburger is tapped.
