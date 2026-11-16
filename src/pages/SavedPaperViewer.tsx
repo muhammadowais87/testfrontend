@@ -107,9 +107,12 @@ const SavedPaperViewer = () => {
     const prevTitle = document.title;
     const printStyle = document.createElement("style");
     printStyle.setAttribute("data-print-cleanup", "saved-paper-viewer");
+    // Keep the paper's vertical pagination tight, but leave a safe left/right margin so
+    // question numbers near the page edges are not clipped by the printer's unprintable
+    // area (with margin:0 the outer edges sat only ~3mm from the paper edge).
     printStyle.textContent = `
       @media print {
-        @page { margin: 0 !important; size: auto; }
+        @page { margin: 0 12mm !important; size: auto; }
         html, body { margin: 0 !important; padding: 0 !important; }
       }
     `;
@@ -1817,10 +1820,10 @@ const SavedPaperViewer = () => {
                               <td className="border border-black p-2 text-right"
                                   style={{ fontSize: `${resolvedUrduFontSize}px`, color: resolvedTextColor, fontFamily: urduFontFamily }}>
                                 {manualEditing ? (
-                                  <textarea
+                                  <EditableRichField
                                     value={question.text}
-                                    onChange={(e) => { const value = e.target.value; setEditableQuestions((prev) => prev.map((q) => (q.id === question.id ? { ...q, text: value } : q))); }}
-                                    className="w-full resize-y rounded border border-black px-2 py-1 text-right"
+                                    onChange={(value) => { setEditableQuestions((prev) => prev.map((q) => (q.id === question.id ? { ...q, text: value } : q))); }}
+                                    className="text-right"
                                     rows={1}
                                     dir="rtl"
                                     style={{ fontSize: `${resolvedUrduFontSize}px`, color: resolvedTextColor, fontFamily: urduFontFamily }}
@@ -1830,10 +1833,10 @@ const SavedPaperViewer = () => {
                               <td className="border border-black p-2 text-right"
                                   style={{ fontSize: `${resolvedUrduFontSize}px`, color: resolvedTextColor, fontFamily: urduFontFamily }}>
                                 {manualEditing ? (
-                                  <textarea
+                                  <EditableRichField
                                     value={question.urdu}
-                                    onChange={(e) => { const value = e.target.value; setEditableQuestions((prev) => prev.map((q) => (q.id === question.id ? { ...q, urdu: value } : q))); }}
-                                    className="w-full resize-y rounded border border-black px-2 py-1 text-right"
+                                    onChange={(value) => { setEditableQuestions((prev) => prev.map((q) => (q.id === question.id ? { ...q, urdu: value } : q))); }}
+                                    className="text-right"
                                     rows={1}
                                     dir="rtl"
                                     style={{ fontSize: `${resolvedUrduFontSize}px`, color: resolvedTextColor, fontFamily: urduFontFamily }}
@@ -1884,13 +1887,12 @@ const SavedPaperViewer = () => {
                           <div key={question.id} className={`saved-paper-question ${questionBorderClass} ${questionBorderClass ? "px-2 py-1" : ""}`} style={{ breakInside: "avoid" }}>
                             <div className={`grid gap-4 items-start ${showEn && showUr ? "grid-cols-2" : "grid-cols-1"}`}>
                               {showEn && (manualEditing ? (
-                                <textarea
-                                  value={question.text}
-                                  onChange={(e) => {
-                                    const value = e.target.value;
+                                <EditableRichField
+                                  value={question.text || question.urdu}
+                                  onChange={(value) => {
                                     setEditableQuestions((prev) => prev.map((q) => (q.id === question.id ? { ...q, text: value } : q)));
                                   }}
-                                  className="w-full resize-y rounded border border-black px-2 py-1 text-black"
+                                  className="text-black"
                                   rows={2}
                                   style={{ fontSize: `${resolvedEnglishFontSize}px`, color: resolvedTextColor, fontWeight: resolvedFontWeight, fontFamily: englishFontFamily }}
                                 />
@@ -1900,13 +1902,15 @@ const SavedPaperViewer = () => {
                                 </div>
                               ))}{"\n"}
                               {showUr && (manualEditing ? (
-                                <textarea
-                                  value={question.urdu}
-                                  onChange={(e) => {
-                                    const value = e.target.value;
+                                <EditableRichField
+                                  // Urdu-only papers often store their content in `text` with
+                                  // an empty `urdu` field -- fall back so the editor never
+                                  // shows a blank box (the display mode does the same).
+                                  value={showEn ? question.urdu : (question.urdu || question.text)}
+                                  onChange={(value) => {
                                     setEditableQuestions((prev) => prev.map((q) => (q.id === question.id ? { ...q, urdu: value } : q)));
                                   }}
-                                  className="w-full resize-y rounded border border-black px-2 py-1 text-right text-black"
+                                  className="text-right text-black"
                                   rows={2}
                                   dir="rtl"
                                   style={{ fontSize: `${resolvedUrduFontSize}px`, color: resolvedTextColor, fontWeight: resolvedFontWeight, fontFamily: urduFontFamily }}
@@ -2102,6 +2106,68 @@ const PaperMetaField = ({ className = "", compact = false, label, value, manualE
     )}
   </div>
 );
+
+type EditableRichFieldProps = {
+  value: string;
+  onChange: (value: string) => void;
+  className?: string;
+  style?: React.CSSProperties;
+  dir?: "rtl" | "ltr";
+  rows?: number;
+  placeholder?: string;
+};
+
+// Manual-editing field for questions. Math questions are stored as LaTeX ("$z_1=2+3i$"),
+// but showing that source in the editor made the paper look broken while editing. Keep
+// rendering the value exactly like the paper (MathText -> human readable) and only swap
+// in a raw textarea for the one box the teacher actually clicks.
+const EditableRichField = ({
+  value,
+  onChange,
+  className = "",
+  style,
+  dir,
+  rows = 2,
+  placeholder = "Click to edit…",
+}: EditableRichFieldProps) => {
+  const [editing, setEditing] = useState(false);
+  const hasMarkup = /\$|\\\(|\\\[|\\[a-zA-Z]+|\*\*|__/.test(value);
+
+  if (!hasMarkup || editing) {
+    return (
+      <textarea
+        autoFocus={editing}
+        value={value}
+        onChange={(e) => onChange(e.target.value)}
+        onBlur={() => setEditing(false)}
+        className={`w-full resize-y rounded border border-black px-2 py-1 ${className}`}
+        rows={rows}
+        dir={dir}
+        style={style}
+      />
+    );
+  }
+
+  return (
+    <div
+      role="button"
+      tabIndex={0}
+      title="Click to edit"
+      onClick={() => setEditing(true)}
+      onKeyDown={(e) => {
+        if (e.key === "Enter" || e.key === " ") {
+          e.preventDefault();
+          setEditing(true);
+        }
+      }}
+      className={`w-full cursor-text rounded border border-black px-2 py-1 outline-none hover:bg-slate-50 focus:bg-slate-50 ${className}`}
+      dir={dir}
+      style={style}
+    >
+      {value.trim() ? <MathText text={value} /> : <span className="text-slate-400">{placeholder}</span>}
+    </div>
+  );
+};
 
 type RowProps = {
   label: string;
