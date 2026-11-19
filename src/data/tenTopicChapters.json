@@ -345,108 +345,128 @@
   ],
   "Pakistan Studies-10TH-PTB": [
     {
-      "name": "CHAP 1:Ideological Basis of Pakistan",
+      "name": "باب نمبر1: پاکستان کی نظریاتی اساس",
       "chapters": [
-        "1.1 Definition, Sources and Significance of Ideology",
-        "1.2 Meaning of Ideology of Pakistan",
-        "1.3 Elements of Ideology of Pakistan",
-        "1.4 Two-Nation Theory: Origin and Evolution",
-        "1.5 Allama Iqbal, Quaid-e-Azam and Ideology of Pakistan"
+        "1.1 نظریہ",
+        "1.2 نظریۂ پاکستان",
+        "1.3 نظریۂ پاکستان کےاہم ماخذ",
+        "1.4 نظریۂ پاکستان اوراسلام کی بنیادی اقدار",
+        "1.5 ہندوستان میں مسلمانوں کی سماجی اورمعاشی محرومی",
+        "1.6 نظریۂ پاکستان کےبنیادی عناصر/اجزا",
+        "1.7 نظریۂ پاکستان اورعلامہ محمداقبال رَحْمَۃُاللہِ عَلَیْہِ",
+        "1.8 نظریۂ پاکستان اورقائداعظم رَحْمَۃُاللہِ عَلَیْہِ",
+        "1.9 مسلم مصلحین اورمسلم ہندوستان کےسماجی ثقافتی پہلو",
+        "1.10 دوقومی نظریہ: ابتدااورارتقا"
       ]
     },
     {
-      "name": "CHAP 2: The Pakistan Movement & Emergence of Pakistan",
+      "name": "باب نمبر2: تحریکِ پاکستان",
       "chapters": [
-        "2.1 Background of Pakistan Movement",
-        "2.2 Consolidation of the State and making of Constitution, 1947-56)",
-        "2.3 Quaid-e-Azam & Liaqat Ali Khan Role and Achievements",
-        "2.4 Objectives Resolution",
-        "2.5 Constitutional Stages in Pakistan",
-        "2.6 Accession of States and Tribal Areas to Pakistan",
-        "2.7 Ayub Khan Era, 1958-1969",
-        "2.8 Economic Development",
-        "2.9 Five Year Development Plans of Ayub Khan's Era",
-        "2.10 Yahya Khan Regime, 1969-71",
-        "2.11 Seperation of East Pakistan and Emergence of Bangladesh"
+        "2.1 تحریکِ پاکستان کاپس منظر",
+        "2.2 سن 1906ءسے1920ء کےدرمیان ہونے والی اہم سیاسی پیش رفت",
+        "2.3 سن 1920ء سے1939ء کےدرمیان ہونےوالی اہم سیاسی پیش رفت",
+        "2.4 سن 1940ء سے1947ء کےدرمیان ہونےوالی اہم سیاسی پیش رفت",
+        "2.5 قیامِ پاکستان میں قائداعظم محمد علی جناح رَحْمَۃُاللہِ عَلَیْہِ کا کردار",
+        "2.6 قیامِ پاکستان میں محترمہ فاطمہ جناح کا کردار",
+        "2.7 قیامِ پاکستان میں دیوان بہادرستیاپرکاش سنگھ"
       ]
     },
     {
-      "name": "CHAP 3: History of Pakistan-II (1971 Till Todate)",
+      "name": "باب نمبر3: پاکستان کی تاریخ (1947ء تاحال) اورپاکستان میں آئینی ترقی",
       "chapters": [
-        "3.1 Zulfiqar Ali Bhutto Era 1971-1977",
-        "3.2 General Muhammad Zia-ul-Haq Era 1977-88",
-        "3.3 Benazir Bhutto's First & Second Term 1988-96",
-        "3.4 Muhammad Nawaz Sharif's First, Second & Third Term 1988-2017",
-        "3.5 General Pervez Musharraf's Era 1999-2008",
-        "3.6 Syed Yousaf Raza Gillani's Era 2008-12",
-        "3.7 General Elections of Pakistan 2018",
-        "3.8 Constitution of Pakistan 1973"
+        "3.1 پاکستان کودرپیش ابتدائی مشکلات",
+        "3.2 پاکستان درپیش ابتدائی مسائل پرقابو پانےمیں کتنا کامیاب رہا؟",
+        "3.3 پہلے گورنرجنرل کی حیثیت سے قائداعظم محمد علی جناح رَحْمَۃُاللہِ عَلَیْہِ کا کردار",
+        "3.4 پہلے وزریرِاعظم کی حیثیت سے لیاقت علی خاں کا کردار",
+        "3.5 سن1958ء سے2025ء تک مختلف حکومتوں کےحکمرانی کےادوار",
+        "3.6 ایوب خان کی اصلاحات",
+        "3.7 لیگل فریم ورک آرڈر1970ء",
+        "3.8 سن1970ء کےعام انتخابات",
+        "3.9 مشرقی پاکستان کی علیحدگی کےاسباب",
+        "3.10 ذوالفقارعلی بھٹوکا دورِحکومت (77-1971ء)",
+        "3.11 جنرل محمد ضیاءالحق کا دور (88-1977ء)",
+        "3.12 بےنظیر بھٹوکا پہلا دورِحکومت (90-1988ء)",
+        "3.13 بےنظیر بھٹوکا دوسرادورِحکومت (96-1993ء)",
+        "3.14 میاں محمد نواز شریف کا پہلا دورِحکومت (93-1990ء)",
+        "3.15 میاں محمد نوازشریف کا دوسرا دورِحکومت (99-1997ء)",
+        "3.16 پاکستان بطورایٹمی قوت",
+        "3.17 میاں محمد نوازشریف کا تیسرا دورِحکومت (17-2013ء)",
+        "3.18 جنرل پرویزمشرف کا دورِحکومت (2008-1999ء)",
+        "3.19 سیّد یوسف رضا گیلانی کا دورِحکومت (12-2008ء)",
+        "3.20 عمران خان کا دورِحکومت (22-2018ء)",
+        "3.21 میاں محمد شہباز شریف کا پہلا دورِ حکومت (23-2022ء)",
+        "3.22 میاں محمد شہباز شریف کا دوسرا دورِحکومت (2024ء تا حال)",
+        "3.23 پاکستان اوربھارت کےدرمیان 1948ء،1965ء،1971ء، کارگل1999ء اورآپریشن بنیان المرصوص 2025ء",
+        "3.24 پاکستان پر بین الاقوامی جنگوں کےاثرات",
+        "3.25 قراردادِ مقاصد 1949ء",
+        "3.26 سن1956ء،1962ءاور1973 ءکےآئین کی نمایاں خصوصیات",
+        "3.27 قانون کی حکمرانی کی اہمیت"
       ]
     },
     {
-      "name": "CHAP 4: Pakistan and World Affairs",
+      "name": "باب نمبر4: پاکستان کا جغرافیہ",
       "chapters": [
-        "4.1 Geo-Political Significance of Pakistan",
-        "4.2 Objectives of Pakistan's Foreign Policy",
-        "4.3 Pakistan's Relations with Neighbouring States",
-        "4.4 Kashmir Issue",
-        "4.5 Pakistan's Relations with Central Asian Countries",
-        "4.6 Pakistan's Relations with SAARC Countries",
-        "4.7 Pakistan's Relations with major world powers",
-        "4.8 China Pakistan Economic Corridor-CPEC - till end"
+        "4.1 پاکستان کے جغرافیہ کا تعارف",
+        "4.2 جغرافیائی، سیاسی اورمعاشی لحاظ سے پاکستان کےمحل وقوع کی اہمیت",
+        "4.3 پاکستان کے طبعی خدوخال",
+        "4.4 جنگلات کی مختلف اقسام کومتاثرکرنے والے مختلف عوامل",
+        "4.5 پاکستان کی آب وہوا",
+        "4.6 پاکستان کےموسم",
+        "4.7 موسمیاتی تبدیلی (درجہ حرارت، سیلاب، طوفان، خشک سالی) کے پاکستان کی معیشت پراثرات",
+        "4.8 عالمی حدت (گلوبل وارمنگ)",
+        "4.9 نامیاتی ایندھن کی کھپت کےماحولیاتی اثرات"
       ]
     },
     {
-      "name": "CHAP 5: Land and Environment",
+      "name": "باب نمبر5: پاکستان اوربین الاقوامی امور",
       "chapters": [
-        "5.1 Location of Pakistan",
-        "5.2 Physical Features of Pakistan",
-        "5.3 Climate of Pakistan",
-        "5.4 Major Glaciers and Rivers of Pakistan",
-        "5.5 Forests and Wildlife in Pakistan",
-        "5.6 Natural Regions of Pakistan",
-        "5.7 Major Environmental Hazards and their Remedies"
+        "5.1 پاکستان کی خارجہ پالیسی",
+        "5.2 خطےکی پڑوسی ممالک کےساتھ پاکستان کےسفارتی تعلقات، اثرات اورمستقبل کےتعلقات کےامکانات",
+        "5.3 اقوامِ متحدہ",
+        "5.4 پاکستان کےسارک ممالک کےساتھ تعلقات",
+        "5.5 کشمیر، افغانستان اور فلسطین کے بحران کے حل میں اقوامِ متحدہ کو درپیش مشکلات"
       ]
     },
     {
-      "name": "CHAP 6: Population, Society and Culture of Pakistan",
+      "name": "باب نمبر6: پاکستان کےوسائل اورمعاشی ترقی",
       "chapters": [
-        "6.1 Growth and Distribution of Population in Pakistan",
-        "6.2 Salient Features of Pakistani Society and Culture",
-        "6.3 Educational Condition in Pakistan",
-        "6.4 Health Conditions in Pakistan",
-        "6.5 Importance of Tourism and Natural and Cultural attraction for Tourism in Pakistan",
-        "6.6 Need and Importance of Inter-faith Harmony, Tolerance and Resillience against Terrorism",
-        "6.7 Origin and Evolution of National and Regional Languages",
-        "6.8 Causes, Consequences and Remedies for Poverty Alleviation in Pakistan - till end"
+        "6.1 زراعت",
+        "6.2 پاکستان کی بڑی فصلوں کی پیداواراور تقسیم",
+        "6.3 لائیوسٹاک اورفش فارمنگ (ماہی پروری)",
+        "6.4 ٹیلی کمیونیکیشنز",
+        "6.5 پاکستان میں سیاحت، ٹرانسپورٹ اورانفراسٹرکچرکےاہم مسائل"
       ]
     },
     {
-      "name": "CHAP 7: Economic Development of Pakistan",
+      "name": "باب نمبر7: آبادی، معاشرہ اورپاکستان میں ثقافتی تنوّع",
       "chapters": [
-        "7.1 Economic Development of Pakistan",
-        "7.2 Major Metallic and Non-metallic Mineral Resources, their Economic Importance and Distribution in Pakistan",
-        "7.3 Importance of Agriculture, Problems and Efforts to Modernize Agriculture",
-        "7.4 Water Resources of Pakistan and Existing Irrigation System",
-        "7.5 Production, Distribution of Major Crops, Livestock and Fisheries in Pakistan",
-        "7.6 Importance of Industries, their Location and Production of Cottage, Small and Large-scale Industries",
-        "7.7 Importance, Production and Consumption of different Sources of Energy in Pakistan",
-        "7.8 International Trade of Pakistan (Imports and Exports) and its Impact on the Economy",
-        "7.9 Importance of Sea Ports and Dry Ports of Pakistan",
-        "7.10 Excercise Questions"
+        "7.1 پاکستان میں آبادی کی افزائش اورتقسیم",
+        "7.2 آبادی کی صنفی بناوٹ، صنفی امتیازاوراس سےمتعلقہ مسائل اوران کا حل",
+        "7.3 سماجی اقدار، رسم ورواج اورروایات کےحوالےسے پاکستانی معاشرےکی نمایاں خصوصیات",
+        "7.4 مختلف ثقافتی عناصرکا معاشرے کےاندرثقافتی تنوّع کےفروغ یا تغیّرکومتاثرکرنا",
+        "7.5 اتحاداورقومی یکجہتی کا باعث بننےوالی علاقائی ثقافتیں",
+        "7.6 پاکستانی معاشرےاورثقافت پرعالمگیریت کےاثرات",
+        "7.7 سماجی درجہ بندی کا تصوّراوراہم خصوصیات",
+        "7.8 پاکستان کی ثقافت اورمعاشرے کی نمایاں خصوصیات",
+        "7.9 قومی تعمیرمیں اقلیتوں کا کرداراور کارنامے",
+        "7.10 صوفیائے کرام رَحْمَۃُاللہِ عَلَیْھِمْ",
+        "7.11 پاکستان میں تعلیم کی صورتِ حال",
+        "7.12 تعلیم اور روزگار کے مواقع",
+        "7.13 پاکستان میں صحت کی صورتِ حال",
+        "7.14 کھیل",
+        "7.15 سیاحت کی اہمیت اور پاکستان میں سیاحت کے لیے قدرتی اورثقافتی کشش"
       ]
     },
     {
-      "name": "CHAP 8: Women's Empowerment",
+      "name": "باب نمبر8: پاکستان میں خواتین کوبااختیار بنانا",
       "chapters": [
-        "8.1 Women's Rights in Islam in the Light of Quran and Sunnah",
-        "8.2 Women's Role in Pakistan Movement",
-        "8.3 Women's Contribution in National Development from 1947 Till Now",
-        "8.4 Definition of Violence and Violence Against Women",
-        "8.5 Violence Impacts upon Pakistan's Society with Reference to Constitutional Provisions",
-        "8.6 Government's efforts to Address the Issue of Violence Against Women in Pakistan",
-        "8.7 Government's Efforts to Address Regarding Women's Protection and Women's Empowerment",
-        "8.9 Exercise Questions"
+        "8.1 قرآن وسنّت کی روشنی میں اسلام میں خواتین کے حقوق",
+        "8.2 تحریکِ پاکستان میں خواتین کا کردار",
+        "8.3 قیامِ پاکستان1947ء سےعہدِ حاضرتک قومی ترقی میں خواتین کی خدمات",
+        "8.4 تشدّد اور خواتین پر تشدّد کی تعریف",
+        "8.5 آئینی دفعات کےحوالےسے تشدّد کےمعاشرے پراثرات",
+        "8.6 پاکستان میں خواتین پر تشدّد کےخاتمےکےلیے حکومتی سطح پراقدامات",
+        "8.7 خواتین کے تحفظ اور ان کو بااختیار بنانے میں حکومتی کردار"
       ]
     }
   ],

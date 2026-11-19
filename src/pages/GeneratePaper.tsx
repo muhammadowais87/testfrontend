@@ -269,7 +269,7 @@ const GeneratePaper = () => {
   const [searchParams] = useSearchParams();
   const isTrial = searchParams.get("trial") === "true";
   const [selectedChapters, setSelectedChapters] = useState<string[]>([]);
-  // When true, the chapter picker ignores the Smart Syllabus cuts (9th + INTER-I)
+  // When true, the chapter picker ignores the Smart Syllabus cuts (9th + 10th + INTER-I)
   // and shows/selects every topic from the full syllabus. Off by default.
   const [enableFullSyllabus, setEnableFullSyllabus] = useState(false);
   const lastInitializedRef = useRef<{ key: string; isDb: boolean; isTopicsFile?: boolean } | null>(null);

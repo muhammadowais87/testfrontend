@@ -1,5 +1,5 @@
 /**
- * 9th class and INTER-I (11th / Part 1) PTB Smart Syllabus exclusions for the
+ * 9th, 10th and INTER-I (11th / Part 1) PTB Smart Syllabus exclusions for the
  * current session (2026-27).
  *
  * IMPORTANT: The excluded topics are intentionally NOT removed from the syllabus
@@ -141,6 +141,161 @@ const EXCLUSIONS: Record<string, SubjectExclusion> = {
       "10.4 Global Warming (Greenhouse Effect)",
       "10.5 Strategies to Reduce Environmental Issues",
       "11.4 Important Reactions",
+    ],
+  },
+  "Computer-9TH-PTB": {
+    groups: [
+      "UNIT 2: System Design and Troubleshooting",
+    ],
+    topics: [
+      "1.4 Number Systems",
+      "1.5 Data Representation in Computing Systems",
+      "1.6 Binary Arithmetic Operations",
+      "4.6 Introduction to LARP (Logic of Algorithms for Resolution of Problems)",
+      "4.7 Error Identification and Debugging",
+      "5.6 Styling with CSS",
+      "5.7 Introduction to JavaScript",
+      "8.4 Intellectual Property Rights",
+    ],
+  },
+  "اردو لازمی-10TH-PTB": {
+    groups: [
+      "نثر نمبر 5: محسن کا محلہ",
+      "نثر نمبر 10: بابل کے کھنڈر",
+      "نثر نمبر 11: اولڈ ایج ہوم",
+      "نثر نمبر 12: کچھ ذریعہ تعلیم کے باب میں",
+      "نظم نمبر 16: وغیرہ",
+      "غزل نمبر 20: یوں کہنے کو پیرا یہ اظہار بہت ہے",
+    ],
+  },
+  "English-10TH-PTB": {
+    groups: [
+      "UNIT 4: The Earth:Act Now for Tomorrow",
+      "UNIT 7: Time (Poem)",
+      "UNIT 10: The Three Questions",
+    ],
+  },
+  "Pakistan Studies-10TH-PTB": {
+    groups: [
+      "باب نمبر4: پاکستان کا جغرافیہ",
+      "باب نمبر7: آبادی، معاشرہ اورپاکستان میں ثقافتی تنوّع",
+    ],
+  },
+  "Physics-10TH-PTB": {
+    topics: [
+      "10.2 Specific Heat Capacity",
+      "10.4 Evaporation",
+      "10.6 Superconductivity",
+      "11.3 Heat Transfer through Radiation",
+      "12.4 Properties of Waves",
+      "12.5 Seismic and Tsunami Waves",
+      "13.4 Reflection of Sound (Echo)",
+      "13.5 Refraction and Diffraction of Sound",
+      "13.7 Acoustic protection of Buildings",
+      "14.3 Optical Fibre",
+      "14.5 Optical devices",
+      "14.7 Gravitational Lens and Acoustic Lens",
+      "14.8 Dispersion of Light by Prism",
+      "15.3 Applications of Electrostatics",
+      "15.6 Conduction of Electric Charges",
+      "15.7 Accumulation of Charges",
+      "16.4 Combination of Resistances",
+      "16.7 Resistor Colour Codes",
+      "16.8 Common Use of Electricity",
+      "17.4 Electric Motor",
+      "17.5 Use of Magnetic Effects of Current",
+      "18.2 A.C. Generator",
+      "18.4 Deflection of Electron Beam in Electric and Magnetic Fields",
+      "18.5 Waveform on Oscilloscope",
+      "18.6 Scattering of Light in the Atmosphere",
+      "19.2 Analog and Digital Electronics",
+      "19.3 Boolean Logic",
+      "19.5 Applications of Logic Gates",
+      "20.1 Atomic Structure",
+      "20.2 Atomic Nucleus",
+      "20.3 Isotopes",
+      "20.5 Radioactive Decay",
+      "20.9 Effects and Uses of Nuclear Radiation",
+      "21.1 Sunand Planetary Data",
+    ],
+  },
+  "Mathematics-10TH-PTB": {
+    topics: [
+      "1.4 E.X: 1.4",
+      "2.5 E.X: 2.5",
+      "2.7 E.X: 2.7",
+      "4.3 E.X: 4.3",
+      "5.5 E.X: 5.5",
+      "6.3 E.X: 6.3",
+      "7.4 EX 7.4",
+      "8.2 E.X: 8.2",
+      "12.3 E.X: 12.3",
+    ],
+  },
+  "Chemistry-10TH-PTB": {
+    topics: [
+      "14.3 Heating and Cooling Curves",
+      "14.9 Importance of Rates of diffusion of Medicines in Human Body",
+      "15.6 Limiting Reactant",
+      "15.7 Yield",
+      "16.5 Oxidation-Reduction Reactions",
+      "16.8 Electrolysis of Dilute and Concentrated Aqueous solutions of Metal Halides",
+      "16.9 Electrolysis of Concentrated Aqueous Solutions of Metal Halides",
+      "16.10 Electrolysis of Molten Lead (II) Chloride",
+      "16.11 Electrolysis of Dilute solution of Sulphuric Acid using inert electrodes (Carbon or Pt)",
+      "16.12 Electrolysis of Dilute Aqueous solution of Copper Sulphate using Inert electrodes or Copper electrodes",
+      "16.14 Corrosion",
+      "16.17 Order of Reactivity of Metals using Voltage Data",
+      "17.2 Change in Mass during a Chemical Reaction",
+      "17.3 Change in Temperature during a Chemical Reaction",
+      "17.4 Factors Affecting the Rates of Reactions",
+      "17.5 Importance of Chemical Kinetics in Food Industry",
+      "19.2 Sulphuric Acid",
+      "19.5 Reactivity Series of metals",
+      "19.6 Role of oxides of nitrogen in spreading air pollution",
+      "20.5 Treatment of Domestic Water Supply",
+      "20.7 Water Scarcity in Pakistan",
+      "20.8 Elements Essential for Plant Growth",
+      "21.4 Isomerism",
+      "21.5 Functional Group",
+      // The DB chapter list has this one as "2.5 Functional Group"; keep both spellings.
+      "2.5 Functional Group",
+      "22.4 Sources of organic compounds",
+      "22.5 Refining of Petroleum",
+      "23.3 Applications of Alcohols as Fuels",
+      "23.4 Role of Ethanol in Industries",
+      "23.5 Impact of Alcohols on Daily life",
+      "24.4 Industrial Applications of Carboxylic Acids and Esters",
+      "24.5 Carboxylic Acids and Esters in Daily Life",
+      "25.5 Vitamins",
+      "25.7 Applications of Biochemistry",
+      "26.3 Plastics",
+      "26.4 Importance of Polymers in Textile Industry",
+      "26.5 Adverse Effects of Plastics",
+    ],
+  },
+  "Biology-10TH-PTB": {
+    topics: [
+      "1.1- Nutrition and its Importance",
+      "1.3- Disorders of the Digestive System",
+      "2.3- Respiratory Disorders",
+      "3.5- Cardiovascular Disorders",
+      "4.3- Disorders of Kidney",
+      "6.2- Role of Hormones in Sexual Development",
+      "7.1- Structure of Chromosome",
+      "8.1- Introduction of Biotechnology",
+      "8.4- Potential Risks of Biotechnology",
+      "9.2- Pathogens",
+      "10.1- Darwin's Observations",
+      "10.3- Species and Speciation",
+    ],
+  },
+  "Computer-10TH-PTB": {
+    groups: [
+      "UNIT 2: System Recovery and Advanced Maintenance",
+    ],
+    topics: [
+      "5.3 Tools for Visualization",
     ],
   },
   "اردو لازمی-INTER-I-PTB": {
@@ -343,8 +498,8 @@ const normalizeExclusionKey = (value: string): string =>
 const toKeySet = (values?: string[]): Set<string> =>
   new Set((values ?? []).map(normalizeExclusionKey).filter(Boolean));
 
-// Classes that follow the current session's Smart Syllabus (9th + INTER-I/11th).
-const SMART_SYLLABUS_CLASSES = new Set(["9TH", "INTER-I"]);
+// Classes that follow the current session's Smart Syllabus (9th + 10th + INTER-I/11th).
+const SMART_SYLLABUS_CLASSES = new Set(["9TH", "10TH", "INTER-I"]);
 
 const getSubjectExclusions = (
   subject: string,
