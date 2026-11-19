@@ -4,10 +4,12 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate, useNavigate } from "react-router-dom";
 import { useTeacherSessionStore } from "./stores/teacherSessionStore";
 import { useInstituteSessionStore } from "./stores/instituteSessionStore";
 import { loadAdminRoute } from "@/lib/adminRoute";
+import { SESSION_EXPIRED_EVENT } from "@/lib/sessionExpiry";
+import { toast } from "@/hooks/use-toast";
 
 const Index = lazy(() => import("./pages/Index"));
 const TrialAccount = lazy(() => import("./pages/TrialAccount"));
@@ -32,6 +34,43 @@ const NotFound = lazy(() => import("./pages/NotFound"));
 const SavedPaperViewer = lazy(() => import("./pages/SavedPaperViewer"));
 
 const queryClient = new QueryClient();
+
+// A 401 from an authenticated API clears the matching portal session and sends the
+// user to its login page instead of leaving the dashboard open with empty questions.
+const SessionExpiryWatcher = () => {
+  const navigate = useNavigate();
+  const instituteLogout = useInstituteSessionStore((s) => s.logout);
+  const teacherLogout = useTeacherSessionStore((s) => s.logout);
+
+  useEffect(() => {
+    const handleExpired = (event: Event) => {
+      const detail = (event as CustomEvent<{ message?: string }>).detail;
+      const message = detail?.message || "Your session has expired. Please login again.";
+      const onTeacherPortal =
+        window.location.pathname.startsWith("/teacher") ||
+        window.location.pathname.startsWith("/sub-user");
+
+      if (onTeacherPortal) {
+        teacherLogout();
+        navigate("/teacher/login", { replace: true, state: { sessionExpired: message } });
+      } else {
+        instituteLogout();
+        navigate("/institute/login", { replace: true, state: { sessionExpired: message } });
+      }
+
+      toast({
+        title: "Session Expired",
+        description: message,
+        variant: "destructive",
+      });
+    };
+
+    window.addEventListener(SESSION_EXPIRED_EVENT, handleExpired);
+    return () => window.removeEventListener(SESSION_EXPIRED_EVENT, handleExpired);
+  }, [instituteLogout, navigate, teacherLogout]);
+
+  return null;
+};
 
 const PageFallback = () => <PageLoader />;
 
@@ -125,6 +164,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
+        <SessionExpiryWatcher />
         <AppContent />
       </BrowserRouter>
     </TooltipProvider>

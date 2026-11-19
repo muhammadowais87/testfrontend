@@ -1,5 +1,6 @@
 import { API_BASE_URL } from "@/lib/api";
 import { getPortalToken } from "@/lib/portalToken";
+import { assertAuthorized } from "@/lib/sessionExpiry";
 
 export type SavedPaperQuestion = {
   id: number;
@@ -107,6 +108,7 @@ export const getSavedPapers = async (): Promise<SavedPaperRecord[]> => {
     headers: getAuthHeaders(),
   });
   const data = await response.json();
+  assertAuthorized(response, data?.message);
   if (!response.ok) {
     throw new Error(data?.message || "Failed to fetch saved papers");
   }
@@ -164,6 +166,7 @@ export const migrateLegacySavedPapersToDb = async (): Promise<number> => {
 
     if (!response.ok) {
       const data = await response.json().catch(() => ({}));
+      assertAuthorized(response, data?.message);
       throw new Error(data?.message || "Failed to migrate legacy saved papers");
     }
 
@@ -182,6 +185,7 @@ export const addSavedPaper = async (paper: SavedPaperRecord): Promise<SavedPaper
     body: JSON.stringify(paper),
   });
   const data = await response.json();
+  assertAuthorized(response, data?.message);
   if (!response.ok) {
     throw new Error(data?.message || "Failed to save paper");
   }
@@ -195,6 +199,7 @@ export const deleteSavedPaper = async (paperId: number): Promise<void> => {
     headers: getAuthHeaders(),
   });
   const data = await response.json();
+  assertAuthorized(response, data?.message);
   if (!response.ok) {
     throw new Error(data?.message || "Failed to delete paper");
   }
@@ -210,6 +215,7 @@ export const getSavedPaperById = async (paperId: number): Promise<SavedPaperReco
   }
 
   const data = await response.json();
+  assertAuthorized(response, data?.message);
   if (!response.ok) {
     throw new Error(data?.message || "Failed to fetch saved paper");
   }

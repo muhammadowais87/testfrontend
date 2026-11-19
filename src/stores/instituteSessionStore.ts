@@ -1,4 +1,5 @@
 import { create } from "zustand";
+import { isTokenExpired } from "@/lib/sessionExpiry";
 
 interface InstituteSession {
   name: string;
@@ -29,7 +30,12 @@ const readFrom = (storage: Storage): InstituteSession | null => {
   }
 
   try {
-    return JSON.parse(raw) as InstituteSession;
+    const session = JSON.parse(raw) as InstituteSession;
+    if (isTokenExpired(session.token)) {
+      storage.removeItem(STORAGE_KEY);
+      return null;
+    }
+    return session;
   } catch {
     storage.removeItem(STORAGE_KEY);
     return null;

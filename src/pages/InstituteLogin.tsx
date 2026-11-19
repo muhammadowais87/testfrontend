@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import { Eye, EyeOff, Lock, ArrowRight, Building2 } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import { API_BASE_URL } from "@/lib/api";
@@ -7,11 +7,14 @@ import { useInstituteSessionStore } from "@/stores/instituteSessionStore";
 
 const InstituteLogin = () => {
   const navigate = useNavigate();
+  const location = useLocation();
   const login = useInstituteSessionStore((s) => s.login);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
-  const [error, setError] = useState("");
+  const [error, setError] = useState(() =>
+    (location.state as { sessionExpired?: string } | null)?.sessionExpired ?? ""
+  );
   const [loading, setLoading] = useState(false);
 
   const handleLogin = async (e: React.FormEvent) => {

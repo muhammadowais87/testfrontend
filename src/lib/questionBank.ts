@@ -1,5 +1,6 @@
 import { API_BASE_URL } from "@/lib/api";
 import { getPortalToken } from "@/lib/portalToken";
+import { assertAuthorized } from "@/lib/sessionExpiry";
 import { sanitizeChapterSelections } from "@/data/nineSmartSyllabusExclusions";
 import type { ChapterGroup } from "@/data/subjectData";
 
@@ -564,6 +565,8 @@ export const fetchQuestionsForSelection = async (
       });
       const data: QuestionBankResponse = await response.json();
 
+      assertAuthorized(response, (data as { message?: string })?.message);
+
       if (!response.ok) {
         throw new Error("Failed to load question bank from database");
       }
@@ -608,6 +611,8 @@ export const fetchChapterGroupsForSelection = async (
     { headers: getAuthHeaders() },
   );
   const data: ChapterGroupsResponse = await response.json();
+
+  assertAuthorized(response, (data as { message?: string })?.message);
 
   if (!response.ok) {
     throw new Error("Failed to load chapter groups from database");
@@ -685,6 +690,8 @@ export const fetchAvailableQuestionTypes = async (
     { headers: getAuthHeaders() }
   );
   const data = await response.json();
+
+  assertAuthorized(response, (data as { message?: string })?.message);
 
   if (!response.ok) {
     throw new Error("Failed to load available question types");

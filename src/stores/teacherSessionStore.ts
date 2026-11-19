@@ -1,4 +1,5 @@
 import { create } from "zustand";
+import { isTokenExpired } from "@/lib/sessionExpiry";
 
 interface TeacherSession {
   name: string;
@@ -25,7 +26,12 @@ const getStoredSession = (): TeacherSession | null => {
   }
 
   try {
-    return JSON.parse(raw) as TeacherSession;
+    const session = JSON.parse(raw) as TeacherSession;
+    if (isTokenExpired(session.token)) {
+      localStorage.removeItem(STORAGE_KEY);
+      return null;
+    }
+    return session;
   } catch {
     localStorage.removeItem(STORAGE_KEY);
     return null;
